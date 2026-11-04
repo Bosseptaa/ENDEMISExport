@@ -1,0 +1,149 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_Blur
+# класс: MaterialFunction; происхождение: проект; узлов: 25; связей: 50; HLSL: 1; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:51, HLSL:1
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Blur] MaterialFunction
+    StateId = E3C3C4244ED02658E82F7CA4FA4800CE
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_BlurEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_BlurEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSceneTexture_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionSceneTexture_2
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionSceneTexture_3
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_2
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    Input <- MaterialExpressionMin_0
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    G = True
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    Input <- MaterialExpressionSceneTexture_1
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: Blur_16x16
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    Desc = " "
+    bCollapsed = True
+    Inputs(0) Mask <- MaterialExpressionFunctionInput_2
+    Inputs(1) UV <- MaterialExpressionFunctionInput_1
+    Inputs(2) Color <- MaterialExpressionComponentMask_2
+    Code: HLSL, 79 строк (см. HLSL/)
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstB = 1000.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "UV"
+    Id = D3FE8C84440AE2F9E82A5CACC3E3E2F1
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Mask"
+    Id = CD5D829C442A3AA4EDF07DA0BA466784
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_3
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Combined"
+    bLastPreviewed = True
+    Id = 03FC251A40C4441C750021A678B901F0
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    bCollapsed = True
+    A <- MaterialExpressionLinearInterpolate_2
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Blur"
+    bLastPreviewed = True
+    Id = CA5B69F54C97F264B2F0E78B0D46893B
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_0
+[MaterialExpressionLinearInterpolate_2] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    A <- MaterialExpressionComponentMask_2
+    B <- MaterialExpressionCustom_0
+    Alpha <- MaterialExpressionMultiply_0
+[MaterialExpressionMin_0] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    A <- MaterialExpressionSceneTexture_2
+    B <- MaterialExpressionSceneTexture_3
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    A <- MaterialExpressionSaturate_0
+    B <- MaterialExpressionSaturate_1
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    Input <- MaterialExpressionFunctionInput_2
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    Input <- MaterialExpressionDivide_0
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    Input <- MaterialExpressionOneMinus_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 900.000000
+    ParameterName = "BlurFalloff"
+    ExpressionGUID = 1A073521440CE296B22DA499F1912918
+    Group = "SharpenBlur"
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 100.000000
+    ParameterName = "BlurStartDistance"
+    ExpressionGUID = 9F0FCD0544BF8BD1CE11BA87344B272F
+    Group = "SharpenBlur"
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+[MaterialExpressionSceneTexture_1] MaterialExpressionSceneTexture
+    SceneTextureId = PPI_PostProcessInput0
+    bFiltered = True
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    Coordinates <- MaterialExpressionFunctionInput_1
+[MaterialExpressionSceneTexture_2] MaterialExpressionSceneTexture
+    SceneTextureId = PPI_SceneDepth
+    bFiltered = True
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    Coordinates <- MaterialExpressionReroute_1
+[MaterialExpressionSceneTexture_3] MaterialExpressionSceneTexture
+    SceneTextureId = PPI_CustomDepth
+    bFiltered = True
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    Coordinates <- MaterialExpressionReroute_1
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    ConstB = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_Blur'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionScalarParameter_1
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

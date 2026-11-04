@@ -1,0 +1,26 @@
+﻿// Источник: /Game/ENDEMIS/Water/Materials/M_CausticsDecal (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: BaseColor, Metallic, Specular, Roughness, Emissive, Opacity, Mask
+// Выход: не указан
+// Описание: BranchTest
+
+[branch]
+if (Mask > 0.01)
+{
+OutBaseColor = BaseColor;
+OutMetallic = Metallic;
+OutSpecular = Specular;
+OutRoughness = Roughness;
+OutEmissive = Emissive;
+return Opacity;
+} else
+{
+OutBaseColor =float3(0.0,0.0,0.0);
+OutMetallic = 0.0;
+OutSpecular = 0.0;
+OutRoughness  = 0.0;
+OutEmissive =float3(0.0,0.0,0.0);
+return Opacity;
+}
+
+

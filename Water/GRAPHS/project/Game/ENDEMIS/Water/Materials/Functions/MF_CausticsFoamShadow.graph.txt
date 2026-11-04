@@ -1,0 +1,144 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_CausticsFoamShadow
+# класс: MaterialFunction; происхождение: проект; узлов: 24; связей: 43; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:381
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CausticsFoamShadow] MaterialFunction
+    StateId = 706F738346C3E0FC142D00837A73273F
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_CausticsFoamShadowEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CausticsFoamShadowEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionMultiply_38
+    ExpressionCollection <- MaterialExpressionSaturate_10
+    ExpressionCollection <- MaterialExpressionMultiply_44
+    ExpressionCollection <- MaterialExpressionSaturate_11
+    ExpressionCollection <- MaterialExpressionMultiply_45
+    ExpressionCollection <- MaterialExpressionScalarParameter_20
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionSubtract_4
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_2
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    A <- MaterialExpressionScalarParameter_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Depth"
+    Id = FC00E21D4420903CB432B59E1F0EECEB
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Foam"
+    Id = 1AA2C42E4BB252731B1C92B592E0667F
+    InputType = FunctionInput_Scalar
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "ShadowSun"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = 72808C4C4A599D37A2C7FD82AC5339F9
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitchParameter_2
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "ShadowCaustics"
+    bLastPreviewed = True
+    Id = 0FDB19D14D0593BD001236BAE13A34A1
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitchParameter_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    A <- MaterialExpressionOneMinus_0
+    B <- MaterialExpressionScalarParameter_2
+[MaterialExpressionMultiply_38] MaterialExpressionMultiply
+    ConstB = 3.800000
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    A <- MaterialExpressionScalarParameter_20
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMultiply_44] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    A <- MaterialExpressionMultiply_38
+    B <- MaterialExpressionSaturate_11
+[MaterialExpressionMultiply_45] MaterialExpressionMultiply
+    ConstB = 0.050000
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    Input <- MaterialExpressionFunctionOutput_1
+[MaterialExpressionSaturate_10] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    Input <- MaterialExpressionSubtract_4
+[MaterialExpressionSaturate_11] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    Input <- MaterialExpressionMultiply_45
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 2.000000
+    ParameterName = "ShadowFromFoamScatter"
+    ExpressionGUID = 17598A634ED533EF259CDB89643681C7
+    Group = "Shadow"
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.035000
+    ParameterName = "ShadowFromFoamDepthFalloff"
+    ExpressionGUID = 9BBAB7DF4324DCBFD3647CA81A03C02E
+    Group = "Shadow"
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 0.200000
+    ParameterName = "ShadowFromFoamDark"
+    ExpressionGUID = 7A5A6D8F4E9C048E621C6C90F59AFCEF
+    Group = "Shadow"
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+[MaterialExpressionScalarParameter_20] MaterialExpressionScalarParameter
+    DefaultValue = 6.000000
+    ParameterName = "ShadowFromFoamCover"
+    ExpressionGUID = 30D96D114A74F37284B478ABE846D73C
+    Group = "Shadow"
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UseShadowFromFoam"
+    ExpressionGUID = A4502D0F47876759455EF6AD14E7D70A
+    Group = "Shadow"
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    A <- MaterialExpressionSaturate_10
+    B <- MaterialExpressionConstant_0
+[MaterialExpressionStaticSwitchParameter_2] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UseShadowFromFoam"
+    ExpressionGUID = C22F33B1416AC8FDC12398B4C4DB4748
+    Group = "Shadow"
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionConstant_2
+[MaterialExpressionSubtract_4] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsFoamShadow'"
+    A <- MaterialExpressionAdd_1
+    B <- MaterialExpressionMultiply_44
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

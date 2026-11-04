@@ -1,0 +1,227 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_DetailInteraction
+# класс: MaterialFunction; происхождение: проект; узлов: 37; связей: 75; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:78
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_DetailInteraction] MaterialFunction
+    StateId = 6C7755E44D6EE37814C06FB994F915FC
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_DetailInteractionEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_DetailInteractionEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionDivide_3
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionIf_6
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionIf_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionMax_0
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    Input <- MaterialExpressionSubtract_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    A <- MaterialExpressionComponentMask_2
+    B <- MaterialExpressionDivide_3
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    A <- MaterialExpressionScalarParameter_1
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    A <- MaterialExpressionAppendVector_0
+    B <- MaterialExpressionConstant_1
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    Input <- MaterialExpressionWorldPosition_0
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    Input <- MaterialExpressionTextureSample_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=1.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstA = 1270.000000
+    ConstB = 2550.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+[MaterialExpressionDivide_3] MaterialExpressionDivide
+    ConstA = 499930.000000
+    ConstB = 255000000.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = C54BC15B4DDBDB7278F984A22DC254A9
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    bCollapsed = True
+    Preview <- MaterialExpressionComponentMask_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Height"
+    bLastPreviewed = True
+    Id = F7A4588A43B9C5FE59ACC8B39F8FC5DD
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_1
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Normal"
+    bLastPreviewed = True
+    Id = 9CB6CF524A3E04BDA297FCBE6784E6B8
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_6
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Foam"
+    bLastPreviewed = True
+    Id = 4803224A46F85150767CF08368AD22DA
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    bCollapsed = True
+    A <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "UV"
+    bLastPreviewed = True
+    Id = 5817A66348639BA01D3FC3B9927AEF10
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionIf_1] MaterialExpressionIf
+    EqualsThreshold = 0.000001
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    A <- MaterialExpressionMax_0
+    AGreaterThanB <- MaterialExpressionConstant_2
+    ALessThanB <- MaterialExpressionMultiply_0
+[MaterialExpressionIf_6] MaterialExpressionIf
+    AEqualsB = (Mask=1,MaskR=1,MaskG=1,MaskB=1)
+    EqualsThreshold = 0.000001
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    A <- MaterialExpressionMax_0
+    AGreaterThanB <- MaterialExpressionConstant3Vector_0
+    ALessThanB <- MaterialExpressionNormalize_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_EncodeNormal.MF_EncodeNormal'"
+    FunctionInputs(0) = (ExpressionInputId=06A9F91141DD2DD6FC2674B32225657D,Input=(InputName="NormalToEncode"))
+    FunctionOutputs(0) = (ExpressionOutputId=F689F601493C22F7997D8C88AF141B47,Output=(OutputName="EncodedNormal"))
+    FunctionOutputs(1) = (ExpressionOutputId=2D980D8145E3BDD265538C93BE45965A,Output=(OutputName="DecodedNormal"))
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    Outputs(0) = (OutputName="EncodedNormal")
+    Outputs(1) = (OutputName="DecodedNormal")
+    FunctionInputs(1) <- MaterialExpressionAdd_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_WorldToInteractionUV.MF_WorldToInteractionUV'"
+    FunctionInputs(1) = (ExpressionInputId=C7A03B8B41B6F713EDEB19A3472B710E,Input=(OutputIndex=-1,InputName="WorldSize"))
+    FunctionOutputs(0) = (ExpressionOutputId=DF521043496F99477DD91C8D1F56A5CE,Output=(OutputName="UVPosition"))
+    FunctionOutputs(1) = (ExpressionOutputId=CE79070244DBB9C259609F8D98467733,Output=(OutputName="UVSize"))
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    Outputs(0) = (OutputName="UVPosition")
+    Outputs(1) = (OutputName="UVSize")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionAbs_0
+[MaterialExpressionMax_0] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    A <- MaterialExpressionMaterialFunctionCall_3
+    B <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionAppendVector_1
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    VectorInput <- MaterialExpressionMultiply_1
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    Input <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.500000
+    ParameterName = "DecodeInteractionHeight"
+    ExpressionGUID = B61C515C4332BBFDA0B601B88C0BCDD2
+    Group = "FluxInteraction"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.050000
+    ParameterName = "DecodeInteractionNormal"
+    ExpressionGUID = 5D5F54884B46C947B043EB9A8D6587D2
+    Group = "FluxInteraction"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    A <- MaterialExpressionTextureSample_0
+    B <- MaterialExpressionDivide_0
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "InteractionNormalHeight"
+    ExpressionGUID = FB4BC33E4843CB5778045490F2D5539D
+    Group = "FluxInteraction"
+    Texture = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DefaultEncoded_N.T_DefaultEncoded_N'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    bCollapsed = True
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DefaultEncoded_N.T_DefaultEncoded_N'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+    Coordinates <- MaterialExpressionSaturate_0
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_DetailInteraction'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

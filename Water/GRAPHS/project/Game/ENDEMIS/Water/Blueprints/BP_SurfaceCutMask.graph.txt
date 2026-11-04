@@ -1,0 +1,119 @@
+﻿# /Game/ENDEMIS/Water/Blueprints/BP_SurfaceCutMask
+# класс: Blueprint; происхождение: проект; узлов: 24; связей: 43; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:179
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_SurfaceCutMask] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_SurfaceCutMask_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/ENDEMIS/Water/Blueprints/BP_SurfaceCutMask.BP_SurfaceCutMask:EventGraph",SavedViewOffset=(X=-636.981812,Y=-576.277161),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/ENDEMIS/Water/Blueprints/BP_SurfaceCutMask.BP_SurfaceCutMask:UserConstructionScript",SavedViewOffset=(X=117.018188,Y=-366.277161),SavedZoomAmount=1.000000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_SurfaceCutMask_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 6BCB4598415DCA5F9680809C715DDFFF
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 2A6C40804A65259B3E2081BFA677ABB3
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 21AE8F3441815E81685E0FB1710383F9
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+    Nodes(2) <- K2Node_Message_0
+    Nodes(3) <- K2Node_CallFunction_1
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_CallFunction_0@UserConstructionScript] K2Node_CallFunction
+[K2Node_Message_0@UserConstructionScript] K2Node_Message
+[K2Node_CallFunction_1@UserConstructionScript] K2Node_CallFunction
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ExecuteUbergraph_BP_SurfaceCutMask] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = F8EF920D45DA26C3E7C820BE0DBF3CCD
+[UserConstructionScript_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 21AE8F3441815E81685E0FB1710383F9
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+    Nodes(2) <- K2Node_CallFunction_4
+    Nodes(3) <- K2Node_CallFunction_1
+    Nodes(4) <- K2Node_TemporaryVariable_0
+    Nodes(5) <- K2Node_AssignmentStatement_0
+    Nodes(6) <- K2Node_IfThenElse_0
+    Nodes(7) <- K2Node_CallFunction_2
+    Nodes(8) <- K2Node_CallArrayFunction_0
+    Nodes(9) <- K2Node_CallArrayFunction_1
+    Nodes(10) <- K2Node_CallFunction_3
+    Nodes(11) <- K2Node_AssignmentStatement_1
+    Nodes(12) <- K2Node_DynamicCast_0
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED] K2Node_FunctionEntry (вызов: UserConstructionScript @ /Script/CoreUObject.Class)
+[K2Node_CallFunction_0@UserConstructionScript_MERGED] K2Node_CallFunction (вызов: GetAllActorsWithInterface @ /Script/CoreUObject.Class)
+[K2Node_Message_0@UserConstructionScript_MERGED] K2Node_Message (вызов: ApplyMask @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_CallFunction_1@UserConstructionScript_MERGED] K2Node_CallFunction (вызов: K2_SetActorRotation)
+    вход NewRotation = 0, 0, 0
+    вход bTeleportPhysics = false
+    вход NewRotation = 0, 0, 0
+    вход bTeleportPhysics = false
+[K2Node_TemporaryVariable_0] K2Node_TemporaryVariable
+    VariableType = (PinCategory="int")
+    bIsIntermediateNode = True
+[K2Node_AssignmentStatement_0] K2Node_AssignmentStatement
+    bIsIntermediateNode = True
+    вход Value = 0
+[K2Node_IfThenElse_0] K2Node_IfThenElse
+    bIsIntermediateNode = True
+[K2Node_CallFunction_2] K2Node_CallFunction (вызов: Less_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CallArrayFunction_0] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CallArrayFunction_1] K2Node_CallArrayFunction (вызов: Array_Get @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_3] K2Node_CallFunction (вызов: Add_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = 1
+[K2Node_AssignmentStatement_1] K2Node_AssignmentStatement
+    bIsIntermediateNode = True
+[K2Node_DynamicCast_0] K2Node_DynamicCast
+    TargetType = "/Script/Engine.BlueprintGeneratedClass'/Game/ENDEMIS/Water/Blueprints/BPI_Surface.BPI_Surface_C'"
+    PureState = Impure
+    bIsIntermediateNode = True
+[K2Node_CallFunction_4] K2Node_CallFunction (вызов: ApplyMask @ /Script/Engine.BlueprintGeneratedClass)
+    bIsIntermediateNode = True
+
+## СВЯЗИ
+[K2Node_AssignmentStatement_0].then -> [K2Node_IfThenElse_0].execute
+[K2Node_AssignmentStatement_1].then -> [K2Node_IfThenElse_0].execute
+[K2Node_CallArrayFunction_0].ReturnValue -> [K2Node_CallFunction_2].B
+[K2Node_CallArrayFunction_1].Item -> [K2Node_DynamicCast_0].Object
+[K2Node_CallFunction_0@UserConstructionScript_MERGED].OutActors -> [K2Node_CallArrayFunction_0].TargetArray
+[K2Node_CallFunction_0@UserConstructionScript_MERGED].OutActors -> [K2Node_CallArrayFunction_1].TargetArray
+[K2Node_CallFunction_0@UserConstructionScript_MERGED].OutActors -> [K2Node_Message_0@UserConstructionScript_MERGED].self
+[K2Node_CallFunction_0@UserConstructionScript_MERGED].then -> [K2Node_AssignmentStatement_0].execute
+[K2Node_CallFunction_0@UserConstructionScript_MERGED].then -> [K2Node_Message_0@UserConstructionScript_MERGED].execute
+[K2Node_CallFunction_1@UserConstructionScript_MERGED].then -> [K2Node_CallFunction_0@UserConstructionScript_MERGED].execute
+[K2Node_CallFunction_2].ReturnValue -> [K2Node_IfThenElse_0].Condition
+[K2Node_CallFunction_3].ReturnValue -> [K2Node_AssignmentStatement_1].Value
+[K2Node_CallFunction_4].then -> [K2Node_AssignmentStatement_1].execute
+[K2Node_DynamicCast_0].AsBPI Surface -> [K2Node_CallFunction_4].self
+[K2Node_DynamicCast_0].CastFailed -> [K2Node_AssignmentStatement_1].execute
+[K2Node_DynamicCast_0].then -> [K2Node_CallFunction_4].execute
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED].then -> [K2Node_CallFunction_1@UserConstructionScript_MERGED].execute
+[K2Node_IfThenElse_0].then -> [K2Node_DynamicCast_0].execute
+[K2Node_TemporaryVariable_0].Variable -> [K2Node_AssignmentStatement_0].Variable
+[K2Node_TemporaryVariable_0].Variable -> [K2Node_AssignmentStatement_1].Variable
+[K2Node_TemporaryVariable_0].Variable -> [K2Node_CallArrayFunction_1].Index
+[K2Node_TemporaryVariable_0].Variable -> [K2Node_CallFunction_2].A
+[K2Node_TemporaryVariable_0].Variable -> [K2Node_CallFunction_3].A

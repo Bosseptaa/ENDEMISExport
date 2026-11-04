@@ -1,0 +1,86 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_FoamShallow
+# класс: MaterialFunction; происхождение: проект; узлов: 15; связей: 25; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:234
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FoamShallow] MaterialFunction
+    StateId = E94BAD9A403F2E78929001BB5B039364
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FoamShallowEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FoamShallowEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSaturate_9
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_6
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_1
+    ExpressionCollection <- MaterialExpressionComponentMask_3
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_14
+    ExpressionCollection <- MaterialExpressionMultiply_17
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionComponentMask_3] MaterialExpressionComponentMask
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+    Input <- MaterialExpressionTextureCoordinate_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Height"
+    Id = DF5522144EBA66A8172E5DBB5BA5DFDB
+    InputType = FunctionInput_Scalar
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_6] MaterialExpressionFunctionInput
+    InputName = "Depth"
+    Id = 1C6D39D5415270C26CD1559592910582
+    InputType = FunctionInput_Scalar
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMultiply_4
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 2C054A3E428C2A19D76D33BB9CBF75D7
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+    bCollapsed = True
+    A <- MaterialExpressionSaturate_9
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+    A <- MaterialExpressionAdd_0
+    B <- MaterialExpressionMultiply_17
+[MaterialExpressionMultiply_17] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+    A <- MaterialExpressionFunctionInput_6
+    B <- MaterialExpressionScalarParameter_14
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    ConstB = 20.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+    A <- MaterialExpressionComponentMask_3
+[MaterialExpressionSaturate_9] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+    Input <- MaterialExpressionMultiply_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.050000
+    ParameterName = "FoamShallowOffset"
+    ExpressionGUID = 2D061BCB405BAB2A24A132B85DB0CEF5
+    Group = "Foam"
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+[MaterialExpressionScalarParameter_14] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "FoamShallowScale"
+    ExpressionGUID = ED947CBC4BE98AF8CCC78EB322882D9C
+    Group = "Foam"
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+[MaterialExpressionTextureCoordinate_1] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_FoamShallow'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

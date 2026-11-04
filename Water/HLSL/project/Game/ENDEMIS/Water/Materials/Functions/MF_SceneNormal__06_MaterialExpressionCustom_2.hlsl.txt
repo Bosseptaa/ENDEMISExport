@@ -1,0 +1,13 @@
+﻿// Источник: /Game/ENDEMIS/Water/Materials/Functions/MF_SceneNormal (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_2 ключ: Code
+// Входы: ViewPos
+// Выход: не указан
+// Описание: ViewPos to WorldPos
+
+#if defined(PrimaryLWCToFloat)
+	float4 pos = mul( ViewPos , PrimaryLWCToFloat(PrimaryLWCToFloat(ResolvedView.ScreenToWorld)) );
+#else
+	float4 pos = mul( ViewPos , LWCToFloat(ResolvedView.ScreenToWorld) );
+#endif
+
+return pos.xyz * (1 / pos.w);

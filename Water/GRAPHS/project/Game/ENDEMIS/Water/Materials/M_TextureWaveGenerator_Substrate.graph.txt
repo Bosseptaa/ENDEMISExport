@@ -1,0 +1,42 @@
+﻿# /Game/ENDEMIS/Water/Materials/M_TextureWaveGenerator_Substrate
+# класс: Material; происхождение: проект; узлов: 5; связей: 8; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:53
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_TextureWaveGenerator_Substrate] Material
+    BlendMode = BLEND_AlphaComposite
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    bAllowNegativeEmissiveColor = True
+    bTangentSpaceNormal = False
+    bUseLightmapDirectionality = False
+    EditorX = -272
+    EditorY = -5
+    bCastRayTracedShadows = False
+    BlendableOutputAlpha = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    bIsBlendable = False
+    StateId = 42EACC9F490C18C23C8233B491684647
+    ReferencedTextureGuids(0) = 18D6C5BC40AF0351E5721EB385907638
+    ReferencedDefaultTextures(0) = "/Script/Engine.VolumeTexture'/Game/ENDEMIS/Water/Textures/VT_OceanWave.VT_OceanWave'"
+    LightingGuid = 717ED72645B9F2EA00A521ABC1E993C1
+    EditorOnlyData <- M_TextureWaveGenerator_SubstrateEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_TextureWaveGenerator_SubstrateEditorOnlyData] MaterialEditorOnlyData
+    EmissiveColor <- MaterialExpressionMaterialFunctionCall_0
+    Opacity <- MaterialExpressionOneMinus_0
+    OpacityMask <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_AnimatedWave.MF_AnimatedWave'"
+    FunctionOutputs(0) = (ExpressionOutputId=73E0ED794423EA6BC174ECB1770EB9E9,Output=(OutputName="NormalHeight"))
+    FunctionOutputs(1) = (ExpressionOutputId=A44C391544297E126602A4A06D44E94F,Output=(OutputName="Foam"))
+    Outputs(0) = (OutputName="NormalHeight")
+    Outputs(1) = (OutputName="Foam")
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

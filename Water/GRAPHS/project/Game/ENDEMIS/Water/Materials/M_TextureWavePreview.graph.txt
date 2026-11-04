@@ -1,0 +1,127 @@
+﻿# /Game/ENDEMIS/Water/Materials/M_TextureWavePreview
+# класс: Material; происхождение: проект; узлов: 21; связей: 40; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:212
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_TextureWavePreview] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bTangentSpaceNormal = False
+    Wireframe = True
+    EditorX = 1264
+    EditorY = 160
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 140D03474FB9E93458513F9246C40744
+    ReferencedTextureGuids(0) = 0D9E52B248DA2B0E79E8A4883C79D6A0
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_DetailWaveTexture_00",TextureReference="/Game/ENDEMIS/Water/Textures/T_DetailWaveTexture_00.T_DetailWaveTexture_00")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ReferencedDefaultTextures(2) = "/Script/Engine.VolumeTexture'/Engine/EngineResources/DefaultVolumeTexture.DefaultVolumeTexture'"
+    ReferencedDefaultTextures(3) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+    ReferencedDefaultTextures(4) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DetailWaveTexture_00.T_DetailWaveTexture_00'"
+    LightingGuid = FC517DD74F6069BA915229BCF6517317
+    EditorOnlyData <- M_TextureWavePreviewEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_TextureWavePreviewEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="FluxWaveTexture")
+    EmissiveColor <- MaterialExpressionDivide_0
+    WorldPositionOffset <- MaterialExpressionAdd_8
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionAdd_8
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionDotProduct_2
+    ExpressionCollection <- MaterialExpressionSkyAtmosphereLightDirection_0
+    ExpressionCollection <- MaterialExpressionSaturate_4
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionEyeAdaptation_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_23
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+[MaterialExpressionAdd_8] MaterialExpressionAdd
+    A <- MaterialExpressionMaterialFunctionCall_4
+    B <- MaterialExpressionAppendVector_0
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    A <- MaterialExpressionConstant2Vector_0
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    B = True
+    Input <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=20.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=2.500000,G=2.000000,B=1.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    A <- MaterialExpressionMultiply_1
+    B <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionDotProduct_2] MaterialExpressionDotProduct
+    A <- MaterialExpressionSkyAtmosphereLightDirection_0
+    B <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionEyeAdaptation_0] MaterialExpressionEyeAdaptation
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceGet.MF_SurfaceGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=2F5590B84443D79C5ED20CBD1986AE0F,Output=(OutputName="Normal"))
+    FunctionOutputs(1) = (ExpressionOutputId=D5D9C81149A5173C450574ACF1892A83,Output=(OutputName="Offset"))
+    FunctionOutputs(2) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Foam"))
+    FunctionOutputs(3) = (ExpressionOutputId=FC1998D248C1B4F3F737EBAF2BB809E2,Output=(OutputName="Mask"))
+    FunctionOutputs(4) = (ExpressionOutputId=C01B4B1441F01BFD0BB092845D3E4E62,Output=(OutputName="Velocity"))
+    FunctionOutputs(5) = (ExpressionOutputId=4AAF74BF4772E0CDE6587E828A6B55A1,Output=(OutputName="Divergence"))
+    FunctionOutputs(6) = (ExpressionOutputId=77C243024B2239B4AC21598697A703B8,Output=(OutputName="Color"))
+    FunctionOutputs(7) = (ExpressionOutputId=BD109C08454FEDC8A7EB33808510A655,Output=(OutputName="OffsetCorrection"))
+    Outputs(0) = (OutputName="Normal")
+    Outputs(1) = (OutputName="Offset")
+    Outputs(2) = (OutputName="Foam")
+    Outputs(3) = (OutputName="Mask")
+    Outputs(4) = (OutputName="Velocity")
+    Outputs(5) = (OutputName="Divergence")
+    Outputs(6) = (OutputName="Color")
+    Outputs(7) = (OutputName="OffsetCorrection")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_Surface_WaveTexture.MF_Surface_WaveTexture'"
+    FunctionInputs(0) = (ExpressionInputId=0491AA6B4F9D22481EF99B9119F80ABF,Input=(OutputIndex=-1,InputName="DistantFade"))
+    FunctionInputs(1) = (ExpressionInputId=EEF1DBEC4A7E157A6A3892AAF1769CE1,Input=(OutputIndex=-1,InputName="WorldPosition"))
+    FunctionInputs(2) = (ExpressionInputId=2EFEA1974156D7543DC4458AA6D86CB5,Input=(OutputIndex=-1,InputName="Distance"))
+    FunctionInputs(3) = (ExpressionInputId=B8DDEB4D4DCEA9B038C10B862067C492,Input=(OutputIndex=-1,InputName="Intensity"))
+    FunctionInputs(4) = (ExpressionInputId=AF1D3A044AB34DB15486BA80877D7F19,Input=(OutputIndex=-1,InputName="Precise"))
+    FunctionOutputs(0) = (ExpressionOutputId=BA08A2E04BA053CB99A033B45DCCE791,Output=(OutputName="SurfaceLayer"))
+    FunctionOutputs(1) = (ExpressionOutputId=3FE0EC8E4856995DD41FADBAE2E34571,Output=(OutputName="Sample"))
+    FunctionOutputs(2) = (ExpressionOutputId=A9FB816E40A19ED6A111459B5D0CD30F,Output=(OutputName="Height"))
+    Outputs(0) = (OutputName="SurfaceLayer")
+    Outputs(1) = (OutputName="Sample")
+    Outputs(2) = (OutputName="Height")
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_10
+    B <- MaterialExpressionComponentMask_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionConstant3Vector_1
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    A <- MaterialExpressionSaturate_4
+    B <- MaterialExpressionSaturate_4
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 0.050000
+    A <- MaterialExpressionScalarParameter_23
+[MaterialExpressionSaturate_4] MaterialExpressionSaturate
+    Input <- MaterialExpressionDotProduct_2
+[MaterialExpressionScalarParameter_23] MaterialExpressionScalarParameter
+    DefaultValue = 300.000000
+    ParameterName = "WaveTextureHeight"
+    ExpressionGUID = 6EF7E5AB45824D02E468459DFF2785BA
+    Group = "FluxWaveTexture"
+[MaterialExpressionSkyAtmosphereLightDirection_0] MaterialExpressionSkyAtmosphereLightDirection
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

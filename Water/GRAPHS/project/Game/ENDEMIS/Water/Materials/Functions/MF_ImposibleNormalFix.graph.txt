@@ -1,0 +1,148 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_ImposibleNormalFix
+# класс: MaterialFunction; происхождение: проект; узлов: 29; связей: 54; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:57
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_ImposibleNormalFix] MaterialFunction
+    StateId = ECC782124543069417F74987AB49AF05
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_ImposibleNormalFixEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_ImposibleNormalFixEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionReflectionVectorWS_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_3
+    ExpressionCollection <- MaterialExpressionComponentMask_3
+    ExpressionCollection <- MaterialExpressionSaturate_3
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_2
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionReroute_1
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    A <- MaterialExpressionMultiply_1
+    B <- MaterialExpressionReroute_1
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    ConstB = 0.300000
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionSaturate_0
+[MaterialExpressionCameraVectorWS_2] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+[MaterialExpressionCameraVectorWS_3] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    Input <- MaterialExpressionReflectionVectorWS_0
+[MaterialExpressionComponentMask_3] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    Input <- MaterialExpressionCameraVectorWS_3
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Normal"
+    Id = ED91CF0B498F7454B5DA1999E51FB459
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    bCollapsed = True
+    Preview <- MaterialExpressionVertexNormalWS_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Scale"
+    Id = 163AD8F348C8CF292EF29492D2475040
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "CorrectedNormal"
+    bLastPreviewed = True
+    Id = BDDB954340E271A394C7F0B084EDAE73
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    bCollapsed = True
+    A <- MaterialExpressionNormalize_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    A <- MaterialExpressionSaturate_3
+    B <- MaterialExpressionConstant_0
+    Alpha <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    A <- MaterialExpressionMultiply_7
+    B <- MaterialExpressionCameraVectorWS_2
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionScalarParameter_3
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    A <- MaterialExpressionComponentMask_0
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    A <- MaterialExpressionScalarParameter_2
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    A <- MaterialExpressionSaturate_0
+    B <- MaterialExpressionMultiply_6
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    VectorInput <- MaterialExpressionAdd_0
+[MaterialExpressionReflectionVectorWS_0] MaterialExpressionReflectionVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    CustomWorldNormal <- MaterialExpressionFunctionInput_0
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    Input <- MaterialExpressionMultiply_4
+[MaterialExpressionSaturate_3] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+    Input <- MaterialExpressionComponentMask_3
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    ParameterName = "HorizonCorrectionNormalFresnel"
+    ExpressionGUID = 67E5F853489FED96E042D29AB7C35F6A
+    Group = "HorizonCorrection"
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "HorizonCorrectionNormalIntensity"
+    ExpressionGUID = 074B072E4DC1E24DBD0DEF98F67D3858
+    Group = "HorizonCorrection"
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    ParameterName = "HorizonCorrectionNormalEdge"
+    ExpressionGUID = 3AAD472D4C6EC4F1E9059C9A6712D582
+    Group = "HorizonCorrection"
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+[MaterialExpressionVertexNormalWS_0] MaterialExpressionVertexNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_ImposibleNormalFix'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

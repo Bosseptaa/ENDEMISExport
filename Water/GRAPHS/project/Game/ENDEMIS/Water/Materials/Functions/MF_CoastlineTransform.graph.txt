@@ -1,0 +1,125 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_CoastlineTransform
+# класс: MaterialFunction; происхождение: проект; узлов: 17; связей: 42; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:37
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CoastlineTransform] MaterialFunction
+    StateId = 369DDF4048A3A55732CDDF9FE27AB4AE
+    CombinedInputTypes = 2562
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_CoastlineTransformEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CoastlineTransformEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionStaticSwitch_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    Input <- MaterialExpressionFunctionInput_2
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    A <- MaterialExpressionFunctionInput_2
+    B <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Coastline"
+    Id = B9D5436C48965BA86A08E6B1567FF3F0
+    InputType = FunctionInput_MaterialAttributes
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "LocalSpace"
+    Id = 58CC12CE48D6B96C31673694266103E5
+    InputType = FunctionInput_StaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Offset"
+    Id = 2BD6F4B6459625D7F381CC979C16EB75
+    InputType = FunctionInput_Vector2
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Coastline"
+    bLastPreviewed = True
+    Id = 86A180EA474A0BC56D8A6EA54F6196BE
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitch_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_CoastlineDataGet.MF_CoastlineDataGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=907637C844D6BC8298C5ACADA0E3B2C3,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=23481DEA4452179C8D2797B33CE20435,Output=(OutputName="Direction"))
+    FunctionOutputs(2) = (ExpressionOutputId=A84715A749104AD14C38248BBFD455E2,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=6346C58A410496BE2C7A25BD8D50DEAA,Output=(OutputName="Mask"))
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Direction")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_CoastlineDataSet.MF_CoastlineDataSet'"
+    FunctionOutputs(0) = (ExpressionOutputId=A9D3ACA244AF21FD94A8CBAE174A4AE4,Output=(OutputName="Layer"))
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    Outputs(0) = (OutputName="Layer")
+    FunctionInputs(0) <- MaterialExpressionAdd_0
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_0
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_0
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_CoastlineDataGet.MF_CoastlineDataGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=907637C844D6BC8298C5ACADA0E3B2C3,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=23481DEA4452179C8D2797B33CE20435,Output=(OutputName="Direction"))
+    FunctionOutputs(2) = (ExpressionOutputId=A84715A749104AD14C38248BBFD455E2,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=6346C58A410496BE2C7A25BD8D50DEAA,Output=(OutputName="Mask"))
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Direction")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_CoastlineDataSet.MF_CoastlineDataSet'"
+    FunctionOutputs(0) = (ExpressionOutputId=A9D3ACA244AF21FD94A8CBAE174A4AE4,Output=(OutputName="Layer"))
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    Outputs(0) = (OutputName="Layer")
+    FunctionInputs(0) <- MaterialExpressionSubtract_0
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_2
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_2
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+[MaterialExpressionStaticSwitch_0] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionMaterialFunctionCall_3
+    Value <- MaterialExpressionFunctionInput_1
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineTransform'"
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionDotProduct_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

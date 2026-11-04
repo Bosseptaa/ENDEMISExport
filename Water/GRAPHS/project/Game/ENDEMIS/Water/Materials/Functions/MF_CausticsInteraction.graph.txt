@@ -1,0 +1,139 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_CausticsInteraction
+# класс: MaterialFunction; происхождение: проект; узлов: 21; связей: 40; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:190
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CausticsInteraction] MaterialFunction
+    StateId = 4F3AA63F424F0C5D2F6775AE00100931
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_11
+    EditorOnlyData <- MF_CausticsInteractionEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CausticsInteractionEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_11
+    ExpressionCollection <- MaterialExpressionWorldPosition_6
+    ExpressionCollection <- MaterialExpressionDotProduct_3
+    ExpressionCollection <- MaterialExpressionComponentMask_9
+    ExpressionCollection <- MaterialExpressionComponentMask_11
+    ExpressionCollection <- MaterialExpressionMultiply_46
+    ExpressionCollection <- MaterialExpressionMultiply_47
+    ExpressionCollection <- MaterialExpressionScalarParameter_27
+    ExpressionCollection <- MaterialExpressionMultiply_39
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+[MaterialExpressionComponentMask_11] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    Input <- MaterialExpressionWorldPosition_6
+[MaterialExpressionComponentMask_9] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    Input <- MaterialExpressionMaterialFunctionCall_11
+[MaterialExpressionDotProduct_3] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    A <- MaterialExpressionComponentMask_9
+    B <- MaterialExpressionComponentMask_9
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "AdditionalBaseColor"
+    SortPriority = -12
+    bLastPreviewed = True
+    Id = BCDDE59B405FFF788066C98653F1ACAC
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_5
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "AdditionalDistortion"
+    SortPriority = -4
+    bLastPreviewed = True
+    Id = 7F0223914302D52E0D7B65B01CF90229
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_47
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "AdditionalVelocity"
+    bLastPreviewed = True
+    Id = B5E98E354B40D95D5796BFA8E3323EF4
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_46
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "HeightOffset"
+    SortPriority = 12
+    bLastPreviewed = True
+    Id = E743B3EA4653B6B9779C5CAED58B15A8
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionMaterialFunctionCall_11] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_DetailInteraction.MF_DetailInteraction'"
+    FunctionOutputs(0) = (ExpressionOutputId=9CB6CF524A3E04BDA297FCBE6784E6B8,Output=(OutputName="Normal"))
+    FunctionOutputs(1) = (ExpressionOutputId=4803224A46F85150767CF08368AD22DA,Output=(OutputName="Foam"))
+    FunctionOutputs(2) = (ExpressionOutputId=5817A66348639BA01D3FC3B9927AEF10,Output=(OutputName="UV"))
+    FunctionOutputs(3) = (ExpressionOutputId=F7A4588A43B9C5FE59ACC8B39F8FC5DD,Output=(OutputName="Height"))
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    Outputs(0) = (OutputName="Normal")
+    Outputs(1) = (OutputName="Foam")
+    Outputs(2) = (OutputName="UV")
+    Outputs(3) = (OutputName="Height")
+    FunctionInputs(0) <- MaterialExpressionComponentMask_11
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    A <- MaterialExpressionMaterialFunctionCall_11
+    B <- MaterialExpressionScalarParameter_2
+[MaterialExpressionMultiply_39] MaterialExpressionMultiply
+    ConstB = -0.200000
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    A <- MaterialExpressionMaterialFunctionCall_11
+    B <- MaterialExpressionScalarParameter_27
+[MaterialExpressionMultiply_46] MaterialExpressionMultiply
+    ConstB = 3.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    A <- MaterialExpressionComponentMask_9
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionMultiply_47] MaterialExpressionMultiply
+    ConstB = -0.300000
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    A <- MaterialExpressionComponentMask_9
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+    A <- MaterialExpressionDotProduct_3
+    B <- MaterialExpressionMultiply_39
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = -0.300000
+    ParameterName = "InteractionDistortion"
+    ExpressionGUID = 522A06E742FC1F3D9BCAEDB8B6CEF9AC
+    Group = "Caustics"
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 1.500000
+    ParameterName = "InteractionVelocity"
+    ExpressionGUID = A32A119F487B3F55033EFA96E0F4DA5E
+    Group = "Caustics"
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 30.000000
+    ParameterName = "InteractonOffsetScale"
+    ExpressionGUID = DD69C717457252D71BF803818C6972ED
+    Group = "FluxInteraction"
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+[MaterialExpressionScalarParameter_27] MaterialExpressionScalarParameter
+    DefaultValue = -1.000000
+    ParameterName = "InteractionNormalBaseColor"
+    ExpressionGUID = 84320A88487DC7368823E4A167ED7F18
+    Group = "Caustics"
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+[MaterialExpressionWorldPosition_6] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsInteraction'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,41 @@
+﻿# /Game/ENDEMIS/Water/Blueprints/BPI_CameraEvents
+# класс: Blueprint; происхождение: проект; узлов: 8; связей: 7; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:15
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BPI_CameraEvents] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/CoreUObject.Interface'"
+    BlueprintType = BPTYPE_Interface
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = ""
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BPI_CameraEvents_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = EEFB8E764B343CF57B7167A8BD9D7163
+    FunctionGraphs(0) <- FluxCameraInFluid
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[FluxCameraInFluid] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 860EA0B14752016065E08C8969794A01
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@FluxCameraInFluid] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@FluxCameraInFluid] K2Node_FunctionResult
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[FluxCameraInFluid_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 860EA0B14752016065E08C8969794A01
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@FluxCameraInFluid_MERGED] K2Node_FunctionEntry (вызов: FluxCameraInFluid)
+    MetaData = (ToolTip=NSLOCTEXT("", "85C7BDD545C68898329E2B830563CC5F", "Useful for triggering turning off some post-process effects when the camera is in the fluid."))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "85C7BDD545C68898329E2B830563CC5F", "Useful for triggering turning off some post-process effects when the camera is in the fluid."))
+    ExtraFlags = 201457664
+    bIsEditable = True
+[K2Node_FunctionResult_0@FluxCameraInFluid_MERGED] K2Node_FunctionResult (вызов: FluxCameraInFluid)
+    bIsEditable = True
+    bIsEditable = True
+
+## СВЯЗИ
+[K2Node_FunctionEntry_0@FluxCameraInFluid_MERGED].then -> [K2Node_FunctionResult_0@FluxCameraInFluid_MERGED].execute

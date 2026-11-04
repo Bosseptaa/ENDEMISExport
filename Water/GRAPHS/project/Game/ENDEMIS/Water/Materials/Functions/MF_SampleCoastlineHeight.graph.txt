@@ -1,0 +1,115 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_SampleCoastlineHeight
+# класс: MaterialFunction; происхождение: проект; узлов: 15; связей: 28; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:32
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SampleCoastlineHeight] MaterialFunction
+    StateId = 00722D164E0DCC6936C5F08DDF252465
+    CombinedInputTypes = 514
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    EditorOnlyData <- MF_SampleCoastlineHeightEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SampleCoastlineHeightEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_6
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = 973F69F04A567D6C876F98B15939EE63
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+    bCollapsed = True
+    Preview <- MaterialExpressionWorldPosition_1
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "PreciseHeightmap"
+    Id = 2BD8F82D41F8DF3C6DA222886710DFCE
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "GroudRelativeZ"
+    bLastPreviewed = True
+    Id = 21F093CD4CE9FDABE88C418BBE0F1968
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "GroundWorldZ"
+    bLastPreviewed = True
+    Id = B63C54EC49ECC68671A4A2B91FBF5F8C
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+    bCollapsed = True
+    A <- MaterialExpressionSubtract_2
+[MaterialExpressionFunctionOutput_6] MaterialExpressionFunctionOutput
+    OutputName = "ReferencePlaneZ"
+    SortPriority = 3
+    bLastPreviewed = True
+    Id = 8A2DEC954D4BF57AF823499B5353328B
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_TextureSamplePrecise2D.MF_TextureSamplePrecise2D'"
+    FunctionInputs(1) = (ExpressionInputId=9C8A9F4A4A314C30FBB52E8B3603C9CC,Input=(OutputIndex=-1,InputName="Mipmap"))
+    FunctionInputs(4) = (ExpressionInputId=0C70E65A4F619A9B77E9708B05A6396B,Input=(OutputIndex=-1,InputName="Scale"))
+    FunctionOutputs(0) = (ExpressionOutputId=67F4F1BE48CE40DA1EF29A9BE043C32A,Output=(OutputName="SampleR"))
+    FunctionOutputs(1) = (ExpressionOutputId=4650078740E7E8C5839CB38796265565,Output=(OutputName="SampleRGBA"))
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+    Outputs(0) = (OutputName="SampleR")
+    Outputs(1) = (OutputName="SampleRGBA")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_2
+    FunctionInputs(3) <- MaterialExpressionTextureObjectParameter_1
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_WorldToCoastlineUV.MF_WorldToCoastlineUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=E7854F864B404DDBFDE83C8D5C660588,Output=(OutputName="Scale"))
+    FunctionOutputs(1) = (ExpressionOutputId=CB6576E1418A4B7D0149429B6CEFED18,Output=(OutputName="UV"))
+    FunctionOutputs(2) = (ExpressionOutputId=AB54F8A04BF80648975AFEAEF6AA4B89,Output=(OutputName="Location"))
+    FunctionOutputs(3) = (ExpressionOutputId=CC73E6C2412A717020F206AE8D6F4D7F,Output=(OutputName="ReferencePlaneHeight"))
+    FunctionOutputs(4) = (ExpressionOutputId=D453923D4F896744C8CAB5BC03EE1446,Output=(OutputName="Resolution"))
+    FunctionOutputs(5) = (ExpressionOutputId=4ADE6B714BD48DB8764BF28BC453AAE2,Output=(OutputName="TexelSize"))
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+    Outputs(0) = (OutputName="Scale")
+    Outputs(1) = (OutputName="UV")
+    Outputs(2) = (OutputName="Location")
+    Outputs(3) = (OutputName="ReferencePlaneHeight")
+    Outputs(4) = (OutputName="Resolution")
+    Outputs(5) = (OutputName="TexelSize")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+    A <- MaterialExpressionFunctionOutput_6
+    B <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionTextureObjectParameter_1] MaterialExpressionTextureObjectParameter
+    ParameterName = "FluxWorldGroundMap"
+    ExpressionGUID = 9B4E1451450B91BD5CC1A1A76B04DC36
+    Group = "FluxData"
+    Texture = "/Script/Engine.TextureRenderTarget2D'/Game/ENDEMIS/Water/Textures/RT_DefaultWhite16.RT_DefaultWhite16'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+    bCollapsed = True
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_SampleCoastlineHeight'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

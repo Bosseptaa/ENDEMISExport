@@ -1,0 +1,70 @@
+﻿# /Game/ENDEMIS/Water/Materials/M_EndemisIconEffect
+# класс: Material; происхождение: проект; узлов: 16; связей: 31; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:34
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_EndemisIconEffect] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    EditorX = 352
+    EditorY = 64
+    bCastRayTracedShadows = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = E4F5A043A758AA4177703ABDCAEE56A1
+    ReferencedTextureGuids(0) = CEF881104E07224643155684E13ACA2C
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_EndemisIcon.T_EndemisIcon'"
+    LightingGuid = 3BAAB6F24AB42D51B107BCB1893FFC17
+    EditorOnlyData <- M_EndemisIconEffectEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_EndemisIconEffectEditorOnlyData] MaterialEditorOnlyData
+    EmissiveColor <- MaterialExpressionDivide_0
+    OpacityMask <- MaterialExpressionTextureSample_2
+    WorldPositionOffset <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionTextureSample_2
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionDesaturation_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionEyeAdaptation_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.300000
+    A <- MaterialExpressionTextureSample_2
+[MaterialExpressionCameraPositionWS_0] MaterialExpressionCameraPositionWS
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = -0.700000
+[MaterialExpressionDesaturation_0] MaterialExpressionDesaturation
+    Input <- MaterialExpressionTextureSample_2
+    Fraction <- MaterialExpressionConstant_1
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionEyeAdaptation_0] MaterialExpressionEyeAdaptation
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    ConstAlpha = 0.200000
+    A <- MaterialExpressionDesaturation_0
+    B <- MaterialExpressionMultiply_5
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 50.000000
+    A <- MaterialExpressionNormalize_0
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    A <- MaterialExpressionTextureSample_2
+    B <- MaterialExpressionAdd_0
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionSubtract_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    A <- MaterialExpressionCameraPositionWS_0
+    B <- MaterialExpressionWorldPosition_0
+[MaterialExpressionTextureSample_2] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_EndemisIcon.T_EndemisIcon'"
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

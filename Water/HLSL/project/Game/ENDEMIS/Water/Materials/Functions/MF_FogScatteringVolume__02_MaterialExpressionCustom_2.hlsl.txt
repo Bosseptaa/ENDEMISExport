@@ -1,0 +1,10 @@
+﻿// Источник: /Game/ENDEMIS/Water/Materials/Functions/MF_FogScatteringVolume (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_2 ключ: Code
+// Входы: CosTheta, g
+// Выход: CMOT_Float1
+// Описание: нет
+
+	const float k = 1.55f * g - 0.55f * g * g * g;
+	const float SchlickPhaseFactor = 1.0f + k * CosTheta;
+	const float PhaseValue = (1.0f - k * k) / (4.0f * PI * SchlickPhaseFactor * SchlickPhaseFactor);
+	return PhaseValue;

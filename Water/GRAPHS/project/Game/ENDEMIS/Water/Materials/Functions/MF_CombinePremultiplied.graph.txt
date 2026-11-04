@@ -1,0 +1,111 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_CombinePremultiplied
+# класс: MaterialFunction; происхождение: проект; узлов: 17; связей: 31; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:33
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CombinePremultiplied] MaterialFunction
+    описание: Fucntion combines two blend layers encoded as composite translucent. 
+    bExposeToLibrary = True
+    StateId = 1318E1534E60D44F20A3988E303CE1D2
+    CombinedInputTypes = 520
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_CombinePremultipliedEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CombinePremultipliedEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionOneMinus_16
+    ExpressionCollection <- MaterialExpressionAdd_57
+    ExpressionCollection <- MaterialExpressionMultiply_83
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionStaticSwitch_0
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+[MaterialExpressionAdd_57] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    A <- MaterialExpressionMultiply_83
+    B <- MaterialExpressionFunctionInput_3
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    A = True
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    Input <- MaterialExpressionFunctionInput_3
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    A = True
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    Input <- MaterialExpressionStaticSwitch_0
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    G = True
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    Input <- MaterialExpressionStaticSwitch_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "UseTopLayer"
+    Id = 8837AA494D2D3F3C9FA856815C3D56A5
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Bottom"
+    Id = 41C883574B11363747B70092FABD69BC
+    InputType = FunctionInput_Vector4
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Top"
+    Id = 2F60963F4A4FC1B6DF02309A42F8249E
+    InputType = FunctionInput_Vector4
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "A"
+    SortPriority = 3
+    bLastPreviewed = True
+    Id = 0356188A4A400D8F88CFB7B55F85CE3E
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    bCollapsed = True
+    A <- MaterialExpressionComponentMask_1
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "RGB"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = D9000D3944F30C40DADF57ABCBB24511
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    bCollapsed = True
+    A <- MaterialExpressionComponentMask_2
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "RGBA"
+    SortPriority = -1
+    bLastPreviewed = True
+    Id = 628886284518ACA64B305A856483F975
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitch_0
+[MaterialExpressionMultiply_83] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionOneMinus_16
+[MaterialExpressionOneMinus_16] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    Input <- MaterialExpressionComponentMask_0
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+[MaterialExpressionStaticSwitch_0] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_CombinePremultiplied'"
+    A <- MaterialExpressionAdd_57
+    B <- MaterialExpressionFunctionInput_1
+    Value <- MaterialExpressionFunctionInput_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+    PrimitiveType = TPT_Plane
+    bUserModifiedShape = True
+
+## СВЯЗИ

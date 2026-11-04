@@ -1,0 +1,216 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_ScatteringNormal
+# класс: MaterialFunction; происхождение: проект; узлов: 41; связей: 78; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:81
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_ScatteringNormal] MaterialFunction
+    StateId = 2B0D83EE415A8F4665B35E9616B36DC9
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_ScatteringNormalEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_ScatteringNormalEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_0
+    ExpressionCollection <- MaterialExpressionDotProduct_6
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_4
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_9
+    ExpressionCollection <- MaterialExpressionDotProduct_8
+    ExpressionCollection <- MaterialExpressionPower_3
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionOneMinus_6
+    ExpressionCollection <- MaterialExpressionSkyAtmosphereLightDirection_2
+    ExpressionCollection <- MaterialExpressionMultiply_19
+    ExpressionCollection <- MaterialExpressionMultiply_22
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionMultiply_24
+    ExpressionCollection <- MaterialExpressionComponentMask_8
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionComponentMask_9
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_5
+    ExpressionCollection <- MaterialExpressionDotProduct_9
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_10
+    ExpressionCollection <- MaterialExpressionPower_4
+    ExpressionCollection <- MaterialExpressionAdd_12
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionMax_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionFunctionInput_6
+    ExpressionCollection <- MaterialExpressionComment_1
+[MaterialExpressionAdd_12] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionFunctionInput_2
+    B <- MaterialExpressionPower_4
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionComponentMask_8
+    B <- MaterialExpressionOneMinus_6
+[MaterialExpressionCameraVectorWS_10] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+[MaterialExpressionCameraVectorWS_9] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+[MaterialExpressionComment_1] MaterialExpressionComment
+    SizeX = 2400
+    SizeY = 944
+    Text = "Normal scattering mode"
+    CommentColor = (R=0.555039,G=1.000000,B=0.588474,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    Input <- MaterialExpressionFunctionInput_6
+[MaterialExpressionComponentMask_8] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    Input <- MaterialExpressionPixelNormalWS_4
+[MaterialExpressionComponentMask_9] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    Input <- MaterialExpressionPixelNormalWS_4
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.700000
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 8.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+[MaterialExpressionDotProduct_6] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionMultiply_19
+    B <- MaterialExpressionFunctionInput_6
+[MaterialExpressionDotProduct_8] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionSubtract_2
+    B <- MaterialExpressionCameraVectorWS_9
+[MaterialExpressionDotProduct_9] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionPixelNormalWS_5
+    B <- MaterialExpressionCameraVectorWS_10
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "SunAngle"
+    Id = A42A73FD4B437E9CEBF67B85AEBD4B5A
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Distortion"
+    Id = 9375E40B4BD0D12F1B4142B29A13FE7D
+    InputType = FunctionInput_Scalar
+    SortPriority = -8
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "FrasnelBase"
+    Id = DBE19ECF428F725F272581A883378124
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_1
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "VertexNormal"
+    Id = 8D07D3B347EFC67511D0EE93FE1BEDD0
+    SortPriority = 123
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    bCollapsed = True
+    Preview <- MaterialExpressionVertexNormalWS_0
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "FrasnelPower"
+    Id = F397E23D4AB0E1CB806ECB9554538BDA
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "Intensity"
+    Id = 766F4D7C4AE215229C1231ABCE5A3CBE
+    InputType = FunctionInput_Scalar
+    SortPriority = -10
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_6] MaterialExpressionFunctionInput
+    InputName = "L"
+    Id = ECF45BF34D87CE3FFED719BD9FA019DF
+    SortPriority = -444
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    bCollapsed = True
+    Preview <- MaterialExpressionSkyAtmosphereLightDirection_2
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 31E39291417280E6D69C75B8B5C75690
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    bCollapsed = True
+    A <- MaterialExpressionMax_2
+[MaterialExpressionMax_0] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionDotProduct_9
+[MaterialExpressionMax_2] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionMultiply_22
+[MaterialExpressionMultiply_19] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionAppendVector_1
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionAdd_12
+    B <- MaterialExpressionPower_3
+[MaterialExpressionMultiply_22] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionSaturate_0
+    B <- MaterialExpressionDotProduct_6
+[MaterialExpressionMultiply_24] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionMultiply_2
+    B <- MaterialExpressionFunctionInput_5
+[MaterialExpressionOneMinus_6] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    Input <- MaterialExpressionComponentMask_9
+[MaterialExpressionPixelNormalWS_4] MaterialExpressionPixelNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+[MaterialExpressionPixelNormalWS_5] MaterialExpressionPixelNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+[MaterialExpressionPower_3] MaterialExpressionPower
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    Base <- MaterialExpressionDotProduct_8
+    Exponent <- MaterialExpressionFunctionInput_1
+[MaterialExpressionPower_4] MaterialExpressionPower
+    ConstExponent = 8.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    Base <- MaterialExpressionMax_0
+    Exponent <- MaterialExpressionFunctionInput_4
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    Input <- MaterialExpressionMultiply_24
+[MaterialExpressionSkyAtmosphereLightDirection_2] MaterialExpressionSkyAtmosphereLightDirection
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+    A <- MaterialExpressionFunctionInput_3
+    B <- MaterialExpressionAppendVector_0
+[MaterialExpressionVertexNormalWS_0] MaterialExpressionVertexNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringNormal'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

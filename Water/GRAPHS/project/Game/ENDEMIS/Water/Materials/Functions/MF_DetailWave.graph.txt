@@ -1,0 +1,563 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_DetailWave
+# класс: MaterialFunction; происхождение: проект; узлов: 89; связей: 196; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:880
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_DetailWave] MaterialFunction
+    StateId = 71B96F014983E6DF4CC4068AAF865D36
+    CombinedInputTypes = 2048
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_13
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_14
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_18
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_4
+    DependentFunctionExpressionCandidates(4) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(5) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(6) <- MaterialExpressionMaterialFunctionCall_2
+    EditorOnlyData <- MF_DetailWaveEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_DetailWaveEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_13
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_14
+    ExpressionCollection <- MaterialExpressionAdd_7
+    ExpressionCollection <- MaterialExpressionWorldPosition_2
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_1
+    ExpressionCollection <- MaterialExpressionDistance_2
+    ExpressionCollection <- MaterialExpressionDivide_4
+    ExpressionCollection <- MaterialExpressionMin_1
+    ExpressionCollection <- MaterialExpressionSubtract_4
+    ExpressionCollection <- MaterialExpressionDivide_5
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionSubtract_5
+    ExpressionCollection <- MaterialExpressionMultiply_13
+    ExpressionCollection <- MaterialExpressionWorldPosition_3
+    ExpressionCollection <- MaterialExpressionAdd_9
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_1
+    ExpressionCollection <- MaterialExpressionReroute_15
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_18
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionMultiply_16
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_2
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_2
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionScalarParameter_10
+    ExpressionCollection <- MaterialExpressionScalarParameter_11
+    ExpressionCollection <- MaterialExpressionMultiply_21
+    ExpressionCollection <- MaterialExpressionAdd_10
+    ExpressionCollection <- MaterialExpressionMultiply_18
+    ExpressionCollection <- MaterialExpressionSubtract_6
+    ExpressionCollection <- MaterialExpressionMultiply_20
+    ExpressionCollection <- MaterialExpressionDivide_6
+    ExpressionCollection <- MaterialExpressionScalarParameter_8
+    ExpressionCollection <- MaterialExpressionSaturate_5
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_5
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionScalarParameter_7
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_0
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_1
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_3
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionReroute_3
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_1
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_5
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_6
+    ExpressionCollection <- MaterialExpressionReroute_4
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_2
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_7
+    ExpressionCollection <- MaterialExpressionReroute_5
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_3
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_8
+    ExpressionCollection <- MaterialExpressionReroute_6
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_4
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_9
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_10
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_11
+    ExpressionCollection <- MaterialExpressionReroute_7
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_6
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_12
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionReroute_8
+    ExpressionCollection <- MaterialExpressionDivide_2
+[MaterialExpressionAdd_10] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionNamedRerouteUsage_12
+    B <- MaterialExpressionMultiply_20
+[MaterialExpressionAdd_7] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionNamedRerouteUsage_10
+    B <- MaterialExpressionShaderStageSwitch_2
+[MaterialExpressionAdd_9] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionShaderStageSwitch_1
+    B <- MaterialExpressionWorldPosition_3
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionConstant2Vector_0
+    B <- MaterialExpressionMultiply_13
+[MaterialExpressionCameraPositionWS_1] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionWorldPosition_2
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionNamedRerouteUsage_8
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionDistance_2] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionAdd_9
+    B <- MaterialExpressionCameraPositionWS_1
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionScalarParameter_7
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionMultiply_21
+    B <- MaterialExpressionScalarParameter_10
+[MaterialExpressionDivide_4] MaterialExpressionDivide
+    ConstB = 3000.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionDistance_2
+[MaterialExpressionDivide_5] MaterialExpressionDivide
+    ConstB = 40.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionDistance_2
+[MaterialExpressionDivide_6] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    B <- MaterialExpressionScalarParameter_8
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "SurfaceLayer"
+    Id = D1FFF48F44346A791CB89EB8D844CEC8
+    InputType = FunctionInput_MaterialAttributes
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "SurfaceLayer"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = 9B6BF5F34A58ADAD89757EAF9485252E
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitchParameter_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceSet.MF_SurfaceSet'"
+    FunctionInputs(1) = (ExpressionInputId=08C2B0714FA847EFEB24E7A968EFF38A,Input=(OutputIndex=1,InputName="Normal"))
+    FunctionInputs(2) = (ExpressionInputId=5B4B591844BE6A30265B9E9C44569596,Input=(InputName="Offset"))
+    FunctionInputs(4) = (ExpressionInputId=61BB3B9141D3C9B758A160BEDA830DC1,Input=(OutputIndex=-1,InputName="Mask"))
+    FunctionInputs(5) = (ExpressionInputId=B6A8D4B64287848307BB38AEB3E5FF74,Input=(OutputIndex=-1,InputName="Velocity"))
+    FunctionInputs(6) = (ExpressionInputId=5FA446DF42E493DAD2202EA0B10DB10E,Input=(OutputIndex=-1,InputName="Divergence"))
+    FunctionInputs(7) = (ExpressionInputId=C0046E5C4B9604FDD2CAFF8B4723A722,Input=(OutputIndex=-1,InputName="Color"))
+    FunctionInputs(8) = (ExpressionInputId=28C47DB54D9D1912E024EDA2802E2BB3,Input=(OutputIndex=-1,InputName="OffsetCorrection"))
+    FunctionOutputs(0) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Layer"))
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Outputs(0) = (OutputName="Layer")
+    FunctionInputs(0) <- MaterialExpressionNamedRerouteUsage_1
+    FunctionInputs(3) <- MaterialExpressionSaturate_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceGet.MF_SurfaceGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=2F5590B84443D79C5ED20CBD1986AE0F,Output=(OutputName="Normal"))
+    FunctionOutputs(1) = (ExpressionOutputId=D5D9C81149A5173C450574ACF1892A83,Output=(OutputName="Offset"))
+    FunctionOutputs(2) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Foam"))
+    FunctionOutputs(3) = (ExpressionOutputId=FC1998D248C1B4F3F737EBAF2BB809E2,Output=(OutputName="Mask"))
+    FunctionOutputs(4) = (ExpressionOutputId=C01B4B1441F01BFD0BB092845D3E4E62,Output=(OutputName="Velocity"))
+    FunctionOutputs(5) = (ExpressionOutputId=4AAF74BF4772E0CDE6587E828A6B55A1,Output=(OutputName="Divergence"))
+    FunctionOutputs(6) = (ExpressionOutputId=77C243024B2239B4AC21598697A703B8,Output=(OutputName="Color"))
+    FunctionOutputs(7) = (ExpressionOutputId=BD109C08454FEDC8A7EB33808510A655,Output=(OutputName="OffsetCorrection"))
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Outputs(0) = (OutputName="Normal")
+    Outputs(1) = (OutputName="Offset")
+    Outputs(2) = (OutputName="Foam")
+    Outputs(3) = (OutputName="Mask")
+    Outputs(4) = (OutputName="Velocity")
+    Outputs(5) = (OutputName="Divergence")
+    Outputs(6) = (OutputName="Color")
+    Outputs(7) = (OutputName="OffsetCorrection")
+    FunctionInputs(0) <- MaterialExpressionNamedRerouteUsage_1
+[MaterialExpressionMaterialFunctionCall_13] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceSet.MF_SurfaceSet'"
+    FunctionInputs(4) = (ExpressionInputId=61BB3B9141D3C9B758A160BEDA830DC1,Input=(OutputIndex=-1,InputName="Mask"))
+    FunctionInputs(5) = (ExpressionInputId=B6A8D4B64287848307BB38AEB3E5FF74,Input=(OutputIndex=-1,InputName="Velocity"))
+    FunctionInputs(6) = (ExpressionInputId=5FA446DF42E493DAD2202EA0B10DB10E,Input=(OutputIndex=-1,InputName="Divergence"))
+    FunctionInputs(7) = (ExpressionInputId=C0046E5C4B9604FDD2CAFF8B4723A722,Input=(OutputIndex=-1,InputName="Color"))
+    FunctionInputs(8) = (ExpressionInputId=28C47DB54D9D1912E024EDA2802E2BB3,Input=(OutputIndex=-1,InputName="OffsetCorrection"))
+    FunctionOutputs(0) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Layer"))
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Outputs(0) = (OutputName="Layer")
+    FunctionInputs(0) <- MaterialExpressionNamedRerouteUsage_3
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_2
+    FunctionInputs(2) <- MaterialExpressionAdd_7
+    FunctionInputs(3) <- MaterialExpressionSaturate_5
+[MaterialExpressionMaterialFunctionCall_14] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceGet.MF_SurfaceGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=2F5590B84443D79C5ED20CBD1986AE0F,Output=(OutputName="Normal"))
+    FunctionOutputs(1) = (ExpressionOutputId=D5D9C81149A5173C450574ACF1892A83,Output=(OutputName="Offset"))
+    FunctionOutputs(2) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Foam"))
+    FunctionOutputs(3) = (ExpressionOutputId=FC1998D248C1B4F3F737EBAF2BB809E2,Output=(OutputName="Mask"))
+    FunctionOutputs(4) = (ExpressionOutputId=C01B4B1441F01BFD0BB092845D3E4E62,Output=(OutputName="Velocity"))
+    FunctionOutputs(5) = (ExpressionOutputId=4AAF74BF4772E0CDE6587E828A6B55A1,Output=(OutputName="Divergence"))
+    FunctionOutputs(6) = (ExpressionOutputId=77C243024B2239B4AC21598697A703B8,Output=(OutputName="Color"))
+    FunctionOutputs(7) = (ExpressionOutputId=BD109C08454FEDC8A7EB33808510A655,Output=(OutputName="OffsetCorrection"))
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Outputs(0) = (OutputName="Normal")
+    Outputs(1) = (OutputName="Offset")
+    Outputs(2) = (OutputName="Foam")
+    Outputs(3) = (OutputName="Mask")
+    Outputs(4) = (OutputName="Velocity")
+    Outputs(5) = (OutputName="Divergence")
+    Outputs(6) = (OutputName="Color")
+    Outputs(7) = (OutputName="OffsetCorrection")
+    FunctionInputs(0) <- MaterialExpressionNamedRerouteDeclaration_0
+[MaterialExpressionMaterialFunctionCall_18] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_AdvectWaveSample2D.MF_AdvectWaveSample2D'"
+    FunctionOutputs(0) = (ExpressionOutputId=85BDC74345F7ED0CBA1EEEA130FD75AA,Output=(OutputName="Derivate"))
+    FunctionOutputs(1) = (ExpressionOutputId=5A4A1D4A4303AE4EBAD1459A54363EBF,Output=(OutputName="Normal"))
+    FunctionOutputs(2) = (ExpressionOutputId=E1277C05455130D318295687729F2C84,Output=(OutputName="Height"))
+    FunctionOutputs(3) = (ExpressionOutputId=9571FCEB4DE077F31892129E632BC8B1,Output=(OutputName="Foam"))
+    FunctionOutputs(4) = (ExpressionOutputId=37A407024E5561C968EF27A435863024,Output=(OutputName="Weights"))
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Outputs(0) = (OutputName="Derivate")
+    Outputs(1) = (OutputName="Normal")
+    Outputs(2) = (OutputName="Height")
+    Outputs(3) = (OutputName="Foam")
+    Outputs(4) = (OutputName="Weights")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_4
+    FunctionInputs(1) <- MaterialExpressionScalarParameter_11
+    FunctionInputs(2) <- MaterialExpressionScalarParameter_4
+    FunctionInputs(3) <- MaterialExpressionStaticBool_0
+    FunctionInputs(4) <- MaterialExpressionMaterialFunctionCall_4
+    FunctionInputs(5) <- MaterialExpressionMaterialFunctionCall_4
+    FunctionInputs(6) <- MaterialExpressionComponentMask_1
+    FunctionInputs(7) <- MaterialExpressionTextureObjectParameter_0
+    FunctionInputs(8) <- MaterialExpressionMin_1
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_NormalAddDerivate.MF_NormalAddDerivate'"
+    FunctionInputs(2) = (ExpressionInputId=747E264F4FCFD258C35DCB94D6FAB0F9,Input=(OutputIndex=-1,InputName="ParallelBlend"))
+    FunctionOutputs(0) = (ExpressionOutputId=DC3035D944EDED22FEADD9932CC7B8A4,Output=(OutputName="Normal"))
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Outputs(0) = (OutputName="Normal")
+    FunctionInputs(0) <- MaterialExpressionNamedRerouteUsage_11
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_18
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_DistantLayer.MF_DistantLayer'"
+    FunctionOutputs(0) = (ExpressionOutputId=008E3D104DCAC21292181199BC0C8F9E,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=5A64182A4CC1A1971184D0AA6F1C9898,Output=(OutputName="WaveLength"))
+    FunctionOutputs(2) = (ExpressionOutputId=98D3B9EB490091EFFED335B09EB86131,Output=(OutputName="Height"))
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="WaveLength")
+    Outputs(2) = (OutputName="Height")
+    FunctionInputs(0) <- MaterialExpressionWorldPosition_0
+    FunctionInputs(1) <- MaterialExpressionMultiply_16
+    FunctionInputs(2) <- MaterialExpressionDivide_6
+    FunctionInputs(3) <- MaterialExpressionMultiply_4
+[MaterialExpressionMax_0] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionSubtract_6
+[MaterialExpressionMin_1] MaterialExpressionMin
+    ConstA = 6.000000
+    ConstB = 6.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionSubtract_4
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionMultiply_4
+[MaterialExpressionMultiply_13] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionMultiply_8
+    B <- MaterialExpressionReroute_15
+[MaterialExpressionMultiply_16] MaterialExpressionMultiply
+    ConstB = -0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionNamedRerouteUsage_7
+    B <- MaterialExpressionDivide_2
+[MaterialExpressionMultiply_18] MaterialExpressionMultiply
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionReroute_8
+    B <- MaterialExpressionMax_0
+[MaterialExpressionMultiply_20] MaterialExpressionMultiply
+    ConstB = 1.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionMultiply_18
+    B <- MaterialExpressionScalarParameter_5
+[MaterialExpressionMultiply_21] MaterialExpressionMultiply
+    ConstA = 1.000000
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionDivide_0
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionNamedRerouteUsage_5
+    B <- MaterialExpressionScalarParameter_3
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionComponentMask_2
+    B <- MaterialExpressionScalarParameter_2
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionMultiply_7
+[MaterialExpressionNamedRerouteDeclaration_0] MaterialExpressionNamedRerouteDeclaration
+    Name = "InputSurfaceLayer"
+    NodeColor = (R=0.000000,G=1.000000,B=0.343750,A=1.000000)
+    VariableGuid = 74594597455433386B8ED58F38FAC3E0
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionFunctionInput_5
+[MaterialExpressionNamedRerouteDeclaration_1] MaterialExpressionNamedRerouteDeclaration
+    Name = "SurfaceDivergence"
+    NodeColor = (R=0.007812,G=1.000000,B=0.000000,A=1.000000)
+    VariableGuid = 7CA4BF5F4F01A72B7DBE04A9D8A09418
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionNamedRerouteDeclaration_2] MaterialExpressionNamedRerouteDeclaration
+    Name = "SurfaceVelocity"
+    NodeColor = (R=0.000000,G=0.437500,B=1.000000,A=1.000000)
+    VariableGuid = E940B3034D970729AE011B99E9F94B80
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionNamedRerouteDeclaration_3] MaterialExpressionNamedRerouteDeclaration
+    Name = "SurfaceNormal"
+    NodeColor = (R=0.312500,G=0.000000,B=1.000000,A=1.000000)
+    VariableGuid = 9431981E44EB6355F1721D8527EB787B
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionNamedRerouteDeclaration_4] MaterialExpressionNamedRerouteDeclaration
+    Name = "SurfaceOffset"
+    NodeColor = (R=0.528503,G=1.000000,B=0.976115,A=1.000000)
+    VariableGuid = EB72A4A54B939F22D4D4C5BFAE570617
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionNamedRerouteDeclaration_6] MaterialExpressionNamedRerouteDeclaration
+    Name = "SurfaceFoam"
+    NodeColor = (R=0.000000,G=0.789062,B=1.000000,A=1.000000)
+    VariableGuid = 4047BDAD499600896BD969879B93E0BB
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionNamedRerouteUsage_1] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 74594597455433386B8ED58F38FAC3E0
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_0
+[MaterialExpressionNamedRerouteUsage_10] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = EB72A4A54B939F22D4D4C5BFAE570617
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_4
+[MaterialExpressionNamedRerouteUsage_11] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 9431981E44EB6355F1721D8527EB787B
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_3
+[MaterialExpressionNamedRerouteUsage_12] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 4047BDAD499600896BD969879B93E0BB
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_6
+[MaterialExpressionNamedRerouteUsage_3] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 74594597455433386B8ED58F38FAC3E0
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_0
+[MaterialExpressionNamedRerouteUsage_5] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 7CA4BF5F4F01A72B7DBE04A9D8A09418
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_1
+[MaterialExpressionNamedRerouteUsage_6] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 7CA4BF5F4F01A72B7DBE04A9D8A09418
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_1
+[MaterialExpressionNamedRerouteUsage_7] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = E940B3034D970729AE011B99E9F94B80
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_2
+[MaterialExpressionNamedRerouteUsage_8] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 9431981E44EB6355F1721D8527EB787B
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_3
+[MaterialExpressionNamedRerouteUsage_9] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = EB72A4A54B939F22D4D4C5BFAE570617
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_4
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionFunctionInput_5
+[MaterialExpressionReroute_15] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionSaturate_1
+[MaterialExpressionReroute_3] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionReroute_4] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionReroute_5] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionReroute_6] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionReroute_7] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionReroute_8] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_18
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionSubtract_5
+[MaterialExpressionSaturate_5] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    Input <- MaterialExpressionAdd_10
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 1000.000000
+    ParameterName = "DetailWaveLength"
+    ExpressionGUID = 76D9606946F62ECBBD0D61AE62283EF3
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionScalarParameter_10] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "DetailWaveUVSwitching"
+    ExpressionGUID = 0C2C7B7647F70DC0E658EA94B63C01CB
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionScalarParameter_11] MaterialExpressionScalarParameter
+    DefaultValue = -0.300000
+    ParameterName = "DetailWaveUVOffset"
+    ExpressionGUID = 440F03B549FA570519967AA8100DE729
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "WaveDetailWPOScale"
+    ExpressionGUID = 62B3D354478DA328D4A3B1A43F62096B
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = 30.000000
+    ParameterName = "DetailWaveHeight"
+    ExpressionGUID = 21D15F6C4CA16819D54A42AF0CF27365
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "DetailWaveUVSwitching"
+    ExpressionGUID = DDD8DB604ECDBF1B0B6758A73A23762F
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionScalarParameter_5] MaterialExpressionScalarParameter
+    DefaultValue = 1.500000
+    ParameterName = "WaveDetailFastFoam"
+    ExpressionGUID = 04CCF08E492CAC9055CDF5B82D26597A
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionScalarParameter_7] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "DetailWaveUVVelocity"
+    ExpressionGUID = 73D83ACA4C8C20BF2069A09FFEE81114
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionScalarParameter_8] MaterialExpressionScalarParameter
+    DefaultValue = 1100.000000
+    ParameterName = "DetailWaveLength"
+    ExpressionGUID = C9AC8A4D4050D7C0EDFF829774194F95
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionShaderStageSwitch_1] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    PixelShader <- MaterialExpressionConstant_1
+    VertexShader <- MaterialExpressionNamedRerouteUsage_9
+[MaterialExpressionShaderStageSwitch_2] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    PixelShader <- MaterialExpressionConstant_3
+    VertexShader <- MaterialExpressionStaticSwitchParameter_2
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UseDetailWave"
+    ExpressionGUID = 0B05F5C041E6EA5BE60143A32B1C0CA4
+    Group = "DetailWave"
+    SortPriority = 0
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionMaterialFunctionCall_13
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionStaticSwitchParameter_2] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UseDetailWaveWPO"
+    ExpressionGUID = AB1D81584BA5A59CBFDA1E925E01FE8A
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionAppendVector_0
+    B <- MaterialExpressionConstant_4
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionMaterialFunctionCall_18
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionSubtract_4] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionDivide_4
+[MaterialExpressionSubtract_5] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionDivide_5
+[MaterialExpressionSubtract_6] MaterialExpressionSubtract
+    ConstB = 0.650000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    A <- MaterialExpressionNamedRerouteUsage_6
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "DetailWaveTexture"
+    ExpressionGUID = 1668FBA54251462AA2D626B29A1F313D
+    Group = "DetailWave"
+    Texture = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DetailWaveTexture_01.T_DetailWaveTexture_01'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+    bCollapsed = True
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionWorldPosition_2] MaterialExpressionWorldPosition
+    WorldPositionShaderOffset = WPT_ExcludeAllShaderOffsets
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[MaterialExpressionWorldPosition_3] MaterialExpressionWorldPosition
+    WorldPositionShaderOffset = WPT_ExcludeAllShaderOffsets
+    Function = "/Script/Engine.MaterialFunction'MF_DetailWave'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

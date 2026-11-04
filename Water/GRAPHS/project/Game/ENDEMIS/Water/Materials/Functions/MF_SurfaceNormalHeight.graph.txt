@@ -1,0 +1,177 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceNormalHeight
+# класс: MaterialFunction; происхождение: проект; узлов: 23; связей: 43; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:204
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SurfaceNormalHeight] MaterialFunction
+    StateId = B009068644F9CAE988CC568A198C85B4
+    CombinedInputTypes = 527
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_SurfaceNormalHeightEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SurfaceNormalHeightEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionStaticBool_2
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionStaticBool_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionStaticBool_5
+    ExpressionCollection <- MaterialExpressionComment_4
+[MaterialExpressionComment_4] MaterialExpressionComment
+    SizeX = 1264
+    SizeY = 1024
+    Text = "Fluid flux state reading using dynamic displacement map rendering (normal map generated from heightmap). Switch UseLowQuality details for smoother displacement."
+    CommentColor = (R=0.450994,G=0.293403,B=1.000000,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    Input <- MaterialExpressionWorldPosition_1
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    B <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = C69A671C4DCCA17D88B4BDB82EFA1FD0
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    bCollapsed = True
+    Preview <- MaterialExpressionComponentMask_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Softness"
+    Id = 3E24127146B91B11C2BBBB9576E69E72
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "LowDetails"
+    Id = 5D0ADEC147938439CAC09AB3599513BD
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_2
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "HeightScale"
+    Id = 4037339D4177E7E8D65DB4AA8ABEBB7D
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_1
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "SaturateUV"
+    Id = 1AE3A978483368FD94B20CB2FD1B5A0A
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    SortPriority = 344
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_5
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Normal"
+    bLastPreviewed = True
+    Id = 06DB92FB46B5EC55C77ABAA48C07DE51
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Height"
+    bLastPreviewed = True
+    Id = 369222A143DC405BB65B2587A9568EFF
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Ambient"
+    bLastPreviewed = True
+    Id = 5DB582A5453D39FFB8C161AACA4DB8EF
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_DisplacementMap.MF_DisplacementMap'"
+    FunctionInputs(7) = (ExpressionInputId=9F1ECEF04F8574C4E66965B9E240464D,Input=(OutputIndex=-1,InputName="ChannerR"))
+    FunctionInputs(8) = (ExpressionInputId=788F2DE940E5202C562E83B71E1004B5,Input=(OutputIndex=-1,InputName="ChannelG"))
+    FunctionInputs(9) = (ExpressionInputId=D36578354522444FC4B83CA47E18C2BF,Input=(OutputIndex=-1,InputName="ChannelB"))
+    FunctionOutputs(0) = (ExpressionOutputId=81B4D4824CFD06FACBCE9DB19BF2E230,Output=(OutputName="Normal"))
+    FunctionOutputs(1) = (ExpressionOutputId=35106EFB43D752AF0A2734A4E435F13D,Output=(OutputName="Ambient"))
+    FunctionOutputs(2) = (ExpressionOutputId=09F7A8CE4821019FF9F6E2B0FC27C212,Output=(OutputName="Blur"))
+    FunctionOutputs(3) = (ExpressionOutputId=A666A5FF4B8EF04CB0EC16A99861F2CE,Output=(OutputName="Slope"))
+    FunctionOutputs(4) = (ExpressionOutputId=5040F97B4EB9DB283EFC55A045F82500,Output=(OutputName="Sample"))
+    FunctionOutputs(5) = (ExpressionOutputId=8844D5BA424A212E6BEEE289BE4BD630,Output=(OutputName="Height"))
+    FunctionOutputs(6) = (ExpressionOutputId=67640E80461AF04EFBDC9287A1783D75,Output=(OutputName="Intensity"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    Outputs(0) = (OutputName="Normal")
+    Outputs(1) = (OutputName="Ambient")
+    Outputs(2) = (OutputName="Blur")
+    Outputs(3) = (OutputName="Slope")
+    Outputs(4) = (OutputName="Sample")
+    Outputs(5) = (OutputName="Height")
+    Outputs(6) = (OutputName="Intensity")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_1
+    FunctionInputs(1) <- MaterialExpressionTextureObjectParameter_0
+    FunctionInputs(2) <- MaterialExpressionFunctionInput_3
+    FunctionInputs(3) <- MaterialExpressionFunctionInput_0
+    FunctionInputs(4) <- MaterialExpressionDivide_1
+    FunctionInputs(5) <- MaterialExpressionMaterialFunctionCall_3
+    FunctionInputs(6) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(10) <- MaterialExpressionStaticBool_3
+    FunctionInputs(11) <- MaterialExpressionFunctionInput_5
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SimulationUV.MF_SimulationUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=AB54F8A04BF80648975AFEAEF6AA4B89,Output=(OutputName="Location"))
+    FunctionOutputs(1) = (ExpressionOutputId=C95318454157AA05A02E1CB27B1B2D7E,Output=(OutputName="ScaleInv"))
+    FunctionOutputs(2) = (ExpressionOutputId=E7854F864B404DDBFDE83C8D5C660588,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=CC73E6C2412A717020F206AE8D6F4D7F,Output=(OutputName="Height"))
+    FunctionOutputs(4) = (ExpressionOutputId=D453923D4F896744C8CAB5BC03EE1446,Output=(OutputName="Resolution"))
+    FunctionOutputs(5) = (ExpressionOutputId=4ADE6B714BD48DB8764BF28BC453AAE2,Output=(OutputName="TexelSize"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    Outputs(0) = (OutputName="Location")
+    Outputs(1) = (OutputName="ScaleInv")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Height")
+    Outputs(4) = (OutputName="Resolution")
+    Outputs(5) = (OutputName="TexelSize")
+[MaterialExpressionStaticBool_2] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+[MaterialExpressionStaticBool_3] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+[MaterialExpressionStaticBool_5] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "FluidHeightMap"
+    ExpressionGUID = AE042E974065233C447C6B954DAE1C2F
+    Group = "FluxData"
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+    bCollapsed = True
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceNormalHeight'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,70 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_SlopeToNormal
+# класс: MaterialFunction; происхождение: проект; узлов: 13; связей: 22; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:25
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SlopeToNormal] MaterialFunction
+    StateId = 7130AA8E45514C6F732E678F04CA2E88
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_SlopeToNormalEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SlopeToNormalEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionComponentMask_6
+    ExpressionCollection <- MaterialExpressionOneMinus_2
+    ExpressionCollection <- MaterialExpressionAppendVector_2
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionNormalize_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionAppendVector_2] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeToNormal'"
+    A <- MaterialExpressionMultiply_2
+    B <- MaterialExpressionOneMinus_2
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeToNormal'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionComponentMask_6] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeToNormal'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=1.000000,B=0.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeToNormal'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Slope"
+    Id = 6180271044CCC8A101FFA39EF9E63D57
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeToNormal'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Scale"
+    Id = 9CB91F314905A715218C61BEE02A64ED
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeToNormal'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 49BFE0F0493D1DCA073767BBB1CA7B50
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeToNormal'"
+    bCollapsed = True
+    A <- MaterialExpressionNormalize_2
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeToNormal'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionComponentMask_5
+[MaterialExpressionNormalize_2] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeToNormal'"
+    VectorInput <- MaterialExpressionAppendVector_2
+[MaterialExpressionOneMinus_2] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeToNormal'"
+    Input <- MaterialExpressionComponentMask_6
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

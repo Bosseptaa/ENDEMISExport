@@ -1,0 +1,245 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_SingleLayerWater
+# класс: MaterialFunction; происхождение: проект; узлов: 37; связей: 73; HLSL: 3; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:349, HLSL:3
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SingleLayerWater] MaterialFunction
+    описание: Water scattering
+    bExposeToLibrary = True
+    LibraryCategoriesText(0) = NSLOCTEXT("", "15E99654448F0D6658F09689E446FBB1", "ImaginaryBlend")
+    StateId = 5C41F95D47FDCD397A11E0B355EFE410
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_SingleLayerWaterEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SingleLayerWaterEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMultiply_13
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionMultiply_20
+    ExpressionCollection <- MaterialExpressionAdd_10
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionFunctionOutput_5
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionConstant_8
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_3
+    ExpressionCollection <- MaterialExpressionVectorParameter_4
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_3
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionCustom_2
+    ExpressionCollection <- MaterialExpressionCustom_3
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionReroute_3
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionComment_4
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    A <- MaterialExpressionMultiply_3
+[MaterialExpressionAdd_10] MaterialExpressionAdd
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    A <- MaterialExpressionMultiply_13
+    B <- MaterialExpressionMultiply_20
+[MaterialExpressionComment_4] MaterialExpressionComment
+    SizeX = 2672
+    SizeY = 896
+    Text = "Mixing colors"
+    CommentColor = (R=0.120833,G=0.053012,B=0.061692,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+[MaterialExpressionConstant_8] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+[MaterialExpressionConstant3Vector_3] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=1.000000,B=1.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: BacFace
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+    Inputs(0) FrontFace <- MaterialExpressionAdd_10
+    Inputs(1) BackFace <- MaterialExpressionMultiply_0
+    Code: HLSL, 6 строк (см. HLSL/)
+[MaterialExpressionCustom_2] MaterialExpressionCustom
+    описание: BacFace
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+    Inputs(0) FrontFace <- MaterialExpressionDivide_0
+    Inputs(1) BackFace <- MaterialExpressionDivide_1
+    Code: HLSL, 6 строк (см. HLSL/)
+[MaterialExpressionCustom_3] MaterialExpressionCustom
+    описание: BacFace
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+    Inputs(0) FrontFace <- MaterialExpressionReroute_1
+    Inputs(1) BackFace <- MaterialExpressionConstant3Vector_3
+    Code: HLSL, 6 строк (см. HLSL/)
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    A <- MaterialExpressionReroute_0
+    B <- MaterialExpressionAdd_1
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    B <- MaterialExpressionMultiply_12
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Shoreline"
+    Id = 0475022441A221EB4AD33E9B64F19191
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 13
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "FoamScattering"
+    Id = 5FD966154987817AA431DDA32834AAC3
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_8
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "WaveScattering"
+    Id = 90A73A854960178C7CD03DBC819D452B
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_4
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "Painter"
+    Id = A891026145022C5222CEB09EBFD1CF0C
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 12
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_3
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Scattering"
+    bLastPreviewed = True
+    Id = BE7163AE4E4D553425E923B0B337BA43
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Absorption"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = 85035F904A36047A1DF1CEAC25790678
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_2
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "PhaseG"
+    SortPriority = 2
+    Id = 992C245E4A8785C7E2CE98B5FB3E3D61
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionFunctionOutput_5] MaterialExpressionFunctionOutput
+    OutputName = "ColorBehind"
+    SortPriority = 3
+    Id = F972A0474F42811035DCBB873853FF24
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_3
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_WaterTransition.MF_WaterTransition'"
+    FunctionOutputs(0) = (ExpressionOutputId=37CBC1A4493A16D112600AA1A15FDF05,Output=(OutputName="ColorBehind"))
+    FunctionOutputs(1) = (ExpressionOutputId=0B2ECBEB48679DDB666BAB806F3BC9C8,Output=(OutputName="FoamScattering"))
+    FunctionOutputs(2) = (ExpressionOutputId=89318DFF47024158903991A4722A80B4,Output=(OutputName="UnderwaterFog"))
+    FunctionOutputs(3) = (ExpressionOutputId=C914355F49C699C79C6B84809E59586C,Output=(OutputName="SurfaceOverlayColor"))
+    FunctionOutputs(4) = (ExpressionOutputId=4212367B49BA2D47FE63F0A74E5F93DB,Output=(OutputName="FoamWetColor"))
+    FunctionOutputs(5) = (ExpressionOutputId=3F137DF149DFE7A2F54707939807AE12,Output=(OutputName="SuraceLineColor"))
+    FunctionOutputs(6) = (ExpressionOutputId=1E90D52F4C5A3C0E5309F389B5A557B1,Output=(OutputName="SurfaceScattering"))
+    FunctionOutputs(7) = (ExpressionOutputId=54253B724B147DBABE42B08E76C47774,Output=(OutputName="SurfaceAbsorption"))
+    FunctionOutputs(8) = (ExpressionOutputId=47B5C88744481739D1FA0591DF306D4B,Output=(OutputName="PhaseG"))
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    Outputs(0) = (OutputName="ColorBehind")
+    Outputs(1) = (OutputName="FoamScattering")
+    Outputs(2) = (OutputName="UnderwaterFog")
+    Outputs(3) = (OutputName="SurfaceOverlayColor")
+    Outputs(4) = (OutputName="FoamWetColor")
+    Outputs(5) = (OutputName="SuraceLineColor")
+    Outputs(6) = (OutputName="SurfaceScattering")
+    Outputs(7) = (OutputName="SurfaceAbsorption")
+    Outputs(8) = (OutputName="PhaseG")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_5
+    FunctionInputs(1) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    A <- MaterialExpressionVectorParameter_4
+    B <- MaterialExpressionVectorParameter_4
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    A <- MaterialExpressionVectorParameter_3
+    B <- MaterialExpressionVectorParameter_3
+[MaterialExpressionMultiply_13] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    A <- MaterialExpressionAdd_1
+    B <- MaterialExpressionReroute_3
+[MaterialExpressionMultiply_20] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    A <- MaterialExpressionReroute_2
+    B <- MaterialExpressionSaturate_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    A <- MaterialExpressionFunctionInput_4
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    Input <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    Input <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    Input <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionReroute_3] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    Input <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+    Input <- MaterialExpressionFunctionInput_2
+[MaterialExpressionVectorParameter_3] MaterialExpressionVectorParameter
+    DefaultValue = (R=70.000000,G=180.000000,B=330.000000,A=100000.000000)
+    ParameterName = "BackFaceAbsorption"
+    ExpressionGUID = 0AF8F6024E9F4A6AEACB26B2255C1DFA
+    Group = "FluidColor"
+    SortPriority = 0
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+[MaterialExpressionVectorParameter_4] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.200000,G=0.300000,B=0.500000,A=0.000015)
+    ParameterName = "BackFaceScattering"
+    ExpressionGUID = C6001FF74898DDFE165F7C8B6531ADBC
+    Group = "FluidColor"
+    SortPriority = 0
+    Function = "/Script/Engine.MaterialFunction'MF_SingleLayerWater'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

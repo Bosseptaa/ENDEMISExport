@@ -1,0 +1,229 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_NearCameraPosition
+# класс: MaterialFunction; происхождение: проект; узлов: 40; связей: 74; HLSL: 5; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:79, HLSL:5
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_NearCameraPosition] MaterialFunction
+    StateId = 0985E1E34F38C4494B9B699C5BB70655
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_5
+    EditorOnlyData <- MF_NearCameraPositionEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_NearCameraPositionEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionScreenPosition_1
+    ExpressionCollection <- MaterialExpressionMultiply_17
+    ExpressionCollection <- MaterialExpressionViewSize_2
+    ExpressionCollection <- MaterialExpressionCustom_17
+    ExpressionCollection <- MaterialExpressionAdd_11
+    ExpressionCollection <- MaterialExpressionAdd_13
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionCustom_2
+    ExpressionCollection <- MaterialExpressionReroute_12
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionCustom_10
+    ExpressionCollection <- MaterialExpressionCustom_15
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_4
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_9
+    ExpressionCollection <- MaterialExpressionAdd_5
+    ExpressionCollection <- MaterialExpressionMultiply_21
+    ExpressionCollection <- MaterialExpressionMultiply_32
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionDotProduct_2
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionDivide_13
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionCustom_4
+    ExpressionCollection <- MaterialExpressionComment_0
+    ExpressionCollection <- MaterialExpressionComment_2
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    Input <- MaterialExpressionDotProduct_2
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionMultiply_2
+[MaterialExpressionAdd_11] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionReroute_12
+    B <- MaterialExpressionMultiply_7
+[MaterialExpressionAdd_13] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionReroute_12
+    B <- MaterialExpressionReroute_1
+[MaterialExpressionAdd_5] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    Desc = "Screen World Pos"
+    A <- MaterialExpressionCameraPositionWS_4
+    B <- MaterialExpressionMultiply_21
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionMultiply_6
+    B <- MaterialExpressionConstant_4
+[MaterialExpressionCameraPositionWS_4] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+[MaterialExpressionCameraVectorWS_9] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 1008
+    SizeY = 464
+    Text = "This version is much faster but unfortunately it works only in UE4"
+    CommentColor = (R=0.416667,G=0.045835,B=0.042519,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+[MaterialExpressionComment_2] MaterialExpressionComment
+    SizeX = 2256
+    SizeY = 656
+    Text = "New version for UE5 also supports VR"
+    CommentColor = (R=0.399991,G=0.804166,B=0.488589,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+[MaterialExpressionCustom_10] MaterialExpressionCustom
+    описание: ScreenPos to ViewPos
+    OutputType = CMOT_Float4
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    bCollapsed = True
+    Inputs(0) ScreenPos <- MaterialExpressionAdd_11
+    Inputs(1) NearPlane <- MaterialExpressionFunctionInput_1
+    Code: HLSL, 2 строк (см. HLSL/)
+[MaterialExpressionCustom_15] MaterialExpressionCustom
+    описание: ViewPos to WorldPos
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    bCollapsed = True
+    Inputs(0) ViewPos <- MaterialExpressionCustom_10
+    Code: HLSL, 7 строк (см. HLSL/)
+[MaterialExpressionCustom_17] MaterialExpressionCustom
+    описание: BufferTexelSize
+    OutputType = CMOT_Float2
+    Inputs = 
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    bCollapsed = True
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionCustom_2] MaterialExpressionCustom
+    описание: Individual Eye Mask
+    OutputType = CMOT_Float1
+    Inputs = 
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    bCollapsed = True
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionCustom_4] MaterialExpressionCustom
+    описание: ViewPos to WorldPos
+    Inputs(0) ViewPos = (InputName="ViewPos")
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    bCollapsed = True
+    Code: HLSL, 4 строк (см. HLSL/)
+[MaterialExpressionDivide_13] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionCameraVectorWS_9
+    B <- MaterialExpressionAbs_0
+[MaterialExpressionDotProduct_2] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionCameraVectorWS_9
+    B <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "ViewportUV"
+    Id = 8E59C8BA4D9E8AD2D2EACBA054F50E0D
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    bCollapsed = True
+    Preview <- MaterialExpressionScreenPosition_1
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Diatnce"
+    Id = E00ABDB24234B9E51B9DD2AC35688925
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    bCollapsed = True
+    Preview <- MaterialExpressionScalarParameter_3
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "WorldPosition"
+    SortPriority = -1
+    bLastPreviewed = True
+    Id = E59E194C45E546ABF87E909DF27C4526
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_15
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "WindowPosition"
+    bLastPreviewed = True
+    Id = 694BC78D4172DB300D45D4BA62550828
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_13
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "ScreenPosition"
+    SortPriority = -1
+    bLastPreviewed = True
+    Id = F3580A1246B388F6E2BEA58AB1990673
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_11
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/CameraDirectionVector.CameraDirectionVector'"
+    FunctionOutputs(0) = (ExpressionOutputId=B8DC55274CB0C18F86B060A5EED9FCD3,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    Outputs(0) = (OutputName="Result")
+[MaterialExpressionMultiply_17] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionViewSize_2
+    B <- MaterialExpressionCustom_17
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 1.010000
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionSubtract_1
+[MaterialExpressionMultiply_21] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionDivide_13
+    B <- MaterialExpressionMultiply_32
+[MaterialExpressionMultiply_32] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionCustom_2
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionReroute_1
+    B <- MaterialExpressionMultiply_17
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionReroute_12] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    Input <- MaterialExpressionAppendVector_1
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    ParameterName = "VirtualRealityEyeOffset"
+    ExpressionGUID = 80DA7C2A48C38893F1358AA84EAFEE84
+    Group = "Projection"
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = 10.010000
+    ParameterName = "NearPlane"
+    ExpressionGUID = 22F851794A0E14C54AC2FD9BA666B120
+    Group = "Projection"
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+[MaterialExpressionScreenPosition_1] MaterialExpressionScreenPosition
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+    A <- MaterialExpressionFunctionInput_0
+[MaterialExpressionViewSize_2] MaterialExpressionViewSize
+    Function = "/Script/Engine.MaterialFunction'MF_NearCameraPosition'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

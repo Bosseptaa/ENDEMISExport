@@ -1,0 +1,217 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceVelocity
+# класс: MaterialFunction; происхождение: проект; узлов: 31; связей: 69; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:305
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SurfaceVelocity] MaterialFunction
+    StateId = 84B4539341221D2255C83BA3C40FA00C
+    CombinedInputTypes = 2048
+    CombinedOutputTypes = 2048
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_7
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_SurfaceVelocityEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SurfaceVelocityEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_7
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionCollectionParameter_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionPreviousFrameSwitch_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionSetMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_3
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionDeltaTime_2
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionScalarParameter_5
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionComponentMask_4
+    ExpressionCollection <- MaterialExpressionAppendVector_2
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionCollectionParameter_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    A <- MaterialExpressionMaterialFunctionCall_7
+    B <- MaterialExpressionComponentMask_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    A <- MaterialExpressionMaterialFunctionCall_7
+    B <- MaterialExpressionComponentMask_1
+[MaterialExpressionAppendVector_2] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    A <- MaterialExpressionMultiply_4
+    B <- MaterialExpressionMultiply_5
+[MaterialExpressionCollectionParameter_0] MaterialExpressionCollectionParameter
+    Collection = "/Script/Engine.MaterialParameterCollection'/Game/ENDEMIS/Water/Blueprints/MPC_Endemis.MPC_Endemis'"
+    ParameterName = "WindDirection"
+    ParameterId = 0629880E4791C80C145CD6B986BEEB49
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    bCollapsed = True
+[MaterialExpressionCollectionParameter_1] MaterialExpressionCollectionParameter
+    Collection = "/Script/Engine.MaterialParameterCollection'/Game/ENDEMIS/Water/Blueprints/MPC_Endemis.MPC_Endemis'"
+    ParameterName = "TimeScale"
+    ParameterId = 7BDBB08F41796BB70FBE858496C4BA42
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    Input <- MaterialExpressionCollectionParameter_0
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    Input <- MaterialExpressionCollectionParameter_0
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    Input <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionComponentMask_4] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    Input <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    bCollapsed = True
+[MaterialExpressionDeltaTime_2] MaterialExpressionDeltaTime
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    A <- MaterialExpressionComponentMask_4
+    B <- MaterialExpressionMultiply_4
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "SurfaceLayer"
+    Id = 56A7D6D945764FA1A9FD108CBCE1044F
+    InputType = FunctionInput_MaterialAttributes
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "SurfaceLayer"
+    bLastPreviewed = True
+    Id = 6CB48C914B47EB178155019EA8E1BE14
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitchParameter_3
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceSet.MF_SurfaceSet'"
+    FunctionInputs(1) = (ExpressionInputId=08C2B0714FA847EFEB24E7A968EFF38A,Input=(OutputIndex=-1,InputName="Normal"))
+    FunctionInputs(3) = (ExpressionInputId=31B8A22940DCF0047883AC9EECD3B1E6,Input=(OutputIndex=-1,InputName="Foam"))
+    FunctionInputs(4) = (ExpressionInputId=61BB3B9141D3C9B758A160BEDA830DC1,Input=(InputName="Mask"))
+    FunctionInputs(7) = (ExpressionInputId=C0046E5C4B9604FDD2CAFF8B4723A722,Input=(OutputIndex=-1,InputName="Color"))
+    FunctionInputs(8) = (ExpressionInputId=28C47DB54D9D1912E024EDA2802E2BB3,Input=(OutputIndex=-1,InputName="OffsetCorrection"))
+    FunctionOutputs(0) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Layer"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    Outputs(0) = (OutputName="Layer")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_5
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_7
+    FunctionInputs(5) <- MaterialExpressionAdd_0
+    FunctionInputs(6) <- MaterialExpressionAdd_1
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceGet.MF_SurfaceGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=2F5590B84443D79C5ED20CBD1986AE0F,Output=(OutputName="Normal"))
+    FunctionOutputs(1) = (ExpressionOutputId=D5D9C81149A5173C450574ACF1892A83,Output=(OutputName="Offset"))
+    FunctionOutputs(2) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Foam"))
+    FunctionOutputs(3) = (ExpressionOutputId=FC1998D248C1B4F3F737EBAF2BB809E2,Output=(OutputName="Mask"))
+    FunctionOutputs(4) = (ExpressionOutputId=C01B4B1441F01BFD0BB092845D3E4E62,Output=(OutputName="Velocity"))
+    FunctionOutputs(5) = (ExpressionOutputId=4AAF74BF4772E0CDE6587E828A6B55A1,Output=(OutputName="Divergence"))
+    FunctionOutputs(6) = (ExpressionOutputId=77C243024B2239B4AC21598697A703B8,Output=(OutputName="Color"))
+    FunctionOutputs(7) = (ExpressionOutputId=BD109C08454FEDC8A7EB33808510A655,Output=(OutputName="OffsetCorrection"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    Outputs(0) = (OutputName="Normal")
+    Outputs(1) = (OutputName="Offset")
+    Outputs(2) = (OutputName="Foam")
+    Outputs(3) = (OutputName="Mask")
+    Outputs(4) = (OutputName="Velocity")
+    Outputs(5) = (OutputName="Divergence")
+    Outputs(6) = (OutputName="Color")
+    Outputs(7) = (OutputName="OffsetCorrection")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_7] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceGet.MF_SurfaceGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=2F5590B84443D79C5ED20CBD1986AE0F,Output=(OutputName="Normal"))
+    FunctionOutputs(1) = (ExpressionOutputId=D5D9C81149A5173C450574ACF1892A83,Output=(OutputName="Offset"))
+    FunctionOutputs(2) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Foam"))
+    FunctionOutputs(3) = (ExpressionOutputId=FC1998D248C1B4F3F737EBAF2BB809E2,Output=(OutputName="Mask"))
+    FunctionOutputs(4) = (ExpressionOutputId=C01B4B1441F01BFD0BB092845D3E4E62,Output=(OutputName="Velocity"))
+    FunctionOutputs(5) = (ExpressionOutputId=4AAF74BF4772E0CDE6587E828A6B55A1,Output=(OutputName="Divergence"))
+    FunctionOutputs(6) = (ExpressionOutputId=77C243024B2239B4AC21598697A703B8,Output=(OutputName="Color"))
+    FunctionOutputs(7) = (ExpressionOutputId=BD109C08454FEDC8A7EB33808510A655,Output=(OutputName="OffsetCorrection"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    Outputs(0) = (OutputName="Normal")
+    Outputs(1) = (OutputName="Offset")
+    Outputs(2) = (OutputName="Foam")
+    Outputs(3) = (OutputName="Mask")
+    Outputs(4) = (OutputName="Velocity")
+    Outputs(5) = (OutputName="Divergence")
+    Outputs(6) = (OutputName="Color")
+    Outputs(7) = (OutputName="OffsetCorrection")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_5
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    A <- MaterialExpressionAppendVector_2
+    B <- MaterialExpressionCollectionParameter_1
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = -0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    A <- MaterialExpressionDeltaTime_2
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    A <- MaterialExpressionComponentMask_2
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    A <- MaterialExpressionDotProduct_0
+    B <- MaterialExpressionScalarParameter_5
+[MaterialExpressionPreviousFrameSwitch_0] MaterialExpressionPreviousFrameSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    CurrentFrame <- MaterialExpressionConstant3Vector_0
+    PreviousFrame <- MaterialExpressionMultiply_0
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    Input <- MaterialExpressionFunctionInput_5
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "DetailWaveUVVelocity"
+    ExpressionGUID = 41375DF049C88812CB32AB9B49C9F3C1
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+[MaterialExpressionScalarParameter_5] MaterialExpressionScalarParameter
+    DefaultValue = -1.000000
+    ParameterName = "FallingMotion"
+    ExpressionGUID = 831AADA74B155C7648A4B4957852A3A6
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+[MaterialExpressionSetMaterialAttributes_0] MaterialExpressionSetMaterialAttributes
+    AttributeSetTypes(0) = F905F895D5814314916D24348C40CE9E
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    Inputs(0) <- MaterialExpressionMaterialFunctionCall_0
+    Inputs(1) World Position Offset <- MaterialExpressionSubtract_0
+[MaterialExpressionStaticSwitchParameter_3] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseFluxWaveDistant"
+    ExpressionGUID = ACBFA86C45495F24299C73B957559010
+    Group = "FluxWaveTexture"
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    A <- MaterialExpressionReroute_0
+    B <- MaterialExpressionSetMaterialAttributes_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceVelocity'"
+    A <- MaterialExpressionMaterialFunctionCall_3
+    B <- MaterialExpressionPreviousFrameSwitch_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,149 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_LightshaftScattering
+# класс: MaterialFunction; происхождение: проект; узлов: 25; связей: 47; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:52
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_LightshaftScattering] MaterialFunction
+    описание: Calculates fresnel effect
+    bExposeToLibrary = True
+    StateId = D012F87D45AE265573BC72B203A1183A
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_LightshaftScatteringEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_LightshaftScatteringEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionSubtract_5
+    ExpressionCollection <- MaterialExpressionSubtract_6
+    ExpressionCollection <- MaterialExpressionComponentMask_14
+    ExpressionCollection <- MaterialExpressionFunctionInput_7
+    ExpressionCollection <- MaterialExpressionFunctionInput_10
+    ExpressionCollection <- MaterialExpressionMultiply_53
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionMultiply_16
+    ExpressionCollection <- MaterialExpressionOneMinus_5
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionDivide_3
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionDivide_4
+    ExpressionCollection <- MaterialExpressionMultiply_22
+    ExpressionCollection <- MaterialExpressionMin_1
+[MaterialExpressionCameraVectorWS_0] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+[MaterialExpressionComponentMask_14] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    Input <- MaterialExpressionFunctionInput_10
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.002500
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+[MaterialExpressionDivide_3] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    A <- MaterialExpressionFunctionInput_7
+    B <- MaterialExpressionScalarParameter_2
+[MaterialExpressionDivide_4] MaterialExpressionDivide
+    ConstB = -0.200000
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    B <- MaterialExpressionMin_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "RayDepth"
+    Id = 81FC36764ED0BEEFAD8C1694D342F8D8
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_10] MaterialExpressionFunctionInput
+    InputName = "CameraVector"
+    Id = 4AE17FA246F800B6F01537B848A7E22A
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    bCollapsed = True
+    Preview <- MaterialExpressionCameraVectorWS_0
+[MaterialExpressionFunctionInput_7] MaterialExpressionFunctionInput
+    InputName = "CameraSurfaceDistance"
+    Id = 40FCE44241416BA3F075939E6289DE9E
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Scattering"
+    bLastPreviewed = True
+    Id = D9000D3944F30C40DADF57ABCBB24511
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_53
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.ExponentialDensity'"
+    FunctionOutputs(0) = (ExpressionOutputId=140C94394DEE50877E7124BAFE49C252,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+    FunctionInputs(1) <- MaterialExpressionConstant_2
+    FunctionInputs(2) <- MaterialExpressionStaticBool_0
+[MaterialExpressionMin_0] MaterialExpressionMin
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    A <- MaterialExpressionSubtract_5
+[MaterialExpressionMin_1] MaterialExpressionMin
+    ConstB = -0.002000
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    A <- MaterialExpressionSubtract_6
+[MaterialExpressionMultiply_16] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    A <- MaterialExpressionOneMinus_5
+    B <- MaterialExpressionMultiply_22
+[MaterialExpressionMultiply_22] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    A <- MaterialExpressionMin_0
+    B <- MaterialExpressionDivide_4
+[MaterialExpressionMultiply_53] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    A <- MaterialExpressionMultiply_16
+    B <- MaterialExpressionMultiply_16
+[MaterialExpressionOneMinus_5] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    Input <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 800.000000
+    ParameterName = "FogScatterngScale"
+    ExpressionGUID = 3AEB7FCB45CDCA6D55A042ABBBB0401D
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = 0.350000
+    ParameterName = "FogScatterngShift"
+    ExpressionGUID = FEAEE4264E96CDADBFDF84AB4FDC7C0B
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    DefaultValue = 0.300000
+    ParameterName = "FogScatterngWidth"
+    ExpressionGUID = 3EEE15F24B634FCFDAC731B0A664B7E3
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+[MaterialExpressionSubtract_5] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    A <- MaterialExpressionComponentMask_14
+    B <- MaterialExpressionScalarParameter_3
+[MaterialExpressionSubtract_6] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_LightshaftScattering'"
+    A <- MaterialExpressionDivide_3
+    B <- MaterialExpressionScalarParameter_4
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+    PrimitiveType = TPT_Plane
+    bUserModifiedShape = True
+
+## СВЯЗИ

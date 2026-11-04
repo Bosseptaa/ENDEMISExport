@@ -1,0 +1,61 @@
+﻿# /Game/ENDEMIS/Water/Blueprints/BP_Surface_River
+# класс: Blueprint; происхождение: проект; узлов: 10; связей: 13; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:125
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_Surface_River] Blueprint
+    ParentClass = "/Script/Engine.BlueprintGeneratedClass'/Game/ENDEMIS/Water/Blueprints/BP_Surface.BP_Surface_C'"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_Surface_River_C:SimpleConstructionScript_0'"
+    InheritableComponentHandler = "/Script/Engine.InheritableComponentHandler'BP_Surface_River_C:InheritableComponentHandler'"
+    CategorySorting(0) = ""
+    CategorySorting(1) = "Event Graph"
+    CategorySorting(2) = "Rendering"
+    CategorySorting(3) = "Actor"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/ENDEMIS/Water/Blueprints/BP_Surface_River.BP_Surface_River:UserConstructionScript",SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/ENDEMIS/Water/Blueprints/BP_Surface_River.BP_Surface_River:EventGraph",SavedViewOffset=(X=-353.788483,Y=-272.091522),SavedZoomAmount=1.000000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_Surface_River_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 2D429C1E4DE897A7D67D1CB2131FDB66
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 8170150B42A82400612BC2A7D94F600A
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_CallParentFunction_0
+    Nodes(2) <- K2Node_Event_1
+    Nodes(3) <- K2Node_CallParentFunction_1
+[K2Node_Event_0] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    EnabledState = Disabled
+    bCommentBubblePinned = True
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[K2Node_CallParentFunction_0@EventGraph] K2Node_CallParentFunction
+[K2Node_Event_1] K2Node_Event (событие: ReceiveTick @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    EnabledState = Disabled
+    bCommentBubblePinned = True
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[K2Node_CallParentFunction_1] K2Node_CallParentFunction (вызов: ReceiveTick @ /Script/Engine.BlueprintGeneratedClass)
+    EnabledState = Disabled
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 62E60A9E4B0134DA4600A8AF308F19C3
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallParentFunction_0
+[K2Node_FunctionEntry_0] K2Node_FunctionEntry (вызов: UserConstructionScript @ /Script/CoreUObject.Class)
+[K2Node_CallParentFunction_0@UserConstructionScript] K2Node_CallParentFunction (вызов: UserConstructionScript @ /Script/Engine.BlueprintGeneratedClass)
+    EnabledState = Disabled
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+
+## СВЯЗИ
+[K2Node_Event_0].then -> [K2Node_CallParentFunction_0@UserConstructionScript].execute
+[K2Node_Event_1].DeltaSeconds -> [K2Node_CallParentFunction_1].DeltaSeconds
+[K2Node_Event_1].then -> [K2Node_CallParentFunction_1].execute
+[K2Node_FunctionEntry_0].then -> [K2Node_CallParentFunction_0@UserConstructionScript].execute#2

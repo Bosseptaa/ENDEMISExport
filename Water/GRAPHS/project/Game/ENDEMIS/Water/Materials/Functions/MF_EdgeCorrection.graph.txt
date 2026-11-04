@@ -1,0 +1,161 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_EdgeCorrection
+# класс: MaterialFunction; происхождение: проект; узлов: 23; связей: 47; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:48
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_EdgeCorrection] MaterialFunction
+    StateId = C2D56FBB452C0BCEDFDE6096C91DD237
+    CombinedInputTypes = 1030
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_29
+    EditorOnlyData <- MF_EdgeCorrectionEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_EdgeCorrectionEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionAdd_19
+    ExpressionCollection <- MaterialExpressionComponentMask_11
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionMin_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_29
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionMultiply_1
+[MaterialExpressionAdd_19] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    A <- MaterialExpressionComponentMask_11
+    B <- MaterialExpressionFunctionInput_5
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    A <- MaterialExpressionMin_1
+    B <- MaterialExpressionMaterialFunctionCall_29
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    A <- MaterialExpressionComponentMask_11
+    B <- MaterialExpressionMin_1
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    Input <- MaterialExpressionFunctionInput_3
+[MaterialExpressionComponentMask_11] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    Input <- MaterialExpressionFunctionInput_3
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    Preview = (OutputIndex=2)
+    InputName = "Coastline"
+    Id = 3D73028F42260B7F50961DBFE4DB60CA
+    InputType = FunctionInput_MaterialAttributes
+    SortPriority = -3
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "WorldPositionOffset"
+    Id = 1D50BA844446D6A29D1C078D8BFFBB11
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = 91AF70144D2E1802BF4991BC84D6638B
+    InputType = FunctionInput_Vector2
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Offset"
+    bLastPreviewed = True
+    Id = 0B3AB3484262922375DB23B8BA5C4975
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    bCollapsed = True
+    A <- MaterialExpressionAppendVector_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "PositionWorldZ"
+    bLastPreviewed = True
+    Id = 255AA83E48A680DABE884C9F6FB04920
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_4
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionComponentMask_1
+    Alpha <- MaterialExpressionSaturate_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SampleCoastlineHeight.MF_SampleCoastlineHeight'"
+    FunctionInputs(0) = (ExpressionInputId=2BD8F82D41F8DF3C6DA222886710DFCE,Input=(InputName="PreciseHeightmap"))
+    FunctionOutputs(0) = (ExpressionOutputId=B63C54EC49ECC68671A4A2B91FBF5F8C,Output=(OutputName="GroundWorldZ"))
+    FunctionOutputs(1) = (ExpressionOutputId=21F093CD4CE9FDABE88C418BBE0F1968,Output=(OutputName="GroudRelativeZ"))
+    FunctionOutputs(2) = (ExpressionOutputId=8A2DEC954D4BF57AF823499B5353328B,Output=(OutputName="ReferencePlaneZ"))
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    Outputs(0) = (OutputName="GroundWorldZ")
+    Outputs(1) = (OutputName="GroudRelativeZ")
+    Outputs(2) = (OutputName="ReferencePlaneZ")
+    FunctionInputs(1) <- MaterialExpressionAdd_19
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_CoastlineDataGet.MF_CoastlineDataGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=907637C844D6BC8298C5ACADA0E3B2C3,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=23481DEA4452179C8D2797B33CE20435,Output=(OutputName="Direction"))
+    FunctionOutputs(2) = (ExpressionOutputId=A84715A749104AD14C38248BBFD455E2,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=6346C58A410496BE2C7A25BD8D50DEAA,Output=(OutputName="Mask"))
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Direction")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMaterialFunctionCall_29] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_WorldToCoastlineUV.MF_WorldToCoastlineUV'"
+    FunctionInputs(0) = (ExpressionInputId=0CE7BE7F4EDF82DBAF2FD28BCD21C93A,Input=(InputName="WorldPosition"))
+    FunctionOutputs(0) = (ExpressionOutputId=E7854F864B404DDBFDE83C8D5C660588,Output=(OutputName="Scale"))
+    FunctionOutputs(1) = (ExpressionOutputId=CB6576E1418A4B7D0149429B6CEFED18,Output=(OutputName="UV"))
+    FunctionOutputs(2) = (ExpressionOutputId=AB54F8A04BF80648975AFEAEF6AA4B89,Output=(OutputName="Location"))
+    FunctionOutputs(3) = (ExpressionOutputId=CC73E6C2412A717020F206AE8D6F4D7F,Output=(OutputName="ReferencePlaneHeight"))
+    FunctionOutputs(4) = (ExpressionOutputId=D453923D4F896744C8CAB5BC03EE1446,Output=(OutputName="Resolution"))
+    FunctionOutputs(5) = (ExpressionOutputId=4ADE6B714BD48DB8764BF28BC453AAE2,Output=(OutputName="TexelSize"))
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    Outputs(0) = (OutputName="Scale")
+    Outputs(1) = (OutputName="UV")
+    Outputs(2) = (OutputName="Location")
+    Outputs(3) = (OutputName="ReferencePlaneHeight")
+    Outputs(4) = (OutputName="Resolution")
+    Outputs(5) = (OutputName="TexelSize")
+[MaterialExpressionMin_1] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionComponentMask_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.025000
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    Input <- MaterialExpressionSubtract_2
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 5.000000
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_EdgeCorrection'"
+    A <- MaterialExpressionMultiply_1
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,47 @@
+﻿// Источник: /Game/ENDEMIS/Water/Niagara/NMS_StateData (NiagaraNodeCustomHlsl, происхождение: проект)
+// Объект: NiagaraNodeCustomHlsl_0 ключ: CustomHlsl
+// Входы: нет
+// Выход: не указан
+// Описание: нет
+
+float2 uv =  (Position.xy - SDFPosition.xy) / SDFSize.xy + 0.5;
+
+[branch]
+if (all(uv >= 0.0) && all(uv <= 1.0))
+{	
+	float2 MinMaxZ = SDFPosition.z + SDFSize.z * float2(-0.5, 0.5);
+
+    float SDFResolutionZ = SDFTiles.x * SDFTiles.y;
+	float layerIndex = saturate((Position.z - MinMaxZ.x) / (MinMaxZ.y - MinMaxZ.x)) * (SDFResolutionZ - 1.0);
+	
+	float blend = frac(layerIndex);
+	float frameID = layerIndex - blend;
+	
+	float2 InvTiles = 1.0/SDFTiles.xy;
+	float idTileA = frameID * InvTiles.x;
+	float fracTileA = frac(idTileA);
+	float2 ruvA = (uv + float2(fracTileA * SDFTiles.x, (idTileA - fracTileA))) * InvTiles.xy;
+
+	float idTileB = (frameID + 1.0) * InvTiles.x;
+	float fracTileB = frac(idTileB);
+	float2 ruvB = (uv + float2(fracTileB * SDFTiles.x, (idTileB - fracTileB))) * InvTiles.xy;
+
+    float4 sampleA; 
+	float4 sampleB; 
+
+#if MATERIAL_IMPLEMENTATION
+	sampleA = SDFMap.SampleTexture2D(SDFMapSampler, ruvA);
+	sampleB = SDFMap.SampleTexture2D(SDFMapSampler, ruvB);
+#else
+    SDFMap.SampleTexture2D(ruvA, 0.0,sampleA);
+    SDFMap.SampleTexture2D(ruvB, 0.0,sampleB);
+#endif	
+
+	float ExtrudeEdge = max(0.0, -(Position.z - MinMaxZ.x)) + max(0.0, Position.z - MinMaxZ.y);
+ 	Distance = ( lerp(sampleA.r, sampleB.r, blend) - 0.5) * SDFRange - ExtrudeEdge;
+	
+} else
+{
+	Distance = -0.5 * SDFRange;
+}
+

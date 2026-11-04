@@ -1,0 +1,81 @@
+﻿# /Game/ENDEMIS/Water/Niagara/NF_VolumeSphereCap
+# класс: NiagaraScript; происхождение: проект; узлов: 13; связей: 30; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:25
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[NF_VolumeSphereCap] NiagaraScript
+    ExposedVersion = 3B1D3E00AE1BF9748AFC210644FBF4E2
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraScriptSource_0] NiagaraScriptSource
+    NodeGraph <- NiagaraGraph_0
+[NiagaraGraph_0] NiagaraGraph
+    ChangeId = BDE5C2D64C55A7D3BFF0E4B6BFADE47E
+    LastBuiltTraversalDataChangeId = BDE5C2D64C55A7D3BFF0E4B6BFADE47E
+    LastBuiltScriptVersionId = 87C7FB060084C92C80E1A4AB309BA6EA
+    ParameterHierarchyRoot = "ParameterHierarchyRoot"
+    bHasValidLastBuiltScriptVersionId = True
+    GraphGuid = C17850CF4D8633BB1AFAE59BDE1AC8D5
+    CachedUsageInfo(0) <- NiagaraNodeInput_2
+    CachedUsageInfo(0) <- NiagaraNodeOp_4
+    CachedUsageInfo(0) <- NiagaraNodeOp_29
+    CachedUsageInfo(0) <- NiagaraNodeOp_5
+    CachedUsageInfo(0) <- NiagaraNodeInput_1
+    CachedUsageInfo(0) <- NiagaraNodeOp_3
+    CachedUsageInfo(0) <- NiagaraNodeOp_1
+    CachedUsageInfo(0) <- NiagaraNodeOp_0
+    CachedUsageInfo(0) <- NiagaraNodeOutput_0
+    Nodes(0) <- NiagaraNodeOutput_0
+    Nodes(1) <- NiagaraNodeInput_1
+    Nodes(2) <- NiagaraNodeInput_2
+    Nodes(3) <- NiagaraNodeOp_29
+    Nodes(4) <- NiagaraNodeOp_0
+    Nodes(5) <- NiagaraNodeOp_1
+    Nodes(6) <- NiagaraNodeOp_3
+    Nodes(7) <- NiagaraNodeOp_4
+    Nodes(8) <- NiagaraNodeOp_5
+[ParameterHierarchyRoot] HierarchyRoot
+    Identity = (Guids=(A78BCB3C530C3C3EA55F00D3F64BEC82))
+[NiagaraNodeInput_1] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="R",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 2
+    ChangeId = 5674577C40CA5BBE8F7F118B76D9239C
+[NiagaraNodeInput_2] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="H",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 3
+    ChangeId = 916BC80741432492164ABD9FF6182BEB
+[NiagaraNodeOp_0] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 184B4A804E2C734D1B64C7BAFA704DCA
+[NiagaraNodeOp_1] NiagaraNodeOp
+    OpName = "Numeric::Subtract"
+    ChangeId = 716EFDA846327A66A0F87298D17AAE2A
+[NiagaraNodeOp_29] NiagaraNodeOp
+    OpName = "Numeric::PI"
+    ChangeId = 1ED05DC44FFB61E58F757384AFD5EE18
+[NiagaraNodeOp_3] NiagaraNodeOp
+    OpName = "Numeric::Div"
+    ChangeId = B5728AF04B3D693378F771999578BD25
+    вход B = 3.000000
+[NiagaraNodeOp_4] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 5FC46EE74CFA71C78F3475A95D952B5C
+[NiagaraNodeOp_5] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 0D5349D64649879DFF9FD7B7F7964AD4
+[NiagaraNodeOutput_0] NiagaraNodeOutput
+    Outputs(0) = (VarData=(0,0,0,0),Name="Volume",TypeDefHandle=(RegisteredTypeIndex=99))
+    ChangeId = A9BA2EFE412705FF0DAF609D9DD7F152
+    ErrorType = 4
+
+## СВЯЗИ
+[NiagaraNodeInput_1].Input -> [NiagaraNodeOp_1].A
+[NiagaraNodeInput_2].Input -> [NiagaraNodeOp_3].A
+[NiagaraNodeInput_2].Input -> [NiagaraNodeOp_4].A
+[NiagaraNodeInput_2].Input -> [NiagaraNodeOp_4].B
+[NiagaraNodeOp_0].Result -> [NiagaraNodeOutput_0].Volume
+[NiagaraNodeOp_1].Result -> [NiagaraNodeOp_0].B
+[NiagaraNodeOp_29].Result -> [NiagaraNodeOp_5].B
+[NiagaraNodeOp_3].Result -> [NiagaraNodeOp_1].B
+[NiagaraNodeOp_4].Result -> [NiagaraNodeOp_5].A
+[NiagaraNodeOp_5].Result -> [NiagaraNodeOp_0].A

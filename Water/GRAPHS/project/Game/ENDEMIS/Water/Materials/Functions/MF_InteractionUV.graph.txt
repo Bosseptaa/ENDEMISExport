@@ -1,0 +1,65 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_InteractionUV
+# класс: MaterialFunction; происхождение: проект; узлов: 10; связей: 15; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:19
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_InteractionUV] MaterialFunction
+    StateId = 1FCCBB6D476A10DFA6F4C4BA99B49A5F
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_InteractionUVEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_InteractionUVEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_InteractionUV'"
+    Input <- MaterialExpressionVectorParameter_0
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_InteractionUV'"
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Location"
+    SortPriority = -3
+    bLastPreviewed = True
+    Id = AB54F8A04BF80648975AFEAEF6AA4B89
+    Function = "/Script/Engine.MaterialFunction'MF_InteractionUV'"
+    bCollapsed = True
+    A <- MaterialExpressionComponentMask_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Scale"
+    bLastPreviewed = True
+    Id = E7854F864B404DDBFDE83C8D5C660588
+    Function = "/Script/Engine.MaterialFunction'MF_InteractionUV'"
+    bCollapsed = True
+    A <- MaterialExpressionVectorParameter_0
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "ScaleInv"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = 01CE52E94FBF6E2837B3F68FC72B03E6
+    Function = "/Script/Engine.MaterialFunction'MF_InteractionUV'"
+    bCollapsed = True
+    A <- MaterialExpressionDivide_0
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "WorldPixelSize"
+    bLastPreviewed = True
+    Id = 2C0B2E5B4629BDA966535896A63901D6
+    Function = "/Script/Engine.MaterialFunction'MF_InteractionUV'"
+    bCollapsed = True
+    A <- MaterialExpressionVectorParameter_0
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=100.000000,A=100.000000)
+    ParameterName = "WorldToInteractionUV"
+    ExpressionGUID = 08A52CE24B09C9A878F2C4A37570967F
+    Group = "FluxInteraction"
+    Function = "/Script/Engine.MaterialFunction'MF_InteractionUV'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

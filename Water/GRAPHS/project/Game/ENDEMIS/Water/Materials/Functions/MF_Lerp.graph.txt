@@ -1,0 +1,67 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_Lerp
+# класс: MaterialFunction; происхождение: проект; узлов: 12; связей: 22; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:23
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Lerp] MaterialFunction
+    StateId = 050577CF4838FA9ED246FDBD0768B7A1
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_LerpEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_LerpEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_7
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Lerp'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "A"
+    Id = 34695D3B45E01280FFDD22812E95DADE
+    Function = "/Script/Engine.MaterialFunction'MF_Lerp'"
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "B"
+    Id = 5CE227DB402B664D0F38819938A8F30B
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_Lerp'"
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Alpha"
+    Id = 895F8E9C42E2794374FCB3A9542A6E19
+    InputType = FunctionInput_Scalar
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_Lerp'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = C69ABD9B4153B253E533CA98C90C1F3C
+    Function = "/Script/Engine.MaterialFunction'MF_Lerp'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_0
+[MaterialExpressionLinearInterpolate_7] MaterialExpressionLinearInterpolate
+    ConstA = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Lerp'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionInput_1
+    Alpha <- MaterialExpressionFunctionInput_2
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Lerp'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionOneMinus_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Lerp'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_Lerp'"
+    Input <- MaterialExpressionFunctionInput_2
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

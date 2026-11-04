@@ -1,0 +1,8 @@
+﻿// Источник: /Game/ENDEMIS/Water/Materials/Functions/MF_SceneNormal (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_3 ключ: Code
+// Входы: ScreenPos, NearPlane
+// Выход: CMOT_Float4
+// Описание: ScreenPos to ViewPos
+
+ float2 viewpos = (ScreenPos.xy - View.ScreenPositionScaleBias.wz) / View.ScreenPositionScaleBias.xy * NearPlane; 
+ return float4( viewpos, NearPlane, 1 ) ;

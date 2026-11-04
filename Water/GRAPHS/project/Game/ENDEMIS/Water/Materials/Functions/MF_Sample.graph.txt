@@ -1,0 +1,212 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_Sample
+# класс: MaterialFunction; происхождение: проект; узлов: 32; связей: 64; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:72
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Sample] MaterialFunction
+    StateId = 414217BF4EED3023D0E77BA27CF92FE3
+    CombinedInputTypes = 258
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    EditorOnlyData <- MF_SampleEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SampleEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_2
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionTextureSample_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionMultiply_17
+    ExpressionCollection <- MaterialExpressionStep_1
+    ExpressionCollection <- MaterialExpressionConstant_7
+    ExpressionCollection <- MaterialExpressionStaticSwitch_0
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_5
+    ExpressionCollection <- MaterialExpressionMultiply_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    A <- MaterialExpressionMultiply_2
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    A <- MaterialExpressionMax_0
+    B <- MaterialExpressionFunctionOutput_2
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    Input <- MaterialExpressionTextureSample_0
+[MaterialExpressionConstant_7] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Offset"
+    Id = AEF4F886411D3426BD953487D66B2E9C
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "TexCoord"
+    Id = DA7F932D4F48BC2231034E986A9CB554
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_2
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "CleanVelocity"
+    Id = 3FBF1A6D4BE07AFDC4411CB2F352D18C
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Velocity"
+    SortPriority = -1
+    bLastPreviewed = True
+    Id = D90F58DB4F4451A34AC160B8B26F86D5
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitch_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Volume"
+    Id = 0AB48EAD4057339630303A9FDED7A5B8
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    bCollapsed = True
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "GroundHeight"
+    Id = 81742777482038B54F48C8AED4E57FA5
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    bCollapsed = True
+    A <- MaterialExpressionSubtract_0
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "SurfaceHeight"
+    SortPriority = 5
+    Id = EBEA69B244DC0997BDF955A760294541
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_1
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "Foam"
+    SortPriority = 4
+    Id = EF7C8A954CC43B70E33FE6B8BA055503
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    bCollapsed = True
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionFunctionOutput_5] MaterialExpressionFunctionOutput
+    OutputName = "GroundHeightLocal"
+    Id = 601FB7714E76B6ADDBEC8F8E9C6215E2
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SimulationUV.MF_SimulationUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=AB54F8A04BF80648975AFEAEF6AA4B89,Output=(OutputName="Location"))
+    FunctionOutputs(1) = (ExpressionOutputId=C95318454157AA05A02E1CB27B1B2D7E,Output=(OutputName="ScaleInv"))
+    FunctionOutputs(2) = (ExpressionOutputId=E7854F864B404DDBFDE83C8D5C660588,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=CC73E6C2412A717020F206AE8D6F4D7F,Output=(OutputName="Height"))
+    FunctionOutputs(4) = (ExpressionOutputId=D453923D4F896744C8CAB5BC03EE1446,Output=(OutputName="Resolution"))
+    FunctionOutputs(5) = (ExpressionOutputId=4ADE6B714BD48DB8764BF28BC453AAE2,Output=(OutputName="TexelSize"))
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    Outputs(0) = (OutputName="Location")
+    Outputs(1) = (OutputName="ScaleInv")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Height")
+    Outputs(4) = (OutputName="Resolution")
+    Outputs(5) = (OutputName="TexelSize")
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SimulationUV.MF_SimulationUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=AB54F8A04BF80648975AFEAEF6AA4B89,Output=(OutputName="Location"))
+    FunctionOutputs(1) = (ExpressionOutputId=C95318454157AA05A02E1CB27B1B2D7E,Output=(OutputName="ScaleInv"))
+    FunctionOutputs(2) = (ExpressionOutputId=E7854F864B404DDBFDE83C8D5C660588,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=CC73E6C2412A717020F206AE8D6F4D7F,Output=(OutputName="Height"))
+    FunctionOutputs(4) = (ExpressionOutputId=D453923D4F896744C8CAB5BC03EE1446,Output=(OutputName="Resolution"))
+    FunctionOutputs(5) = (ExpressionOutputId=4ADE6B714BD48DB8764BF28BC453AAE2,Output=(OutputName="TexelSize"))
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    Outputs(0) = (OutputName="Location")
+    Outputs(1) = (OutputName="ScaleInv")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Height")
+    Outputs(4) = (OutputName="Resolution")
+    Outputs(5) = (OutputName="TexelSize")
+[MaterialExpressionMax_0] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    A <- MaterialExpressionTextureSample_1
+[MaterialExpressionMultiply_17] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    A <- MaterialExpressionStep_1
+    B <- MaterialExpressionComponentMask_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+[MaterialExpressionStaticSwitch_0] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    A <- MaterialExpressionMultiply_17
+    B <- MaterialExpressionComponentMask_0
+    Value <- MaterialExpressionFunctionInput_2
+[MaterialExpressionStep_1] MaterialExpressionStep
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    Y <- MaterialExpressionConstant_7
+    X <- MaterialExpressionAdd_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionTextureSample_1
+[MaterialExpressionTextureCoordinate_2] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "FluidVelocityHeightFoam"
+    ExpressionGUID = 5592767D4999C540649362905BDF8FF5
+    Group = "FluxData"
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    bCollapsed = True
+[MaterialExpressionTextureObjectParameter_1] MaterialExpressionTextureObjectParameter
+    ParameterName = "Ground"
+    ExpressionGUID = A83E08DD4E112DFFF1CAB4A9D788A6C2
+    Group = "FluxData"
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    bCollapsed = True
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    Coordinates <- MaterialExpressionAdd_0
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionTextureSample_1] MaterialExpressionTextureSample
+    Function = "/Script/Engine.MaterialFunction'MF_Sample'"
+    Coordinates <- MaterialExpressionAdd_0
+    TextureObject <- MaterialExpressionTextureObjectParameter_1
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

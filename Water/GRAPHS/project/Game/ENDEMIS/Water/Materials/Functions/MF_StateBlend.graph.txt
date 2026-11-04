@@ -1,0 +1,61 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_StateBlend
+# класс: MaterialFunction; происхождение: проект; узлов: 9; связей: 15; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:19
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_StateBlend] MaterialFunction
+    StateId = D204D8CA4D7922953991FAA6AD7582FA
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_1
+    EditorOnlyData <- MF_StateBlendEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_StateBlendEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_1
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_StateBlend'"
+    A <- MaterialExpressionVectorParameter_1
+    B <- MaterialExpressionVectorParameter_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "UV"
+    Id = CA11ACEF4B57F38BF843FFBA526B042A
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_StateBlend'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "SimulationWeight"
+    bLastPreviewed = True
+    Id = FCE025DD4A9FB456F8D8E78B0BDAA513
+    Function = "/Script/Engine.MaterialFunction'MF_StateBlend'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    описание: Positive if Yes
+    OutputName = "IsInState"
+    bLastPreviewed = True
+    Id = 92FB57A14276510C634ACD9C1BC0332F
+    Function = "/Script/Engine.MaterialFunction'MF_StateBlend'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_RectBlend.MF_RectBlend'"
+    FunctionOutputs(0) = (ExpressionOutputId=6F6243284996842313F22AA478138A2A,Output=(OutputName="Inside"))
+    FunctionOutputs(1) = (ExpressionOutputId=F5B663E34FCB2F6305CA6295342536C2,Output=(OutputName="Blend"))
+    Function = "/Script/Engine.MaterialFunction'MF_StateBlend'"
+    Outputs(0) = (OutputName="Inside")
+    Outputs(1) = (OutputName="Blend")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+    FunctionInputs(1) <- MaterialExpressionAppendVector_1
+[MaterialExpressionVectorParameter_1] MaterialExpressionVectorParameter
+    ParameterName = "FluxStateBorders"
+    ExpressionGUID = 52EAC78B45C6C264B1AB8E8D10C04E82
+    Group = "FluxData"
+    Function = "/Script/Engine.MaterialFunction'MF_StateBlend'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

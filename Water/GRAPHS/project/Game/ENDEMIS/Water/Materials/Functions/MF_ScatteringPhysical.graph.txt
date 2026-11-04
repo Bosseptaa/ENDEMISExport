@@ -1,0 +1,156 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_ScatteringPhysical
+# класс: MaterialFunction; происхождение: проект; узлов: 27; связей: 49; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:54
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_ScatteringPhysical] MaterialFunction
+    описание: Advanced subsurface scattering
+    bExposeToLibrary = True
+    StateId = 6F64F43D48DD552366616496A247A9A5
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_ScatteringPhysicalEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_ScatteringPhysicalEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionFunctionInput_6
+    ExpressionCollection <- MaterialExpressionFunctionInput_7
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionPower_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_1
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionConstant_7
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_1
+    ExpressionCollection <- MaterialExpressionNormalize_1
+    ExpressionCollection <- MaterialExpressionConstant3Vector_5
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+[MaterialExpressionCameraVectorWS_1] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+    R = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+[MaterialExpressionConstant_7] MaterialExpressionConstant
+    R = 3.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+[MaterialExpressionConstant3Vector_5] MaterialExpressionConstant3Vector
+    Constant = (R=200.000000,G=200.000000,B=200.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    bCollapsed = True
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    A <- MaterialExpressionFunctionInput_6
+    B <- MaterialExpressionNormalize_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "LTDistortion"
+    Id = E28ADA754A3D42F0B5F9BD94C46ED6F8
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 8
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "L"
+    Id = 55D7512C4C8212A65F6349831887A309
+    bUsePreviewValueAsDefault = True
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    bCollapsed = True
+    Preview <- MaterialExpressionNormalize_1
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "N"
+    Id = B3113CF84B99C3FC0A44BFA865DD7B55
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    bCollapsed = True
+    Preview <- MaterialExpressionPixelNormalWS_1
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "LTIntensity"
+    Id = C1658E1B461CA6C7C7F997AF1D2834BA
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 4
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_6
+[MaterialExpressionFunctionInput_6] MaterialExpressionFunctionInput
+    InputName = "V"
+    Id = 66C7837F4D223EA7EF5A819E678880BD
+    bUsePreviewValueAsDefault = True
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    bCollapsed = True
+    Preview <- MaterialExpressionCameraVectorWS_1
+[MaterialExpressionFunctionInput_7] MaterialExpressionFunctionInput
+    InputName = "LTPower"
+    Id = 1B3CB83D4F95D4CB744994B5A0D91696
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_7
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Scattering"
+    bLastPreviewed = True
+    Id = D9000D3944F30C40DADF57ABCBB24511
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_2
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    A <- MaterialExpressionPower_1
+    B <- MaterialExpressionFunctionInput_5
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    VectorInput <- MaterialExpressionSubtract_1
+[MaterialExpressionNormalize_1] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    VectorInput <- MaterialExpressionSubtract_0
+[MaterialExpressionPixelNormalWS_1] MaterialExpressionPixelNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+[MaterialExpressionPower_1] MaterialExpressionPower
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    Base <- MaterialExpressionSaturate_0
+    Exponent <- MaterialExpressionFunctionInput_7
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    Input <- MaterialExpressionDotProduct_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    A <- MaterialExpressionConstant3Vector_5
+    B <- MaterialExpressionWorldPosition_1
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+    A <- MaterialExpressionMultiply_1
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_ScatteringPhysical'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+    PrimitiveType = TPT_Plane
+    bUserModifiedShape = True
+
+## СВЯЗИ

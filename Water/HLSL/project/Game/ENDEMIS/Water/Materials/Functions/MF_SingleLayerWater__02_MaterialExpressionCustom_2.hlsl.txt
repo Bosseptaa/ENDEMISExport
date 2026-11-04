@@ -1,0 +1,12 @@
+﻿// Источник: /Game/ENDEMIS/Water/Materials/Functions/MF_SingleLayerWater (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_2 ключ: Code
+// Входы: FrontFace, BackFace
+// Выход: не указан
+// Описание: BacFace
+
+#ifdef MATERIAL_TWOSIDED
+if (Parameters.TwoSidedSign < 0)
+return BackFace;
+#endif
+
+return FrontFace;

@@ -1,0 +1,133 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_Dust
+# класс: MaterialFunction; происхождение: проект; узлов: 21; связей: 44; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:43
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Dust] MaterialFunction
+    StateId = C2487E0D4C50AF537B5519A81EE7A617
+    CombinedInputTypes = 2048
+    CombinedOutputTypes = 2048
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_DustEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_DustEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_1
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionMultiply_21
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionSetMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionGetMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    A <- MaterialExpressionGetMaterialAttributes_0
+    B <- MaterialExpressionGetMaterialAttributes_0
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    A <- MaterialExpressionMultiply_21
+    B <- MaterialExpressionSaturate_0
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    Input <- MaterialExpressionWorldPosition_0
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    A <- MaterialExpressionTextureSample_0
+    B <- MaterialExpressionVectorParameter_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    Id = 97B6C9DF485E7BA8EB3F9C857C862C0B
+    InputType = FunctionInput_MaterialAttributes
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 361947F64BC6348D77A1A3A4032D6F58
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitchParameter_0
+[MaterialExpressionGetMaterialAttributes_0] MaterialExpressionGetMaterialAttributes
+    AttributeGetTypes(0) = 69B8D33616ED4D499AA497292F050F7A
+    AttributeGetTypes(1) = B8F50FBA2A754EC19EF672CFEB27BF51
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    Outputs(1) = (OutputName="BaseColor")
+    Outputs(2) = (OutputName="Opacity")
+    MaterialAttributes <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_CombinePremultiplied.MF_CombinePremultiplied'"
+    FunctionInputs(0) = (ExpressionInputId=8837AA494D2D3F3C9FA856815C3D56A5,Input=(OutputIndex=-1,InputName="UseTopLayer"))
+    FunctionOutputs(0) = (ExpressionOutputId=628886284518ACA64B305A856483F975,Output=(OutputName="RGBA"))
+    FunctionOutputs(1) = (ExpressionOutputId=D9000D3944F30C40DADF57ABCBB24511,Output=(OutputName="RGB"))
+    FunctionOutputs(2) = (ExpressionOutputId=0356188A4A400D8F88CFB7B55F85CE3E,Output=(OutputName="A"))
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    Outputs(0) = (OutputName="RGBA")
+    Outputs(1) = (OutputName="RGB")
+    Outputs(2) = (OutputName="A")
+    FunctionInputs(1) <- MaterialExpressionAppendVector_0
+    FunctionInputs(2) <- MaterialExpressionAppendVector_1
+[MaterialExpressionMultiply_21] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    A <- MaterialExpressionTextureSample_0
+    B <- MaterialExpressionVectorParameter_1
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    Input <- MaterialExpressionDotProduct_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.002000
+    ParameterName = "DustUVScale"
+    ExpressionGUID = 37124AC547CE6D7E231D208F91127543
+    Group = "Dust"
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+[MaterialExpressionSetMaterialAttributes_0] MaterialExpressionSetMaterialAttributes
+    AttributeSetTypes(0) = 69B8D33616ED4D499AA497292F050F7A
+    AttributeSetTypes(1) = B8F50FBA2A754EC19EF672CFEB27BF51
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    Inputs(0) <- MaterialExpressionFunctionInput_0
+    Inputs(1) Base Color <- MaterialExpressionMaterialFunctionCall_0
+    Inputs(2) Opacity <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseDust"
+    ExpressionGUID = 26A930AD4930231FA2A6CC93CE66C5FB
+    Group = "Dust"
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    A <- MaterialExpressionSetMaterialAttributes_0
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "DustTexture"
+    ExpressionGUID = C4AAA45444B4E678CF179A991EC7C0BD
+    Group = "Dust"
+    Texture = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_Dust.T_Dust'"
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    bCollapsed = True
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+    Coordinates <- MaterialExpressionMultiply_5
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionVectorParameter_1] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.500000,G=0.500000,B=0.500000,A=0.200000)
+    ParameterName = "DustColor"
+    ExpressionGUID = 833DEE4B4649996EEBDE49ABBC44A6A5
+    Group = "Dust"
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    WorldPositionShaderOffset = WPT_ExcludeAllShaderOffsets
+    Function = "/Script/Engine.MaterialFunction'MF_Dust'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

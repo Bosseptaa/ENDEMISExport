@@ -1,0 +1,128 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_LineDistortion
+# класс: MaterialFunction; происхождение: проект; узлов: 21; связей: 41; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:50
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_LineDistortion] MaterialFunction
+    StateId = B559951F4C1DBDCD554226A216B5EF2A
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_12
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    EditorOnlyData <- MF_LineDistortionEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_LineDistortionEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_12
+    ExpressionCollection <- MaterialExpressionAdd_5
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_11
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionScreenPosition_4
+    ExpressionCollection <- MaterialExpressionScreenPosition_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionScreenPosition_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionSubtract_4
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionComment_4
+[MaterialExpressionAdd_5] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    A <- MaterialExpressionMaterialFunctionCall_12
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    A <- MaterialExpressionMaterialFunctionCall_12
+    B <- MaterialExpressionIf_0
+[MaterialExpressionComment_4] MaterialExpressionComment
+    SizeX = 2480
+    SizeY = 528
+    Text = "Waterline distortion"
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    Input <- MaterialExpressionScreenPosition_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "SurfaceDistance"
+    Id = 5D937336424A0264EE02FD9BA8FD4101
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMultiply_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "UV"
+    bLastPreviewed = True
+    Id = 44384481474FFDAFD5BC58AE50437B5C
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitchParameter_11
+[MaterialExpressionIf_0] MaterialExpressionIf
+    ConstB = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    A <- MaterialExpressionAdd_5
+    AGreaterThanB <- MaterialExpressionSubtract_4
+    ALessThanB <- MaterialExpressionAdd_5
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_WaterlineCurve.MF_WaterlineCurve'"
+    FunctionOutputs(0) = (ExpressionOutputId=5CAEB4A444E6986CA10A91A2E191051B,Output=(OutputName="Dark"))
+    FunctionOutputs(1) = (ExpressionOutputId=DE582C0C42E75916107CDEB695562813,Output=(OutputName="Blur"))
+    FunctionOutputs(2) = (ExpressionOutputId=C02965D940541302E46E988682C447BF,Output=(OutputName="Color"))
+    FunctionOutputs(3) = (ExpressionOutputId=3F80014E451BA548A0BC6C8FA4A63B5D,Output=(OutputName="Refraction"))
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    Outputs(0) = (OutputName="Dark")
+    Outputs(1) = (OutputName="Blur")
+    Outputs(2) = (OutputName="Color")
+    Outputs(3) = (OutputName="Refraction")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMaterialFunctionCall_12] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionScreenPosition_4
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = -0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    A <- MaterialExpressionSubtract_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 0.300000
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "WaterlineRefractionScale"
+    ExpressionGUID = DFF9293A4819DA3C515DEBA7BA6B555E
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+[MaterialExpressionScreenPosition_0] MaterialExpressionScreenPosition
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+[MaterialExpressionScreenPosition_1] MaterialExpressionScreenPosition
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+[MaterialExpressionScreenPosition_4] MaterialExpressionScreenPosition
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+[MaterialExpressionStaticSwitchParameter_11] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UseWaterLineRefraction"
+    ExpressionGUID = 8F8C5B614001CCD5503F0BA4BFC710A2
+    Group = "WaterLine"
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    A <- MaterialExpressionAppendVector_0
+    B <- MaterialExpressionScreenPosition_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    A <- MaterialExpressionComponentMask_0
+[MaterialExpressionSubtract_4] MaterialExpressionSubtract
+    ConstA = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_LineDistortion'"
+    B <- MaterialExpressionAdd_5
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,749 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_FogScatteringVolume
+# класс: MaterialFunction; происхождение: проект; узлов: 119; связей: 256; HLSL: 6; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:286, HLSL:6
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FogScatteringVolume] MaterialFunction
+    StateId = DD8DA2BF46D021D0E47F629FC54B9713
+    CombinedInputTypes = 527
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_6
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_3
+    DependentFunctionExpressionCandidates(4) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(5) <- MaterialExpressionMaterialFunctionCall_5
+    DependentFunctionExpressionCandidates(6) <- MaterialExpressionMaterialFunctionCall_4
+    DependentFunctionExpressionCandidates(7) <- MaterialExpressionMaterialFunctionCall_7
+    EditorOnlyData <- MF_FogScatteringVolumeEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FogScatteringVolumeEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionScalarParameter_7
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_2
+    ExpressionCollection <- MaterialExpressionDotProduct_6
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_2
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionFunctionInput_6
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionOneMinus_1
+    ExpressionCollection <- MaterialExpressionMultiply_15
+    ExpressionCollection <- MaterialExpressionAdd_6
+    ExpressionCollection <- MaterialExpressionComponentMask_11
+    ExpressionCollection <- MaterialExpressionFunctionInput_7
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionCustom_1
+    ExpressionCollection <- MaterialExpressionMultiply_13
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_0
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionSaturate_3
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionCustom_3
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionCustom_2
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionMultiply_9
+    ExpressionCollection <- MaterialExpressionCustom_5
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionVectorParameter_1
+    ExpressionCollection <- MaterialExpressionMultiply_11
+    ExpressionCollection <- MaterialExpressionMultiply_16
+    ExpressionCollection <- MaterialExpressionCustom_6
+    ExpressionCollection <- MaterialExpressionComponentMask_3
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionMultiply_17
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMultiply_18
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionMultiply_19
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionCustom_7
+    ExpressionCollection <- MaterialExpressionSaturate_2
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionSquareRoot_0
+    ExpressionCollection <- MaterialExpressionReroute_3
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionMax_2
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_3
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionReroute_5
+    ExpressionCollection <- MaterialExpressionScreenPosition_2
+    ExpressionCollection <- MaterialExpressionStaticBool_2
+    ExpressionCollection <- MaterialExpressionIf_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_7
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionConstant_7
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_7
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_2
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_0
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_1
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_3
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_2
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_3
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_4
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_5
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_8
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_11
+    ExpressionCollection <- MaterialExpressionStaticBool_4
+    ExpressionCollection <- MaterialExpressionMax_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_9
+    ExpressionCollection <- MaterialExpressionStaticSwitch_0
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionReroute_2
+    B <- MaterialExpressionMultiply_8
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionStaticSwitchParameter_0
+    B <- MaterialExpressionSquareRoot_0
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionMultiply_3
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    ConstB = -100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionNamedRerouteUsage_1
+[MaterialExpressionAdd_6] MaterialExpressionAdd
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionFunctionOutput_0
+    B <- MaterialExpressionMultiply_15
+[MaterialExpressionCameraPositionWS_0] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionCameraVectorWS_0] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionCameraVectorWS_2] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionCameraVectorWS_5] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionSubtract_1
+[MaterialExpressionComponentMask_11] MaterialExpressionComponentMask
+    R = True
+    G = True
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionFunctionInput_7
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionCameraVectorWS_0
+[MaterialExpressionComponentMask_3] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionCustom_6
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 10.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionConstant_7] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionCustom_1] MaterialExpressionCustom
+    описание: SLWUnderwater
+    AdditionalOutputs(0) = (OutputName="FogColor",OutputType=CMOT_Float3)
+    AdditionalOutputs(1) = (OutputName="FogAlpha")
+    AdditionalOutputs(2) = (OutputName="FogAbsorption",OutputType=CMOT_Float3)
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bShowOutputNameOnPin = True
+    Outputs(0) = (OutputName="return")
+    Outputs(1) = (OutputName="FogColor")
+    Outputs(2) = (OutputName="FogAlpha")
+    Outputs(3) = (OutputName="FogAbsorption")
+    Inputs(0) ScatteringCoeff <- MaterialExpressionMaterialFunctionCall_3
+    Inputs(1) AbsorptionCoeff <- MaterialExpressionMaterialFunctionCall_3
+    Inputs(2) PhaseG <- MaterialExpressionMultiply_2
+    Inputs(3) AmbientPhase <- MaterialExpressionMax_2
+    Inputs(4) BehindWaterDeltaDepth <- MaterialExpressionReroute_5
+    Inputs(5) AmbientIlluminance <- MaterialExpressionReroute_0
+    Code: HLSL, 18 строк (см. HLSL/)
+[MaterialExpressionCustom_2] MaterialExpressionCustom
+    OutputType = CMOT_Float1
+    Inputs(0) CosTheta = (InputName="CosTheta")
+    Inputs(1) g = (InputName="g")
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Code: HLSL, 4 строк (см. HLSL/)
+[MaterialExpressionCustom_3] MaterialExpressionCustom
+    описание: DirectionalLightDirection
+    Inputs = 
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionCustom_5] MaterialExpressionCustom
+    описание: SkyLightColor
+    Inputs = 
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionCustom_6] MaterialExpressionCustom
+    описание: DirectionalLightDirection
+    Inputs = 
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionCustom_7] MaterialExpressionCustom
+    описание: DirectionalLightDirection
+    Inputs = 
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    ConstB = -5000.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionNamedRerouteUsage_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    ConstB = 3.140000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionDotProduct_6] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionLinearInterpolate_3
+    B <- MaterialExpressionNormalize_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "CameraRayDepth"
+    Id = 4250F69C41A51CA31375FEAFA923B626
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 17
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMax_1
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "ScreenDepth"
+    Id = 999A61814CC14C265284D9BDFBD1C10F
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 123
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_3
+[MaterialExpressionFunctionInput_11] MaterialExpressionFunctionInput
+    InputName = "TestPixelDepth"
+    Id = E653FABD427C985F8D15B08100296037
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    SortPriority = 13
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_4
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "CameraSurfaceDistance"
+    Id = B7404F0A4C954FEF8DB246B6D22ED5C8
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "FluidSurfaceHeight"
+    Id = A3BF778C4A2EEBE89DF456A46255642C
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "BlendShoreline"
+    Id = D22849394C60BA9723CE94BD7C1E8A9A
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 12
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMaterialFunctionCall_7
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "BlendColor"
+    Id = 0DD7430B420E16BE1B04F7BD573835E6
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 13
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMaterialFunctionCall_7
+[MaterialExpressionFunctionInput_6] MaterialExpressionFunctionInput
+    InputName = "Mask"
+    Id = 57127BA2420DB2596982608D08BE1FBC
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Preview <- MaterialExpressionIf_1
+[MaterialExpressionFunctionInput_7] MaterialExpressionFunctionInput
+    InputName = "SceneColor"
+    Id = F7D741964CE04BF3A302A59B3E40A21A
+    SortPriority = 12
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_8] MaterialExpressionFunctionInput
+    InputName = "DepthTest"
+    Id = F59F50A1486B2B8BD92B15A63F2C22B9
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 1234
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_9] MaterialExpressionFunctionInput
+    InputName = "UseAsPostProcess"
+    Id = 699594A24BAF543E709C43A0CE98E3DA
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "FogColor"
+    SortPriority = -3
+    bLastPreviewed = True
+    Id = C01077A8410D4AF5032C95BB7AB68BB3
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_9
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "FogAlpha"
+    SortPriority = -1
+    bLastPreviewed = True
+    Id = A02C39D4429F7C1E2716E9B89D5F46A2
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_6
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Absorption"
+    SortPriority = 3
+    bLastPreviewed = True
+    Id = 4F6D541247FFE2D673D35C9C2CE542CD
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    A <- MaterialExpressionLinearInterpolate_2
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "FinalColor"
+    SortPriority = 12
+    bLastPreviewed = True
+    Id = 99D6F59543731760465B83851446F5FA
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_6
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "ColorBehind"
+    SortPriority = 12
+    Id = 7B6C07DC4EF0746D887EEA8A9E2A576D
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionIf_1] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionNamedRerouteDeclaration_2
+    B <- MaterialExpressionConstant_4
+    AGreaterThanB <- MaterialExpressionConstant_5
+    ALessThanB <- MaterialExpressionConstant_7
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionSaturate_0
+    Alpha <- MaterialExpressionScalarParameter_0
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    ConstAlpha = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionCameraVectorWS_2
+    B <- MaterialExpressionMultiply_19
+    Alpha <- MaterialExpressionSaturate_2
+[MaterialExpressionLinearInterpolate_2] MaterialExpressionLinearInterpolate
+    ConstA = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    B <- MaterialExpressionMultiply_13
+    Alpha <- MaterialExpressionNamedRerouteUsage_5
+[MaterialExpressionLinearInterpolate_3] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionCustom_7
+    B <- MaterialExpressionVectorParameter_0
+    Alpha <- MaterialExpressionSaturate_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions01/Volumetrics/SchlickPhase.SchlickPhase'"
+    FunctionOutputs(0) = (ExpressionOutputId=09A706B742A731F5ACFB10BBEBFA5BAC,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionDotProduct_6
+    FunctionInputs(1) <- MaterialExpressionConstant_2
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_GodRays.MF_GodRays'"
+    FunctionOutputs(0) = (ExpressionOutputId=25AB16324F050D4C99C72496EE08FEB7,Output=(OutputName="Intensity"))
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Outputs(0) = (OutputName="Intensity")
+    FunctionInputs(0) <- MaterialExpressionCustom_3
+    FunctionInputs(1) <- MaterialExpressionNamedRerouteUsage_4
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_LightshaftScattering.MF_LightshaftScattering'"
+    FunctionOutputs(0) = (ExpressionOutputId=D9000D3944F30C40DADF57ABCBB24511,Output=(OutputName="Scattering"))
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Outputs(0) = (OutputName="Scattering")
+    FunctionInputs(0) <- MaterialExpressionCameraVectorWS_5
+    FunctionInputs(1) <- MaterialExpressionAdd_4
+    FunctionInputs(2) <- MaterialExpressionNamedRerouteUsage_3
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_WaterTransition.MF_WaterTransition'"
+    FunctionOutputs(0) = (ExpressionOutputId=37CBC1A4493A16D112600AA1A15FDF05,Output=(OutputName="ColorBehind"))
+    FunctionOutputs(1) = (ExpressionOutputId=0B2ECBEB48679DDB666BAB806F3BC9C8,Output=(OutputName="FoamScattering"))
+    FunctionOutputs(2) = (ExpressionOutputId=89318DFF47024158903991A4722A80B4,Output=(OutputName="UnderwaterFog"))
+    FunctionOutputs(3) = (ExpressionOutputId=C914355F49C699C79C6B84809E59586C,Output=(OutputName="SurfaceOverlayColor"))
+    FunctionOutputs(4) = (ExpressionOutputId=4212367B49BA2D47FE63F0A74E5F93DB,Output=(OutputName="FoamWetColor"))
+    FunctionOutputs(5) = (ExpressionOutputId=3F137DF149DFE7A2F54707939807AE12,Output=(OutputName="SuraceLineColor"))
+    FunctionOutputs(6) = (ExpressionOutputId=1E90D52F4C5A3C0E5309F389B5A557B1,Output=(OutputName="SurfaceScattering"))
+    FunctionOutputs(7) = (ExpressionOutputId=54253B724B147DBABE42B08E76C47774,Output=(OutputName="SurfaceAbsorption"))
+    FunctionOutputs(8) = (ExpressionOutputId=47B5C88744481739D1FA0591DF306D4B,Output=(OutputName="PhaseG"))
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Outputs(0) = (OutputName="ColorBehind")
+    Outputs(1) = (OutputName="FoamScattering")
+    Outputs(2) = (OutputName="UnderwaterFog")
+    Outputs(3) = (OutputName="SurfaceOverlayColor")
+    Outputs(4) = (OutputName="FoamWetColor")
+    Outputs(5) = (OutputName="SuraceLineColor")
+    Outputs(6) = (OutputName="SurfaceScattering")
+    Outputs(7) = (OutputName="SurfaceAbsorption")
+    Outputs(8) = (OutputName="PhaseG")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_5
+    FunctionInputs(1) <- MaterialExpressionFunctionInput_4
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SampleScreenData.MF_SampleScreenData'"
+    FunctionInputs(2) = (ExpressionInputId=408B6FE44C35DCDFB6848CB1B784F7E6,Input=(InputName="VignietteBlur"))
+    FunctionInputs(3) = (ExpressionInputId=E1946CCC4C8158F695B449A2227E74DB,Input=(InputName="NearPlane",Mask=1,MaskR=1))
+    FunctionOutputs(0) = (ExpressionOutputId=7D8A14744EA598210A26D785ABDCDA29,Output=(OutputName="SceneDepth"))
+    FunctionOutputs(1) = (ExpressionOutputId=97320A4744AAF5F781800FBA2AB4472D,Output=(OutputName="RayDepth"))
+    FunctionOutputs(2) = (ExpressionOutputId=BFC02E0C4321BF12F94FD994C9DABB60,Output=(OutputName="SceneColor"))
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Outputs(0) = (OutputName="SceneDepth")
+    Outputs(1) = (OutputName="RayDepth")
+    Outputs(2) = (OutputName="SceneColor")
+    FunctionInputs(0) <- MaterialExpressionIf_1
+    FunctionInputs(1) <- MaterialExpressionScreenPosition_2
+    FunctionInputs(4) <- MaterialExpressionFunctionInput_11
+    FunctionInputs(5) <- MaterialExpressionStaticBool_2
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions01/Volumetrics/Henyey-Greenstein-Phase.Henyey-Greenstein-Phase'"
+    FunctionInputs(0) = (ExpressionInputId=BD4B49084513A3E6BCB741949BD1F6B3,Input=(InputName="Anisotropy"))
+    FunctionInputs(1) = (ExpressionInputId=93908E7540F032EF55CA72A6D351124C,Input=(OutputIndex=-1,InputName="Light Vector"))
+    FunctionInputs(2) = (ExpressionInputId=2D1A38A646E79B35F1618BB6DABD6CF2,Input=(InputName="AngleDegrees"))
+    FunctionOutputs(0) = (ExpressionOutputId=567E81AE499ACDDB1BB6FF87E8CD1AF6,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Outputs(0) = (OutputName="Result")
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/UVs/WorldPositionBehindTranslucency.WorldPositionBehindTranslucency'"
+    FunctionInputs(1) = (ExpressionInputId=9C34D4E5463EAC4062E14FBEEA947626,Input=(OutputIndex=-1,InputName="Exclude WPO Offsets"))
+    FunctionOutputs(0) = (ExpressionOutputId=49E1A3CF47C0B4A1BFE84ABF854CF41C,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionReroute_2
+[MaterialExpressionMaterialFunctionCall_7] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_UnderwaterColorProfile.MF_UnderwaterColorProfile'"
+    FunctionInputs(1) = (ExpressionInputId=BC9004CF4792EC45CFE16697D1CE9BEF,Input=(OutputIndex=-1,InputName="GlassDirection"))
+    FunctionOutputs(0) = (ExpressionOutputId=1430D40243BA849E2A1A7DAFB69CAB80,Output=(OutputName="Painter"))
+    FunctionOutputs(1) = (ExpressionOutputId=D331EBD444C9B05F138460BEF8AC4EF1,Output=(OutputName="Shoreline"))
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Outputs(0) = (OutputName="Painter")
+    Outputs(1) = (OutputName="Shoreline")
+    FunctionInputs(0) <- MaterialExpressionStaticSwitch_0
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMax_0] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionComponentMask_1
+[MaterialExpressionMax_1] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionSubtract_3
+[MaterialExpressionMax_2] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstA = 2.000000
+    ConstB = 33.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionScalarParameter_3
+    B <- MaterialExpressionReroute_3
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionFunctionInput_8
+    B <- MaterialExpressionFunctionInput_6
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionCustom_5
+    B <- MaterialExpressionMultiply_11
+[MaterialExpressionMultiply_11] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionVectorParameter_1
+    B <- MaterialExpressionVectorParameter_1
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionFunctionOutput_2
+    B <- MaterialExpressionComponentMask_11
+[MaterialExpressionMultiply_13] MaterialExpressionMultiply
+    ConstA = 1.000000
+    ConstB = 0.010000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionMaterialFunctionCall_3
+    B <- MaterialExpressionCustom_1
+[MaterialExpressionMultiply_15] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionOneMinus_1
+    B <- MaterialExpressionMultiply_12
+[MaterialExpressionMultiply_16] MaterialExpressionMultiply
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionMultiply_17
+    B <- MaterialExpressionMultiply_10
+[MaterialExpressionMultiply_17] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionSaturate_3
+    B <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionMultiply_18] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionScalarParameter_1
+    B <- MaterialExpressionCustom_1
+[MaterialExpressionMultiply_19] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionLinearInterpolate_3
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 0.800000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionOneMinus_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = -0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionComponentMask_2
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionNamedRerouteUsage_5
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    ConstB = 3.140000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionCustom_2
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    ConstB = 3.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionMax_0
+    B <- MaterialExpressionScalarParameter_7
+[MaterialExpressionMultiply_9] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionMultiply_18
+    B <- MaterialExpressionNamedRerouteUsage_5
+[MaterialExpressionNamedRerouteDeclaration_2] MaterialExpressionNamedRerouteDeclaration
+    Name = "CameraSurfaceDistance"
+    NodeColor = (R=0.062167,G=0.976124,B=1.000000,A=1.000000)
+    VariableGuid = 65F80A5C440D65DC3867829625DE5089
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionFunctionInput_2
+[MaterialExpressionNamedRerouteDeclaration_3] MaterialExpressionNamedRerouteDeclaration
+    Name = "RayDepth"
+    NodeColor = (R=1.000000,G=0.270786,B=0.684655,A=1.000000)
+    VariableGuid = 88ADDCBC4535E7B1550E1A97FE693B93
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionNamedRerouteDeclaration_7] MaterialExpressionNamedRerouteDeclaration
+    Name = "VisibilityMask"
+    NodeColor = (R=1.000000,G=0.000000,B=0.820312,A=1.000000)
+    VariableGuid = FB111EC9475F5AFE3B3499AE127BBDC3
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionMultiply_1
+[MaterialExpressionNamedRerouteUsage_0] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 65F80A5C440D65DC3867829625DE5089
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_2
+[MaterialExpressionNamedRerouteUsage_1] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 65F80A5C440D65DC3867829625DE5089
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_2
+[MaterialExpressionNamedRerouteUsage_2] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 88ADDCBC4535E7B1550E1A97FE693B93
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_3
+[MaterialExpressionNamedRerouteUsage_3] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 88ADDCBC4535E7B1550E1A97FE693B93
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_3
+[MaterialExpressionNamedRerouteUsage_4] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = 88ADDCBC4535E7B1550E1A97FE693B93
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_3
+[MaterialExpressionNamedRerouteUsage_5] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = FB111EC9475F5AFE3B3499AE127BBDC3
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_7
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    VectorInput <- MaterialExpressionLinearInterpolate_1
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionScalarParameter_4
+[MaterialExpressionOneMinus_1] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionFunctionOutput_1
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionMultiply_16
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionNamedRerouteUsage_2
+[MaterialExpressionReroute_3] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionReroute_5] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionComponentMask_3
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionSubtract_0
+[MaterialExpressionSaturate_2] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionAdd_1
+[MaterialExpressionSaturate_3] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionAdd_3
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "SkylightCubemap"
+    ExpressionGUID = 434A82B24CBA35DEDF6D1693EABBCAD5
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "FogScatteringScale"
+    ExpressionGUID = 9A177A6E44075995D670F997D22FE14C
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = 0.150000
+    ParameterName = "AmbinetPhase"
+    ExpressionGUID = 191F9AEB492F52123BDF029CF3D39126
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    DefaultValue = 0.200000
+    ParameterName = "AmbinetPhase"
+    ExpressionGUID = 7D14221D4BB100CC63059BA9B9728752
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionScalarParameter_7] MaterialExpressionScalarParameter
+    DefaultValue = 0.500000
+    ParameterName = "AbsoptionHeightScale"
+    ExpressionGUID = 7BD04E6A4BEC736A9D8CFA9951EE9ED8
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionScreenPosition_2] MaterialExpressionScreenPosition
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionSquareRoot_0] MaterialExpressionSquareRoot
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    Input <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionStaticBool_2] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionStaticBool_4] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionStaticSwitch_0] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionCameraPositionWS_0
+    B <- MaterialExpressionWorldPosition_0
+    Value <- MaterialExpressionFunctionInput_9
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UseSimpleLightShafts"
+    ExpressionGUID = 72CE3F2A40D39C4A2ECF08A78BF463C9
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionConstant_6
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionDivide_1
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionFunctionInput_3
+    B <- MaterialExpressionMaterialFunctionCall_6
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+    A <- MaterialExpressionMaterialFunctionCall_4
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=-8000.000000)
+    ParameterName = "DeepScattering"
+    ExpressionGUID = F8B6D19F4555773C80D694BA5A0F8342
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionVectorParameter_1] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.700000,G=1.100000,B=1.500000,A=0.050000)
+    ParameterName = "SkyLight"
+    ExpressionGUID = C10E81FB410C1BF6AEDF8B867349B0CF
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_FogScatteringVolume'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,10 @@
+﻿// Источник: /Game/ENDEMIS/Water/Materials/M_FogVolumePostprocess (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_15 ключ: Code
+// Входы: ViewPos
+// Выход: не указан
+// Описание: ViewPos to WorldPos
+
+	float4 pos = mul( ViewPos , LWCToFloat(ResolvedView.ScreenToTranslatedWorld) );
+
+
+return pos.xyz * (1 / pos.w) ;

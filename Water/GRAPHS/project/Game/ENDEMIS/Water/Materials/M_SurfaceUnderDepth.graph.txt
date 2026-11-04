@@ -1,0 +1,146 @@
+﻿# /Game/ENDEMIS/Water/Materials/M_SurfaceUnderDepth
+# класс: Material; происхождение: проект; узлов: 20; связей: 37; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:372
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_SurfaceUnderDepth] Material
+    BlendMode = BLEND_Masked
+    MaterialDecalResponse = MDR_None
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    TranslucencyPass = MTP_BeforeDOF
+    bTangentSpaceNormal = False
+    bUsedWithNiagaraMeshParticles = True
+    bUsedWithInstancedStaticMeshes = True
+    bUsesDistortion = True
+    bAutomaticallySetUsageInEditor = False
+    AllowTranslucentCustomDepthWrites = True
+    EditorX = -976
+    EditorY = 1120
+    bCastRayTracedShadows = False
+    bUseTranslucencyVertexFog = False
+    RefractionMethod = RM_PixelNormalOffset
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = BEBE8DB646B95F8C1CF0249DD8AF8229
+    ReferencedTextureGuids(1) = C4A4E2FC4C48E1275F7C77B126BD4A99
+    ReferencedTextureGuids(2) = 13D5A56542132F73BC6B2792DFE36B92
+    ReferencedTextureGuids(4) = 61EF94AD4078B928B171198909D4D7B6
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq.Good64x64TilingNoiseHighFreq'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(2) = None
+    ReferencedDefaultTextures(3) = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    ReferencedDefaultTextures(4) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DetailWaveTexture_01.T_DetailWaveTexture_01'"
+    ReferencedDefaultTextures(5) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+    ReferencedDefaultTextures(6) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_SmoothNoise.T_SmoothNoise'"
+    ReferencedDefaultTextures(7) = "/Script/Engine.TextureRenderTarget2D'/Game/ENDEMIS/Water/Textures/RT_DefaultWhite16.RT_DefaultWhite16'"
+    ReferencedDefaultTextures(8) = "/Script/Engine.VolumeTexture'/Engine/EngineResources/DefaultVolumeTexture.DefaultVolumeTexture'"
+    ReferencedDefaultTextures(9) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DetailWaveTexture_00.T_DetailWaveTexture_00'"
+    ReferencedDefaultTextures(10) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DefaultEncoded_N.T_DefaultEncoded_N'"
+    LightingGuid = B1C4EBB34B4B1393D5ED2EB5F07442D3
+    EditorOnlyData <- M_SurfaceUnderDepthEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_SurfaceUnderDepthEditorOnlyData] MaterialEditorOnlyData
+    BaseColor = (Constant=(R=0.501961,G=0.501961,B=0.501961,A=1.000000),Mask=1,MaskR=1,MaskG=1,MaskB=1)
+    Normal = (Constant=(X=0.000000,Y=0.000000,Z=0.000000),OutputIndex=8,Mask=1,MaskR=1,MaskG=1,MaskB=1)
+    Opacity = (OutputIndex=6,Mask=1,MaskR=1)
+    Refraction = (Constant=0.000000,OutputIndex=15,Mask=1,MaskR=1,MaskG=1)
+    OpacityMask <- MaterialExpressionMax_0
+    WorldPositionOffset <- MaterialExpressionBreakMaterialAttributes_1
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionBreakMaterialAttributes_1
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_19
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_13
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_14
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionWorldPosition_7
+    ExpressionCollection <- MaterialExpressionMultiply_14
+    ExpressionCollection <- MaterialExpressionConstant3Vector_2
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = -0.200000
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    A <- MaterialExpressionBreakMaterialAttributes_1
+    B <- MaterialExpressionWorldPosition_7
+[MaterialExpressionBreakMaterialAttributes_1] MaterialExpressionBreakMaterialAttributes
+    MaterialAttributes <- MaterialExpressionMaterialFunctionCall_19
+[MaterialExpressionCameraVectorWS_0] MaterialExpressionCameraVectorWS
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    B = True
+    Input <- MaterialExpressionCameraVectorWS_0
+[MaterialExpressionConstant3Vector_2] MaterialExpressionConstant3Vector
+[MaterialExpressionMaterialFunctionCall_13] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceLayer.MF_SurfaceLayer'"
+    FunctionOutputs(0) = (ExpressionOutputId=70DAAC0E467C1ABC47946E9BE9A267E5,Output=(OutputName="SurfaceLayerPS"))
+    FunctionOutputs(1) = (ExpressionOutputId=21BBA6E44440F6E315E02EB3FDA747C8,Output=(OutputName="SurfaceLayerVS"))
+    FunctionOutputs(2) = (ExpressionOutputId=F9C1FC904C37431670E98794F711645C,Output=(OutputName="Painter"))
+    FunctionOutputs(3) = (ExpressionOutputId=D61499B94C36FFF82193F08CF21F8E64,Output=(OutputName="Shoreline"))
+    Outputs(0) = (OutputName="SurfaceLayerPS")
+    Outputs(1) = (OutputName="SurfaceLayerVS")
+    Outputs(2) = (OutputName="Painter")
+    Outputs(3) = (OutputName="Shoreline")
+[MaterialExpressionMaterialFunctionCall_14] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceInteraction.MF_SurfaceInteraction'"
+    FunctionOutputs(0) = (ExpressionOutputId=6CB48C914B47EB178155019EA8E1BE14,Output=(OutputName="SurfaceLayer"))
+    Outputs(0) = (OutputName="SurfaceLayer")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_13
+[MaterialExpressionMaterialFunctionCall_19] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_WaterLayer.MF_WaterLayer'"
+    FunctionInputs(0) = (ExpressionInputId=E22C7C874C42053F33EBBCA1C06BCE25,Input=(OutputIndex=-1,InputName="Translucent"))
+    FunctionInputs(1) = (ExpressionInputId=1E44A78F43693F933183E89F30FB60D7,Input=(InputName="SceneDepth",Mask=1,MaskR=1))
+    FunctionOutputs(0) = (ExpressionOutputId=34E829204CB275FD47EA7885132C90CF,Output=(OutputName="Depth"))
+    FunctionOutputs(1) = (ExpressionOutputId=96C1928240C7D879A573E6B5C97F2379,Output=(OutputName="Mask"))
+    FunctionOutputs(2) = (ExpressionOutputId=B59C3EF6494AA3217CEE48955A415389,Output=(OutputName="FluidLayer"))
+    FunctionOutputs(3) = (ExpressionOutputId=BC6A486E41DFF19787D9E08413611EA2,Output=(OutputName="SurfaceLayer"))
+    Outputs(0) = (OutputName="Depth")
+    Outputs(1) = (OutputName="Mask")
+    Outputs(2) = (OutputName="FluidLayer")
+    Outputs(3) = (OutputName="SurfaceLayer")
+    FunctionInputs(2) <- MaterialExpressionConstant3Vector_2
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_DetailWave.MF_DetailWave'"
+    FunctionOutputs(0) = (ExpressionOutputId=9B6BF5F34A58ADAD89757EAF9485252E,Output=(OutputName="SurfaceLayer"))
+    Outputs(0) = (OutputName="SurfaceLayer")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_UnderVertex.MF_UnderVertex'"
+    FunctionOutputs(0) = (ExpressionOutputId=F77D9D3345A7ADD0CE3A59A03A9BB6C8,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SampleDistanceField.MF_SampleDistanceField'"
+    FunctionOutputs(0) = (ExpressionOutputId=1E43D677469EF916187477805FB385D6,Output=(OutputName="Blend"))
+    FunctionOutputs(1) = (ExpressionOutputId=7B8C0FD64A59DB93CB525F95255C97CA,Output=(OutputName="UV"))
+    FunctionOutputs(2) = (ExpressionOutputId=F4AA8E8F46163C7CD794FC8216DA80EF,Output=(OutputName="Grid"))
+    FunctionOutputs(3) = (ExpressionOutputId=3A325A4540DA3F10A8C53A84A93761FB,Output=(OutputName="NormalizedUV"))
+    FunctionOutputs(4) = (ExpressionOutputId=BB77FE1E4D9B30E6E7CD729CBA82417E,Output=(OutputName="Distance"))
+    Outputs(0) = (OutputName="Blend")
+    Outputs(1) = (OutputName="UV")
+    Outputs(2) = (OutputName="Grid")
+    Outputs(3) = (OutputName="NormalizedUV")
+    Outputs(4) = (OutputName="Distance")
+    FunctionInputs(0) <- MaterialExpressionAdd_1
+[MaterialExpressionMax_0] MaterialExpressionMax
+    A <- MaterialExpressionAdd_0
+    B <- MaterialExpressionVertexInterpolator_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -1.000000
+    A <- MaterialExpressionComponentMask_0
+[MaterialExpressionMultiply_14] MaterialExpressionMultiply
+    ConstB = -1.000000
+    A <- MaterialExpressionMaterialFunctionCall_6
+[MaterialExpressionVertexInterpolator_0] MaterialExpressionVertexInterpolator
+    Input <- MaterialExpressionMultiply_14
+[MaterialExpressionWorldPosition_7] MaterialExpressionWorldPosition
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,110 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_Fresnel
+# класс: MaterialFunction; происхождение: проект; узлов: 20; связей: 35; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:39
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Fresnel] MaterialFunction
+    StateId = 757328F44AB368558028BDB203C32E81
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FresnelEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FresnelEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionPower_0
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_0
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionMultiply_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionCameraVectorWS_0] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 20.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    A <- MaterialExpressionCameraVectorWS_0
+    B <- MaterialExpressionFunctionInput_3
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Bias"
+    Id = 70ADE0F74FA858AA6E6C469C554502FA
+    InputType = FunctionInput_Scalar
+    PreviewValue = (X=0.200000,Y=0.000000,Z=0.000000,W=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Scale"
+    Id = 0EFC418E4BD190709692FDA4976B9145
+    InputType = FunctionInput_Scalar
+    PreviewValue = (X=1.000000,Y=0.000000,Z=0.000000,W=1.000000)
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_1
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Power"
+    Id = 3A9943454A61F31F5803F7A6F9E519A0
+    InputType = FunctionInput_Scalar
+    PreviewValue = (X=5.000000,Y=0.000000,Z=0.000000,W=1.000000)
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Normal"
+    Id = E2FD303844243300F7423785619D37A3
+    bUsePreviewValueAsDefault = True
+    SortPriority = 12
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    bCollapsed = True
+    Preview <- MaterialExpressionPixelNormalWS_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = B4DBD4104A1221AF6F81BABBB4251320
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    bCollapsed = True
+    A <- MaterialExpressionSaturate_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionPower_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    A <- MaterialExpressionDotProduct_0
+[MaterialExpressionPixelNormalWS_0] MaterialExpressionPixelNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+[MaterialExpressionPower_0] MaterialExpressionPower
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    Base <- MaterialExpressionAdd_1
+    Exponent <- MaterialExpressionFunctionInput_2
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_Fresnel'"
+    Input <- MaterialExpressionAdd_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

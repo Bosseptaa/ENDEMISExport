@@ -1,0 +1,104 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_PolynomialHalf
+# класс: MaterialFunction; происхождение: проект; узлов: 19; связей: 35; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:37
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_PolynomialHalf] MaterialFunction
+    StateId = F70941E0484B760201D86183AD98A696
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_PolynomialHalfEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_PolynomialHalfEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionMultiply_4
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    Input <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "x"
+    Id = 9A28F9B7441C9A84BA87AFBF2FB91234
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    bCollapsed = True
+    Preview <- MaterialExpressionComponentMask_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "p_0.5"
+    Id = 2E1DA2E14BD86A577D6776B1CE34F8F9
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "p_1_0"
+    Id = DD9D982649BC7CF006787EACDB1AF07A
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "w(x)"
+    bLastPreviewed = True
+    Id = 0D86B5094112E2DA381CB0BF40E5F495
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_2
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 4.000000
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    A <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    A <- MaterialExpressionFunctionInput_2
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionAdd_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 4.000000
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    A <- MaterialExpressionOneMinus_0
+    B <- MaterialExpressionMultiply_0
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+    A <- MaterialExpressionFunctionInput_0
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_PolynomialHalf'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

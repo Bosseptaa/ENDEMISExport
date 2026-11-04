@@ -1,0 +1,119 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_UnderWaterSun
+# класс: MaterialFunction; происхождение: проект; узлов: 22; связей: 41; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:193
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_UnderWaterSun] MaterialFunction
+    StateId = 780C16BE491D5B1C64D41FAAA8642AA2
+    CombinedInputTypes = 4
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_UnderWaterSunEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_UnderWaterSunEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionMax_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_9
+    ExpressionCollection <- MaterialExpressionSubtract_7
+    ExpressionCollection <- MaterialExpressionOneMinus_4
+    ExpressionCollection <- MaterialExpressionDivide_3
+    ExpressionCollection <- MaterialExpressionVectorParameter_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=-1.000000,G=-1.000000,B=1.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    bCollapsed = True
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    A <- MaterialExpressionMin_0
+    B <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionDivide_3] MaterialExpressionDivide
+    ConstA = 0.004000
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    Desc = "s"
+    A <- MaterialExpressionMultiply_2
+    B <- MaterialExpressionMax_2
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    A <- MaterialExpressionNormalize_0
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionEyeAdaptation_0] MaterialExpressionEyeAdaptation
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "CosAngle"
+    Id = EDDBC5E6456770573220C09C54E3AF1D
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    bCollapsed = True
+    Preview <- MaterialExpressionDotProduct_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Emissive"
+    bLastPreviewed = True
+    Id = 42D3F5DF46E19E06FAA8149EBF4DE75C
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    bCollapsed = True
+    A <- MaterialExpressionDivide_0
+[MaterialExpressionMax_2] MaterialExpressionMax
+    ConstB = 0.001000
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    A <- MaterialExpressionSubtract_7
+[MaterialExpressionMin_0] MaterialExpressionMin
+    ConstB = 10.000000
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    A <- MaterialExpressionDivide_3
+    B <- MaterialExpressionDivide_3
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    A <- MaterialExpressionPixelNormalWS_1
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    A <- MaterialExpressionVectorParameter_1
+    B <- MaterialExpressionVectorParameter_1
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    VectorInput <- MaterialExpressionConstant3Vector_1
+[MaterialExpressionOneMinus_4] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    Input <- MaterialExpressionFunctionInput_2
+[MaterialExpressionPixelNormalWS_1] MaterialExpressionPixelNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 20.000000
+    ParameterName = "SunEmissiveMax"
+    ExpressionGUID = 9DDDD00748698C2977725EAAA9FB3B3B
+    Group = "SkyAtmosphere"
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+[MaterialExpressionScalarParameter_9] MaterialExpressionScalarParameter
+    DefaultValue = 0.002000
+    ParameterName = "SunRadius"
+    ExpressionGUID = 035E1AAA4288C5CF49F8C6BFA5668F7D
+    Group = "SkyAtmosphere"
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+[MaterialExpressionSubtract_7] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+    A <- MaterialExpressionOneMinus_4
+    B <- MaterialExpressionScalarParameter_9
+[MaterialExpressionVectorParameter_1] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=1.000000,B=1.000000,A=0.001000)
+    ParameterName = "SunColorShine"
+    ExpressionGUID = 3D2479E242895197419582821E91A235
+    Group = "SkyAtmosphere"
+    Function = "/Script/Engine.MaterialFunction'MF_UnderWaterSun'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,213 @@
+﻿# /Game/ENDEMIS/Water/Materials/M_FogVolumeMesh
+# класс: Material; происхождение: проект; узлов: 27; связей: 55; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:97
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_FogVolumeMesh] Material
+    BlendMode = BLEND_Additive
+    MaterialDecalResponse = MDR_None
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    TranslucencyPass = MTP_BeforeDOF
+    TranslucencyLightingMode = TLM_SurfacePerPixelLighting
+    bDisableDepthTest = True
+    bTangentSpaceNormal = False
+    bAutomaticallySetUsageInEditor = False
+    bUseLightmapDirectionality = False
+    bAllowFrontLayerTranslucency = False
+    EditorX = 3328
+    EditorY = 243
+    bUseMaterialAttributes = True
+    bCastRayTracedShadows = False
+    bUseTranslucencyVertexFog = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 16CAF74D4D69D3D07A77CFBA8F47D577
+    ReferencedTextureGuids(1) = 13D5A56542132F73BC6B2792DFE36B92
+    ReferencedTextureGuids(2) = 61EF94AD4078B928B171198909D4D7B6
+    ReferencedTextureGuids(3) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = None
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+    ReferencedDefaultTextures(3) = "/Script/Engine.VolumeTexture'/Engine/EngineResources/DefaultVolumeTexture.DefaultVolumeTexture'"
+    ReferencedDefaultTextures(4) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DetailWaveTexture_00.T_DetailWaveTexture_00'"
+    ReferencedDefaultTextures(5) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_DefaultEncoded_N.T_DefaultEncoded_N'"
+    ReferencedDefaultTextures(6) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_SmoothNoise.T_SmoothNoise'"
+    ReferencedDefaultTextures(7) = "/Script/Engine.Texture2D'/Game/ENDEMIS/Water/Textures/T_SmoothNoise_Offset.T_SmoothNoise_Offset'"
+    ReferencedDefaultTextures(8) = "/Script/Engine.TextureRenderTarget2D'/Game/ENDEMIS/Water/Textures/RT_DefaultWhite16.RT_DefaultWhite16'"
+    ReferencedDefaultTextures(9) = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    LightingGuid = 361468C24FB46E68CE6350B29ADE0FE9
+    EditorOnlyData <- M_FogVolumeMeshEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_FogVolumeMeshEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="Projection")
+    ParameterGroupData(1) = (GroupName="Projection")
+    ParameterGroupData(2) = (GroupName="Projection")
+    MaterialAttributes <- MaterialExpressionStaticSwitchParameter_10
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_10
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_11
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_4
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_12
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_8
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_19
+    ExpressionCollection <- MaterialExpressionSetMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionSetMaterialAttributes_1
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_7
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_0
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_1
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionSetMaterialAttributes_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionIf_1
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_0
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_8
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_9
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+[MaterialExpressionCameraPositionWS_0] MaterialExpressionCameraPositionWS
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstB = 0.000000
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    ConstB = 0.000000
+[MaterialExpressionIf_0] MaterialExpressionIf
+    A <- MaterialExpressionScalarParameter_8
+    B <- MaterialExpressionMaterialFunctionCall_11
+    AGreaterThanB <- MaterialExpressionMaterialFunctionCall_12
+    ALessThanB <- MaterialExpressionDivide_0
+[MaterialExpressionIf_1] MaterialExpressionIf
+    A <- MaterialExpressionMaterialFunctionCall_4
+    AGreaterThanB <- MaterialExpressionDivide_1
+    ALessThanB <- MaterialExpressionIf_0
+[MaterialExpressionMaterialFunctionCall_11] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_VolumeSurface.MF_VolumeSurface'"
+    FunctionInputs(0) = (ExpressionInputId=0DDF27E64648465838ABEBB28238469C,Input=(OutputIndex=-1,InputName="HeightOffset"))
+    FunctionOutputs(0) = (ExpressionOutputId=AD763AB24FDAAD0E5AFDB6B5A78A1F20,Output=(OutputName="CameraDepth"))
+    FunctionOutputs(1) = (ExpressionOutputId=E8E2739D45C2A5BF65679180EBCE766F,Output=(OutputName="SurfaceHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=9E87551D49280E337F65A398C6821F79,Output=(OutputName="WetHeight"))
+    FunctionOutputs(3) = (ExpressionOutputId=AFA617704A30221481403FBD2BD83FFC,Output=(OutputName="Volume"))
+    Outputs(0) = (OutputName="CameraDepth")
+    Outputs(1) = (OutputName="SurfaceHeight")
+    Outputs(2) = (OutputName="WetHeight")
+    Outputs(3) = (OutputName="Volume")
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionMaterialFunctionCall_12] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_CameraPlane.MF_CameraPlane'"
+    FunctionOutputs(0) = (ExpressionOutputId=F33F318541D74570314DC0A93B6D307B,Output=(OutputName="ScreenPosition"))
+    FunctionOutputs(1) = (ExpressionOutputId=DAC109DB483ABC61F8A2B0AC03B07DD9,Output=(OutputName="WorldPosition"))
+    FunctionOutputs(2) = (ExpressionOutputId=F77B628A4FFA2BAF82B49D93A6DDFD63,Output=(OutputName="WorldPositionOffset"))
+    FunctionOutputs(3) = (ExpressionOutputId=1291CD84426844AC9D6339A08F8EECD1,Output=(OutputName="CameraPositionOffset"))
+    Outputs(0) = (OutputName="ScreenPosition")
+    Outputs(1) = (OutputName="WorldPosition")
+    Outputs(2) = (OutputName="WorldPositionOffset")
+    Outputs(3) = (OutputName="CameraPositionOffset")
+[MaterialExpressionMaterialFunctionCall_19] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/UVs/WorldPositionBehindTranslucency.WorldPositionBehindTranslucency'"
+    FunctionInputs(0) = (ExpressionInputId=707D00CA404E6B7176A164991B3107C9,Input=(OutputIndex=-1,InputName="SceneDepth"))
+    FunctionInputs(1) = (ExpressionInputId=9C34D4E5463EAC4062E14FBEEA947626,Input=(OutputIndex=-1,InputName="Exclude WPO Offsets"))
+    FunctionOutputs(0) = (ExpressionOutputId=49E1A3CF47C0B4A1BFE84ABF854CF41C,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_FogScatteringVolume.MF_FogScatteringVolume'"
+    FunctionInputs(2) = (ExpressionInputId=699594A24BAF543E709C43A0CE98E3DA,Input=(OutputIndex=-1,InputName="UseAsPostProcess"))
+    FunctionInputs(3) = (ExpressionInputId=57127BA2420DB2596982608D08BE1FBC,Input=(InputName="Mask"))
+    FunctionInputs(4) = (ExpressionInputId=D22849394C60BA9723CE94BD7C1E8A9A,Input=(InputName="BlendShoreline"))
+    FunctionInputs(5) = (ExpressionInputId=F7D741964CE04BF3A302A59B3E40A21A,Input=(OutputIndex=-1,InputName="SceneColor"))
+    FunctionInputs(6) = (ExpressionInputId=E653FABD427C985F8D15B08100296037,Input=(OutputIndex=-1,InputName="TestPixelDepth"))
+    FunctionInputs(7) = (ExpressionInputId=0DD7430B420E16BE1B04F7BD573835E6,Input=(OutputIndex=1,InputName="BlendColor"))
+    FunctionInputs(8) = (ExpressionInputId=4250F69C41A51CA31375FEAFA923B626,Input=(InputName="CameraRayDepth"))
+    FunctionInputs(9) = (ExpressionInputId=999A61814CC14C265284D9BDFBD1C10F,Input=(OutputIndex=-1,InputName="ScreenDepth"))
+    FunctionInputs(10) = (ExpressionInputId=F59F50A1486B2B8BD92B15A63F2C22B9,Input=(OutputIndex=-1,InputName="DepthTest"))
+    FunctionOutputs(0) = (ExpressionOutputId=C01077A8410D4AF5032C95BB7AB68BB3,Output=(OutputName="FogColor"))
+    FunctionOutputs(1) = (ExpressionOutputId=A02C39D4429F7C1E2716E9B89D5F46A2,Output=(OutputName="FogAlpha"))
+    FunctionOutputs(2) = (ExpressionOutputId=4F6D541247FFE2D673D35C9C2CE542CD,Output=(OutputName="Absorption"))
+    FunctionOutputs(3) = (ExpressionOutputId=7B6C07DC4EF0746D887EEA8A9E2A576D,Output=(OutputName="ColorBehind"))
+    FunctionOutputs(4) = (ExpressionOutputId=99D6F59543731760465B83851446F5FA,Output=(OutputName="FinalColor"))
+    Outputs(0) = (OutputName="FogColor")
+    Outputs(1) = (OutputName="FogAlpha")
+    Outputs(2) = (OutputName="Absorption")
+    Outputs(3) = (OutputName="ColorBehind")
+    Outputs(4) = (OutputName="FinalColor")
+    FunctionInputs(0) <- MaterialExpressionVertexInterpolator_4
+    FunctionInputs(1) <- MaterialExpressionVertexInterpolator_5
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SampleDistanceField.MF_SampleDistanceField'"
+    FunctionOutputs(0) = (ExpressionOutputId=1E43D677469EF916187477805FB385D6,Output=(OutputName="Blend"))
+    FunctionOutputs(1) = (ExpressionOutputId=7B8C0FD64A59DB93CB525F95255C97CA,Output=(OutputName="UV"))
+    FunctionOutputs(2) = (ExpressionOutputId=F4AA8E8F46163C7CD794FC8216DA80EF,Output=(OutputName="Grid"))
+    FunctionOutputs(3) = (ExpressionOutputId=3A325A4540DA3F10A8C53A84A93761FB,Output=(OutputName="NormalizedUV"))
+    FunctionOutputs(4) = (ExpressionOutputId=BB77FE1E4D9B30E6E7CD729CBA82417E,Output=(OutputName="Distance"))
+    Outputs(0) = (OutputName="Blend")
+    Outputs(1) = (OutputName="UV")
+    Outputs(2) = (OutputName="Grid")
+    Outputs(3) = (OutputName="NormalizedUV")
+    Outputs(4) = (OutputName="Distance")
+    FunctionInputs(0) <- MaterialExpressionCameraPositionWS_0
+[MaterialExpressionMaterialFunctionCall_8] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_ContainerVolume.MF_ContainerVolume'"
+    FunctionInputs(1) = (ExpressionInputId=8E9A2AF1441464342C8AA5A8385B6BCC,Input=(OutputIndex=-1,InputName="CameraVector"))
+    FunctionOutputs(0) = (ExpressionOutputId=0565FA2642BE6795A08E0D804A2A3CC5,Output=(OutputName="Underwater"))
+    FunctionOutputs(1) = (ExpressionOutputId=B571FCF746AE1F94363D5ABCA86F8E64,Output=(OutputName="Absorption"))
+    Outputs(0) = (OutputName="Underwater")
+    Outputs(1) = (OutputName="Absorption")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_0
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_9
+[MaterialExpressionMaterialFunctionCall_9] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/UVs/WorldPositionBehindFromDepth_experimental.WorldPositionBehindFromDepth_experimental'"
+    FunctionInputs(0) = (ExpressionInputId=9C34D4E5463EAC4062E14FBEEA947626,Input=(OutputIndex=-1,InputName="Exclude WPO Offsets"))
+    FunctionOutputs(0) = (ExpressionOutputId=49E1A3CF47C0B4A1BFE84ABF854CF41C,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+[MaterialExpressionNamedRerouteDeclaration_7] MaterialExpressionNamedRerouteDeclaration
+    Name = "WorldPositionOffset"
+    NodeColor = (R=1.000000,G=0.000000,B=0.820312,A=1.000000)
+    VariableGuid = FB111EC9475F5AFE3B3499AE127BBDC3
+    Input <- MaterialExpressionIf_1
+[MaterialExpressionNamedRerouteUsage_0] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = FB111EC9475F5AFE3B3499AE127BBDC3
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_7
+[MaterialExpressionNamedRerouteUsage_1] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = FB111EC9475F5AFE3B3499AE127BBDC3
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_7
+[MaterialExpressionScalarParameter_8] MaterialExpressionScalarParameter
+    DefaultValue = 3.000000
+    ParameterName = "SafeDepthVisible"
+    ExpressionGUID = 4730E27842DC1B2491802F87D367D890
+    Group = "Projection"
+[MaterialExpressionSetMaterialAttributes_0] MaterialExpressionSetMaterialAttributes
+    AttributeSetTypes(0) = B769B54DD08D4440ABC21BA6CD27D0E2
+    AttributeSetTypes(1) = B8F50FBA2A754EC19EF672CFEB27BF51
+    AttributeSetTypes(2) = F905F895D5814314916D24348C40CE9E
+    Inputs(1) Emissive Color <- MaterialExpressionMaterialFunctionCall_3
+    Inputs(2) Opacity <- MaterialExpressionMaterialFunctionCall_3
+    Inputs(3) World Position Offset <- MaterialExpressionNamedRerouteUsage_1
+[MaterialExpressionSetMaterialAttributes_1] MaterialExpressionSetMaterialAttributes
+    AttributeSetTypes(0) = B769B54DD08D4440ABC21BA6CD27D0E2
+    AttributeSetTypes(1) = F905F895D5814314916D24348C40CE9E
+    Inputs(1) Emissive Color <- MaterialExpressionMaterialFunctionCall_3
+    Inputs(2) World Position Offset <- MaterialExpressionNamedRerouteUsage_0
+[MaterialExpressionSetMaterialAttributes_3] MaterialExpressionSetMaterialAttributes
+    AttributeSetTypes(0) = B769B54DD08D4440ABC21BA6CD27D0E2
+    Inputs(1) Emissive Color <- MaterialExpressionMaterialFunctionCall_8
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseInContainer"
+    ExpressionGUID = 03AECFF74CB4CE29027AF2894F514636
+    Group = "Projection"
+    A <- MaterialExpressionSetMaterialAttributes_3
+    B <- MaterialExpressionSetMaterialAttributes_1
+[MaterialExpressionStaticSwitchParameter_10] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseAsTranslucent"
+    ExpressionGUID = BA39A44240760089DBC10CB72A0E15B1
+    Group = "Projection"
+    A <- MaterialExpressionSetMaterialAttributes_0
+    B <- MaterialExpressionStaticSwitchParameter_0
+[MaterialExpressionVertexInterpolator_4] MaterialExpressionVertexInterpolator
+    Input <- MaterialExpressionMaterialFunctionCall_11
+[MaterialExpressionVertexInterpolator_5] MaterialExpressionVertexInterpolator
+    Input <- MaterialExpressionMaterialFunctionCall_11
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

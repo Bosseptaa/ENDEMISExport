@@ -1,0 +1,119 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_DecodeNormaDerivate
+# класс: MaterialFunction; происхождение: проект; узлов: 21; связей: 39; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:41
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_DecodeNormaDerivate] MaterialFunction
+    StateId = 05350C494AA39D57EB13E5B6395A858B
+    CombinedInputTypes = 271
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_DecodeNormaDerivateEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_DecodeNormaDerivateEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionDeriveNormalZ_1
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionComponentMask_6
+    ExpressionCollection <- MaterialExpressionDivide_3
+    ExpressionCollection <- MaterialExpressionComponentMask_7
+    ExpressionCollection <- MaterialExpressionDivide_4
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionStaticSwitch_0
+    ExpressionCollection <- MaterialExpressionReroute_0
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionComponentMask_6] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    Input <- MaterialExpressionDeriveNormalZ_1
+[MaterialExpressionComponentMask_7] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    Input <- MaterialExpressionDeriveNormalZ_1
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+[MaterialExpressionDeriveNormalZ_1] MaterialExpressionDeriveNormalZ
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    InXY <- MaterialExpressionMultiply_2
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    ConstA = 128.000000
+    ConstB = 255.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+[MaterialExpressionDivide_3] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    A <- MaterialExpressionComponentMask_6
+    B <- MaterialExpressionComponentMask_7
+[MaterialExpressionDivide_4] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "NormalXY"
+    Id = 20210BFF4CABFD214054B4A796FAD202
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "NormalScale"
+    Id = 05AFD5384E112362393E42A8BD3B45FC
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "IsDerivate"
+    Id = FB5D9CA54C088F49F571359A21A23013
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Normal"
+    bLastPreviewed = True
+    Id = E3BA4707434C56CF779037897009310A
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    bCollapsed = True
+    A <- MaterialExpressionDeriveNormalZ_1
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "DerivateXY"
+    bLastPreviewed = True
+    Id = 27F82E794A5DEE57FE1CBFB83C819CE0
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitch_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionDivide_4
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    Input <- MaterialExpressionMultiply_2
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+[MaterialExpressionStaticSwitch_0] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    A <- MaterialExpressionDivide_3
+    B <- MaterialExpressionReroute_0
+    Value <- MaterialExpressionFunctionInput_4
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_DecodeNormaDerivate'"
+    A <- MaterialExpressionComponentMask_5
+    B <- MaterialExpressionDivide_2
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

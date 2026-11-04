@@ -1,0 +1,239 @@
+﻿# /Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceLayer
+# класс: MaterialFunction; происхождение: проект; узлов: 33; связей: 76; HLSL: 0; причина: папка /Game/ENDEMIS/Water; имя/путь, тело:357
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SurfaceLayer] MaterialFunction
+    StateId = E73A7E7E45AD1F0AE0A1B8AD585446BB
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_3
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_8
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_4
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_7
+    DependentFunctionExpressionCandidates(4) <- MaterialExpressionMaterialFunctionCall_12
+    DependentFunctionExpressionCandidates(5) <- MaterialExpressionMaterialFunctionCall_13
+    DependentFunctionExpressionCandidates(6) <- MaterialExpressionMaterialFunctionCall_15
+    DependentFunctionExpressionCandidates(7) <- MaterialExpressionMaterialFunctionCall_10
+    DependentFunctionExpressionCandidates(8) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(9) <- MaterialExpressionMaterialFunctionCall_11
+    EditorOnlyData <- MF_SurfaceLayerEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SurfaceLayerEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_8
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_7
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_12
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_13
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_15
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_1
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_2
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_8
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_10
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_11
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_3
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionReroute_3
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_11
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionComment_0
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 4128
+    SizeY = 624
+    Text = "Layer blending between multiple types of water bodies."
+    CommentColor = (R=0.040547,G=0.262376,B=0.325000,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Input <- MaterialExpressionWorldPosition_1
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "SurfaceLayerVS"
+    bLastPreviewed = True
+    Id = 21BBA6E44440F6E315E02EB3FDA747C8
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_8
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Painter"
+    SortPriority = 4
+    Id = F9C1FC904C37431670E98794F711645C
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitchParameter_3
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Shoreline"
+    SortPriority = 4
+    Id = D61499B94C36FFF82193F08CF21F8E64
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "SurfaceLayerPS"
+    bLastPreviewed = True
+    Id = 70DAAC0E467C1ABC47946E9BE9A267E5
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_11
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SamplePainter.MF_SamplePainter'"
+    FunctionOutputs(0) = (ExpressionOutputId=4FA0C0004320F05905AE9C8E0E5CF57E,Output=(OutputName="Color"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Outputs(0) = (OutputName="Color")
+    FunctionInputs(0) <- MaterialExpressionComponentMask_1
+[MaterialExpressionMaterialFunctionCall_10] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_Surface_Mesh.MF_Surface_Mesh'"
+    FunctionOutputs(0) = (ExpressionOutputId=BA08A2E04BA053CB99A033B45DCCE791,Output=(OutputName="SurfaceLayer"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Outputs(0) = (OutputName="SurfaceLayer")
+[MaterialExpressionMaterialFunctionCall_11] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_Surface_VertexInterpolator.MF_Surface_VertexInterpolator'"
+    FunctionOutputs(0) = (ExpressionOutputId=BA08A2E04BA053CB99A033B45DCCE791,Output=(OutputName="SurfaceLayerPS"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Outputs(0) = (OutputName="SurfaceLayerPS")
+    FunctionInputs(0) <- MaterialExpressionFunctionOutput_0
+[MaterialExpressionMaterialFunctionCall_12] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_Surface_WaveTexture.MF_Surface_WaveTexture'"
+    FunctionInputs(0) = (ExpressionInputId=0491AA6B4F9D22481EF99B9119F80ABF,Input=(OutputIndex=-1,InputName="DistantFade"))
+    FunctionInputs(1) = (ExpressionInputId=EEF1DBEC4A7E157A6A3892AAF1769CE1,Input=(OutputIndex=-1,InputName="WorldPosition"))
+    FunctionInputs(4) = (ExpressionInputId=AF1D3A044AB34DB15486BA80877D7F19,Input=(InputName="Precise"))
+    FunctionOutputs(0) = (ExpressionOutputId=BA08A2E04BA053CB99A033B45DCCE791,Output=(OutputName="SurfaceLayer"))
+    FunctionOutputs(1) = (ExpressionOutputId=3FE0EC8E4856995DD41FADBAE2E34571,Output=(OutputName="Sample"))
+    FunctionOutputs(2) = (ExpressionOutputId=A9FB816E40A19ED6A111459B5D0CD30F,Output=(OutputName="Height"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Outputs(0) = (OutputName="SurfaceLayer")
+    Outputs(1) = (OutputName="Sample")
+    Outputs(2) = (OutputName="Height")
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_4
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMaterialFunctionCall_13] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_Surface_Blend.MF_Surface_Blend'"
+    FunctionOutputs(0) = (ExpressionOutputId=BA08A2E04BA053CB99A033B45DCCE791,Output=(OutputName="SurfaceLayer"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Outputs(0) = (OutputName="SurfaceLayer")
+    FunctionInputs(0) <- MaterialExpressionReroute_0
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_15
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_15
+[MaterialExpressionMaterialFunctionCall_15] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_Surface_State.MF_Surface_State'"
+    FunctionInputs(0) = (ExpressionInputId=8773D11947BAFCDC9C828ABC1E748683,Input=(OutputIndex=-1,InputName="WorldPosition"))
+    FunctionOutputs(0) = (ExpressionOutputId=BA08A2E04BA053CB99A033B45DCCE791,Output=(OutputName="SurfaceLayer"))
+    FunctionOutputs(1) = (ExpressionOutputId=1FCCD64549FE97F01A18139B5B121822,Output=(OutputName="Blend"))
+    FunctionOutputs(2) = (ExpressionOutputId=9C18A1AD4B6A9AE61BB21EBBB099CCCB,Output=(OutputName="UV"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Outputs(0) = (OutputName="SurfaceLayer")
+    Outputs(1) = (OutputName="Blend")
+    Outputs(2) = (OutputName="UV")
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_SurfaceVelocity.MF_SurfaceVelocity'"
+    FunctionOutputs(0) = (ExpressionOutputId=6CB48C914B47EB178155019EA8E1BE14,Output=(OutputName="SurfaceLayer"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Outputs(0) = (OutputName="SurfaceLayer")
+    FunctionInputs(0) <- MaterialExpressionStaticSwitchParameter_1
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_Surface_Coastline.MF_Surface_Coastline'"
+    FunctionOutputs(0) = (ExpressionOutputId=BA08A2E04BA053CB99A033B45DCCE791,Output=(OutputName="SurfaceLayer"))
+    FunctionOutputs(1) = (ExpressionOutputId=B44BC6264228A894468F3F9EDD14E2F7,Output=(OutputName="Distance"))
+    FunctionOutputs(2) = (ExpressionOutputId=B1C8D87847ABC0ACEE211898FA753BBD,Output=(OutputName="Intensity"))
+    FunctionOutputs(3) = (ExpressionOutputId=E7B422DB40001BB420234EB9F92BA729,Output=(OutputName="Shoreline"))
+    FunctionOutputs(4) = (ExpressionOutputId=287B80A240C3135023690EBC8873A76B,Output=(OutputName="Blend"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Outputs(0) = (OutputName="SurfaceLayer")
+    Outputs(1) = (OutputName="Distance")
+    Outputs(2) = (OutputName="Intensity")
+    Outputs(3) = (OutputName="Shoreline")
+    Outputs(4) = (OutputName="Blend")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_1
+[MaterialExpressionMaterialFunctionCall_7] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_Surface_Blend.MF_Surface_Blend'"
+    FunctionOutputs(0) = (ExpressionOutputId=BA08A2E04BA053CB99A033B45DCCE791,Output=(OutputName="SurfaceLayer"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Outputs(0) = (OutputName="SurfaceLayer")
+    FunctionInputs(0) <- MaterialExpressionReroute_3
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_12
+    FunctionInputs(2) <- MaterialExpressionReroute_2
+[MaterialExpressionMaterialFunctionCall_8] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/ENDEMIS/Water/Materials/Functions/MF_WaterlineCorrection.MF_WaterlineCorrection'"
+    FunctionOutputs(0) = (ExpressionOutputId=4D72FA3E4ABCF9E54C0B45BC3B2DDCF0,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Input <- MaterialExpressionStaticSwitchParameter_11
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Input <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Input <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionReroute_3] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Input <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+[MaterialExpressionStaticSwitchParameter_1] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UseSimulation"
+    ExpressionGUID = 8FBA233C4A1B8AFBBD6266AC894D0D7D
+    Group = "FluxSurfaceLayer"
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    A <- MaterialExpressionStaticSwitchParameter_8
+    B <- MaterialExpressionStaticSwitchParameter_11
+[MaterialExpressionStaticSwitchParameter_11] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseOcean"
+    ExpressionGUID = 175320B849C320FFF47CC987244EFBEF
+    Group = "FluxSurfaceLayer"
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    A <- MaterialExpressionStaticSwitchParameter_2
+    B <- MaterialExpressionMaterialFunctionCall_10
+[MaterialExpressionStaticSwitchParameter_2] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseCoastline"
+    ExpressionGUID = AFB7D3DC4CEE3ECC6D595885A17A8322
+    Group = "FluxSurfaceLayer"
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    A <- MaterialExpressionMaterialFunctionCall_7
+    B <- MaterialExpressionReroute_1
+[MaterialExpressionStaticSwitchParameter_3] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UsePainter"
+    ExpressionGUID = 0494606645725F598B3C11919CD06A09
+    Group = "Painter"
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    A <- MaterialExpressionVertexInterpolator_0
+    B <- MaterialExpressionConstant_0
+[MaterialExpressionStaticSwitchParameter_8] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseSimulationBlend"
+    ExpressionGUID = FFEF20CF46FE985B7F21BF8BD839BDC6
+    Group = "FluxSurfaceLayer"
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    A <- MaterialExpressionMaterialFunctionCall_13
+    B <- MaterialExpressionMaterialFunctionCall_15
+[MaterialExpressionVertexInterpolator_0] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+    Input <- MaterialExpressionComponentMask_2
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    WorldPositionShaderOffset = WPT_ExcludeAllShaderOffsets
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceLayer'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

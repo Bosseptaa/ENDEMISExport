@@ -1,0 +1,26 @@
+﻿// Источник: /Game/ENDEMIS/Water/Materials/Functions/MF_TextureSamplePrecise3D (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: uv, Tex, Lod
+// Выход: CMOT_Float4
+// Описание: CustomSample
+
+uint2 res;
+Tex.GetDimensions(res.x, res.y);
+ 
+float2 st = uv*res - 0.5;
+
+float2 iuv = floor( st );
+float2 fuv = frac( st );
+
+float4 a = Texture2DSampleLevel(Tex, TexSampler, (iuv+float2(0.5,0.5))/res, 0);
+float4 b = Texture2DSampleLevel(Tex, TexSampler,(iuv+float2(1.5,0.5))/res, 0);
+float4 c = Texture2DSampleLevel(Tex, TexSampler,(iuv+float2(0.5,1.5))/res, 0);
+float4 d = Texture2DSampleLevel(Tex, TexSampler,(iuv+float2(1.5,1.5))/res, 0);
+ 
+
+//fuv = fuv*fuv*fuv*(fuv*(fuv*6.0-15.0)+10.0);
+  
+ dir =  normalize( cross(float3(1.0,1.0,a.x-d.x), float3(1.0,-1.0,c.x-b.x)));
+			
+return lerp( lerp( a, b, fuv.x),
+			lerp( c, d, fuv.x), fuv.y );
