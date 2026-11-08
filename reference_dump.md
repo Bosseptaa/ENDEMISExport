@@ -1,7 +1,7 @@
 # Снимок значений воды (явный список)
 
 Уровень: `/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel`
-Секунд: 0.58
+Секунд: 1.03
 
 Колонка «перекрыт» = состояние чекбокса в панели MI.
 
@@ -1293,6 +1293,26 @@
 
 # Blueprint Class Defaults
 
+## `/Game/FluidFlux/Surface/Blueprints/BP_FluxSurface`
+
+- **MaterialInstances** = `[]`
+- **primary_actor_tick** = `{"start_with_tick_enabled": true}`
+
+## `/Game/FluidFlux/Surface/Templates/Coastline/BP_FluxSurface_Coastline`
+
+- **MaterialInstances** = `[]`
+- **primary_actor_tick** = `{"start_with_tick_enabled": true}`
+
+## `/Game/FluidFlux/Surface/Templates/Ocean/BP_FluxSurface_Ocean`
+
+- **MaterialInstances** = `[]`
+- **primary_actor_tick** = `{"start_with_tick_enabled": true}`
+
+## `/Game/FluidFlux/Surface/Templates/Water/BP_FluxSurface_Water`
+
+- **MaterialInstances** = `[]`
+- **primary_actor_tick** = `{"start_with_tick_enabled": true}`
+
 ## `/Game/FluidFlux/Waves/Blueprints/BP_FluxOceanWave`
 
 - **DebugMesh** = `"/Game/FluidFlux/Surface/Meshes/SM_FluxPlane32x32.SM_FluxPlane32x32"`
@@ -1327,68 +1347,57 @@
 
 # Акторы уровня
 
-## `BP_FluxInteractionCapture_2`
-
-- **DebugMesh** = `"/Game/FluidFlux/Surface/Meshes/SM_FluxPlane512x512.SM_FluxPlane512x512"`
-- **primary_actor_tick** = `{"start_with_tick_enabled": false}`
-- `Preview` слот 0 → `/Game/FluidFlux/Editor/Materials/M_DebugWireframe.M_DebugWireframe`
-- `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
-
-## `BP_FluxModifierSourceActor3`
+## `BP_FluxCoastlineDomain`
 
 - **primary_actor_tick** = `{"start_with_tick_enabled": false}`
+- `StaticMeshComponent_1` слот 0 → `/Engine/EditorMaterials/MatineeCam_mat.MatineeCam_mat`
+- `DebugGround` слот 0 → `/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxCoastlineDomain.FluxHeightMapComponent.MID_M_HeightMapPreview_0`
 - `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
+- `DebugCage` слот 0 → `/Game/FluidFlux/Editor/Materials/M_DebugArea.M_DebugArea`
 
-## `BP_FluxNiagaraDust_0`
+## `BP_FluxOceanWave_0`
 
+- **DebugMesh** = `"/Game/FluidFlux/Surface/Meshes/SM_FluxPlane32x32.SM_FluxPlane32x32"`
+- **OceanWaveAnimation** = `"/Game/FluidFlux/Surface/Materials/Textures/VT_OceanWave.VT_OceanWave"`
+- **OceanWaveAnimationSpeed** = `0.3`
+- **OceanWaveDetails** = `1.3`
+- **OceanWaveFalloff** = `22000.0`
+- **OceanWaveHeight** = `230.0`
+- **OceanWaveLength** = `11500.0`
+- **OceanWaveOffset** = `-20.0`
+- **OceanWavePosition** = `{"x": -0.006231884057511016, "y": 0.006231884057511016}`
+- **OceanWaveRange** = `27000.0`
+- **OceanWaveWindDirection** = `{"x": -100.0, "y": 100.0}`
+- **OceanWaveWindDrag** = `0.5`
+- **OceanWaveWindSoftness** = `0.0`
+- **OceanWaveWindSurface** = `1.0`
+- **OceanWaveWindTime** = `{"x": -150.0, "y": 50.0}`
+- **OceanWindChoppiness** = `1.5`
+- **PreviewInstance** = `"/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxOceanWave_0.DebugPlane.MID_M_TextureWavePreview_2"`
+- **PreviewMaterial** = `"/Game/FluidFlux/Waves/Materials/M_TextureWavePreview.M_TextureWavePreview"`
+- **ShoreColorDistance** = `20000.0`
+- **ShoreColorHeight** = `1200.0`
+- **ShoreGroundPrediction** = `250.0`
+- **TextureTransform** = `{"r": -3080.164794921875, "g": -18872.083984375, "b": 8.695651922607794e-05, "a": 8.695651922607794e-05}`
+- **WaveAnimationDistance** = `2.3`
+- **WaveAnimationSpeed** = `0.7`
+- **WaveMovementSpeed** = `0.245`
+- **WaveProfile** = `"/Game/FluidFlux/Tools/WaveProfile/Waves/WP_DefaultWaveProfile.WP_DefaultWaveProfile"`
+- **WaveProfileAreaBlend** = `3.0`
+- **WaveProfileAreaWidth** = `450.0`
+- **WaveProfileSize** = `600.0`
+- **WaveTexture** = `"/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxOceanWave_0.TextureRenderTarget2D_0"`
 - **primary_actor_tick** = `{"start_with_tick_enabled": false}`
+- `DebugPlane` слот 0 → `/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxOceanWave_0.DebugPlane.MID_M_TextureWavePreview_2`
 - `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
 
-## `BP_FluxNiagaraFishes`
+## `BP_FluxSurface_World_254`
 
-- **primary_actor_tick** = `{"start_with_tick_enabled": false}`
-- `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
-
-## `BP_FluxNiagaraPlants3`
-
-- **primary_actor_tick** = `{"start_with_tick_enabled": false}`
-- `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
-
-## `BP_FluxNiagaraPlants4`
-
-- **primary_actor_tick** = `{"start_with_tick_enabled": false}`
-- `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
-
-## `BP_FluxNiagaraSplashes2`
-
-- **primary_actor_tick** = `{"start_with_tick_enabled": false}`
-- `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
-
-## `BP_FluxNiagaraSplashes3`
-
-- **primary_actor_tick** = `{"start_with_tick_enabled": false}`
-- `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
-
-## `BP_FluxNiagaraTrash2`
-
-- **primary_actor_tick** = `{"start_with_tick_enabled": false}`
-- `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
-
-## `BP_FluxNiagaraTrash3`
-
-- **primary_actor_tick** = `{"start_with_tick_enabled": false}`
-- `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
-
-## `BP_FluxNiagaraTrash_0`
-
-- **primary_actor_tick** = `{"start_with_tick_enabled": false}`
-- `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
-
-## `BP_FluxScenePainter_2`
-
-- **DebugMesh** = `"/Game/FluidFlux/Surface/Meshes/SM_FluxPlane1x1.SM_FluxPlane1x1"`
+- **MaterialInstances** = `["/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanOver_Waves_Horizon_1", "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanOver_SCW_1", "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_CoastlinenUnder_1", "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_FluxSurfaceUnderCustomDepth_1", "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogPostProcess_1", "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_CoastlineCausticsDecal_1", "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogAbsorptionVolume_1", "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogScatteringVolume_1", "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogContainerVolume_1"]`
 - **primary_actor_tick** = `{"start_with_tick_enabled": true}`
-- `Preview` слот 0 → `/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxScenePainter_2.MID_M_ScenePainterPreview_1`
+- `VolumeColor` слот 0 → `/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogAbsorptionVolume_1`
+- `VolumeContainer` слот 0 → `/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogContainerVolume_1`
+- `MaterialBillboard` слот 0 → `/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect`
 
 # Нет в этом проекте (дополнить список следующим прогоном)
 
@@ -1399,3 +1408,54 @@
 - `/Game/FluidFlux/Surface/Templates/Ocean/Materials/MI_OceanOceanOver_0CW`
 - `/Game/FluidFlux/Surface/Templates/Ocean/Materials/MI_OceanOceanOver_S00`
 - `/Game/FluidFlux/Surface/Templates/Ocean/Materials/MI_OceanOceanOver_S0W`
+
+# Отказы чтения
+
+- `get_scalar_parameter_names(VT_OceanWave)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetScalarParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_vector_parameter_names(VT_OceanWave)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetVectorParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_texture_parameter_names(VT_OceanWave)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetTextureParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_static_switch_parameter_names(VT_OceanWave)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetStaticSwitchParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_scalar_parameter_names(VT_CausticsAnimation_01)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetScalarParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_vector_parameter_names(VT_CausticsAnimation_01)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetVectorParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_texture_parameter_names(VT_CausticsAnimation_01)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetTextureParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_static_switch_parameter_names(VT_CausticsAnimation_01)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetStaticSwitchParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_scalar_parameter_names(T_DetailWaveTexture_00)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetScalarParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'Object' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'Object' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_vector_parameter_names(T_DetailWaveTexture_00)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetVectorParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'Object' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'Object' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_texture_parameter_names(T_DetailWaveTexture_00)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetTextureParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'Object' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'Object' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_static_switch_parameter_names(T_DetailWaveTexture_00)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetStaticSwitchParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'Object' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'Object' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_scalar_parameter_names(T_DefaultReflection)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetScalarParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'TextureCube' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'TextureCube' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_vector_parameter_names(T_DefaultReflection)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetVectorParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'TextureCube' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'TextureCube' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_texture_parameter_names(T_DefaultReflection)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetTextureParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'TextureCube' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'TextureCube' as 'Object' (allowed Class type: 'MaterialInterface')
+- `get_static_switch_parameter_names(T_DefaultReflection)`: MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetStaticSwitchParameterNames' on 'Default__MaterialEditingLibrary'
+  TypeError: NativizeProperty: Cannot nativize 'TextureCube' as 'Material' (ObjectProperty)
+    TypeError: NativizeObject: Cannot nativize 'TextureCube' as 'Object' (allowed Class type: 'MaterialInterface')

@@ -1,5 +1,29 @@
 {
  "blueprints": {
+  "/Game/FluidFlux/Surface/Blueprints/BP_FluxSurface": {
+   "MaterialInstances": [],
+   "primary_actor_tick": {
+    "start_with_tick_enabled": true
+   }
+  },
+  "/Game/FluidFlux/Surface/Templates/Coastline/BP_FluxSurface_Coastline": {
+   "MaterialInstances": [],
+   "primary_actor_tick": {
+    "start_with_tick_enabled": true
+   }
+  },
+  "/Game/FluidFlux/Surface/Templates/Ocean/BP_FluxSurface_Ocean": {
+   "MaterialInstances": [],
+   "primary_actor_tick": {
+    "start_with_tick_enabled": true
+   }
+  },
+  "/Game/FluidFlux/Surface/Templates/Water/BP_FluxSurface_Water": {
+   "MaterialInstances": [],
+   "primary_actor_tick": {
+    "start_with_tick_enabled": true
+   }
+  },
   "/Game/FluidFlux/Waves/Blueprints/BP_FluxOceanWave": {
    "DebugMesh": "/Game/FluidFlux/Surface/Meshes/SM_FluxPlane32x32.SM_FluxPlane32x32",
    "OceanWaveAnimation": "/Game/FluidFlux/Surface/Materials/Textures/VT_OceanWave.VT_OceanWave",
@@ -69,14 +93,110 @@
    }
   }
  },
- "errors": [],
+ "errors": [
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetScalarParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_scalar_parameter_names(VT_OceanWave)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetVectorParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_vector_parameter_names(VT_OceanWave)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetTextureParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_texture_parameter_names(VT_OceanWave)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetStaticSwitchParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_static_switch_parameter_names(VT_OceanWave)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetScalarParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_scalar_parameter_names(VT_CausticsAnimation_01)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetVectorParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_vector_parameter_names(VT_CausticsAnimation_01)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetTextureParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_texture_parameter_names(VT_CausticsAnimation_01)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetStaticSwitchParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'VolumeTexture' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'VolumeTexture' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_static_switch_parameter_names(VT_CausticsAnimation_01)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetScalarParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'Object' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'Object' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_scalar_parameter_names(T_DetailWaveTexture_00)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetVectorParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'Object' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'Object' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_vector_parameter_names(T_DetailWaveTexture_00)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetTextureParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'Object' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'Object' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_texture_parameter_names(T_DetailWaveTexture_00)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetStaticSwitchParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'Object' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'Object' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_static_switch_parameter_names(T_DetailWaveTexture_00)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetScalarParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'TextureCube' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'TextureCube' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_scalar_parameter_names(T_DefaultReflection)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetVectorParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'TextureCube' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'TextureCube' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_vector_parameter_names(T_DefaultReflection)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetTextureParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'TextureCube' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'TextureCube' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_texture_parameter_names(T_DefaultReflection)"
+  },
+  {
+   "error": "MaterialEditingLibrary: Failed to convert parameter 'material' when calling function 'MaterialEditingLibrary.GetStaticSwitchParameterNames' on 'Default__MaterialEditingLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'TextureCube' as 'Material' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'TextureCube' as 'Object' (allowed Class type: 'MaterialInterface')",
+   "where": "get_static_switch_parameter_names(T_DefaultReflection)"
+  }
+ ],
  "level_actors": {
-  "BP_FluxInteractionCapture_2": {
-   "class": "BP_FluxInteractionCapture_C",
+  "BP_FluxCoastlineDomain": {
+   "class": "BP_FluxCoastlineDomain_C",
    "component_materials": [
     {
-     "component": "Preview",
-     "material": "/Game/FluidFlux/Editor/Materials/M_DebugWireframe.M_DebugWireframe",
+     "component": "StaticMeshComponent_1",
+     "material": "/Engine/EditorMaterials/MatineeCam_mat.MatineeCam_mat",
+     "slot": 0
+    },
+    {
+     "component": "DebugGround",
+     "material": "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxCoastlineDomain.FluxHeightMapComponent.MID_M_HeightMapPreview_0",
+     "slot": 0
+    },
+    {
+     "component": "MaterialBillboard",
+     "material": "/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect",
+     "slot": 0
+    },
+    {
+     "component": "DebugCage",
+     "material": "/Game/FluidFlux/Editor/Materials/M_DebugArea.M_DebugArea",
+     "slot": 0
+    }
+   ],
+   "label": "BP_FluxCoastlineDomain",
+   "values": {
+    "primary_actor_tick": {
+     "start_with_tick_enabled": false
+    }
+   }
+  },
+  "BP_FluxOceanWave_0": {
+   "class": "BP_FluxOceanWave_C",
+   "component_materials": [
+    {
+     "component": "DebugPlane",
+     "material": "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxOceanWave_0.DebugPlane.MID_M_TextureWavePreview_2",
      "slot": 0
     },
     {
@@ -85,186 +205,89 @@
      "slot": 0
     }
    ],
-   "label": "BP_FluxInteractionCapture",
+   "label": "BP_FluxOceanWave",
    "values": {
-    "DebugMesh": "/Game/FluidFlux/Surface/Meshes/SM_FluxPlane512x512.SM_FluxPlane512x512",
+    "DebugMesh": "/Game/FluidFlux/Surface/Meshes/SM_FluxPlane32x32.SM_FluxPlane32x32",
+    "OceanWaveAnimation": "/Game/FluidFlux/Surface/Materials/Textures/VT_OceanWave.VT_OceanWave",
+    "OceanWaveAnimationSpeed": 0.3,
+    "OceanWaveDetails": 1.3,
+    "OceanWaveFalloff": 22000.0,
+    "OceanWaveHeight": 230.0,
+    "OceanWaveLength": 11500.0,
+    "OceanWaveOffset": -20.0,
+    "OceanWavePosition": {
+     "x": -0.006231884057511016,
+     "y": 0.006231884057511016
+    },
+    "OceanWaveRange": 27000.0,
+    "OceanWaveWindDirection": {
+     "x": -100.0,
+     "y": 100.0
+    },
+    "OceanWaveWindDrag": 0.5,
+    "OceanWaveWindSoftness": 0.0,
+    "OceanWaveWindSurface": 1.0,
+    "OceanWaveWindTime": {
+     "x": -150.0,
+     "y": 50.0
+    },
+    "OceanWindChoppiness": 1.5,
+    "PreviewInstance": "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxOceanWave_0.DebugPlane.MID_M_TextureWavePreview_2",
+    "PreviewMaterial": "/Game/FluidFlux/Waves/Materials/M_TextureWavePreview.M_TextureWavePreview",
+    "ShoreColorDistance": 20000.0,
+    "ShoreColorHeight": 1200.0,
+    "ShoreGroundPrediction": 250.0,
+    "TextureTransform": {
+     "a": 8.695651922607794e-05,
+     "b": 8.695651922607794e-05,
+     "g": -18872.083984375,
+     "r": -3080.164794921875
+    },
+    "WaveAnimationDistance": 2.3,
+    "WaveAnimationSpeed": 0.7,
+    "WaveMovementSpeed": 0.245,
+    "WaveProfile": "/Game/FluidFlux/Tools/WaveProfile/Waves/WP_DefaultWaveProfile.WP_DefaultWaveProfile",
+    "WaveProfileAreaBlend": 3.0,
+    "WaveProfileAreaWidth": 450.0,
+    "WaveProfileSize": 600.0,
+    "WaveTexture": "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxOceanWave_0.TextureRenderTarget2D_0",
     "primary_actor_tick": {
      "start_with_tick_enabled": false
     }
    }
   },
-  "BP_FluxModifierSourceActor3": {
-   "class": "BP_FluxModifierSourceActor_C",
+  "BP_FluxSurface_World_254": {
+   "class": "BP_FluxSurface_Coastline_C",
    "component_materials": [
+    {
+     "component": "VolumeColor",
+     "material": "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogAbsorptionVolume_1",
+     "slot": 0
+    },
+    {
+     "component": "VolumeContainer",
+     "material": "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogContainerVolume_1",
+     "slot": 0
+    },
     {
      "component": "MaterialBillboard",
      "material": "/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect",
      "slot": 0
     }
    ],
-   "label": "BP_FluxModifierSourceActor3",
+   "label": "BP_FluxSurface_World",
    "values": {
-    "primary_actor_tick": {
-     "start_with_tick_enabled": false
-    }
-   }
-  },
-  "BP_FluxNiagaraDust_0": {
-   "class": "BP_FluxNiagaraActor_C",
-   "component_materials": [
-    {
-     "component": "MaterialBillboard",
-     "material": "/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect",
-     "slot": 0
-    }
-   ],
-   "label": "BP_FluxNiagaraDust",
-   "values": {
-    "primary_actor_tick": {
-     "start_with_tick_enabled": false
-    }
-   }
-  },
-  "BP_FluxNiagaraFishes": {
-   "class": "BP_FluxNiagaraActor_C",
-   "component_materials": [
-    {
-     "component": "MaterialBillboard",
-     "material": "/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect",
-     "slot": 0
-    }
-   ],
-   "label": "BP_FluxNiagaraFishes",
-   "values": {
-    "primary_actor_tick": {
-     "start_with_tick_enabled": false
-    }
-   }
-  },
-  "BP_FluxNiagaraPlants3": {
-   "class": "BP_FluxNiagaraActor_C",
-   "component_materials": [
-    {
-     "component": "MaterialBillboard",
-     "material": "/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect",
-     "slot": 0
-    }
-   ],
-   "label": "BP_FluxNiagaraPlants3",
-   "values": {
-    "primary_actor_tick": {
-     "start_with_tick_enabled": false
-    }
-   }
-  },
-  "BP_FluxNiagaraPlants4": {
-   "class": "BP_FluxNiagaraActor_C",
-   "component_materials": [
-    {
-     "component": "MaterialBillboard",
-     "material": "/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect",
-     "slot": 0
-    }
-   ],
-   "label": "BP_FluxNiagaraPlants4",
-   "values": {
-    "primary_actor_tick": {
-     "start_with_tick_enabled": false
-    }
-   }
-  },
-  "BP_FluxNiagaraSplashes2": {
-   "class": "BP_FluxNiagaraActor_C",
-   "component_materials": [
-    {
-     "component": "MaterialBillboard",
-     "material": "/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect",
-     "slot": 0
-    }
-   ],
-   "label": "BP_FluxNiagaraSplashes2",
-   "values": {
-    "primary_actor_tick": {
-     "start_with_tick_enabled": false
-    }
-   }
-  },
-  "BP_FluxNiagaraSplashes3": {
-   "class": "BP_FluxNiagaraActor_C",
-   "component_materials": [
-    {
-     "component": "MaterialBillboard",
-     "material": "/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect",
-     "slot": 0
-    }
-   ],
-   "label": "BP_FluxNiagaraSplashes3",
-   "values": {
-    "primary_actor_tick": {
-     "start_with_tick_enabled": false
-    }
-   }
-  },
-  "BP_FluxNiagaraTrash2": {
-   "class": "BP_FluxNiagaraActor_C",
-   "component_materials": [
-    {
-     "component": "MaterialBillboard",
-     "material": "/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect",
-     "slot": 0
-    }
-   ],
-   "label": "BP_FluxNiagaraTrash2",
-   "values": {
-    "primary_actor_tick": {
-     "start_with_tick_enabled": false
-    }
-   }
-  },
-  "BP_FluxNiagaraTrash3": {
-   "class": "BP_FluxNiagaraActor_C",
-   "component_materials": [
-    {
-     "component": "MaterialBillboard",
-     "material": "/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect",
-     "slot": 0
-    }
-   ],
-   "label": "BP_FluxNiagaraTrash3",
-   "values": {
-    "primary_actor_tick": {
-     "start_with_tick_enabled": false
-    }
-   }
-  },
-  "BP_FluxNiagaraTrash_0": {
-   "class": "BP_FluxNiagaraActor_C",
-   "component_materials": [
-    {
-     "component": "MaterialBillboard",
-     "material": "/Game/FluidFlux/Editor/Materials/M_FluidFluxIconEffect.M_FluidFluxIconEffect",
-     "slot": 0
-    }
-   ],
-   "label": "BP_FluxNiagaraTrash",
-   "values": {
-    "primary_actor_tick": {
-     "start_with_tick_enabled": false
-    }
-   }
-  },
-  "BP_FluxScenePainter_2": {
-   "class": "BP_FluxWorldPainter_C",
-   "component_materials": [
-    {
-     "component": "Preview",
-     "material": "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxScenePainter_2.MID_M_ScenePainterPreview_1",
-     "slot": 0
-    }
-   ],
-   "label": "BP_FluxScenePainter",
-   "values": {
-    "DebugMesh": "/Game/FluidFlux/Surface/Meshes/SM_FluxPlane1x1.SM_FluxPlane1x1",
+    "MaterialInstances": [
+     "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanOver_Waves_Horizon_1",
+     "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanOver_SCW_1",
+     "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_CoastlinenUnder_1",
+     "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_FluxSurfaceUnderCustomDepth_1",
+     "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogPostProcess_1",
+     "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_CoastlineCausticsDecal_1",
+     "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogAbsorptionVolume_1",
+     "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogScatteringVolume_1",
+     "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel.BP_FluxSurface_World_254.MID_MI_OceanFogContainerVolume_1"
+    ],
     "primary_actor_tick": {
      "start_with_tick_enabled": true
     }
@@ -7408,21 +7431,49 @@
     "texture": [],
     "vector": []
    }
+  },
+  "/Game/FluidFlux/Surface/Glass/Textures/T_DefaultReflection": {
+   "defaults": {
+    "scalar": {},
+    "vector": {}
+   },
+   "parameter_names": {}
+  },
+  "/Game/FluidFlux/Surface/Materials/Textures/T_DetailWaveTexture_00": {
+   "defaults": {
+    "scalar": {},
+    "vector": {}
+   },
+   "parameter_names": {}
+  },
+  "/Game/FluidFlux/Surface/Materials/Textures/VT_CausticsAnimation_01": {
+   "defaults": {
+    "scalar": {},
+    "vector": {}
+   },
+   "parameter_names": {}
+  },
+  "/Game/FluidFlux/Surface/Materials/Textures/VT_OceanWave": {
+   "defaults": {
+    "scalar": {},
+    "vector": {}
+   },
+   "parameter_names": {}
   }
  },
  "meta": {
   "counts": {
-   "blueprints": 1,
+   "blueprints": 5,
    "collections": 1,
-   "errors": 0,
-   "level_actors": 12,
+   "errors": 16,
+   "level_actors": 3,
    "material_instances": 6,
-   "materials": 3,
+   "materials": 7,
    "meta": 5,
    "missing": 7,
    "skipped": 0
   },
-  "elapsed_sec": 0.58,
+  "elapsed_sec": 1.03,
   "engine_version": "5.8.2-56702186+++UE5+Release-5.8",
   "level": "/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel",
   "project_dir": "G:/Projects/TEST/"
