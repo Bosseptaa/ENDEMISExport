@@ -1,7 +1,7 @@
 # Снимок значений воды (явный список)
 
 Уровень: `/Game/FluidFlux/Demo/Maps/FluxCoastlineMap.FluxCoastlineMap:PersistentLevel`
-Секунд: 1.03
+Секунд: 0.36
 
 Колонка «перекрыт» = состояние чекбокса в панели MI.
 
@@ -774,6 +774,267 @@
 | `ZBasedAnimationSpeed` | нет | — | 0.019999999552965164 |
 | `ZBasedFalloffBlur` | ДА (scalar) | 0.0010000000474974513 | 0.0010000000474974513 |
 
+## `/Game/FluidFlux/Surface/Templates/Ocean/Materials/MI_OceanOver_Waves_Horizon`
+
+Родитель: `/Game/FluidFlux/Surface/Templates/Ocean/Materials/Permutations/MI_OceanOver_SCW.MI_OceanOver_SCW`
+
+| Параметр | Перекрыт | В MI | Эффективно |
+|---|---|---|---|
+| `AmbientScatterWave` | нет | — | 500.0 |
+| `AmbientScatterWavePower` | нет | — | 12.0 |
+| `Amplitude_00` | нет | — | 48.0 |
+| `Amplitude_01` | нет | — | 17.0 |
+| `Amplitude_02` | нет | — | 6.0 |
+| `Amplitude_03` | нет | — | 2.0 |
+| `Amplitude_04` | нет | — | 2.0 |
+| `AquaticScatteringDistortion` | нет | — | 0.0 |
+| `AquaticScatteringFade` | нет | — | 0.10000000149011612 |
+| `AquaticScatteringScale` | нет | — | 0.10000000149011612 |
+| `BackFaceAbsorption` | нет | — | {"r": 70.0, "g": 180.0, "b": 330.0, "a": 100000.0} |
+| `BackFaceScattering` | нет | — | {"r": 0.20000000298023224, "g": 0.30000001192092896, "b": 0.5, "a": 1.4999999621068127e-05} |
+| `CameraRadius` | нет | — | {"r": 0.02500000037252903, "g": 0.02500000037252903, "b": 0.006000000052154064, "a": 1.7999999523162842} |
+| `CaptureHeight` | нет | — | 0.0 |
+| `CheapScatteringDetails` | нет | — | 0.5 |
+| `CheapScatteringPower` | нет | — | 2.0 |
+| `CheapScatteringScale` | нет | — | 3.0 |
+| `CoastlineFoamDistance` | нет | — | 400.0 |
+| `CoastlineFoamScale` | нет | — | 2.0 |
+| `CoastlineNormalFalloff` | нет | — | 30000.0 |
+| `CoastlineNormalRange` | нет | — | 14.0 |
+| `CoastlineScattringDepth` | нет | — | 3000.0 |
+| `CoastlineScattringDistance` | нет | — | 1000.0 |
+| `CoastlineScattringPower` | нет | — | 3.0 |
+| `CoastlineVelocityAdd` | нет | — | -0.20000000298023224 |
+| `CoastlineVelocityScale` | нет | — | 0.0006000000284984708 |
+| `ColorBehind0` | нет | — | {"r": 0.699999988079071, "g": 0.6000000238418579, "b": 0.5, "a": 0.8999999761581421} |
+| `ColorBehind1` | нет | — | {"r": 0.699999988079071, "g": 0.6000000238418579, "b": 0.5, "a": 0.8999999761581421} |
+| `ColorBehindShoreline` | нет | — | {"r": 0.699999988079071, "g": 0.6000000238418579, "b": 0.5, "a": 0.8999999761581421} |
+| `DecodeInteractionHeight` | нет | — | 0.699999988079071 |
+| `DecodeInteractionNormal` | нет | — | 0.05000000074505806 |
+| `DeepScatteringPower` | нет | — | 1.0 |
+| `DeepScatteringScale` | нет | — | 1.0 |
+| `DetailWaveHeight` | нет | — | 25.0 |
+| `DetailWaveLength` | нет | — | 1000.0 |
+| `DetailWaveRange` | нет | — | 25000.0 |
+| `DetailWaveTexture` | нет | — | "/Game/1_Water/Textures/T_DetailWaveTexture_01.T_DetailWaveTexture_01" |
+| `DetailWaveUVOffset` | нет | — | -0.30000001192092896 |
+| `DetailWaveUVSwitching` | нет | — | 1.350000023841858 |
+| `DetailWaveUVVelocity` | нет | — | 1.0 |
+| `Direction_00` | нет | — | 0.25 |
+| `Direction_01` | нет | — | 0.3714289963245392 |
+| `Direction_02` | нет | — | 0.27619001269340515 |
+| `Direction_03` | нет | — | 0.22857099771499634 |
+| `Direction_04` | нет | — | 0.5047619938850403 |
+| `Direction_Offset_00` | нет | — | 0.4000000059604645 |
+| `FallingMotion` | нет | — | -1.0 |
+| `FluidHeightMap` | нет | — | "/Engine/EngineResources/DefaultTexture.DefaultTexture" |
+| `FluidVelocityHeightFoam` | нет | — | "/Engine/EngineResources/DefaultTexture.DefaultTexture" |
+| `FluxLevelToWorldGroundUV` | нет | — | {"r": 0.0, "g": 0.0, "b": 1.0, "a": 1.0} |
+| `FluxStateBorders` | нет | — | {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.0} |
+| `FluxWaveProfileDecode` | нет | — | {"r": -0.5, "g": 0.0, "b": 0.5, "a": 0.5} |
+| `FluxWaveProfileMap` | нет | — | "/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack" |
+| `FluxWorldCoastlineDecode` | нет | — | 10640.0 |
+| `FluxWorldCoastlineMap` | нет | — | "/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack" |
+| `FluxWorldGroundHeight` | нет | — | -1000000.0 |
+| `FluxWorldGroundMap` | нет | — | "/Game/1_Water/Textures/RT_DefaultWhite16.RT_DefaultWhite16" |
+| `FluxWorldGroundPixelSize` | нет | — | {"r": 1.0, "g": 1.0, "b": 1.0, "a": 1.0} |
+| `FoamColorAlpha` | нет | — | 0.0 |
+| `FoamColorBase` | нет | — | {"r": 0.6000000238418579, "g": 0.6000000238418579, "b": 0.6000000238418579, "a": 0.550000011920929} |
+| `FoamColorDetail` | нет | — | 0.5 |
+| `FoamDistanceBlend` | нет | — | 65000.0 |
+| `FoamDistortionIntensity` | нет | — | 20.0 |
+| `FoamDistortionScale` | нет | — | 0.004999999888241291 |
+| `FoamDistortionSpeed` | нет | — | 0.20000000298023224 |
+| `FoamDitheringAlpha` | нет | — | 0.3499999940395355 |
+| `FoamDitheringOffset` | нет | — | 1.5 |
+| `FoamDitheringScale` | нет | — | 40.0 |
+| `FoamEmissive` | нет | — | {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.009999999776482582} |
+| `FoamHardnessIntensity` | нет | — | -0.05000000074505806 |
+| `FoamHardnessWidth` | нет | — | 0.20000000298023224 |
+| `FoamNormalBlend` | нет | — | 2.0 |
+| `FoamNormalScale` | нет | — | 0.800000011920929 |
+| `FoamNormalSoftHeightMap` | нет | — | "/Game/1_Water/Textures/T_Seafoam_03_NSH.T_Seafoam_03_NSH" |
+| `FoamRoughness` | нет | — | 0.44999998807907104 |
+| `FoamScatteringScale` | нет | — | 4.0 |
+| `FoamShallowOffset` | нет | — | 0.4000000059604645 |
+| `FoamShallowScale` | нет | — | 0.20000000298023224 |
+| `FoamSoftBase` | нет | — | 0.4000000059604645 |
+| `FoamSoftIntensity` | нет | — | 2.0 |
+| `FoamSoftMax` | нет | — | 1.5 |
+| `FoamSoftVelocity` | нет | — | 0.10000000149011612 |
+| `FoamSpecular` | нет | — | 0.05000000074505806 |
+| `FoamUVAdvectionOffset` | нет | — | -0.5 |
+| `FoamUVRandomization` | нет | — | 1.0 |
+| `FoamUVScale` | нет | — | 0.0010000000474974513 |
+| `FoamUVSpeed` | нет | — | 1.0 |
+| `FoamUVVelocity` | нет | — | 1.0 |
+| `GerstnerDivergence` | нет | — | 1.0 |
+| `GerstnerFoamMax` | нет | — | 0.8999999761581421 |
+| `GerstnerFoamOffset` | нет | — | 0.0 |
+| `GerstnerFoamScale` | нет | — | 0.007000000216066837 |
+| `GerstnerNormalScale` | нет | — | 1.0 |
+| `GerstnerScatteringOffset` | нет | — | 0.6000000238418579 |
+| `GerstnerScatteringScale` | нет | — | 0.0020000000949949026 |
+| `GerstnerVelocityScale` | нет | — | 0.30000001192092896 |
+| `Ground` | нет | — | "/Engine/EngineResources/DefaultTexture.DefaultTexture" |
+| `HorizonCorrectionNormalEdge` | нет | — | 0.0 |
+| `HorizonCorrectionNormalFresnel` | нет | — | 0.0 |
+| `HorizonCorrectionNormalIntensity` | нет | — | 1.0 |
+| `InteractionNormalHeight` | нет | — | "/Game/1_Water/Textures/T_DefaultEncoded_N.T_DefaultEncoded_N" |
+| `InteractonChoppiness` | нет | — | 40.0 |
+| `InteractonNormalScale` | нет | — | 2.0 |
+| `InteractonOffsetScale` | нет | — | 30.0 |
+| `InteractonVelocityScale` | нет | — | 0.10000000149011612 |
+| `NoiseScale` | нет | — | 0.24193499982357025 |
+| `NoiseTime` | нет | — | 0.699999988079071 |
+| `NormalScatteringDistortion` | нет | — | 8.0 |
+| `NormalScatteringFresnelBase` | нет | — | 0.10000000149011612 |
+| `NormalScatteringFresnelPower` | нет | — | 10.0 |
+| `NormalScatteringIntensity` | нет | — | 0.05000000074505806 |
+| `NormalScatteringSun` | нет | — | 0.699999988079071 |
+| `PainterTexture` | нет | — | "/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack" |
+| `PhaseGDeepSunHigh` | нет | — | 0.4000000059604645 |
+| `PhaseGDeepSunLow` | нет | — | 0.6000000238418579 |
+| `PhaseGShallowSunHigh` | нет | — | -0.20000000298023224 |
+| `PhaseGShallowSunLow` | нет | — | 0.4000000059604645 |
+| `PhysicalScatteringAmbient` | нет | — | 0.25 |
+| `PhysicalScatteringDistortion` | нет | — | 0.6000000238418579 |
+| `PhysicalScatteringPower` | нет | — | 4.0 |
+| `PhysicalScatteringScale` | нет | — | 2.0 |
+| `PhysicalScatteringSun` | нет | — | 0.20000000298023224 |
+| `RefractionDepthBias` | ДА (scalar) | 0.0 | 0.0 |
+| `SDFMap` | нет | — | "/Engine/EngineResources/Black.Black" |
+| `SDFPosition` | нет | — | {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.0} |
+| `SDFSize` | нет | — | {"r": 1.0, "g": 1.0, "b": 1.0, "a": 1000000.0} |
+| `SDFTiles` | нет | — | {"r": 100.0, "g": 100.0, "b": 0.0, "a": 1.0} |
+| `ShoreWaveScale` | нет | — | 0.0001500000071246177 |
+| `ShoreWaveWidth` | нет | — | -900.0 |
+| `SimulationPixelSize` | нет | — | {"r": 1.0, "g": 0.0, "b": 0.0, "a": 0.0} |
+| `Speed_00` | нет | — | 800.0 |
+| `Speed_01` | нет | — | 400.0 |
+| `Speed_02` | нет | — | 300.0 |
+| `Speed_03` | нет | — | 100.0 |
+| `Speed_04` | нет | — | 100.0 |
+| `StateCheapNormal` | нет | — | true |
+| `StateDecodeData` | нет | — | {"r": 0.0, "g": 1.0, "b": 0.0, "a": 0.0} |
+| `StateDistanceDepthMax` | нет | — | 0.0 |
+| `StateDistanceDepthOffset` | нет | — | 10000.0 |
+| `StateDistanceDepthScale` | нет | — | 0.001500000013038516 |
+| `StateDivergenceBase` | нет | — | 0.10000000149011612 |
+| `StateDivergenceIntensity` | нет | — | 1.0 |
+| `StateDivergenceMax` | нет | — | 1.5 |
+| `StateDivergenceVelocity` | нет | — | 1.0 |
+| `StateDivergenceVolumeMin` | нет | — | 30.0 |
+| `StateFoamDivergence` | нет | — | 0.0010000000474974513 |
+| `StateFoamSlope` | нет | — | 2.0 |
+| `StateSteepnessFromHeight` | нет | — | 0.05000000074505806 |
+| `StateSteepnessFromVelocity` | нет | — | 0.019999999552965164 |
+| `StateSteepnessScale` | нет | — | 0.5 |
+| `StateVelocityMax` | нет | — | 4.0 |
+| `StateVelocityScale` | нет | — | 0.8999999761581421 |
+| `StateWetHeightOffset` | нет | — | 0.0 |
+| `StateWorldPixelSize` | нет | — | 20.0 |
+| `Steepness_00` | нет | — | 4.0 |
+| `Steepness_01` | нет | — | 2.5 |
+| `Steepness_02` | нет | — | 3.0 |
+| `Steepness_03` | нет | — | 0.5 |
+| `Steepness_04` | нет | — | 3.0 |
+| `SurfaceAbsorption0` | нет | — | {"r": 60.0, "g": 130.0, "b": 350.0, "a": 12.0} |
+| `SurfaceAbsorption1` | нет | — | {"r": 70.0, "g": 180.0, "b": 330.0, "a": 1.0} |
+| `SurfaceAbsorptionShoreline` | нет | — | {"r": 333.0, "g": 270.0, "b": 200.0, "a": 16.0} |
+| `SurfaceCutMask` | нет | — | {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.0} |
+| `SurfaceMeshDecodeData` | нет | — | {"r": -0.5, "g": 1.0, "b": 0.0, "a": 0.0} |
+| `SurfaceMeshTangentSpeed` | нет | — | 0.0 |
+| `SurfaceOverlay0` | нет | — | {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.0} |
+| `SurfaceOverlay1` | нет | — | {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.0} |
+| `SurfaceOverlayAlpha` | нет | — | 0.05000000074505806 |
+| `SurfaceOverlayShoreline` | нет | — | {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.0} |
+| `SurfacePhaseG0` | нет | — | 0.0 |
+| `SurfacePhaseG1` | нет | — | 0.0 |
+| `SurfacePhaseGShoreline` | нет | — | 0.0 |
+| `SurfaceScattering0` | нет | — | {"r": 0.10000000149011612, "g": 0.2199999988079071, "b": 0.30000001192092896, "a": 9.999999747378752e-05} |
+| `SurfaceScattering1` | нет | — | {"r": 0.20000000298023224, "g": 0.4000000059604645, "b": 0.30000001192092896, "a": 0.0003000000142492354} |
+| `SurfaceScatteringShoreline` | нет | — | {"r": 0.699999988079071, "g": 0.800000011920929, "b": 0.30000001192092896, "a": 0.00019999999494757503} |
+| `UseAquaticScattering` | нет | — | false |
+| `UseCheapScattering` | нет | — | true |
+| `UseCoastline` | нет | — | false |
+| `UseCoastlineData` | нет | — | true |
+| `UseCutMask` | нет | — | false |
+| `UseDeprecatedVelocityColor` | нет | — | false |
+| `UseDetailWave` | нет | — | false |
+| `UseDetailWaveWPO` | нет | — | false |
+| `UseExtraMasking` | нет | — | true |
+| `UseFluxInteraction` | нет | — | false |
+| `UseFluxInteractionWPO` | нет | — | true |
+| `UseFluxWaveDistant` | нет | — | true |
+| `UseFluxWaveGerstner` | нет | — | false |
+| `UseFoam` | нет | — | false |
+| `UseFoamDistortion` | нет | — | false |
+| `UseFoamDithering` | нет | — | false |
+| `UseNormalScattering` | нет | — | true |
+| `UseOcean` | нет | — | true |
+| `UsePainter` | нет | — | false |
+| `UsePhysicalScattering` | нет | — | false |
+| `UsePreciseCoastline` | нет | — | false |
+| `UseSDFMask` | нет | — | false |
+| `UseSimulation` | нет | — | false |
+| `UseSimulationBlend` | нет | — | true |
+| `UseSurfaceDebug` | нет | — | false |
+| `UseWaterRoughnessAdvanced` | нет | — | true |
+| `UseWaveTextureRenderTarget` | нет | — | true |
+| `WaterColor` | нет | — | {"r": 0.0, "g": 0.019999999552965164, "b": 0.019999999552965164, "a": 1.0} |
+| `WaterDepthUpwardBlend` | нет | — | 1.0 |
+| `WaterDitherMasking` | нет | — | 0.0 |
+| `WaterDitherSlope` | нет | — | 0.0 |
+| `WaterRefractionDistanceOffset` | нет | — | 0.0 |
+| `WaterRefractionDistanceScale` | нет | — | 12000.0 |
+| `WaterRefractionFar` | нет | — | 1.0099999904632568 |
+| `WaterRefractionNear` | нет | — | 1.059999942779541 |
+| `WaterRoughnessFromFresnel` | нет | — | 0.30000001192092896 |
+| `WaterRoughnessFromSpecular ` | нет | — | 0.007000000216066837 |
+| `WaterRoughnessFromSpecularDiv` | нет | — | 0.996999979019165 |
+| `WaterRoughnessMin` | нет | — | 0.07000000029802322 |
+| `WaterShallowBlend` | нет | — | 1.0 |
+| `WaterSpecular` | нет | — | {"r": 0.05000000074505806, "g": 0.4000000059604645, "b": 8.0, "a": 0.20000000298023224} |
+| `WaterSpecularHorizonDistance` | нет | — | 90000.0 |
+| `WaterSpecularHorizonOffset` | нет | — | 6.0 |
+| `WaveDetailFastFoam` | нет | — | 1.5 |
+| `WaveDetailWPOScale` | нет | — | 1.100000023841858 |
+| `WaveGroundPrediction` | нет | — | 200.0 |
+| `WaveProfileAnimationSpeed` | нет | — | 0.75 |
+| `WaveProfileDistance` | нет | — | 2.25 |
+| `WaveProfileSpeed` | нет | — | 0.8999999761581421 |
+| `WaveProfileWidth` | нет | — | 500.0 |
+| `WaveTextureAnimation` | нет | — | "/Engine/EngineResources/DefaultVolumeTexture.DefaultVolumeTexture" |
+| `WaveTextureChoppiness` | нет | — | 0.5 |
+| `WaveTextureCoastlineFoamFalloff` | нет | — | 0.0001500000071246177 |
+| `WaveTextureCoastlineFoamOffset` | нет | — | -0.25 |
+| `WaveTextureDecodeHeight` | нет | — | 26.66666603088379 |
+| `WaveTextureDecodeNormal` | нет | — | 1.0 |
+| `WaveTextureDivergenceFoam` | нет | — | 0.5 |
+| `WaveTextureDivergenceOffset` | нет | — | 0.15000000596046448 |
+| `WaveTextureDivergenceScale` | нет | — | 1.4500000476837158 |
+| `WaveTextureFalloff` | нет | — | 120000.0 |
+| `WaveTextureFoamOffset` | нет | — | -0.4699999988079071 |
+| `WaveTextureFoamScale` | нет | — | 1.0 |
+| `WaveTextureHeight` | нет | — | 300.0 |
+| `WaveTextureOffsetScale` | нет | — | {"r": 0.0, "g": 0.0, "b": 0.0001250000059371814, "a": 0.0001250000059371814} |
+| `WaveTextureOffsetZ` | нет | — | -10000.0 |
+| `WaveTextureRange` | нет | — | 4000.0 |
+| `WaveTextureRenderTarget` | нет | — | "/Game/1_Water/Textures/T_DetailWaveTexture_00.T_DetailWaveTexture_00" |
+| `WaveTextureVelocityDetailsWind` | нет | — | 1.0 |
+| `WaveTextureVelocityScaleBottom` | нет | — | -1.2000000476837158 |
+| `WaveTextureVelocityScaleTop` | нет | — | 0.20000000298023224 |
+| `WaveTextureWind` | нет | — | {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.25} |
+| `Wavelength_00` | нет | — | 7550.0 |
+| `Wavelength_01` | нет | — | 2112.0 |
+| `Wavelength_02` | нет | — | 1030.0 |
+| `Wavelength_03` | нет | — | 570.0 |
+| `Wavelength_04` | нет | — | 400.0 |
+| `WorldToInteractionUV` | нет | — | {"r": 0.0, "g": 0.0, "b": 100.0, "a": 100.0} |
+| `WorldToPainterUV` | нет | — | {"r": 0.0, "g": 0.0, "b": 1.0, "a": 1.0} |
+| `WorldToSimulationUV` | нет | — | {"r": 1.0, "g": 0.0, "b": 0.0, "a": 0.0} |
+
 ## `/Game/FluidFlux/Surface/Templates/Ocean/Materials/MI_OceanUnder`
 
 Родитель: `/Game/FluidFlux/Surface/Underwater/Materials/M_FluxSurfaceUnder.M_FluxSurfaceUnder`
@@ -1365,7 +1626,7 @@
 - **OceanWaveHeight** = `230.0`
 - **OceanWaveLength** = `11500.0`
 - **OceanWaveOffset** = `-20.0`
-- **OceanWavePosition** = `{"x": -0.006231884057511016, "y": 0.006231884057511016}`
+- **OceanWavePosition** = `{"x": -0.4568115942024704, "y": 0.4568115942024704}`
 - **OceanWaveRange** = `27000.0`
 - **OceanWaveWindDirection** = `{"x": -100.0, "y": 100.0}`
 - **OceanWaveWindDrag** = `0.5`
@@ -1408,6 +1669,7 @@
 - `/Game/FluidFlux/Surface/Templates/Ocean/Materials/MI_OceanOceanOver_0CW`
 - `/Game/FluidFlux/Surface/Templates/Ocean/Materials/MI_OceanOceanOver_S00`
 - `/Game/FluidFlux/Surface/Templates/Ocean/Materials/MI_OceanOceanOver_S0W`
+- `/Game/FluidFlux/Surface/Templates/Underwater/Materials/MI_OceanOver_Waves_Horizon`
 
 # Отказы чтения
 
