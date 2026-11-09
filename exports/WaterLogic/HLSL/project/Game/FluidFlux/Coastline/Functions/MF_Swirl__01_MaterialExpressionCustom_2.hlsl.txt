@@ -1,0 +1,17 @@
+﻿// Источник: /Game/FluidFlux/Coastline/Functions/MF_Swirl (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_2 ключ: Code
+// Входы: uv, center, radius, angle, power, scale
+// Выход: CMOT_Float2
+// Описание: Swirl
+
+ float2 tc = (uv -center)* scale;
+  float dist = length(tc);
+  if (dist < radius) 
+  {
+    float percent = (radius - dist) / radius;
+    float theta = pow(percent,power) * angle;
+    float s = sin(theta);
+    float c = cos(theta);
+    tc = float2(dot(tc, float2(c, -s)), dot(tc, float2(s, c))) + percent * float2(-100.0,-100.0);
+  }
+ return tc/scale + center;

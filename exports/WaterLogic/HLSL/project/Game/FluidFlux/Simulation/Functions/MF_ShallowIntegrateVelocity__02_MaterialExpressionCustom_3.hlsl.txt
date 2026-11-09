@@ -1,0 +1,49 @@
+﻿// Источник: /Game/FluidFlux/Simulation/Functions/MF_ShallowIntegrateVelocity (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_3 ключ: Code
+// Входы: HC, VC, HL, VL, HR, VR, HB, VB, HT, VT, Blend, Limit
+// Выход: CMOT_Float1
+// Описание: Overshooting
+
+float change = 0.0f;
+
+BRANCH if (Blend > 0.0)
+{
+	if (HC > 0.0)
+	{
+		if ((HC - HL > Limit) && (HC > HR))
+		{
+			float remove = Blend * (max(0.0, 0.5 * (VC + VR))-VC);
+	//		HR+= remove;
+	//		HC+= remove;
+			change += remove;
+		}
+
+		if ((HC - HR > Limit) && (HC > HL))
+		{
+			float remove = Blend * (max(0.0, 0.5 * (VC + VL))-VC);
+	//		HR+= remove;
+	//		HC+= remove;
+				change += remove;
+		}
+		
+		if ((HC - HB > Limit) && (HC > HT))
+		{
+			float remove = Blend * (max(0.0, 0.5 * (VC + VT))-VC);
+	//		HR+= remove;
+	//		HC+= remove;
+			change += remove;
+		}		
+
+
+		if ((HC - HT > Limit) && (HC > HB))
+		{
+			float remove = Blend * (max(0.0, 0.5 * (VC + VB))-VC);
+	//		HR+= remove;
+		//	HC+= remove;
+			change += remove;
+		}
+	}
+	
+	return change;
+}
+return 0.0;

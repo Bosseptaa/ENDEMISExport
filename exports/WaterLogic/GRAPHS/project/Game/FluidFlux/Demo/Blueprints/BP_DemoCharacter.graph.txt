@@ -1,0 +1,1750 @@
+﻿# /Game/FluidFlux/Demo/Blueprints/BP_DemoCharacter
+# класс: Blueprint; происхождение: проект; узлов: 418; связей: 768; HLSL: 0; причина: папка /Game/FluidFlux; тело:182
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_DemoCharacter] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Character'"
+    BlueprintDescription = "Character Blueprint that contains movement logic."
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_DemoCharacter_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = "My Character"
+    CategorySorting(1) = "Default"
+    CategorySorting(2) = ""
+    CategorySorting(3) = "Event Graph"
+    CategorySorting(4) = "Movement"
+    CategorySorting(5) = "Flux"
+    CategorySorting(6) = "Experimental"
+    ImplementedInterfaces(2) = (Interface="/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Surface/Blueprints/BPI_FluxCameraEvents.BPI_FluxCameraEvents_C'")
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_DemoCharacter.BP_DemoCharacter:IgnoreModifierOverlap",SavedViewOffset=(X=-500.581207,Y=-78.587692),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_DemoCharacter.BP_DemoCharacter:SetVSync",SavedViewOffset=(X=541.156860,Y=1661.854614),SavedZoomAmount=1.000000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_DemoCharacter.BP_DemoCharacter:FirstPersonMode",SavedViewOffset=(X=636.045898,Y=4133.949707),SavedZoomAmount=1.000000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_DemoCharacter.BP_DemoCharacter:RotateDirectionalLight",SavedViewOffset=(X=2289.558594,Y=-413.430939),SavedZoomAmount=0.500000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_DemoCharacter.BP_DemoCharacter:AddModifiers",SavedViewOffset=(X=-13.831635,Y=-209.837051),SavedZoomAmount=1.000000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_DemoCharacter.BP_DemoCharacter:UpdateCamera",SavedViewOffset=(X=1906.417725,Y=1456.599121),SavedZoomAmount=1.000000)
+    LastEditedDocuments(6) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_DemoCharacter.BP_DemoCharacter:SideMovement",SavedViewOffset=(X=-2220.375000,Y=-313.958099),SavedZoomAmount=1.000000)
+    LastEditedDocuments(7) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_DemoCharacter.BP_DemoCharacter:SetDriverMode",SavedViewOffset=(X=233.056274,Y=-408.725403),SavedZoomAmount=0.675000)
+    LastEditedDocuments(8) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_DemoCharacter.BP_DemoCharacter:EventGraph",SavedViewOffset=(X=-288.439087,Y=-662.179504),SavedZoomAmount=0.875000)
+    ComponentTemplateNameIndex = (("ParticleSystemComponent", 7),("WidgetComponent", 1))
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_DemoCharacter_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 7011220347E23F2C239054BF7F004EA7
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- SetRagdoll
+    FunctionGraphs(2) <- SetDriverMode
+    FunctionGraphs(3) <- UpdateRagdoll
+    FunctionGraphs(4) <- UnderWaterMovement
+    FunctionGraphs(5) <- ForwardMovement
+    FunctionGraphs(6) <- SideMovement
+    FunctionGraphs(7) <- UpdateCamera
+    FunctionGraphs(8) <- RotateDirectionalLight
+    FunctionGraphs(9) <- SetVSync
+    FunctionGraphs(10) <- ChangeCamera
+    FunctionGraphs(11) <- FirstPersonMode
+    DelegateSignatureGraphs(0) <- Interact
+    ImplementedInterfaces(0) <- AddModifiers
+    ImplementedInterfaces(0) <- IgnoreModifierOverlap
+    ImplementedInterfaces(1) <- GetInteractions
+    ImplementedInterfaces(1) <- GetShape
+    ThumbnailInfo <- SceneThumbnailInfo_12
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 2EF27BC649C3A6A2A3026DA2E43B989D
+    Nodes(0) <- K2Node_Comment_39
+    Nodes(1) <- K2Node_Comment_56
+    Nodes(2) <- K2Node_InputKey_9
+    Nodes(3) <- K2Node_CommutativeAssociativeBinaryOperator_9
+    Nodes(4) <- K2Node_InputKey_10
+    Nodes(5) <- K2Node_CommutativeAssociativeBinaryOperator_4
+    Nodes(6) <- EdGraphNode_Comment_16
+    Nodes(7) <- K2Node_InputKey_1
+    Nodes(8) <- K2Node_Event_0
+    Nodes(9) <- EdGraphNode_Comment_0
+    Nodes(10) <- EdGraphNode_Comment_12
+    Nodes(11) <- K2Node_CustomEvent_0
+    Nodes(12) <- K2Node_CallFunction_13
+    Nodes(13) <- K2Node_CallFunction_20
+    Nodes(14) <- K2Node_CallFunction_24
+    Nodes(15) <- K2Node_CustomEvent_1
+    Nodes(16) <- K2Node_CallFunction_21
+    Nodes(17) <- K2Node_CallFunction_58
+    Nodes(18) <- K2Node_CallFunction_22
+    Nodes(19) <- K2Node_CallFunction_59
+    Nodes(20) <- K2Node_CallFunction_8
+    Nodes(21) <- K2Node_VariableSet_4
+    Nodes(22) <- K2Node_VariableSet_3
+    Nodes(23) <- K2Node_VariableGet_25
+    Nodes(24) <- K2Node_VariableGet_26
+    Nodes(25) <- K2Node_Knot_1
+    Nodes(26) <- K2Node_Event_1
+    Nodes(27) <- K2Node_Event_3
+    Nodes(28) <- K2Node_VariableGet_12
+    Nodes(29) <- K2Node_CallFunction_30
+    Nodes(30) <- K2Node_VariableGet_15
+    Nodes(31) <- K2Node_CallFunction_40
+    Nodes(32) <- K2Node_CallFunction_41
+    Nodes(33) <- EdGraphNode_Comment_5
+    Nodes(34) <- K2Node_VariableGet_11
+    Nodes(35) <- K2Node_IfThenElse_3
+    Nodes(36) <- K2Node_CallFunction_25
+    Nodes(37) <- K2Node_CallFunction_45
+    Nodes(38) <- K2Node_Knot_2
+    Nodes(39) <- K2Node_InputKey_23
+    Nodes(40) <- K2Node_CallFunction_50
+    Nodes(41) <- K2Node_VariableSet_8
+    Nodes(42) <- K2Node_VariableSet_0
+    Nodes(43) <- K2Node_CallFunction_42
+    Nodes(44) <- K2Node_VariableSet_13
+    Nodes(45) <- K2Node_VariableGet_16
+    Nodes(46) <- K2Node_CallFunction_52
+    Nodes(47) <- K2Node_VariableGet_18
+    Nodes(48) <- K2Node_CallFunction_55
+    Nodes(49) <- K2Node_InputKey_2
+    Nodes(50) <- K2Node_CallFunction_8428
+    Nodes(51) <- K2Node_CallFunction_8427
+    Nodes(52) <- K2Node_EnhancedInputAction_4
+    Nodes(53) <- K2Node_Knot_0
+    Nodes(54) <- K2Node_CallFunction_67
+    Nodes(55) <- K2Node_IfThenElse_1
+    Nodes(56) <- K2Node_EnhancedInputAction_1
+    Nodes(57) <- K2Node_CallFunction_1193
+    Nodes(58) <- K2Node_CallFunction_9386
+    Nodes(59) <- K2Node_EnhancedInputAction_0
+    Nodes(60) <- K2Node_VariableGet_28
+    Nodes(61) <- K2Node_CallFunction_74
+    Nodes(62) <- K2Node_EnhancedInputAction_3
+    Nodes(63) <- K2Node_CallFunction_75
+    Nodes(64) <- EdGraphNode_Comment_15
+    Nodes(65) <- EdGraphNode_Comment_2
+    Nodes(66) <- EdGraphNode_Comment_17
+    Nodes(67) <- EdGraphNode_Comment_6
+    Nodes(68) <- EdGraphNode_Comment_3
+    Nodes(69) <- K2Node_CallFunction_0
+    Nodes(70) <- K2Node_IfThenElse_0
+    Nodes(71) <- EdGraphNode_Comment_1
+    Nodes(72) <- K2Node_EnhancedInputAction_2
+    Nodes(73) <- K2Node_CustomEvent_2
+    Nodes(74) <- K2Node_CallFunction_3
+    Nodes(75) <- K2Node_Self_2
+    Nodes(76) <- K2Node_Self_0
+    Nodes(77) <- K2Node_VariableGet_2
+    Nodes(78) <- K2Node_CallDelegate_1
+    Nodes(79) <- K2Node_VariableGet_1
+    Nodes(80) <- K2Node_AddDelegate_0
+    Nodes(81) <- K2Node_CustomEvent_3
+    Nodes(82) <- K2Node_CallFunction_4
+    Nodes(83) <- K2Node_CustomEvent_4
+    Nodes(84) <- K2Node_CallFunction_5
+    Nodes(85) <- K2Node_ExecutionSequence_0
+    Nodes(86) <- K2Node_CallFunction_6
+    Nodes(87) <- K2Node_CallFunction_7
+[K2Node_Comment_39] EdGraphNode_Comment
+    CommentColor = (R=0.503336,G=1.000000,B=0.788110,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1520
+    NodeHeight = 480
+    bCommentBubblePinned = False
+    NodeComment = "Mouse input"
+[K2Node_Comment_56] EdGraphNode_Comment
+    CommentColor = (R=0.503336,G=1.000000,B=0.788110,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 784
+    NodeHeight = 400
+    bCommentBubblePinned = False
+    NodeComment = "Movement input"
+[K2Node_InputKey_9] K2Node_InputKey
+    InputKey = MouseScrollUp
+[K2Node_CommutativeAssociativeBinaryOperator_9] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = -55.000000
+[K2Node_InputKey_10] K2Node_InputKey
+    InputKey = MouseScrollDown
+[K2Node_CommutativeAssociativeBinaryOperator_4] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 55.000000
+[EdGraphNode_Comment_16] EdGraphNode_Comment
+    CommentColor = (R=0.503336,G=1.000000,B=0.788110,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 720
+    NodeHeight = 400
+    bCommentBubblePinned = False
+    NodeComment = "Camera distance modification"
+[K2Node_InputKey_1] K2Node_InputKey
+    InputKey = Q
+[K2Node_Event_0] K2Node_Event (событие: ReceiveTick @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[EdGraphNode_Comment_0] EdGraphNode_Comment
+    CommentColor = (R=0.503336,G=1.000000,B=0.788110,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1504
+    NodeHeight = 416
+    bCommentBubblePinned = False
+    NodeComment = "Ragdoll"
+[EdGraphNode_Comment_12] EdGraphNode_Comment
+    CommentColor = (R=0.421875,G=0.000000,B=0.050013,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1088
+    NodeHeight = 384
+    bCommentBubblePinned = False
+    NodeComment = "Update character ragdoll waer movement and camera"
+[K2Node_CustomEvent_0] K2Node_CustomEvent
+    CustomFunctionName = "RagdollServer"
+    FunctionFlags = 203555008
+    ErrorType = 1
+[K2Node_CallFunction_13] K2Node_CallFunction (вызов: SetRagdoll)
+[K2Node_CallFunction_20] K2Node_CallFunction (вызов: RagdollServer)
+    вход Enabled = true
+[K2Node_CallFunction_24] K2Node_CallFunction (вызов: RagdollServer)
+    вход Enabled = false
+[K2Node_CustomEvent_1] K2Node_CustomEvent
+    CustomFunctionName = "RagdollMulticast"
+    FunctionFlags = 201474240
+[K2Node_CallFunction_21@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_58] K2Node_CallFunction (вызов: UpdateRagdoll)
+[K2Node_CallFunction_22@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_59] K2Node_CallFunction (вызов: ForwardMovement)
+[K2Node_CallFunction_8@EventGraph] K2Node_CallFunction
+[K2Node_VariableSet_4@EventGraph] K2Node_VariableSet
+[K2Node_VariableSet_3] K2Node_VariableSet (переменная: ArmLength)
+[K2Node_VariableGet_25] K2Node_VariableGet (переменная: ArmLength)
+[K2Node_VariableGet_26] K2Node_VariableGet (переменная: ArmLength)
+[K2Node_Knot_1] K2Node_Knot
+[K2Node_Event_1] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[K2Node_Event_3] K2Node_Event (событие: FluxCameraInFluid @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_VariableGet_12@EventGraph] K2Node_VariableGet
+[K2Node_CallFunction_30] K2Node_CallFunction (вызов: AddOrUpdateBlendable @ /Script/CoreUObject.Class)
+[K2Node_VariableGet_15@EventGraph] K2Node_VariableGet
+[K2Node_CallFunction_40] K2Node_CallFunction (вызов: Not_PreBool @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_41] K2Node_CallFunction (вызов: Conv_BoolToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[EdGraphNode_Comment_5] EdGraphNode_Comment
+    CommentColor = (R=0.121409,G=0.172648,B=0.392708,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 800
+    NodeHeight = 384
+    bCommentBubblePinned = False
+[K2Node_VariableGet_11@EventGraph] K2Node_VariableGet
+[K2Node_IfThenElse_3@EventGraph] K2Node_IfThenElse
+[K2Node_CallFunction_25@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_45] K2Node_CallFunction (вызов: UpdateCamera)
+[K2Node_Knot_2] K2Node_Knot
+[K2Node_InputKey_23] K2Node_InputKey
+    InputKey = L
+[K2Node_CallFunction_50] K2Node_CallFunction (вызов: GetActorOfClass @ /Script/CoreUObject.Class)
+[K2Node_VariableSet_8] K2Node_VariableSet (переменная: CurrentDirectionlLight)
+[K2Node_VariableSet_0@EventGraph] K2Node_VariableSet
+[K2Node_CallFunction_42] K2Node_CallFunction (вызов: GetActorOfClass @ /Script/CoreUObject.Class)
+[K2Node_VariableSet_13] K2Node_VariableSet (переменная: CurrentSkylight)
+[K2Node_VariableGet_16@EventGraph] K2Node_VariableGet
+[K2Node_CallFunction_52] K2Node_CallFunction (вызов: RecaptureSky @ /Script/CoreUObject.Class)
+[K2Node_VariableGet_18@EventGraph] K2Node_VariableGet
+[K2Node_CallFunction_55] K2Node_CallFunction (вызов: Delay @ /Script/CoreUObject.Class)
+    вход Duration = 0.100000
+    вход LatentInfo = (Linkage=-1,UUID=-1,ExecutionFunction="",CallbackTarget=None)
+[K2Node_InputKey_2] K2Node_InputKey
+    InputKey = C
+[K2Node_CallFunction_8428] K2Node_CallFunction (вызов: AddControllerPitchInput)
+    ErrorType = 1
+[K2Node_CallFunction_8427] K2Node_CallFunction (вызов: AddControllerYawInput)
+    ErrorType = 1
+[K2Node_EnhancedInputAction_4] K2Node_EnhancedInputAction
+    InputAction = "/Script/EnhancedInput.InputAction'/Game/FluidFlux/Demo/Input/Actions/IA_Look.IA_Look'"
+    AdvancedPinDisplay = Hidden
+    ErrorType = 1
+[K2Node_Knot_0@EventGraph] K2Node_Knot
+[K2Node_CallFunction_67] K2Node_CallFunction (вызов: RotateDirectionalLight)
+[K2Node_IfThenElse_1@EventGraph] K2Node_IfThenElse
+[K2Node_EnhancedInputAction_1] K2Node_EnhancedInputAction
+    InputAction = "/Script/EnhancedInput.InputAction'/Game/FluidFlux/Demo/Input/Actions/IA_Move.IA_Move'"
+    AdvancedPinDisplay = Hidden
+[K2Node_CallFunction_1193] K2Node_CallFunction (вызов: Jump)
+    ErrorType = 1
+[K2Node_CallFunction_9386] K2Node_CallFunction (вызов: StopJumping)
+    ErrorType = 1
+[K2Node_EnhancedInputAction_0] K2Node_EnhancedInputAction
+    InputAction = "/Script/EnhancedInput.InputAction'/Game/FluidFlux/Demo/Input/Actions/IA_Jump.IA_Jump'"
+    AdvancedPinDisplay = Hidden
+[K2Node_VariableGet_28] K2Node_VariableGet (переменная: BP_FluxSwimming)
+[K2Node_CallFunction_74] K2Node_CallFunction (вызов: AddSwimInput @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_EnhancedInputAction_3] K2Node_EnhancedInputAction
+    InputAction = "/Script/EnhancedInput.InputAction'/Game/FluidFlux/Demo/Input/Actions/IA_SwimUp.IA_SwimUp'"
+    AdvancedPinDisplay = Hidden
+[K2Node_CallFunction_75] K2Node_CallFunction (вызов: ChangeCamera)
+[EdGraphNode_Comment_15] EdGraphNode_Comment
+    CommentColor = (R=1.000000,G=0.648941,B=0.266117,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 976
+    NodeHeight = 272
+    bCommentBubblePinned = False
+    NodeComment = "Begin play"
+[EdGraphNode_Comment_2] EdGraphNode_Comment
+    CommentColor = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    FontSize = 30
+    bCommentBubbleVisible_InDetailsPanel = False
+    CommentDepth = -2
+    NodeWidth = 1616
+    NodeHeight = 1856
+    bCommentBubblePinned = False
+    NodeComment = "Character movement (Enhanced input)"
+[EdGraphNode_Comment_17] EdGraphNode_Comment
+    CommentColor = (R=0.503336,G=1.000000,B=0.788110,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 784
+    NodeHeight = 400
+    bCommentBubblePinned = False
+    NodeComment = "Swimming upo and down"
+[EdGraphNode_Comment_6] EdGraphNode_Comment
+    CommentColor = (R=0.503336,G=1.000000,B=0.788110,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 720
+    NodeHeight = 400
+    bCommentBubblePinned = False
+    NodeComment = "Jumping"
+[EdGraphNode_Comment_3] EdGraphNode_Comment
+    CommentColor = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    CommentDepth = -2
+    NodeWidth = 1888
+    NodeHeight = 304
+    bCommentBubblePinned = False
+    NodeComment = "Camera and light control"
+[K2Node_CallFunction_0@EventGraph] K2Node_CallFunction
+[K2Node_IfThenElse_0@EventGraph] K2Node_IfThenElse
+[EdGraphNode_Comment_1] EdGraphNode_Comment
+    CommentColor = (R=0.221875,G=0.122021,B=0.131305,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1744
+    NodeHeight = 400
+    bCommentBubblePinned = False
+    NodeComment = "Interact with vehicle"
+[K2Node_EnhancedInputAction_2] K2Node_EnhancedInputAction
+    InputAction = "/Script/EnhancedInput.InputAction'/Game/FluidFlux/Demo/Input/Actions/IA_Use.IA_Use'"
+    AdvancedPinDisplay = Hidden
+[K2Node_CustomEvent_2] K2Node_CustomEvent
+    CustomFunctionName = "UseInteraction"
+    FunctionFlags = 201474240
+[K2Node_CallFunction_3@EventGraph] K2Node_CallFunction
+[K2Node_Self_2] K2Node_Self
+[K2Node_Self_0@EventGraph] K2Node_Self
+[K2Node_VariableGet_2@EventGraph] K2Node_VariableGet
+[K2Node_CallDelegate_1] K2Node_CallDelegate
+[K2Node_VariableGet_1@EventGraph] K2Node_VariableGet
+[K2Node_AddDelegate_0] K2Node_AddDelegate
+[K2Node_CustomEvent_3] K2Node_CustomEvent
+    CustomFunctionName = "OnSetDriverMode"
+[K2Node_CallFunction_4@EventGraph] K2Node_CallFunction
+[K2Node_CustomEvent_4] K2Node_CustomEvent
+    CustomFunctionName = "UseInteractionServer"
+    FunctionFlags = 203555008
+    ErrorType = 1
+[K2Node_CallFunction_5@EventGraph] K2Node_CallFunction
+[K2Node_ExecutionSequence_0@EventGraph] K2Node_ExecutionSequence
+[K2Node_CallFunction_6@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_7@EventGraph] K2Node_CallFunction
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = A80AC35042A06CC526F25488343E0399
+    Nodes(0) <- K2Node_FunctionEntry_19
+[K2Node_FunctionEntry_19] K2Node_FunctionEntry (вызов: UserConstructionScript @ /Script/CoreUObject.Class)
+    bEnforceConstCorrectness = False
+[SetRagdoll] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = ADE40C994CDB81CC50C9829D326C5325
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_IfThenElse_0
+    Nodes(2) <- K2Node_CallFunction_5
+    Nodes(3) <- K2Node_VariableGet_2
+    Nodes(4) <- K2Node_CallFunction_9
+    Nodes(5) <- K2Node_CallFunction_3
+    Nodes(6) <- K2Node_VariableSet_4
+    Nodes(7) <- K2Node_VariableGet_10
+    Nodes(8) <- K2Node_VariableGet_9
+    Nodes(9) <- K2Node_CallFunction_7
+    Nodes(10) <- K2Node_VariableGet_11
+    Nodes(11) <- K2Node_VariableGet_12
+    Nodes(12) <- K2Node_CallFunction_17
+    Nodes(13) <- K2Node_VariableGet_13
+    Nodes(14) <- K2Node_VariableGet_19
+    Nodes(15) <- K2Node_CallFunction_19
+    Nodes(16) <- K2Node_CallFunction_21
+    Nodes(17) <- K2Node_CallFunction_22
+    Nodes(18) <- K2Node_CallFunction_23
+    Nodes(19) <- K2Node_CallFunction_1
+    Nodes(20) <- K2Node_VariableGet_20
+    Nodes(21) <- K2Node_CallFunction_26
+    Nodes(22) <- K2Node_IfThenElse_1
+    Nodes(23) <- K2Node_VariableSet_5
+    Nodes(24) <- K2Node_VariableGet_7
+    Nodes(25) <- K2Node_VariableGet_6
+    Nodes(26) <- K2Node_VariableGet_17
+    Nodes(27) <- K2Node_VariableGet_1
+    Nodes(28) <- K2Node_VariableGet_34
+    Nodes(29) <- K2Node_VariableGet_5
+    Nodes(30) <- K2Node_VariableGet_0
+    Nodes(31) <- K2Node_CallFunction_0
+    Nodes(32) <- K2Node_VariableGet_35
+    Nodes(33) <- K2Node_CallFunction_2
+    Nodes(34) <- K2Node_CallFunction_10
+    Nodes(35) <- K2Node_VariableGet_8
+    Nodes(36) <- K2Node_CallFunction_4
+    Nodes(37) <- K2Node_VariableGet_3
+[K2Node_FunctionEntry_0@SetRagdoll] K2Node_FunctionEntry
+[K2Node_IfThenElse_0@SetRagdoll] K2Node_IfThenElse
+[K2Node_CallFunction_5@SetRagdoll] K2Node_CallFunction
+[K2Node_VariableGet_2@SetRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_9@SetRagdoll] K2Node_CallFunction
+[K2Node_CallFunction_3@SetRagdoll] K2Node_CallFunction
+[K2Node_VariableSet_4@SetRagdoll] K2Node_VariableSet
+[K2Node_VariableGet_10@SetRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_9@SetRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_7@SetRagdoll] K2Node_CallFunction
+[K2Node_VariableGet_11@SetRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_12@SetRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_17] K2Node_CallFunction (вызов: K2_AttachToComponent @ /Script/CoreUObject.Class)
+    вход SocketName = None
+    вход LocationRule = KeepRelative
+    вход RotationRule = KeepRelative
+    вход ScaleRule = KeepRelative
+    вход bWeldSimulatedBodies = TRUE
+[K2Node_VariableGet_13@SetRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_19@SetRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_19@SetRagdoll] K2Node_CallFunction
+[K2Node_CallFunction_21@SetRagdoll] K2Node_CallFunction
+[K2Node_CallFunction_22@SetRagdoll] K2Node_CallFunction
+[K2Node_CallFunction_23@SetRagdoll] K2Node_CallFunction
+[K2Node_CallFunction_1@SetRagdoll] K2Node_CallFunction
+[K2Node_VariableGet_20@SetRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_26] K2Node_CallFunction (вызов: EqualEqual_BoolBool @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_IfThenElse_1@SetRagdoll] K2Node_IfThenElse
+[K2Node_VariableSet_5] K2Node_VariableSet (переменная: IsRagdoll)
+[K2Node_VariableGet_7@SetRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_6@SetRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_17@SetRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_1@SetRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_34] K2Node_VariableGet (переменная: Enabled)
+[K2Node_VariableGet_5@SetRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_0@SetRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_0@SetRagdoll] K2Node_CallFunction
+[K2Node_VariableGet_35] K2Node_VariableGet (переменная: Enabled)
+[K2Node_CallFunction_2@SetRagdoll] K2Node_CallFunction
+[K2Node_CallFunction_10] K2Node_CallFunction (вызов: SetCollisionEnabled @ /Script/CoreUObject.Class)
+    вход NewType = QueryOnly
+[K2Node_VariableGet_8@SetRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_4@SetRagdoll] K2Node_CallFunction
+[K2Node_VariableGet_3@SetRagdoll] K2Node_VariableGet
+[SetDriverMode] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = FC51963045287C2AB47AD98CC6DCF3AA
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_1
+    Nodes(2) <- K2Node_CallFunction_0
+    Nodes(3) <- K2Node_VariableGet_3
+    Nodes(4) <- K2Node_CallFunction_3
+    Nodes(5) <- K2Node_CallFunction_5
+    Nodes(6) <- K2Node_CallFunction_19
+    Nodes(7) <- K2Node_VariableGet_9
+    Nodes(8) <- K2Node_CallFunction_6
+    Nodes(9) <- K2Node_CallFunction_2
+    Nodes(10) <- K2Node_VariableGet_10
+    Nodes(11) <- K2Node_CallFunction_11
+    Nodes(12) <- K2Node_CallFunction_7
+    Nodes(13) <- K2Node_MacroInstance_0
+[K2Node_FunctionEntry_0@SetDriverMode] K2Node_FunctionEntry
+[K2Node_VariableGet_1@SetDriverMode] K2Node_VariableGet
+[K2Node_CallFunction_0@SetDriverMode] K2Node_CallFunction
+[K2Node_VariableGet_3@SetDriverMode] K2Node_VariableGet
+[K2Node_CallFunction_3@SetDriverMode] K2Node_CallFunction
+[K2Node_CallFunction_5@SetDriverMode] K2Node_CallFunction
+[K2Node_CallFunction_19@SetDriverMode] K2Node_CallFunction
+[K2Node_VariableGet_9@SetDriverMode] K2Node_VariableGet
+[K2Node_CallFunction_6@SetDriverMode] K2Node_CallFunction
+[K2Node_CallFunction_2@SetDriverMode] K2Node_CallFunction
+[K2Node_VariableGet_10@SetDriverMode] K2Node_VariableGet
+[K2Node_CallFunction_11] K2Node_CallFunction (вызов: SetEnabled @ /Script/Engine.BlueprintGeneratedClass)
+    вход bEnabled = false
+[K2Node_CallFunction_7@SetDriverMode] K2Node_CallFunction
+[K2Node_MacroInstance_0] K2Node_MacroInstance
+[UpdateRagdoll] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A2C58F894D258E68D5F8D0A2601E1C1C
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_1
+    Nodes(2) <- K2Node_IfThenElse_0
+    Nodes(3) <- K2Node_VariableGet_6
+    Nodes(4) <- K2Node_CallFunction_8
+    Nodes(5) <- K2Node_VariableGet_15
+    Nodes(6) <- K2Node_CallFunction_23
+    Nodes(7) <- K2Node_CallFunction_33
+    Nodes(8) <- K2Node_CallFunction_12
+    Nodes(9) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(10) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(11) <- K2Node_CallFunction_0
+    Nodes(12) <- K2Node_IfThenElse_2
+    Nodes(13) <- K2Node_VariableGet_22
+    Nodes(14) <- K2Node_CallFunction_6
+    Nodes(15) <- K2Node_VariableGet_12
+    Nodes(16) <- K2Node_CallFunction_29
+    Nodes(17) <- K2Node_VariableGet_19
+    Nodes(18) <- K2Node_VariableGet_20
+    Nodes(19) <- K2Node_CallFunction_7
+    Nodes(20) <- K2Node_VariableGet_5
+    Nodes(21) <- K2Node_VariableGet_17
+    Nodes(22) <- K2Node_VariableGet_18
+    Nodes(23) <- K2Node_CallFunction_18
+    Nodes(24) <- K2Node_VariableGet_10
+    Nodes(25) <- K2Node_CallFunction_14
+    Nodes(26) <- K2Node_CallFunction_22
+    Nodes(27) <- K2Node_IfThenElse_1
+    Nodes(28) <- K2Node_VariableSet_1
+    Nodes(29) <- K2Node_VariableGet_14
+    Nodes(30) <- K2Node_CallFunction_19
+    Nodes(31) <- K2Node_ExecutionSequence_0
+    Nodes(32) <- K2Node_CallFunction_25
+    Nodes(33) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(34) <- K2Node_VariableSet_0
+    Nodes(35) <- K2Node_VariableGet_16
+    Nodes(36) <- K2Node_VariableGet_3
+    Nodes(37) <- K2Node_VariableGet_13
+    Nodes(38) <- K2Node_VariableGet_8
+    Nodes(39) <- K2Node_VariableGet_9
+    Nodes(40) <- K2Node_CallFunction_28
+    Nodes(41) <- K2Node_MakeArray_0
+    Nodes(42) <- K2Node_CallFunction_21
+    Nodes(43) <- K2Node_Knot_0
+    Nodes(44) <- K2Node_VariableGet_21
+    Nodes(45) <- K2Node_VariableSet_2
+    Nodes(46) <- K2Node_CallFunction_15
+    Nodes(47) <- K2Node_VariableGet_11
+    Nodes(48) <- K2Node_PromotableOperator_0
+    Nodes(49) <- K2Node_PromotableOperator_1
+    Nodes(50) <- K2Node_VariableGet_23
+[K2Node_FunctionEntry_0@UpdateRagdoll] K2Node_FunctionEntry
+[K2Node_VariableGet_1@UpdateRagdoll] K2Node_VariableGet
+[K2Node_IfThenElse_0@UpdateRagdoll] K2Node_IfThenElse
+[K2Node_VariableGet_6@UpdateRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_8@UpdateRagdoll] K2Node_CallFunction
+[K2Node_VariableGet_15@UpdateRagdoll] K2Node_VariableGet (переменная: Mesh)
+[K2Node_CallFunction_23@UpdateRagdoll] K2Node_CallFunction (вызов: GetSocketLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Value = pelvis
+    вход InSocketName = pelvis
+[K2Node_CallFunction_33] K2Node_CallFunction (вызов: K2_GetComponentLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_12@UpdateRagdoll] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_1] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 20.000000
+[K2Node_CommutativeAssociativeBinaryOperator_2] K2Node_CommutativeAssociativeBinaryOperator (вызов: FMin @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 1.000000
+[K2Node_CallFunction_0@UpdateRagdoll] K2Node_CallFunction
+[K2Node_IfThenElse_2@UpdateRagdoll] K2Node_IfThenElse
+[K2Node_VariableGet_22@UpdateRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_6@UpdateRagdoll] K2Node_CallFunction
+[K2Node_VariableGet_12@UpdateRagdoll] K2Node_VariableGet (переменная: CapsuleComponent)
+[K2Node_CallFunction_29] K2Node_CallFunction (вызов: MakeVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_19@UpdateRagdoll] K2Node_VariableGet (переменная: CapsuleComponent)
+[K2Node_VariableGet_20@UpdateRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_7@UpdateRagdoll] K2Node_CallFunction
+[K2Node_VariableGet_5@UpdateRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_17@UpdateRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_18@UpdateRagdoll] K2Node_VariableGet (переменная: CapsuleHalfHeight @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_18@UpdateRagdoll] K2Node_CallFunction
+[K2Node_VariableGet_10@UpdateRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_14] K2Node_CallFunction (вызов: GetSocketLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход InSocketName = pelvis
+[K2Node_CallFunction_22@UpdateRagdoll] K2Node_CallFunction (вызов: BreakHitResult @ /Script/CoreUObject.Class)
+    ErrorType = 3
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Shown
+    вход PhysicsBlendWeight = 1.000000
+    вход bSkipCustomPhysicsType = false
+    вход bIncludeSelf = true
+[K2Node_IfThenElse_1@UpdateRagdoll] K2Node_IfThenElse
+[K2Node_VariableSet_1@UpdateRagdoll] K2Node_VariableSet
+[K2Node_VariableGet_14] K2Node_VariableGet (переменная: Mesh)
+[K2Node_CallFunction_19@UpdateRagdoll] K2Node_CallFunction
+[K2Node_ExecutionSequence_0@UpdateRagdoll] K2Node_ExecutionSequence
+[K2Node_CallFunction_25@UpdateRagdoll] K2Node_CallFunction (вызов: BreakVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Enabled = true
+[K2Node_CommutativeAssociativeBinaryOperator_0] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableSet_0@UpdateRagdoll] K2Node_VariableSet
+[K2Node_VariableGet_16@UpdateRagdoll] K2Node_VariableGet (переменная: ZPosition)
+    CurrentVariation = ValidatedObject
+[K2Node_VariableGet_3@UpdateRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_13@UpdateRagdoll] K2Node_VariableGet
+[K2Node_VariableGet_8@UpdateRagdoll] K2Node_VariableGet (переменная: CapsuleComponent)
+[K2Node_VariableGet_9@UpdateRagdoll] K2Node_VariableGet
+[K2Node_CallFunction_28] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_MakeArray_0] K2Node_MakeArray
+    вход [0] = ObjectTypeQuery1
+[K2Node_CallFunction_21@UpdateRagdoll] K2Node_CallFunction (вызов: SphereTraceSingleForObjects @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    AdvancedPinDisplay = Hidden
+    вход bNewSimulate = true
+    вход bIncludeSelf = true
+    вход bTraceComplex = false
+    вход DrawDebugType = None
+    вход bIgnoreSelf = true
+    вход TraceColor = (R=1.000000,G=0.000000,B=0.000000,A=1.000000)
+    вход TraceHitColor = (R=0.000000,G=1.000000,B=0.000000,A=1.000000)
+    вход DrawTime = 5.000000
+[K2Node_Knot_0@UpdateRagdoll] K2Node_Knot
+[K2Node_VariableGet_21@UpdateRagdoll] K2Node_VariableGet
+[K2Node_VariableSet_2@UpdateRagdoll] K2Node_VariableSet
+[K2Node_CallFunction_15] K2Node_CallFunction (вызов: K2_GetComponentLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_11@UpdateRagdoll] K2Node_VariableGet (переменная: CapsuleComponent)
+[K2Node_PromotableOperator_0] K2Node_PromotableOperator (вызов: Subtract_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_1] K2Node_PromotableOperator (вызов: Divide_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_23] K2Node_VariableGet (переменная: DeltaTime)
+[UnderWaterMovement] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 17C377D84B3D45C1AA80A6BB4755E4EF
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_2
+    Nodes(2) <- K2Node_CallFunction_6
+    Nodes(3) <- K2Node_CallFunction_8
+    Nodes(4) <- K2Node_VariableGet_4
+    Nodes(5) <- K2Node_VariableGet_3
+    Nodes(6) <- K2Node_CallFunction_16
+    Nodes(7) <- K2Node_VariableSet_4
+    Nodes(8) <- K2Node_VariableGet_0
+    Nodes(9) <- K2Node_VariableSet_2
+    Nodes(10) <- K2Node_VariableGet_7
+    Nodes(11) <- K2Node_VariableSet_1
+    Nodes(12) <- K2Node_VariableGet_5
+    Nodes(13) <- K2Node_IfThenElse_0
+    Nodes(14) <- K2Node_VariableSet_0
+    Nodes(15) <- K2Node_VariableGet_9
+    Nodes(16) <- K2Node_VariableGet_10
+[K2Node_FunctionEntry_0@UnderWaterMovement] K2Node_FunctionEntry
+[K2Node_VariableGet_2@UnderWaterMovement] K2Node_VariableGet
+[K2Node_CallFunction_6@UnderWaterMovement] K2Node_CallFunction
+[K2Node_CallFunction_8@UnderWaterMovement] K2Node_CallFunction (вызов: K2_GetComponentLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход bSweep = false
+    вход bTeleport = false
+[K2Node_VariableGet_4@UnderWaterMovement] K2Node_VariableGet
+[K2Node_VariableGet_3@UnderWaterMovement] K2Node_VariableGet
+[K2Node_CallFunction_16@UnderWaterMovement] K2Node_CallFunction
+[K2Node_VariableSet_4@UnderWaterMovement] K2Node_VariableSet (переменная: MaxWalkSpeed @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+    ErrorType = 1
+[K2Node_VariableGet_0@UnderWaterMovement] K2Node_VariableGet
+[K2Node_VariableSet_2@UnderWaterMovement] K2Node_VariableSet
+[K2Node_VariableGet_7@UnderWaterMovement] K2Node_VariableGet (переменная: Speed)
+[K2Node_VariableSet_1@UnderWaterMovement] K2Node_VariableSet
+[K2Node_VariableGet_5@UnderWaterMovement] K2Node_VariableGet
+[K2Node_IfThenElse_0@UnderWaterMovement] K2Node_IfThenElse
+[K2Node_VariableSet_0@UnderWaterMovement] K2Node_VariableSet
+[K2Node_VariableGet_9@UnderWaterMovement] K2Node_VariableGet
+[K2Node_VariableGet_10@UnderWaterMovement] K2Node_VariableGet (переменная: SwimmingState @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[ForwardMovement] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 4F30193E4E7B68C6DC1A01B088AEA2F5
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+    Nodes(2) <- K2Node_CallFunction_1
+    Nodes(3) <- K2Node_CallFunction_8733
+    Nodes(4) <- K2Node_CallFunction_2
+    Nodes(5) <- K2Node_CallFunction_3
+    Nodes(6) <- K2Node_IfThenElse_0
+    Nodes(7) <- K2Node_VariableGet_9
+    Nodes(8) <- K2Node_VariableGet_2
+    Nodes(9) <- K2Node_CallFunction_4
+    Nodes(10) <- K2Node_IfThenElse_2
+    Nodes(11) <- K2Node_VariableGet_4
+    Nodes(12) <- K2Node_CallFunction_260
+    Nodes(13) <- K2Node_VariableGet_1
+    Nodes(14) <- K2Node_CallFunction_5
+    Nodes(15) <- K2Node_VariableGet_3
+    Nodes(16) <- K2Node_CallFunction_6
+    Nodes(17) <- K2Node_VariableGet_0
+    Nodes(18) <- K2Node_CallFunction_7
+[K2Node_FunctionEntry_0@ForwardMovement] K2Node_FunctionEntry
+[K2Node_CallFunction_0@ForwardMovement] K2Node_CallFunction
+[K2Node_CallFunction_1@ForwardMovement] K2Node_CallFunction
+[K2Node_CallFunction_8733] K2Node_CallFunction (вызов: GetForwardVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_2@ForwardMovement] K2Node_CallFunction (вызов: BreakRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    NodeComment = "Zero out pitch and roll, only move on plane"
+    вход NewMovementMode = MOVE_Falling
+    вход NewCustomMode = 0
+[K2Node_CallFunction_3@ForwardMovement] K2Node_CallFunction
+[K2Node_IfThenElse_0@ForwardMovement] K2Node_IfThenElse
+[K2Node_VariableGet_9@ForwardMovement] K2Node_VariableGet
+[K2Node_VariableGet_2@ForwardMovement] K2Node_VariableGet
+[K2Node_CallFunction_4@ForwardMovement] K2Node_CallFunction
+[K2Node_IfThenElse_2@ForwardMovement] K2Node_IfThenElse
+[K2Node_VariableGet_4@ForwardMovement] K2Node_VariableGet
+[K2Node_CallFunction_260] K2Node_CallFunction (вызов: AddMovementInput)
+    вход bForce = false
+[K2Node_VariableGet_1@ForwardMovement] K2Node_VariableGet
+[K2Node_CallFunction_5@ForwardMovement] K2Node_CallFunction
+[K2Node_VariableGet_3@ForwardMovement] K2Node_VariableGet
+[K2Node_CallFunction_6@ForwardMovement] K2Node_CallFunction
+[K2Node_VariableGet_0@ForwardMovement] K2Node_VariableGet
+[K2Node_CallFunction_7@ForwardMovement] K2Node_CallFunction (вызов: Multiply_IntFloat @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Duration = 0.2
+    вход LatentInfo = (Linkage=-1,UUID=-1,ExecutionFunction="",CallbackTarget=None)
+    вход bSweep = false
+    вход bTeleport = true
+    вход bEnabled = true
+    вход A = 2
+[SideMovement] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 177F79DE45AB0FAAE967F4866C348572
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_7445
+    Nodes(2) <- K2Node_CallFunction_8767
+    Nodes(3) <- K2Node_VariableGet_13
+    Nodes(4) <- K2Node_IfThenElse_3
+    Nodes(5) <- K2Node_CallFunction_20844
+    Nodes(6) <- K2Node_CallFunction_21305
+    Nodes(7) <- K2Node_CallFunction_8160
+[K2Node_FunctionEntry_0@SideMovement] K2Node_FunctionEntry
+[K2Node_CallFunction_7445] K2Node_CallFunction (вызов: AddMovementInput)
+    вход bForce = false
+[K2Node_CallFunction_8767] K2Node_CallFunction (вызов: GetRightVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_13@SideMovement] K2Node_VariableGet
+[K2Node_IfThenElse_3@SideMovement] K2Node_IfThenElse
+[K2Node_CallFunction_20844] K2Node_CallFunction (вызов: BreakRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_21305] K2Node_CallFunction (вызов: MakeRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Roll = 0.0
+    вход Pitch = 0.0
+[K2Node_CallFunction_8160] K2Node_CallFunction (вызов: GetControlRotation)
+    bDefaultsToPureFunc = True
+[UpdateCamera] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = B7A8B1A4404AA8EB23E3EEBEE61D39EA
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_13
+    Nodes(2) <- K2Node_VariableGet_5
+    Nodes(3) <- K2Node_CallFunction_3
+    Nodes(4) <- K2Node_VariableGet_9
+    Nodes(5) <- K2Node_VariableSet_0
+    Nodes(6) <- K2Node_VariableGet_53
+    Nodes(7) <- K2Node_Knot_0
+[K2Node_FunctionEntry_0@UpdateCamera] K2Node_FunctionEntry
+[K2Node_VariableGet_13@UpdateCamera] K2Node_VariableGet
+[K2Node_VariableGet_5@UpdateCamera] K2Node_VariableGet (переменная: TargetArmLength @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_3@UpdateCamera] K2Node_CallFunction
+[K2Node_VariableGet_9@UpdateCamera] K2Node_VariableGet (переменная: ArmLength)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableSet_0@UpdateCamera] K2Node_VariableSet
+[K2Node_VariableGet_53] K2Node_VariableGet (переменная: CameraArm)
+[K2Node_Knot_0@UpdateCamera] K2Node_Knot
+[RotateDirectionalLight] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 04113ECE44669601A5693CBC55EB0B11
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_0
+    Nodes(2) <- K2Node_MacroInstance_4
+    Nodes(3) <- K2Node_CallFunction_12
+    Nodes(4) <- K2Node_FunctionResult_2
+    Nodes(5) <- K2Node_VariableGet_4
+    Nodes(6) <- K2Node_VariableGet_13
+    Nodes(7) <- K2Node_FunctionResult_1
+    Nodes(8) <- K2Node_CallFunction_0
+    Nodes(9) <- K2Node_VariableGet_6
+    Nodes(10) <- K2Node_CallFunction_16
+    Nodes(11) <- K2Node_CallFunction_18
+    Nodes(12) <- K2Node_CallFunction_19
+    Nodes(13) <- K2Node_VariableGet_1
+    Nodes(14) <- K2Node_VariableGet_2
+[K2Node_FunctionEntry_0@RotateDirectionalLight] K2Node_FunctionEntry
+[K2Node_VariableGet_0@RotateDirectionalLight] K2Node_VariableGet
+[K2Node_MacroInstance_4] K2Node_MacroInstance
+[K2Node_CallFunction_12@RotateDirectionalLight] K2Node_CallFunction
+[K2Node_FunctionResult_2] K2Node_FunctionResult (вызов: RotateDirectionalLight)
+    bIsEditable = True
+    вход IsLight = false
+    вход IsLight = false
+[K2Node_VariableGet_4@RotateDirectionalLight] K2Node_VariableGet (переменная: CurrentDirectionlLight)
+[K2Node_VariableGet_13@RotateDirectionalLight] K2Node_VariableGet (переменная: CurrentDirectionlLight)
+    SelfContextInfo = NotSelfContext
+[K2Node_FunctionResult_1] K2Node_FunctionResult (вызов: RotateDirectionalLight)
+    bIsEditable = True
+    вход IsLight = true
+    вход IsLight = true
+[K2Node_CallFunction_0@RotateDirectionalLight] K2Node_CallFunction
+[K2Node_VariableGet_6@RotateDirectionalLight] K2Node_VariableGet (переменная: Camera)
+[K2Node_CallFunction_16@RotateDirectionalLight] K2Node_CallFunction
+[K2Node_CallFunction_18@RotateDirectionalLight] K2Node_CallFunction
+[K2Node_CallFunction_19@RotateDirectionalLight] K2Node_CallFunction (вызов: RotatorFromAxisAndAngle @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход NewType = QueryAndPhysics
+    вход NewType = QueryAndPhysics
+    вход InSocketName = pelvis
+[K2Node_VariableGet_1@RotateDirectionalLight] K2Node_VariableGet
+[K2Node_VariableGet_2@RotateDirectionalLight] K2Node_VariableGet
+[SetVSync] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 4096EC7E4F76175D91C5168873899627
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_4
+    Nodes(2) <- K2Node_CallFunction_18
+    Nodes(3) <- K2Node_CallFunction_12
+    Nodes(4) <- K2Node_CallFunction_1
+    Nodes(5) <- K2Node_CallFunction_9
+    Nodes(6) <- K2Node_IfThenElse_1
+    Nodes(7) <- K2Node_CallFunction_16
+    Nodes(8) <- K2Node_IfThenElse_0
+    Nodes(9) <- K2Node_VariableSet_1
+    Nodes(10) <- K2Node_VariableGet_1
+    Nodes(11) <- K2Node_VariableGet_0
+    Nodes(12) <- K2Node_SwitchInteger_0
+    Nodes(13) <- K2Node_VariableSet_2
+    Nodes(14) <- K2Node_VariableSet_0
+    Nodes(15) <- K2Node_CallFunction_6
+    Nodes(16) <- K2Node_ExecutionSequence_0
+    Nodes(17) <- K2Node_VariableGet_2
+[K2Node_FunctionEntry_0@SetVSync] K2Node_FunctionEntry
+[K2Node_CallFunction_4@SetVSync] K2Node_CallFunction (вызов: SetVSyncEnabled @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    вход NewType = PhysicsOnly
+[K2Node_CallFunction_18@SetVSync] K2Node_CallFunction (вызов: IsVSyncEnabled @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+[K2Node_CallFunction_12@SetVSync] K2Node_CallFunction (вызов: Not_PreBool @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Hidden
+    bDefaultsToPureFunc = True
+    вход B = 0, 0, 0
+    вход DeltaRotation = 0, 0, 0
+    вход DeltaRotation_Roll = 0.0
+    вход DeltaRotation_Pitch = 0.0
+    вход bSweep = false
+    вход bTeleport = false
+[K2Node_CallFunction_1@SetVSync] K2Node_CallFunction
+[K2Node_CallFunction_9@SetVSync] K2Node_CallFunction (вызов: ExecuteConsoleCommand @ /Script/CoreUObject.Class)
+    вход bSimulate = false
+    вход Command = t.MaxFPS 500
+    вход SpecificPlayer = None
+[K2Node_IfThenElse_1@SetVSync] K2Node_IfThenElse
+[K2Node_CallFunction_16@SetVSync] K2Node_CallFunction (вызов: ExecuteConsoleCommand @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход InRangeA = 40.000000
+    вход InRangeB = 200.000000
+    вход OutRangeA = 600.000000
+    вход OutRangeB = 240.000000
+    вход Command = t.MaxFPS 60
+    вход SpecificPlayer = None
+[K2Node_IfThenElse_0@SetVSync] K2Node_IfThenElse
+    вход Condition = true
+[K2Node_VariableSet_1@SetVSync] K2Node_VariableSet (переменная: NewVSync)
+[K2Node_VariableGet_1@SetVSync] K2Node_VariableGet (переменная: NewVSync)
+[K2Node_VariableGet_0@SetVSync] K2Node_VariableGet
+[K2Node_SwitchInteger_0] K2Node_SwitchInteger
+    StartIndex = -1
+[K2Node_VariableSet_2@SetVSync] K2Node_VariableSet (переменная: NewVSync)
+    SelfContextInfo = NotSelfContext
+    вход NewVSync = false
+[K2Node_VariableSet_0@SetVSync] K2Node_VariableSet (переменная: NewVSync)
+    SelfContextInfo = NotSelfContext
+    вход Speed = 600.000000
+    вход NewVSync = true
+[K2Node_CallFunction_6@SetVSync] K2Node_CallFunction (вызов: GetGameUserSettings @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    EnabledState = DevelopmentOnly
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход InString = ASSETFREAKS.COM
+    вход bPrintToScreen = true
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход NewMovementMode = MOVE_None
+    вход NewCustomMode = 0
+[K2Node_ExecutionSequence_0@SetVSync] K2Node_ExecutionSequence
+[K2Node_VariableGet_2@SetVSync] K2Node_VariableGet (переменная: Override)
+[ChangeCamera] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 411127974A0E3BA260CC88901532AA59
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_64
+    Nodes(2) <- K2Node_CallFunction_65
+    Nodes(3) <- K2Node_CallFunction_1
+    Nodes(4) <- K2Node_CallFunction_5
+    Nodes(5) <- K2Node_IfThenElse_7
+    Nodes(6) <- K2Node_CallArrayFunction_0
+    Nodes(7) <- K2Node_CallFunction_61
+    Nodes(8) <- K2Node_IfThenElse_8
+    Nodes(9) <- K2Node_GetArrayItem_0
+    Nodes(10) <- K2Node_CallFunction_63
+    Nodes(11) <- K2Node_Self_0
+    Nodes(12) <- K2Node_CallFunction_3
+    Nodes(13) <- K2Node_CallFunction_60
+[K2Node_FunctionEntry_0@ChangeCamera] K2Node_FunctionEntry
+[K2Node_CallFunction_64] K2Node_CallFunction (вызов: GetPlayerController @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход PlayerIndex = 0
+[K2Node_CallFunction_65] K2Node_CallFunction (вызов: SetViewTargetWithBlend @ /Script/CoreUObject.Class)
+    вход BlendTime = 4.000000
+    вход BlendFunc = VTBlend_EaseInOut
+    вход BlendExp = 4.000000
+    вход bLockOutgoing = false
+[K2Node_CallFunction_1@ChangeCamera] K2Node_CallFunction (вызов: GetPlayerController @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход NewType = PhysicsOnly
+    вход PlayerIndex = 0
+[K2Node_CallFunction_5@ChangeCamera] K2Node_CallFunction (вызов: GetViewTarget @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход NewType = QueryOnly
+    вход NewType = QueryOnly
+[K2Node_IfThenElse_7] K2Node_IfThenElse
+[K2Node_CallArrayFunction_0] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_61] K2Node_CallFunction (вызов: Greater_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 1
+[K2Node_IfThenElse_8] K2Node_IfThenElse
+[K2Node_GetArrayItem_0] K2Node_GetArrayItem
+    bReturnByRefDesired = False
+    вход Dimension 1 = 0
+[K2Node_CallFunction_63] K2Node_CallFunction (вызов: EqualEqual_ObjectObject @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_Self_0@ChangeCamera] K2Node_Self
+[K2Node_CallFunction_3@ChangeCamera] K2Node_CallFunction (вызов: SetViewTargetWithBlend @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход NewType = NoCollision
+    вход Roll = 0.0
+    вход Pitch = 0.0
+    вход InterpSpeed = 4.000000
+    вход BlendTime = 4.000000
+    вход BlendFunc = VTBlend_EaseInOut
+    вход BlendExp = 4.000000
+    вход bLockOutgoing = false
+[K2Node_CallFunction_60] K2Node_CallFunction (вызов: GetAllActorsOfClass @ /Script/CoreUObject.Class)
+[FirstPersonMode] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 558E2A3B491C705844ECA38678F506B7
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_17
+    Nodes(2) <- K2Node_VariableSet_10
+    Nodes(3) <- K2Node_VariableSet_12
+    Nodes(4) <- K2Node_VariableGet_22
+    Nodes(5) <- K2Node_VariableSet_14
+    Nodes(6) <- K2Node_VariableGet_20
+    Nodes(7) <- K2Node_CallFunction_46
+    Nodes(8) <- K2Node_VariableGet_21
+    Nodes(9) <- K2Node_CallFunction_47
+[K2Node_FunctionEntry_0@FirstPersonMode] K2Node_FunctionEntry
+[K2Node_VariableGet_17@FirstPersonMode] K2Node_VariableGet (переменная: CameraArm)
+[K2Node_VariableSet_10] K2Node_VariableSet (переменная: TargetArmLength @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+    вход TargetArmLength = 0.0
+[K2Node_VariableSet_12] K2Node_VariableSet (переменная: ArmLength)
+    вход ArmLength = 0.0
+[K2Node_VariableGet_22@FirstPersonMode] K2Node_VariableGet (переменная: CameraArm)
+[K2Node_VariableSet_14] K2Node_VariableSet (переменная: SocketOffset @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+    вход SocketOffset = 20.000000, 0, 0
+[K2Node_VariableGet_20@FirstPersonMode] K2Node_VariableGet (переменная: Mesh)
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_46] K2Node_CallFunction (вызов: SetVisibility @ /Script/CoreUObject.Class)
+    вход bNewVisibility = false
+    вход bPropagateToChildren = false
+[K2Node_VariableGet_21@FirstPersonMode] K2Node_VariableGet (переменная: Camera)
+[K2Node_CallFunction_47] K2Node_CallFunction (вызов: SetFieldOfView @ /Script/CoreUObject.Class)
+    вход InFieldOfView = 90.000000
+[Interact] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bEditable = False
+    GraphGuid = A61FA8634635AA6516CE3A8DA04B7C68
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@Interact] K2Node_FunctionEntry
+[AddModifiers] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 54174038438BD9D52AD3A5A25E9DEE7D
+    InterfaceGuid = 472A7FA34DCADA1B7CD1699C38C67A93
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_VariableGet_0
+    Nodes(3) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@AddModifiers] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@AddModifiers] K2Node_FunctionResult
+[K2Node_VariableGet_0@AddModifiers] K2Node_VariableGet
+[K2Node_CallFunction_0@AddModifiers] K2Node_CallFunction
+[IgnoreModifierOverlap] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 0DF49E9841E732C9CF48BE95F9C409F5
+    InterfaceGuid = 7E5B2892444E9C33D404E78D65487568
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_CallFunction_0
+    Nodes(3) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@IgnoreModifierOverlap] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@IgnoreModifierOverlap] K2Node_FunctionResult
+[K2Node_CallFunction_0@IgnoreModifierOverlap] K2Node_CallFunction
+[K2Node_VariableGet_0@IgnoreModifierOverlap] K2Node_VariableGet (переменная: CapsuleComponent)
+[GetInteractions] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 54AFBCF2405553D2AA92C9A4EB28DF92
+    InterfaceGuid = 2C5F2F284ED0681AF2CD12AA73F8B1D0
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_VariableGet_3
+    Nodes(3) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@GetInteractions] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetInteractions] K2Node_FunctionResult
+[K2Node_VariableGet_3@GetInteractions] K2Node_VariableGet (переменная: BP_FluxInteraction)
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_0@GetInteractions] K2Node_CallFunction
+[GetShape] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = DC4DD5814BB38C6F6023129516A9CA10
+    InterfaceGuid = 3A06096544620F95A19E06AC2624342C
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetShape] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetShape] K2Node_FunctionResult (вызов: GetShape @ /Script/Engine.BlueprintGeneratedClass)
+    вход Location = 0, 0, 0
+    вход Radius = 0.0
+[SceneThumbnailInfo_12] SceneThumbnailInfo
+[UseInteractionServer] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1645BBBC4D9A2D290FF05BA0DD86BDFB
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@UseInteractionServer] K2Node_FunctionEntry
+[K2Node_CallFunction_0@UseInteractionServer] K2Node_CallFunction
+[OnSetDriverMode] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 6787B4D042E02DF5B9F3F19B80B772D2
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@OnSetDriverMode] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@OnSetDriverMode] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@OnSetDriverMode] K2Node_CallFunction
+[UseInteraction] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 66B6FD2348E99C31C78492A16DE04FDB
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@UseInteraction] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@UseInteraction] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@UseInteraction] K2Node_CallFunction
+[ReceiveTick] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A09562F0435C74173EF255933CEE5C25
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveTick] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@ReceiveTick] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@ReceiveTick] K2Node_CallFunction
+[RagdollServer] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = C9FBC3B74160C379F5ED5E8C35992CDA
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@RagdollServer] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@RagdollServer] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@RagdollServer] K2Node_CallFunction
+[RagdollMulticast] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A49F828C42E2C2213C7CED93EDE27E3D
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@RagdollMulticast] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@RagdollMulticast] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@RagdollMulticast] K2Node_CallFunction
+[FluxCameraInFluid] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 245673BB4B0E312FC70DD393C6F46D87
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@FluxCameraInFluid] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@FluxCameraInFluid] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@FluxCameraInFluid] K2Node_CallFunction
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 0752456E4B756C280FBE29902624C166
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction
+[InpActEvt_IA_Use_K2Node_EnhancedInputActionEvent_0] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1FE869A14E21A09E0F9603B2FF40579D
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_IA_Use_K2Node_EnhancedInputActionEvent_0] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Use_K2Node_EnhancedInputActionEvent_0] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_IA_Use_K2Node_EnhancedInputActionEvent_0] K2Node_CallFunction
+[InpActEvt_MouseScrollUp_K2Node_InputKeyEvent_0] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = EAF9BC7A43F879DCC80AD2A434614316
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_MouseScrollUp_K2Node_InputKeyEvent_0] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_MouseScrollUp_K2Node_InputKeyEvent_0] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_MouseScrollUp_K2Node_InputKeyEvent_0] K2Node_CallFunction
+[InpActEvt_MouseScrollDown_K2Node_InputKeyEvent_1] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 288A6C594282740628CBA3B6EE881028
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_MouseScrollDown_K2Node_InputKeyEvent_1] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_MouseScrollDown_K2Node_InputKeyEvent_1] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_MouseScrollDown_K2Node_InputKeyEvent_1] K2Node_CallFunction
+[InpActEvt_Q_K2Node_InputKeyEvent_2] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 971F586941E5F3B1AE558A95844529BD
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_Q_K2Node_InputKeyEvent_2] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_Q_K2Node_InputKeyEvent_2] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_Q_K2Node_InputKeyEvent_2] K2Node_CallFunction
+[InpActEvt_Q_K2Node_InputKeyEvent_3] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = C9F54F7443C8BC76582136A13FA071EA
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_Q_K2Node_InputKeyEvent_3] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_Q_K2Node_InputKeyEvent_3] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_Q_K2Node_InputKeyEvent_3] K2Node_CallFunction
+[InpActEvt_IA_SwimUp_K2Node_EnhancedInputActionEvent_1] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = B465FCEF4E75DCCDB7EE7A80EABE845E
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_IA_SwimUp_K2Node_EnhancedInputActionEvent_1] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_SwimUp_K2Node_EnhancedInputActionEvent_1] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_IA_SwimUp_K2Node_EnhancedInputActionEvent_1] K2Node_CallFunction
+[InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_2] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E66FAD4B4FCF3E0C723570A4523B41F8
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_2] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_2] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_2] K2Node_CallFunction
+[InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 295EB25946F78FEB4F6227B5D3A52B92
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3] K2Node_CallFunction
+[InpActEvt_IA_Move_K2Node_EnhancedInputActionEvent_4] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 4D5F9BB74677DE210668C59EB7E57A26
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_IA_Move_K2Node_EnhancedInputActionEvent_4] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Move_K2Node_EnhancedInputActionEvent_4] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_IA_Move_K2Node_EnhancedInputActionEvent_4] K2Node_CallFunction
+[InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_5] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A399BF614462E18C25314C839A185DBD
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_5] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_5] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_5] K2Node_CallFunction
+[InpActEvt_C_K2Node_InputKeyEvent_4] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 3125C13244E55B17C390F4843BCC44A9
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_C_K2Node_InputKeyEvent_4] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_C_K2Node_InputKeyEvent_4] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_C_K2Node_InputKeyEvent_4] K2Node_CallFunction
+[InpActEvt_L_K2Node_InputKeyEvent_5] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 6C4ED55746486A95563072918568CF67
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_5] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_5] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_5] K2Node_CallFunction
+[InpActEvt_L_K2Node_InputKeyEvent_6] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = C5D2638441C374B2251AB8A432A9D471
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6] K2Node_FunctionEntry (вызов: InputActionHandlerDynamicSignature__DelegateSignature @ /Script/CoreUObject.Package)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "F20F65BF474FC340DFB029A7CE211491", "Movement"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "3ABA8B9A4078F1D972384586668CB72C", "Movement"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "0B502B9A4980FD1F095CC699BEBFEB45", "Movement"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "52A8D5C1411CD244E314BE9B5E106681", "Movement"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "E4DE40DF4E52D249F00349BA55994483", "Experimental"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 1073741824
+    CustomGeneratedFunctionName = "UseInteractionServer"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "OnSetDriverMode"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "UseInteraction"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveTick"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "RagdollServer"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "RagdollMulticast"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "FluxCameraInFluid"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveBeginPlay"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_IA_Use_K2Node_EnhancedInputActionEvent_0"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_MouseScrollUp_K2Node_InputKeyEvent_0"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_MouseScrollDown_K2Node_InputKeyEvent_1"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_Q_K2Node_InputKeyEvent_2"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_Q_K2Node_InputKeyEvent_3"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_IA_SwimUp_K2Node_EnhancedInputActionEvent_1"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_2"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_IA_Move_K2Node_EnhancedInputActionEvent_4"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_5"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_C_K2Node_InputKeyEvent_4"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_L_K2Node_InputKeyEvent_5"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_L_K2Node_InputKeyEvent_6"
+    bIsIntermediateNode = True
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_DemoCharacter)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Hidden
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    вход bReset = false
+    вход NewType = NoCollision
+    вход bForce = false
+    вход bSweep = false
+    вход bTeleport = false
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_AddDelegate_0].then -> [K2Node_IfThenElse_3@SideMovement].execute
+[K2Node_CallArrayFunction_0].ReturnValue -> [K2Node_CallFunction_61].A
+[K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].Finalized -> [K2Node_FunctionResult_0@GetShape].Remove
+[K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].Interactions -> [K2Node_FunctionResult_0@GetShape].Interactions
+[K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].ReturnValue -> [K2Node_IfThenElse_0@SetVSync].Condition
+[K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].ReturnValue#2 -> [K2Node_IfThenElse_2@ForwardMovement].Condition
+[K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].ReturnValue#3 -> [K2Node_FunctionResult_0@GetShape].Ignore
+[K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].then -> [K2Node_VariableSet_5].execute
+[K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#2 -> [K2Node_CallFunction_3@ChangeCamera].execute#2
+[K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#3 -> [K2Node_FunctionResult_0@GetShape].execute
+[K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#4 -> [K2Node_FunctionResult_0@GetShape].execute#3
+[K2Node_CallFunction_11].then -> [K2Node_CallFunction_2@ForwardMovement].execute
+[K2Node_CallFunction_12@SetVSync].ReturnValue -> [K2Node_CallFunction_8@UnderWaterMovement].NewLocation
+[K2Node_CallFunction_12@SetVSync].ReturnValue -> [K2Node_PromotableOperator_0].A
+[K2Node_CallFunction_12@SetVSync].ReturnValue#2 -> [K2Node_VariableSet_1@SetVSync].NewVSync
+[K2Node_CallFunction_12@SetVSync].then -> [K2Node_CallFunction_12@SetVSync].execute
+[K2Node_CallFunction_12@SetVSync].then -> [K2Node_FunctionResult_2].execute
+[K2Node_CallFunction_14].ReturnValue_Z -> [K2Node_CallFunction_18@SetVSync].A
+[K2Node_CallFunction_16@SetVSync].ReturnValue -> [K2Node_VariableSet_2@SetVSync].Speed
+[K2Node_CallFunction_16@SetVSync].ReturnValue#2 -> [K2Node_CallFunction_18@SetVSync].InRot
+[K2Node_CallFunction_17].then -> [K2Node_CallFunction_7@ForwardMovement].execute#2
+[K2Node_CallFunction_18@SetVSync].ReturnValue -> [K2Node_CallFunction_29].Z
+[K2Node_CallFunction_18@SetVSync].ReturnValue#2 -> [K2Node_CallFunction_19@RotateDirectionalLight].Axis
+[K2Node_CallFunction_18@SetVSync].ReturnValue#3 -> [K2Node_CallFunction_12@SetVSync].A#2
+[K2Node_CallFunction_19@RotateDirectionalLight].ReturnValue -> [K2Node_CallFunction_12@SetVSync].DeltaRotation
+[K2Node_CallFunction_19@RotateDirectionalLight].ReturnValue_Z -> [K2Node_VariableSet_1@SetVSync].ZPosition
+[K2Node_CallFunction_19@RotateDirectionalLight].then -> [K2Node_CallFunction_4@SetVSync].execute#2
+[K2Node_CallFunction_19@RotateDirectionalLight].then -> [K2Node_CallFunction_9@SetVSync].execute
+[K2Node_CallFunction_21305].ReturnValue -> [K2Node_CallFunction_8733].InRot
+[K2Node_CallFunction_21305].ReturnValue -> [K2Node_CallFunction_8767].InRot
+[K2Node_CallFunction_21@UpdateRagdoll].OutHit -> [K2Node_CallFunction_22@UpdateRagdoll].Hit
+[K2Node_CallFunction_21@UpdateRagdoll].ReturnValue -> [K2Node_IfThenElse_1@SetVSync].Condition#3
+[K2Node_CallFunction_21@UpdateRagdoll].then -> [K2Node_CallFunction_22@UpdateRagdoll].execute#2
+[K2Node_CallFunction_21@UpdateRagdoll].then#2 -> [K2Node_IfThenElse_1@SetVSync].execute#3
+[K2Node_CallFunction_22@UpdateRagdoll].ImpactPoint -> [K2Node_CallFunction_25@UpdateRagdoll].InVec
+[K2Node_CallFunction_22@UpdateRagdoll].then -> [K2Node_CallFunction_45].execute
+[K2Node_CallFunction_22@UpdateRagdoll].then#2 -> [K2Node_CallFunction_4@SetVSync].execute#2
+[K2Node_CallFunction_23@UpdateRagdoll].ReturnValue -> [K2Node_CallFunction_21@UpdateRagdoll].InBoneName
+[K2Node_CallFunction_23@UpdateRagdoll].ReturnValue -> [K2Node_CallFunction_22@UpdateRagdoll].InBoneName
+[K2Node_CallFunction_23@UpdateRagdoll].ReturnValue_X -> [K2Node_CallFunction_12@SetVSync].B_X
+[K2Node_CallFunction_23@UpdateRagdoll].ReturnValue_Y -> [K2Node_CallFunction_12@SetVSync].B_Y
+[K2Node_CallFunction_25@UpdateRagdoll].Z -> [K2Node_CommutativeAssociativeBinaryOperator_0].A
+[K2Node_CallFunction_26].ReturnValue -> [K2Node_IfThenElse_1@SetVSync].Condition#2
+[K2Node_CallFunction_28].ReturnValue -> [K2Node_CallFunction_18@SetVSync].B
+[K2Node_CallFunction_29].ReturnValue -> [K2Node_CallFunction_21@UpdateRagdoll].End
+[K2Node_CallFunction_2@ForwardMovement].ReturnValue -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].bNewActive
+[K2Node_CallFunction_2@ForwardMovement].Yaw -> [K2Node_CallFunction_21305].Yaw
+[K2Node_CallFunction_2@ForwardMovement].then -> [K2Node_CallFunction_19@RotateDirectionalLight].execute
+[K2Node_CallFunction_2@ForwardMovement].then -> [K2Node_CallFunction_3@ChangeCamera].execute#2
+[K2Node_CallFunction_33].ReturnValue -> [K2Node_CallFunction_12@SetVSync].A
+[K2Node_CallFunction_33].ReturnValue -> [K2Node_CallFunction_21@UpdateRagdoll].Start
+[K2Node_CallFunction_33].ReturnValue -> [K2Node_PromotableOperator_0].B
+[K2Node_CallFunction_3@ChangeCamera].ReturnValue -> [K2Node_VariableSet_4@UnderWaterMovement].MeshTransform
+[K2Node_CallFunction_3@ChangeCamera].ReturnValue#2 -> [K2Node_VariableSet_0@SetVSync].TargetArmLength
+[K2Node_CallFunction_40].ReturnValue -> [K2Node_CallFunction_41].InBool
+[K2Node_CallFunction_41].ReturnValue -> [K2Node_CallFunction_30].InWeight
+[K2Node_CallFunction_46].then -> [K2Node_CallFunction_47].execute
+[K2Node_CallFunction_4@SetVSync].ReturnValue -> [K2Node_IfThenElse_2@ForwardMovement].Condition#2
+[K2Node_CallFunction_4@SetVSync].then -> [K2Node_CallFunction_10].execute
+[K2Node_CallFunction_4@SetVSync].then -> [K2Node_CallFunction_19@RotateDirectionalLight].execute
+[K2Node_CallFunction_4@SetVSync].then -> [K2Node_VariableSet_4@UnderWaterMovement].execute
+[K2Node_CallFunction_4@SetVSync].then#2 -> [K2Node_IfThenElse_1@SetVSync].execute#4
+[K2Node_CallFunction_50].ReturnValue -> [K2Node_VariableSet_13].CurrentSkylight
+[K2Node_CallFunction_50].ReturnValue -> [K2Node_VariableSet_8].CurrentDirectionlLight
+[K2Node_CallFunction_50].then -> [K2Node_VariableSet_13].execute
+[K2Node_CallFunction_50].then -> [K2Node_VariableSet_8].execute
+[K2Node_CallFunction_55].then -> [K2Node_CallFunction_52].execute
+[K2Node_CallFunction_58].then -> [K2Node_IfThenElse_0@SetVSync].execute
+[K2Node_CallFunction_59].then -> [K2Node_CallFunction_8@UnderWaterMovement].execute
+[K2Node_CallFunction_5@ChangeCamera].ReturnValue -> [K2Node_CallFunction_6@SetVSync].CameraDirection
+[K2Node_CallFunction_5@ChangeCamera].ReturnValue#2 -> [K2Node_CallFunction_63].A
+[K2Node_CallFunction_60].OutActors -> [K2Node_CallArrayFunction_0].TargetArray
+[K2Node_CallFunction_60].OutActors -> [K2Node_GetArrayItem_0].Array
+[K2Node_CallFunction_60].then -> [K2Node_IfThenElse_8].execute
+[K2Node_CallFunction_61].ReturnValue -> [K2Node_IfThenElse_8].Condition
+[K2Node_CallFunction_63].ReturnValue -> [K2Node_IfThenElse_7].Condition
+[K2Node_CallFunction_64].ReturnValue -> [K2Node_CallFunction_5@ChangeCamera].self#2
+[K2Node_CallFunction_64].ReturnValue -> [K2Node_CallFunction_65].self
+[K2Node_CallFunction_67].IsLight -> [K2Node_IfThenElse_1@SetVSync].Condition
+[K2Node_CallFunction_67].then -> [K2Node_IfThenElse_1@SetVSync].execute
+[K2Node_CallFunction_6@SetVSync].Direction -> [K2Node_CallFunction_260].WorldDirection
+[K2Node_CallFunction_6@SetVSync].ReturnValue -> [K2Node_VariableSet_1@SetVSync].Depth
+[K2Node_CallFunction_6@SetVSync].ReturnValue#2 -> [K2Node_CallFunction_18@SetVSync].self
+[K2Node_CallFunction_6@SetVSync].ReturnValue#2 -> [K2Node_CallFunction_4@SetVSync].self#3
+[K2Node_CallFunction_6@SetVSync].ReturnValue_X -> [K2Node_CallFunction_29].X
+[K2Node_CallFunction_6@SetVSync].ReturnValue_Y -> [K2Node_CallFunction_29].Y
+[K2Node_CallFunction_6@SetVSync].then -> [K2Node_CallFunction_7@ForwardMovement].execute
+[K2Node_CallFunction_6@SetVSync].then#2 -> [K2Node_CallFunction_4@SetVSync].execute#3
+[K2Node_CallFunction_6@SetVSync].then#2 -> [K2Node_VariableSet_1@SetVSync].execute#3
+[K2Node_CallFunction_7@ForwardMovement].ReturnValue -> [K2Node_CallFunction_260].ScaleValue
+[K2Node_CallFunction_7@ForwardMovement].then -> [K2Node_CallFunction_6@SetVSync].execute
+[K2Node_CallFunction_8160].ReturnValue -> [K2Node_CallFunction_2@ForwardMovement].InRot
+[K2Node_CallFunction_8427].then -> [K2Node_CallFunction_8428].execute
+[K2Node_CallFunction_8733].ReturnValue -> [K2Node_CallFunction_260].WorldDirection
+[K2Node_CallFunction_8767].ReturnValue -> [K2Node_CallFunction_7445].WorldDirection
+[K2Node_CallFunction_8@UnderWaterMovement].ReturnValue_Z -> [K2Node_CallFunction_6@SetVSync].B
+[K2Node_CallFunction_8@UnderWaterMovement].then -> [K2Node_VariableSet_2@SetVSync].execute
+[K2Node_CallFunction_9@SetVSync].then -> [K2Node_CallFunction_17].execute
+[K2Node_CommutativeAssociativeBinaryOperator_0].ReturnValue -> [K2Node_VariableSet_1@SetVSync].ZPosition
+[K2Node_CommutativeAssociativeBinaryOperator_1].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_2].A
+[K2Node_CommutativeAssociativeBinaryOperator_2].ReturnValue -> [K2Node_CallFunction_12@SetVSync].Alpha
+[K2Node_CommutativeAssociativeBinaryOperator_9].ReturnValue -> [K2Node_VariableSet_3].ArmLength
+[K2Node_CustomEvent_0].Enabled -> [K2Node_CallFunction_21@UpdateRagdoll].Enabled
+[K2Node_CustomEvent_0].then -> [K2Node_CallFunction_21@UpdateRagdoll].execute
+[K2Node_CustomEvent_1].Enabled -> [K2Node_CallFunction_13].Enabled
+[K2Node_CustomEvent_1].then -> [K2Node_CallFunction_13].execute
+[K2Node_CustomEvent_2].then -> [K2Node_CallFunction_5@ChangeCamera].execute
+[K2Node_CustomEvent_3].NewVehicle -> [K2Node_CallFunction_4@SetVSync].Vehicle
+[K2Node_CustomEvent_3].OutputDelegate -> [K2Node_AddDelegate_0].Delegate
+[K2Node_CustomEvent_3].then -> [K2Node_CallFunction_4@SetVSync].execute
+[K2Node_CustomEvent_4].then -> [K2Node_CallDelegate_1].execute
+[K2Node_EnhancedInputAction_0].Completed -> [K2Node_CallFunction_9386].execute
+[K2Node_EnhancedInputAction_0].Triggered -> [K2Node_CallFunction_1193].execute
+[K2Node_EnhancedInputAction_1].ActionValue_X -> [K2Node_CallFunction_8@UnderWaterMovement].Movement
+[K2Node_EnhancedInputAction_1].ActionValue_Y -> [K2Node_CallFunction_59].Movement
+[K2Node_EnhancedInputAction_1].Triggered -> [K2Node_CallFunction_59].execute
+[K2Node_EnhancedInputAction_2].Triggered -> [K2Node_CallFunction_3@ChangeCamera].execute
+[K2Node_EnhancedInputAction_3].ActionValue -> [K2Node_CallFunction_74].Direction
+[K2Node_EnhancedInputAction_3].Triggered -> [K2Node_CallFunction_74].execute
+[K2Node_EnhancedInputAction_4].ActionValue_X -> [K2Node_CallFunction_67].X
+[K2Node_EnhancedInputAction_4].ActionValue_X -> [K2Node_CallFunction_8427].Val
+[K2Node_EnhancedInputAction_4].ActionValue_Y -> [K2Node_CallFunction_67].Y
+[K2Node_EnhancedInputAction_4].ActionValue_Y -> [K2Node_Knot_0@UpdateCamera].InputPin
+[K2Node_EnhancedInputAction_4].Triggered -> [K2Node_CallFunction_67].execute
+[K2Node_Event_0].DeltaSeconds -> [K2Node_CallFunction_58].DeltaTime
+[K2Node_Event_0].DeltaSeconds -> [K2Node_Knot_1].InputPin
+[K2Node_Event_0].then -> [K2Node_CallFunction_58].execute
+[K2Node_Event_1].then -> [K2Node_ExecutionSequence_0@SetVSync].execute
+[K2Node_Event_3].Under -> [K2Node_CallFunction_40].A
+[K2Node_ExecutionSequence_0@SetVSync].then_0 -> [K2Node_AddDelegate_0].execute
+[K2Node_ExecutionSequence_0@SetVSync].then_0#2 -> [K2Node_CallFunction_21@UpdateRagdoll].execute#3
+[K2Node_ExecutionSequence_0@SetVSync].then_0#3 -> [K2Node_SwitchInteger_0].execute
+[K2Node_ExecutionSequence_0@SetVSync].then_1 -> [K2Node_CallFunction_6@SetVSync].execute
+[K2Node_ExecutionSequence_0@SetVSync].then_1#2 -> [K2Node_Knot_0@UpdateCamera].InputPin#2
+[K2Node_ExecutionSequence_0@SetVSync].then_1#3 -> [K2Node_CallFunction_6@SetVSync].execute#2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ActionValue -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ActionValue
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ActionValue#2 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ActionValue_1
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ActionValue#3 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ActionValue_2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ActionValue#4 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ActionValue_3
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ActionValue#5 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ActionValue_4
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ActionValue#6 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ActionValue_5
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Copmponent -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].A
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].DeltaSeconds -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_Event_DeltaSeconds
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].DeltaTime -> [K2Node_CommutativeAssociativeBinaryOperator_1].A
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].DeltaTime#2 -> [K2Node_Knot_0@UpdateCamera].InputPin#3
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ElapsedTime -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ElapsedTime
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ElapsedTime#2 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ElapsedTime_1
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ElapsedTime#3 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ElapsedTime_2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ElapsedTime#4 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ElapsedTime_3
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ElapsedTime#5 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ElapsedTime_4
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].ElapsedTime#6 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_ElapsedTime_5
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Enabled -> [K2Node_CallFunction_26].A
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Enabled#2 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_CustomEvent_Enabled
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Enabled#3 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_CustomEvent_Enabled_1
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Iteration -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].Iteration
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Key -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_InputKeyEvent_Key
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Key#2 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_InputKeyEvent_Key_1
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Key#3 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_InputKeyEvent_Key_2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Key#4 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_InputKeyEvent_Key_3
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Key#5 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_InputKeyEvent_Key_4
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Key#6 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_InputKeyEvent_Key_5
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Key#7 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_InputKeyEvent_Key_6
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Modifiers -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].Modifiers
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Movement -> [K2Node_CallFunction_7445].ScaleValue
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].NewVehicle -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_CustomEvent_NewVehicle
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Ratio -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].TimeRatio
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].SourceAction -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_SourceAction
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].SourceAction#2 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_SourceAction_1
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].SourceAction#3 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_SourceAction_2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].SourceAction#4 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_SourceAction_3
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].SourceAction#5 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_SourceAction_4
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].SourceAction#6 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_SourceAction_5
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Target -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_CustomEvent_Target
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].TriggeredTime -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_TriggeredTime
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].TriggeredTime#2 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_TriggeredTime_1
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].TriggeredTime#3 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_TriggeredTime_2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].TriggeredTime#4 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_TriggeredTime_3
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].TriggeredTime#5 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_TriggeredTime_4
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].TriggeredTime#6 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_EnhancedInputActionEvent_TriggeredTime_5
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Under -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].K2Node_Event_Under
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].Vehicle -> [K2Node_MacroInstance_0].InputObject
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then -> [K2Node_IfThenElse_1@SetVSync].execute#2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#10 -> [K2Node_CallFunction_60].execute
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#11 -> [K2Node_VariableSet_10].execute
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#12 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#13 -> [K2Node_FunctionResult_0@GetShape].execute#2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#14 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#3
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#15 -> [K2Node_FunctionResult_0@GetShape].execute#4
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#16 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#4
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#17 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#18 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#19 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#3
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#2 -> [K2Node_MacroInstance_0].exec
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#20 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#4
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#21 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#5
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#22 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#6
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#23 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#11
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#24 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#7
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#25 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#8
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#26 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#9
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#27 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#10
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#28 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#11
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#29 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#12
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#3 -> [K2Node_IfThenElse_2@ForwardMovement].execute
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#30 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#13
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#31 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#14
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#32 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#15
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#33 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#16
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#34 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#17
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#35 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#18
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#36 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#19
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#4 -> [K2Node_IfThenElse_0@SetVSync].execute#4
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#5 -> [K2Node_IfThenElse_2@ForwardMovement].execute#2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#6 -> [K2Node_IfThenElse_2@ForwardMovement].execute#2
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#7 -> [K2Node_VariableSet_0@SetVSync].execute
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#8 -> [K2Node_MacroInstance_4].exec
+[K2Node_FunctionEntry_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#9 -> [K2Node_ExecutionSequence_0@SetVSync].execute#3
+[K2Node_GetArrayItem_0].Output -> [K2Node_CallFunction_63].B
+[K2Node_GetArrayItem_0].Output -> [K2Node_CallFunction_65].NewViewTarget
+[K2Node_IfThenElse_0@SetVSync].else -> [K2Node_CallFunction_4@SetVSync].execute#2
+[K2Node_IfThenElse_0@SetVSync].else#2 -> [K2Node_VariableSet_2@SetVSync].execute#2
+[K2Node_IfThenElse_0@SetVSync].then -> [K2Node_CallFunction_22@UpdateRagdoll].execute
+[K2Node_IfThenElse_0@SetVSync].then#2 -> [K2Node_CallFunction_4@SetVSync].execute#2
+[K2Node_IfThenElse_0@SetVSync].then#3 -> [K2Node_ExecutionSequence_0@SetVSync].execute#2
+[K2Node_IfThenElse_0@SetVSync].then#4 -> [K2Node_VariableSet_1@SetVSync].execute#2
+[K2Node_IfThenElse_0@SetVSync].then#5 -> [K2Node_CallFunction_6@SetVSync].execute#2
+[K2Node_IfThenElse_1@SetVSync].else -> [K2Node_CallFunction_8427].execute
+[K2Node_IfThenElse_1@SetVSync].else#2 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute
+[K2Node_IfThenElse_1@SetVSync].else#3 -> [K2Node_VariableSet_1@SetVSync].execute
+[K2Node_IfThenElse_1@SetVSync].else#4 -> [K2Node_CallFunction_9@SetVSync].execute#2
+[K2Node_IfThenElse_1@SetVSync].then -> [K2Node_VariableGet_16@UpdateRagdoll].execute
+[K2Node_IfThenElse_1@SetVSync].then#2 -> [K2Node_VariableSet_1@SetVSync].execute
+[K2Node_IfThenElse_1@SetVSync].then#3 -> [K2Node_CallFunction_9@SetVSync].execute#2
+[K2Node_IfThenElse_2@ForwardMovement].else -> [K2Node_CallFunction_260].execute
+[K2Node_IfThenElse_2@ForwardMovement].else -> [K2Node_CallFunction_7445].execute
+[K2Node_IfThenElse_2@ForwardMovement].else -> [K2Node_IfThenElse_2@ForwardMovement].execute#2
+[K2Node_IfThenElse_2@ForwardMovement].then -> [K2Node_IfThenElse_0@SetVSync].execute#3
+[K2Node_IfThenElse_2@ForwardMovement].then#2 -> [K2Node_CallFunction_260].execute
+[K2Node_IfThenElse_3@SideMovement].then -> [K2Node_CallFunction_25@UpdateRagdoll].execute
+[K2Node_IfThenElse_7].else -> [K2Node_CallFunction_65].execute
+[K2Node_IfThenElse_7].then -> [K2Node_CallFunction_65].execute
+[K2Node_IfThenElse_8].then -> [K2Node_IfThenElse_7].execute
+[K2Node_InputKey_1].Pressed -> [K2Node_CallFunction_20].execute
+[K2Node_InputKey_1].Released -> [K2Node_CallFunction_20].execute
+[K2Node_InputKey_10].Pressed -> [K2Node_VariableSet_3].execute
+[K2Node_InputKey_2].Pressed -> [K2Node_CallFunction_75].execute
+[K2Node_InputKey_23].Pressed -> [K2Node_CallFunction_50].execute
+[K2Node_InputKey_23].Released -> [K2Node_VariableSet_8].execute
+[K2Node_InputKey_9].Pressed -> [K2Node_VariableSet_3].execute
+[K2Node_Knot_0@UpdateCamera].OutputPin -> [K2Node_CallFunction_8428].Val
+[K2Node_Knot_0@UpdateCamera].OutputPin#2 -> [K2Node_CallFunction_8@UnderWaterMovement].execute#2
+[K2Node_Knot_0@UpdateCamera].OutputPin#3 -> [K2Node_CallFunction_3@ChangeCamera].DeltaTime
+[K2Node_Knot_1].OutputPin -> [K2Node_Knot_2].InputPin
+[K2Node_Knot_2].OutputPin -> [K2Node_CallFunction_45].DeltaTime
+[K2Node_MacroInstance_0].Is Not Valid -> [K2Node_CallFunction_11].execute
+[K2Node_MacroInstance_0].Is Valid -> [K2Node_CallFunction_11].execute
+[K2Node_MacroInstance_4].Is Not Valid -> [K2Node_FunctionResult_2].execute
+[K2Node_MacroInstance_4].Is Valid -> [K2Node_CallFunction_12@SetVSync].execute
+[K2Node_MakeArray_0].Array -> [K2Node_CallFunction_21@UpdateRagdoll].ObjectTypes
+[K2Node_PromotableOperator_0].ReturnValue -> [K2Node_PromotableOperator_1].A
+[K2Node_PromotableOperator_1].ReturnValue -> [K2Node_VariableSet_2@SetVSync].Velocity
+[K2Node_Self_0@ChangeCamera].self -> [K2Node_CallFunction_65].NewViewTarget
+[K2Node_Self_2].self -> [K2Node_CallDelegate_1].Driver
+[K2Node_Self_2].self -> [K2Node_CallFunction_3@ChangeCamera].Target
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#5
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#10 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#15
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#11 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#16
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#12 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#17
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#13 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#18
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#14 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#19
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#15 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#20
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#16 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#21
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#17 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#22
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#18 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#23
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#19 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#24
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#2 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#6
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#3 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#7
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#4 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#8
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#5 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#9
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#6 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#10
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#7 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#12
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#8 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#13
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_L_K2Node_InputKeyEvent_6].then#9 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].execute#14
+[K2Node_SwitchInteger_0].-1 -> [K2Node_VariableSet_1@SetVSync].execute#3
+[K2Node_SwitchInteger_0].0 -> [K2Node_IfThenElse_0@SetVSync].execute#5
+[K2Node_SwitchInteger_0].1 -> [K2Node_VariableSet_1@SetVSync].execute#3
+[K2Node_VariableGet_0@IgnoreModifierOverlap].BP_FluxModifierForceComponent -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].self
+[K2Node_VariableGet_0@IgnoreModifierOverlap].BP_FluxModifierForceComponent#2 -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].self#2
+[K2Node_VariableGet_0@IgnoreModifierOverlap].CapsuleComponent -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].B
+[K2Node_VariableGet_0@IgnoreModifierOverlap].CharacterMovement -> [K2Node_VariableSet_4@UnderWaterMovement].self
+[K2Node_VariableGet_10@UnderWaterMovement].BP_FluxInteraction -> [K2Node_CallFunction_11].self
+[K2Node_VariableGet_10@UnderWaterMovement].Mesh -> [K2Node_CallFunction_3@ChangeCamera].self
+[K2Node_VariableGet_10@UnderWaterMovement].Mesh -> [K2Node_CallFunction_7@ForwardMovement].self
+[K2Node_VariableGet_10@UnderWaterMovement].SwimmingState -> [K2Node_IfThenElse_0@SetVSync].Condition#4
+[K2Node_VariableGet_11@UpdateRagdoll].AutoRagdoll -> [K2Node_IfThenElse_3@SideMovement].Condition
+[K2Node_VariableGet_11@UpdateRagdoll].MeshTransform -> [K2Node_CallFunction_7@ForwardMovement].NewTransform
+[K2Node_VariableGet_12@UpdateRagdoll].Camera -> [K2Node_CallFunction_30].self
+[K2Node_VariableGet_12@UpdateRagdoll].CapsuleComponent -> [K2Node_CallFunction_33].self
+[K2Node_VariableGet_12@UpdateRagdoll].CapsuleComponent -> [K2Node_CallFunction_8@UnderWaterMovement].self
+[K2Node_VariableGet_12@UpdateRagdoll].CapsuleComponent -> [K2Node_VariableGet_18@UpdateRagdoll].self#2
+[K2Node_VariableGet_12@UpdateRagdoll].Mesh -> [K2Node_CallFunction_17].self
+[K2Node_VariableGet_13@RotateDirectionalLight].CapsuleComponent -> [K2Node_CallFunction_17].Parent
+[K2Node_VariableGet_15@UpdateRagdoll].Mesh -> [K2Node_CallFunction_23@UpdateRagdoll].self
+[K2Node_VariableGet_15@UpdateRagdoll].PostProcess -> [K2Node_CallFunction_30].InBlendableObject
+[K2Node_VariableGet_16@UpdateRagdoll].CurrentSkylight -> [K2Node_VariableGet_18@UpdateRagdoll].self
+[K2Node_VariableGet_16@UpdateRagdoll].ZPosition -> [K2Node_CallFunction_12@SetVSync].B_Z
+[K2Node_VariableGet_16@UpdateRagdoll].then -> [K2Node_CallFunction_55].execute
+[K2Node_VariableGet_17@FirstPersonMode].CameraArm -> [K2Node_VariableSet_10].self
+[K2Node_VariableGet_17@FirstPersonMode].IsRagdoll -> [K2Node_CallFunction_26].B
+[K2Node_VariableGet_18@UpdateRagdoll].CapsuleHalfHeight -> [K2Node_CallFunction_28].A
+[K2Node_VariableGet_18@UpdateRagdoll].CapsuleHalfHeight -> [K2Node_CommutativeAssociativeBinaryOperator_0].B
+[K2Node_VariableGet_18@UpdateRagdoll].LightComponent -> [K2Node_CallFunction_52].self
+[K2Node_VariableGet_19@UpdateRagdoll].CapsuleComponent -> [K2Node_CallFunction_19@RotateDirectionalLight].self
+[K2Node_VariableGet_19@UpdateRagdoll].CapsuleComponent#2 -> [K2Node_VariableGet_9@UpdateCamera].self
+[K2Node_VariableGet_1@SetVSync].BP_FluxDriver -> [K2Node_AddDelegate_0].self
+[K2Node_VariableGet_1@SetVSync].Camera -> [K2Node_CallFunction_5@ChangeCamera].self
+[K2Node_VariableGet_1@SetVSync].CapsuleComponent -> [K2Node_CallFunction_19@RotateDirectionalLight].self
+[K2Node_VariableGet_1@SetVSync].CapsuleComponent -> [K2Node_CallFunction_3@ChangeCamera].self#2
+[K2Node_VariableGet_1@SetVSync].IsRagdoll -> [K2Node_IfThenElse_0@SetVSync].Condition#3
+[K2Node_VariableGet_1@SetVSync].NewVSync -> [K2Node_CallFunction_4@SetVSync].bEnable
+[K2Node_VariableGet_1@SetVSync].NewVSync -> [K2Node_IfThenElse_1@SetVSync].Condition#4
+[K2Node_VariableGet_1@SetVSync].X -> [K2Node_CallFunction_12@SetVSync].DeltaRotation_Yaw
+[K2Node_VariableGet_20@FirstPersonMode].Mesh -> [K2Node_CallFunction_46].self
+[K2Node_VariableGet_21@FirstPersonMode].Camera -> [K2Node_CallFunction_47].self
+[K2Node_VariableGet_21@FirstPersonMode].CharacterMovement -> [K2Node_VariableSet_2@SetVSync].self
+[K2Node_VariableGet_22@FirstPersonMode].CameraArm -> [K2Node_VariableSet_14].self
+[K2Node_VariableGet_23].DeltaTime -> [K2Node_PromotableOperator_1].B
+[K2Node_VariableGet_25].ArmLength -> [K2Node_CommutativeAssociativeBinaryOperator_9].A
+[K2Node_VariableGet_28].BP_FluxSwimming -> [K2Node_CallFunction_74].self
+[K2Node_VariableGet_2@SetVSync].BP_FluxData -> [K2Node_VariableGet_3@GetInteractions].self
+[K2Node_VariableGet_2@SetVSync].BP_FluxDriver -> [K2Node_CallDelegate_1].self
+[K2Node_VariableGet_2@SetVSync].CharacterMovement -> [K2Node_CallFunction_4@SetVSync].self#2
+[K2Node_VariableGet_2@SetVSync].Override -> [K2Node_SwitchInteger_0].Selection
+[K2Node_VariableGet_2@SetVSync].Y -> [K2Node_CallFunction_19@RotateDirectionalLight].Angle
+[K2Node_VariableGet_34].Enabled -> [K2Node_CallFunction_2@ForwardMovement].A
+[K2Node_VariableGet_34].Enabled -> [K2Node_IfThenElse_0@SetVSync].Condition#2
+[K2Node_VariableGet_34].Enabled -> [K2Node_VariableSet_5].IsRagdoll
+[K2Node_VariableGet_3@GetInteractions].BP_FluxInteraction -> [K2Node_CallFunction_0@InpActEvt_L_K2Node_InputKeyEvent_6].self#3
+[K2Node_VariableGet_3@GetInteractions].BP_FluxSwimming -> [K2Node_CallFunction_6@SetVSync].self
+[K2Node_VariableGet_3@GetInteractions].FluxSurfaceLocation_Z -> [K2Node_CallFunction_6@SetVSync].A
+[K2Node_VariableGet_3@GetInteractions].Mesh -> [K2Node_CallFunction_3@ChangeCamera].self#2
+[K2Node_VariableGet_3@GetInteractions].Mesh -> [K2Node_CallFunction_4@SetVSync].self
+[K2Node_VariableGet_4@RotateDirectionalLight].CurrentDirectionlLight -> [K2Node_CallFunction_12@SetVSync].self
+[K2Node_VariableGet_4@RotateDirectionalLight].CurrentDirectionlLight -> [K2Node_MacroInstance_4].InputObject
+[K2Node_VariableGet_4@RotateDirectionalLight].Mesh -> [K2Node_CallFunction_8@UnderWaterMovement].self#2
+[K2Node_VariableGet_4@RotateDirectionalLight].Movement -> [K2Node_CallFunction_260].ScaleValue
+[K2Node_VariableGet_4@RotateDirectionalLight].Movement -> [K2Node_CallFunction_7@ForwardMovement].B
+[K2Node_VariableGet_53].CameraArm -> [K2Node_VariableGet_5@UpdateCamera].self
+[K2Node_VariableGet_53].CameraArm -> [K2Node_VariableSet_0@SetVSync].self
+[K2Node_VariableGet_5@UpdateCamera].Depth -> [K2Node_CallFunction_16@SetVSync].Value
+[K2Node_VariableGet_5@UpdateCamera].Mesh -> [K2Node_CallFunction_9@SetVSync].self
+[K2Node_VariableGet_5@UpdateCamera].TargetArmLength -> [K2Node_CallFunction_3@ChangeCamera].Current
+[K2Node_VariableGet_6@RotateDirectionalLight].Camera -> [K2Node_CallFunction_16@SetVSync].self
+[K2Node_VariableGet_7@UnderWaterMovement].Mesh -> [K2Node_CallFunction_21@UpdateRagdoll].self
+[K2Node_VariableGet_7@UnderWaterMovement].Mesh -> [K2Node_CallFunction_22@UpdateRagdoll].self
+[K2Node_VariableGet_7@UnderWaterMovement].Mesh -> [K2Node_CallFunction_4@SetVSync].self
+[K2Node_VariableGet_7@UnderWaterMovement].Speed -> [K2Node_VariableSet_4@UnderWaterMovement].MaxWalkSpeed
+[K2Node_VariableGet_8@UpdateRagdoll].CapsuleComponent -> [K2Node_CallFunction_10].self
+[K2Node_VariableGet_9@UpdateCamera].ArmLength -> [K2Node_CallFunction_3@ChangeCamera].Target#2
+[K2Node_VariableGet_9@UpdateCamera].BP_FluxSwimming -> [K2Node_VariableGet_10@UnderWaterMovement].self
+[K2Node_VariableGet_9@UpdateCamera].CapsuleRadius -> [K2Node_CallFunction_21@UpdateRagdoll].Radius
+[K2Node_VariableGet_9@UpdateCamera].CapsuleRadius -> [K2Node_CallFunction_28].B
+[K2Node_VariableGet_9@UpdateCamera].CharacterMovement -> [K2Node_CallFunction_2@ForwardMovement].self
+[K2Node_VariableGet_9@UpdateCamera].IsRagdoll -> [K2Node_IfThenElse_2@ForwardMovement].Condition#2
+[K2Node_VariableSet_10].then -> [K2Node_VariableSet_12].execute
+[K2Node_VariableSet_12].then -> [K2Node_VariableSet_14].execute
+[K2Node_VariableSet_14].then -> [K2Node_CallFunction_46].execute
+[K2Node_VariableSet_1@SetVSync].then -> [K2Node_VariableSet_2@SetVSync].execute#2
+[K2Node_VariableSet_2@SetVSync].then -> [K2Node_VariableSet_4@UnderWaterMovement].execute#2
+[K2Node_VariableSet_4@UnderWaterMovement].then -> [K2Node_CallFunction_21@UpdateRagdoll].execute#2
+[K2Node_VariableSet_5].then -> [K2Node_IfThenElse_0@SetVSync].execute#2
+[K2Node_VariableSet_8].then -> [K2Node_CallFunction_50].execute

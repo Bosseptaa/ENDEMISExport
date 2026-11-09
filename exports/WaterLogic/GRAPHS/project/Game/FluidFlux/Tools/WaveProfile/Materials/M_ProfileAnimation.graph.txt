@@ -1,0 +1,158 @@
+﻿# /Game/FluidFlux/Tools/WaveProfile/Materials/M_ProfileAnimation
+# класс: Material; происхождение: проект; узлов: 32; связей: 63; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:75
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_ProfileAnimation] Material
+    bTangentSpaceNormal = False
+    EditorX = -336
+    EditorY = 64
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = BE8CF555AE8703C758E70084ADB21A14
+    ReferencedTextureGuids(0) = 61EF94AD4078B928B171198909D4D7B6
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+    ParameterOverviewExpansion = (("-12Global FluxWorld", True))
+    LightingGuid = 2AC7C7564C2B261B015567866872AC12
+    EditorOnlyData <- M_ProfileAnimationEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_ProfileAnimationEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="Coastline")
+    ParameterGroupData(1) = (GroupName="Coastline")
+    BaseColor <- MaterialExpressionPixelNormalWS_0
+    Specular <- MaterialExpressionConstant_2
+    Roughness <- MaterialExpressionConstant_3
+    Normal <- MaterialExpressionVertexInterpolator_0
+    WorldPositionOffset <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionObjectPositionWS_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionConstant3Vector_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionCrossProduct_0
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionConstant3Vector_9
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionAppendVector_2
+    ExpressionCollection <- MaterialExpressionConstant_7
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    A <- MaterialExpressionConstant3Vector_0
+    B <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    A <- MaterialExpressionObjectPositionWS_0
+    B <- MaterialExpressionConstant3Vector_2
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    A <- MaterialExpressionScalarParameter_3
+    B <- MaterialExpressionConstant_6
+[MaterialExpressionAppendVector_2] MaterialExpressionAppendVector
+    A <- MaterialExpressionConstant_7
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.250000
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 0.300000
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+[MaterialExpressionConstant_7] MaterialExpressionConstant
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.010000,B=0.020000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionConstant3Vector_2] MaterialExpressionConstant3Vector
+    Constant = (R=500.000000,G=500.000000,B=0.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionConstant3Vector_9] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=1.000000,B=0.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionCrossProduct_0] MaterialExpressionCrossProduct
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionSubtract_2
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/WaveProfile/Functions/MF_SampleWorldProfile.MF_SampleWorldProfile'"
+    FunctionInputs(1) = (ExpressionInputId=65F64F774C906DBAEACF2CB424D9A696,Input=(InputName="Offset"))
+    FunctionOutputs(0) = (ExpressionOutputId=BE33710F4526967E36A377AC651D45BE,Output=(OutputName="Foam"))
+    FunctionOutputs(1) = (ExpressionOutputId=EDD082634E7F5F7194DA9F9252E2C6A3,Output=(OutputName="PositionOffset"))
+    FunctionOutputs(2) = (ExpressionOutputId=6895EED74B5788EC0EBBC6BC2EA9FB42,Output=(OutputName="Offset"))
+    Outputs(0) = (OutputName="Foam")
+    Outputs(1) = (OutputName="PositionOffset")
+    Outputs(2) = (OutputName="Offset")
+    FunctionInputs(0) <- MaterialExpressionReroute_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/WaveProfile/Functions/MF_SampleWorldProfile.MF_SampleWorldProfile'"
+    FunctionOutputs(0) = (ExpressionOutputId=BE33710F4526967E36A377AC651D45BE,Output=(OutputName="Foam"))
+    FunctionOutputs(1) = (ExpressionOutputId=EDD082634E7F5F7194DA9F9252E2C6A3,Output=(OutputName="PositionOffset"))
+    FunctionOutputs(2) = (ExpressionOutputId=6895EED74B5788EC0EBBC6BC2EA9FB42,Output=(OutputName="Offset"))
+    Outputs(0) = (OutputName="Foam")
+    Outputs(1) = (OutputName="PositionOffset")
+    Outputs(2) = (OutputName="Offset")
+    FunctionInputs(0) <- MaterialExpressionReroute_0
+    FunctionInputs(1) <- MaterialExpressionAppendVector_1
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/WaveProfile/Functions/MF_SampleWorldProfile.MF_SampleWorldProfile'"
+    FunctionOutputs(0) = (ExpressionOutputId=BE33710F4526967E36A377AC651D45BE,Output=(OutputName="Foam"))
+    FunctionOutputs(1) = (ExpressionOutputId=EDD082634E7F5F7194DA9F9252E2C6A3,Output=(OutputName="PositionOffset"))
+    FunctionOutputs(2) = (ExpressionOutputId=6895EED74B5788EC0EBBC6BC2EA9FB42,Output=(OutputName="Offset"))
+    Outputs(0) = (OutputName="Foam")
+    Outputs(1) = (OutputName="PositionOffset")
+    Outputs(2) = (OutputName="Offset")
+    FunctionInputs(0) <- MaterialExpressionReroute_0
+    FunctionInputs(1) <- MaterialExpressionAppendVector_2
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_FlatShadingNormal.MF_FlatShadingNormal'"
+    FunctionInputs(0) = (ExpressionInputId=16153D63494C3983E2AB58B72A599955,Input=(OutputIndex=-1,InputName="In"))
+    FunctionOutputs(0) = (ExpressionOutputId=9E84770848DBF25140DEC78521BD3653,Output=(OutputName="Normal"))
+    Outputs(0) = (OutputName="Normal")
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionConstant3Vector_9
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionCrossProduct_0
+[MaterialExpressionObjectPositionWS_0] MaterialExpressionObjectPositionWS
+[MaterialExpressionPixelNormalWS_0] MaterialExpressionPixelNormalWS
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Input <- MaterialExpressionMultiply_7
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Input <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 24.000000
+    ParameterName = "CoastlineNormalRange"
+    ExpressionGUID = C379A26C4546E879BC5122837BAEADD3
+    Group = "Coastline"
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = 24.000000
+    ParameterName = "CoastlineNormalRange"
+    ExpressionGUID = 86111CDF4A8578A530F0EE8BDBA9CDF2
+    Group = "Coastline"
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    A <- MaterialExpressionWorldPosition_0
+    B <- MaterialExpressionAdd_3
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionReroute_2
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    A <- MaterialExpressionMaterialFunctionCall_3
+    B <- MaterialExpressionReroute_2
+[MaterialExpressionVertexInterpolator_0] MaterialExpressionVertexInterpolator
+    Input <- MaterialExpressionNormalize_0
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

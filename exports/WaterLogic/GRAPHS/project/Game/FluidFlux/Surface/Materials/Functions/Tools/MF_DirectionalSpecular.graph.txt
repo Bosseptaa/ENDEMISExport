@@ -1,0 +1,98 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Tools/MF_DirectionalSpecular
+# класс: MaterialFunction; происхождение: проект; узлов: 19; связей: 34; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:37
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_DirectionalSpecular] MaterialFunction
+    описание: Calculates directional light specular effect
+    LibraryCategoriesText(0) = NSLOCTEXT("", "59B305CF464620731D781C94400BEF4D", "ImaginaryBlend")
+    StateId = DEBB6FF2444B8DC5DD2721B3D4776CAA
+    CombinedInputTypes = 4
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_DirectionalSpecularEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_DirectionalSpecularEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionReflectionVectorWS_1
+    ExpressionCollection <- MaterialExpressionNormalize_1
+    ExpressionCollection <- MaterialExpressionDotProduct_1
+    ExpressionCollection <- MaterialExpressionNormalize_2
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_2
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionDotProduct_2
+    ExpressionCollection <- MaterialExpressionNormalize_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionPower_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_0
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    A <- MaterialExpressionCameraVectorWS_2
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionCameraVectorWS_2] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=1.000000,B=1.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+[MaterialExpressionDotProduct_1] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    A <- MaterialExpressionNormalize_2
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionDotProduct_2] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    A <- MaterialExpressionNormalize_3
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "SunDirection"
+    Id = EEF421614DF291C163A06AB8066FA73A
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    Preview <- MaterialExpressionNormalize_1
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Normal"
+    Id = 20E3B6B749DF92E6D9486DBAABE7A71E
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    Preview <- MaterialExpressionPixelNormalWS_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Reflected"
+    bLastPreviewed = True
+    Id = 0356188A4A400D8F88CFB7B55F85CE3E
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    A <- MaterialExpressionDotProduct_1
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "HalfVector"
+    bLastPreviewed = True
+    Id = B7E622214D0863AA4545C3A19073B269
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    A <- MaterialExpressionDotProduct_2
+[MaterialExpressionMax_0] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    A <- MaterialExpressionFunctionOutput_1
+[MaterialExpressionNormalize_1] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    VectorInput <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionNormalize_2] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    VectorInput <- MaterialExpressionReflectionVectorWS_1
+[MaterialExpressionNormalize_3] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    VectorInput <- MaterialExpressionAdd_4
+[MaterialExpressionPixelNormalWS_0] MaterialExpressionPixelNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+[MaterialExpressionPower_2] MaterialExpressionPower
+    ConstExponent = 32.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    Base <- MaterialExpressionMax_0
+[MaterialExpressionReflectionVectorWS_1] MaterialExpressionReflectionVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_DirectionalSpecular'"
+    CustomWorldNormal <- MaterialExpressionFunctionInput_2
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+    PrimitiveType = TPT_Plane
+    bUserModifiedShape = True
+
+## СВЯЗИ

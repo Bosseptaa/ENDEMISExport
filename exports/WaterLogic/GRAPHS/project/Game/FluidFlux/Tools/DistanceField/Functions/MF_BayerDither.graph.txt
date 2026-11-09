@@ -1,0 +1,181 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Functions/MF_BayerDither
+# класс: MaterialFunction; происхождение: проект; узлов: 34; связей: 69; HLSL: 3; причина: папка /Game/FluidFlux; HLSL:3
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_BayerDither] MaterialFunction
+    StateId = 22BA08AE4DE7579A4709D989C28C3FC7
+    CombinedInputTypes = 527
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_BayerDitherEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_BayerDitherEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionViewProperty_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionScreenPosition_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionConstant2Vector_3
+    ExpressionCollection <- MaterialExpressionStaticSwitch_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionLength_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionStaticSwitch_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+    ExpressionCollection <- MaterialExpressionCustom_2
+    ExpressionCollection <- MaterialExpressionScreenPosition_1
+    ExpressionCollection <- MaterialExpressionCustom_5
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionSkyAtmosphereLightDirection_0
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionQualitySwitch_1
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    A <- MaterialExpressionStaticSwitch_0
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    A <- MaterialExpressionViewProperty_0
+    B <- MaterialExpressionViewProperty_0
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+[MaterialExpressionConstant2Vector_3] MaterialExpressionConstant2Vector
+    R = -0.750000
+    G = 0.250000
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: Dither 4
+    OutputType = CMOT_Float1
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    bCollapsed = True
+    Inputs(0) position <- MaterialExpressionAdd_2
+    Inputs(1) Transparency <- MaterialExpressionFunctionInput_0
+    Code: HLSL, 19 строк (см. HLSL/)
+[MaterialExpressionCustom_2] MaterialExpressionCustom
+    описание: Dither 8
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    bCollapsed = True
+    Inputs(0) a <- MaterialExpressionScreenPosition_1
+    Inputs(1) Transparency <- MaterialExpressionFunctionInput_0
+    Code: HLSL, 15 строк (см. HLSL/)
+[MaterialExpressionCustom_5] MaterialExpressionCustom
+    описание: Dither 16
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    bCollapsed = True
+    Inputs(0) a <- MaterialExpressionScreenPosition_1
+    Inputs(1) Transparency <- MaterialExpressionFunctionInput_0
+    Code: HLSL, 19 строк (см. HLSL/)
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    A <- MaterialExpressionSkyAtmosphereLightDirection_0
+    B <- MaterialExpressionVertexNormalWS_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Transparency"
+    Id = 250282B64EFFC121F12CCEAD6FFFEFD8
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    bCollapsed = True
+    Preview <- MaterialExpressionLength_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "UseTemporal"
+    Id = 8CBC810F4D10E37A45FA018D48D391C1
+    InputType = FunctionInput_StaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Position"
+    Id = B5C5C5E14263D39178E9A2A209EC41A9
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    bCollapsed = True
+    Preview <- MaterialExpressionScreenPosition_0
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Precise"
+    Id = F8AAA4184EB1F781B302F6B438A5CE29
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 0FFEAFE947BBBFB9E2A8669ADEB2AD66
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    bCollapsed = True
+    A <- MaterialExpressionQualitySwitch_1
+[MaterialExpressionLength_0] MaterialExpressionLength
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    Input <- MaterialExpressionSubtract_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    A <- MaterialExpressionDotProduct_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    A <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstA = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    A <- MaterialExpressionAppendVector_0
+    B <- MaterialExpressionConstant2Vector_3
+[MaterialExpressionQualitySwitch_1] MaterialExpressionQualitySwitch
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    Default <- MaterialExpressionCustom_5
+    Inputs(0) <- MaterialExpressionCustom_0
+    Inputs(1) <- MaterialExpressionCustom_5
+    Inputs(2) <- MaterialExpressionStaticSwitch_1
+[MaterialExpressionScreenPosition_0] MaterialExpressionScreenPosition
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+[MaterialExpressionScreenPosition_1] MaterialExpressionScreenPosition
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+[MaterialExpressionSkyAtmosphereLightDirection_0] MaterialExpressionSkyAtmosphereLightDirection
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+[MaterialExpressionStaticSwitch_0] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    A <- MaterialExpressionMultiply_5
+    B <- MaterialExpressionConstant_1
+    Value <- MaterialExpressionFunctionInput_1
+[MaterialExpressionStaticSwitch_1] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    A <- MaterialExpressionCustom_5
+    B <- MaterialExpressionCustom_2
+    Value <- MaterialExpressionFunctionInput_3
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+[MaterialExpressionVertexNormalWS_0] MaterialExpressionVertexNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+[MaterialExpressionViewProperty_0] MaterialExpressionViewProperty
+    Property = MEVP_TemporalSampleIndex
+    Function = "/Script/Engine.MaterialFunction'MF_BayerDither'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

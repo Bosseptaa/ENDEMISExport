@@ -1,0 +1,474 @@
+﻿# /Game/FluidFlux/Environment/Niagara/Functions/NF_SampleCoastWave
+# класс: NiagaraScript; происхождение: проект; узлов: 69; связей: 194; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:303
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[NF_SampleCoastWave] NiagaraScript
+    ExposedVersion = 14943ADFEB61A6B7A9553C8F2B94BF9B
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraScriptSource_0] NiagaraScriptSource
+    NodeGraph <- NiagaraGraph_0
+[NiagaraGraph_0] NiagaraGraph
+    ChangeId = 260AEF89403464F5A42061892BE9C6D7
+    LastBuiltTraversalDataChangeId = 260AEF89403464F5A42061892BE9C6D7
+    LastBuiltScriptVersionId = 87C7FB060084C92C80E1A4AB309BA6EA
+    ParameterHierarchyRoot = "ParameterHierarchyRoot"
+    bHasValidLastBuiltScriptVersionId = True
+    GraphGuid = C17850CF4D8633BB1AFAE59BDE1AC8D5
+    CachedUsageInfo(0) <- NiagaraNodeInput_1
+    CachedUsageInfo(0) <- NiagaraNodeOp_67
+    CachedUsageInfo(0) <- NiagaraNodeInput_18
+    CachedUsageInfo(0) <- NiagaraNodeInput_19
+    CachedUsageInfo(0) <- NiagaraNodeInput_15
+    CachedUsageInfo(0) <- NiagaraNodeInput_9
+    CachedUsageInfo(0) <- NiagaraNodeInput_0
+    CachedUsageInfo(0) <- NiagaraNodeInput_16
+    CachedUsageInfo(0) <- NiagaraNodeInput_4
+    CachedUsageInfo(0) <- NiagaraNodeOp_7
+    CachedUsageInfo(0) <- NiagaraNodeInput_8
+    CachedUsageInfo(0) <- NiagaraNodeOp_13
+    CachedUsageInfo(0) <- NiagaraNodeOp_16
+    CachedUsageInfo(0) <- NiagaraNodeInput_22
+    CachedUsageInfo(0) <- NiagaraNodeInput_11
+    CachedUsageInfo(0) <- NiagaraNodeOp_9
+    CachedUsageInfo(0) <- NiagaraNodeInput_12
+    CachedUsageInfo(0) <- NiagaraNodeOp_12
+    CachedUsageInfo(0) <- NiagaraNodeInput_6
+    CachedUsageInfo(0) <- NiagaraNodeFunctionCall_0
+    CachedUsageInfo(0) <- NiagaraNodeOp_8
+    CachedUsageInfo(0) <- NiagaraNodeOp_1
+    CachedUsageInfo(0) <- NiagaraNodeReroute_0
+    CachedUsageInfo(0) <- NiagaraNodeReroute_1
+    CachedUsageInfo(0) <- NiagaraNodeOp_0
+    CachedUsageInfo(0) <- NiagaraNodeOp_6
+    CachedUsageInfo(0) <- NiagaraNodeOp_3
+    CachedUsageInfo(0) <- NiagaraNodeInput_23
+    CachedUsageInfo(0) <- NiagaraNodeOp_2
+    CachedUsageInfo(0) <- NiagaraNodeConvert_0
+    CachedUsageInfo(0) <- NiagaraNodeFunctionCall_37
+    CachedUsageInfo(0) <- NiagaraNodeOp_14
+    CachedUsageInfo(0) <- NiagaraNodeConvert_6
+    CachedUsageInfo(0) <- NiagaraNodeOp_11
+    CachedUsageInfo(0) <- NiagaraNodeInput_3
+    CachedUsageInfo(0) <- NiagaraNodeIf_1
+    CachedUsageInfo(0) <- NiagaraNodeInput_10
+    CachedUsageInfo(0) <- NiagaraNodeOp_57
+    CachedUsageInfo(0) <- NiagaraNodeConvert_2
+    CachedUsageInfo(0) <- NiagaraNodeOp_29
+    CachedUsageInfo(0) <- NiagaraNodeOp_49
+    CachedUsageInfo(0) <- NiagaraNodeOp_20
+    CachedUsageInfo(0) <- NiagaraNodeInput_7
+    CachedUsageInfo(0) <- NiagaraNodeOp_30
+    CachedUsageInfo(0) <- NiagaraNodeOp_10
+    CachedUsageInfo(0) <- NiagaraNodeInput_20
+    CachedUsageInfo(0) <- NiagaraNodeOp_36
+    CachedUsageInfo(0) <- NiagaraNodeOp_17
+    CachedUsageInfo(0) <- NiagaraNodeOp_38
+    CachedUsageInfo(0) <- NiagaraNodeFunctionCall_1
+    CachedUsageInfo(0) <- NiagaraNodeOp_37
+    CachedUsageInfo(0) <- NiagaraNodeInput_17
+    CachedUsageInfo(0) <- NiagaraNodeInput_14
+    CachedUsageInfo(0) <- NiagaraNodeInput_2
+    CachedUsageInfo(0) <- NiagaraNodeInput_13
+    CachedUsageInfo(0) <- NiagaraNodeOp_22
+    CachedUsageInfo(0) <- NiagaraNodeOp_32
+    CachedUsageInfo(0) <- NiagaraNodeOutput_0
+    Nodes(0) <- NiagaraNodeOutput_0
+    Nodes(1) <- NiagaraNodeInput_18
+    Nodes(2) <- NiagaraNodeInput_9
+    Nodes(3) <- NiagaraNodeInput_0
+    Nodes(4) <- NiagaraNodeFunctionCall_37
+    Nodes(5) <- NiagaraNodeConvert_6
+    Nodes(6) <- NiagaraNodeConvert_0
+    Nodes(7) <- NiagaraNodeOp_1
+    Nodes(8) <- NiagaraNodeOp_0
+    Nodes(9) <- NiagaraNodeOp_2
+    Nodes(10) <- NiagaraNodeOp_3
+    Nodes(11) <- NiagaraNodeOp_6
+    Nodes(12) <- NiagaraNodeReroute_0
+    Nodes(13) <- NiagaraNodeInput_15
+    Nodes(14) <- NiagaraNodeInput_16
+    Nodes(15) <- NiagaraNodeOp_8
+    Nodes(16) <- NiagaraNodeOp_9
+    Nodes(17) <- NiagaraNodeInput_22
+    Nodes(18) <- NiagaraNodeOp_11
+    Nodes(19) <- NiagaraNodeInput_11
+    Nodes(20) <- NiagaraNodeFunctionCall_0
+    Nodes(21) <- NiagaraNodeInput_8
+    Nodes(22) <- NiagaraNodeInput_6
+    Nodes(23) <- NiagaraNodeInput_12
+    Nodes(24) <- NiagaraNodeInput_23
+    Nodes(25) <- NiagaraNodeReroute_1
+    Nodes(26) <- NiagaraNodeInput_4
+    Nodes(27) <- NiagaraNodeOp_7
+    Nodes(28) <- NiagaraNodeOp_13
+    Nodes(29) <- NiagaraNodeOp_12
+    Nodes(30) <- NiagaraNodeInput_10
+    Nodes(31) <- NiagaraNodeOp_32
+    Nodes(32) <- NiagaraNodeInput_7
+    Nodes(33) <- NiagaraNodeInput_5
+    Nodes(34) <- NiagaraNodeOp_17
+    Nodes(35) <- NiagaraNodeFunctionCall_1
+    Nodes(36) <- EdGraphNode_Comment_0
+    Nodes(37) <- NiagaraNodeOp_57
+    Nodes(38) <- NiagaraNodeInput_19
+    Nodes(39) <- NiagaraNodeOp_14
+    Nodes(40) <- NiagaraNodeInput_17
+    Nodes(41) <- NiagaraNodeOp_16
+    Nodes(42) <- NiagaraNodeInput_14
+    Nodes(43) <- NiagaraNodeOp_67
+    Nodes(44) <- NiagaraNodeIf_1
+    Nodes(45) <- NiagaraNodeOp_22
+    Nodes(46) <- NiagaraNodeInput_3
+    Nodes(47) <- NiagaraNodeInput_1
+    Nodes(48) <- NiagaraNodeInput_2
+    Nodes(49) <- NiagaraNodeOp_29
+    Nodes(50) <- NiagaraNodeOp_49
+    Nodes(51) <- NiagaraNodeInput_20
+    Nodes(52) <- NiagaraNodeOp_36
+    Nodes(53) <- NiagaraNodeOp_37
+    Nodes(54) <- NiagaraNodeOp_38
+    Nodes(55) <- NiagaraNodeInput_13
+    Nodes(56) <- NiagaraNodeConvert_2
+    Nodes(57) <- NiagaraNodeOp_35
+    Nodes(58) <- NiagaraNodeOp_20
+    Nodes(59) <- NiagaraNodeOp_25
+    Nodes(60) <- NiagaraNodeOp_26
+    Nodes(61) <- NiagaraNodeOp_30
+    Nodes(62) <- NiagaraNodeOp_31
+    Nodes(63) <- NiagaraNodeOp_10
+[ParameterHierarchyRoot] HierarchyRoot
+    Identity = (Guids=(A6EEA2024B563C1BA43938E375FE1F12))
+[EdGraphNode_Comment_0] EdGraphNode_Comment
+    CommentColor = (R=0.206514,G=0.496875,B=0.210054,A=1.000000)
+    NodeWidth = 2448
+    NodeHeight = 864
+    NodeComment = "Sorry for magic numbers it is just an approximation of velocity "
+[NiagaraNodeInput_9] NiagaraNodeInput
+    Input = (Name="WaveProfileTexture",TypeDefHandle=(RegisteredTypeIndex=47))
+    CallSortPriority = 3
+    ChangeId = EE839CFC442859E3C060E2833BFDF0E6
+    DataInterface <- WaveProfileTexture
+[WaveProfileTexture] NiagaraDataInterfaceTexture
+[NiagaraNodeConvert_0] NiagaraNodeConvert
+    AutowireMakeType = (ClassStructOrEnum="/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.Vector2f'",UnderlyingType=2)
+    Connections(0) = (SourcePinId=03145CE348C2DF53DDA7F6BAAC61F078,SourcePath=("Value"),DestinationPinId=8B70BA084B4128E4EEC8BDABB8B5C524,DestinationPath=("X"))
+    Connections(1) = (SourcePinId=6E103CEE4CD07474FA576DB9F8384861,SourcePath=("Value"),DestinationPinId=8B70BA084B4128E4EEC8BDABB8B5C524,DestinationPath=("Y"))
+    bIsWiringShown = False
+    ExpandedItems(0) = (PinId=03145CE348C2DF53DDA7F6BAAC61F078)
+    ExpandedItems(1) = (PinId=8B70BA084B4128E4EEC8BDABB8B5C524)
+    ExpandedItems(2) = (PinId=6E103CEE4CD07474FA576DB9F8384861)
+    ChangeId = 53FD3ACD4547B1F617EAE5B3EDB9BC8E
+[NiagaraNodeConvert_2] NiagaraNodeConvert
+    AutowireBreakType = (ClassStructOrEnum="/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.Vector2f'",UnderlyingType=2)
+    Connections(0) = (SourcePinId=A92BDC8044D0A0E286C88EB90903CF3E,SourcePath=("X"),DestinationPinId=1415DAD94CC4434886A5A5A0374F14EE,DestinationPath=("Value"))
+    Connections(1) = (SourcePinId=A92BDC8044D0A0E286C88EB90903CF3E,SourcePath=("Y"),DestinationPinId=1153661248D80C3644EF0C9544DF71C6,DestinationPath=("Value"))
+    bIsWiringShown = False
+    ExpandedItems(0) = (PinId=1415DAD94CC4434886A5A5A0374F14EE)
+    ExpandedItems(1) = (PinId=A92BDC8044D0A0E286C88EB90903CF3E)
+    ExpandedItems(2) = (PinId=1153661248D80C3644EF0C9544DF71C6)
+    ChangeId = 5DEB7D414AFA59E19C61F3928D398A23
+[NiagaraNodeConvert_6] NiagaraNodeConvert
+    AutowireBreakType = (ClassStructOrEnum="/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.Vector2f'",UnderlyingType=2)
+    Connections(0) = (SourcePinId=BC550AFA44B60CCEDD4C4AABD1072E03,SourcePath=("X"),DestinationPinId=125709B3409AF97932D0B89F6199BDAC,DestinationPath=("Value"))
+    Connections(1) = (SourcePinId=BC550AFA44B60CCEDD4C4AABD1072E03,SourcePath=("Y"),DestinationPinId=CA1AA00F487E56714837728A04661946,DestinationPath=("Value"))
+    ExpandedItems(0) = (PinId=125709B3409AF97932D0B89F6199BDAC)
+    ExpandedItems(1) = (PinId=BC550AFA44B60CCEDD4C4AABD1072E03)
+    ExpandedItems(2) = (PinId=CA1AA00F487E56714837728A04661946)
+    ChangeId = 51119A4E40DF702CFB2EE49865F23B4D
+[NiagaraNodeFunctionCall_0] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Game/FluidFlux/Environment/Niagara/Functions/NF_CoastlineOffsets.NF_CoastlineOffsets'"
+    CachedChangeId = 2BB6CA934FD19FDA60A27B97209CF556
+    FunctionDisplayName = "NF_CoastlineOffsets"
+    ChangeId = 920A003249BD935AC45730A0CE93984C
+[NiagaraNodeFunctionCall_1] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Niagara/Functions/Math/SaturateFloat.SaturateFloat'"
+    CachedChangeId = 5C46BF8549C7B679B68971AA658A0E76
+    FunctionDisplayName = "SaturateFloat001"
+    ChangeId = 2C1AAA3744EB9B6081F5E881C5B1C765
+[NiagaraNodeFunctionCall_37] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Game/FluidFlux/Environment/Niagara/Functions/NF_SampleWaveProfile.NF_SampleWaveProfile'"
+    CachedChangeId = C2E2E7F64DDD14788D9A2192DCF9AF77
+    FunctionDisplayName = "NF_SampleWaveProfile"
+    ChangeId = 2ADFB1E6400F73AF272A378CC164C59F
+[NiagaraNodeIf_1] NiagaraNodeIf
+    OutputVars(0) = (Name="float",TypeDefHandle=(RegisteredTypeIndex=99))
+    PathAssociatedPinGuids(0) = (OutputPinGuid=1557A5194093A5D9134A82AF3AD16A54,InputTruePinGuid=A41673BE483C63A430DB6989D804CDE8,InputFalsePinGuid=4B3FD0D943CC6B387E6F86B25D4F76AA)
+    ConditionPinGuid = F35BB91447D214E1D79FB1900BF9831B
+    ChangeId = 5A28FA524C96C0DF845DB0AC18FB2F29
+[NiagaraNodeInput_0] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),Name="WaveProfileDecode")
+    CallSortPriority = 4
+    ChangeId = B851A5B74C63E79A6A6EA7B5C7F86982
+[NiagaraNodeInput_1] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="Distance",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 2
+    ChangeId = D8096F214B9A423F1B8892A07A25748A
+[NiagaraNodeInput_10] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0,0,0,0,0),Name="Direction",TypeDefHandle=(RegisteredTypeIndex=103))
+    CallSortPriority = 2
+    ChangeId = F3A5149149A2A72EDB2064B714058E41
+[NiagaraNodeInput_11] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="Time",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = -1
+    ChangeId = 32DEE4E74151BF45B0DDA8BD8A1144A3
+[NiagaraNodeInput_12] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0,0,0,0,0),Name="WorldPosition",TypeDefHandle=(RegisteredTypeIndex=103))
+    CallSortPriority = 10
+    ChangeId = 00F624D5424ADDAF4F9AB18340F68906
+[NiagaraNodeInput_13] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="WaveProfileAnimationSpeed",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 8
+    ChangeId = 498BDECF417951A81FC072B5DB69C4F0
+[NiagaraNodeInput_14] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="WaveProfileWidth",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 6
+    ChangeId = 0522553740F7627810C32BA002F4669C
+[NiagaraNodeInput_15] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="WaveProfileWidth",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 6
+    ChangeId = 07A4371F41946AF2D06C6BAE2AFC15AE
+[NiagaraNodeInput_16] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="WaveProfileDistance",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 7
+    ChangeId = E8578BA7471DE5F7301A1FA0EA6E9687
+[NiagaraNodeInput_17] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="Intensity",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 11
+    ChangeId = C20D7D484299AFC642214899B4AC418C
+[NiagaraNodeInput_18] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="SurfaceHeight",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 1
+    ChangeId = 665B6DA54F623AC63AF8C8B55DD82619
+[NiagaraNodeInput_19] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="Intensity",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 11
+    ChangeId = 46F93B384B02576F294F6080F3085967
+[NiagaraNodeInput_2] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="WaveProfileSpeed",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 5
+    ChangeId = EE051D9E4A97A40B3E608EA478397A21
+[NiagaraNodeInput_20] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="Distance",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 2
+    ChangeId = D91D0C054C4F160AE99F258BCA79DEBC
+[NiagaraNodeInput_22] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="WaveProfileSpeed",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 5
+    ChangeId = 1EBCA2DB4A1EAEBEEBE872AC6E87D83E
+[NiagaraNodeInput_23] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="WaveProfileAnimationSpeed",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 8
+    ChangeId = 9CC2847743432EC2956D6A845DC4C140
+[NiagaraNodeInput_3] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="SurfaceHeight",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 1
+    ChangeId = 2A82654944F6F05D2A9120A0934E99C3
+[NiagaraNodeInput_4] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="WaveProfileWidth",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 6
+    ChangeId = 4030BF5943C2AAB77E25A0B8B063A2C1
+[NiagaraNodeInput_5] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="WaveProfileDistance",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 7
+    ChangeId = AE7411B24DA349AC2B8B2FB3F74BA14F
+[NiagaraNodeInput_6] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0,0,0,0,0),Name="Direction",TypeDefHandle=(RegisteredTypeIndex=103))
+    CallSortPriority = 2
+    ChangeId = 08816EFB477851403B8E8F8A3467DE62
+[NiagaraNodeInput_7] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="WaveProfileWidth",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 6
+    ChangeId = F779387049845A58223C90B888417230
+[NiagaraNodeInput_8] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="Distance",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 2
+    ChangeId = 855CE67F4522992494052F8D24C0CB89
+[NiagaraNodeOp_0] NiagaraNodeOp
+    OpName = "Numeric::Add"
+    ChangeId = ECC85E1D40E1C7530F31128B70B37C74
+[NiagaraNodeOp_1] NiagaraNodeOp
+    OpName = "Numeric::Subtract"
+    ChangeId = 6F44DA5B40B6BAC23FEB4EA41277F663
+[NiagaraNodeOp_10] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = D0E586334336305C41DEC7B9973B515E
+    вход B = 4.000000
+[NiagaraNodeOp_11] NiagaraNodeOp
+    OpName = "Numeric::Add"
+    ChangeId = 60D3B1A746C61A0B4E9ABF9242910658
+[NiagaraNodeOp_12] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = AE72593647B014DB6650E999E3BA0ABD
+[NiagaraNodeOp_13] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 5F3D10E44B4499BE872AA9AD43E79EF8
+[NiagaraNodeOp_14] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 5F96169B4CCB5FD71FE05F90C4CBE546
+[NiagaraNodeOp_16] NiagaraNodeOp
+    OpName = "Numeric::Subtract"
+    ChangeId = 3CCE7042499053A4BDFA78A03238297B
+[NiagaraNodeOp_17] NiagaraNodeOp
+    OpName = "Numeric::Div"
+    ChangeId = D8D0C13E45F3CD0BBF8A54832917DA17
+[NiagaraNodeOp_2] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = C669CE1E4B42721F617026ABAD4BC559
+[NiagaraNodeOp_20] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 50A7A7EA446DE56E441214B1E5212808
+    вход B = 1.000000
+[NiagaraNodeOp_22] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    AddedPins(0) = (PinType=(PinCategory="Type",PinSubCategoryObject="/Script/CoreUObject.ScriptStruct'/Script/Niagara.NiagaraNumeric'"),PinName="C")
+    AddedPins(1) = (PinType=(PinCategory="Type",PinSubCategoryObject="/Script/CoreUObject.ScriptStruct'/Script/Niagara.NiagaraNumeric'"),PinName="D")
+    AddedPins(2) = (PinType=(PinCategory="Type",PinSubCategoryObject="/Script/CoreUObject.ScriptStruct'/Script/Niagara.NiagaraNumeric'"),PinName="E")
+    AddedPins(3) = (PinType=(PinCategory="Type",PinSubCategoryObject="/Script/CoreUObject.ScriptStruct'/Script/Niagara.NiagaraNumeric'"),PinName="F")
+    ChangeId = 33B09E794B12247402BDDFAEDC50E1C5
+    вход B = 1.000000
+[NiagaraNodeOp_25] NiagaraNodeOp
+    OpName = "Numeric::Sine"
+    ChangeId = 406E749440ED5D1E6667CFB75E213E65
+    вход Period = 1.0
+[NiagaraNodeOp_26] NiagaraNodeOp
+    OpName = "Numeric::Add"
+    ChangeId = 61051FDB4344959A051D8E87FD58123D
+    вход B = -0.050000
+[NiagaraNodeOp_29] NiagaraNodeOp
+    OpName = "Numeric::Subtract"
+    ChangeId = 52E689C44E96A45A15165D9873CC23CD
+    вход A = 1.200000
+[NiagaraNodeOp_3] NiagaraNodeOp
+    OpName = "Numeric::Subtract"
+    ChangeId = 4B1141C841B333754F6D08907285F1D0
+[NiagaraNodeOp_30] NiagaraNodeOp
+    OpName = "Numeric::Div"
+    ChangeId = 34E5673D442D4151D2B3BA80DF9F6B68
+[NiagaraNodeOp_31] NiagaraNodeOp
+    OpName = "Numeric::Add"
+    ChangeId = 58E96A594C51D6BFF9D8E3B67CFEFAC9
+[NiagaraNodeOp_32] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 138E05FF426427127315818CFF744CB9
+[NiagaraNodeOp_35] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = AE3F0D83483F3C6833279D8773474156
+    вход B = 0.500000
+[NiagaraNodeOp_36] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 95E102D94793A9720ADFD38081D63EF8
+    вход B = 1.500000
+[NiagaraNodeOp_37] NiagaraNodeOp
+    OpName = "Numeric::Lerp"
+    ChangeId = CCC40360450F59CD89CDC3B5F3080B33
+[NiagaraNodeOp_38] NiagaraNodeOp
+    OpName = "Numeric::Subtract"
+    ChangeId = ABE133DE43C15EECE920E7A17694832C
+    вход B = 0.150000
+[NiagaraNodeOp_49] NiagaraNodeOp
+    OpName = "Numeric::Clamp"
+    ChangeId = A5B6F3F3473CCC2B2FDDB08581537A21
+    вход Min = -1.000000
+    вход Max = 0.100000
+[NiagaraNodeOp_57] NiagaraNodeOp
+    OpName = "Numeric::Normalize"
+    ChangeId = 881AE57D41213A47E9BA4E83F07AA20D
+[NiagaraNodeOp_6] NiagaraNodeOp
+    OpName = "Numeric::Frac"
+    ChangeId = D5B4D5FB44BDB51AA533529E36E45056
+[NiagaraNodeOp_67] NiagaraNodeOp
+    OpName = "Numeric::CmpGT"
+    ChangeId = DC7AA6CA4CA2EBF2AC348DA4133DAE84
+    вход B = 1.0
+[NiagaraNodeOp_7] NiagaraNodeOp
+    OpName = "Numeric::Div"
+    ChangeId = D6D3A7C3416CE9DAF2C6DA9B1E80B98A
+    вход A = 1.000000
+[NiagaraNodeOp_8] NiagaraNodeOp
+    OpName = "Numeric::Add"
+    ChangeId = 75918A1645FA25732F340CAB81A45507
+[NiagaraNodeOp_9] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 8D16F0FD48E2EC94F3E5DBBFC00916B6
+[NiagaraNodeOutput_0] NiagaraNodeOutput
+    Outputs(0) = (VarData=(0,0,0,0),Name="SurfaceHeight",TypeDefHandle=(RegisteredTypeIndex=99))
+    Outputs(1) = (VarData=(0,0,0,0,0,0,0,0),Name="SurfaceVelocity",TypeDefHandle=(RegisteredTypeIndex=103))
+    ChangeId = 757C713D448C6246D8420E83DBC32872
+    ErrorType = 4
+[NiagaraNodeReroute_0] NiagaraNodeReroute
+    ChangeId = 275C4B0340AD7AF9EA2168B2D1D6C20F
+[NiagaraNodeReroute_1] NiagaraNodeReroute
+    ChangeId = 444A19544E2FD40E66E4B29F44249541
+
+## СВЯЗИ
+[NiagaraNodeConvert_0].Output 1 -> [NiagaraNodeConvert_2].Input 1
+[NiagaraNodeConvert_0].Output 1 -> [NiagaraNodeFunctionCall_37].Position
+[NiagaraNodeConvert_2].X -> [NiagaraNodeOp_26].A
+[NiagaraNodeConvert_2].Y -> [NiagaraNodeOp_29].B
+[NiagaraNodeConvert_6].X -> [NiagaraNodeOp_30].A
+[NiagaraNodeConvert_6].Y -> [NiagaraNodeOp_11].B
+[NiagaraNodeFunctionCall_0].DistortionOffset -> [NiagaraNodeReroute_1].InputPin
+[NiagaraNodeFunctionCall_0].TimeOffset -> [NiagaraNodeOp_8].B
+[NiagaraNodeFunctionCall_1].Clamped Value -> [NiagaraNodeOp_37].C
+[NiagaraNodeFunctionCall_37].Offsets -> [NiagaraNodeOp_14].B
+[NiagaraNodeIf_1].float -> [NiagaraNodeOutput_0].SurfaceHeight
+[NiagaraNodeInput_0].Input -> [NiagaraNodeFunctionCall_37].WaveProfileDecode
+[NiagaraNodeInput_1].Input -> [NiagaraNodeOp_12].B
+[NiagaraNodeInput_1].Input -> [NiagaraNodeOp_17].A
+[NiagaraNodeInput_1].Input -> [NiagaraNodeOp_67].A
+[NiagaraNodeInput_10].Input -> [NiagaraNodeFunctionCall_0].Direction
+[NiagaraNodeInput_10].Input -> [NiagaraNodeOp_57].A
+[NiagaraNodeInput_11].Input -> [NiagaraNodeOp_9].B
+[NiagaraNodeInput_12].Input -> [NiagaraNodeOp_12].B
+[NiagaraNodeInput_13].Input -> [NiagaraNodeOp_2].B
+[NiagaraNodeInput_13].Input -> [NiagaraNodeOp_22].F
+[NiagaraNodeInput_14].Input -> [NiagaraNodeFunctionCall_37].Intensity
+[NiagaraNodeInput_14].Input -> [NiagaraNodeOp_22].D
+[NiagaraNodeInput_14].Input -> [NiagaraNodeOp_30].B
+[NiagaraNodeInput_14].Input -> [NiagaraNodeOp_36].A
+[NiagaraNodeInput_14].Input -> [NiagaraNodeOp_7].B
+[NiagaraNodeInput_16].Input -> [NiagaraNodeOp_16].A
+[NiagaraNodeInput_17].Input -> [NiagaraNodeOp_14].A
+[NiagaraNodeInput_17].Input -> [NiagaraNodeOp_22].C
+[NiagaraNodeInput_18].Input -> [NiagaraNodeIf_1].float if False
+[NiagaraNodeInput_18].Input -> [NiagaraNodeOp_11].A
+[NiagaraNodeInput_2].Input -> [NiagaraNodeOp_22].E
+[NiagaraNodeInput_2].Input -> [NiagaraNodeOp_9].A
+[NiagaraNodeInput_9].Input -> [NiagaraNodeFunctionCall_37].WaveProfileTexture
+[NiagaraNodeOp_0].Result -> [NiagaraNodeOp_3].A
+[NiagaraNodeOp_1].Result -> [NiagaraNodeConvert_0].X
+[NiagaraNodeOp_1].Result -> [NiagaraNodeOp_6].A
+[NiagaraNodeOp_10].Result -> [NiagaraNodeOp_31].A
+[NiagaraNodeOp_10].Result -> [NiagaraNodeOp_31].B
+[NiagaraNodeOp_10].Result -> [NiagaraNodeOp_37].B
+[NiagaraNodeOp_11].Result -> [NiagaraNodeIf_1].float if True
+[NiagaraNodeOp_12].Result -> [NiagaraNodeFunctionCall_0].Distance
+[NiagaraNodeOp_12].Result -> [NiagaraNodeFunctionCall_0].WorldPosition
+[NiagaraNodeOp_12].Result -> [NiagaraNodeOp_16].B
+[NiagaraNodeOp_14].Result -> [NiagaraNodeConvert_6].Input 1
+[NiagaraNodeOp_16].Result -> [NiagaraNodeOp_1].A
+[NiagaraNodeOp_16].Result -> [NiagaraNodeReroute_0].InputPin
+[NiagaraNodeOp_17].Result -> [NiagaraNodeOp_38].A
+[NiagaraNodeOp_2].Result -> [NiagaraNodeConvert_0].Y
+[NiagaraNodeOp_20].Result -> [NiagaraNodeOp_37].A
+[NiagaraNodeOp_22].Result -> [NiagaraNodeOp_32].B
+[NiagaraNodeOp_25].Result -> [NiagaraNodeOp_10].A
+[NiagaraNodeOp_26].Result -> [NiagaraNodeOp_25].Angle
+[NiagaraNodeOp_29].Result -> [NiagaraNodeOp_49].A
+[NiagaraNodeOp_3].Result -> [NiagaraNodeOp_2].A
+[NiagaraNodeOp_30].Result -> [NiagaraNodeOp_10].A
+[NiagaraNodeOp_32].Result -> [NiagaraNodeOutput_0].SurfaceVelocity
+[NiagaraNodeOp_36].Result -> [NiagaraNodeOp_17].B
+[NiagaraNodeOp_37].Result -> [NiagaraNodeOp_22].A
+[NiagaraNodeOp_38].Result -> [NiagaraNodeFunctionCall_1].Value
+[NiagaraNodeOp_49].Result -> [NiagaraNodeOp_20].A
+[NiagaraNodeOp_57].Result -> [NiagaraNodeOp_32].A
+[NiagaraNodeOp_6].Result -> [NiagaraNodeOp_3].B
+[NiagaraNodeOp_67].Result -> [NiagaraNodeIf_1].Condition
+[NiagaraNodeOp_7].Result -> [NiagaraNodeOp_12].A
+[NiagaraNodeOp_8].Result -> [NiagaraNodeOp_1].B
+[NiagaraNodeOp_9].Result -> [NiagaraNodeOp_8].A
+[NiagaraNodeReroute_0].OutputPin -> [NiagaraNodeOp_0].A
+[NiagaraNodeReroute_1].OutputPin -> [NiagaraNodeOp_0].B

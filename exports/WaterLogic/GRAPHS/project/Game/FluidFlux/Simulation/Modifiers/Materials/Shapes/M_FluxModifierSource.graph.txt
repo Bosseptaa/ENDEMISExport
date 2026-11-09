@@ -1,0 +1,90 @@
+﻿# /Game/FluidFlux/Simulation/Modifiers/Materials/Shapes/M_FluxModifierSource
+# класс: Material; происхождение: проект; узлов: 11; связей: 23; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:25
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_FluxModifierSource] Material
+    BlendMode = BLEND_AlphaComposite
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    NumCustomizedUVs = 2
+    bTangentSpaceNormal = False
+    bUseLightmapDirectionality = False
+    EditorX = 416
+    EditorY = -288
+    bCanMaskedBeAssumedOpaque = True
+    bCastRayTracedShadows = False
+    bUseTranslucencyVertexFog = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = EEB0C4F8433477C7CB028189F25D67CD
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ParameterOverviewExpansion = (("-12Global", True),("-12Global FluxData", True))
+    LightingGuid = 262476374F6B130FCB3F86AE8692BABD
+    EditorOnlyData <- M_FluxModifierSourceEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_FluxModifierSourceEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionBreakMaterialAttributes_0
+    Opacity <- MaterialExpressionBreakMaterialAttributes_0
+    WorldPositionOffset <- MaterialExpressionBreakMaterialAttributes_0
+    CustomizedUVs(0) <- MaterialExpressionBreakMaterialAttributes_0
+    CustomizedUVs(1) <- MaterialExpressionBreakMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionBreakMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_12
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_13
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+[MaterialExpressionBreakMaterialAttributes_0] MaterialExpressionBreakMaterialAttributes
+    MaterialAttributes <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxModifierTransform.MF_FluxModifierTransform'"
+    FunctionInputs(2) = (ExpressionInputId=60146FEC4E29DAB8E4F404877935BD6F,Input=(OutputIndex=-1,InputName="Location"))
+    FunctionInputs(3) = (ExpressionInputId=CF87349744DA18184019258D381CFF3D,Input=(OutputIndex=-1,InputName="Direction"))
+    FunctionInputs(4) = (ExpressionInputId=4D9F9B3C47BC507331968D8241DD1159,Input=(OutputIndex=-1,InputName="Scale"))
+    FunctionInputs(5) = (ExpressionInputId=56CCE0AD4975E666CFA75A95C3C5B6F5,Input=(OutputIndex=-1,InputName="WorldScale"))
+    FunctionInputs(6) = (ExpressionInputId=968CDB5C4576CCD7C92D79967A038553,Input=(OutputIndex=-1,InputName="WorldLocation"))
+    FunctionInputs(7) = (ExpressionInputId=B98E2FFD40F426210CD63A9071FF5FA4,Input=(OutputIndex=4,InputName="WorldResolution"))
+    FunctionOutputs(0) = (ExpressionOutputId=0109E4184F47F5FE7C7052B2EE3E82AE,Output=(OutputName="Layer"))
+    FunctionOutputs(1) = (ExpressionOutputId=FD9FF1F74EB7DCB8E4198EBD59F06F31,Output=(OutputName="Transform"))
+    FunctionOutputs(2) = (ExpressionOutputId=CE6D991E487107D6FA5E00B6EAAB4FC8,Output=(OutputName="UV0_LocalUV"))
+    FunctionOutputs(3) = (ExpressionOutputId=A37375704EC08614946776B7A7798F4D,Output=(OutputName="UV1_WorldUV"))
+    Outputs(0) = (OutputName="Layer")
+    Outputs(1) = (OutputName="Transform")
+    Outputs(2) = (OutputName="UV0_LocalUV")
+    Outputs(3) = (OutputName="UV1_WorldUV")
+    FunctionInputs(0) <- MaterialExpressionMultiply_0
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMaterialFunctionCall_12] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxModifierShape.MF_FluxModifierShape'"
+    FunctionInputs(0) = (ExpressionInputId=E98AEFAD4C35D46387774D8765E1BEEF,Input=(OutputIndex=-1,InputName="Radius"))
+    FunctionInputs(1) = (ExpressionInputId=4C97F9284D4B3696A2E08E8B10AB868E,Input=(OutputIndex=-1,InputName="Hardness"))
+    FunctionOutputs(0) = (ExpressionOutputId=F529BCCC47030905858248A567EEFD56,Output=(OutputName="Weight"))
+    Outputs(0) = (OutputName="Weight")
+    FunctionInputs(2) <- MaterialExpressionTextureCoordinate_5
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxModifierMode.MF_FluxModifierMode'"
+    FunctionOutputs(0) = (ExpressionOutputId=1C4081CF4A34890C6497FF915408AA1B,Output=(OutputName="Color"))
+    FunctionOutputs(1) = (ExpressionOutputId=DF08C12D41B87192DF5B058311DE5225,Output=(OutputName="Alpha"))
+    Outputs(0) = (OutputName="Color")
+    Outputs(1) = (OutputName="Alpha")
+    FunctionInputs(0) <- MaterialExpressionTextureCoordinate_13
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionScalarParameter_0
+    B <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "Intensity"
+    ExpressionGUID = 42873B9E40C779AFB54ED69DA9BC13E1
+[MaterialExpressionTextureCoordinate_13] MaterialExpressionTextureCoordinate
+    CoordinateIndex = 1
+[MaterialExpressionTextureCoordinate_5] MaterialExpressionTextureCoordinate
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

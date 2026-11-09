@@ -1,0 +1,38 @@
+﻿# /Game/FluidFlux/Demo/Environment/Palm/Functions/MF_InfinityRandom
+# класс: MaterialFunction; происхождение: проект; узлов: 7; связей: 9; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_InfinityRandom] MaterialFunction
+    описание: Calculate random pivot value
+    LibraryCategoriesText(0) = NSLOCTEXT("", "E2A43BA24726FBDD133763B12925902C", "ImaginaryBlend")
+    StateId = AA6E3D4F4AF83275AE024BAE37DD7377
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_InfinityRandomEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_InfinityRandomEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionObjectPositionWS_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_6
+    ExpressionCollection <- MaterialExpressionDotProduct_1
+[MaterialExpressionDotProduct_1] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityRandom'"
+    A <- MaterialExpressionObjectPositionWS_0
+    B <- MaterialExpressionVectorParameter_6
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "ObjectRandom"
+    bLastPreviewed = True
+    Id = 81F9A20A4F58AED74E04229416B6E450
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityRandom'"
+    A <- MaterialExpressionDotProduct_1
+[MaterialExpressionObjectPositionWS_0] MaterialExpressionObjectPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityRandom'"
+[MaterialExpressionVectorParameter_6] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.005440,G=0.008784,B=0.005498,A=1.000000)
+    ParameterName = "ObjectPositionRandom"
+    ExpressionGUID = 98BDFEEC47BF99D1233B4A8763749DC7
+    Group = "Pivot"
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityRandom'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

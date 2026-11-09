@@ -1,0 +1,130 @@
+﻿# /Game/FluidFlux/Coastline/Functions/MF_CoastSlope
+# класс: MaterialFunction; происхождение: проект; узлов: 21; связей: 39; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CoastSlope] MaterialFunction
+    StateId = 235755BE4261C72CEF7D9D84172A6B49
+    CombinedInputTypes = 1039
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_CoastSlopeEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CoastSlopeEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionConstant_9
+    ExpressionCollection <- MaterialExpressionDivide_3
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionSubtract_7
+    ExpressionCollection <- MaterialExpressionMultiply_30
+    ExpressionCollection <- MaterialExpressionConstant3Vector_5
+    ExpressionCollection <- MaterialExpressionAdd_17
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+[MaterialExpressionAdd_17] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    A <- MaterialExpressionMultiply_5
+    B <- MaterialExpressionMultiply_30
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionConstant_9
+[MaterialExpressionConstant_9] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+[MaterialExpressionConstant3Vector_5] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=1.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    bCollapsed = True
+[MaterialExpressionDivide_3] MaterialExpressionDivide
+    ConstB = 150.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    A <- MaterialExpressionSubtract_7
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Prediction"
+    Id = 5FD6310547FAEDC1B3BB689F9675BFC5
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Forward"
+    Id = D56BA66140CEC28D54C7F1A45EA5FF16
+    InputType = FunctionInput_Scalar
+    SortPriority = -3
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Upward"
+    Id = A3BA86BD42C753DD45C0FE9B472A08E8
+    InputType = FunctionInput_Scalar
+    SortPriority = -2
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "Coastline"
+    Id = FB53D20642E6A21A31542F93973EF2E3
+    InputType = FunctionInput_MaterialAttributes
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "Normal"
+    Id = 626644DC4C1C7A7B25CB82B6A81A538D
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Normal"
+    bLastPreviewed = True
+    Id = 1895FDA94E9A657A88AA45A2337688D4
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    bCollapsed = True
+    A <- MaterialExpressionFunctionInput_5
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "Offset"
+    bLastPreviewed = True
+    Id = 4411D44C40C67BB561E5AE8EA7228727
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_17
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    A <- MaterialExpressionFunctionOutput_1
+    B <- MaterialExpressionAppendVector_0
+    Alpha <- MaterialExpressionSaturate_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineDataGet.MF_CoastlineDataGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=907637C844D6BC8298C5ACADA0E3B2C3,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=23481DEA4452179C8D2797B33CE20435,Output=(OutputName="Direction"))
+    FunctionOutputs(2) = (ExpressionOutputId=A84715A749104AD14C38248BBFD455E2,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=6346C58A410496BE2C7A25BD8D50DEAA,Output=(OutputName="Mask"))
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Direction")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_4
+[MaterialExpressionMultiply_30] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    A <- MaterialExpressionFunctionInput_2
+    B <- MaterialExpressionConstant3Vector_5
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    A <- MaterialExpressionLinearInterpolate_1
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    Input <- MaterialExpressionDivide_3
+[MaterialExpressionSubtract_7] MaterialExpressionSubtract
+    ConstB = -10.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastSlope'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,143 @@
+﻿# /Game/FluidFlux/Demo/Environment/Plankton/M_FluxPlanktonDecal
+# класс: Material; происхождение: проект; узлов: 24; связей: 47; HLSL: 0; причина: папка /Game/FluidFlux; тело:11
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_FluxPlanktonDecal] Material
+    BlendMode = BLEND_Additive
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bDisableDepthTest = True
+    EditorX = -192
+    EditorY = -660
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 9F4CACC541E7B1D749D61F8839A8730F
+    ReferencedTextureGuids(0) = 42C0D16B47406B05AE1035A6A695F609
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_SmoothNoise.T_SmoothNoise'"
+    LightingGuid = C355C294483343C7BF79CAA846B05569
+    EditorOnlyData <- M_FluxPlanktonDecalEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+[MaterialExpressionVectorParameter_2] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=5.000000,B=9.000000,A=0.040000)
+    ParameterName = "Color"
+    ExpressionGUID = F439BEFC4CD82A2D9BBC4C9E71552154
+[MaterialExpressionTextureSample_1] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_SmoothNoise.T_SmoothNoise'"
+    SamplerType = SAMPLERTYPE_LinearGrayscale
+    Coordinates <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+[MaterialExpressionSphereMask_0] MaterialExpressionSphereMask
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionConstant_1
+    Radius <- MaterialExpressionScalarParameter_0
+    Hardness <- MaterialExpressionScalarParameter_1
+[MaterialExpressionShadingPathSwitch_0] MaterialExpressionShadingPathSwitch
+    Default <- MaterialExpressionConstant_2
+    Inputs(0) <- MaterialExpressionComponentMask_1
+[MaterialExpressionSceneTexture_1] MaterialExpressionSceneTexture
+    SceneTextureId = PPI_StoredBaseColor
+    bFiltered = True
+[MaterialExpressionScalarParameter_8] MaterialExpressionScalarParameter
+    ParameterName = "Additive"
+    ExpressionGUID = E352B0584B87778CC6F479A7C30AB08C
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    ParameterName = "Hardness"
+    ExpressionGUID = 5F51129A424033A4C8AC939188B3EE83
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.500000
+    ParameterName = "Radius"
+    ExpressionGUID = 5B69A4E245620D7C47DBE79BFC16DC64
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    ConstB = 0.200000
+    A <- MaterialExpressionTextureSample_1
+    B <- MaterialExpressionVectorParameter_2
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    A <- MaterialExpressionVectorParameter_2
+    B <- MaterialExpressionSphereMask_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    A <- MaterialExpressionShadingPathSwitch_0
+    B <- MaterialExpressionMultiply_8
+[MaterialExpressionMaterialFunctionCall_9] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Lighting/Functions/MF_FluxSurfaceDecalApply.MF_FluxSurfaceDecalApply'"
+    FunctionInputs(0) = (ExpressionInputId=F2A59E8F47CE969C99C7AF968AC47923,Input=(InputName="Emissive",Mask=1,MaskR=1,MaskG=1,MaskB=1))
+    FunctionOutputs(0) = (ExpressionOutputId=17B8106045E2C3409A3192882805EAD8,Output=(OutputName="Color"))
+    FunctionOutputs(1) = (ExpressionOutputId=CFE8B38F4CD8BB4BF5779DA21E18DED1,Output=(OutputName="Opacity"))
+    Outputs(0) = (OutputName="Color")
+    Outputs(1) = (OutputName="Opacity")
+    FunctionInputs(1) <- MaterialExpressionMultiply_8
+    FunctionInputs(2) <- MaterialExpressionMultiply_10
+    FunctionInputs(3) <- MaterialExpressionScalarParameter_8
+    FunctionInputs(4) <- MaterialExpressionMultiply_2
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Lighting/Functions/MF_FluxSurfaceDecal.MF_FluxSurfaceDecal'"
+    FunctionInputs(1) = (ExpressionInputId=389269CE4C989247930CB7AED4B36762,Input=(OutputIndex=-1,InputName="Particle"))
+    FunctionOutputs(0) = (ExpressionOutputId=E732D9F6490C79B5B3102580D89FA735,Output=(OutputName="WorldPosition"))
+    FunctionOutputs(1) = (ExpressionOutputId=95201A5D457F3162538D2881FC5B6FBE,Output=(OutputName="UV"))
+    FunctionOutputs(2) = (ExpressionOutputId=0012545F4F5083DA66C71D84DA2BBF74,Output=(OutputName="Blend"))
+    FunctionOutputs(3) = (ExpressionOutputId=E5A075DD479D2FEE1D4EBD95D3EE3D02,Output=(OutputName="FrontSide"))
+    FunctionOutputs(4) = (ExpressionOutputId=474B96F94B439BD122A60F8ECC656166,Output=(OutputName="Normal"))
+    Outputs(0) = (OutputName="WorldPosition")
+    Outputs(1) = (OutputName="UV")
+    Outputs(2) = (OutputName="Blend")
+    Outputs(3) = (OutputName="FrontSide")
+    Outputs(4) = (OutputName="Normal")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Plankton/MF_NightVisibility.MF_NightVisibility'"
+    FunctionInputs(0) = (ExpressionInputId=742C34F04C635029E41A18A63F6CE21D,Input=(OutputIndex=-1,InputName="Normal"))
+    FunctionOutputs(0) = (ExpressionOutputId=156186AF4C4496689B7F579ED7F94B8B,Output=(OutputName="Scale"))
+    FunctionOutputs(1) = (ExpressionOutputId=A7F4E53B45911877B3BFCE81EA61DCDD,Output=(OutputName="Flag"))
+    Outputs(0) = (OutputName="Scale")
+    Outputs(1) = (OutputName="Flag")
+    FunctionInputs(1) <- MaterialExpressionConstant_0
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.150000
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.500000
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.200000
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    G = True
+    B = True
+    Input <- MaterialExpressionSceneTexture_1
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 656
+    SizeY = 368
+    Text = "Decal color implementation"
+    CommentColor = (R=0.343706,G=0.250961,B=1.000000,A=1.000000)
+[M_FluxPlanktonDecalEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionMultiply_1
+    Opacity <- MaterialExpressionMaterialFunctionCall_9
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_9
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionSphereMask_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionVectorParameter_2
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionScalarParameter_8
+    ExpressionCollection <- MaterialExpressionTextureSample_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionSceneTexture_1
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionShadingPathSwitch_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionComment_0
+
+## СВЯЗИ

@@ -1,0 +1,42 @@
+﻿// Источник: /Game/FluidFlux/Tools/DistanceField/Functions/MF_SampleDistanceField (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: Position, SDFTiles, SDFRange, SDFPosition, SDFSize, SDFMap
+// Выход: CMOT_Float1
+// Описание: SampleSDFVolume2D
+
+
+ uv =  (Position.xy - SDFPosition.xy) / SDFSize.xy + 0.5;
+
+[branch]
+if (all(uv >= 0.0) && all(uv <= 1.0))
+{	
+	float2 MinMaxZ = SDFPosition.z + SDFSize.z * float2(-0.5, 0.5);
+
+
+	float layerIndex = saturate((Position.z - MinMaxZ.x) / (MinMaxZ.y - MinMaxZ.x)) * (SDFTiles.z - 1.0);
+	
+	blend = frac(layerIndex);
+	float frameID = layerIndex - blend;
+	
+	float2 InvTiles = 1.0/SDFTiles.xy;
+	float idTileA = frameID * InvTiles.x;
+	float fracTileA = frac(idTileA);
+	float2 ruvA = (uv + float2(fracTileA * SDFTiles.x, (idTileA - fracTileA))) * InvTiles.xy;
+
+	float idTileB = (frameID + 1.0) * InvTiles.x;
+	float fracTileB = frac(idTileB);
+	float2 ruvB = (uv + float2(fracTileB * SDFTiles.x, (idTileB - fracTileB))) * InvTiles.xy;
+
+	float texA = Texture2DSample(SDFMap, SDFMapSampler, ruvA).r;
+	float texB = Texture2DSample(SDFMap, SDFMapSampler, ruvB).r;
+
+	float ExtrudeEdge = max(0.0, -(Position.z - MinMaxZ.x)) + max(0.0, Position.z - MinMaxZ.y);
+	
+	return ( lerp(texA, texB, blend) - 0.5) * SDFRange - ExtrudeEdge;
+	
+} else
+{
+	blend = 0.0;
+	return -0.5 * SDFRange;
+}
+

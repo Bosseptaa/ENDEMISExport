@@ -1,0 +1,27 @@
+﻿// Источник: /Game/FluidFlux/Simulation/Functions/MF_DampWave (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: uC, uL, uR, totalSlope, edge, scale, scale2
+// Выход: CMOT_Float1
+// Описание: Damp
+
+if (uC > 0.0)
+{
+   if (totalSlope < -edge) 
+   {
+     if (uR < 0.0)
+         uC  = uC * scale;
+     
+     if (uL > 0.0)
+        uC  = uC * scale2;  
+   }
+} else
+{
+   if (totalSlope > edge) 
+   {
+     if (uL > 0.0)
+          uC = uC * scale;
+
+     if (uR < 0.0)
+          uC = uC * scale2;
+   }
+} return uC;

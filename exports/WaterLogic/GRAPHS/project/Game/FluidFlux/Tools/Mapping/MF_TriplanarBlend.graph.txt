@@ -1,0 +1,301 @@
+﻿# /Game/FluidFlux/Tools/Mapping/MF_TriplanarBlend
+# класс: MaterialFunction; происхождение: проект; узлов: 51; связей: 114; HLSL: 2; причина: папка /Game/FluidFlux; HLSL:2
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_TriplanarBlend] MaterialFunction
+    StateId = 5C2693E04604C6B0610AC9AB49F721D8
+    CombinedInputTypes = 20
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_4
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_8
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_10
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_12
+    EditorOnlyData <- MF_TriplanarBlendEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_TriplanarBlendEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_0
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionMax_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionInverseLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_8
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_2
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionTextureSample_3
+    ExpressionCollection <- MaterialExpressionComponentMask_6
+    ExpressionCollection <- MaterialExpressionTextureSample_4
+    ExpressionCollection <- MaterialExpressionComponentMask_7
+    ExpressionCollection <- MaterialExpressionTextureSample_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_10
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionSign_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionAppendVector_3
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_12
+    ExpressionCollection <- MaterialExpressionAppendVector_4
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionAppendVector_5
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionCustom_1
+    ExpressionCollection <- MaterialExpressionTextureObject_0
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Input <- MaterialExpressionNormalize_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_8
+    B <- MaterialExpressionMaterialFunctionCall_8
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionAdd_1
+    B <- MaterialExpressionMaterialFunctionCall_8
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionMultiply_2
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionAdd_3
+    B <- MaterialExpressionMultiply_4
+[MaterialExpressionAppendVector_3] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionConstant_3
+    B <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionAppendVector_4] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_12
+    B <- MaterialExpressionConstant_4
+[MaterialExpressionAppendVector_5] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionMultiply_8
+    B <- MaterialExpressionConstant_5
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    G = True
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionComponentMask_6] MaterialExpressionComponentMask
+    R = True
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionComponentMask_7] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.001000
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    R = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    OutputType = CMOT_Float2
+    Inputs(0) Weights = (InputName="Weights")
+    Inputs(1) XUV = (InputName="XUV")
+    Inputs(2) YUV = (InputName="YUV")
+    Inputs(3) ZUV = (InputName="ZUV")
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Code: HLSL, 20 строк (см. HLSL/)
+[MaterialExpressionCustom_1] MaterialExpressionCustom
+    OutputType = CMOT_Float2
+    Inputs(0) Weights = (InputName="Weights")
+    Inputs(1) XUV = (InputName="XUV")
+    Inputs(2) YUV = (InputName="YUV")
+    Inputs(3) ZUV = (InputName="ZUV")
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Code: HLSL, 7 строк (см. HLSL/)
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionInverseLinearInterpolate_0
+    B <- MaterialExpressionAdd_2
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Texture"
+    Id = 7AB63E3B4DB63C5E529FCA9DC2736958
+    InputType = FunctionInput_Texture2D
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureObject_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "WordUV"
+    Id = E5ECC01042176C103D5D33AC087CA031
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMultiply_1
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "WorldNormal"
+    Id = DD6C18E64E3C2F595C3053B7E2BAE6E8
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    bCollapsed = True
+    Preview <- MaterialExpressionPixelNormalWS_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Sample"
+    bLastPreviewed = True
+    Id = B71057B6405EF9349887DE8E83750077
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_4
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "UV"
+    bLastPreviewed = True
+    Id = EBE8B8BB4A6354161194A7A0E2C03D8D
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_1
+[MaterialExpressionInverseLinearInterpolate_0] MaterialExpressionInverseLinearInterpolate
+    ConstB = 0.000000
+    bClampResult = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionScalarParameter_0
+    Value <- MaterialExpressionSubtract_0
+[MaterialExpressionMaterialFunctionCall_10] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    FunctionOutputs(2) = (ExpressionOutputId=17CE6E2C4E70841B48F3D1B73828AA03,Output=(OutputName="B"))
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    Outputs(2) = (OutputName="B")
+    FunctionInputs(0) <- MaterialExpressionDivide_1
+[MaterialExpressionMaterialFunctionCall_12] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    FunctionOutputs(2) = (ExpressionOutputId=17CE6E2C4E70841B48F3D1B73828AA03,Output=(OutputName="B"))
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    Outputs(2) = (OutputName="B")
+    FunctionInputs(0) <- MaterialExpressionSign_0
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    FunctionOutputs(2) = (ExpressionOutputId=17CE6E2C4E70841B48F3D1B73828AA03,Output=(OutputName="B"))
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    Outputs(2) = (OutputName="B")
+    FunctionInputs(0) <- MaterialExpressionAbs_0
+[MaterialExpressionMaterialFunctionCall_8] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    FunctionOutputs(2) = (ExpressionOutputId=17CE6E2C4E70841B48F3D1B73828AA03,Output=(OutputName="B"))
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    Outputs(2) = (OutputName="B")
+    FunctionInputs(0) <- MaterialExpressionInverseLinearInterpolate_0
+[MaterialExpressionMax_0] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_4
+    B <- MaterialExpressionMax_1
+[MaterialExpressionMax_1] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_4
+    B <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionWorldPosition_2
+    B <- MaterialExpressionConstant_2
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_10
+    B <- MaterialExpressionTextureSample_3
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_10
+    B <- MaterialExpressionTextureSample_4
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_10
+    B <- MaterialExpressionTextureSample_5
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionComponentMask_7
+    B <- MaterialExpressionAppendVector_3
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionComponentMask_6
+    B <- MaterialExpressionAppendVector_4
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionComponentMask_5
+    B <- MaterialExpressionAppendVector_5
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    VectorInput <- MaterialExpressionFunctionInput_2
+[MaterialExpressionPixelNormalWS_0] MaterialExpressionPixelNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "Smoothness"
+    ExpressionGUID = 95F9E5AC4427BA769E0872A5D6603BB0
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+[MaterialExpressionSign_0] MaterialExpressionSign
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Input <- MaterialExpressionNormalize_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    A <- MaterialExpressionMax_0
+    B <- MaterialExpressionAbs_0
+[MaterialExpressionTextureObject_0] MaterialExpressionTextureObject
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    bCollapsed = True
+[MaterialExpressionTextureSample_3] MaterialExpressionTextureSample
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Coordinates <- MaterialExpressionMultiply_7
+    TextureObject <- MaterialExpressionFunctionInput_0
+[MaterialExpressionTextureSample_4] MaterialExpressionTextureSample
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Coordinates <- MaterialExpressionMultiply_6
+    TextureObject <- MaterialExpressionFunctionInput_0
+[MaterialExpressionTextureSample_5] MaterialExpressionTextureSample
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+    Coordinates <- MaterialExpressionMultiply_5
+    TextureObject <- MaterialExpressionFunctionInput_0
+[MaterialExpressionWorldPosition_2] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBlend'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

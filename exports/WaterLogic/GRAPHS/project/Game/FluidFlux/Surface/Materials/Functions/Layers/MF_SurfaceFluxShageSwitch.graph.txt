@@ -1,0 +1,175 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFluxShageSwitch
+# класс: MaterialFunction; происхождение: проект; узлов: 19; связей: 52; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:200
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SurfaceFluxShageSwitch] MaterialFunction
+    bExposeToLibrary = True
+    LibraryCategoriesText(0) = NSLOCTEXT("", "6B05ACC64C0AB181197C04A149A9C150", "ImaginaryBlend")
+    StateId = 075C9FBE45B4E2C262B6C1B968D00019
+    CombinedInputTypes = 2048
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_6
+    DependentFunctionExpressionCandidates(4) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_SurfaceFluxShageSwitchEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SurfaceFluxShageSwitchEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_8
+    ExpressionCollection <- MaterialExpressionFunctionInput_7
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_1
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_0
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_2
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_3
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_4
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_5
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_6
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_7
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionFunctionInput_7] MaterialExpressionFunctionInput
+    InputName = "VertexShader"
+    Id = E6508D0D4F3B6003068B3E9F976B001B
+    InputType = FunctionInput_MaterialAttributes
+    bUsePreviewValueAsDefault = True
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMaterialFunctionCall_6
+[MaterialExpressionFunctionInput_8] MaterialExpressionFunctionInput
+    InputName = "PixelShader"
+    Id = DE39419B4858193E18F07EBD315C8BD4
+    InputType = FunctionInput_MaterialAttributes
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Layer"
+    bLastPreviewed = True
+    Id = 086ABEDC497396021AA5BABAAC85B487
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFluxGet.MF_SurfaceFluxGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=2F5590B84443D79C5ED20CBD1986AE0F,Output=(OutputName="Normal"))
+    FunctionOutputs(1) = (ExpressionOutputId=D5D9C81149A5173C450574ACF1892A83,Output=(OutputName="Offset"))
+    FunctionOutputs(2) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Foam"))
+    FunctionOutputs(3) = (ExpressionOutputId=FC1998D248C1B4F3F737EBAF2BB809E2,Output=(OutputName="Mask"))
+    FunctionOutputs(4) = (ExpressionOutputId=C01B4B1441F01BFD0BB092845D3E4E62,Output=(OutputName="Velocity"))
+    FunctionOutputs(5) = (ExpressionOutputId=4AAF74BF4772E0CDE6587E828A6B55A1,Output=(OutputName="Divergence"))
+    FunctionOutputs(6) = (ExpressionOutputId=77C243024B2239B4AC21598697A703B8,Output=(OutputName="Color"))
+    FunctionOutputs(7) = (ExpressionOutputId=BD109C08454FEDC8A7EB33808510A655,Output=(OutputName="OffsetCorrection"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    Outputs(0) = (OutputName="Normal")
+    Outputs(1) = (OutputName="Offset")
+    Outputs(2) = (OutputName="Foam")
+    Outputs(3) = (OutputName="Mask")
+    Outputs(4) = (OutputName="Velocity")
+    Outputs(5) = (OutputName="Divergence")
+    Outputs(6) = (OutputName="Color")
+    Outputs(7) = (OutputName="OffsetCorrection")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_8
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFluxGet.MF_SurfaceFluxGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=2F5590B84443D79C5ED20CBD1986AE0F,Output=(OutputName="Normal"))
+    FunctionOutputs(1) = (ExpressionOutputId=D5D9C81149A5173C450574ACF1892A83,Output=(OutputName="Offset"))
+    FunctionOutputs(2) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Foam"))
+    FunctionOutputs(3) = (ExpressionOutputId=FC1998D248C1B4F3F737EBAF2BB809E2,Output=(OutputName="Mask"))
+    FunctionOutputs(4) = (ExpressionOutputId=C01B4B1441F01BFD0BB092845D3E4E62,Output=(OutputName="Velocity"))
+    FunctionOutputs(5) = (ExpressionOutputId=4AAF74BF4772E0CDE6587E828A6B55A1,Output=(OutputName="Divergence"))
+    FunctionOutputs(6) = (ExpressionOutputId=77C243024B2239B4AC21598697A703B8,Output=(OutputName="Color"))
+    FunctionOutputs(7) = (ExpressionOutputId=BD109C08454FEDC8A7EB33808510A655,Output=(OutputName="OffsetCorrection"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    Outputs(0) = (OutputName="Normal")
+    Outputs(1) = (OutputName="Offset")
+    Outputs(2) = (OutputName="Foam")
+    Outputs(3) = (OutputName="Mask")
+    Outputs(4) = (OutputName="Velocity")
+    Outputs(5) = (OutputName="Divergence")
+    Outputs(6) = (OutputName="Color")
+    Outputs(7) = (OutputName="OffsetCorrection")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_7
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFluxSet.MF_SurfaceFluxSet'"
+    FunctionInputs(0) = (ExpressionInputId=DE39419B4858193E18F07EBD315C8BD4,Input=(OutputIndex=-1,InputName="Layer"))
+    FunctionOutputs(0) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Layer"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    Outputs(0) = (OutputName="Layer")
+    FunctionInputs(1) <- MaterialExpressionShaderStageSwitch_1
+    FunctionInputs(2) <- MaterialExpressionShaderStageSwitch_0
+    FunctionInputs(3) <- MaterialExpressionShaderStageSwitch_2
+    FunctionInputs(4) <- MaterialExpressionShaderStageSwitch_3
+    FunctionInputs(5) <- MaterialExpressionShaderStageSwitch_4
+    FunctionInputs(6) <- MaterialExpressionShaderStageSwitch_5
+    FunctionInputs(7) <- MaterialExpressionShaderStageSwitch_6
+    FunctionInputs(8) <- MaterialExpressionShaderStageSwitch_7
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFluxSet.MF_SurfaceFluxSet'"
+    FunctionInputs(0) = (ExpressionInputId=DE39419B4858193E18F07EBD315C8BD4,Input=(OutputIndex=-1,InputName="Layer"))
+    FunctionInputs(1) = (ExpressionInputId=08C2B0714FA847EFEB24E7A968EFF38A,Input=(InputName="Normal"))
+    FunctionInputs(2) = (ExpressionInputId=5B4B591844BE6A30265B9E9C44569596,Input=(InputName="Offset"))
+    FunctionInputs(3) = (ExpressionInputId=31B8A22940DCF0047883AC9EECD3B1E6,Input=(InputName="Foam"))
+    FunctionInputs(4) = (ExpressionInputId=61BB3B9141D3C9B758A160BEDA830DC1,Input=(InputName="Mask"))
+    FunctionInputs(5) = (ExpressionInputId=B6A8D4B64287848307BB38AEB3E5FF74,Input=(InputName="Velocity"))
+    FunctionInputs(6) = (ExpressionInputId=5FA446DF42E493DAD2202EA0B10DB10E,Input=(InputName="Divergence"))
+    FunctionInputs(7) = (ExpressionInputId=C0046E5C4B9604FDD2CAFF8B4723A722,Input=(OutputIndex=-1,InputName="Color"))
+    FunctionInputs(8) = (ExpressionInputId=28C47DB54D9D1912E024EDA2802E2BB3,Input=(OutputIndex=-1,InputName="OffsetCorrection"))
+    FunctionOutputs(0) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Layer"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    Outputs(0) = (OutputName="Layer")
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFluxSet.MF_SurfaceFluxSet'"
+    FunctionInputs(0) = (ExpressionInputId=DE39419B4858193E18F07EBD315C8BD4,Input=(OutputIndex=-1,InputName="Layer"))
+    FunctionInputs(1) = (ExpressionInputId=08C2B0714FA847EFEB24E7A968EFF38A,Input=(InputName="Normal"))
+    FunctionInputs(2) = (ExpressionInputId=5B4B591844BE6A30265B9E9C44569596,Input=(InputName="Offset"))
+    FunctionInputs(3) = (ExpressionInputId=31B8A22940DCF0047883AC9EECD3B1E6,Input=(InputName="Foam"))
+    FunctionInputs(4) = (ExpressionInputId=61BB3B9141D3C9B758A160BEDA830DC1,Input=(InputName="Mask"))
+    FunctionInputs(5) = (ExpressionInputId=B6A8D4B64287848307BB38AEB3E5FF74,Input=(InputName="Velocity"))
+    FunctionInputs(6) = (ExpressionInputId=5FA446DF42E493DAD2202EA0B10DB10E,Input=(InputName="Divergence"))
+    FunctionInputs(7) = (ExpressionInputId=C0046E5C4B9604FDD2CAFF8B4723A722,Input=(OutputIndex=-1,InputName="Color"))
+    FunctionInputs(8) = (ExpressionInputId=28C47DB54D9D1912E024EDA2802E2BB3,Input=(OutputIndex=-1,InputName="OffsetCorrection"))
+    FunctionOutputs(0) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Layer"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    Outputs(0) = (OutputName="Layer")
+[MaterialExpressionShaderStageSwitch_0] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    PixelShader <- MaterialExpressionMaterialFunctionCall_0
+    VertexShader <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionShaderStageSwitch_1] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    PixelShader <- MaterialExpressionMaterialFunctionCall_0
+    VertexShader <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionShaderStageSwitch_2] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    PixelShader <- MaterialExpressionMaterialFunctionCall_0
+    VertexShader <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionShaderStageSwitch_3] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    PixelShader <- MaterialExpressionMaterialFunctionCall_0
+    VertexShader <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionShaderStageSwitch_4] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    PixelShader <- MaterialExpressionMaterialFunctionCall_0
+    VertexShader <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionShaderStageSwitch_5] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    PixelShader <- MaterialExpressionMaterialFunctionCall_0
+    VertexShader <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionShaderStageSwitch_6] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    PixelShader <- MaterialExpressionMaterialFunctionCall_0
+    VertexShader <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionShaderStageSwitch_7] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFluxShageSwitch'"
+    PixelShader <- MaterialExpressionMaterialFunctionCall_0
+    VertexShader <- MaterialExpressionMaterialFunctionCall_1
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

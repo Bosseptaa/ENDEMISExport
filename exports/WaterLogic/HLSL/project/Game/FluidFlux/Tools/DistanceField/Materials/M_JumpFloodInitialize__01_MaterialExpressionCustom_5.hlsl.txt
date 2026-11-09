@@ -1,0 +1,45 @@
+﻿// Источник: /Game/FluidFlux/Tools/DistanceField/Materials/M_JumpFloodInitialize (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_5 ключ: Code
+// Входы: Tex, TextureSize, UV, Width, Clip, Quality
+// Выход: CMOT_Float2
+// Описание: CalulateEdgeDirections
+
+	
+	
+float minDist = 10000000.0; //(MaxRadius + 1) * (MaxRadius + 1);
+
+int MaxRadius = Quality * Width;
+
+float2 texelsize = 1.0f / (TextureSize * Quality);
+float StartSample = Tex.SampleLevel(TexSampler, UV, 0).r - Clip;
+float Direction =  (StartSample < 0.0) ? -1.0 : 1.0;
+float2 minOffset = float2(65535,65535);
+float2 adjustScale = float2(1.0, TextureSize.x/TextureSize.y);
+
+for(int i = -MaxRadius; i < MaxRadius; i++)
+{
+    for(int j = -MaxRadius; j < MaxRadius; j++)
+    {
+        float2 TextureOffset = float2((float)i, float(j));		
+        float CurentSample = (Tex.SampleLevel(TexSampler, UV + texelsize * TextureOffset, 0).r - Clip) * Direction;
+        if( ( CurentSample < 0.0) )
+        {
+			float newdist = dot(TextureOffset,TextureOffset);
+			if (newdist < minDist)
+			{
+				minDist = newdist;
+				minOffset = TextureOffset;
+			}
+        }
+    }
+}
+ Direction /= adjustScale;
+ if (minDist < 10000000.0)
+ {
+	return -(UV + texelsize * minOffset) * Direction * TextureSize;
+ } else
+ {
+	return -minOffset * Direction;
+ }
+
+// 0.5 + Direction * 0.5 * (0.5 - sqrt(minDist))/ MaxRadius;

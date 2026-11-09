@@ -1,0 +1,34 @@
+﻿// Источник: /Game/FluidFlux/Tools/DistanceField/Materials/M_JumpFloodInitialize (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_2 ключ: Code
+// Входы: SC, SR, SL, ST, SB, uv
+// Выход: CMOT_Float2
+// Описание: Old
+
+struct Functions
+{
+  float Sig(float c)
+  {
+      return (c > 0.0) ? 1.0 : 0.0;
+  }
+
+};
+
+Functions f;
+
+float4 neighbors = float4(f.Sig(SL), f.Sig(SR), f.Sig(ST), f.Sig(SB));
+float center = f.Sig(SC);
+
+if(dot(1.0-neighbors, float4(center, center, center,center)) < 0.5)
+{
+	if(center == 0.0)
+	{
+		return float2(-65535,-65535);
+	}
+	else
+	{
+		return float2(65535, 65535);
+	}
+} else
+{
+	return float2(uv );
+}

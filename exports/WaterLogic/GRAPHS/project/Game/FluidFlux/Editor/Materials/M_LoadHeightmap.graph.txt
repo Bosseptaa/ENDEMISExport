@@ -1,0 +1,64 @@
+﻿# /Game/FluidFlux/Editor/Materials/M_LoadHeightmap
+# класс: Material; происхождение: проект; узлов: 10; связей: 16; HLSL: 0; причина: папка /Game/FluidFlux; тело:5
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_LoadHeightmap] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    NumCustomizedUVs = 1
+    EditorX = 288
+    EditorY = -152
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = C9711160ADF8A5CB7E1AE8966A84C087
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="DefaultTexture",TextureReference="/Engine/EngineResources/DefaultTexture.DefaultTexture")
+    ReferencedDefaultTextures(0) = None
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 2481350F4E4815C1FCC30491433AE219
+    EditorOnlyData <- M_LoadHeightmapEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_LoadHeightmapEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionAdd_0
+    CustomizedUVs(0) <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    A <- MaterialExpressionTextureSample_0
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSimulationUVToWorld.MF_FluxSimulationUVToWorld'"
+    FunctionOutputs(0) = (ExpressionOutputId=95D094FA430297A593B0A089DBD5B4E3,Output=(OutputName="WorldPosition"))
+    Outputs(0) = (OutputName="WorldPosition")
+    FunctionInputs(0) <- MaterialExpressionTextureCoordinate_2
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxWorldToStateUV.MF_FluxWorldToStateUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=DF521043496F99477DD91C8D1F56A5CE,Output=(OutputName="UV"))
+    FunctionOutputs(1) = (ExpressionOutputId=551C49EC423E491AAA708DBF1F9B7304,Output=(OutputName="Offset"))
+    Outputs(0) = (OutputName="UV")
+    Outputs(1) = (OutputName="Offset")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    ParameterName = "StateWetHeightOffset"
+    ExpressionGUID = 429C79374778B76AD9BF599F9AC27080
+[MaterialExpressionTextureCoordinate_2] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "HeightWetMap"
+    ExpressionGUID = EAC5665F4C604BDB5DB401B90382802A
+    bCollapsed = True
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

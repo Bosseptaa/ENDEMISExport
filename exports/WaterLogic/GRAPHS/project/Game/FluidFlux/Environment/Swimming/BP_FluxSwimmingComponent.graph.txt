@@ -1,0 +1,1057 @@
+﻿# /Game/FluidFlux/Environment/Swimming/BP_FluxSwimmingComponent
+# класс: Blueprint; происхождение: проект; узлов: 259; связей: 477; HLSL: 0; причина: папка /Game/FluidFlux; тело:102
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxSwimmingComponent] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.ActorComponent'"
+    HideCategories(0) = "Components"
+    HideCategories(1) = "Tags"
+    HideCategories(2) = "Component Tick"
+    HideCategories(3) = "Component Replication"
+    HideCategories(4) = "Cooking"
+    HideCategories(5) = "Collision"
+    HideCategories(6) = "Asset User Data"
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = "Event Graph"
+    CategorySorting(1) = "Default"
+    CategorySorting(2) = "Activation"
+    CategorySorting(3) = "Movement"
+    CategorySorting(4) = "Initialization"
+    CategorySorting(5) = "Update"
+    CategorySorting(6) = "Getters"
+    CategorySorting(7) = "Setters"
+    CategorySorting(8) = "COmponents"
+    CategorySorting(9) = ""
+    CategorySorting(10) = "Physics"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Environment/Swimming/BP_FluxSwimmingComponent.BP_FluxSwimmingComponent:FindOwnerComponents",SavedViewOffset=(X=-132.861115,Y=97.390892),SavedZoomAmount=0.675000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Environment/Swimming/BP_FluxSwimmingComponent.BP_FluxSwimmingComponent:SetDeactivationStack",SavedViewOffset=(X=-63.937927,Y=-302.564392),SavedZoomAmount=1.000000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Environment/Swimming/BP_FluxSwimmingComponent.BP_FluxSwimmingComponent:GetInputDirection",SavedViewOffset=(X=-759.326782,Y=-402.602722),SavedZoomAmount=1.000000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Environment/Swimming/BP_FluxSwimmingComponent.BP_FluxSwimmingComponent:GetSurfaceDistance",SavedViewOffset=(X=-106.025963,Y=-213.061874),SavedZoomAmount=0.750000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Environment/Swimming/BP_FluxSwimmingComponent.BP_FluxSwimmingComponent:UpdateMovementInput",SavedViewOffset=(X=-706.568115,Y=-437.848267),SavedZoomAmount=1.000000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Environment/Swimming/BP_FluxSwimmingComponent.BP_FluxSwimmingComponent:UpdateMovementMode",SavedViewOffset=(X=-179.429260,Y=-327.414948),SavedZoomAmount=0.675000)
+    LastEditedDocuments(6) = (EditedObjectPath="/Game/FluidFlux/Environment/Swimming/BP_FluxSwimmingComponent.BP_FluxSwimmingComponent:EventGraph",SavedViewOffset=(X=-220.941177,Y=184.678513),SavedZoomAmount=0.750000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxSwimmingComponent_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 24696E2D4FD24662ADD3B8A798C66034
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- GetInputDirection
+    FunctionGraphs(1) <- GetSurfaceDistance
+    FunctionGraphs(2) <- FindOwnerComponents
+    FunctionGraphs(3) <- SetDeactivationStack
+    FunctionGraphs(4) <- FindSwimmingState
+    FunctionGraphs(5) <- UpdateMovementMode
+    FunctionGraphs(6) <- UpdateMovementInput
+    FunctionGraphs(7) <- AddSwimInput
+    DelegateSignatureGraphs(0) <- OnSwimmingStateChanged
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 2DC88DED477F1119D23BAD83C4A1171F
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_Event_1
+    Nodes(2) <- K2Node_CallFunction_3
+    Nodes(3) <- K2Node_CustomEvent_0
+    Nodes(4) <- K2Node_VariableGet_54
+    Nodes(5) <- K2Node_VariableSet_1
+    Nodes(6) <- K2Node_VariableSet_2
+    Nodes(7) <- K2Node_IfThenElse_2
+    Nodes(8) <- K2Node_VariableGet_295
+    Nodes(9) <- K2Node_Knot_8
+    Nodes(10) <- K2Node_CallFunction_2
+    Nodes(11) <- K2Node_CallFunction_0
+    Nodes(12) <- K2Node_CustomEvent_1
+    Nodes(13) <- K2Node_CallFunction_1
+    Nodes(14) <- K2Node_CustomEvent_2
+    Nodes(15) <- K2Node_CallFunction_8
+    Nodes(16) <- K2Node_VariableGet_0
+    Nodes(17) <- K2Node_CallFunction_4
+    Nodes(18) <- K2Node_CallFunction_9
+    Nodes(19) <- K2Node_VariableGet_1
+    Nodes(20) <- K2Node_VariableGet_2
+    Nodes(21) <- K2Node_CallFunction_5
+    Nodes(22) <- K2Node_CallFunction_6
+    Nodes(23) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(24) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(25) <- K2Node_CallFunction_7
+    Nodes(26) <- K2Node_VariableGet_5
+    Nodes(27) <- K2Node_CallFunction_10
+    Nodes(28) <- K2Node_VariableSet_0
+    Nodes(29) <- K2Node_VariableSet_3
+[K2Node_Event_0] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    bCommentBubblePinned = True
+[K2Node_Event_1] K2Node_Event (событие: ReceiveTick @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    bCommentBubblePinned = True
+[K2Node_CallFunction_3@EventGraph] K2Node_CallFunction
+[K2Node_CustomEvent_0] K2Node_CustomEvent
+    CustomFunctionName = "SwimmingStateChanged"
+    ErrorType = 1
+[K2Node_VariableGet_54] K2Node_VariableGet (переменная: Movement)
+    ErrorType = 1
+[K2Node_VariableSet_1@EventGraph] K2Node_VariableSet
+[K2Node_VariableSet_2@EventGraph] K2Node_VariableSet
+[K2Node_IfThenElse_2@EventGraph] K2Node_IfThenElse
+[K2Node_VariableGet_295] K2Node_VariableGet (переменная: Movement)
+    ErrorType = 1
+[K2Node_Knot_8] K2Node_Knot
+[K2Node_CallFunction_2@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_0@EventGraph] K2Node_CallFunction
+[K2Node_CustomEvent_1] K2Node_CustomEvent
+    CustomFunctionName = "DeactivateSwimming"
+    ErrorType = 1
+[K2Node_CallFunction_1@EventGraph] K2Node_CallFunction
+[K2Node_CustomEvent_2] K2Node_CustomEvent
+    CustomFunctionName = "ActivateSwimming"
+    ErrorType = 1
+[K2Node_CallFunction_8@EventGraph] K2Node_CallFunction
+[K2Node_VariableGet_0@EventGraph] K2Node_VariableGet
+[K2Node_CallFunction_4@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_9@EventGraph] K2Node_CallFunction
+[K2Node_VariableGet_1@EventGraph] K2Node_VariableGet
+[K2Node_VariableGet_2@EventGraph] K2Node_VariableGet
+[K2Node_CallFunction_5@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_6@EventGraph] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_1@EventGraph] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_0@EventGraph] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_7@EventGraph] K2Node_CallFunction
+[K2Node_VariableGet_5@EventGraph] K2Node_VariableGet
+[K2Node_CallFunction_10@EventGraph] K2Node_CallFunction
+[K2Node_VariableSet_0@EventGraph] K2Node_VariableSet
+[K2Node_VariableSet_3@EventGraph] K2Node_VariableSet
+[GetInputDirection] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 31D94AA745E77AFC09ECFA8E636DFE65
+    Nodes(0) <- K2Node_FunctionEntry_161
+    Nodes(1) <- K2Node_FunctionResult_1
+    Nodes(2) <- K2Node_CommutativeAssociativeBinaryOperator_36
+    Nodes(3) <- K2Node_CallFunction_203
+    Nodes(4) <- K2Node_CallFunction_0
+    Nodes(5) <- K2Node_CallFunction_11
+    Nodes(6) <- K2Node_CommutativeAssociativeBinaryOperator_5
+[K2Node_FunctionEntry_161] K2Node_FunctionEntry (вызов: GetInputDirection)
+    MetaData = (ToolTip=NSLOCTEXT("", "17A8F6C7479F4201DB68B39492857B04", "Get input direction scale."),Category=NSLOCTEXT("", "C80C2D824A2FF1BE5F1C75989B0975CF", "Getters"))
+    ExtraFlags = 469893120
+    bIsEditable = True
+[K2Node_FunctionResult_1@GetInputDirection] K2Node_FunctionResult
+[K2Node_CommutativeAssociativeBinaryOperator_36] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = -0.010000
+[K2Node_CallFunction_203] K2Node_CallFunction (вызов: FClamp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Min = 0.0
+    вход Max = 1.0
+[K2Node_CallFunction_0@GetInputDirection] K2Node_CallFunction
+[K2Node_CallFunction_11@GetInputDirection] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_5] K2Node_CommutativeAssociativeBinaryOperator (вызов: FMin @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[GetSurfaceDistance] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = EE07491E45476BE69F71ED950D559B91
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_13
+    Nodes(2) <- K2Node_CallFunction_2
+    Nodes(3) <- K2Node_FunctionResult_1
+    Nodes(4) <- K2Node_FunctionResult_0
+    Nodes(5) <- K2Node_VariableGet_1
+    Nodes(6) <- K2Node_VariableGet_0
+    Nodes(7) <- K2Node_CallFunction_662
+    Nodes(8) <- K2Node_CallFunction_525
+    Nodes(9) <- K2Node_VariableGet_5
+    Nodes(10) <- K2Node_CallFunction_1
+[K2Node_FunctionEntry_0@GetSurfaceDistance] K2Node_FunctionEntry
+[K2Node_FunctionResult_1@GetSurfaceDistance] K2Node_FunctionResult
+[K2Node_CallFunction_13@GetSurfaceDistance] K2Node_CallFunction
+[K2Node_CallFunction_2@GetSurfaceDistance] K2Node_CallFunction
+[K2Node_FunctionResult_0@GetSurfaceDistance] K2Node_FunctionResult
+[K2Node_VariableGet_1@GetSurfaceDistance] K2Node_VariableGet
+[K2Node_VariableGet_0@GetSurfaceDistance] K2Node_VariableGet
+[K2Node_CallFunction_662] K2Node_CallFunction (вызов: K2_GetActorLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_525] K2Node_CallFunction (вызов: GetOwner)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_5@GetSurfaceDistance] K2Node_VariableGet
+[K2Node_CallFunction_1@GetSurfaceDistance] K2Node_CallFunction
+[FindOwnerComponents] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D09B7E9A41503BD09A5503AF675EB433
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_1
+    Nodes(2) <- K2Node_VariableSet_0
+    Nodes(3) <- K2Node_VariableSet_831
+    Nodes(4) <- K2Node_CallFunction_2
+    Nodes(5) <- K2Node_CallFunction_3
+    Nodes(6) <- K2Node_CallFunction_174
+    Nodes(7) <- K2Node_VariableSet_1
+    Nodes(8) <- K2Node_Knot_0
+    Nodes(9) <- K2Node_VariableGet_3
+    Nodes(10) <- K2Node_IfThenElse_0
+    Nodes(11) <- K2Node_CallFunction_8
+    Nodes(12) <- K2Node_CallFunction_9
+[K2Node_FunctionEntry_0@FindOwnerComponents] K2Node_FunctionEntry
+[K2Node_CallFunction_1@FindOwnerComponents] K2Node_CallFunction
+[K2Node_VariableSet_0@FindOwnerComponents] K2Node_VariableSet
+[K2Node_VariableSet_831] K2Node_VariableSet (переменная: Movement)
+[K2Node_CallFunction_2@FindOwnerComponents] K2Node_CallFunction
+[K2Node_CallFunction_3@FindOwnerComponents] K2Node_CallFunction
+[K2Node_CallFunction_174] K2Node_CallFunction (вызов: GetComponentByClass @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+[K2Node_VariableSet_1@FindOwnerComponents] K2Node_VariableSet
+[K2Node_Knot_0@FindOwnerComponents] K2Node_Knot
+[K2Node_VariableGet_3@FindOwnerComponents] K2Node_VariableGet
+[K2Node_IfThenElse_0@FindOwnerComponents] K2Node_IfThenElse
+[K2Node_CallFunction_8@FindOwnerComponents] K2Node_CallFunction
+[K2Node_CallFunction_9@FindOwnerComponents] K2Node_CallFunction
+[SetDeactivationStack] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 55D53C2142EA65640EDDE88522EDFD02
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_IfThenElse_6
+    Nodes(2) <- K2Node_MacroInstance_0
+    Nodes(3) <- K2Node_MacroInstance_1
+    Nodes(4) <- K2Node_VariableGet_2
+    Nodes(5) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@SetDeactivationStack] K2Node_FunctionEntry
+[K2Node_IfThenElse_6] K2Node_IfThenElse
+[K2Node_MacroInstance_0] K2Node_MacroInstance
+[K2Node_MacroInstance_1] K2Node_MacroInstance
+[K2Node_VariableGet_2@SetDeactivationStack] K2Node_VariableGet
+[K2Node_VariableGet_0@SetDeactivationStack] K2Node_VariableGet
+[FindSwimmingState] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 7F77ED0842FE94A3BB406ABD3AE44316
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(2) <- K2Node_CallFunction_68
+    Nodes(3) <- K2Node_CallFunction_0
+    Nodes(4) <- K2Node_VariableGet_0
+    Nodes(5) <- K2Node_FunctionResult_2
+    Nodes(6) <- K2Node_IfThenElse_2
+    Nodes(7) <- K2Node_IfThenElse_3
+    Nodes(8) <- K2Node_FunctionResult_3
+    Nodes(9) <- K2Node_VariableGet_580
+    Nodes(10) <- K2Node_CallFunction_12
+    Nodes(11) <- K2Node_VariableGet_1
+    Nodes(12) <- K2Node_IfThenElse_1
+    Nodes(13) <- K2Node_FunctionResult_1
+    Nodes(14) <- K2Node_FunctionResult_0
+    Nodes(15) <- K2Node_VariableGet_8
+    Nodes(16) <- K2Node_VariableGet_9
+    Nodes(17) <- K2Node_CallFunction_1
+    Nodes(18) <- K2Node_CallFunction_5
+    Nodes(19) <- K2Node_VariableGet_3
+    Nodes(20) <- K2Node_IfThenElse_0
+    Nodes(21) <- K2Node_FunctionResult_4
+    Nodes(22) <- K2Node_CallFunction_20
+    Nodes(23) <- K2Node_VariableGet_5
+    Nodes(24) <- K2Node_CallFunction_3
+    Nodes(25) <- K2Node_CallFunction_4
+    Nodes(26) <- K2Node_CallFunction_7
+    Nodes(27) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(28) <- K2Node_VariableGet_6
+    Nodes(29) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(30) <- K2Node_VariableGet_7
+    Nodes(31) <- K2Node_VariableGet_4
+    Nodes(32) <- K2Node_VariableGet_2
+    Nodes(33) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(34) <- K2Node_CallFunction_8
+    Nodes(35) <- K2Node_VariableGet_10
+    Nodes(36) <- K2Node_VariableGet_11
+    Nodes(37) <- K2Node_CommutativeAssociativeBinaryOperator_9
+[K2Node_FunctionEntry_0@FindSwimmingState] K2Node_FunctionEntry
+[K2Node_FunctionResult_2] K2Node_FunctionResult (вызов: FindSwimmingState)
+    bIsEditable = True
+    вход Swimming = false
+    вход Swimming = false
+[K2Node_CommutativeAssociativeBinaryOperator_2] K2Node_CommutativeAssociativeBinaryOperator (вызов: BooleanAND @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_68] K2Node_CallFunction (вызов: LessEqual_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 0
+[K2Node_CallFunction_0@FindSwimmingState] K2Node_CallFunction
+[K2Node_VariableGet_0@FindSwimmingState] K2Node_VariableGet
+[K2Node_IfThenElse_2@FindSwimmingState] K2Node_IfThenElse
+[K2Node_IfThenElse_3@FindSwimmingState] K2Node_IfThenElse
+[K2Node_FunctionResult_3] K2Node_FunctionResult (вызов: FindSwimmingState)
+    bIsEditable = True
+    вход Swimming = false
+    вход Swimming = false
+[K2Node_VariableGet_580] K2Node_VariableGet (переменная: Movement)
+[K2Node_CallFunction_12@FindSwimmingState] K2Node_CallFunction
+[K2Node_VariableGet_1@FindSwimmingState] K2Node_VariableGet
+[K2Node_IfThenElse_1@FindSwimmingState] K2Node_IfThenElse
+[K2Node_FunctionResult_1@FindSwimmingState] K2Node_FunctionResult (вызов: FindSwimmingState)
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    вход Direction = 0, 0, 0
+    вход Direction = 0, 0, 0
+    вход Distance = 0.0
+    вход Swimming = false
+    вход Swimming = false
+[K2Node_FunctionResult_0@FindSwimmingState] K2Node_FunctionResult (вызов: FindSwimmingState)
+    bIsEditable = True
+    bIsEditable = True
+    вход Distance = -1000000000.000000
+    вход Distance = -1000000000.000000
+    вход Swimming = true
+[K2Node_VariableGet_8@FindSwimmingState] K2Node_VariableGet
+[K2Node_VariableGet_9@FindSwimmingState] K2Node_VariableGet
+[K2Node_CallFunction_1@FindSwimmingState] K2Node_CallFunction
+[K2Node_CallFunction_5@FindSwimmingState] K2Node_CallFunction
+[K2Node_VariableGet_3@FindSwimmingState] K2Node_VariableGet
+[K2Node_IfThenElse_0@FindSwimmingState] K2Node_IfThenElse
+[K2Node_FunctionResult_4] K2Node_FunctionResult (вызов: FindSwimmingState)
+    bIsEditable = True
+    вход Swimming = true
+    вход Swimming = true
+[K2Node_CallFunction_20] K2Node_CallFunction (вызов: IsActive)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_5@FindSwimmingState] K2Node_VariableGet
+[K2Node_CallFunction_3@FindSwimmingState] K2Node_CallFunction
+[K2Node_CallFunction_4@FindSwimmingState] K2Node_CallFunction
+[K2Node_CallFunction_7@FindSwimmingState] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_0@FindSwimmingState] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_6@FindSwimmingState] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_1@FindSwimmingState] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_7@FindSwimmingState] K2Node_VariableGet
+[K2Node_VariableGet_4@FindSwimmingState] K2Node_VariableGet
+[K2Node_VariableGet_2@FindSwimmingState] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_3] K2Node_CommutativeAssociativeBinaryOperator (вызов: BooleanAND @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_8@FindSwimmingState] K2Node_CallFunction
+[K2Node_VariableGet_10@FindSwimmingState] K2Node_VariableGet
+[K2Node_VariableGet_11@FindSwimmingState] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_9] K2Node_CommutativeAssociativeBinaryOperator (вызов: BooleanAND @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[OnSwimmingStateChanged] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bEditable = False
+    GraphGuid = FAA3218344D4FC9166E312929A5BE54A
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@OnSwimmingStateChanged] K2Node_FunctionEntry
+[UpdateMovementInput] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A943405741C66499173B18BC291CB407
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_22
+    Nodes(2) <- K2Node_CallFunction_29
+    Nodes(3) <- K2Node_CallFunction_30
+    Nodes(4) <- K2Node_VariableSet_5
+    Nodes(5) <- K2Node_VariableGet_27
+    Nodes(6) <- K2Node_CommutativeAssociativeBinaryOperator_8
+    Nodes(7) <- K2Node_ExecutionSequence_1
+    Nodes(8) <- K2Node_VariableGet_17
+    Nodes(9) <- K2Node_CallFunction_10
+    Nodes(10) <- K2Node_CommutativeAssociativeBinaryOperator_4
+    Nodes(11) <- K2Node_CommutativeAssociativeBinaryOperator_6
+    Nodes(12) <- K2Node_CommutativeAssociativeBinaryOperator_7
+    Nodes(13) <- K2Node_VariableGet_6
+    Nodes(14) <- K2Node_CallFunction_9
+    Nodes(15) <- K2Node_VariableGet_31
+    Nodes(16) <- K2Node_CallFunction_43
+    Nodes(17) <- K2Node_VariableGet_14
+    Nodes(18) <- K2Node_CallFunction_12
+    Nodes(19) <- K2Node_CommutativeAssociativeBinaryOperator_10
+    Nodes(20) <- K2Node_CommutativeAssociativeBinaryOperator_11
+    Nodes(21) <- K2Node_CallFunction_14
+    Nodes(22) <- K2Node_VariableGet_32
+    Nodes(23) <- K2Node_VariableGet_18
+    Nodes(24) <- K2Node_CallFunction_4
+    Nodes(25) <- K2Node_CallFunction_40
+    Nodes(26) <- K2Node_CallFunction_41
+    Nodes(27) <- K2Node_VariableGet_49
+    Nodes(28) <- K2Node_VariableGet_48
+    Nodes(29) <- K2Node_VariableGet_50
+    Nodes(30) <- K2Node_VariableGet_51
+    Nodes(31) <- K2Node_CallFunction_7
+    Nodes(32) <- K2Node_CallFunction_8
+    Nodes(33) <- K2Node_VariableGet_16
+    Nodes(34) <- K2Node_VariableSet_4
+    Nodes(35) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(36) <- K2Node_VariableGet_7
+    Nodes(37) <- K2Node_VariableGet_44
+    Nodes(38) <- K2Node_CallFunction_23
+    Nodes(39) <- K2Node_VariableGet_20
+    Nodes(40) <- K2Node_VariableSet_8
+    Nodes(41) <- K2Node_VariableGet_13
+    Nodes(42) <- K2Node_PromotableOperator_0
+    Nodes(43) <- K2Node_IfThenElse_3
+    Nodes(44) <- K2Node_VariableGet_19
+    Nodes(45) <- K2Node_VariableGet_33
+    Nodes(46) <- K2Node_CallFunction_44
+    Nodes(47) <- K2Node_VariableSet_3
+    Nodes(48) <- K2Node_VariableGet_15
+    Nodes(49) <- K2Node_CallFunction_3244
+    Nodes(50) <- K2Node_CallFunction_233
+    Nodes(51) <- K2Node_CallFunction_249
+    Nodes(52) <- K2Node_CallFunction_359
+    Nodes(53) <- K2Node_CallFunction_13
+    Nodes(54) <- K2Node_CallFunction_392
+    Nodes(55) <- K2Node_VariableGet_473
+    Nodes(56) <- K2Node_IfThenElse_16
+    Nodes(57) <- K2Node_VariableGet_0
+    Nodes(58) <- K2Node_CallFunction_37
+    Nodes(59) <- K2Node_CallFunction_11
+    Nodes(60) <- K2Node_VariableGet_927
+    Nodes(61) <- K2Node_CallFunction_6
+    Nodes(62) <- K2Node_VariableGet_4
+    Nodes(63) <- K2Node_CallFunction_3
+    Nodes(64) <- K2Node_VariableSet_0
+    Nodes(65) <- K2Node_VariableSet_2
+    Nodes(66) <- K2Node_VariableGet_5
+    Nodes(67) <- K2Node_IfThenElse_0
+    Nodes(68) <- K2Node_CallFunction_0
+    Nodes(69) <- K2Node_VariableGet_11
+    Nodes(70) <- K2Node_VariableSet_1
+    Nodes(71) <- K2Node_VariableGet_9
+    Nodes(72) <- K2Node_CallFunction_5
+    Nodes(73) <- K2Node_IfThenElse_2
+    Nodes(74) <- K2Node_VariableGet_2
+    Nodes(75) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(76) <- K2Node_ExecutionSequence_0
+    Nodes(77) <- K2Node_Knot_0
+    Nodes(78) <- K2Node_VariableGet_10
+    Nodes(79) <- K2Node_VariableGet_12
+    Nodes(80) <- K2Node_VariableGet_1
+    Nodes(81) <- K2Node_IfThenElse_1
+    Nodes(82) <- K2Node_VariableGet_8
+    Nodes(83) <- EdGraphNode_Comment_0
+    Nodes(84) <- K2Node_ExecutionSequence_2
+    Nodes(85) <- EdGraphNode_Comment_1
+    Nodes(86) <- K2Node_VariableGet_24
+    Nodes(87) <- K2Node_Knot_1
+[K2Node_FunctionEntry_0@UpdateMovementInput] K2Node_FunctionEntry
+[K2Node_VariableGet_22] K2Node_VariableGet (переменная: FluxSurfaceLocation @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_29] K2Node_CallFunction (вызов: Subtract_VectorVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_30] K2Node_CallFunction (вызов: K2_GetActorLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableSet_5] K2Node_VariableSet (переменная: ActorToSurfaceDist)
+    ErrorType = 3
+[K2Node_VariableGet_27] K2Node_VariableGet (переменная: ActorSurfacDistanceZOffset)
+[K2Node_CommutativeAssociativeBinaryOperator_8] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_ExecutionSequence_1] K2Node_ExecutionSequence
+[K2Node_VariableGet_17] K2Node_VariableGet (переменная: Velocity @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_10@UpdateMovementInput] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_4] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_6] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_7] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_6@UpdateMovementInput] K2Node_VariableGet
+[K2Node_CallFunction_9@UpdateMovementInput] K2Node_CallFunction (вызов: AddInputVector @ /Script/CoreUObject.Class)
+    вход WorldVector = 0, 0, 0
+    вход WorldVector_X = 0.0
+    вход WorldVector_Y = 0.0
+    вход bForce = false
+[K2Node_VariableGet_31] K2Node_VariableGet (переменная: Movement)
+[K2Node_CallFunction_43] K2Node_CallFunction (вызов: GetOwner)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_14@UpdateMovementInput] K2Node_VariableGet
+[K2Node_CallFunction_12@UpdateMovementInput] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход A = 1.000000
+[K2Node_CommutativeAssociativeBinaryOperator_10] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_11] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_14] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_32] K2Node_VariableGet (переменная: ActorToSurfaceDist)
+    ErrorType = 3
+[K2Node_VariableGet_18] K2Node_VariableGet (переменная: ActorToSurfaceDist)
+    ErrorType = 3
+[K2Node_CallFunction_4@UpdateMovementInput] K2Node_CallFunction
+[K2Node_CallFunction_40] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход A = 1.000000
+[K2Node_CallFunction_41] K2Node_CallFunction (вызов: FClamp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Min = -0.500000
+    вход Max = 0.500000
+[K2Node_VariableGet_49] K2Node_VariableGet (переменная: DeltaTime)
+    ErrorType = 3
+[K2Node_VariableGet_48] K2Node_VariableGet (переменная: DeltaTime)
+    ErrorType = 3
+[K2Node_VariableGet_50] K2Node_VariableGet (переменная: FloatingForce)
+[K2Node_VariableGet_51] K2Node_VariableGet (переменная: FloatingDamping)
+[K2Node_CallFunction_7@UpdateMovementInput] K2Node_CallFunction
+[K2Node_CallFunction_8@UpdateMovementInput] K2Node_CallFunction (вызов: Lerp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход bNewActive = true
+    вход bReset = false
+[K2Node_VariableGet_16] K2Node_VariableGet (переменная: InputSwimUp)
+[K2Node_VariableSet_4] K2Node_VariableSet (переменная: UnderwaterForce)
+    ErrorType = 3
+[K2Node_CommutativeAssociativeBinaryOperator_0@UpdateMovementInput] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 5.000000
+    вход B = -0.100000
+[K2Node_VariableGet_7@UpdateMovementInput] K2Node_VariableGet (переменная: UnderwaterForce)
+    ErrorType = 3
+[K2Node_VariableGet_44] K2Node_VariableGet (переменная: Velocity @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_23] K2Node_CallFunction (вызов: BreakVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_20] K2Node_VariableGet (переменная: Movement)
+[K2Node_VariableSet_8] K2Node_VariableSet (переменная: InputSwimUp)
+    вход InputSwimUp = 0.0
+[K2Node_VariableGet_13] K2Node_VariableGet (переменная: InputSwimUp)
+[K2Node_PromotableOperator_0] K2Node_PromotableOperator (вызов: Less_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Less"
+    bDefaultsToPureFunc = True
+[K2Node_IfThenElse_3@UpdateMovementInput] K2Node_IfThenElse
+[K2Node_VariableGet_19] K2Node_VariableGet (переменная: InputSwimUp)
+[K2Node_VariableGet_33] K2Node_VariableGet (переменная: Movement)
+[K2Node_CallFunction_44] K2Node_CallFunction (вызов: AddInputVector @ /Script/CoreUObject.Class)
+    вход WorldVector = 0, 0, 0
+    вход WorldVector_X = 0.0
+    вход WorldVector_Y = 0.0
+    вход bForce = false
+[K2Node_VariableSet_3@UpdateMovementInput] K2Node_VariableSet (переменная: SurfaceLocation)
+    SelfContextInfo = NotSelfContext
+    вход DefaultWaterMovementMode = MOVE_Falling
+[K2Node_VariableGet_15] K2Node_VariableGet (переменная: SurfaceLocation)
+[K2Node_CallFunction_3244] K2Node_CallFunction (вызов: Conv_VectorToRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_233] K2Node_CallFunction (вызов: K2_SetActorRotation @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    вход bTeleportPhysics = false
+[K2Node_CallFunction_249] K2Node_CallFunction (вызов: BreakRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_359] K2Node_CallFunction (вызов: RInterpTo_Constant @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_13@UpdateMovementInput] K2Node_CallFunction (вызов: K2_GetActorRotation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+[K2Node_CallFunction_392] K2Node_CallFunction (вызов: MakeRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Roll = 0.0
+    вход Pitch = 0.0
+[K2Node_VariableGet_473] K2Node_VariableGet (переменная: SwimmingRotationSpeed)
+    ErrorType = 1
+[K2Node_IfThenElse_16] K2Node_IfThenElse
+[K2Node_VariableGet_0@UpdateMovementInput] K2Node_VariableGet
+[K2Node_CallFunction_37] K2Node_CallFunction (вызов: GetOwner)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_11@UpdateMovementInput] K2Node_CallFunction (вызов: VSize2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_927] K2Node_VariableGet (переменная: InterpolateRotation)
+[K2Node_CallFunction_6@UpdateMovementInput] K2Node_CallFunction (вызов: Conv_VectorToVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_4@UpdateMovementInput] K2Node_VariableGet
+[K2Node_CallFunction_3@UpdateMovementInput] K2Node_CallFunction
+[K2Node_VariableSet_0@UpdateMovementInput] K2Node_VariableSet
+[K2Node_VariableSet_2@UpdateMovementInput] K2Node_VariableSet (переменная: DirectionVector)
+    SelfContextInfo = NotSelfContext
+    вход bOrientRotationToMovement = true
+[K2Node_VariableGet_5@UpdateMovementInput] K2Node_VariableGet
+[K2Node_IfThenElse_0@UpdateMovementInput] K2Node_IfThenElse
+[K2Node_CallFunction_0@UpdateMovementInput] K2Node_CallFunction
+[K2Node_VariableGet_11@UpdateMovementInput] K2Node_VariableGet (переменная: Owner)
+[K2Node_VariableSet_1@UpdateMovementInput] K2Node_VariableSet (переменная: DirectionVector)
+    SelfContextInfo = NotSelfContext
+    вход bOrientRotationToMovement = false
+[K2Node_VariableGet_9@UpdateMovementInput] K2Node_VariableGet (переменная: DirectionVector)
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_5@UpdateMovementInput] K2Node_CallFunction
+[K2Node_IfThenElse_2@UpdateMovementInput] K2Node_IfThenElse
+[K2Node_VariableGet_2@UpdateMovementInput] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_1@UpdateMovementInput] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_ExecutionSequence_0@UpdateMovementInput] K2Node_ExecutionSequence
+[K2Node_Knot_0@UpdateMovementInput] K2Node_Knot
+[K2Node_VariableGet_10@UpdateMovementInput] K2Node_VariableGet (переменная: MinDirectionLength)
+[K2Node_VariableGet_12] K2Node_VariableGet (переменная: Owner)
+[K2Node_VariableGet_1@UpdateMovementInput] K2Node_VariableGet
+[K2Node_IfThenElse_1@UpdateMovementInput] K2Node_IfThenElse
+[K2Node_VariableGet_8@UpdateMovementInput] K2Node_VariableGet
+[EdGraphNode_Comment_0] EdGraphNode_Comment
+    CommentColor = (R=0.806263,G=0.440696,B=1.000000,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 2640
+    NodeHeight = 1088
+    bCommentBubblePinned = False
+    NodeComment = "Update rotation direction"
+[K2Node_ExecutionSequence_2] K2Node_ExecutionSequence
+[EdGraphNode_Comment_1] EdGraphNode_Comment
+    CommentColor = (R=1.000000,G=0.496015,B=0.361637,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 2642
+    NodeHeight = 1558
+    bCommentBubblePinned = False
+    NodeComment = "Update input - movement direction"
+[K2Node_VariableGet_24] K2Node_VariableGet (переменная: FluxData)
+[K2Node_Knot_1@UpdateMovementInput] K2Node_Knot
+[UpdateMovementMode] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = AEBD91564FFF9214D6F0A9821EF12B2B
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_2
+    Nodes(2) <- K2Node_VariableGet_581
+    Nodes(3) <- K2Node_SwitchEnum_29
+    Nodes(4) <- K2Node_VariableGet_4
+    Nodes(5) <- K2Node_CallFunction_5
+    Nodes(6) <- K2Node_IfThenElse_1
+    Nodes(7) <- K2Node_VariableGet_582
+    Nodes(8) <- K2Node_CallFunction_1655
+    Nodes(9) <- K2Node_Knot_1
+    Nodes(10) <- K2Node_IfThenElse_186
+    Nodes(11) <- K2Node_VariableGet_14
+    Nodes(12) <- K2Node_Knot_2
+    Nodes(13) <- K2Node_VariableGet_8
+    Nodes(14) <- K2Node_VariableGet_6
+    Nodes(15) <- K2Node_CallFunction_0
+    Nodes(16) <- K2Node_CallFunction_3
+    Nodes(17) <- K2Node_CallFunction_4
+    Nodes(18) <- K2Node_VariableGet_5
+    Nodes(19) <- K2Node_CallFunction_10
+    Nodes(20) <- K2Node_IfThenElse_2
+    Nodes(21) <- K2Node_CallFunction_7
+    Nodes(22) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(23) <- K2Node_CallFunction_16
+    Nodes(24) <- K2Node_VariableGet_1
+    Nodes(25) <- K2Node_CallFunction_1
+    Nodes(26) <- K2Node_IfThenElse_0
+    Nodes(27) <- K2Node_VariableSet_0
+    Nodes(28) <- K2Node_CallFunction_2
+    Nodes(29) <- K2Node_VariableGet_3
+    Nodes(30) <- K2Node_Knot_0
+    Nodes(31) <- K2Node_CallDelegate_0
+    Nodes(32) <- K2Node_VariableGet_0
+    Nodes(33) <- K2Node_ExecutionSequence_0
+[K2Node_FunctionEntry_0@UpdateMovementMode] K2Node_FunctionEntry
+[K2Node_VariableGet_2@UpdateMovementMode] K2Node_VariableGet (переменная: Movement)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_581] K2Node_VariableGet (переменная: MovementMode @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+[K2Node_SwitchEnum_29] K2Node_SwitchEnum
+    Enum = "/Script/CoreUObject.Enum'/Script/Engine.EMovementMode'"
+    EnumEntries(0) = "MOVE_None"
+    EnumEntries(1) = "MOVE_Walking"
+    EnumEntries(2) = "MOVE_NavWalking"
+    EnumEntries(3) = "MOVE_Falling"
+    EnumEntries(4) = "MOVE_Swimming"
+    EnumEntries(5) = "MOVE_Flying"
+    EnumEntries(6) = "MOVE_Custom"
+    AdvancedPinDisplay = Shown
+[K2Node_VariableGet_4@UpdateMovementMode] K2Node_VariableGet (переменная: Movement)
+    ErrorType = 1
+[K2Node_CallFunction_5@UpdateMovementMode] K2Node_CallFunction (вызов: SetMovementMode @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход NewMovementMode = MOVE_Walking
+    вход NewCustomMode = 0
+[K2Node_IfThenElse_1@UpdateMovementMode] K2Node_IfThenElse
+[K2Node_VariableGet_582] K2Node_VariableGet (переменная: Movement)
+[K2Node_CallFunction_1655] K2Node_CallFunction (вызов: SetMovementMode @ /Script/CoreUObject.Class)
+    вход NewMovementMode = MOVE_Swimming
+    вход NewCustomMode = 0
+[K2Node_Knot_1@UpdateMovementMode] K2Node_Knot
+[K2Node_IfThenElse_186] K2Node_IfThenElse
+[K2Node_VariableGet_14@UpdateMovementMode] K2Node_VariableGet (переменная: SwimmingState)
+[K2Node_Knot_2] K2Node_Knot
+[K2Node_VariableGet_8@UpdateMovementMode] K2Node_VariableGet (переменная: SwimmingState)
+[K2Node_VariableGet_6@UpdateMovementMode] K2Node_VariableGet (переменная: Movement)
+[K2Node_CallFunction_0@UpdateMovementMode] K2Node_CallFunction
+[K2Node_CallFunction_3@UpdateMovementMode] K2Node_CallFunction (вызов: GetOwner)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+[K2Node_CallFunction_4@UpdateMovementMode] K2Node_CallFunction (вызов: K2_GetActorLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 50.000000
+[K2Node_VariableGet_5@UpdateMovementMode] K2Node_VariableGet (переменная: Movement)
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_10@UpdateMovementMode] K2Node_CallFunction (вызов: SetMovementMode @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход NewMovementMode = MOVE_Falling
+    вход NewCustomMode = 0
+    вход NewMovementMode = MOVE_Falling
+    вход NewCustomMode = 0
+[K2Node_IfThenElse_2@UpdateMovementMode] K2Node_IfThenElse
+[K2Node_CallFunction_7@UpdateMovementMode] K2Node_CallFunction (вызов: Less_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход bEnabled = false
+    вход Min = 0.0
+    вход Max = 1.0
+    вход B = 3.000000
+[K2Node_CommutativeAssociativeBinaryOperator_1@UpdateMovementMode] K2Node_CommutativeAssociativeBinaryOperator (вызов: BooleanOR @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 1.000000,1.000000,0.000000
+[K2Node_CallFunction_16] K2Node_CallFunction (вызов: FindSwimmingState)
+[K2Node_VariableGet_1@UpdateMovementMode] K2Node_VariableGet (переменная: SwimmingState)
+    SelfContextInfo = NotSelfContext
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_1@UpdateMovementMode] K2Node_CallFunction (вызов: EqualEqual_BoolBool @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход bNewActive = false
+    вход bReset = false
+    вход ComponentClass = /Script/Engine.ActorComponent
+[K2Node_IfThenElse_0@UpdateMovementMode] K2Node_IfThenElse
+[K2Node_VariableSet_0@UpdateMovementMode] K2Node_VariableSet
+[K2Node_CallFunction_2@UpdateMovementMode] K2Node_CallFunction (вызов: SwimmingStateChanged)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_3@UpdateMovementMode] K2Node_VariableGet (переменная: SwimmingState)
+[K2Node_Knot_0@UpdateMovementMode] K2Node_Knot
+[K2Node_CallDelegate_0] K2Node_CallDelegate
+    DelegateReference = (MemberName="OnSwimmingStateChanged",MemberGuid=3179B1E9434AC1BAFC6FE399E2F461ED,bSelfContext=True)
+[K2Node_VariableGet_0@UpdateMovementMode] K2Node_VariableGet (переменная: SwimmingState)
+    CurrentVariation = ValidatedObject
+    ErrorType = 1
+[K2Node_ExecutionSequence_0@UpdateMovementMode] K2Node_ExecutionSequence
+[AddSwimInput] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A82E0C6041C6C1837F55F59AC023A081
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_0
+[K2Node_FunctionEntry_0@AddSwimInput] K2Node_FunctionEntry
+[K2Node_VariableSet_0@AddSwimInput] K2Node_VariableSet (переменная: InputSwimUp)
+    SelfContextInfo = NotSelfContext
+    вход OutofWaterZ = -123123.000000
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 7FFF333443550EE5B8E600A261D7DF08
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction
+[ActivateSwimming] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1744379846AEEE03C31E1AABA6D83077
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ActivateSwimming] K2Node_FunctionEntry
+[K2Node_CallFunction_0@ActivateSwimming] K2Node_CallFunction
+[DeactivateSwimming] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D5774CCF4FB3CDB88EA31A9D2E9A1DDD
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@DeactivateSwimming] K2Node_FunctionEntry
+[K2Node_CallFunction_0@DeactivateSwimming] K2Node_CallFunction
+[SwimmingStateChanged] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E47FDDE34834BA942139CF863CF943E0
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@SwimmingStateChanged] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@SwimmingStateChanged] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@SwimmingStateChanged] K2Node_CallFunction
+[ReceiveTick] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D30D93B74ACBB70EB73FBCA5FFA13A65
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveTick] K2Node_FunctionEntry (вызов: ReceiveTick @ /Script/CoreUObject.Class)
+    MetaData = (ToolTip=NSLOCTEXT("", "3736D886426A1BDCD7A5738F83118240", "Get distance from surface to woner location "),Category=NSLOCTEXT("", "11F899784444119CAF75EA8CEFC63D56", "Getters"),bCallInEditor=True)
+    ExtraFlags = 469893120
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "2AD9A4E5441C2D9B98E89A98F8E1ED77", "Searching for owner components needed to activate swimming"),Category=NSLOCTEXT("", "B80C325C4B812B76F0AC1386D7F33A12", "Initialization"))
+    ExtraFlags = 201588736
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "85B36E1A4C5046A24D68EEA2EDDFEEBA", "Deactivates swimming using stack counter. "),Category=NSLOCTEXT("", "004C36234AB36EFF376A3B9957DAA719", "Setters"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "F851E706461A455E07568CB74CA0B3B4", "Finds if swimming state is currently active"),Category=NSLOCTEXT("", "6B2F00934D9B1CE4FED6FFB52F922747", "Initialization"))
+    ExtraFlags = 201588736
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "3B3FAA4449AE14AFC9EC73A5BA73669A", "Update"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "D4B88EBD414E18B3D3A0D3B08BC99EC1", "Update"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "ReceiveBeginPlay"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ActivateSwimming"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "DeactivateSwimming"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "SwimmingStateChanged"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveTick"
+    bIsIntermediateNode = True
+[K2Node_SetVariableOnPersistentFrame_0@ReceiveTick] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@ReceiveTick] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_FluxSwimmingComponent)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_CallFunction_0@ReceiveTick].Distance -> [K2Node_CallFunction_5@UpdateMovementMode].A
+[K2Node_CallFunction_0@ReceiveTick].Distance -> [K2Node_CommutativeAssociativeBinaryOperator_36].A
+[K2Node_CallFunction_0@ReceiveTick].FloorResult_FloorDist -> [K2Node_CallFunction_7@UpdateMovementMode].A#2
+[K2Node_CallFunction_0@ReceiveTick].FloorResult_bWalkableFloor -> [K2Node_CommutativeAssociativeBinaryOperator_1@UpdateMovementMode].A#3
+[K2Node_CallFunction_0@ReceiveTick].ReturnValue -> [K2Node_VariableSet_2@UpdateMovementInput].DirectionVector
+[K2Node_CallFunction_0@ReceiveTick].then -> [K2Node_CallFunction_2@UpdateMovementMode].execute
+[K2Node_CallFunction_11@UpdateMovementInput].ReturnValue -> [K2Node_CallFunction_5@UpdateMovementMode].A#2
+[K2Node_CallFunction_11@UpdateMovementInput].X -> [K2Node_FunctionResult_1@FindSwimmingState].Direction_X
+[K2Node_CallFunction_11@UpdateMovementInput].Y -> [K2Node_FunctionResult_1@FindSwimmingState].Direction_Y
+[K2Node_CallFunction_11@UpdateMovementInput].Z -> [K2Node_CommutativeAssociativeBinaryOperator_5].A
+[K2Node_CallFunction_12@UpdateMovementInput].ReturnValue -> [K2Node_VariableGet_1@UpdateMovementMode].self#2
+[K2Node_CallFunction_12@UpdateMovementInput].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_10].B
+[K2Node_CallFunction_13@UpdateMovementInput].ReturnValue -> [K2Node_CallFunction_359].Current
+[K2Node_CallFunction_13@UpdateMovementInput].Z -> [K2Node_CallFunction_2@UpdateMovementMode].A
+[K2Node_CallFunction_14].ReturnValue -> [K2Node_CallFunction_41].Value
+[K2Node_CallFunction_16].Swimming -> [K2Node_CallFunction_1@UpdateMovementMode].A#3
+[K2Node_CallFunction_16].Swimming -> [K2Node_Knot_0@UpdateMovementMode].InputPin#3
+[K2Node_CallFunction_16].then -> [K2Node_IfThenElse_0@UpdateMovementMode].execute#4
+[K2Node_CallFunction_174].ReturnValue -> [K2Node_VariableSet_1@UpdateMovementInput].FluxData
+[K2Node_CallFunction_174].ReturnValue -> [K2Node_VariableSet_831].Movement
+[K2Node_CallFunction_1@UpdateMovementMode].ReturnValue -> [K2Node_FunctionResult_1@FindSwimmingState].Distance
+[K2Node_CallFunction_1@UpdateMovementMode].ReturnValue#2 -> [K2Node_VariableSet_0@AddSwimInput].Mesh
+[K2Node_CallFunction_1@UpdateMovementMode].ReturnValue#3 -> [K2Node_CommutativeAssociativeBinaryOperator_1@UpdateMovementMode].A
+[K2Node_CallFunction_1@UpdateMovementMode].ReturnValue#4 -> [K2Node_IfThenElse_0@UpdateMovementMode].Condition#4
+[K2Node_CallFunction_20].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_2].A
+[K2Node_CallFunction_203].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_5].B
+[K2Node_CallFunction_23].Z -> [K2Node_CallFunction_14].B
+[K2Node_CallFunction_23].Z -> [K2Node_CommutativeAssociativeBinaryOperator_10].A
+[K2Node_CallFunction_249].Yaw -> [K2Node_CallFunction_392].Yaw
+[K2Node_CallFunction_29].ReturnValue_Z -> [K2Node_CommutativeAssociativeBinaryOperator_8].A
+[K2Node_CallFunction_2@UpdateMovementMode].ReturnValue -> [K2Node_CallFunction_1@UpdateMovementMode].A
+[K2Node_CallFunction_2@UpdateMovementMode].then -> [K2Node_CallDelegate_0].execute
+[K2Node_CallFunction_30].ReturnValue -> [K2Node_CallFunction_29].B
+[K2Node_CallFunction_3244].ReturnValue -> [K2Node_CallFunction_249].InRot
+[K2Node_CallFunction_359].ReturnValue -> [K2Node_CallFunction_233].NewRotation
+[K2Node_CallFunction_37].ReturnValue -> [K2Node_CallFunction_174].self
+[K2Node_CallFunction_37].ReturnValue -> [K2Node_CallFunction_1@UpdateMovementMode].self
+[K2Node_CallFunction_37].ReturnValue -> [K2Node_VariableSet_0@AddSwimInput].Owner
+[K2Node_CallFunction_392].ReturnValue -> [K2Node_CallFunction_359].Target
+[K2Node_CallFunction_3@UpdateMovementMode].ReturnValue -> [K2Node_CallFunction_4@UpdateMovementMode].self
+[K2Node_CallFunction_3@UpdateMovementMode].ReturnValue#2 -> [K2Node_VariableSet_2@UpdateMovementInput].DirectionVector
+[K2Node_CallFunction_40].ReturnValue -> [K2Node_CallFunction_7@UpdateMovementMode].Value
+[K2Node_CallFunction_41].ReturnValue -> [K2Node_CallFunction_8@UpdateMovementInput].B#2
+[K2Node_CallFunction_43].ReturnValue -> [K2Node_CallFunction_30].self
+[K2Node_CallFunction_4@UpdateMovementMode].ReturnValue -> [K2Node_CallFunction_0@ReceiveTick].CapsuleLocation
+[K2Node_CallFunction_4@UpdateMovementMode].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_0@UpdateMovementInput].A#3
+[K2Node_CallFunction_4@UpdateMovementMode].ReturnValue_Z -> [K2Node_CommutativeAssociativeBinaryOperator_0@UpdateMovementInput].A#2
+[K2Node_CallFunction_525].ReturnValue -> [K2Node_CallFunction_662].self
+[K2Node_CallFunction_5@UpdateMovementMode].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_3].A
+[K2Node_CallFunction_5@UpdateMovementMode].ReturnValue#2 -> [K2Node_IfThenElse_2@UpdateMovementMode].Condition#2
+[K2Node_CallFunction_662].ReturnValue -> [K2Node_CallFunction_13@UpdateMovementInput].InVec
+[K2Node_CallFunction_68].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_2].B
+[K2Node_CallFunction_6@UpdateMovementInput].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_0@UpdateMovementInput].A
+[K2Node_CallFunction_6@UpdateMovementInput].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_0@UpdateMovementInput].B
+[K2Node_CallFunction_6@UpdateMovementInput].ReturnValue#2 -> [K2Node_CallFunction_11@UpdateMovementInput].A
+[K2Node_CallFunction_7@UpdateMovementMode].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_1@UpdateMovementMode].B
+[K2Node_CallFunction_7@UpdateMovementMode].ReturnValue#2 -> [K2Node_VariableSet_4].UnderwaterForce
+[K2Node_CallFunction_7@UpdateMovementMode].ReturnValue#3 -> [K2Node_CommutativeAssociativeBinaryOperator_1@UpdateMovementMode].B#3
+[K2Node_CallFunction_7@UpdateMovementMode].then -> [K2Node_VariableSet_3@UpdateMovementInput].execute
+[K2Node_CallFunction_8@UpdateMovementInput].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_3].B
+[K2Node_CallFunction_8@UpdateMovementInput].ReturnValue#2 -> [K2Node_CallFunction_9@UpdateMovementInput].WorldVector_Z
+[K2Node_CallFunction_8@UpdateMovementInput].then -> [K2Node_CallFunction_9@UpdateMovementInput].execute
+[K2Node_CommutativeAssociativeBinaryOperator_0@UpdateMovementInput].ReturnValue -> [K2Node_CallFunction_9@UpdateMovementInput].bEnabled
+[K2Node_CommutativeAssociativeBinaryOperator_0@UpdateMovementInput].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_0@UpdateMovementInput].A
+[K2Node_CommutativeAssociativeBinaryOperator_0@UpdateMovementInput].ReturnValue#2 -> [K2Node_CallFunction_7@UpdateMovementMode].B
+[K2Node_CommutativeAssociativeBinaryOperator_0@UpdateMovementInput].ReturnValue#3 -> [K2Node_CallFunction_40].B
+[K2Node_CommutativeAssociativeBinaryOperator_10].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_6].A
+[K2Node_CommutativeAssociativeBinaryOperator_11].ReturnValue -> [K2Node_CallFunction_12@UpdateMovementInput].B
+[K2Node_CommutativeAssociativeBinaryOperator_1@UpdateMovementMode].ReturnValue -> [K2Node_FunctionResult_2].Swimming
+[K2Node_CommutativeAssociativeBinaryOperator_1@UpdateMovementMode].ReturnValue#2 -> [K2Node_CallFunction_3244].InVec
+[K2Node_CommutativeAssociativeBinaryOperator_1@UpdateMovementMode].ReturnValue#3 -> [K2Node_IfThenElse_2@UpdateMovementMode].Condition#3
+[K2Node_CommutativeAssociativeBinaryOperator_2].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_2].A
+[K2Node_CommutativeAssociativeBinaryOperator_2].ReturnValue -> [K2Node_IfThenElse_3@UpdateMovementInput].Condition
+[K2Node_CommutativeAssociativeBinaryOperator_3].ReturnValue -> [K2Node_IfThenElse_3@UpdateMovementInput].Condition
+[K2Node_CommutativeAssociativeBinaryOperator_36].ReturnValue -> [K2Node_CallFunction_203].Value
+[K2Node_CommutativeAssociativeBinaryOperator_4].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_7].B
+[K2Node_CommutativeAssociativeBinaryOperator_5].ReturnValue -> [K2Node_FunctionResult_1@FindSwimmingState].Direction_Z
+[K2Node_CommutativeAssociativeBinaryOperator_6].ReturnValue -> [K2Node_CallFunction_14].A
+[K2Node_CommutativeAssociativeBinaryOperator_7].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_6].B
+[K2Node_CommutativeAssociativeBinaryOperator_8].ReturnValue -> [K2Node_VariableSet_5].ActorToSurfaceDist
+[K2Node_CustomEvent_0].NewState -> [K2Node_IfThenElse_2@UpdateMovementMode].Condition
+[K2Node_CustomEvent_0].then -> [K2Node_IfThenElse_2@UpdateMovementMode].execute
+[K2Node_CustomEvent_1].then -> [K2Node_CallFunction_8@UpdateMovementInput].execute
+[K2Node_CustomEvent_2].then -> [K2Node_CallFunction_8@UpdateMovementInput].execute
+[K2Node_Event_0].then -> [K2Node_CallFunction_3@UpdateMovementMode].execute
+[K2Node_Event_1].DeltaSeconds -> [K2Node_CallFunction_2@UpdateMovementMode].DeltaTime
+[K2Node_Event_1].then -> [K2Node_CallFunction_0@ReceiveTick].execute
+[K2Node_ExecutionSequence_0@UpdateMovementMode].then_0 -> [K2Node_IfThenElse_0@UpdateMovementMode].execute#3
+[K2Node_ExecutionSequence_0@UpdateMovementMode].then_0#2 -> [K2Node_CallFunction_16].execute
+[K2Node_ExecutionSequence_0@UpdateMovementMode].then_1 -> [K2Node_Knot_0@UpdateMovementMode].InputPin#2
+[K2Node_ExecutionSequence_0@UpdateMovementMode].then_1#2 -> [K2Node_SwitchEnum_29].execute
+[K2Node_ExecutionSequence_1].then_0 -> [K2Node_Knot_1@UpdateMovementMode].InputPin
+[K2Node_ExecutionSequence_1].then_1 -> [K2Node_VariableSet_4].execute
+[K2Node_ExecutionSequence_1].then_2 -> [K2Node_IfThenElse_3@UpdateMovementInput].execute#2
+[K2Node_ExecutionSequence_1].then_3 -> [K2Node_VariableSet_8].execute
+[K2Node_ExecutionSequence_2].then_0 -> [K2Node_IfThenElse_16].execute
+[K2Node_ExecutionSequence_2].then_1 -> [K2Node_ExecutionSequence_1].execute
+[K2Node_FunctionEntry_0@ReceiveTick].Deactivate -> [K2Node_IfThenElse_6].Condition
+[K2Node_FunctionEntry_0@ReceiveTick].DeltaSeconds -> [K2Node_SetVariableOnPersistentFrame_0@ReceiveTick].K2Node_Event_DeltaSeconds
+[K2Node_FunctionEntry_0@ReceiveTick].Direction -> [K2Node_VariableSet_0@AddSwimInput].InputSwimUp
+[K2Node_FunctionEntry_0@ReceiveTick].NewState -> [K2Node_SetVariableOnPersistentFrame_0@ReceiveTick].K2Node_CustomEvent_NewState
+[K2Node_FunctionEntry_0@ReceiveTick].then -> [K2Node_VariableGet_0@UpdateMovementMode].execute
+[K2Node_FunctionEntry_0@ReceiveTick].then#10 -> [K2Node_CallFunction_0@ReceiveTick].execute#4
+[K2Node_FunctionEntry_0@ReceiveTick].then#11 -> [K2Node_SetVariableOnPersistentFrame_0@ReceiveTick].execute
+[K2Node_FunctionEntry_0@ReceiveTick].then#12 -> [K2Node_SetVariableOnPersistentFrame_0@ReceiveTick].execute#2
+[K2Node_FunctionEntry_0@ReceiveTick].then#2 -> [K2Node_Knot_0@UpdateMovementMode].InputPin
+[K2Node_FunctionEntry_0@ReceiveTick].then#3 -> [K2Node_IfThenElse_6].execute
+[K2Node_FunctionEntry_0@ReceiveTick].then#4 -> [K2Node_IfThenElse_3@UpdateMovementInput].execute
+[K2Node_FunctionEntry_0@ReceiveTick].then#5 -> [K2Node_IfThenElse_1@UpdateMovementMode].execute
+[K2Node_FunctionEntry_0@ReceiveTick].then#6 -> [K2Node_ExecutionSequence_0@UpdateMovementMode].execute#2
+[K2Node_FunctionEntry_0@ReceiveTick].then#7 -> [K2Node_VariableSet_0@AddSwimInput].execute#4
+[K2Node_FunctionEntry_0@ReceiveTick].then#8 -> [K2Node_CallFunction_0@ReceiveTick].execute#2
+[K2Node_FunctionEntry_0@ReceiveTick].then#9 -> [K2Node_CallFunction_0@ReceiveTick].execute#3
+[K2Node_FunctionEntry_161].CameraDirection -> [K2Node_CallFunction_11@UpdateMovementInput].InVec
+[K2Node_FunctionEntry_161].then -> [K2Node_FunctionResult_1@FindSwimmingState].execute
+[K2Node_IfThenElse_0@UpdateMovementMode].else -> [K2Node_CallFunction_8@UpdateMovementInput].execute#2
+[K2Node_IfThenElse_0@UpdateMovementMode].else#2 -> [K2Node_FunctionResult_2].execute
+[K2Node_IfThenElse_0@UpdateMovementMode].else#3 -> [K2Node_VariableSet_2@UpdateMovementInput].execute#2
+[K2Node_IfThenElse_0@UpdateMovementMode].else#4 -> [K2Node_VariableSet_0@AddSwimInput].execute#3
+[K2Node_IfThenElse_0@UpdateMovementMode].then -> [K2Node_CallFunction_9@UpdateMovementInput].execute#2
+[K2Node_IfThenElse_0@UpdateMovementMode].then#2 -> [K2Node_FunctionResult_2].execute
+[K2Node_IfThenElse_0@UpdateMovementMode].then#3 -> [K2Node_VariableSet_2@UpdateMovementInput].execute#2
+[K2Node_IfThenElse_16].then -> [K2Node_VariableSet_0@AddSwimInput].execute#2
+[K2Node_IfThenElse_186].else -> [K2Node_IfThenElse_2@UpdateMovementMode].execute#3
+[K2Node_IfThenElse_1@UpdateMovementMode].then -> [K2Node_CallFunction_5@UpdateMovementMode].execute
+[K2Node_IfThenElse_1@UpdateMovementMode].then -> [K2Node_ExecutionSequence_2].execute
+[K2Node_IfThenElse_2@UpdateMovementMode].else -> [K2Node_Knot_8].InputPin
+[K2Node_IfThenElse_2@UpdateMovementMode].else#2 -> [K2Node_CallFunction_5@UpdateMovementMode].execute
+[K2Node_IfThenElse_2@UpdateMovementMode].then -> [K2Node_VariableSet_2@UpdateMovementInput].execute
+[K2Node_IfThenElse_2@UpdateMovementMode].then#2 -> [K2Node_CallFunction_233].execute
+[K2Node_IfThenElse_2@UpdateMovementMode].then#3 -> [K2Node_CallFunction_5@UpdateMovementMode].execute
+[K2Node_IfThenElse_3@UpdateMovementInput].else -> [K2Node_FunctionResult_2].execute
+[K2Node_IfThenElse_3@UpdateMovementInput].then -> [K2Node_IfThenElse_0@UpdateMovementMode].execute#2
+[K2Node_IfThenElse_3@UpdateMovementInput].then -> [K2Node_IfThenElse_3@UpdateMovementInput].execute
+[K2Node_IfThenElse_3@UpdateMovementInput].then#2 -> [K2Node_CallFunction_9@UpdateMovementInput].execute#3
+[K2Node_IfThenElse_6].else -> [K2Node_MacroInstance_1]. 
+[K2Node_IfThenElse_6].then -> [K2Node_MacroInstance_0]. 
+[K2Node_Knot_0@UpdateMovementMode].OutputPin -> [K2Node_VariableSet_831].execute
+[K2Node_Knot_0@UpdateMovementMode].OutputPin#2 -> [K2Node_IfThenElse_2@UpdateMovementMode].execute#2
+[K2Node_Knot_0@UpdateMovementMode].OutputPin#3 -> [K2Node_VariableSet_0@AddSwimInput].SwimmingState
+[K2Node_Knot_1@UpdateMovementMode].OutputPin -> [K2Node_VariableSet_3@UpdateMovementInput].execute#2
+[K2Node_Knot_1@UpdateMovementMode].OutputPin#2 -> [K2Node_IfThenElse_1@UpdateMovementMode].execute
+[K2Node_Knot_2].OutputPin -> [K2Node_IfThenElse_1@UpdateMovementMode].execute
+[K2Node_Knot_8].OutputPin -> [K2Node_VariableSet_2@UpdateMovementInput].execute
+[K2Node_PromotableOperator_0].ReturnValue -> [K2Node_IfThenElse_3@UpdateMovementInput].Condition#2
+[K2Node_SetVariableOnPersistentFrame_0@ReceiveTick].then -> [K2Node_CallFunction_0@ReceiveTick].execute#5
+[K2Node_SetVariableOnPersistentFrame_0@ReceiveTick].then#2 -> [K2Node_CallFunction_0@ReceiveTick].execute#6
+[K2Node_SwitchEnum_29].MOVE_Falling -> [K2Node_Knot_1@UpdateMovementMode].InputPin#2
+[K2Node_SwitchEnum_29].MOVE_Flying -> [K2Node_Knot_1@UpdateMovementMode].InputPin#2
+[K2Node_SwitchEnum_29].MOVE_NavWalking -> [K2Node_Knot_1@UpdateMovementMode].InputPin#2
+[K2Node_SwitchEnum_29].MOVE_None -> [K2Node_Knot_1@UpdateMovementMode].InputPin#2
+[K2Node_SwitchEnum_29].MOVE_Swimming -> [K2Node_Knot_2].InputPin
+[K2Node_SwitchEnum_29].MOVE_Walking -> [K2Node_Knot_1@UpdateMovementMode].InputPin#2
+[K2Node_VariableGet_0@UpdateMovementMode].DeltaTime -> [K2Node_CallFunction_359].DeltaTime
+[K2Node_VariableGet_0@UpdateMovementMode].FluxData -> [K2Node_CallFunction_6@UpdateMovementInput].Object
+[K2Node_VariableGet_0@UpdateMovementMode].else -> [K2Node_FunctionResult_1@FindSwimmingState].execute#2
+[K2Node_VariableGet_0@UpdateMovementMode].then -> [K2Node_FunctionResult_1@FindSwimmingState].execute#2
+[K2Node_VariableGet_10@UpdateMovementInput].FluidHeightToDeactivation -> [K2Node_CallFunction_8@UpdateMovementInput].B
+[K2Node_VariableGet_10@UpdateMovementInput].MinDirectionLength -> [K2Node_CallFunction_5@UpdateMovementMode].B#2
+[K2Node_VariableGet_11@UpdateMovementInput].AllowSwimming -> [K2Node_CommutativeAssociativeBinaryOperator_2].B
+[K2Node_VariableGet_11@UpdateMovementInput].Owner -> [K2Node_CallFunction_0@ReceiveTick].self
+[K2Node_VariableGet_11@UpdateMovementInput].Owner -> [K2Node_CallFunction_13@UpdateMovementInput].self
+[K2Node_VariableGet_11@UpdateMovementInput].Owner -> [K2Node_CallFunction_233].self
+[K2Node_VariableGet_13].InputSwimUp -> [K2Node_CallFunction_9@UpdateMovementInput].WorldVector_Z
+[K2Node_VariableGet_13].InputSwimUp -> [K2Node_PromotableOperator_0].A
+[K2Node_VariableGet_14@UpdateMovementMode].SwimmingState -> [K2Node_IfThenElse_1@UpdateMovementMode].Condition
+[K2Node_VariableGet_15].SurfaceLocation -> [K2Node_CallFunction_29].A
+[K2Node_VariableGet_16].InputSwimUp -> [K2Node_CallFunction_8@UpdateMovementInput].A#2
+[K2Node_VariableGet_17].Velocity -> [K2Node_CallFunction_23].InVec
+[K2Node_VariableGet_1@UpdateMovementMode].FluxSurfaceLocation_Z -> [K2Node_CallFunction_2@UpdateMovementMode].B
+[K2Node_VariableGet_1@UpdateMovementMode].Movement -> [K2Node_CallFunction_6@UpdateMovementInput].Object
+[K2Node_VariableGet_1@UpdateMovementMode].SwimmingState -> [K2Node_CallDelegate_0].IsSwimming
+[K2Node_VariableGet_1@UpdateMovementMode].SwimmingState -> [K2Node_CallFunction_1@UpdateMovementMode].B#3
+[K2Node_VariableGet_1@UpdateMovementMode].SwimmingState -> [K2Node_CallFunction_2@UpdateMovementMode].NewState
+[K2Node_VariableGet_1@UpdateMovementMode].bWaterVolume -> [K2Node_IfThenElse_3@UpdateMovementInput].Condition
+[K2Node_VariableGet_22].FluxSurfaceLocation -> [K2Node_VariableSet_3@UpdateMovementInput].SurfaceLocation
+[K2Node_VariableGet_24].FluxData -> [K2Node_VariableGet_22].self
+[K2Node_VariableGet_27].ActorSurfacDistanceZOffset -> [K2Node_CommutativeAssociativeBinaryOperator_8].B
+[K2Node_VariableGet_2@UpdateMovementMode].DecativationCount -> [K2Node_CallFunction_68].A
+[K2Node_VariableGet_2@UpdateMovementMode].DecativationCount -> [K2Node_MacroInstance_0].Value
+[K2Node_VariableGet_2@UpdateMovementMode].DecativationCount -> [K2Node_MacroInstance_1].Value
+[K2Node_VariableGet_2@UpdateMovementMode].Mesh -> [K2Node_CallFunction_6@UpdateMovementInput].Object
+[K2Node_VariableGet_31].Movement -> [K2Node_CallFunction_43].self
+[K2Node_VariableGet_31].Movement -> [K2Node_CallFunction_9@UpdateMovementInput].self
+[K2Node_VariableGet_31].Movement -> [K2Node_VariableGet_17].self
+[K2Node_VariableGet_32].ActorToSurfaceDist -> [K2Node_CallFunction_4@UpdateMovementMode].A
+[K2Node_VariableGet_32].ActorToSurfaceDist -> [K2Node_CommutativeAssociativeBinaryOperator_7].A
+[K2Node_VariableGet_3@UpdateMovementMode].SwimmingState -> [K2Node_IfThenElse_0@UpdateMovementMode].Condition#2
+[K2Node_VariableGet_3@UpdateMovementMode].bAutoActivate -> [K2Node_IfThenElse_0@UpdateMovementMode].Condition
+[K2Node_VariableGet_473].SwimmingRotationSpeed -> [K2Node_CallFunction_359].InterpSpeed
+[K2Node_VariableGet_49].DeltaTime -> [K2Node_CommutativeAssociativeBinaryOperator_11].A
+[K2Node_VariableGet_49].DeltaTime -> [K2Node_CommutativeAssociativeBinaryOperator_4].B
+[K2Node_VariableGet_4@UpdateMovementMode].FluxData -> [K2Node_VariableGet_1@UpdateMovementMode].self
+[K2Node_VariableGet_4@UpdateMovementMode].FluxData -> [K2Node_VariableGet_5@UpdateMovementMode].self
+[K2Node_VariableGet_4@UpdateMovementMode].FluxData -> [K2Node_VariableGet_9@UpdateMovementInput].self
+[K2Node_VariableGet_4@UpdateMovementMode].Movement -> [K2Node_CallFunction_3@UpdateMovementMode].self
+[K2Node_VariableGet_50].FloatingForce -> [K2Node_CommutativeAssociativeBinaryOperator_4].A
+[K2Node_VariableGet_51].FloatingDamping -> [K2Node_CommutativeAssociativeBinaryOperator_11].B
+[K2Node_VariableGet_54].Movement -> [K2Node_VariableSet_2@UpdateMovementInput].self
+[K2Node_VariableGet_580].Movement -> [K2Node_CallFunction_0@ReceiveTick].self#2
+[K2Node_VariableGet_580].Movement -> [K2Node_CallFunction_12@UpdateMovementInput].self
+[K2Node_VariableGet_580].Movement -> [K2Node_CallFunction_5@UpdateMovementMode].self
+[K2Node_VariableGet_580].Movement -> [K2Node_VariableGet_581].self
+[K2Node_VariableGet_580].Movement -> [K2Node_VariableSet_0@AddSwimInput].self
+[K2Node_VariableGet_580].Movement -> [K2Node_VariableSet_3@UpdateMovementInput].self
+[K2Node_VariableGet_581].MovementMode -> [K2Node_SwitchEnum_29].Selection
+[K2Node_VariableGet_5@UpdateMovementMode].AccelerationAsDirection -> [K2Node_IfThenElse_0@UpdateMovementMode].Condition#3
+[K2Node_VariableGet_5@UpdateMovementMode].ActorSurfacDistanceZOffset -> [K2Node_CallFunction_1@UpdateMovementMode].B
+[K2Node_VariableGet_5@UpdateMovementMode].FluxSurfaceLocation_Z -> [K2Node_CallFunction_7@UpdateMovementMode].A
+[K2Node_VariableGet_6@UpdateMovementMode].DistanceToFluidActivation -> [K2Node_CallFunction_5@UpdateMovementMode].B
+[K2Node_VariableGet_7@UpdateMovementInput].FluidHeightToActivation -> [K2Node_CallFunction_1@UpdateMovementMode].B#2
+[K2Node_VariableGet_7@UpdateMovementInput].UnderwaterForce -> [K2Node_CallFunction_8@UpdateMovementInput].Alpha
+[K2Node_VariableGet_927].InterpolateRotation -> [K2Node_IfThenElse_16].Condition
+[K2Node_VariableGet_9@UpdateMovementInput].DirectionVector -> [K2Node_CallFunction_6@UpdateMovementInput].InVector
+[K2Node_VariableGet_9@UpdateMovementInput].DirectionVector -> [K2Node_CommutativeAssociativeBinaryOperator_1@UpdateMovementMode].A#2
+[K2Node_VariableGet_9@UpdateMovementInput].FluxFluidHeight -> [K2Node_CallFunction_1@UpdateMovementMode].A#2
+[K2Node_VariableGet_9@UpdateMovementInput].FluxFluidHeight -> [K2Node_CallFunction_8@UpdateMovementInput].A
+[K2Node_VariableSet_0@AddSwimInput].then -> [K2Node_IfThenElse_0@UpdateMovementMode].execute
+[K2Node_VariableSet_0@AddSwimInput].then#2 -> [K2Node_ExecutionSequence_0@UpdateMovementMode].execute
+[K2Node_VariableSet_0@AddSwimInput].then#3 -> [K2Node_CallFunction_2@UpdateMovementMode].execute#2
+[K2Node_VariableSet_1@UpdateMovementInput].then -> [K2Node_VariableSet_0@AddSwimInput].execute
+[K2Node_VariableSet_3@UpdateMovementInput].then -> [K2Node_VariableSet_5].execute
+[K2Node_VariableSet_4].then -> [K2Node_CallFunction_9@UpdateMovementInput].execute#3
+[K2Node_VariableSet_831].then -> [K2Node_VariableSet_1@UpdateMovementInput].execute

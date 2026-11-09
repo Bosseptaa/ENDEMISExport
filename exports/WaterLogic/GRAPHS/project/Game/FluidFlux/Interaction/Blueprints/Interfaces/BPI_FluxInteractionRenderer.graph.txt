@@ -1,0 +1,62 @@
+﻿# /Game/FluidFlux/Interaction/Blueprints/Interfaces/BPI_FluxInteractionRenderer
+# класс: Blueprint; происхождение: проект; узлов: 12; связей: 13; HLSL: 0; причина: папка /Game/FluidFlux; тело:19
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BPI_FluxInteractionRenderer] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/CoreUObject.Interface'"
+    BlueprintType = BPTYPE_Interface
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = ""
+    CategorySorting(1) = "Interaction"
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BPI_FluxInteractionRenderer_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = F2EE81404021C845BFD665BB4557C9F2
+    FunctionGraphs(0) <- SetInteractionsArea
+    FunctionGraphs(1) <- SetInteractionsTexture
+    FunctionGraphs(2) <- GetSimulationState
+    FunctionGraphs(3) <- GetCoastlineState
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[SetInteractionsArea] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1E4E695A4E89D01ED382A49E8419EE30
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@SetInteractionsArea] K2Node_FunctionEntry
+[SetInteractionsTexture] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 2141B50B4F4CE0E2358593B3C15561AA
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@SetInteractionsTexture] K2Node_FunctionEntry
+[GetSimulationState] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 3AC6347E4662646A7D6E4792E8B556BB
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionResult_0@GetSimulationState] K2Node_FunctionResult
+[K2Node_FunctionEntry_0@GetSimulationState] K2Node_FunctionEntry
+[GetCoastlineState] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = FDA00DEA48E45D0F4B09FB85340CE800
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetCoastlineState] K2Node_FunctionEntry (вызов: GetCoastlineState)
+    MetaData = (ToolTip=NSLOCTEXT("", "237FC09C4CB2FA1B3335B3A427F7C6C7", "Update interaction area size and location."),Category=NSLOCTEXT("", "DF165F7B4D3A0EEAD81AC0B26169AB19", "Interaction"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "AC0D0BE94628A409F58E02A761FE053F", "Update interaction area texture."),Category=NSLOCTEXT("", "15609025438770E1E30A01BBB519431E", "Interaction"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "C6CB58E545EF579200E552916419AF12", "Interaction"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "9ABCD5894332AFF320CA859B15A2A4A2", "Interaction"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+[K2Node_FunctionResult_0@GetCoastlineState] K2Node_FunctionResult (вызов: GetCoastlineState)
+    bIsEditable = True
+    bIsEditable = True
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+
+## СВЯЗИ
+[K2Node_FunctionEntry_0@GetCoastlineState].then -> [K2Node_FunctionResult_0@GetCoastlineState].execute
+[K2Node_FunctionEntry_0@GetCoastlineState].then#2 -> [K2Node_FunctionResult_0@GetCoastlineState].execute#2

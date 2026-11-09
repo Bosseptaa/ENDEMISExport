@@ -1,0 +1,109 @@
+﻿# /Game/FluidFlux/Demo/Environment/Rain/Materials/MF_SineNormal
+# класс: MaterialFunction; происхождение: проект; узлов: 18; связей: 38; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SineNormal] MaterialFunction
+    StateId = 85B2CBDE4E40B19DD93A13806B8FD69A
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_2
+    EditorOnlyData <- MF_SineNormalEditorOnlyData
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+[MaterialExpressionSquareRoot_0] MaterialExpressionSquareRoot
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionSine_0] MaterialExpressionSine
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    A <- MaterialExpressionCosine_0
+    B <- MaterialExpressionCosine_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.MakeFloat2'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMultiply_0
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionFunctionOutput_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.MakeFloat2'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionConstant_0
+    FunctionInputs(1) <- MaterialExpressionCosine_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Normal"
+    bLastPreviewed = True
+    Id = 34A282C446F55D33FEB57F9E24FD572B
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Tangent"
+    bLastPreviewed = True
+    Id = FC4DD10946806D292E8C889A9C773211
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    bCollapsed = True
+    A <- MaterialExpressionDivide_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Time"
+    Id = B0CB190240A19B7CFD38D08EFC76CF2A
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    bCollapsed = True
+    Preview <- MaterialExpressionComponentMask_0
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionSquareRoot_0
+[MaterialExpressionCosine_0] MaterialExpressionCosine
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    Input <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstA = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SineNormal'"
+    B <- MaterialExpressionMultiply_1
+[MF_SineNormalEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSine_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionCosine_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionSquareRoot_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMultiply_1
+
+## СВЯЗИ

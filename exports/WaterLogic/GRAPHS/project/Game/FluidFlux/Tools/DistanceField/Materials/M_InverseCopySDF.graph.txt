@@ -1,0 +1,44 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF
+# класс: Material; происхождение: проект; узлов: 7; связей: 11; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_InverseCopySDF] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    EditorX = -240
+    EditorY = 5
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = D583AAC44A371C7EF707E0844347B5A3
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="Black",TextureReference="/Engine/EngineResources/Black.Black")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    LightingGuid = AA8FEAB440999D0C5C7531993EF11833
+    EditorOnlyData <- M_InverseCopySDFEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+[MaterialExpressionTextureSampleParameter2D_4] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "SDFPrevious"
+    ExpressionGUID = DBA1A95D4807FB4D0DAD55BDF5270BC2
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    ParameterName = "Inverse"
+    ExpressionGUID = 5A565C2B4C95E1CD43C931BD1F94B541
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionTextureSampleParameter2D_4
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionTextureSampleParameter2D_4
+    B <- MaterialExpressionOneMinus_0
+    Alpha <- MaterialExpressionScalarParameter_0
+[M_InverseCopySDFEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionTextureSampleParameter2D_4
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_4
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+
+## СВЯЗИ

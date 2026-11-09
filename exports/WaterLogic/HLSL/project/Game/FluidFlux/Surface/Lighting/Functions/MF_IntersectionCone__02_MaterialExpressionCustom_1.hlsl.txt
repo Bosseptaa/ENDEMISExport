@@ -1,0 +1,45 @@
+﻿// Источник: /Game/FluidFlux/Surface/Lighting/Functions/MF_IntersectionCone (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_1 ключ: Code
+// Входы: ro, rd, pa, pb, ra, rb
+// Выход: CMOT_Float2
+// Описание: нет
+
+    float3  ba = pb - pa;
+    float3  oa = ro - pa;
+    float3  ob = ro - pb;
+    
+    float m0 = dot(ba,ba);
+    float m1 = dot(oa,ba);
+    float m2 = dot(ob,ba); 
+    float m3 = dot(rd,ba);
+ 
+    //caps
+	
+	float3 dA = oa*m3-rd*m1;
+	float3 dB = ob*m3-rd*m2;
+	
+         if( m1<0.0 ) { if( dot(dA, dA)<(ra*ra*m3*m3) ) return float2(-m1/m3,-ba*rsqrt(m0)); }
+    else if( m2>0.0 ) { if( dot(dB, dB)<(rb*rb*m3*m3) ) return float2(-m2/m3, ba*rsqrt(m0)); }
+    
+    // body
+    float rr = ra - rb;
+    float hy = m0 + rr*rr;
+    float m4 = dot(rd,oa);
+    float m5 = dot(oa,oa);
+    
+    float k2 = m0*m0    - m3*m3*hy;
+    float k1 = m0*m0*m4 - m1*m3*hy + m0*ra*(rr*m3*1.0        );
+    float k0 = m0*m0*m5 - m1*m1*hy + m0*ra*(rr*m1*2.0 - m0*ra);
+    
+    float h = k1*k1 - k2*k0;
+    if( h<0.0 ) return float2(-1.0);
+
+    float t = (-k1-sqrt(h))/k2;
+
+    float y = m1 + t*m3;
+    if( y>0.0 && y<m0 ) 
+    {
+        return float2(t, normalize(m0*(m0*(oa+t*rd)+rr*ba*ra)-ba*hy*y));
+    }
+    
+    return float2(-1.0);

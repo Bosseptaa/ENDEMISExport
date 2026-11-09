@@ -1,0 +1,119 @@
+﻿# /Game/FluidFlux/Interaction/Functions/MF_PreviousState
+# класс: MaterialFunction; происхождение: проект; узлов: 20; связей: 38; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_PreviousState] MaterialFunction
+    StateId = 0C5D5C474E7BEEBC7F36CEBDD911D8C6
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_PreviousStateEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_PreviousStateEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionAdd_9
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionTextureProperty_0
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    A <- MaterialExpressionTextureCoordinate_0
+    B <- MaterialExpressionAdd_9
+[MaterialExpressionAdd_9] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    A <- MaterialExpressionAppendVector_0
+    B <- MaterialExpressionMultiply_0
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    A <- MaterialExpressionTextureSample_0
+    B <- MaterialExpressionTextureSample_0
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Offset"
+    Id = F0C5978340FE5580286BEA908897FEED
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "State"
+    SortPriority = 4
+    bLastPreviewed = True
+    Id = A0C466C349967EB7CF12478CFAC9009C
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    bCollapsed = True
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Height"
+    bLastPreviewed = True
+    Id = 752380A84A97E3D8B595EAB99010A2A0
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    bCollapsed = True
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Velocity"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = E7CBBC51408EE625A810BDABB617849A
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    bCollapsed = True
+    A <- MaterialExpressionAppendVector_1
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "Temperature"
+    SortPriority = 3
+    bLastPreviewed = True
+    Id = BB50FDC44CD3A8D0464AAFAFF4C26D75
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    bCollapsed = True
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "Pressure"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = 01DFF2B54687ED7DC913B39EE6B5B4BF
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    bCollapsed = True
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionTextureProperty_0
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "PreviousHeight1"
+    ExpressionGUID = 3135E9A04AA2D6276B47B5A2BC611426
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    bCollapsed = True
+[MaterialExpressionTextureProperty_0] MaterialExpressionTextureProperty
+    Property = TMTM_TexelSize
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+    Coordinates <- MaterialExpressionAdd_0
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    ParameterName = "WorldOffset"
+    ExpressionGUID = 34D45BC44AF5BCC17D8E96BF52C9686B
+    Function = "/Script/Engine.MaterialFunction'MF_PreviousState'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,131 @@
+﻿# /Game/FluidFlux/Demo/Environment/Plant/Materials/MF_PlantBending
+# класс: MaterialFunction; происхождение: проект; узлов: 26; связей: 51; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_PlantBending] MaterialFunction
+    StateId = 51E69FED4071A47073B0908AC03736A4
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_1
+    EditorOnlyData <- MF_PlantBendingEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_PlantBendingEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionDynamicParameter_0
+    ExpressionCollection <- MaterialExpressionParticlePositionWS_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionParticlePositionWS_2
+    ExpressionCollection <- MaterialExpressionPower_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_4
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_2
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    A <- MaterialExpressionParticlePositionWS_1
+    B <- MaterialExpressionAppendVector_0
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    A <- MaterialExpressionConstant2Vector_0
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    Input <- MaterialExpressionSubtract_2
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    Input <- MaterialExpressionVertexInterpolator_2
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+[MaterialExpressionConstant3Vector_4] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=1.000000,B=1.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    bCollapsed = True
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstB = 100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionDynamicParameter_0] MaterialExpressionDynamicParameter
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Height"
+    Id = 86F328264AF7CC4556296A83D415EE81
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "WorldPositionOffset"
+    bLastPreviewed = True
+    Id = F531A8814F7F9F4CB8C79A90C4AE2F2A
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_2
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "AmbientScale"
+    bLastPreviewed = True
+    Id = 43FCA00846C92E4D65698DBCA90DC9F6
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    bCollapsed = True
+    A <- MaterialExpressionComponentMask_1
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionDynamicParameter_0
+    FunctionInputs(1) <- MaterialExpressionDynamicParameter_0
+    FunctionInputs(2) <- MaterialExpressionDynamicParameter_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionConstant3Vector_4
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    A <- MaterialExpressionPower_0
+    B <- MaterialExpressionMultiply_0
+[MaterialExpressionParticlePositionWS_1] MaterialExpressionParticlePositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+[MaterialExpressionParticlePositionWS_2] MaterialExpressionParticlePositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+[MaterialExpressionPower_0] MaterialExpressionPower
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    Base <- MaterialExpressionSaturate_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    Input <- MaterialExpressionDivide_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionAdd_0
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    A <- MaterialExpressionWorldPosition_1
+    B <- MaterialExpressionParticlePositionWS_2
+[MaterialExpressionVertexInterpolator_2] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+    Input <- MaterialExpressionPower_0
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_PlantBending'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

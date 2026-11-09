@@ -1,0 +1,1597 @@
+﻿# /Game/FluidFlux/Demo/Maps/FluxRiverStaticMeshMap
+# класс: World; происхождение: проект; узлов: 241; связей: 59; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:2498
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[CollisionCapsule] CapsuleComponent
+    AreaClass = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    bUseSystemDefaultObstacleAreaClass = False
+    AreaClassOverride = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    RelativeLocation = (X=921.000000,Y=-2094.000000,Z=582.000000)
+    RelativeRotation = (Pitch=0.000000,Yaw=310.000366,Roll=0.000000)
+[Sprite@PersistentLevel.PlayerStart_2] BillboardComponent
+    AttachParent = "CollisionCapsule"
+[Sprite2] BillboardComponent
+    AttachParent = "CollisionCapsule"
+[Arrow] ArrowComponent
+    AttachParent = "CollisionCapsule"
+[Sprite@PersistentLevel.SkyAtmosphere_1] BillboardComponent
+    AttachParent = "SkyAtmosphereComponent"
+[SkyAtmosphereComponent] SkyAtmosphereComponent
+    TraceSampleCountScale = 4.000000
+    RayleighScattering = (R=0.175287,G=0.409607,B=1.000000,A=30.211479)
+    MieScatteringScale = 0.030000
+    OtherAbsorption = (R=0.345561,G=1.000000,B=0.045189,A=531.632080)
+    bStaticLightingBuiltGUID = 8BEA656D4BC51E38B4579497BEAD1A21
+    RelativeLocation = (X=-300.000000,Y=-4666.920410,Z=1101.446289)
+[ArrowComponent] ArrowComponent
+    AttachParent = "SkyAtmosphereComponent"
+[LightComponent0] DirectionalLightComponent
+    DynamicShadowDistanceMovableLight = 20000.000000
+    DynamicShadowCascades = 3
+    DistanceFieldShadowDistance = 30000.000000
+    LightSourceAngle = 1.000000
+    bCastCloudShadows = True
+    CloudShadowExtent = 100.000000
+    bUseRayTracedDistanceFieldShadows = False
+    Intensity = 1.800000
+    RelativeLocation = (X=-299.348663,Y=-4666.920410,Z=903.446289)
+    RelativeRotation = (Pitch=-68.227428,Yaw=-48.300612,Roll=22.867410)
+    Mobility = Movable
+[ArrowComponent0] ArrowComponent
+    ArrowColor = (B=255,G=255,R=255,A=255)
+    AttachParent = "LightComponent0"
+[Scene@PersistentLevel.BP_FluxSimulation] SceneComponent
+    RelativeLocation = (X=-2530.000000,Y=-3760.000000,Z=820.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[CaptureHeightMap] SceneCaptureComponent2D
+    ShowFlagSettings(17) = (Enabled=True)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[VolumeCollision@PersistentLevel.BP_FluxSimulation] BoxComponent
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=-625.000000)
+    RelativeScale3D = (X=5120.000000,Y=2560.000000,Z=625.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DebugGround] StaticMeshComponent
+    StaticMeshImportVersion = 0
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DebugCage] StaticMeshComponent
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.010000,Y=0.010000,Z=-625.000000)
+    RelativeScale3D = (X=102.399998,Y=51.199999,Z=12.500000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[ChildSurface] ChildActorComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxSimulation] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[FluxHeightMapComponent] BP_FluxHeightMapComponent_C
+    DomainTexture = (Resolution_10_AB36971A457C61279EBD409A5DF5D54A=(X=512,Y=256),FullPrecision_9_F4838443467C59FD48A5EABBE66F7496=False)
+    AreaWorldHeight = 1250.000000
+    CaptureLimitTileSize = 200000
+    CaptureComponent = "CaptureHeightMap"
+    AreaWorldSize = (X=10240.000000,Y=5120.000000)
+    AreaLocation = (X=-2530.000000,Y=-3760.000000,Z=820.000000)
+    AreaSize = (X=10240.000000,Y=5120.000000,Z=1250.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    GroundHeightMap <- TextureRenderTarget2D_0
+[TextureRenderTarget2D_0] TextureRenderTarget2D
+    SizeX = 512
+    SizeY = 256
+    ClearColor = (R=100000.000000,G=0.000000,B=0.000000,A=1.000000)
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    RenderTargetFormat = RTF_R16f
+    OodleTextureSdkVersion = "2.9.16"
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+[AssetImportData] AssetImportData
+[PDA_FluxSimulationState_C_0] PDA_FluxSimulationState_C
+    Resolution = (X=512,Y=256)
+    AreaLocation = (X=-2530.000000,Y=-3760.000000,Z=820.000000)
+    AreaSize = (X=10240.000000,Y=5120.000000,Z=1250.000000)
+    CaptureOffset = -117.500000
+    IterationDeltaTime = 0.170000
+    GroundMap <- TextureRenderTarget2D_0
+[MID_MI_RiverSurfaceUnder_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/River/Materials/MI_RiverSurfaceUnder.MI_RiverSurfaceUnder'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000,ExpressionGUID=F8EF60F44825531F20FA8EB0673857FC)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000,ExpressionGUID=885C496C443CFE38D1946B90FF395FC7)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"),ExpressionGUID=387022494290CFC3DCBA509286A24552)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000,ExpressionGUID=F9A197E5491F1B2FB7423FB0F6E42782)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000,ExpressionGUID=6B27B59B43C5F9D4AADE8794D82FD62D)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000),ExpressionGUID=52EAC78B45C6C264B1AB8E8D10C04E82)
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000),ExpressionGUID=432EB73445F62109DE58AD8B54BB37BA)
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"),ExpressionGUID=34A325714804798F81560C8B863CC14D)
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600),ExpressionGUID=A42DD31A49C211935C2D6AADEF642F20)
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000),ExpressionGUID=5E03E2964F70D69344B379886F946D2D)
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000),ExpressionGUID=FEA9FC144E87C27018CC96A9CB5A924E)
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000),ExpressionGUID=7B780EB6434588DA7A117B820D4269E6)
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'",ExpressionGUID=A83E08DD4E112DFFF1CAB4A9D788A6C2)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,OpacityMaskClipValue=0.000000,UsageFlags=4198528)
+    ReferencedTextureGuids(0) = 1D4F7FEE425037FC1DEF32B9652FB6D4
+    ReferencedTextureGuids(1) = 20FEF6714DF98D13DE85E580A18A5768
+    ReferencedTextureGuids(2) = 6A13E3234F36BACAA7BBDDA896BDEBEB
+    ReferencedTextureGuids(3) = 61EF94AD4078B928B171198909D4D7B6
+    ReferencedTextureGuids(4) = 13D5A56542132F73BC6B2792DFE36B92
+    ReferencedTextureGuids(5) = 529359584F1B924E84BA4EA3F076A5B1
+    ReferencedTextureGuids(6) = 898A4CD34F2EC63B66F16DB8D31616A1
+    ReferencedTextureGuids(7) = E8847F1A4987FD316F6F78B078ACD82C
+    ReferencedTextureGuids(9) = 307757E1458E615C7D97A39E32219707
+    LightingGuid = B09CC8414DC2E470395736943FAE08B6
+    EditorOnlyData <- MID_MI_RiverSurfaceUnder_0EditorOnlyData
+[MID_MI_RiverSurfaceUnder_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_FluxSurfaceUnderCustomDepth_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Underwater/Materials/MI_FluxSurfaceUnderCustomDepth.MI_FluxSurfaceUnderCustomDepth'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000,ExpressionGUID=F8EF60F44825531F20FA8EB0673857FC)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000,ExpressionGUID=885C496C443CFE38D1946B90FF395FC7)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"),ExpressionGUID=387022494290CFC3DCBA509286A24552)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000,ExpressionGUID=F9A197E5491F1B2FB7423FB0F6E42782)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000),ExpressionGUID=52EAC78B45C6C264B1AB8E8D10C04E82)
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000),ExpressionGUID=432EB73445F62109DE58AD8B54BB37BA)
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"),ExpressionGUID=34A325714804798F81560C8B863CC14D)
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600))
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000))
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000))
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000))
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'",ExpressionGUID=A83E08DD4E112DFFF1CAB4A9D788A6C2)
+    BasePropertyOverrides = (BlendMode=BLEND_Masked,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.000000,UsageFlags=4198528)
+    ReferencedTextureGuids(0) = 61EF94AD4078B928B171198909D4D7B6
+    ReferencedTextureGuids(1) = B047E04B48C3D0EF7EAAEEA74BF7182A
+    ReferencedTextureGuids(2) = 42C0D16B47406B05AE1035A6A695F609
+    ReferencedTextureGuids(3) = 0D9E52B248DA2B0E79E8A4883C79D6A0
+    ReferencedTextureGuids(4) = 1D4F7FEE425037FC1DEF32B9652FB6D4
+    ReferencedTextureGuids(5) = 20FEF6714DF98D13DE85E580A18A5768
+    ReferencedTextureGuids(6) = C4A4E2FC4C48E1275F7C77B126BD4A99
+    ReferencedTextureGuids(7) = 13D5A56542132F73BC6B2792DFE36B92
+    ReferencedTextureGuids(9) = 6A13E3234F36BACAA7BBDDA896BDEBEB
+    LightingGuid = 7152419243FE008D00DCC28A812C9EC9
+    EditorOnlyData <- MID_MI_FluxSurfaceUnderCustomDepth_0EditorOnlyData
+[MID_MI_FluxSurfaceUnderCustomDepth_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_RiverPostprocess_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/River/Materials/MI_RiverPostprocess.MI_RiverPostprocess'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000,ExpressionGUID=5507EFAC440AD920128E3583F1459BAD)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"),ExpressionGUID=1DCA5B824BB115B1668FC79410D563DA)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000,ExpressionGUID=F9A197E5491F1B2FB7423FB0F6E42782)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000,ExpressionGUID=6B27B59B43C5F9D4AADE8794D82FD62D)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000,ExpressionGUID=434A82B24CBA35DEDF6D1693EABBCAD5)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000),ExpressionGUID=52EAC78B45C6C264B1AB8E8D10C04E82)
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"),ExpressionGUID=8E496E994E33A820BC1DFDB8A40FD1D9)
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600),ExpressionGUID=A42DD31A49C211935C2D6AADEF642F20)
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000),ExpressionGUID=5E03E2964F70D69344B379886F946D2D)
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000),ExpressionGUID=FEA9FC144E87C27018CC96A9CB5A924E)
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000),ExpressionGUID=7B780EB6434588DA7A117B820D4269E6)
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Velocity.RiverMap_Flux_Velocity'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'",ExpressionGUID=724FE13B46AC7AAFA22016A9E50F80E6)
+    BasePropertyOverrides = (TwoSided=True,BlendMode=BLEND_Translucent,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 61EF94AD4078B928B171198909D4D7B6
+    ReferencedTextureGuids(1) = 307757E1458E615C7D97A39E32219707
+    ReferencedTextureGuids(2) = 6A13E3234F36BACAA7BBDDA896BDEBEB
+    ReferencedTextureGuids(3) = 1D4F7FEE425037FC1DEF32B9652FB6D4
+    ReferencedTextureGuids(4) = 13D5A56542132F73BC6B2792DFE36B92
+    ReferencedTextureGuids(5) = 2C0FB1E99916326F940A25252CEA8A78
+    ReferencedTextureGuids(6) = F85B5D524AAFD3F753B93CA4419A5984
+    LightingGuid = 89C9D3F0494792A817A7CD9DAAE80E20
+    EditorOnlyData <- MID_MI_RiverPostprocess_0EditorOnlyData
+[MID_MI_RiverPostprocess_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_RiverCausticsWetDecal_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/River/Materials/MI_RiverCausticsWetDecal.MI_RiverCausticsWetDecal'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000,ExpressionGUID=981CCAB748F614BD4B4FB783A52E69F1)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"),ExpressionGUID=1DCA5B824BB115B1668FC79410D563DA)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000,ExpressionGUID=F9A197E5491F1B2FB7423FB0F6E42782)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000),ExpressionGUID=52EAC78B45C6C264B1AB8E8D10C04E82)
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000),ExpressionGUID=432EB73445F62109DE58AD8B54BB37BA)
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"),ExpressionGUID=2B641B9A43712CE8A327A78456DF9899)
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600))
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000))
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000))
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000))
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'",ExpressionGUID=F3A1E2AD4B83AE7CDAB0D38A6DD094DE)
+    BasePropertyOverrides = (BlendMode=BLEND_Translucent,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 13D5A56542132F73BC6B2792DFE36B92
+    ReferencedTextureGuids(1) = 20FEF6714DF98D13DE85E580A18A5768
+    ReferencedTextureGuids(2) = 1D4F7FEE425037FC1DEF32B9652FB6D4
+    ReferencedTextureGuids(4) = 3967DB0B48A612685DCD1B94C45101C9
+    LightingGuid = 76EA11E64F6A7C02AEAB02854B4CC84E
+    EditorOnlyData <- MID_MI_RiverCausticsWetDecal_0EditorOnlyData
+[MID_MI_RiverCausticsWetDecal_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_RiverFogAbsorptionVolume_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/River/Materials/MI_RiverFogAbsorptionVolume.MI_RiverFogAbsorptionVolume'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000,ExpressionGUID=5507EFAC440AD920128E3583F1459BAD)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"),ExpressionGUID=1DCA5B824BB115B1668FC79410D563DA)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000,ExpressionGUID=F9A197E5491F1B2FB7423FB0F6E42782)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000,ExpressionGUID=6B27B59B43C5F9D4AADE8794D82FD62D)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000,ExpressionGUID=434A82B24CBA35DEDF6D1693EABBCAD5)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000),ExpressionGUID=52EAC78B45C6C264B1AB8E8D10C04E82)
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"),ExpressionGUID=8E496E994E33A820BC1DFDB8A40FD1D9)
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600),ExpressionGUID=A42DD31A49C211935C2D6AADEF642F20)
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000),ExpressionGUID=5E03E2964F70D69344B379886F946D2D)
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000),ExpressionGUID=FEA9FC144E87C27018CC96A9CB5A924E)
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000),ExpressionGUID=7B780EB6434588DA7A117B820D4269E6)
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Velocity.RiverMap_Flux_Velocity'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'",ExpressionGUID=724FE13B46AC7AAFA22016A9E50F80E6)
+    BasePropertyOverrides = (BlendMode=BLEND_Modulate,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 6A13E3234F36BACAA7BBDDA896BDEBEB
+    ReferencedTextureGuids(1) = 1D4F7FEE425037FC1DEF32B9652FB6D4
+    ReferencedTextureGuids(2) = 13D5A56542132F73BC6B2792DFE36B92
+    ReferencedTextureGuids(3) = 61EF94AD4078B928B171198909D4D7B6
+    ReferencedTextureGuids(4) = A6C7402D47E941CE724FE99F7F1A1104
+    ReferencedTextureGuids(5) = 00000000000000000000000000000000
+    LightingGuid = 2F4A87FE4DF71D8551BF2EA5601543E0
+    EditorOnlyData <- MID_MI_RiverFogAbsorptionVolume_0EditorOnlyData
+[MID_MI_RiverFogAbsorptionVolume_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_RiverFogScatteringVolume_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/River/Materials/MI_RiverFogScatteringVolume.MI_RiverFogScatteringVolume'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000,ExpressionGUID=5507EFAC440AD920128E3583F1459BAD)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"),ExpressionGUID=1DCA5B824BB115B1668FC79410D563DA)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000,ExpressionGUID=F9A197E5491F1B2FB7423FB0F6E42782)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000,ExpressionGUID=6B27B59B43C5F9D4AADE8794D82FD62D)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000,ExpressionGUID=434A82B24CBA35DEDF6D1693EABBCAD5)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000),ExpressionGUID=52EAC78B45C6C264B1AB8E8D10C04E82)
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"),ExpressionGUID=8E496E994E33A820BC1DFDB8A40FD1D9)
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600),ExpressionGUID=A42DD31A49C211935C2D6AADEF642F20)
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000),ExpressionGUID=5E03E2964F70D69344B379886F946D2D)
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000),ExpressionGUID=FEA9FC144E87C27018CC96A9CB5A924E)
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000),ExpressionGUID=7B780EB6434588DA7A117B820D4269E6)
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Velocity.RiverMap_Flux_Velocity'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'",ExpressionGUID=724FE13B46AC7AAFA22016A9E50F80E6)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 6A13E3234F36BACAA7BBDDA896BDEBEB
+    ReferencedTextureGuids(1) = 1D4F7FEE425037FC1DEF32B9652FB6D4
+    ReferencedTextureGuids(2) = 13D5A56542132F73BC6B2792DFE36B92
+    ReferencedTextureGuids(3) = 61EF94AD4078B928B171198909D4D7B6
+    ReferencedTextureGuids(4) = A6C7402D47E941CE724FE99F7F1A1104
+    ReferencedTextureGuids(5) = 00000000000000000000000000000000
+    LightingGuid = C11864A642404AEBE2EB0480F35495E0
+    EditorOnlyData <- MID_MI_RiverFogScatteringVolume_0EditorOnlyData
+[MID_MI_RiverFogScatteringVolume_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_OceanFogContainerVolume_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/Ocean/Materials/MI_OceanFogContainerVolume.MI_OceanFogContainerVolume'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000,ExpressionGUID=5507EFAC440AD920128E3583F1459BAD)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"),ExpressionGUID=1DCA5B824BB115B1668FC79410D563DA)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000,ExpressionGUID=F9A197E5491F1B2FB7423FB0F6E42782)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000,ExpressionGUID=6B27B59B43C5F9D4AADE8794D82FD62D)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000,ExpressionGUID=434A82B24CBA35DEDF6D1693EABBCAD5)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000),ExpressionGUID=52EAC78B45C6C264B1AB8E8D10C04E82)
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"),ExpressionGUID=8E496E994E33A820BC1DFDB8A40FD1D9)
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600),ExpressionGUID=A42DD31A49C211935C2D6AADEF642F20)
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000),ExpressionGUID=5E03E2964F70D69344B379886F946D2D)
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000),ExpressionGUID=FEA9FC144E87C27018CC96A9CB5A924E)
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000),ExpressionGUID=7B780EB6434588DA7A117B820D4269E6)
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Velocity.RiverMap_Flux_Velocity'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'",ExpressionGUID=724FE13B46AC7AAFA22016A9E50F80E6)
+    BasePropertyOverrides = (BlendMode=BLEND_Modulate,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 1D4F7FEE425037FC1DEF32B9652FB6D4
+    ReferencedTextureGuids(1) = 13D5A56542132F73BC6B2792DFE36B92
+    ReferencedTextureGuids(2) = 61EF94AD4078B928B171198909D4D7B6
+    ReferencedTextureGuids(3) = B047E04B48C3D0EF7EAAEEA74BF7182A
+    ReferencedTextureGuids(4) = 00000000000000000000000000000000
+    LightingGuid = 975D1AE445DDB5E0930CA3BF63989891
+    EditorOnlyData <- MID_MI_OceanFogContainerVolume_0EditorOnlyData
+[MID_MI_OceanFogContainerVolume_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[DefaultSceneRoot@PersistentLevel.BP_FluxSurface] SceneComponent
+    RelativeLocation = (X=-2530.000000,Y=-3760.000000,Z=820.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[VolumeCollision@PersistentLevel.BP_FluxSurface] BoxComponent
+    AttachParent = "DefaultSceneRoot"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=-625.000000)
+    RelativeScale3D = (X=112.400000,Y=61.200000,Z=22.500000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[VolumeScreen] PostProcessComponent
+    AttachParent = "VolumeCollision"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    Settings <- MID_MI_RiverPostprocess_1
+[VolumeColor] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    AttachParent = "VolumeCollision"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    OverrideMaterials(0) <- MID_MI_RiverFogAbsorptionVolume_1
+    OverlayMaterial <- MID_MI_RiverFogScatteringVolume_1
+[VolumeAudio] AudioComponent
+    Sound = "/Script/Engine.SoundCue'/Game/FluidFlux/Surface/Templates/River/Audio/CS_RiverAmbient.CS_RiverAmbient'"
+    AttenuationOverrides = (AttenuationShapeExtents=(X=5620.000000,Y=3060.000000,Z=1125.000000),FalloffDistance=500.000000)
+    AttachParent = "VolumeCollision"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DecalCausticsWet] DecalComponent
+    AttachParent = "DefaultSceneRoot"
+    RelativeLocation = (X=1.000000,Y=1.000000,Z=-625.000000)
+    RelativeScale3D = (X=1125.000000,Y=112.399997,Z=61.199999)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    DecalMaterial <- MID_MI_RiverCausticsWetDecal_1
+[VolumeContainer] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    AttachParent = "DefaultSceneRoot"
+    bVisible = False
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    OverrideMaterials(0) <- MID_MI_OceanFogContainerVolume_1
+[MaterialBillboard@PersistentLevel.BP_FluxSurface] MaterialBillboardComponent
+    AttachParent = "DefaultSceneRoot"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxDataComponent@PersistentLevel.BP_FluxSurface] BP_FluxDataComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxAudioComponent] BP_FluxDataAudioComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MID_MI_RiverSurfaceUnder_1] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/River/Materials/MI_RiverSurfaceUnder.MI_RiverSurfaceUnder'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"))
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000))
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000))
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"))
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600))
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000))
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000))
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000))
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Velocity.RiverMap_Flux_Velocity'")
+    TextureParameterValues(1) = (ParameterInfo=(Name="FluidHeightMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Height.RiverMap_Flux_Height'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'")
+    LightingGuid = D159F78E4B8B0D0F4960C3929E212993
+    EditorOnlyData <- MID_MI_RiverSurfaceUnder_1EditorOnlyData
+[MID_MI_RiverSurfaceUnder_1EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_FluxSurfaceUnderCustomDepth_1] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Underwater/Materials/MI_FluxSurfaceUnderCustomDepth.MI_FluxSurfaceUnderCustomDepth'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"))
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000))
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000))
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"))
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600))
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000))
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000))
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000))
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Velocity.RiverMap_Flux_Velocity'")
+    TextureParameterValues(1) = (ParameterInfo=(Name="FluidHeightMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Height.RiverMap_Flux_Height'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'")
+    LightingGuid = AD9F03B4480C63356A7346964D10FA09
+    EditorOnlyData <- MID_MI_FluxSurfaceUnderCustomDepth_1EditorOnlyData
+[MID_MI_FluxSurfaceUnderCustomDepth_1EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_RiverPostprocess_1] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/River/Materials/MI_RiverPostprocess.MI_RiverPostprocess'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"))
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000))
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000))
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"))
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600))
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000))
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000))
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000))
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Velocity.RiverMap_Flux_Velocity'")
+    TextureParameterValues(1) = (ParameterInfo=(Name="FluidHeightMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Height.RiverMap_Flux_Height'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'")
+    LightingGuid = F1BFC92F411C3F1986C2D58EC37A5D21
+    EditorOnlyData <- MID_MI_RiverPostprocess_1EditorOnlyData
+[MID_MI_RiverPostprocess_1EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_RiverCausticsWetDecal_1] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/River/Materials/MI_RiverCausticsWetDecal.MI_RiverCausticsWetDecal'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"))
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000))
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000))
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"))
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600))
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000))
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000))
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000))
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Velocity.RiverMap_Flux_Velocity'")
+    TextureParameterValues(1) = (ParameterInfo=(Name="FluidHeightMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Height.RiverMap_Flux_Height'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'")
+    LightingGuid = 59D3ED8B467007459CB33B83821CDFF7
+    EditorOnlyData <- MID_MI_RiverCausticsWetDecal_1EditorOnlyData
+[MID_MI_RiverCausticsWetDecal_1EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_RiverFogAbsorptionVolume_1] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/River/Materials/MI_RiverFogAbsorptionVolume.MI_RiverFogAbsorptionVolume'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"))
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000))
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000))
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"))
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600))
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000))
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000))
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000))
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Velocity.RiverMap_Flux_Velocity'")
+    TextureParameterValues(1) = (ParameterInfo=(Name="FluidHeightMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Height.RiverMap_Flux_Height'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'")
+    LightingGuid = B5443611459020064ED88FA6FE432209
+    EditorOnlyData <- MID_MI_RiverFogAbsorptionVolume_1EditorOnlyData
+[MID_MI_RiverFogAbsorptionVolume_1EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_RiverFogScatteringVolume_1] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/River/Materials/MI_RiverFogScatteringVolume.MI_RiverFogScatteringVolume'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"))
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000))
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000))
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"))
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600))
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000))
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000))
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000))
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Velocity.RiverMap_Flux_Velocity'")
+    TextureParameterValues(1) = (ParameterInfo=(Name="FluidHeightMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Height.RiverMap_Flux_Height'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'")
+    LightingGuid = 197BA82C47CC5C2345477DA2E8EA7ECA
+    EditorOnlyData <- MID_MI_RiverFogScatteringVolume_1EditorOnlyData
+[MID_MI_RiverFogScatteringVolume_1EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_OceanFogContainerVolume_1] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Templates/Ocean/Materials/MI_OceanFogContainerVolume.MI_OceanFogContainerVolume'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-117.500000)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"))
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=-50000.000000)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureSteepness"))
+    ScalarParameterValues(7) = (ParameterInfo=(Name="SurfacePhaseG0"),ParameterValue=0.250000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="SkylightCubemap"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-2530.000000,G=-3760.000000,B=820.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000))
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=100000.000000,B=100000.000000,A=100000.000000))
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=2800.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="SurfaceCutMask"))
+    VectorParameterValues(6) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.200000,G=0.200000,B=0.050000,A=0.000600))
+    VectorParameterValues(7) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=200.000000,G=200.000000,B=140.000000,A=1.100000))
+    VectorParameterValues(8) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.950000,G=1.000000,B=0.850000,A=0.550000))
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.200000,G=0.198243,B=0.137327,A=0.020000))
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Velocity.RiverMap_Flux_Velocity'")
+    TextureParameterValues(1) = (ParameterInfo=(Name="FluidHeightMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Height.RiverMap_Flux_Height'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/River/RiverMap_Flux_Ground.RiverMap_Flux_Ground'")
+    LightingGuid = AA89B7D845F7A2060F0E3AB840623152
+    EditorOnlyData <- MID_MI_OceanFogContainerVolume_1EditorOnlyData
+[MID_MI_OceanFogContainerVolume_1EditorOnlyData] MaterialInstanceEditorOnlyData
+[Sprite@PersistentLevel.SkyExponentialHeightFog] BillboardComponent
+    AttachParent = "HeightFogComponent0"
+[HeightFogComponent0] ExponentialHeightFogComponent
+    FogDensity = 0.010000
+    FogHeightFalloff = 0.100000
+    StartDistance = 1000.000000
+    RelativeLocation = (X=8120.000000,Y=25390.000000,Z=5840.000000)
+[Sprite@PersistentLevel.SkyLight_1] BillboardComponent
+    AttachParent = "SkyLightComponent0"
+[SkyLightComponent0] SkyLightComponent
+    SourceType = SLS_SpecifiedCubemap
+    Cubemap = "/Script/Engine.TextureCube'/Engine/MapTemplates/Sky/Desert_Outer_HDR.Desert_Outer_HDR'"
+    CubemapResolution = 64
+    LowerHemisphereColor = (R=0.016667,G=0.012196,B=0.007898,A=1.000000)
+    bCloudAmbientOcclusion = True
+    CloudAmbientOcclusionExtent = 100.000000
+    Intensity = 0.600000
+    CastRaytracedShadow = Disabled
+    IndirectLightingIntensity = 12.000000
+    VolumetricScatteringIntensity = 123.000000
+    RelativeLocation = (X=-680.802612,Y=-4218.732422,Z=1024.633057)
+    Mobility = Movable
+[Sprite@PersistentLevel.SkyVolumetricCloud] BillboardComponent
+    AttachParent = "VolumetricCloudComponent"
+[VolumetricCloudComponent] VolumetricCloudComponent
+    LayerBottomAltitude = 6.000000
+    LayerHeight = 12.000000
+    TracingStartMaxDistance = 60.000000
+    TracingMaxDistance = 40.000000
+    ViewSampleCountScale = 1.500000
+    ReflectionViewSampleCountScaleValue = 0.416667
+    ShadowReflectionViewSampleCountScaleValue = 0.300000
+    MaterialLifetimePtr = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Demo/Environment/Sky/MI_VolumetricSky.MI_VolumetricSky'"
+    RelativeLocation = (X=-300.000000,Y=-4666.920410,Z=1203.446289)
+[NewReflectionComponent@PersistentLevel.SphereReflectionCapture2] SphereReflectionCaptureComponent
+    InfluenceRadius = 2500.000000
+    PreviewInfluenceRadius = "DrawRadius0"
+    CaptureOffsetComponent = "CaptureOffset"
+    MapBuildDataId = B77D981B4737F4AD52F2C2A397FDC8F7
+    RelativeLocation = (X=-4946.472656,Y=-3468.842285,Z=-187.234497)
+[Sprite@PersistentLevel.SphereReflectionCapture2] BillboardComponent
+    AttachParent = "NewReflectionComponent"
+[CaptureOffset@PersistentLevel.SphereReflectionCapture2] BillboardComponent
+    AttachParent = "NewReflectionComponent"
+    bVisible = False
+[DrawRadius0@PersistentLevel.SphereReflectionCapture2] DrawSphereComponent
+    SphereRadius = 2500.000000
+    AreaClass = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    bUseSystemDefaultObstacleAreaClass = False
+    AreaClassOverride = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "NewReflectionComponent"
+[DrawRadius1@PersistentLevel.SphereReflectionCapture2] DrawSphereComponent
+    AreaClass = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    bUseSystemDefaultObstacleAreaClass = False
+    AreaClassOverride = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "NewReflectionComponent"
+[NewReflectionComponent@PersistentLevel.SphereReflectionCapture3_3] SphereReflectionCaptureComponent
+    InfluenceRadius = 1000.000000
+    PreviewInfluenceRadius = "DrawRadius0"
+    CaptureOffsetComponent = "CaptureOffset"
+    MapBuildDataId = 5EC7B3F143A32E278975029CD727D63A
+    RelativeLocation = (X=-3580.000000,Y=-5350.000000,Z=-70.000000)
+[Sprite@PersistentLevel.SphereReflectionCapture3_3] BillboardComponent
+    AttachParent = "NewReflectionComponent"
+[CaptureOffset@PersistentLevel.SphereReflectionCapture3_3] BillboardComponent
+    AttachParent = "NewReflectionComponent"
+    bVisible = False
+[DrawRadius0@PersistentLevel.SphereReflectionCapture3_3] DrawSphereComponent
+    SphereRadius = 1000.000000
+    AreaClass = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    bUseSystemDefaultObstacleAreaClass = False
+    AreaClassOverride = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "NewReflectionComponent"
+[DrawRadius1@PersistentLevel.SphereReflectionCapture3_3] DrawSphereComponent
+    AreaClass = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    bUseSystemDefaultObstacleAreaClass = False
+    AreaClassOverride = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "NewReflectionComponent"
+[NewReflectionComponent@PersistentLevel.SphereReflectionCapture_1] SphereReflectionCaptureComponent
+    InfluenceRadius = 3500.000000
+    PreviewInfluenceRadius = "DrawRadius0"
+    CaptureOffsetComponent = "CaptureOffset"
+    MapBuildDataId = B688B33F444BD43DF80769883CE5744F
+    RelativeLocation = (X=-57.331329,Y=-3468.841797,Z=1033.581177)
+[Sprite@PersistentLevel.SphereReflectionCapture_1] BillboardComponent
+    AttachParent = "NewReflectionComponent"
+[CaptureOffset@PersistentLevel.SphereReflectionCapture_1] BillboardComponent
+    AttachParent = "NewReflectionComponent"
+    bVisible = False
+[DrawRadius0@PersistentLevel.SphereReflectionCapture_1] DrawSphereComponent
+    SphereRadius = 3500.000000
+    AreaClass = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    bUseSystemDefaultObstacleAreaClass = False
+    AreaClassOverride = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "NewReflectionComponent"
+[DrawRadius1@PersistentLevel.SphereReflectionCapture_1] DrawSphereComponent
+    AreaClass = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    bUseSystemDefaultObstacleAreaClass = False
+    AreaClassOverride = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "NewReflectionComponent"
+[NewTextRenderComponent@PersistentLevel.TextRenderActor_0] TextRenderComponent
+    Text = NSLOCTEXT("[5A883EAB4730C331BD0E2F8F06DFC248]", "4AB6544748B5413C8BECFEAB92E7FEC6", "ASSETFREAKS.COM")
+    WorldSize = 200.000000
+    RelativeLocation = (X=0.000000,Y=-3030.000000,Z=470.000000)
+[Sprite@PersistentLevel.TextRenderActor_0] BillboardComponent
+    AttachParent = "NewTextRenderComponent"
+[NewTextRenderComponent@PersistentLevel.TextRenderActor_1] TextRenderComponent
+    Text = NSLOCTEXT("[5A883EAB4730C331BD0E2F8F06DFC248]", "BAA1D4DC4FEB0C32E3FA18BD63C54AFB", "MAKE SURE THE \"GEOMETRY SCRIPT\" PLUGIN IS ENABLED")
+    TextMaterial = "/Script/Engine.Material'/Engine/EngineMaterials/UnlitText.UnlitText'"
+    HorizontalAlignment = EHTA_Center
+    TextRenderColor = (B=0,G=27,R=116,A=255)
+    WorldSize = 430.000000
+    RelativeLocation = (X=-2524.474629,Y=-1758.370686,Z=559.604618)
+    RelativeRotation = (Pitch=85.000000,Yaw=-89.999999,Roll=-0.000000)
+[Sprite@PersistentLevel.TextRenderActor_1] BillboardComponent
+    AttachParent = "NewTextRenderComponent"
+[CollisionComp] BoxComponent
+    BoxExtent = (X=27.187500,Y=60.000000,Z=30.000000)
+    AreaClass = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    bUseSystemDefaultObstacleAreaClass = False
+    AreaClassOverride = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    RelativeLocation = (X=-856.696838,Y=-4566.175781,Z=113.561493)
+    RelativeRotation = (Pitch=0.000000,Yaw=-20.000038,Roll=0.000000)
+    RelativeScale3D = (X=3.000000,Y=3.000000,Z=3.000000)
+[Sprite@PersistentLevel.TriggerBox2] BillboardComponent
+    AttachParent = "CollisionComp"
+[DefaultSceneRoot@PersistentLevel.BP_Dam] SceneComponent
+    RelativeLocation = (X=-875.181519,Y=-4648.319824,Z=-184.446259)
+    RelativeRotation = (Pitch=0.000000,Yaw=39.999935,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[StaticMesh] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/River_Rock_01/SM_River_Rock_01.SM_River_Rock_01'"
+    bEvaluateWorldPositionOffsetInRayTracing = True
+    OverrideMaterials(0) = None
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "DefaultSceneRoot"
+    RelativeRotation = (Pitch=-3.404842,Yaw=120.280312,Roll=-9.408082)
+    RelativeScale3D = (X=6.000000,Y=12.000000,Z=12.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BrushComponent0@PersistentLevel.LightmassImportanceVolume_1] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    RelativeLocation = (X=-2270.000000,Y=-3880.000000,Z=-170.000000)
+    BrushBodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.LightmassImportanceVolume_1.BrushComponent0] BodySetup
+    bGenerateMirroredCollision = False
+    CollisionTraceFlag = CTF_UseSimpleAsComplex
+[CubeBuilder_1@PersistentLevel.LightmassImportanceVolume_1] CubeBuilder
+    X = 12000.000000
+    Y = 6000.000000
+    Z = 3000.000000
+    Vertices(0) = (X=-6000.000000,Y=-3000.000000,Z=-1500.000000)
+    Vertices(1) = (X=-6000.000000,Y=-3000.000000,Z=1500.000000)
+    Vertices(2) = (X=-6000.000000,Y=3000.000000,Z=-1500.000000)
+    Vertices(3) = (X=-6000.000000,Y=3000.000000,Z=1500.000000)
+    Vertices(4) = (X=6000.000000,Y=-3000.000000,Z=-1500.000000)
+    Vertices(5) = (X=6000.000000,Y=-3000.000000,Z=1500.000000)
+    Vertices(6) = (X=6000.000000,Y=3000.000000,Z=-1500.000000)
+    Vertices(7) = (X=6000.000000,Y=3000.000000,Z=1500.000000)
+    Polys(0) = (VertexIndices=(0,1,3,2),Direction=1)
+    Polys(1) = (VertexIndices=(2,3,7,6),Direction=1)
+    Polys(2) = (VertexIndices=(6,7,5,4),Direction=1)
+    Polys(3) = (VertexIndices=(4,5,1,0),Direction=1)
+    Polys(4) = (VertexIndices=(3,1,5,7),Direction=1)
+    Polys(5) = (VertexIndices=(0,2,6,4),Direction=1)
+    Layer = "Cube"
+[BrushComponent0@PersistentLevel.PhysicsVolume_1] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    RelativeLocation = (X=-1510.000000,Y=-2710.000000,Z=-1900.000000)
+    RelativeScale3D = (X=150.000000,Y=150.000000,Z=30.000000)
+    BrushBodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.PhysicsVolume_1.BrushComponent0] BodySetup
+    bGenerateMirroredCollision = False
+    CollisionTraceFlag = CTF_UseSimpleAsComplex
+[CubeBuilder_1@PersistentLevel.PhysicsVolume_1] CubeBuilder
+    Vertices(0) = (X=-100.000000,Y=-100.000000,Z=-100.000000)
+    Vertices(1) = (X=-100.000000,Y=-100.000000,Z=100.000000)
+    Vertices(2) = (X=-100.000000,Y=100.000000,Z=-100.000000)
+    Vertices(3) = (X=-100.000000,Y=100.000000,Z=100.000000)
+    Vertices(4) = (X=100.000000,Y=-100.000000,Z=-100.000000)
+    Vertices(5) = (X=100.000000,Y=-100.000000,Z=100.000000)
+    Vertices(6) = (X=100.000000,Y=100.000000,Z=-100.000000)
+    Vertices(7) = (X=100.000000,Y=100.000000,Z=100.000000)
+    Polys(0) = (VertexIndices=(0,1,3,2),Direction=1)
+    Polys(1) = (VertexIndices=(2,3,7,6),Direction=1)
+    Polys(2) = (VertexIndices=(6,7,5,4),Direction=1)
+    Polys(3) = (VertexIndices=(4,5,1,0),Direction=1)
+    Polys(4) = (VertexIndices=(3,1,5,7),Direction=1)
+    Polys(5) = (VertexIndices=(0,2,6,4),Direction=1)
+    Layer = "Cube"
+[BrushComponent0@PersistentLevel.SkyPostProcessVolume] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=-3840.000000,Y=-3850.000000,Z=1200.000000)
+    RelativeScale3D = (X=180.000000,Y=140.000000,Z=30.000000)
+    BrushBodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.SkyPostProcessVolume.BrushComponent0] BodySetup
+    bGenerateMirroredCollision = False
+    CollisionTraceFlag = CTF_UseSimpleAsComplex
+[CubeBuilder_1@PersistentLevel.SkyPostProcessVolume] CubeBuilder
+[BP_FluxBuoyancyComponent] BP_FluxBuoyancyComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxDataComponent@PersistentLevel.BP_FluxBoat_6] BP_FluxDataComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxInteractionComponent] BP_FluxInteractionComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Mesh] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=-5597.505371,Y=-3580.291016,Z=-271.674802)
+    RelativeRotation = (Pitch=0.000000,Yaw=-95.000061,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DetectCharacter] BoxComponent
+    AttachParent = "Mesh"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[CameraArm] SpringArmComponent
+    AttachParent = "Mesh"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Camera] CameraComponent
+    AttachParent = "CameraArm"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxDUst] SceneComponent
+    RelativeLocation = (X=285.000000,Y=-3295.000000,Z=-25.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxDUst] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Bounds@PersistentLevel.BP_FluxDUst] BoxComponent
+    BoxExtent = (X=650.000000,Y=650.000000,Z=150.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxDUst.Bounds] BodySetup
+[Volume@PersistentLevel.BP_FluxDUst] BoxComponent
+    BoxExtent = (X=550.000000,Y=550.000000,Z=150.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxDUst.Volume] BodySetup
+    AggGeom = (BoxElems=((X=1300.000000,Y=1300.000000,Z=300.000000)))
+    AggGeom = (BoxElems=((X=1100.000000,Y=1100.000000,Z=300.000000)))
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxDUst] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Dust/NS_FluxDust.NS_FluxDust'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxDUst.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxDUst.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxDUst.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxDUst.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxDUst.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxDUst.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxDUst.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxDUst.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxDUst.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxDUst.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Scene@PersistentLevel.BP_FluxInteractionCapture_2] SceneComponent
+    RelativeLocation = (X=-6470.587402,Y=-3320.000000,Z=720.020996)
+    RelativeScale3D = (X=35.840000,Y=35.840000,Z=1500.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Area] BoxComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Preview] StaticMeshComponent
+    bEvaluateWorldPositionOffsetInRayTracing = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Area"
+    bVisible = False
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxInteractionCapture_2] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Ripple] BP_FluxSolverRippleComponent_C
+    SimulationResolution = 512
+    WorldPixelSize = 7
+    WorldAreaSize = 3584
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxModifierSource] SceneComponent
+    RelativeLocation = (X=1900.109375,Y=-1916.674927,Z=437.160919)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxModifierSource] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[FluxModifierSource@PersistentLevel.BP_FluxModifierSource] BP_FluxModifierSourceComponent_C
+    Volume = 0.100000
+    Shape = NewEnumerator0
+    Edge = 12.000000
+    Duration = -1.000000
+    ActiveTime = 0.008333
+    Initialized = True
+    CanRender = True
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=9.956024)
+    RelativeScale3D = (X=400.000000,Y=400.000000,Z=100.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    MaterialInstance <- MaterialInstanceDynamic_1
+[MaterialInstanceDynamic_1@PersistentLevel.BP_FluxModifierSource.FluxModifierSource] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Simulation/Modifiers/Materials/Shapes/MI_FluxModifierSourceRect.MI_FluxModifierSourceRect'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="ZOffset"),ParameterValue=447.116943,ExpressionGUID=DD4D8E86470F106C37C508B097A49340)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="Hardness"),ParameterValue=12.000000,ExpressionGUID=3376A596447A1FE6016BADB4B9C37FE7)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="Intensity"),ParameterValue=1.000000,ExpressionGUID=42873B9E40C779AFB54ED69DA9BC13E1)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="ModififersVelocityScale"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="LocationSize"),ParameterValue=(R=1900.109375,G=-1916.674927,B=400.000000,A=400.000000),ExpressionGUID=25F4B8E84696B318C2F9C190AABC3500)
+    VectorParameterValues(1) = (ParameterInfo=(Name="Rotation"),ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=054030754F4737531BCE4CAA483340CE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="VelocityFlux"),ParameterValue=(R=0.000000,G=0.000000,B=0.100000,A=2.000000),ExpressionGUID=7722A6F945771F781D6C2FA9BAF1E159)
+    VectorParameterValues(3) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(4) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ExpressionGUID=5592767D4999C540649362905BDF8FF5)
+    TextureParameterValues(1) = (ParameterInfo=(Name="Ground"),ExpressionGUID=A83E08DD4E112DFFF1CAB4A9D788A6C2)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 88E2EBF5469102A381FDCABBA8E1E28B
+    EditorOnlyData <- MaterialInstanceDynamic_1EditorOnlyData
+[MaterialInstanceDynamic_1EditorOnlyData@PersistentLevel.BP_FluxModifierSource.FluxModifierSource.MaterialInstanceDynamic_1] MaterialInstanceEditorOnlyData
+[NODE_AddBoxComponent-0@PersistentLevel.BP_FluxModifierSource] BoxComponent
+    AttachParent = "FluxModifierSource"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+[Scene@PersistentLevel.BP_FluxModifierSwirl] SceneComponent
+    RelativeLocation = (X=-1731.738647,Y=-1661.951538,Z=-324.430145)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxModifierSwirl] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[FluxModifierSource@PersistentLevel.BP_FluxModifierSwirl] BP_FluxModifierSourceComponent_C
+    Volume = -7.000000
+    Mode = NewEnumerator0
+    Edge = 1.000000
+    Duration = -1.000000
+    ActiveTime = 0.008333
+    Initialized = True
+    CanRender = True
+    AttachParent = "Scene"
+    RelativeScale3D = (X=350.000000,Y=350.000000,Z=100.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    MaterialInstance <- MaterialInstanceDynamic_1
+[MaterialInstanceDynamic_1@PersistentLevel.BP_FluxModifierSwirl.FluxModifierSource] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Simulation/Modifiers/Materials/Shapes/MI_FluxModifierSourceCircle.MI_FluxModifierSourceCircle'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="ZOffset"),ParameterValue=-324.430145,ExpressionGUID=DD4D8E86470F106C37C508B097A49340)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="Hardness"),ParameterValue=1.000000,ExpressionGUID=3376A596447A1FE6016BADB4B9C37FE7)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="Intensity"),ParameterValue=1.000000,ExpressionGUID=42873B9E40C779AFB54ED69DA9BC13E1)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=820.000000,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="ModififersVelocityScale"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="LocationSize"),ParameterValue=(R=-1731.738647,G=-1661.951538,B=350.000000,A=350.000000),ExpressionGUID=25F4B8E84696B318C2F9C190AABC3500)
+    VectorParameterValues(1) = (ParameterInfo=(Name="Rotation"),ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=054030754F4737531BCE4CAA483340CE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="VelocityFlux"),ParameterValue=(R=0.000000,G=0.000000,B=-7.000000,A=0.000000),ExpressionGUID=7722A6F945771F781D6C2FA9BAF1E159)
+    VectorParameterValues(3) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-7650.000000,G=-6320.000000,B=10240.000000,A=5120.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(4) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ExpressionGUID=5592767D4999C540649362905BDF8FF5)
+    TextureParameterValues(1) = (ParameterInfo=(Name="Ground"),ExpressionGUID=A83E08DD4E112DFFF1CAB4A9D788A6C2)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 028CC7344780E8F431D723A5EF1B52D2
+    EditorOnlyData <- MaterialInstanceDynamic_1EditorOnlyData
+[MaterialInstanceDynamic_1EditorOnlyData@PersistentLevel.BP_FluxModifierSwirl.FluxModifierSource.MaterialInstanceDynamic_1] MaterialInstanceEditorOnlyData
+[NODE_AddBoxComponent-0@PersistentLevel.BP_FluxModifierSwirl] BoxComponent
+    AttachParent = "FluxModifierSource"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+[Scene@PersistentLevel.BP_FluxPlants] SceneComponent
+    RelativeLocation = (X=-1938.729736,Y=-3197.386963,Z=-139.998657)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxPlants] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Bounds@PersistentLevel.BP_FluxPlants] BoxComponent
+    BoxExtent = (X=800.000000,Y=650.000000,Z=300.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxPlants.Bounds] BodySetup
+[Volume@PersistentLevel.BP_FluxPlants] BoxComponent
+    BoxExtent = (X=700.000000,Y=550.000000,Z=300.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxPlants.Volume] BodySetup
+    AggGeom = (BoxElems=((X=1600.000000,Y=1300.000000,Z=600.000000)))
+    AggGeom = (BoxElems=((X=1400.000000,Y=1100.000000,Z=600.000000)))
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxPlants] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Plant/NS_FluxPlantBending.NS_FluxPlantBending'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Scene@PersistentLevel.BP_FluxSplashes] SceneComponent
+    RelativeLocation = (X=-645.000000,Y=-3845.000000,Z=415.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxSplashes] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Bounds@PersistentLevel.BP_FluxSplashes] BoxComponent
+    BoxExtent = (X=3050.000000,Y=2050.000000,Z=50.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxSplashes.Bounds] BodySetup
+[Volume@PersistentLevel.BP_FluxSplashes] BoxComponent
+    BoxExtent = (X=2950.000000,Y=1950.000000,Z=50.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxSplashes.Volume] BodySetup
+    AggGeom = (BoxElems=((X=6100.000000,Y=4100.000000,Z=100.000000)))
+    AggGeom = (BoxElems=((X=5900.000000,Y=3900.000000,Z=100.000000)))
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxSplashes] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Splash/NS_FluxSplashArea.NS_FluxSplashArea'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[BrushComponent0@PersistentLevel.BoxBrush] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    RelativeLocation = (X=-2530.000000,Y=-3720.000000,Z=-350.000000)
+[CubeBuilder_0@PersistentLevel.BoxBrush] CubeBuilder
+    X = 10640.000000
+    Y = 5400.000000
+    Z = 1900.000000
+    Vertices(0) = (X=-5320.000000,Y=-2700.000000,Z=-950.000000)
+    Vertices(1) = (X=-5320.000000,Y=-2700.000000,Z=950.000000)
+    Vertices(2) = (X=-5320.000000,Y=2700.000000,Z=-950.000000)
+    Vertices(3) = (X=-5320.000000,Y=2700.000000,Z=950.000000)
+    Vertices(4) = (X=5320.000000,Y=-2700.000000,Z=-950.000000)
+    Vertices(5) = (X=5320.000000,Y=-2700.000000,Z=950.000000)
+    Vertices(6) = (X=5320.000000,Y=2700.000000,Z=-950.000000)
+    Vertices(7) = (X=5320.000000,Y=2700.000000,Z=950.000000)
+    Polys(0) = (VertexIndices=(0,1,3,2),Direction=1)
+    Polys(1) = (VertexIndices=(2,3,7,6),Direction=1)
+    Polys(2) = (VertexIndices=(6,7,5,4),Direction=1)
+    Polys(3) = (VertexIndices=(4,5,1,0),Direction=1)
+    Polys(4) = (VertexIndices=(3,1,5,7),Direction=1)
+    Polys(5) = (VertexIndices=(0,2,6,4),Direction=1)
+    Layer = "Cube"
+[BrushComponent0@PersistentLevel.BoxBrush2] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    RelativeLocation = (X=-2530.000000,Y=-3720.000000,Z=230.000000)
+[CubeBuilder_0@PersistentLevel.BoxBrush2] CubeBuilder
+    X = 10050.000000
+    Y = 4800.000000
+    Z = 1200.000000
+    Vertices(0) = (X=-5025.000000,Y=-2400.000000,Z=-600.000000)
+    Vertices(1) = (X=-5025.000000,Y=-2400.000000,Z=600.000000)
+    Vertices(2) = (X=-5025.000000,Y=2400.000000,Z=-600.000000)
+    Vertices(3) = (X=-5025.000000,Y=2400.000000,Z=600.000000)
+    Vertices(4) = (X=5025.000000,Y=-2400.000000,Z=-600.000000)
+    Vertices(5) = (X=5025.000000,Y=-2400.000000,Z=600.000000)
+    Vertices(6) = (X=5025.000000,Y=2400.000000,Z=-600.000000)
+    Vertices(7) = (X=5025.000000,Y=2400.000000,Z=600.000000)
+    Polys(0) = (VertexIndices=(0,1,3,2),Direction=1)
+    Polys(1) = (VertexIndices=(2,3,7,6),Direction=1)
+    Polys(2) = (VertexIndices=(6,7,5,4),Direction=1)
+    Polys(3) = (VertexIndices=(4,5,1,0),Direction=1)
+    Polys(4) = (VertexIndices=(3,1,5,7),Direction=1)
+    Polys(5) = (VertexIndices=(0,2,6,4),Direction=1)
+    Layer = "Cube"
+[BrushComponent0@PersistentLevel.BoxBrush3] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    RelativeLocation = (X=-2800.000000,Y=-3720.000000,Z=-1160.000000)
+    RelativeRotation = (Pitch=-5.000000,Yaw=0.000000,Roll=0.000000)
+[CubeBuilder_0@PersistentLevel.BoxBrush3] CubeBuilder
+    X = 10050.000000
+    Y = 4800.000000
+    Z = 1200.000000
+    Vertices(0) = (X=-5025.000000,Y=-2400.000000,Z=-600.000000)
+    Vertices(1) = (X=-5025.000000,Y=-2400.000000,Z=600.000000)
+    Vertices(2) = (X=-5025.000000,Y=2400.000000,Z=-600.000000)
+    Vertices(3) = (X=-5025.000000,Y=2400.000000,Z=600.000000)
+    Vertices(4) = (X=5025.000000,Y=-2400.000000,Z=-600.000000)
+    Vertices(5) = (X=5025.000000,Y=-2400.000000,Z=600.000000)
+    Vertices(6) = (X=5025.000000,Y=2400.000000,Z=-600.000000)
+    Vertices(7) = (X=5025.000000,Y=2400.000000,Z=600.000000)
+    Polys(0) = (VertexIndices=(0,1,3,2),Direction=1)
+    Polys(1) = (VertexIndices=(2,3,7,6),Direction=1)
+    Polys(2) = (VertexIndices=(6,7,5,4),Direction=1)
+    Polys(3) = (VertexIndices=(4,5,1,0),Direction=1)
+    Polys(4) = (VertexIndices=(3,1,5,7),Direction=1)
+    Polys(5) = (VertexIndices=(0,2,6,4),Direction=1)
+    Layer = "Cube"
+[BrushComponent0@PersistentLevel.BoxBrush4] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    RelativeLocation = (X=-2530.000000,Y=-3720.000000,Z=-1450.000000)
+[CubeBuilder_0@PersistentLevel.BoxBrush4] CubeBuilder
+    X = 50640.000000
+    Y = 50400.000000
+    Z = 1900.000000
+    Vertices(0) = (X=-25320.000000,Y=-25200.000000,Z=-950.000000)
+    Vertices(1) = (X=-25320.000000,Y=-25200.000000,Z=950.000000)
+    Vertices(2) = (X=-25320.000000,Y=25200.000000,Z=-950.000000)
+    Vertices(3) = (X=-25320.000000,Y=25200.000000,Z=950.000000)
+    Vertices(4) = (X=25320.000000,Y=-25200.000000,Z=-950.000000)
+    Vertices(5) = (X=25320.000000,Y=-25200.000000,Z=950.000000)
+    Vertices(6) = (X=25320.000000,Y=25200.000000,Z=-950.000000)
+    Vertices(7) = (X=25320.000000,Y=25200.000000,Z=950.000000)
+    Polys(0) = (VertexIndices=(0,1,3,2),Direction=1)
+    Polys(1) = (VertexIndices=(2,3,7,6),Direction=1)
+    Polys(2) = (VertexIndices=(6,7,5,4),Direction=1)
+    Polys(3) = (VertexIndices=(4,5,1,0),Direction=1)
+    Polys(4) = (VertexIndices=(3,1,5,7),Direction=1)
+    Polys(5) = (VertexIndices=(0,2,6,4),Direction=1)
+    Layer = "Cube"
+[BrushComponent0@PersistentLevel.BoxBrush5] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    RelativeLocation = (X=-10020.000000,Y=-3720.000000,Z=1760.000000)
+[CubeBuilder_0@PersistentLevel.BoxBrush5] CubeBuilder
+    X = 10640.000000
+    Y = 5400.000000
+    Z = 1900.000000
+    Vertices(0) = (X=-5320.000000,Y=-2700.000000,Z=-950.000000)
+    Vertices(1) = (X=-5320.000000,Y=-2700.000000,Z=950.000000)
+    Vertices(2) = (X=-5320.000000,Y=2700.000000,Z=-950.000000)
+    Vertices(3) = (X=-5320.000000,Y=2700.000000,Z=950.000000)
+    Vertices(4) = (X=5320.000000,Y=-2700.000000,Z=-950.000000)
+    Vertices(5) = (X=5320.000000,Y=-2700.000000,Z=950.000000)
+    Vertices(6) = (X=5320.000000,Y=2700.000000,Z=-950.000000)
+    Vertices(7) = (X=5320.000000,Y=2700.000000,Z=950.000000)
+    Polys(0) = (VertexIndices=(0,1,3,2),Direction=1)
+    Polys(1) = (VertexIndices=(2,3,7,6),Direction=1)
+    Polys(2) = (VertexIndices=(6,7,5,4),Direction=1)
+    Polys(3) = (VertexIndices=(4,5,1,0),Direction=1)
+    Polys(4) = (VertexIndices=(3,1,5,7),Direction=1)
+    Polys(5) = (VertexIndices=(0,2,6,4),Direction=1)
+    Layer = "Cube"
+[BrushComponent0@PersistentLevel.Brush_0] BrushComponent
+    Brush = "/Script/Engine.Model'Brush'"
+    bSelectable = False
+    RelativeLocation = (X=-290.000000,Y=-3130.000000,Z=460.000000)
+[TetrahedronBuilder_0] TetrahedronBuilder
+    Vertices(0) = (X=256.000000,Y=0.000000,Z=0.000000)
+    Vertices(1) = (X=-256.000000,Y=0.000000,Z=0.000000)
+    Vertices(2) = (X=0.000000,Y=256.000000,Z=0.000000)
+    Vertices(3) = (X=0.000000,Y=-256.000000,Z=0.000000)
+    Vertices(4) = (X=0.000000,Y=0.000000,Z=256.000000)
+    Vertices(5) = (X=0.000000,Y=0.000000,Z=-256.000000)
+    Vertices(6) = (X=-181.019333,Y=181.019333,Z=0.000000)
+    Vertices(7) = (X=-181.019333,Y=0.000000,Z=181.019333)
+    Vertices(8) = (X=0.000000,Y=181.019333,Z=181.019333)
+    Vertices(9) = (X=-181.019333,Y=-181.019333,Z=0.000000)
+    Vertices(10) = (X=0.000000,Y=-181.019333,Z=181.019333)
+    Vertices(11) = (X=-181.019333,Y=0.000000,Z=181.019333)
+    Vertices(12) = (X=181.019333,Y=-181.019333,Z=0.000000)
+    Vertices(13) = (X=181.019333,Y=0.000000,Z=181.019333)
+    Vertices(14) = (X=0.000000,Y=-181.019333,Z=181.019333)
+    Vertices(15) = (X=181.019333,Y=181.019333,Z=0.000000)
+    Vertices(16) = (X=0.000000,Y=181.019333,Z=181.019333)
+    Vertices(17) = (X=181.019333,Y=0.000000,Z=181.019333)
+    Vertices(18) = (X=-181.019333,Y=181.019333,Z=0.000000)
+    Vertices(19) = (X=0.000000,Y=181.019333,Z=-181.019333)
+    Vertices(20) = (X=-181.019333,Y=0.000000,Z=-181.019333)
+    Vertices(21) = (X=-181.019333,Y=-181.019333,Z=0.000000)
+    Vertices(22) = (X=-181.019333,Y=0.000000,Z=-181.019333)
+    Vertices(23) = (X=0.000000,Y=-181.019333,Z=-181.019333)
+    Vertices(24) = (X=181.019333,Y=-181.019333,Z=0.000000)
+    Vertices(25) = (X=0.000000,Y=-181.019333,Z=-181.019333)
+    Vertices(26) = (X=181.019333,Y=0.000000,Z=-181.019333)
+    Vertices(27) = (X=181.019333,Y=181.019333,Z=0.000000)
+    Vertices(28) = (X=181.019333,Y=0.000000,Z=-181.019333)
+    Vertices(29) = (X=0.000000,Y=181.019333,Z=-181.019333)
+    Polys(0) = (VertexIndices=(2,6,8),Direction=1)
+    Polys(1) = (VertexIndices=(1,7,6),Direction=1)
+    Polys(2) = (VertexIndices=(4,8,7),Direction=1)
+    Polys(3) = (VertexIndices=(6,7,8),Direction=1)
+    Polys(4) = (VertexIndices=(1,9,11),Direction=1)
+    Polys(5) = (VertexIndices=(3,10,9),Direction=1)
+    Polys(6) = (VertexIndices=(4,11,10),Direction=1)
+    Polys(7) = (VertexIndices=(9,10,11),Direction=1)
+    Polys(8) = (VertexIndices=(3,12,14),Direction=1)
+    Polys(9) = (VertexIndices=(0,13,12),Direction=1)
+    Polys(10) = (VertexIndices=(4,14,13),Direction=1)
+    Polys(11) = (VertexIndices=(12,13,14),Direction=1)
+    Polys(12) = (VertexIndices=(0,15,17),Direction=1)
+    Polys(13) = (VertexIndices=(2,16,15),Direction=1)
+    Polys(14) = (VertexIndices=(4,17,16),Direction=1)
+    Polys(15) = (VertexIndices=(15,16,17),Direction=1)
+    Polys(16) = (VertexIndices=(1,18,20),Direction=1)
+    Polys(17) = (VertexIndices=(2,19,18),Direction=1)
+    Polys(18) = (VertexIndices=(5,20,19),Direction=1)
+    Polys(19) = (VertexIndices=(18,19,20),Direction=1)
+    Polys(20) = (VertexIndices=(3,21,23),Direction=1)
+    Polys(21) = (VertexIndices=(1,22,21),Direction=1)
+    Polys(22) = (VertexIndices=(5,23,22),Direction=1)
+    Polys(23) = (VertexIndices=(21,22,23),Direction=1)
+    Polys(24) = (VertexIndices=(0,24,26),Direction=1)
+    Polys(25) = (VertexIndices=(3,25,24),Direction=1)
+    Polys(26) = (VertexIndices=(5,26,25),Direction=1)
+    Polys(27) = (VertexIndices=(24,25,26),Direction=1)
+    Polys(28) = (VertexIndices=(2,27,29),Direction=1)
+    Polys(29) = (VertexIndices=(0,28,27),Direction=1)
+    Polys(30) = (VertexIndices=(5,29,28),Direction=1)
+    Polys(31) = (VertexIndices=(27,28,29),Direction=1)
+    Layer = "Tetrahedron"
+[NavigationSystemModuleConfig_0] NavigationSystemModuleConfig
+    bAutoSpawnMissingNavData = True
+    NavigationSystemClass = "/Script/NavigationSystem.NavigationSystemV1"
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock2] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/SM_GroundRevealRock001.SM_GroundRevealRock001'"
+    StreamingTextureData(0) = (PackedRelativeBox=3485209700,TexelFactor=334.628021)
+    StreamingTextureData(1) = (PackedRelativeBox=3485209700,TextureLevelIndex=1,TexelFactor=334.628021)
+    StreamingTextureData(2) = (PackedRelativeBox=3485209700,TextureLevelIndex=2,TexelFactor=55.771336)
+    MaterialStreamingRelativeBoxes(0) = 3418101861
+    OverrideMaterials(0) = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/MI_GroundRevealRock001a.MI_GroundRevealRock001a'"
+    VisibilityId = 29
+    RelativeLocation = (X=1280.707153,Y=-5565.568848,Z=113.374756)
+    RelativeRotation = (Pitch=8.649171,Yaw=-25.381296,Roll=-5.038391)
+    RelativeScale3D = (X=5.000000,Y=5.000000,Z=7.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock3] StaticMeshComponent
+    ForcedLodModel = 1
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/SM_GroundRevealRock001.SM_GroundRevealRock001'"
+    StreamingTextureData(0) = (PackedRelativeBox=3344701572,TexelFactor=334.628021)
+    StreamingTextureData(1) = (PackedRelativeBox=3344701572,TextureLevelIndex=1,TexelFactor=334.628021)
+    StreamingTextureData(2) = (PackedRelativeBox=3344701572,TextureLevelIndex=2,TexelFactor=55.771336)
+    MaterialStreamingRelativeBoxes(0) = 3344701572
+    VisibilityId = 30
+    RelativeLocation = (X=1234.377808,Y=-4340.479492,Z=-87.277802)
+    RelativeRotation = (Pitch=8.649171,Yaw=-120.381317,Roll=-5.038391)
+    RelativeScale3D = (X=7.750000,Y=7.000000,Z=10.000000)
+[StaticMeshComponent0@PersistentLevel.SM_River_Rock_2] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/River_Rock_01/SM_River_Rock_01.SM_River_Rock_01'"
+    StreamingTextureData(0) = (PackedRelativeBox=3682275429,TextureLevelIndex=3,TexelFactor=102.185600)
+    StreamingTextureData(1) = (PackedRelativeBox=3682275429,TextureLevelIndex=4,TexelFactor=102.185600)
+    StreamingTextureData(2) = (PackedRelativeBox=3682275429,TextureLevelIndex=2,TexelFactor=8.515467)
+    MaterialStreamingRelativeBoxes(0) = 3615102085
+    VisibilityId = 31
+    RelativeLocation = (X=2257.525879,Y=-4737.893555,Z=-10.081299)
+    RelativeRotation = (Pitch=-0.056071,Yaw=-27.196524,Roll=-20.402405)
+    RelativeScale3D = (X=15.000000,Y=14.000000,Z=14.000000)
+[StaticMeshComponent0@PersistentLevel.SM_River_Rock_3] StaticMeshComponent
+    ForcedLodModel = 1
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/River_Rock_01/SM_River_Rock_01.SM_River_Rock_01'"
+    StreamingTextureData(0) = (PackedRelativeBox=3545901220,TextureLevelIndex=3,TexelFactor=102.185600)
+    StreamingTextureData(1) = (PackedRelativeBox=3545901220,TextureLevelIndex=4,TexelFactor=102.185600)
+    StreamingTextureData(2) = (PackedRelativeBox=3545901220,TextureLevelIndex=2,TexelFactor=8.515467)
+    MaterialStreamingRelativeBoxes(0) = 3543804100
+    VisibilityId = 32
+    RelativeLocation = (X=1706.098267,Y=-4686.658203,Z=-70.000000)
+    RelativeRotation = (Pitch=12.700066,Yaw=228.255875,Roll=-15.579437)
+    RelativeScale3D = (X=12.000000,Y=12.000000,Z=13.000000)
+[StaticMeshComponent0@PersistentLevel.SM_River_Rock_6] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/River_Rock_01/SM_River_Rock_01.SM_River_Rock_01'"
+    bUseDefaultCollision = False
+    BodyInstance = (ObjectType=ECC_WorldDynamic,CollisionProfileName="BlockAllDynamic",MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=1983.920654,Y=-3970.470947,Z=-364.839722)
+    RelativeRotation = (Pitch=9.391305,Yaw=55.283615,Roll=3.451195)
+    RelativeScale3D = (X=30.000000,Y=25.000000,Z=20.000000)
+    Mobility = Movable
+[StaticMeshComponent0@PersistentLevel.SM_River_Rock_8] StaticMeshComponent
+    ForcedLodModel = 1
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/River_Rock_01/SM_River_Rock_01.SM_River_Rock_01'"
+    bUseDefaultCollision = False
+    BodyInstance = (ObjectType=ECC_WorldDynamic,CollisionProfileName="BlockAllDynamic",MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=290.000000,Y=-5280.000000,Z=-610.000000)
+    RelativeRotation = (Pitch=0.000000,Yaw=20.000042,Roll=0.000000)
+    RelativeScale3D = (X=35.000000,Y=38.000000,Z=22.000000)
+    Mobility = Movable
+[StaticMeshComponent0@PersistentLevel.SM_River_Rock_9] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/River_Rock_01/SM_River_Rock_01.SM_River_Rock_01'"
+    StreamingTextureData(0) = (PackedRelativeBox=3749449859,TextureLevelIndex=3,TexelFactor=102.185600)
+    StreamingTextureData(1) = (PackedRelativeBox=3749449859,TextureLevelIndex=4,TexelFactor=102.185600)
+    StreamingTextureData(2) = (PackedRelativeBox=3749449859,TextureLevelIndex=2,TexelFactor=8.515467)
+    MaterialStreamingRelativeBoxes(0) = 3680243876
+    VisibilityId = 33
+    RelativeLocation = (X=699.321106,Y=-5955.903809,Z=55.000000)
+    RelativeRotation = (Pitch=-19.481155,Yaw=21.998756,Roll=-2.939093)
+    RelativeScale3D = (X=15.000000,Y=10.000000,Z=10.000000)
+[StaticMeshComponent0@PersistentLevel.SM_River_Rock_10] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/River_Rock_01/SM_River_Rock_01.SM_River_Rock_01'"
+    StreamingTextureData(0) = (PackedRelativeBox=3879411844,TextureLevelIndex=3,TexelFactor=102.185600)
+    StreamingTextureData(1) = (PackedRelativeBox=3879411844,TextureLevelIndex=4,TexelFactor=102.185600)
+    StreamingTextureData(2) = (PackedRelativeBox=3879411844,TextureLevelIndex=2,TexelFactor=8.515467)
+    MaterialStreamingRelativeBoxes(0) = 3812303012
+    VisibilityId = 34
+    RelativeLocation = (X=330.000000,Y=-5620.000000,Z=55.000000)
+    RelativeRotation = (Pitch=-5.814383,Yaw=68.466454,Roll=12.874222)
+    RelativeScale3D = (X=10.000000,Y=10.000000,Z=7.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock4] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock002/SM_GroundRevealRock002.SM_GroundRevealRock002'"
+    StreamingTextureData(0) = (PackedRelativeBox=3682345058,TextureLevelIndex=5,TexelFactor=420.834076)
+    StreamingTextureData(1) = (PackedRelativeBox=3682345058,TextureLevelIndex=6,TexelFactor=420.834076)
+    StreamingTextureData(2) = (PackedRelativeBox=3682345058,TextureLevelIndex=2,TexelFactor=70.139015)
+    MaterialStreamingRelativeBoxes(0) = 3615236195
+    VisibilityId = 35
+    RelativeLocation = (X=30.000000,Y=-5975.000000,Z=50.000000)
+    RelativeRotation = (Pitch=-54.468632,Yaw=68.947678,Roll=30.642416)
+    RelativeScale3D = (X=3.500000,Y=3.000000,Z=4.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock5] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock002/SM_GroundRevealRock002.SM_GroundRevealRock002'"
+    StreamingTextureData(0) = (PackedRelativeBox=3889955875,TextureLevelIndex=5,TexelFactor=420.834076)
+    StreamingTextureData(1) = (PackedRelativeBox=3889955875,TextureLevelIndex=6,TexelFactor=420.834076)
+    StreamingTextureData(2) = (PackedRelativeBox=3889955875,TextureLevelIndex=2,TexelFactor=70.139015)
+    MaterialStreamingRelativeBoxes(0) = 3887859747
+    VisibilityId = 36
+    RelativeLocation = (X=1555.635986,Y=-5467.563965,Z=-609.999634)
+    RelativeRotation = (Pitch=-1.708160,Yaw=70.070183,Roll=-4.699860)
+    RelativeScale3D = (X=9.000000,Y=7.500000,Z=11.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock6] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock002/SM_GroundRevealRock002.SM_GroundRevealRock002'"
+    MaterialStreamingRelativeBoxes(0) = 3816555618
+    VisibilityId = 37
+    RelativeLocation = (X=-313.751831,Y=-4221.000000,Z=-368.381836)
+    RelativeRotation = (Pitch=20.495792,Yaw=69.600700,Roll=-2.208654)
+    RelativeScale3D = (X=9.000000,Y=9.000000,Z=7.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock7] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock002/SM_GroundRevealRock002.SM_GroundRevealRock002'"
+    StreamingTextureData(0) = (PackedRelativeBox=3617332264,TextureLevelIndex=5,TexelFactor=420.834076)
+    StreamingTextureData(1) = (PackedRelativeBox=3617332264,TextureLevelIndex=6,TexelFactor=420.834076)
+    StreamingTextureData(2) = (PackedRelativeBox=3617332264,TextureLevelIndex=2,TexelFactor=70.139015)
+    MaterialStreamingRelativeBoxes(0) = 3548126280
+    VisibilityId = 38
+    RelativeLocation = (X=-843.631287,Y=-5682.785156,Z=-511.622742)
+    RelativeRotation = (Pitch=31.522060,Yaw=48.807003,Roll=17.051222)
+    RelativeScale3D = (X=8.000000,Y=5.000000,Z=7.000000)
+[StaticMeshComponent0@PersistentLevel.SM_River_Rock_11] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/River_Rock_01/SM_River_Rock_01.SM_River_Rock_01'"
+    StreamingTextureData(0) = (PackedRelativeBox=3621657632,TextureLevelIndex=3,TexelFactor=102.185600)
+    StreamingTextureData(1) = (PackedRelativeBox=3621657632,TextureLevelIndex=4,TexelFactor=102.185600)
+    StreamingTextureData(2) = (PackedRelativeBox=3621657632,TextureLevelIndex=2,TexelFactor=8.515467)
+    MaterialStreamingRelativeBoxes(0) = 3552451617
+    VisibilityId = 39
+    RelativeLocation = (X=-560.000000,Y=-4850.000000,Z=-340.000000)
+    RelativeRotation = (Pitch=1.775781,Yaw=-6.358871,Roll=-14.766706)
+    RelativeScale3D = (X=13.000000,Y=10.000000,Z=6.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock8] StaticMeshComponent
+    ForcedLodModel = 1
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock002/SM_GroundRevealRock002.SM_GroundRevealRock002'"
+    StreamingTextureData(0) = (PackedRelativeBox=3892117506,TextureLevelIndex=5,TexelFactor=420.834076)
+    StreamingTextureData(1) = (PackedRelativeBox=3892117506,TextureLevelIndex=6,TexelFactor=420.834076)
+    StreamingTextureData(2) = (PackedRelativeBox=3892117506,TextureLevelIndex=2,TexelFactor=70.139015)
+    MaterialStreamingRelativeBoxes(0) = 3825008643
+    VisibilityId = 40
+    RelativeLocation = (X=30.000000,Y=-5200.000000,Z=-20.000000)
+    RelativeRotation = (Pitch=9.391387,Yaw=-0.283623,Roll=-3.451161)
+    RelativeScale3D = (X=2.000000,Y=1.400000,Z=2.400000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock9] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/SM_GroundRevealRock001.SM_GroundRevealRock001'"
+    StreamingTextureData(0) = (PackedRelativeBox=4286120038,TexelFactor=334.628021)
+    StreamingTextureData(1) = (PackedRelativeBox=4286120038,TextureLevelIndex=1,TexelFactor=334.628021)
+    StreamingTextureData(2) = (PackedRelativeBox=4286120038,TextureLevelIndex=2,TexelFactor=55.771336)
+    MaterialStreamingRelativeBoxes(0) = 4286120039
+    VisibilityId = 41
+    RelativeLocation = (X=-1557.881836,Y=-5080.000000,Z=-319.999817)
+    RelativeRotation = (Pitch=0.000000,Yaw=130.000259,Roll=0.000000)
+    RelativeScale3D = (X=8.000000,Y=8.000000,Z=7.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock10] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock002/SM_GroundRevealRock002.SM_GroundRevealRock002'"
+    StreamingTextureData(0) = (PackedRelativeBox=3753837632,TextureLevelIndex=5,TexelFactor=420.834076)
+    StreamingTextureData(1) = (PackedRelativeBox=3753837632,TextureLevelIndex=6,TexelFactor=420.834076)
+    StreamingTextureData(2) = (PackedRelativeBox=3753837632,TextureLevelIndex=2,TexelFactor=70.139015)
+    MaterialStreamingRelativeBoxes(0) = 3753837664
+    VisibilityId = 42
+    RelativeLocation = (X=-2185.409912,Y=-2405.132080,Z=-440.852417)
+    RelativeRotation = (Pitch=9.391387,Yaw=-270.284027,Roll=-3.451160)
+    RelativeScale3D = (X=3.500000,Y=6.000000,Z=5.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock11] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock002/SM_GroundRevealRock002.SM_GroundRevealRock002'"
+    StreamingTextureData(0) = (PackedRelativeBox=3952869444,TextureLevelIndex=5,TexelFactor=420.834076)
+    StreamingTextureData(1) = (PackedRelativeBox=3952869444,TextureLevelIndex=6,TexelFactor=420.834076)
+    StreamingTextureData(2) = (PackedRelativeBox=3952869444,TextureLevelIndex=2,TexelFactor=70.139015)
+    MaterialStreamingRelativeBoxes(0) = 3885695045
+    VisibilityId = 43
+    RelativeLocation = (X=-1030.861328,Y=-2628.563477,Z=-389.992065)
+    RelativeRotation = (Pitch=9.391387,Yaw=-330.284119,Roll=-3.451159)
+    RelativeScale3D = (X=5.000000,Y=5.000000,Z=8.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock12] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/SM_GroundRevealRock001.SM_GroundRevealRock001'"
+    StreamingTextureData(0) = (PackedRelativeBox=4288282725,TexelFactor=334.628021)
+    StreamingTextureData(1) = (PackedRelativeBox=4288282725,TextureLevelIndex=1,TexelFactor=334.628021)
+    StreamingTextureData(2) = (PackedRelativeBox=4288282725,TextureLevelIndex=2,TexelFactor=55.771336)
+    MaterialStreamingRelativeBoxes(0) = 4288282758
+    VisibilityId = 44
+    RelativeLocation = (X=-1132.170532,Y=-3340.000000,Z=-360.011353)
+    RelativeRotation = (Pitch=0.000000,Yaw=-39.999863,Roll=0.000000)
+    RelativeScale3D = (X=9.000000,Y=9.000000,Z=3.000000)
+[StaticMeshComponent0@PersistentLevel.SM_River_Rock_7] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/River_Rock_01/SM_River_Rock_01.SM_River_Rock_01'"
+    bUseDefaultCollision = False
+    BodyInstance = (ObjectType=ECC_WorldDynamic,CollisionProfileName="BlockAllDynamic",MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=-150.000000,Y=-2820.000000,Z=-550.000000)
+    RelativeRotation = (Pitch=0.000007,Yaw=50.000069,Roll=-0.000011)
+    RelativeScale3D = (X=44.000000,Y=44.000000,Z=10.000000)
+    Mobility = Movable
+[StaticMeshComponent0@PersistentLevel.SM_River_Rock_12] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/River_Rock_01/SM_River_Rock_01.SM_River_Rock_01'"
+    bUseDefaultCollision = False
+    BodyInstance = (ObjectType=ECC_WorldDynamic,CollisionProfileName="BlockAllDynamic",MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=1530.000000,Y=-2250.000000,Z=-550.000000)
+    RelativeRotation = (Pitch=0.000007,Yaw=50.000069,Roll=-0.000011)
+    RelativeScale3D = (X=44.000000,Y=44.000000,Z=10.000000)
+    Mobility = Movable
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock13] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/SM_GroundRevealRock001.SM_GroundRevealRock001'"
+    StreamingTextureData(0) = (PackedRelativeBox=4288413763,TexelFactor=334.628021)
+    StreamingTextureData(1) = (PackedRelativeBox=4288413763,TextureLevelIndex=1,TexelFactor=334.628021)
+    StreamingTextureData(2) = (PackedRelativeBox=4288413763,TextureLevelIndex=2,TexelFactor=55.771336)
+    MaterialStreamingRelativeBoxes(0) = 4288413763
+    VisibilityId = 45
+    RelativeLocation = (X=-2220.000000,Y=-4760.000000,Z=-370.000000)
+    RelativeRotation = (Pitch=0.000000,Yaw=160.000290,Roll=0.000000)
+    RelativeScale3D = (X=8.000000,Y=8.000000,Z=9.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock14] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock002/SM_GroundRevealRock002.SM_GroundRevealRock002'"
+    StreamingTextureData(0) = (PackedRelativeBox=3684303907,TextureLevelIndex=5,TexelFactor=420.834076)
+    StreamingTextureData(1) = (PackedRelativeBox=3684303907,TextureLevelIndex=6,TexelFactor=420.834076)
+    StreamingTextureData(2) = (PackedRelativeBox=3684303907,TextureLevelIndex=2,TexelFactor=70.139015)
+    MaterialStreamingRelativeBoxes(0) = 3617195076
+    VisibilityId = 46
+    RelativeLocation = (X=-710.000000,Y=-2690.000000,Z=-640.000000)
+    RelativeRotation = (Pitch=14.015329,Yaw=-153.831345,Roll=-12.333519)
+    RelativeScale3D = (X=5.000000,Y=5.000000,Z=8.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock15] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/SM_GroundRevealRock001.SM_GroundRevealRock001'"
+    StreamingTextureData(0) = (PackedRelativeBox=4286185575,TexelFactor=334.628021)
+    StreamingTextureData(1) = (PackedRelativeBox=4286185575,TextureLevelIndex=1,TexelFactor=334.628021)
+    StreamingTextureData(2) = (PackedRelativeBox=4286185575,TextureLevelIndex=2,TexelFactor=55.771336)
+    MaterialStreamingRelativeBoxes(0) = 4286120039
+    VisibilityId = 47
+    RelativeLocation = (X=-2410.000000,Y=-3780.000000,Z=-340.000000)
+    RelativeRotation = (Pitch=-0.000007,Yaw=130.000229,Roll=-0.000007)
+    RelativeScale3D = (X=8.000000,Y=8.000000,Z=7.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock16] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/SM_GroundRevealRock001.SM_GroundRevealRock001'"
+    StreamingTextureData(0) = (PackedRelativeBox=4294901762,TexelFactor=334.628021)
+    StreamingTextureData(1) = (PackedRelativeBox=4294901762,TextureLevelIndex=1,TexelFactor=334.628021)
+    StreamingTextureData(2) = (PackedRelativeBox=4294901762,TextureLevelIndex=2,TexelFactor=55.771336)
+    MaterialStreamingRelativeBoxes(0) = 4292739106
+    VisibilityId = 48
+    RelativeLocation = (X=-2570.000000,Y=-3230.000000,Z=-350.000000)
+    RelativeRotation = (Pitch=0.000000,Yaw=-9.999831,Roll=0.000000)
+    RelativeScale3D = (X=9.000000,Y=9.000000,Z=2.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock17] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/SM_GroundRevealRock001.SM_GroundRevealRock001'"
+    StreamingTextureData(0) = (PackedRelativeBox=4290576451,TexelFactor=334.628021)
+    StreamingTextureData(1) = (PackedRelativeBox=4290576451,TextureLevelIndex=1,TexelFactor=334.628021)
+    StreamingTextureData(2) = (PackedRelativeBox=4290576451,TextureLevelIndex=2,TexelFactor=55.771336)
+    MaterialStreamingRelativeBoxes(0) = 4290576451
+    VisibilityId = 49
+    RelativeLocation = (X=-3230.222656,Y=-3591.910156,Z=-380.545715)
+    RelativeRotation = (Pitch=0.000000,Yaw=-14.999947,Roll=0.000000)
+    RelativeScale3D = (X=4.000000,Y=4.500000,Z=3.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock18] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/SM_GroundRevealRock001.SM_GroundRevealRock001'"
+    StreamingTextureData(0) = (PackedRelativeBox=4292608036,TexelFactor=334.628021)
+    StreamingTextureData(1) = (PackedRelativeBox=4292608036,TextureLevelIndex=1,TexelFactor=334.628021)
+    StreamingTextureData(2) = (PackedRelativeBox=4292608036,TextureLevelIndex=2,TexelFactor=55.771336)
+    MaterialStreamingRelativeBoxes(0) = 4292608036
+    VisibilityId = 50
+    RelativeLocation = (X=-3380.000000,Y=-2340.000000,Z=-400.000000)
+    RelativeRotation = (Pitch=0.000000,Yaw=100.000206,Roll=0.000000)
+    RelativeScale3D = (X=8.000000,Y=8.000000,Z=10.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock19] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/SM_GroundRevealRock001.SM_GroundRevealRock001'"
+    StreamingTextureData(0) = (PackedRelativeBox=4286185541,TexelFactor=334.628021)
+    StreamingTextureData(1) = (PackedRelativeBox=4286185541,TextureLevelIndex=1,TexelFactor=334.628021)
+    StreamingTextureData(2) = (PackedRelativeBox=4286185541,TextureLevelIndex=2,TexelFactor=55.771336)
+    MaterialStreamingRelativeBoxes(0) = 4286120037
+    VisibilityId = 51
+    RelativeLocation = (X=-4020.000000,Y=-3540.000000,Z=-320.000000)
+    RelativeRotation = (Pitch=0.000000,Yaw=140.000214,Roll=0.000000)
+    RelativeScale3D = (X=8.000000,Y=8.000000,Z=9.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock20] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock002/SM_GroundRevealRock002.SM_GroundRevealRock002'"
+    StreamingTextureData(0) = (PackedRelativeBox=3688436804,TextureLevelIndex=5,TexelFactor=420.834076)
+    StreamingTextureData(1) = (PackedRelativeBox=3688436804,TextureLevelIndex=6,TexelFactor=420.834076)
+    StreamingTextureData(2) = (PackedRelativeBox=3688436804,TextureLevelIndex=2,TexelFactor=70.139015)
+    MaterialStreamingRelativeBoxes(0) = 3688437860
+    VisibilityId = 52
+    RelativeLocation = (X=-2323.943848,Y=-5787.771973,Z=-602.631226)
+    RelativeRotation = (Pitch=11.008427,Yaw=249.408875,Roll=17.837984)
+    RelativeScale3D = (X=9.000000,Y=7.000000,Z=9.000000)
+[StaticMeshComponent0@PersistentLevel.SM_GroundRevealRock21] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Demo/Environment/Rocks/Environments/Meshes/GroundRevealRock001/SM_GroundRevealRock001.SM_GroundRevealRock001'"
+    StreamingTextureData(0) = (PackedRelativeBox=4292804610,TexelFactor=334.628021)
+    StreamingTextureData(1) = (PackedRelativeBox=4292804610,TextureLevelIndex=1,TexelFactor=334.628021)
+    StreamingTextureData(2) = (PackedRelativeBox=4292804610,TextureLevelIndex=2,TexelFactor=55.771336)
+    MaterialStreamingRelativeBoxes(0) = 4292739106
+    VisibilityId = 53
+    RelativeLocation = (X=-1800.000000,Y=-3090.000000,Z=-360.000000)

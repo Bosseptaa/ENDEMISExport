@@ -1,0 +1,113 @@
+﻿# /Game/FluidFlux/Surface/Lighting/Functions/MF_FluxSurfaceDecalApply
+# класс: MaterialFunction; происхождение: проект; узлов: 18; связей: 32; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:158
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxSurfaceDecalApply] MaterialFunction
+    StateId = 8995A9BE4092A49AA11713B02F0113FC
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FluxSurfaceDecalApplyEditorOnlyData
+[MF_FluxSurfaceDecalApplyEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_2
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    A <- MaterialExpressionFunctionInput_5
+    B <- MaterialExpressionMultiply_7
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "DecalColor"
+    Id = 34BD694A4B2FF396203DE29D09D44685
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "DecalAlpha"
+    Id = F6B6036347E968E236621B859548F752
+    InputType = FunctionInput_Scalar
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Fade"
+    Id = 5D96923F452948C53CF04A82937FEF0D
+    SortPriority = 12
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "DecalAdditive"
+    Id = 87CC105A4A829713D793DE9DA9F96E8E
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "Emissive"
+    Id = F2A59E8F47CE969C99C7AF968AC47923
+    bUsePreviewValueAsDefault = True
+    SortPriority = -12
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Color"
+    SortPriority = -1
+    bLastPreviewed = True
+    Id = 17B8106045E2C3409A3192882805EAD8
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_5
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Opacity"
+    bLastPreviewed = True
+    Id = CFE8B38F4CD8BB4BF5779DA21E18DED1
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_6
+[MaterialExpressionLinearInterpolate_3] MaterialExpressionLinearInterpolate
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    A <- MaterialExpressionFunctionInput_1
+    Alpha <- MaterialExpressionFunctionInput_4
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    A <- MaterialExpressionAdd_1
+    B <- MaterialExpressionReroute_1
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    A <- MaterialExpressionLinearInterpolate_3
+    B <- MaterialExpressionReroute_1
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+    Input <- MaterialExpressionFunctionInput_2
+[MaterialExpressionVectorParameter_2] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "Emissive"
+    ExpressionGUID = AA696ED9476EBCC7E071B4AA30E37EBA
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSurfaceDecalApply'"
+
+## СВЯЗИ

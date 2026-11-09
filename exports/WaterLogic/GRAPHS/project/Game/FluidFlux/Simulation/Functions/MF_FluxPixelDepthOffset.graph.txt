@@ -1,0 +1,45 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_FluxPixelDepthOffset
+# класс: MaterialFunction; происхождение: проект; узлов: 7; связей: 10; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:58
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxPixelDepthOffset] MaterialFunction
+    описание: Disables pixel depth offset during the heightmap capture process.
+    bExposeToLibrary = True
+    LibraryCategoriesText(0) = NSLOCTEXT("", "801781FD44F9B1BE6CDE9E9CEEA8525A", "ImaginaryBlend")
+    StateId = 3DDD2C6E42B41E5881DF2A9ADCA49C5F
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_FluxPixelDepthOffsetEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxPixelDepthOffsetEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPixelDepthOffset'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "PixelDepthOffset"
+    Id = 6E44A5544354F5A85BE5D99028941E2B
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPixelDepthOffset'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Filtered"
+    bLastPreviewed = True
+    Id = F7C65AF84365C80134A16B8BCAA6DCDD
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPixelDepthOffset'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/Heightmap/Functions/MF_HeightmapSwitch.MF_HeightmapSwitch'"
+    FunctionOutputs(0) = (ExpressionOutputId=1589B3544B36C96B85A75083AB1008C3,Output=(OutputName="Output"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPixelDepthOffset'"
+    Outputs(0) = (OutputName="Output")
+    FunctionInputs(0) <- MaterialExpressionConstant_2
+    FunctionInputs(1) <- MaterialExpressionFunctionInput_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

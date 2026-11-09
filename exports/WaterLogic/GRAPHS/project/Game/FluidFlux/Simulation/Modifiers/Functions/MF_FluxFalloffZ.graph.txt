@@ -1,0 +1,90 @@
+﻿# /Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxFalloffZ
+# класс: MaterialFunction; происхождение: проект; узлов: 17; связей: 29; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:33
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxFalloffZ] MaterialFunction
+    StateId = 37EAA9B34A81A4913590EFB727CD8F03
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FluxFalloffZEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxFalloffZEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionSubtract_5
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionSubtract_0
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+    Input <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.200000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.200000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+    A <- MaterialExpressionSubtract_5
+    B <- MaterialExpressionFunctionInput_3
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "ZDiatance"
+    Id = 47603B424195A46630E09F9D52A61AC6
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+    bCollapsed = True
+    Preview <- MaterialExpressionSubtract_0
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Size"
+    Id = A37D6EEA4900D1AAD0033DA23A642081
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Falloff"
+    Id = E39071A0471AFA0422D250833850EA1A
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Weighht"
+    bLastPreviewed = True
+    Id = E50DF5FA4C20ED8BCAF52B9D221622C7
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+    bCollapsed = True
+    A <- MaterialExpressionOneMinus_0
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+    Input <- MaterialExpressionSaturate_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+    Input <- MaterialExpressionDivide_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+    A <- MaterialExpressionComponentMask_2
+[MaterialExpressionSubtract_5] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+    A <- MaterialExpressionAbs_0
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFalloffZ'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

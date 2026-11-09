@@ -1,0 +1,146 @@
+﻿# /Game/FluidFlux/Demo/Environment/Landscape/Sand/M_SandMesh
+# класс: Material; происхождение: проект; узлов: 28; связей: 55; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_SandMesh] Material
+    bUsedWithStaticLighting = True
+    EditorX = 2192
+    EditorY = -32
+    bUseMaterialAttributes = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = FD8A9D26AAB371E1EFCEF1B2314888AC
+    ReferencedTextureGuids(0) = D27D5B554B095E9319420D8B0A7D2A69
+    ReferencedTextureGuids(1) = C14F1E7C4C2B85734269EBB200534586
+    ReferencedTextureGuids(2) = 283F40684830E4029581FBB1DAC66001
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=0.031250,UVChannelIndex=0,TextureName="T_Sand_D",TextureReference="/Game/FluidFlux/Demo/Environment/Landscape/Sand/T_Sand_D.T_Sand_D")
+    TextureStreamingData(1) = (SamplingScale=0.031311,UVChannelIndex=2,TextureName="T_Sand_NAC",TextureReference="/Game/FluidFlux/Demo/Environment/Landscape/Sand/T_Sand_NAC.T_Sand_NAC")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Sand/T_Sand_D.T_Sand_D'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Sand/T_Detail_N_01.T_Detail_N_01'"
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Sand/T_Sand_NAC.T_Sand_NAC'"
+    ParameterOverviewExpansion = (("-12Global GroundSand", True),("-12Global", True),("-12Global GroundCobble", True))
+    LightingGuid = DA055DCD42FB140D6945A085BCB052D4
+    EditorOnlyData <- M_SandMeshEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+[MaterialExpressionVertexNormalWS_0] MaterialExpressionVertexNormalWS
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.891666,G=0.747849,B=0.517742,A=1.000000)
+    ParameterName = "Color"
+    ExpressionGUID = F83C607442607BC30EE13CBEC6DB45D6
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionSetMaterialAttributes_0] MaterialExpressionSetMaterialAttributes
+    AttributeSetTypes(0) = 69B8D33616ED4D499AA497292F050F7A
+    AttributeSetTypes(1) = 9FDAB39925564CC98CD2D572C12C8FED
+    AttributeSetTypes(2) = D1DD967C4CAD47D39E6346FB08ECF210
+    Inputs(0) <- MaterialExpressionMaterialFunctionCall_1
+    Inputs(1) Base Color <- MaterialExpressionMultiply_0
+    Inputs(2) Specular <- MaterialExpressionMultiply_5
+    Inputs(3) Roughness <- MaterialExpressionMultiply_6
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionBreakMaterialAttributes_0
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    A <- MaterialExpressionBreakMaterialAttributes_0
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    ConstB = 0.250000
+    A <- MaterialExpressionLinearInterpolate_1
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 0.010000
+    A <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionDotProduct_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionBreakMaterialAttributes_0
+    B <- MaterialExpressionLinearInterpolate_1
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/MaterialLayerFunctions/MatLayerBlend_Standard.MatLayerBlend_Standard'"
+    FunctionOutputs(0) = (ExpressionOutputId=B7A48B68455CD8D9A45B3AAF57C5E97C,Output=(OutputName="Blended Material"))
+    Outputs(0) = (OutputName="Blended Material")
+    FunctionInputs(0) <- MaterialExpressionMakeMaterialAttributes_0
+    FunctionInputs(1) <- MaterialExpressionSetMaterialAttributes_0
+    FunctionInputs(2) <- MaterialExpressionSaturate_0
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    FunctionOutputs(2) = (ExpressionOutputId=17CE6E2C4E70841B48F3D1B73828AA03,Output=(OutputName="B"))
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    Outputs(2) = (OutputName="B")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/WorldPositionOffset/LocalPosition.LocalPosition'"
+    FunctionOutputs(0) = (ExpressionOutputId=27F0945D4ABD5C70C4034AAF01590188,Output=(OutputName="Local Position"))
+    FunctionOutputs(1) = (ExpressionOutputId=0EC5AE1C430459D37F99BC847711C064,Output=(OutputName="Instance Local Position"))
+    FunctionOutputs(2) = (ExpressionOutputId=74D70E1C49E1795CB21210A6161BD491,Output=(OutputName="Local Position (Excluding Offsets)"))
+    FunctionOutputs(3) = (ExpressionOutputId=23A516A24277CCAEF901BC8543E1BEAB,Output=(OutputName="Instance Local Position (Excluding Offsets)"))
+    Outputs(0) = (OutputName="Local Position")
+    Outputs(1) = (OutputName="Instance Local Position")
+    Outputs(2) = (OutputName="Local Position (Excluding Offsets)")
+    Outputs(3) = (OutputName="Instance Local Position (Excluding Offsets)")
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Landscape/Sand/MF_Sand.MF_Sand'"
+    FunctionOutputs(0) = (ExpressionOutputId=A3C0A795499E05D549497DAC10DA9DF5,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionConstant_0
+    FunctionInputs(1) <- MaterialExpressionConstant_1
+[MaterialExpressionMakeMaterialAttributes_0] MaterialExpressionMakeMaterialAttributes
+    BaseColor <- MaterialExpressionMultiply_4
+    Normal <- MaterialExpressionConstant3Vector_2
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionConstant3Vector_0
+    B <- MaterialExpressionVectorParameter_0
+    Alpha <- MaterialExpressionMultiply_2
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionMultiply_2
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    A <- MaterialExpressionVertexNormalWS_0
+    B <- MaterialExpressionConstant3Vector_1
+[MaterialExpressionConstant3Vector_2] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=1.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=1.000000,A=0.000000)
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.875000,G=0.729167,B=0.583333,A=1.000000)
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.500000
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 1.500000
+[MaterialExpressionBreakMaterialAttributes_0] MaterialExpressionBreakMaterialAttributes
+    MaterialAttributes <- MaterialExpressionMaterialFunctionCall_1
+[M_SandMeshEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    MaterialAttributes <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionBreakMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionSetMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionMakeMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_2
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+
+## СВЯЗИ

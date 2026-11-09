@@ -1,0 +1,103 @@
+﻿# /Game/FluidFlux/Surface/Underwater/Functions/MF_CameraPlane
+# класс: MaterialFunction; происхождение: проект; узлов: 16; связей: 28; HLSL: 2; причина: папка /Game/FluidFlux; имя/путь, тело:64, HLSL:2
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CameraPlane] MaterialFunction
+    StateId = 9EF3744948C52B154BD84E98E5C20B06
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_2
+    EditorOnlyData <- MF_CameraPlaneEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CameraPlaneEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_2
+    ExpressionCollection <- MaterialExpressionWorldPosition_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionSubtract_5
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionCustom_10
+    ExpressionCollection <- MaterialExpressionCustom_15
+[MaterialExpressionCameraPositionWS_1] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+[MaterialExpressionCustom_10] MaterialExpressionCustom
+    описание: ScreenPos to ViewPos
+    OutputType = CMOT_Float4
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+    bCollapsed = True
+    Inputs(0) ScreenPos <- MaterialExpressionMaterialFunctionCall_2
+    Inputs(1) NearPlane <- MaterialExpressionScalarParameter_2
+    Code: HLSL, 2 строк (см. HLSL/)
+[MaterialExpressionCustom_15] MaterialExpressionCustom
+    описание: ViewPos to WorldPos
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+    bCollapsed = True
+    Inputs(0) ViewPos <- MaterialExpressionCustom_10
+    Code: HLSL, 7 строк (см. HLSL/)
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "WorldPosition"
+    bLastPreviewed = True
+    Id = DAC109DB483ABC61F8A2B0AC03B07DD9
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "CameraPositionOffset"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = 1291CD84426844AC9D6339A08F8EECD1
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+    bCollapsed = True
+    A <- MaterialExpressionSubtract_1
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "WorldPositionOffset"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = F77B628A4FFA2BAF82B49D93A6DDFD63
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+    bCollapsed = True
+    A <- MaterialExpressionSubtract_5
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "ScreenPosition"
+    bLastPreviewed = True
+    Id = F33F318541D74570314DC0A93B6D307B
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Underwater/Functions/MF_NearCameraPosition.MF_NearCameraPosition'"
+    FunctionInputs(0) = (ExpressionInputId=E00ABDB24234B9E51B9DD2AC35688925,Input=(OutputIndex=-1,InputName="Diatnce"))
+    FunctionOutputs(0) = (ExpressionOutputId=F3580A1246B388F6E2BEA58AB1990673,Output=(OutputName="ScreenPosition"))
+    FunctionOutputs(1) = (ExpressionOutputId=E59E194C45E546ABF87E909DF27C4526,Output=(OutputName="WorldPosition"))
+    FunctionOutputs(2) = (ExpressionOutputId=694BC78D4172DB300D45D4BA62550828,Output=(OutputName="WindowPosition"))
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+    Outputs(0) = (OutputName="ScreenPosition")
+    Outputs(1) = (OutputName="WorldPosition")
+    Outputs(2) = (OutputName="WindowPosition")
+    FunctionInputs(1) <- MaterialExpressionTextureCoordinate_2
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 70000.000000
+    ParameterName = "MeshPlaneDisatnce"
+    ExpressionGUID = 755C8AF24906A920F2B4A880B56EF8E8
+    Group = "Projection"
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+    A <- MaterialExpressionCustom_15
+    B <- MaterialExpressionCameraPositionWS_1
+[MaterialExpressionSubtract_5] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+    A <- MaterialExpressionCustom_15
+    B <- MaterialExpressionWorldPosition_2
+[MaterialExpressionTextureCoordinate_2] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+[MaterialExpressionWorldPosition_2] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_CameraPlane'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

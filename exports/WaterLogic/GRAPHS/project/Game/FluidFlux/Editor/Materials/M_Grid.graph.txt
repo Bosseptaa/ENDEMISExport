@@ -1,0 +1,99 @@
+﻿# /Game/FluidFlux/Editor/Materials/M_Grid
+# класс: Material; происхождение: проект; узлов: 24; связей: 45; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_Grid] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    EditorX = 320
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 73C5CAFB41F127C84A25B5B2217CF833
+    LightingGuid = 701BA9A14530F06D14A9B6B5AE9870AF
+    EditorOnlyData <- M_GridEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_GridEditorOnlyData] MaterialEditorOnlyData
+    EmissiveColor <- MaterialExpressionMultiply_7
+    OpacityMask <- MaterialExpressionAdd_0
+    WorldPositionOffset <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionOneMinus_1
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionMultiply_9
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionConstant_1
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    A <- MaterialExpressionComponentMask_1
+    B <- MaterialExpressionConstant_2
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionWorldPosition_0
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionWorldPosition_1
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.040000
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    R = 0.500000
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=0.050000,A=0.000000)
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/Heightmap/Functions/MF_Grid.MF_Grid'"
+    FunctionOutputs(0) = (ExpressionOutputId=9383F09B4782A267E6F3C5B17A1E3FAA,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMultiply_9
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/Heightmap/Functions/MF_Grid.MF_Grid'"
+    FunctionOutputs(0) = (ExpressionOutputId=9383F09B4782A267E6F3C5B17A1E3FAA,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMultiply_8
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 0.040000
+    A <- MaterialExpressionAppendVector_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.010000
+    A <- MaterialExpressionAppendVector_1
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    A <- MaterialExpressionOneMinus_1
+    B <- MaterialExpressionConstant_0
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    A <- MaterialExpressionConstant_5
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_9] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionConstant_5
+[MaterialExpressionOneMinus_1] MaterialExpressionOneMinus
+    Input <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

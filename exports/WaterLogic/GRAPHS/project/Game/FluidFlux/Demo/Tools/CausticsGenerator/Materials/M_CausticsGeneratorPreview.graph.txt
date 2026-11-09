@@ -1,0 +1,145 @@
+﻿# /Game/FluidFlux/Demo/Tools/CausticsGenerator/Materials/M_CausticsGeneratorPreview
+# класс: Material; происхождение: проект; узлов: 30; связей: 64; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:282
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_CausticsGeneratorPreview] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    EditorX = 1088
+    EditorY = 525
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 837BF29FA808FBA60EBC2AB8B919C53D
+    ReferencedTextureGuids(0) = D9747C924F5F510A67E09FA40F503AF2
+    ReferencedDefaultTextures(0) = None
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineMaterials/DefaultDiffuse.DefaultDiffuse'"
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Engine/Functions/Engine_MaterialFunctions02/ExampleContent/DebugNumberStrip.DebugNumberStrip'"
+    ReferencedDefaultTextures(3) = "/Script/Engine.Texture2D'/Engine/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/DebugNumberPeriod.DebugNumberPeriod'"
+    ReferencedDefaultTextures(4) = "/Script/Engine.Texture2D'/Engine/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/flipbook.flipbook'"
+    ReferencedDefaultTextures(5) = "/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Textures/RT_CausticsMap.RT_CausticsMap'"
+    LightingGuid = FBAF32324A73A71A46086AB50A141726
+    EditorOnlyData <- M_CausticsGeneratorPreviewEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_CausticsGeneratorPreviewEditorOnlyData] MaterialEditorOnlyData
+    EmissiveColor <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionTextureObject_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_2
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionFrac_0
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionTextureObject_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_3
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionTime_2
+    ExpressionCollection <- MaterialExpressionFrac_1
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionFrac_2
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionMultiply_9
+    ExpressionCollection <- MaterialExpressionFrac_3
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    A <- MaterialExpressionMultiply_6
+    B <- MaterialExpressionDivide_1
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 4.000000
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 4.000000
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = 4.000000
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    R = 4.000000
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    B <- MaterialExpressionMultiply_7
+[MaterialExpressionFrac_0] MaterialExpressionFrac
+    Input <- MaterialExpressionMultiply_6
+[MaterialExpressionFrac_1] MaterialExpressionFrac
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionFrac_2] MaterialExpressionFrac
+    Input <- MaterialExpressionMultiply_8
+[MaterialExpressionFrac_3] MaterialExpressionFrac
+    Input <- MaterialExpressionMultiply_9
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionMaterialFunctionCall_1
+    Alpha <- MaterialExpressionFrac_2
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Texturing/FlipBook.FlipBook'"
+    FunctionOutputs(0) = (ExpressionOutputId=7DA225014C5236DF32809184AD8413C2,Output=(OutputName="Result"))
+    FunctionOutputs(1) = (ExpressionOutputId=4EF438FB4905D4F4685561BDA0FC8170,Output=(OutputName="Alpha"))
+    FunctionOutputs(2) = (ExpressionOutputId=9651A5A748BDB7DE050077BCE7A3E74C,Output=(OutputName="UVs"))
+    FunctionOutputs(3) = (ExpressionOutputId=2774CA7342E0F0F25226A7BB419903F5,Output=(OutputName="UV Center"))
+    Outputs(0) = (OutputName="Result")
+    Outputs(1) = (OutputName="Alpha")
+    Outputs(2) = (OutputName="UVs")
+    Outputs(3) = (OutputName="UV Center")
+    FunctionInputs(0) <- MaterialExpressionFrac_1
+    FunctionInputs(1) <- MaterialExpressionConstant_4
+    FunctionInputs(2) <- MaterialExpressionConstant_5
+    FunctionInputs(3) <- MaterialExpressionTextureObject_1
+    FunctionInputs(4) <- MaterialExpressionFrac_3
+    FunctionInputs(5) <- MaterialExpressionConstant_6
+    FunctionInputs(6) <- MaterialExpressionStaticBool_1
+    FunctionInputs(7) <- MaterialExpressionStaticBool_1
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Texturing/FlipBook.FlipBook'"
+    FunctionOutputs(0) = (ExpressionOutputId=7DA225014C5236DF32809184AD8413C2,Output=(OutputName="Result"))
+    FunctionOutputs(1) = (ExpressionOutputId=4EF438FB4905D4F4685561BDA0FC8170,Output=(OutputName="Alpha"))
+    FunctionOutputs(2) = (ExpressionOutputId=9651A5A748BDB7DE050077BCE7A3E74C,Output=(OutputName="UVs"))
+    FunctionOutputs(3) = (ExpressionOutputId=2774CA7342E0F0F25226A7BB419903F5,Output=(OutputName="UV Center"))
+    Outputs(0) = (OutputName="Result")
+    Outputs(1) = (OutputName="Alpha")
+    Outputs(2) = (OutputName="UVs")
+    Outputs(3) = (OutputName="UV Center")
+    FunctionInputs(0) <- MaterialExpressionFrac_0
+    FunctionInputs(1) <- MaterialExpressionConstant_1
+    FunctionInputs(2) <- MaterialExpressionConstant_2
+    FunctionInputs(3) <- MaterialExpressionTextureObject_0
+    FunctionInputs(4) <- MaterialExpressionFrac_3
+    FunctionInputs(5) <- MaterialExpressionConstant_3
+    FunctionInputs(6) <- MaterialExpressionStaticBool_0
+    FunctionInputs(7) <- MaterialExpressionStaticBool_0
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    A <- MaterialExpressionTime_2
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    A <- MaterialExpressionConstant_4
+    B <- MaterialExpressionConstant_5
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    A <- MaterialExpressionFrac_1
+    B <- MaterialExpressionMultiply_7
+[MaterialExpressionMultiply_9] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionTextureCoordinate_2
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+[MaterialExpressionTextureCoordinate_2] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureCoordinate_3] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureObject_0] MaterialExpressionTextureObject
+    Texture = "/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Textures/RT_CausticsMap.RT_CausticsMap'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    bCollapsed = True
+[MaterialExpressionTextureObject_1] MaterialExpressionTextureObject
+    Texture = "/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Textures/RT_CausticsMap.RT_CausticsMap'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    bCollapsed = True
+[MaterialExpressionTime_2] MaterialExpressionTime
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

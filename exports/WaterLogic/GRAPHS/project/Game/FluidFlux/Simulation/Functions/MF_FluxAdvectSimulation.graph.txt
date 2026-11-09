@@ -1,0 +1,137 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_FluxAdvectSimulation
+# класс: MaterialFunction; происхождение: проект; узлов: 21; связей: 42; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:194
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxAdvectSimulation] MaterialFunction
+    StateId = 8404E2924F7C8CA10D86D4BC8F63ECEE
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_FluxAdvectSimulationEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxAdvectSimulationEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_3
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionTextureSample_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionAppendVector_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionSign_1
+    ExpressionCollection <- MaterialExpressionAbs_1
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionReroute_1
+[MaterialExpressionAbs_1] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    Input <- MaterialExpressionSign_1
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    A <- MaterialExpressionTextureCoordinate_3
+    B <- MaterialExpressionMultiply_4
+[MaterialExpressionAppendVector_2] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    A <- MaterialExpressionTextureSample_3
+    B <- MaterialExpressionTextureSample_3
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Offset"
+    Id = B67957B8455E279501472ABD3B74837A
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Volume"
+    bLastPreviewed = True
+    Id = 7FCAB76F482739C7D012F1B85E2B964C
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "Velocity"
+    bLastPreviewed = True
+    Id = 68367DBA438A0D7AA774B2ACB933168D
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_7
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(0) = (ExpressionInputId=DA7F932D4F48BC2231034E986A9CB554,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(2) <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSimulationUV.MF_FluxSimulationUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=AB54F8A04BF80648975AFEAEF6AA4B89,Output=(OutputName="Location"))
+    FunctionOutputs(1) = (ExpressionOutputId=C95318454157AA05A02E1CB27B1B2D7E,Output=(OutputName="ScaleInv"))
+    FunctionOutputs(2) = (ExpressionOutputId=E7854F864B404DDBFDE83C8D5C660588,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=CC73E6C2412A717020F206AE8D6F4D7F,Output=(OutputName="Height"))
+    FunctionOutputs(4) = (ExpressionOutputId=D453923D4F896744C8CAB5BC03EE1446,Output=(OutputName="Resolution"))
+    FunctionOutputs(5) = (ExpressionOutputId=4ADE6B714BD48DB8764BF28BC453AAE2,Output=(OutputName="TexelSize"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    Outputs(0) = (OutputName="Location")
+    Outputs(1) = (OutputName="ScaleInv")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Height")
+    Outputs(4) = (OutputName="Resolution")
+    Outputs(5) = (OutputName="TexelSize")
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    A <- MaterialExpressionReroute_1
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    A <- MaterialExpressionMaterialFunctionCall_3
+    B <- MaterialExpressionSubtract_2
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    A <- MaterialExpressionAppendVector_2
+    B <- MaterialExpressionAbs_1
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "DeltaTime"
+    ExpressionGUID = 5B44C64240378B4F99BA87A4440F0DEC
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+[MaterialExpressionSign_1] MaterialExpressionSign
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    Input <- MaterialExpressionReroute_1
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionTextureCoordinate_3] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "FluidVelocityHeightFoam"
+    ExpressionGUID = 7A17F26247D8308290C0C2AE4F2EB5AE
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    bCollapsed = True
+[MaterialExpressionTextureSample_3] MaterialExpressionTextureSample
+    Function = "/Script/Engine.MaterialFunction'MF_FluxAdvectSimulation'"
+    Coordinates <- MaterialExpressionAdd_4
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

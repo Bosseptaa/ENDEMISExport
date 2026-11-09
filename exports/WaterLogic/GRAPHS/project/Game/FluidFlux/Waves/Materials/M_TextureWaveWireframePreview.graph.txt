@@ -1,0 +1,174 @@
+﻿# /Game/FluidFlux/Waves/Materials/M_TextureWaveWireframePreview
+# класс: Material; происхождение: проект; узлов: 33; связей: 66; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:316
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_TextureWaveWireframePreview] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bTangentSpaceNormal = False
+    bUsesDistortion = True
+    Wireframe = True
+    EditorX = 1088
+    EditorY = 64
+    bCanMaskedBeAssumedOpaque = True
+    RefractionMethod = RM_PixelNormalOffset
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 4528E295426756693FD054A414A43184
+    ReferencedTextureGuids(0) = 0D9E52B248DA2B0E79E8A4883C79D6A0
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ReferencedDefaultTextures(2) = "/Script/Engine.VolumeTexture'/Engine/EngineResources/DefaultVolumeTexture.DefaultVolumeTexture'"
+    ReferencedDefaultTextures(3) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+    ReferencedDefaultTextures(4) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DetailWaveTexture_00.T_DetailWaveTexture_00'"
+    LightingGuid = 4FFF63804C76D1B61D5CA28A8D44CC85
+    EditorOnlyData <- M_TextureWaveWireframePreviewEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_TextureWaveWireframePreviewEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    Normal <- MaterialExpressionMaterialFunctionCall_2
+    EmissiveColor <- MaterialExpressionMultiply_1
+    Opacity <- MaterialExpressionAdd_6
+    WorldPositionOffset <- MaterialExpressionAdd_3
+    Refraction <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionAdd_6
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_7
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_10
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_2
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionSaturate_3
+    ExpressionCollection <- MaterialExpressionAdd_5
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_4
+    ExpressionCollection <- MaterialExpressionDotProduct_1
+    ExpressionCollection <- MaterialExpressionSkyAtmosphereLightDirection_0
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    A <- MaterialExpressionVertexInterpolator_1
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    ConstB = -1.000000
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    A <- MaterialExpressionReroute_0
+    B <- MaterialExpressionConstant3Vector_1
+[MaterialExpressionAdd_5] MaterialExpressionAdd
+    ConstB = 0.400000
+    A <- MaterialExpressionDotProduct_0
+[MaterialExpressionAdd_6] MaterialExpressionAdd
+    A = (OutputIndex=4,Mask=1,MaskA=1)
+    B <- MaterialExpressionVertexInterpolator_0
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionComponentMask_1
+[MaterialExpressionCameraVectorWS_2] MaterialExpressionCameraVectorWS
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    B = True
+    Input <- MaterialExpressionVertexInterpolator_1
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    R = 1.020000
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=6.000000,A=0.000000)
+[MaterialExpressionConstant3Vector_4] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=1.000000,B=1.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    A <- MaterialExpressionVertexInterpolator_1
+    B <- MaterialExpressionCameraVectorWS_2
+[MaterialExpressionDotProduct_1] MaterialExpressionDotProduct
+    A <- MaterialExpressionSkyAtmosphereLightDirection_0
+    B <- MaterialExpressionPixelNormalWS_0
+[MaterialExpressionMaterialFunctionCall_10] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFlux_WaveTexture.MF_SurfaceFlux_WaveTexture'"
+    FunctionInputs(0) = (ExpressionInputId=0491AA6B4F9D22481EF99B9119F80ABF,Input=(OutputIndex=-1,InputName="DistantFade"))
+    FunctionInputs(1) = (ExpressionInputId=EEF1DBEC4A7E157A6A3892AAF1769CE1,Input=(OutputIndex=-1,InputName="WorldPosition"))
+    FunctionInputs(2) = (ExpressionInputId=2EFEA1974156D7543DC4458AA6D86CB5,Input=(OutputIndex=-1,InputName="Distance"))
+    FunctionInputs(3) = (ExpressionInputId=B8DDEB4D4DCEA9B038C10B862067C492,Input=(OutputIndex=-1,InputName="Intensity"))
+    FunctionInputs(4) = (ExpressionInputId=AF1D3A044AB34DB15486BA80877D7F19,Input=(OutputIndex=-1,InputName="Precise"))
+    FunctionOutputs(0) = (ExpressionOutputId=BA08A2E04BA053CB99A033B45DCCE791,Output=(OutputName="SurfaceLayer"))
+    FunctionOutputs(1) = (ExpressionOutputId=3FE0EC8E4856995DD41FADBAE2E34571,Output=(OutputName="Sample"))
+    FunctionOutputs(2) = (ExpressionOutputId=A9FB816E40A19ED6A111459B5D0CD30F,Output=(OutputName="Height"))
+    Outputs(0) = (OutputName="SurfaceLayer")
+    Outputs(1) = (OutputName="Sample")
+    Outputs(2) = (OutputName="Height")
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_ImposibleNormalFix.MF_ImposibleNormalFix'"
+    FunctionInputs(1) = (ExpressionInputId=163AD8F348C8CF292EF29492D2475040,Input=(InputName="Scale"))
+    FunctionOutputs(0) = (ExpressionOutputId=BDDB954340E271A394C7F0B084EDAE73,Output=(OutputName="CorrectedNormal"))
+    Outputs(0) = (OutputName="CorrectedNormal")
+    FunctionInputs(0) <- MaterialExpressionNormalize_0
+[MaterialExpressionMaterialFunctionCall_7] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFluxGet.MF_SurfaceFluxGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=2F5590B84443D79C5ED20CBD1986AE0F,Output=(OutputName="Normal"))
+    FunctionOutputs(1) = (ExpressionOutputId=D5D9C81149A5173C450574ACF1892A83,Output=(OutputName="Offset"))
+    FunctionOutputs(2) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Foam"))
+    FunctionOutputs(3) = (ExpressionOutputId=FC1998D248C1B4F3F737EBAF2BB809E2,Output=(OutputName="Mask"))
+    FunctionOutputs(4) = (ExpressionOutputId=C01B4B1441F01BFD0BB092845D3E4E62,Output=(OutputName="Velocity"))
+    FunctionOutputs(5) = (ExpressionOutputId=4AAF74BF4772E0CDE6587E828A6B55A1,Output=(OutputName="Divergence"))
+    FunctionOutputs(6) = (ExpressionOutputId=77C243024B2239B4AC21598697A703B8,Output=(OutputName="Color"))
+    FunctionOutputs(7) = (ExpressionOutputId=BD109C08454FEDC8A7EB33808510A655,Output=(OutputName="OffsetCorrection"))
+    Outputs(0) = (OutputName="Normal")
+    Outputs(1) = (OutputName="Offset")
+    Outputs(2) = (OutputName="Foam")
+    Outputs(3) = (OutputName="Mask")
+    Outputs(4) = (OutputName="Velocity")
+    Outputs(5) = (OutputName="Divergence")
+    Outputs(6) = (OutputName="Color")
+    Outputs(7) = (OutputName="OffsetCorrection")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_10
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 2.000000
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    A <- MaterialExpressionSaturate_0
+    B <- MaterialExpressionSaturate_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstA = 1.000000
+    A <- MaterialExpressionSaturate_3
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 0.100000
+    A <- MaterialExpressionAdd_1
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionAppendVector_0
+[MaterialExpressionPixelNormalWS_0] MaterialExpressionPixelNormalWS
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Input <- MaterialExpressionMaterialFunctionCall_7
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionDotProduct_1
+[MaterialExpressionSaturate_3] MaterialExpressionSaturate
+    Input <- MaterialExpressionAdd_5
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.300000
+    ParameterName = "Details"
+    ExpressionGUID = C9835E6D40CCA300C03771BC8A919E3D
+[MaterialExpressionSkyAtmosphereLightDirection_0] MaterialExpressionSkyAtmosphereLightDirection
+[MaterialExpressionVertexInterpolator_0] MaterialExpressionVertexInterpolator
+    Input <- MaterialExpressionMaterialFunctionCall_7
+[MaterialExpressionVertexInterpolator_1] MaterialExpressionVertexInterpolator
+    Input <- MaterialExpressionMaterialFunctionCall_7
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

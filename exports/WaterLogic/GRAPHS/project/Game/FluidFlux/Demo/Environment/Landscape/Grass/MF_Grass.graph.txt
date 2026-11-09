@@ -1,0 +1,77 @@
+﻿# /Game/FluidFlux/Demo/Environment/Landscape/Grass/MF_Grass
+# класс: MaterialFunction; происхождение: проект; узлов: 15; связей: 27; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Grass] MaterialFunction
+    StateId = D7E10E1842945C3016A172B75CF56560
+    CombinedOutputTypes = 2063
+    EditorOnlyData <- MF_GrassEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_GrassEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMakeMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionTextureSample_2
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+    Input <- MaterialExpressionMultiply_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.600000
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.004000
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = CF42BAE74453748C3C05D793BB9A7D40
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+    A <- MaterialExpressionMakeMaterialAttributes_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Height"
+    Id = D7312E3F4A38030408308C88D54E20E2
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+    bCollapsed = True
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionMakeMaterialAttributes_0] MaterialExpressionMakeMaterialAttributes
+    AmbientOcclusion = (OutputIndex=4,Mask=1,MaskA=1)
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+    BaseColor <- MaterialExpressionTextureSample_0
+    Specular <- MaterialExpressionMultiply_1
+    Roughness <- MaterialExpressionConstant_0
+    Normal <- MaterialExpressionTextureSample_2
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+    A <- MaterialExpressionWorldPosition_1
+    B <- MaterialExpressionConstant_2
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+    A <- MaterialExpressionConstant_1
+    B <- MaterialExpressionTextureSample_0
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Grass/T_GroundGrass_D.T_GroundGrass_D'"
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+    Coordinates <- MaterialExpressionComponentMask_1
+[MaterialExpressionTextureSample_2] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Grass/T_GroundGrass_N.T_GroundGrass_N'"
+    SamplerType = SAMPLERTYPE_Normal
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+    Coordinates <- MaterialExpressionComponentMask_1
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_Grass'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

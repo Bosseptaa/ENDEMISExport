@@ -1,0 +1,83 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Materials/M_DebugSDFOutline
+# класс: Material; происхождение: проект; узлов: 12; связей: 23; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_DebugSDFOutline] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    TwoSided = True
+    EditorX = -112
+    EditorY = 420
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 85E837EF4E8ED17FF0E099A127FDE692
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=32.000000,UVChannelIndex=0,TextureName="DefaultTexture",TextureReference="/Engine/EngineResources/DefaultTexture.DefaultTexture")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = B8E4EA494BC41F44161E31BA951F48E7
+    EditorOnlyData <- M_DebugSDFOutlineEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_DebugSDFOutlineEditorOnlyData] MaterialEditorOnlyData
+    Normal = (Constant=(X=0.000000,Y=0.000000,Z=0.000000),Mask=1,MaskR=1,MaskG=1,MaskB=1)
+    EmissiveColor <- MaterialExpressionDivide_6
+    OpacityMask <- MaterialExpressionMaterialFunctionCall_3
+    WorldPositionOffset <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionDivide_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionEyeAdaptation_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_2
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 50.000000
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=0.050000,A=0.000000)
+[MaterialExpressionDivide_6] MaterialExpressionDivide
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionEyeAdaptation_0] MaterialExpressionEyeAdaptation
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_DebugSDF.MF_DebugSDF'"
+    FunctionInputs(1) = (ExpressionInputId=AC5899E448DD5892093FF8A38C4B6023,Input=(OutputIndex=-1,InputName="Intensity"))
+    FunctionOutputs(0) = (ExpressionOutputId=F52B6C104EA30AD484491DA12B6D54F9,Output=(OutputName="DebugTexture"))
+    Outputs(0) = (OutputName="DebugTexture")
+    FunctionInputs(0) <- MaterialExpressionConstant_1
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_3
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_3
+    FunctionInputs(4) <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFSample.MF_SDFSample'"
+    FunctionOutputs(0) = (ExpressionOutputId=09568A6342631401E9159C9BAB97741B,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=6981E48145096DC72470EDA9186B9188,Output=(OutputName="Range"))
+    FunctionOutputs(2) = (ExpressionOutputId=1B0B83B543436BADB6AC659F9A46E198,Output=(OutputName="GridUV"))
+    FunctionOutputs(3) = (ExpressionOutputId=8B36A4DA49C3868F30EE8DA1D6C3EC4D,Output=(OutputName="Sample"))
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Range")
+    Outputs(2) = (OutputName="GridUV")
+    Outputs(3) = (OutputName="Sample")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_0
+    FunctionInputs(1) <- MaterialExpressionWorldPosition_2
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxPhantom.MF_FluxPhantom'"
+    FunctionInputs(0) = (ExpressionInputId=C0539CA24323537369B8729D42344871,Input=(OutputIndex=-1,InputName="IsPhantom"))
+    FunctionInputs(1) = (ExpressionInputId=5510FBC7464B9923A9C0CCAB247C52B7,Input=(InputName="IsDistanceField"))
+    FunctionOutputs(0) = (ExpressionOutputId=952F33E84669F008FED6A69447C48B78,Output=(OutputName="VisibleInWorldOnly"))
+    FunctionOutputs(1) = (ExpressionOutputId=F7C65AF84365C80134A16B8BCAA6DCDD,Output=(OutputName="VisibleInCaptureOnly"))
+    FunctionOutputs(2) = (ExpressionOutputId=90AD37CA48E557769A7A6DB4F898F298,Output=(OutputName="IsRenderingCapture"))
+    Outputs(0) = (OutputName="VisibleInWorldOnly")
+    Outputs(1) = (OutputName="VisibleInCaptureOnly")
+    Outputs(2) = (OutputName="IsRenderingCapture")
+    FunctionInputs(2) <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionWorldPosition_2] MaterialExpressionWorldPosition
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

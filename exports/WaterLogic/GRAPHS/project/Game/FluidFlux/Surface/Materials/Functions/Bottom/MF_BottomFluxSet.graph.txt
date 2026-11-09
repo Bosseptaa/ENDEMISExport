@@ -1,0 +1,117 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Bottom/MF_BottomFluxSet
+# класс: MaterialFunction; происхождение: проект; узлов: 17; связей: 33; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:40
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_BottomFluxSet] MaterialFunction
+    bExposeToLibrary = True
+    LibraryCategoriesText(0) = NSLOCTEXT("", "6B05ACC64C0AB181197C04A149A9C150", "ImaginaryBlend")
+    StateId = 73D24DAC4789915E071023A41189E8D3
+    CombinedInputTypes = 1039
+    CombinedOutputTypes = 1024
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_1
+    EditorOnlyData <- MF_BottomFluxSetEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_BottomFluxSetEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionMakeMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_7
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionMakeMaterialAttributes_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_8
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Velocity"
+    Id = B6A8D4B64287848307BB38AEB3E5FF74
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Depth"
+    Id = 5FA446DF42E493DAD2202EA0B10DB10E
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "Wetness"
+    Id = 31B8A22940DCF0047883AC9EECD3B1E6
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionFunctionInput_7] MaterialExpressionFunctionInput
+    InputName = "Foam"
+    Id = 8E19BDD340D1C1DF8620C09FC1837793
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionFunctionInput_8] MaterialExpressionFunctionInput
+    InputName = "Layer"
+    Id = DE39419B4858193E18F07EBD315C8BD4
+    InputType = FunctionInput_MaterialAttributes
+    bUsePreviewValueAsDefault = True
+    SortPriority = -10
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMakeMaterialAttributes_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Layer"
+    bLastPreviewed = True
+    Id = 086ABEDC497396021AA5BABAAC85B487
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+    A <- MaterialExpressionMakeMaterialAttributes_0
+[MaterialExpressionMakeMaterialAttributes_0] MaterialExpressionMakeMaterialAttributes
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+    Metallic <- MaterialExpressionFunctionInput_1
+    Specular <- MaterialExpressionFunctionInput_4
+    Roughness <- MaterialExpressionFunctionInput_7
+    CustomizedUVs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMakeMaterialAttributes_1] MaterialExpressionMakeMaterialAttributes
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+    Metallic <- MaterialExpressionConstant_2
+    Specular <- MaterialExpressionConstant_0
+    Roughness <- MaterialExpressionConstant_3
+    Opacity <- MaterialExpressionConstant_1
+    CustomizedUVs(0) <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Bottom/MF_BottomFluxGet.MF_BottomFluxGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Depth"))
+    FunctionOutputs(1) = (ExpressionOutputId=2F5590B84443D79C5ED20CBD1986AE0F,Output=(OutputName="Wetness"))
+    FunctionOutputs(2) = (ExpressionOutputId=1C15FE4E43C6831DE969E6B9E3679034,Output=(OutputName="Foam"))
+    FunctionOutputs(3) = (ExpressionOutputId=C01B4B1441F01BFD0BB092845D3E4E62,Output=(OutputName="Velocity"))
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFluxSet'"
+    Outputs(0) = (OutputName="Depth")
+    Outputs(1) = (OutputName="Wetness")
+    Outputs(2) = (OutputName="Foam")
+    Outputs(3) = (OutputName="Velocity")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_8
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

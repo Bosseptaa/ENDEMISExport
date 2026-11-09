@@ -1,0 +1,145 @@
+﻿# /Game/FluidFlux/Surface/Underwater/Functions/MF_FluidLine
+# класс: MaterialFunction; происхождение: проект; узлов: 24; связей: 45; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:105
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluidLine] MaterialFunction
+    StateId = B3F758464DEF1EBCB435DDAC0463B935
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_2
+    EditorOnlyData <- MF_FluidLineEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluidLineEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_27
+    ExpressionCollection <- MaterialExpressionAdd_20
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionSaturate_2
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionMultiply_17
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMultiply_3
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    ConstB = -10.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    A <- MaterialExpressionFunctionInput_2
+[MaterialExpressionAdd_20] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionScalarParameter_27
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    Input <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.300000,G=0.350000,B=0.400000,A=0.600000)
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "SurfaceDistance"
+    Id = A38E577941DBD800D4E75ABABA445872
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    bCollapsed = True
+    Preview <- MaterialExpressionSubtract_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "ScreenColor"
+    Id = D2C90EBA4EACF78096B49E80469D0573
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "ScreenDepth"
+    Id = 1B3E30BB41CA089956E1B7826ED3401E
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "LineColor"
+    Id = 5F4AB1584D8D7F4E9F8155AF5C3705EA
+    bUsePreviewValueAsDefault = True
+    SortPriority = 12
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Color"
+    bLastPreviewed = True
+    Id = 6348B1134A6BFDB2671A99A608F3DAEC
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_3
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionMultiply_17
+    Alpha <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Underwater/Functions/MF_WaterlineCurve.MF_WaterlineCurve'"
+    FunctionOutputs(0) = (ExpressionOutputId=5CAEB4A444E6986CA10A91A2E191051B,Output=(OutputName="Dark"))
+    FunctionOutputs(1) = (ExpressionOutputId=DE582C0C42E75916107CDEB695562813,Output=(OutputName="Blur"))
+    FunctionOutputs(2) = (ExpressionOutputId=C02965D940541302E46E988682C447BF,Output=(OutputName="Color"))
+    FunctionOutputs(3) = (ExpressionOutputId=3F80014E451BA548A0BC6C8FA4A63B5D,Output=(OutputName="Refraction"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    Outputs(0) = (OutputName="Dark")
+    Outputs(1) = (OutputName="Blur")
+    Outputs(2) = (OutputName="Color")
+    Outputs(3) = (OutputName="Refraction")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 10.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    A <- MaterialExpressionComponentMask_0
+[MaterialExpressionMultiply_17] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    A <- MaterialExpressionFunctionInput_4
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    ConstB = 0.015000
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    A <- MaterialExpressionAdd_1
+    B <- MaterialExpressionScalarParameter_4
+[MaterialExpressionSaturate_2] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    Input <- MaterialExpressionMultiply_4
+[MaterialExpressionScalarParameter_27] MaterialExpressionScalarParameter
+    ParameterName = "WaterLineOffset"
+    ExpressionGUID = 5B24C4244F233B1F08264D9AE8D26385
+    Group = "WaterLine"
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    DefaultValue = 0.015000
+    ParameterName = "WaterLineDistanceFalloff"
+    ExpressionGUID = 624BF0B74B8FF5191966C6B485B961D0
+    Group = "WaterLine"
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 5.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_FluidLine'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

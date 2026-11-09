@@ -1,0 +1,83 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_ViewCamera
+# класс: MaterialFunction; происхождение: проект; узлов: 11; связей: 14; HLSL: 4; причина: папка /Game/FluidFlux; имя/путь, тело:21, HLSL:4
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_ViewCamera] MaterialFunction
+    bExposeToLibrary = True
+    StateId = B4B3EA2F41D68B31512E7984824B84C4
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_ViewCameraEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_ViewCameraEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionCustom_4
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionCustom_11
+    ExpressionCollection <- MaterialExpressionFunctionOutput_13
+    ExpressionCollection <- MaterialExpressionCustom_5
+    ExpressionCollection <- MaterialExpressionFunctionOutput_5
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: IsPerspective
+    OutputType = CMOT_Float1
+    Inputs = 
+    Function = "/Script/Engine.MaterialFunction'MF_ViewCamera'"
+    bCollapsed = True
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionCustom_11] MaterialExpressionCustom
+    описание: IsOrthographic
+    OutputType = CMOT_Float1
+    Inputs = 
+    Function = "/Script/Engine.MaterialFunction'MF_ViewCamera'"
+    bCollapsed = True
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionCustom_4] MaterialExpressionCustom
+    описание: BufferSizeAndInvSize
+    OutputType = CMOT_Float4
+    Inputs = 
+    Function = "/Script/Engine.MaterialFunction'MF_ViewCamera'"
+    bCollapsed = True
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionCustom_5] MaterialExpressionCustom
+    описание: IsNotLookingUp
+    OutputType = CMOT_Float1
+    Inputs = 
+    Function = "/Script/Engine.MaterialFunction'MF_ViewCamera'"
+    bCollapsed = True
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionFunctionOutput_13] MaterialExpressionFunctionOutput
+    OutputName = "IsOrthographic"
+    SortPriority = 3
+    bLastPreviewed = True
+    Id = 0E549557458338C202643DABCF98CF1B
+    Function = "/Script/Engine.MaterialFunction'MF_ViewCamera'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_11
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "IsPerspective"
+    SortPriority = 3
+    bLastPreviewed = True
+    Id = C576FEC54F1A8C7E8B6360A0C44E67C4
+    Function = "/Script/Engine.MaterialFunction'MF_ViewCamera'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_0
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "BufferSizeAndInvSize"
+    SortPriority = 4
+    bLastPreviewed = True
+    Id = B708D152404459EF25025D9AF649751A
+    Function = "/Script/Engine.MaterialFunction'MF_ViewCamera'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_4
+[MaterialExpressionFunctionOutput_5] MaterialExpressionFunctionOutput
+    OutputName = "IsLookingUp"
+    SortPriority = 4
+    bLastPreviewed = True
+    Id = B823D653411270F69C8BA2B3C0E3EB17
+    Function = "/Script/Engine.MaterialFunction'MF_ViewCamera'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_5
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,80 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Detail/MF_DetailBlend
+# класс: MaterialFunction; происхождение: проект; узлов: 15; связей: 26; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:29
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_DetailBlend] MaterialFunction
+    StateId = 7E646EA94EA1607AEFD4B5BE6970BE61
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_DetailBlendEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_DetailBlendEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionSaturate_2
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+    Input <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Distance"
+    Id = 69CE97FD4F0FABD1F59F03AFEB99A9A7
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+    bCollapsed = True
+    Preview <- MaterialExpressionComponentMask_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "CutPosition"
+    Id = 9AA8CABB4F4289534518869776EFD3E2
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Weight"
+    bLastPreviewed = True
+    Id = B31591F34586BC1FD88AAEAB8AF309BD
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+    bCollapsed = True
+    A <- MaterialExpressionMax_0
+[MaterialExpressionMax_0] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+    A <- MaterialExpressionSaturate_1
+    B <- MaterialExpressionSaturate_2
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+    A <- MaterialExpressionSubtract_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = -0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+    A <- MaterialExpressionSubtract_0
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+    Input <- MaterialExpressionMultiply_0
+[MaterialExpressionSaturate_2] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+    Input <- MaterialExpressionMultiply_1
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_DetailBlend'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

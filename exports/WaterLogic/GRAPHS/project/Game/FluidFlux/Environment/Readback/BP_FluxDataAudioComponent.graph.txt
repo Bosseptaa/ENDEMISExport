@@ -1,0 +1,510 @@
+﻿# /Game/FluidFlux/Environment/Readback/BP_FluxDataAudioComponent
+# класс: Blueprint; происхождение: проект; узлов: 124; связей: 239; HLSL: 0; причина: папка /Game/FluidFlux; тело:31
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxDataAudioComponent] Blueprint
+    ParentClass = "/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Environment/Readback/BP_FluxDataComponent.BP_FluxDataComponent_C'"
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = "Event Graph"
+    CategorySorting(1) = "Default"
+    CategorySorting(2) = ""
+    CategorySorting(3) = "Audio"
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Environment/Readback/BP_FluxDataAudioComponent.BP_FluxDataAudioComponent:DrawDebugSource",SavedViewOffset=(X=199.627426,Y=2332.632568),SavedZoomAmount=1.000000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Environment/Readback/BP_FluxDataAudioComponent.BP_FluxDataAudioComponent:UpdateSource",SavedViewOffset=(X=88.255188,Y=-308.004974),SavedZoomAmount=1.000000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Environment/Readback/BP_FluxDataAudioComponent.BP_FluxDataAudioComponent:SetFluidDistance",SavedViewOffset=(X=-373.727051,Y=-271.381348),SavedZoomAmount=1.000000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Environment/Readback/BP_FluxDataAudioComponent.BP_FluxDataAudioComponent:EventGraph",SavedViewOffset=(X=-327.966827,Y=134.345016),SavedZoomAmount=0.875000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxDataAudioComponent_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = FFCA0826404E8BF5776F9EA9724CB50B
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UpdateSource
+    FunctionGraphs(1) <- DrawDebugSource
+    FunctionGraphs(2) <- SetFluidDistance
+    FunctionGraphs(3) <- ApplyNiagaraParameters
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = F89DFA36482B525B2198789CF2E151F6
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_CallParentFunction_0
+    Nodes(2) <- K2Node_Event_2
+    Nodes(3) <- K2Node_Event_1
+    Nodes(4) <- K2Node_CallFunction_28
+    Nodes(5) <- K2Node_CallFunction_3
+    Nodes(6) <- K2Node_CallFunction_34
+    Nodes(7) <- K2Node_CallFunction_4
+    Nodes(8) <- EdGraphNode_Comment_1
+    Nodes(9) <- K2Node_CallFunction_5
+    Nodes(10) <- K2Node_VariableGet_0
+    Nodes(11) <- K2Node_VariableSet_0
+    Nodes(12) <- K2Node_MakeArray_0
+    Nodes(13) <- K2Node_PromotableOperator_0
+    Nodes(14) <- K2Node_VariableGet_1
+    Nodes(15) <- K2Node_MacroInstance_0
+    Nodes(16) <- K2Node_BreakStruct_1
+[K2Node_Event_0] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    bCommentBubblePinned = True
+[K2Node_CallParentFunction_0@EventGraph] K2Node_CallParentFunction
+[K2Node_Event_2] K2Node_Event (событие: ReceiveParticleData @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[K2Node_Event_1] K2Node_Event (событие: ReceiveTick @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[K2Node_CallFunction_28] K2Node_CallFunction (вызов: BreakVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_3] K2Node_CallFunction (вызов: FTrunc @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_34] K2Node_CallFunction (вызов: UpdateSource)
+    ErrorType = 1
+[K2Node_CallFunction_4@EventGraph] K2Node_CallFunction
+[EdGraphNode_Comment_1] EdGraphNode_Comment
+    CommentColor = (R=0.129734,G=0.188542,B=0.101097,A=1.000000)
+    NodeWidth = 1568
+    NodeHeight = 448
+[K2Node_CallFunction_5@EventGraph] K2Node_CallFunction
+[K2Node_VariableGet_0@EventGraph] K2Node_VariableGet
+[K2Node_VariableSet_0@EventGraph] K2Node_VariableSet
+[K2Node_MakeArray_0] K2Node_MakeArray
+    NumInputs = 0
+[K2Node_PromotableOperator_0] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_1@EventGraph] K2Node_VariableGet
+[K2Node_MacroInstance_0@EventGraph] K2Node_MacroInstance
+[K2Node_BreakStruct_1] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="Position",PropertyFriendlyName="Position",CategoryName="Particle Data",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Size",PropertyFriendlyName="Size",CategoryName="Particle Data",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="Velocity",PropertyFriendlyName="Velocity",CategoryName="Particle Data",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/Niagara.BasicParticleData'"
+[UpdateSource] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 43F267024EBB1FBA1C15A09DE271FC07
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_26
+    Nodes(2) <- K2Node_CallFunction_27
+    Nodes(3) <- K2Node_CallFunction_30
+    Nodes(4) <- K2Node_CallFunction_33
+    Nodes(5) <- K2Node_CallFunction_9
+    Nodes(6) <- K2Node_VariableGet_12
+    Nodes(7) <- K2Node_VariableGet_14
+    Nodes(8) <- K2Node_CallFunction_10
+    Nodes(9) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(10) <- K2Node_VariableGet_15
+    Nodes(11) <- K2Node_VariableSet_0
+    Nodes(12) <- K2Node_VariableGet_16
+    Nodes(13) <- K2Node_VariableGet_7
+    Nodes(14) <- K2Node_VariableGet_6
+    Nodes(15) <- K2Node_VariableGet_8
+    Nodes(16) <- K2Node_CallFunction_25
+    Nodes(17) <- K2Node_VariableGet_0
+    Nodes(18) <- K2Node_VariableGet_19
+    Nodes(19) <- K2Node_MacroInstance_0
+    Nodes(20) <- K2Node_VariableSet_1
+    Nodes(21) <- K2Node_VariableGet_1
+    Nodes(22) <- K2Node_VariableGet_17
+    Nodes(23) <- K2Node_CallFunction_0
+    Nodes(24) <- K2Node_IfThenElse_0
+    Nodes(25) <- K2Node_VariableSet_2
+    Nodes(26) <- K2Node_VariableGet_9
+    Nodes(27) <- K2Node_CallFunction_8
+    Nodes(28) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(29) <- K2Node_CallFunction_7
+    Nodes(30) <- K2Node_VariableGet_2
+    Nodes(31) <- K2Node_VariableGet_20
+    Nodes(32) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(33) <- K2Node_VariableSet_4
+    Nodes(34) <- K2Node_VariableGet_21
+    Nodes(35) <- K2Node_CallFunction_14
+    Nodes(36) <- K2Node_VariableSet_3
+    Nodes(37) <- K2Node_CallFunction_2
+    Nodes(38) <- K2Node_CallFunction_4
+    Nodes(39) <- K2Node_CallFunction_16
+    Nodes(40) <- K2Node_CallFunction_17
+    Nodes(41) <- K2Node_CallFunction_18
+    Nodes(42) <- K2Node_VariableGet_24
+    Nodes(43) <- K2Node_IfThenElse_1
+    Nodes(44) <- K2Node_VariableSet_8
+    Nodes(45) <- K2Node_VariableGet_18
+    Nodes(46) <- K2Node_VariableSet_9
+    Nodes(47) <- K2Node_VariableGet_23
+    Nodes(48) <- K2Node_VariableGet_22
+    Nodes(49) <- K2Node_VariableSet_11
+    Nodes(50) <- K2Node_VariableGet_13
+    Nodes(51) <- K2Node_VariableSet_10
+    Nodes(52) <- K2Node_VariableGet_25
+    Nodes(53) <- K2Node_Knot_0
+    Nodes(54) <- K2Node_VariableSet_5
+    Nodes(55) <- K2Node_CallFunction_1
+    Nodes(56) <- K2Node_VariableGet_4
+    Nodes(57) <- K2Node_VariableGet_10
+[K2Node_FunctionEntry_0@UpdateSource] K2Node_FunctionEntry
+[K2Node_CallFunction_26] K2Node_CallFunction (вызов: K2_SetWorldLocation @ /Script/CoreUObject.Class)
+    вход bSweep = false
+    вход bTeleport = false
+[K2Node_CallFunction_27] K2Node_CallFunction (вызов: SetVolumeMultiplier @ /Script/CoreUObject.Class)
+[K2Node_CallFunction_30] K2Node_CallFunction (вызов: VLerp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_33] K2Node_CallFunction (вызов: K2_GetComponentLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+[K2Node_CallFunction_9] K2Node_CallFunction (вызов: Lerp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_12] K2Node_VariableGet (переменная: Velocity)
+[K2Node_VariableGet_14@UpdateSource] K2Node_VariableGet
+[K2Node_CallFunction_10] K2Node_CallFunction (вызов: FClamp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Min = 0.0
+    вход Max = 1.0
+[K2Node_CommutativeAssociativeBinaryOperator_1@UpdateSource] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_15] K2Node_VariableGet (переменная: AudioSource)
+    ErrorType = 1
+[K2Node_VariableSet_0@UpdateSource] K2Node_VariableSet
+[K2Node_VariableGet_16] K2Node_VariableGet (переменная: SourceComponent)
+[K2Node_VariableGet_7@UpdateSource] K2Node_VariableGet
+[K2Node_VariableGet_6@UpdateSource] K2Node_VariableGet
+[K2Node_VariableGet_8] K2Node_VariableGet (переменная: Location)
+[K2Node_CallFunction_25] K2Node_CallFunction (вызов: SpawnSoundAtLocation @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Shown
+    вход Location = 0, 0, 0
+    вход Rotation = 0, 0, 0
+    вход VolumeMultiplier = 0.000000
+    вход PitchMultiplier = 1.000000
+    вход StartTime = 0.000000
+    вход AttenuationSettings = None
+    вход ConcurrencySettings = None
+    вход bAutoDestroy = false
+[K2Node_VariableGet_0@UpdateSource] K2Node_VariableGet
+[K2Node_VariableGet_19] K2Node_VariableGet (переменная: AudioSource)
+[K2Node_MacroInstance_0@UpdateSource] K2Node_MacroInstance
+[K2Node_VariableSet_1] K2Node_VariableSet (переменная: AudioSource)
+[K2Node_VariableGet_1@UpdateSource] K2Node_VariableGet (переменная: SourceLocationChange)
+[K2Node_VariableGet_17] K2Node_VariableGet (переменная: SourceVolumeChange)
+[K2Node_CallFunction_0@UpdateSource] K2Node_CallFunction
+[K2Node_IfThenElse_0@UpdateSource] K2Node_IfThenElse
+[K2Node_VariableSet_2] K2Node_VariableSet (переменная: DistantSamples)
+[K2Node_VariableGet_9@UpdateSource] K2Node_VariableGet
+[K2Node_CallFunction_8] K2Node_CallFunction (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_0@UpdateSource] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_7] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_2@UpdateSource] K2Node_VariableGet
+[K2Node_VariableGet_20] K2Node_VariableGet (переменная: DistantSamples)
+[K2Node_CommutativeAssociativeBinaryOperator_2] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableSet_4] K2Node_VariableSet (переменная: CloseSamples)
+[K2Node_VariableGet_21] K2Node_VariableGet (переменная: Distance)
+[K2Node_CallFunction_14] K2Node_CallFunction (вызов: Multiply_IntFloat @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход A = 20
+[K2Node_VariableSet_3] K2Node_VariableSet (переменная: AmbientVolume)
+[K2Node_CallFunction_2@UpdateSource] K2Node_CallFunction
+[K2Node_CallFunction_4@UpdateSource] K2Node_CallFunction
+[K2Node_CallFunction_16] K2Node_CallFunction (вызов: Subtract_VectorVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_17] K2Node_CallFunction (вызов: VSize @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_18] K2Node_CallFunction (вызов: Greater_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 3000.000000
+[K2Node_VariableGet_24] K2Node_VariableGet (переменная: Location)
+[K2Node_IfThenElse_1] K2Node_IfThenElse
+[K2Node_VariableSet_8] K2Node_VariableSet (переменная: Difference)
+[K2Node_VariableGet_18] K2Node_VariableGet (переменная: Difference)
+[K2Node_VariableSet_9] K2Node_VariableSet (переменная: LocationPrev)
+[K2Node_VariableGet_23] K2Node_VariableGet (переменная: LocationPrev)
+[K2Node_VariableGet_22] K2Node_VariableGet (переменная: LocationPrev)
+[K2Node_VariableSet_11] K2Node_VariableSet (переменная: LocationNew)
+[K2Node_VariableGet_13] K2Node_VariableGet (переменная: Location)
+[K2Node_VariableSet_10] K2Node_VariableSet (переменная: LocationNew)
+[K2Node_VariableGet_25] K2Node_VariableGet (переменная: LocationNew)
+[K2Node_Knot_0] K2Node_Knot
+[K2Node_VariableSet_5] K2Node_VariableSet (переменная: AmbientVelocity)
+[K2Node_CallFunction_1@UpdateSource] K2Node_CallFunction
+[K2Node_VariableGet_4] K2Node_VariableGet (переменная: AmbientVelocity)
+[K2Node_VariableGet_10] K2Node_VariableGet (переменная: Velocity)
+[DrawDebugSource] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 681A31034BD7BC47D0E421A13F516BBC
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_MakeStruct_1
+    Nodes(2) <- K2Node_CallFunction_2
+    Nodes(3) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(4) <- K2Node_CallFunction_0
+    Nodes(5) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(6) <- K2Node_VariableGet_9
+    Nodes(7) <- K2Node_CallFunction_1
+    Nodes(8) <- K2Node_VariableSet_0
+    Nodes(9) <- K2Node_VariableGet_6
+    Nodes(10) <- K2Node_VariableGet_5
+    Nodes(11) <- K2Node_VariableGet_7
+    Nodes(12) <- K2Node_MacroInstance_0
+    Nodes(13) <- K2Node_VariableGet_0
+    Nodes(14) <- K2Node_IfThenElse_0
+[K2Node_FunctionEntry_0@DrawDebugSource] K2Node_FunctionEntry
+[K2Node_MakeStruct_1] K2Node_MakeStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="Color",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="Color",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="Color",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="Color",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.Color'"
+    вход B = 255
+    вход G = 0
+    вход R = 0
+    вход A = 0
+[K2Node_CallFunction_2@DrawDebugSource] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_0@DrawDebugSource] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 100.000000
+[K2Node_CallFunction_0@DrawDebugSource] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_1@DrawDebugSource] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 5.000000
+[K2Node_VariableGet_9@DrawDebugSource] K2Node_VariableGet (переменная: VolumeMultiplier @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_1@DrawDebugSource] K2Node_CallFunction
+[K2Node_VariableSet_0@DrawDebugSource] K2Node_VariableSet (переменная: SourceComponent)
+[K2Node_VariableGet_6@DrawDebugSource] K2Node_VariableGet
+[K2Node_VariableGet_5@DrawDebugSource] K2Node_VariableGet
+[K2Node_VariableGet_7@DrawDebugSource] K2Node_VariableGet
+[K2Node_MacroInstance_0@DrawDebugSource] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="struct",PinSubCategoryObject="/Script/CoreUObject.ScriptStruct'/Script/Niagara.BasicParticleData'",ContainerType=Array,bIsReference=True,bIsConst=True)
+[K2Node_VariableGet_0@DrawDebugSource] K2Node_VariableGet (переменная: DrawDebug)
+[K2Node_IfThenElse_0@DrawDebugSource] K2Node_IfThenElse
+[SetFluidDistance] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D452A02248B8A8570DB0F89D95F02649
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_31
+    Nodes(2) <- K2Node_VariableGet_14
+    Nodes(3) <- K2Node_VariableGet_11
+    Nodes(4) <- K2Node_VariableGet_7
+[K2Node_FunctionEntry_0@SetFluidDistance] K2Node_FunctionEntry
+[K2Node_CallFunction_31] K2Node_CallFunction (вызов: SetFloatParameter @ /Script/CoreUObject.Class)
+    вход InName = SurfaceDistance
+[K2Node_VariableGet_14@SetFluidDistance] K2Node_VariableGet (переменная: AudioSource)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_11@SetFluidDistance] K2Node_VariableGet
+[K2Node_VariableGet_7@SetFluidDistance] K2Node_VariableGet (переменная: AudioSource)
+    ErrorType = 1
+    CurrentVariation = ValidatedObject
+[ApplyNiagaraParameters] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = F01081A24DD7860BB478F9B2DF50E746
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallParentFunction_0
+    Nodes(2) <- K2Node_VariableGet_2
+    Nodes(3) <- K2Node_CallFunction_1
+    Nodes(4) <- K2Node_CallFunction_2
+    Nodes(5) <- K2Node_VariableGet_3
+    Nodes(6) <- K2Node_VariableGet_11
+    Nodes(7) <- K2Node_VariableGet_5
+    Nodes(8) <- K2Node_VariableGet_6
+    Nodes(9) <- K2Node_CallFunction_4
+    Nodes(10) <- K2Node_CallFunction_5
+[K2Node_FunctionEntry_0@ApplyNiagaraParameters] K2Node_FunctionEntry
+[K2Node_CallParentFunction_0@ApplyNiagaraParameters] K2Node_CallParentFunction (вызов: ApplyNiagaraParameters @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_VariableGet_2@ApplyNiagaraParameters] K2Node_VariableGet (переменная: ExportDataInstance)
+    ErrorType = 1
+[K2Node_CallFunction_1@ApplyNiagaraParameters] K2Node_CallFunction (вызов: SetFloatParameter @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Alpha = 0.250000
+    вход ParameterName = SearchCellWidth
+[K2Node_CallFunction_2@ApplyNiagaraParameters] K2Node_CallFunction (вызов: SetIntParameter @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    EnabledState = DevelopmentOnly
+    вход A = 5
+    вход Segments = 10
+    вход Duration = 0.100000
+    вход Thickness = 1.000000
+    вход DepthPriority = World
+    вход ParameterName = SearchGridDivisions
+[K2Node_VariableGet_3] K2Node_VariableGet (переменная: SearchGridDivisions)
+[K2Node_VariableGet_11@ApplyNiagaraParameters] K2Node_VariableGet (переменная: ExportDataInstance)
+    ErrorType = 1
+[K2Node_VariableGet_5@ApplyNiagaraParameters] K2Node_VariableGet (переменная: SearchGridWidth)
+[K2Node_VariableGet_6@ApplyNiagaraParameters] K2Node_VariableGet (переменная: SearchGridDivisions)
+[K2Node_CallFunction_4@ApplyNiagaraParameters] K2Node_CallFunction (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Min = 0.0
+    вход Max = 1.0
+[K2Node_CallFunction_5@ApplyNiagaraParameters] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ReceiveTick] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A78E6D84461566194C51E8BA1026CD1F
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveTick] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@ReceiveTick] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@ReceiveTick] K2Node_CallFunction
+[ReceiveParticleData] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 859A82454499D8B1241CB5914C2FF068
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveParticleData] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@ReceiveParticleData] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@ReceiveParticleData] K2Node_CallFunction
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 650F002E4E0DFAB1F2C7A997395FE8CC
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry (вызов: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "ReceiveTick"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveParticleData"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveBeginPlay"
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_FluxDataAudioComponent)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    вход B = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_BreakStruct_1].Position -> [K2Node_CallFunction_34].Location
+[K2Node_BreakStruct_1].Size -> [K2Node_PromotableOperator_0].A
+[K2Node_BreakStruct_1].Velocity -> [K2Node_CallFunction_28].InVec
+[K2Node_CallFunction_0@ReceiveBeginPlay].ReturnValue -> [K2Node_IfThenElse_0@DrawDebugSource].Condition
+[K2Node_CallFunction_0@ReceiveBeginPlay].ReturnValue#2 -> [K2Node_CallFunction_2@ApplyNiagaraParameters].LineColor
+[K2Node_CallFunction_10].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_1@DrawDebugSource].A
+[K2Node_CallFunction_10].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_1@DrawDebugSource].B
+[K2Node_CallFunction_14].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_2].A
+[K2Node_CallFunction_16].ReturnValue -> [K2Node_VariableSet_8].Difference
+[K2Node_CallFunction_17].ReturnValue -> [K2Node_CallFunction_18].A
+[K2Node_CallFunction_18].ReturnValue -> [K2Node_IfThenElse_1].Condition
+[K2Node_CallFunction_1@ApplyNiagaraParameters].ReturnValue -> [K2Node_CallFunction_2@ApplyNiagaraParameters].Center
+[K2Node_CallFunction_1@ApplyNiagaraParameters].then -> [K2Node_CallFunction_2@ApplyNiagaraParameters].execute#2
+[K2Node_CallFunction_25].ReturnValue -> [K2Node_VariableSet_1].AudioSource
+[K2Node_CallFunction_25].then -> [K2Node_VariableSet_1].execute
+[K2Node_CallFunction_26].then -> [K2Node_CallFunction_27].execute
+[K2Node_CallFunction_28].X -> [K2Node_CallFunction_3].A
+[K2Node_CallFunction_28].Y -> [K2Node_CallFunction_34].Distance
+[K2Node_CallFunction_2@ApplyNiagaraParameters].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_2].B
+[K2Node_CallFunction_3].ReturnValue -> [K2Node_CallFunction_34].Index
+[K2Node_CallFunction_30].ReturnValue -> [K2Node_VariableSet_11].LocationNew
+[K2Node_CallFunction_33].ReturnValue -> [K2Node_VariableSet_9].LocationPrev
+[K2Node_CallFunction_4@ApplyNiagaraParameters].ReturnValue -> [K2Node_VariableSet_3].AmbientVolume
+[K2Node_CallFunction_4@ApplyNiagaraParameters].ReturnValue#2 -> [K2Node_CallFunction_1@ApplyNiagaraParameters].Param
+[K2Node_CallFunction_5@ApplyNiagaraParameters].ReturnValue -> [K2Node_CallFunction_4@ApplyNiagaraParameters].B
+[K2Node_CallFunction_7].ReturnValue -> [K2Node_CallFunction_8].B
+[K2Node_CallFunction_8].ReturnValue -> [K2Node_VariableSet_2].DistantSamples
+[K2Node_CallFunction_8].ReturnValue -> [K2Node_VariableSet_4].CloseSamples
+[K2Node_CallFunction_9].ReturnValue -> [K2Node_CallFunction_27].NewVolumeMultiplier
+[K2Node_CallFunction_9].ReturnValue -> [K2Node_VariableSet_5].AmbientVelocity
+[K2Node_CallParentFunction_0@ApplyNiagaraParameters].then -> [K2Node_CallFunction_5@ApplyNiagaraParameters].execute
+[K2Node_CallParentFunction_0@ApplyNiagaraParameters].then#2 -> [K2Node_CallFunction_1@ApplyNiagaraParameters].execute
+[K2Node_CommutativeAssociativeBinaryOperator_0@DrawDebugSource].ReturnValue -> [K2Node_CallFunction_7].InInt
+[K2Node_CommutativeAssociativeBinaryOperator_0@DrawDebugSource].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_1@DrawDebugSource].A#2
+[K2Node_CommutativeAssociativeBinaryOperator_1@DrawDebugSource].ReturnValue -> [K2Node_CallFunction_9].B
+[K2Node_CommutativeAssociativeBinaryOperator_1@DrawDebugSource].ReturnValue#2 -> [K2Node_CallFunction_2@ApplyNiagaraParameters].Radius
+[K2Node_CommutativeAssociativeBinaryOperator_2].ReturnValue -> [K2Node_CallFunction_4@ApplyNiagaraParameters].Value
+[K2Node_Event_0].then -> [K2Node_VariableSet_0@DrawDebugSource].execute
+[K2Node_Event_1].then -> [K2Node_CallFunction_4@ApplyNiagaraParameters].execute
+[K2Node_Event_2].Data -> [K2Node_MacroInstance_0@DrawDebugSource].Array
+[K2Node_Event_2].then -> [K2Node_MacroInstance_0@DrawDebugSource].Exec
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].Data -> [K2Node_SetVariableOnPersistentFrame_0@ReceiveParticleData].K2Node_Event_Data
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].DeltaSeconds -> [K2Node_SetVariableOnPersistentFrame_0@ReceiveParticleData].K2Node_Event_DeltaSeconds
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].Index -> [K2Node_CallFunction_0@ReceiveBeginPlay].A
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].NiagaraSystem -> [K2Node_SetVariableOnPersistentFrame_0@ReceiveParticleData].K2Node_Event_NiagaraSystem
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].SimulationPositionOffset -> [K2Node_SetVariableOnPersistentFrame_0@ReceiveParticleData].K2Node_Event_SimulationPositionOffset
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then -> [K2Node_IfThenElse_0@DrawDebugSource].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#2 -> [K2Node_IfThenElse_0@DrawDebugSource].execute#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#3 -> [K2Node_VariableGet_7@SetFluidDistance].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#4 -> [K2Node_CallParentFunction_0@ApplyNiagaraParameters].execute#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#5 -> [K2Node_SetVariableOnPersistentFrame_0@ReceiveParticleData].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#6 -> [K2Node_SetVariableOnPersistentFrame_0@ReceiveParticleData].execute#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#7 -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute#3
+[K2Node_IfThenElse_0@DrawDebugSource].else -> [K2Node_VariableSet_2].execute
+[K2Node_IfThenElse_0@DrawDebugSource].then -> [K2Node_VariableSet_4].execute
+[K2Node_IfThenElse_0@DrawDebugSource].then#2 -> [K2Node_MacroInstance_0@DrawDebugSource].exec#2
+[K2Node_IfThenElse_1].else -> [K2Node_VariableSet_11].execute
+[K2Node_IfThenElse_1].then -> [K2Node_VariableSet_11].execute
+[K2Node_Knot_0].OutputPin -> [K2Node_CallFunction_26].execute
+[K2Node_MacroInstance_0@DrawDebugSource].Array Element -> [K2Node_BreakStruct_1].BasicParticleData
+[K2Node_MacroInstance_0@DrawDebugSource].Is Not Valid -> [K2Node_CallFunction_25].execute
+[K2Node_MacroInstance_0@DrawDebugSource].Is Valid -> [K2Node_VariableSet_0@DrawDebugSource].execute#2
+[K2Node_MacroInstance_0@DrawDebugSource].Is Valid#2 -> [K2Node_VariableSet_0@DrawDebugSource].execute#3
+[K2Node_MacroInstance_0@DrawDebugSource].LoopBody -> [K2Node_CallFunction_34].execute
+[K2Node_MakeArray_0].Array -> [K2Node_VariableSet_0@DrawDebugSource].ReadbackLocations
+[K2Node_MakeStruct_1].Color -> [K2Node_CallFunction_0@ReceiveBeginPlay].InColor
+[K2Node_PromotableOperator_0].ReturnValue -> [K2Node_CallFunction_34].Velocity
+[K2Node_SetVariableOnPersistentFrame_0@ReceiveParticleData].then -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute
+[K2Node_SetVariableOnPersistentFrame_0@ReceiveParticleData].then#2 -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute#2
+[K2Node_VariableGet_0@DrawDebugSource].DrawDebug -> [K2Node_CallFunction_5@ApplyNiagaraParameters].bEnabled
+[K2Node_VariableGet_0@DrawDebugSource].DrawDebug -> [K2Node_IfThenElse_0@DrawDebugSource].Condition#2
+[K2Node_VariableGet_0@DrawDebugSource].SoundMixer -> [K2Node_CallFunction_25].Sound
+[K2Node_VariableGet_10].Velocity -> [K2Node_CallFunction_9].B
+[K2Node_VariableGet_11@ApplyNiagaraParameters].CameraNearSurface -> [K2Node_CallFunction_31].InFloat
+[K2Node_VariableGet_12].Velocity -> [K2Node_CallFunction_10].Value
+[K2Node_VariableGet_14@SetFluidDistance].AudioSource -> [K2Node_CallFunction_31].self
+[K2Node_VariableGet_15].AudioSource -> [K2Node_VariableSet_0@DrawDebugSource].SourceComponent
+[K2Node_VariableGet_16].SourceComponent -> [K2Node_CallFunction_26].self
+[K2Node_VariableGet_16].SourceComponent -> [K2Node_CallFunction_27].self
+[K2Node_VariableGet_16].SourceComponent -> [K2Node_VariableGet_9@DrawDebugSource].self
+[K2Node_VariableGet_17].SourceVolumeChange -> [K2Node_CallFunction_9].Alpha
+[K2Node_VariableGet_18].Difference -> [K2Node_CallFunction_17].A
+[K2Node_VariableGet_19].AudioSource -> [K2Node_MacroInstance_0@DrawDebugSource].InputObject
+[K2Node_VariableGet_1@UpdateSource].SourceLocationChange -> [K2Node_CallFunction_30].Alpha
+[K2Node_VariableGet_1@UpdateSource].VelocityScale -> [K2Node_PromotableOperator_0].B
+[K2Node_VariableGet_20].DistantSamples -> [K2Node_CallFunction_2@ApplyNiagaraParameters].B
+[K2Node_VariableGet_21].Distance -> [K2Node_CallFunction_8].A
+[K2Node_VariableGet_23].LocationPrev -> [K2Node_CallFunction_16].A
+[K2Node_VariableGet_23].LocationPrev -> [K2Node_CallFunction_30].A
+[K2Node_VariableGet_25].LocationNew -> [K2Node_CallFunction_26].NewLocation
+[K2Node_VariableGet_2@ApplyNiagaraParameters].CloseSamples -> [K2Node_CallFunction_14].B
+[K2Node_VariableGet_2@ApplyNiagaraParameters].ExportDataInstance -> [K2Node_CallFunction_1@ApplyNiagaraParameters].self#2
+[K2Node_VariableGet_2@ApplyNiagaraParameters].ExportDataInstance -> [K2Node_CallFunction_2@ApplyNiagaraParameters].self
+[K2Node_VariableGet_3].SearchGridDivisions -> [K2Node_CallFunction_2@ApplyNiagaraParameters].Param
+[K2Node_VariableGet_4].AmbientVelocity -> [K2Node_CallFunction_9].A
+[K2Node_VariableGet_5@ApplyNiagaraParameters].SearchGridWidth -> [K2Node_CallFunction_4@ApplyNiagaraParameters].A
+[K2Node_VariableGet_5@ApplyNiagaraParameters].SourceComponent -> [K2Node_CallFunction_1@ApplyNiagaraParameters].self
+[K2Node_VariableGet_5@ApplyNiagaraParameters].SourceComponent -> [K2Node_VariableGet_9@DrawDebugSource].self
+[K2Node_VariableGet_6@ApplyNiagaraParameters].SearchGridDivisions -> [K2Node_CallFunction_5@ApplyNiagaraParameters].InInt
+[K2Node_VariableGet_7@SetFluidDistance].AudioSource -> [K2Node_MacroInstance_0@DrawDebugSource].InputObject#2
+[K2Node_VariableGet_7@SetFluidDistance].AudioSource -> [K2Node_VariableSet_0@DrawDebugSource].SourceComponent#2
+[K2Node_VariableGet_7@SetFluidDistance].then -> [K2Node_CallFunction_31].execute
+[K2Node_VariableGet_8].Location -> [K2Node_CallFunction_16].B
+[K2Node_VariableGet_8].Location -> [K2Node_CallFunction_30].B
+[K2Node_VariableGet_8].Location -> [K2Node_VariableSet_11].LocationNew
+[K2Node_VariableGet_9@DrawDebugSource].SearchGridDivisions -> [K2Node_CommutativeAssociativeBinaryOperator_0@DrawDebugSource].A
+[K2Node_VariableGet_9@DrawDebugSource].SearchGridDivisions -> [K2Node_CommutativeAssociativeBinaryOperator_0@DrawDebugSource].B
+[K2Node_VariableGet_9@DrawDebugSource].VolumeMultiplier -> [K2Node_CallFunction_9].A
+[K2Node_VariableGet_9@DrawDebugSource].VolumeMultiplier -> [K2Node_CommutativeAssociativeBinaryOperator_0@DrawDebugSource].A#2
+[K2Node_VariableSet_0@DrawDebugSource].Output_Get -> [K2Node_CallFunction_33].self
+[K2Node_VariableSet_0@DrawDebugSource].then -> [K2Node_CallParentFunction_0@ApplyNiagaraParameters].execute
+[K2Node_VariableSet_0@DrawDebugSource].then#2 -> [K2Node_VariableSet_9].execute
+[K2Node_VariableSet_0@DrawDebugSource].then#3 -> [K2Node_CallFunction_2@ApplyNiagaraParameters].execute
+[K2Node_VariableSet_11].then -> [K2Node_Knot_0].InputPin
+[K2Node_VariableSet_2].then -> [K2Node_VariableSet_3].execute
+[K2Node_VariableSet_3].then -> [K2Node_VariableSet_5].execute
+[K2Node_VariableSet_4].then -> [K2Node_MacroInstance_0@DrawDebugSource].exec
+[K2Node_VariableSet_8].then -> [K2Node_IfThenElse_1].execute
+[K2Node_VariableSet_9].then -> [K2Node_VariableSet_8].execute

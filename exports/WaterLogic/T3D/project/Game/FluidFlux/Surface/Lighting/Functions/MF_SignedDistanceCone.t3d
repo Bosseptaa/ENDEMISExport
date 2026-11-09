@@ -1,0 +1,101 @@
+Begin Object Class=/Script/Engine.MaterialFunction Name="MF_SignedDistanceCone" ExportPath="/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone'"
+   Begin Object Class=/Script/Engine.MaterialFunctionEditorOnlyData Name="MF_SignedDistanceConeEditorOnlyData" ExportPath="/Script/Engine.MaterialFunctionEditorOnlyData'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MF_SignedDistanceConeEditorOnlyData'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCustom Name="MaterialExpressionCustom_0" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionCustom_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionInput_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_1" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionInput_1'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_2" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionInput_2'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_3" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionInput_3'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_4" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionInput_4'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionOutput Name="MaterialExpressionFunctionOutput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionOutput_0'"
+   End Object
+   Begin Object Name="MF_SignedDistanceConeEditorOnlyData" ExportPath="/Script/Engine.MaterialFunctionEditorOnlyData'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MF_SignedDistanceConeEditorOnlyData'"
+      ExpressionCollection=(Expressions=("/Script/Engine.MaterialExpressionFunctionOutput'MF_SignedDistanceCone:MaterialExpressionFunctionOutput_0'","/Script/Engine.MaterialExpressionCustom'MF_SignedDistanceCone:MaterialExpressionCustom_0'","/Script/Engine.MaterialExpressionFunctionInput'MF_SignedDistanceCone:MaterialExpressionFunctionInput_0'","/Script/Engine.MaterialExpressionFunctionInput'MF_SignedDistanceCone:MaterialExpressionFunctionInput_1'","/Script/Engine.MaterialExpressionFunctionInput'MF_SignedDistanceCone:MaterialExpressionFunctionInput_2'","/Script/Engine.MaterialExpressionFunctionInput'MF_SignedDistanceCone:MaterialExpressionFunctionInput_3'","/Script/Engine.MaterialExpressionFunctionInput'MF_SignedDistanceCone:MaterialExpressionFunctionInput_4'"))
+   End Object
+   Begin Object Name="MaterialExpressionCustom_0" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionCustom_0'"
+      Code="    float rba  = rb-ra;\r\n    float baba = dot(b-a,b-a);\r\n    float papa = dot(p-a,p-a);\r\n    float paba = dot(p-a,b-a)/baba;\r\n\r\n    float x = sqrt( papa - paba*paba*baba );\r\n\r\n    float cax = max(0.0,x-((paba<0.5)?ra:rb));\r\n    float cay = abs(paba-0.5)-0.5;\r\n\r\n    float k = rba*rba + baba;\r\n    float f = clamp( (rba*(x-ra)+paba*baba)/k, 0.0, 1.0 );\r\n\r\n    float cbx = x-ra - f*rba;\r\n    float cby = paba - f;\r\n    \r\n    float s = (cbx < 0.0 && cay < 0.0) ? -1.0 : 1.0;\r\n    \r\n    return s*sqrt( min(cax*cax + cay*cay*baba,\r\n                       cbx*cbx + cby*cby*baba) );\r\n"
+      OutputType=CMOT_Float1
+      Inputs(0)=(InputName="ra",Input=(Expression="/Script/Engine.MaterialExpressionFunctionInput'MF_SignedDistanceCone:MaterialExpressionFunctionInput_0'"))
+      Inputs(1)=(InputName="rb",Input=(Expression="/Script/Engine.MaterialExpressionFunctionInput'MF_SignedDistanceCone:MaterialExpressionFunctionInput_1'"))
+      Inputs(2)=(InputName="a",Input=(Expression="/Script/Engine.MaterialExpressionFunctionInput'MF_SignedDistanceCone:MaterialExpressionFunctionInput_2'"))
+      Inputs(3)=(InputName="b",Input=(Expression="/Script/Engine.MaterialExpressionFunctionInput'MF_SignedDistanceCone:MaterialExpressionFunctionInput_3'"))
+      Inputs(4)=(InputName="p",Input=(Expression="/Script/Engine.MaterialExpressionFunctionInput'MF_SignedDistanceCone:MaterialExpressionFunctionInput_4'"))
+      MaterialExpressionEditorX=-112
+      MaterialExpressionEditorY=352
+      MaterialExpressionGuid=E4A56D3A479635C1C30F8FB483964DA9
+      Function="/Script/Engine.MaterialFunction'MF_SignedDistanceCone'"
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionInput_0'"
+      InputName="ra"
+      Id=FC8787054B12CBA3786A1AA9EE2CB96C
+      InputType=FunctionInput_Scalar
+      SortPriority=3
+      MaterialExpressionEditorX=-528
+      MaterialExpressionEditorY=352
+      MaterialExpressionGuid=EC3837FD499095AB9D23D4AC6FBAD9D6
+      Function="/Script/Engine.MaterialFunction'MF_SignedDistanceCone'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_1" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionInput_1'"
+      InputName="rb"
+      Id=C59F8F63405FD47AE7D86193995C0F79
+      InputType=FunctionInput_Scalar
+      SortPriority=4
+      MaterialExpressionEditorX=-528
+      MaterialExpressionEditorY=432
+      MaterialExpressionGuid=4C0D181C4B60A48C9A1139B20641F8C1
+      Function="/Script/Engine.MaterialFunction'MF_SignedDistanceCone'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_2" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionInput_2'"
+      Preview=(Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      InputName="a"
+      Id=1BD94B3D4D814111F91DC79B00C794AC
+      SortPriority=1
+      MaterialExpressionEditorX=-416
+      MaterialExpressionEditorY=560
+      MaterialExpressionGuid=A9A09AC24259525CF871389C86A4BBB8
+      Function="/Script/Engine.MaterialFunction'MF_SignedDistanceCone'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_3" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionInput_3'"
+      Preview=(Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      InputName="b"
+      Id=A3AC7C4F42710DA8EC44FAAE32AB6192
+      SortPriority=2
+      MaterialExpressionEditorX=-400
+      MaterialExpressionEditorY=640
+      MaterialExpressionGuid=58B95CFC47B6F38465E0F58457FB478F
+      Function="/Script/Engine.MaterialFunction'MF_SignedDistanceCone'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_4" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionInput_4'"
+      Preview=(Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      InputName="p"
+      Id=DB6FA69642A71128833E6E8A090E6491
+      MaterialExpressionEditorX=-400
+      MaterialExpressionEditorY=736
+      MaterialExpressionGuid=380C920E452CB548A23E1C88B730BD0D
+      Function="/Script/Engine.MaterialFunction'MF_SignedDistanceCone'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionOutput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Surface/Lighting/Functions/MF_SignedDistanceCone.MF_SignedDistanceCone:MaterialExpressionFunctionOutput_0'"
+      A=(Expression="/Script/Engine.MaterialExpressionCustom'MF_SignedDistanceCone:MaterialExpressionCustom_0'")
+      bLastPreviewed=True
+      Id=4AFB90B14A9627A3DBBAAABD15B74AB3
+      MaterialExpressionEditorX=128
+      MaterialExpressionEditorY=320
+      MaterialExpressionGuid=ED2B83754DC5999A30E11F8AB3FCDB98
+      Function="/Script/Engine.MaterialFunction'MF_SignedDistanceCone'"
+   End Object
+   EditorOnlyData="/Script/Engine.MaterialFunctionEditorOnlyData'MF_SignedDistanceConeEditorOnlyData'"
+   StateId=6D0AB73D4B256A2A8ACE86B0C97B8908
+   CombinedInputTypes=15
+   CombinedOutputTypes=15
+End Object

@@ -1,0 +1,100 @@
+﻿# /Game/FluidFlux/Surface/Templates/Debug/Materials/M_FluxSurfaceOverCoastline
+# класс: Material; происхождение: проект; узлов: 17; связей: 31; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:179
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_FluxSurfaceOverCoastline] Material
+    BlendMode = BLEND_Translucent
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    TranslucencyLightingMode = TLM_SurfacePerPixelLighting
+    bTangentSpaceNormal = False
+    bUsedWithNiagaraMeshParticles = True
+    bAutomaticallySetUsageInEditor = False
+    bUseLightmapDirectionality = False
+    EditorX = -608
+    EditorY = 864
+    bUseMaterialAttributes = True
+    bCastRayTracedShadows = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = F69651DAADA79FA14DB0B3AFB85A5F5F
+    ReferencedTextureGuids(0) = 61EF94AD4078B928B171198909D4D7B6
+    ReferencedTextureGuids(1) = B047E04B48C3D0EF7EAAEEA74BF7182A
+    ReferencedTextureGuids(2) = 42C0D16B47406B05AE1035A6A695F609
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_SmoothNoise",TextureReference="/Game/1_Water/Textures/T_SmoothNoise.T_SmoothNoise")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+    ReferencedDefaultTextures(3) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_SmoothNoise.T_SmoothNoise'"
+    ReferencedDefaultTextures(4) = "/Script/Engine.TextureRenderTarget2D'/Game/1_Water/Textures/RT_DefaultWhite16.RT_DefaultWhite16'"
+    LightingGuid = A2C9A90F411B24AD91EE45B40B4F2233
+    EditorOnlyData <- M_FluxSurfaceOverCoastlineEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_FluxSurfaceOverCoastlineEditorOnlyData] MaterialEditorOnlyData
+    MaterialAttributes <- MaterialExpressionMakeMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionMakeMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionBreakMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionEyeAdaptation_0
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionConstant_5
+[MaterialExpressionBreakMaterialAttributes_0] MaterialExpressionBreakMaterialAttributes
+    MaterialAttributes <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.200000
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.050000
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 0.990000
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    A <- MaterialExpressionMaterialFunctionCall_4
+    B <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionEyeAdaptation_0] MaterialExpressionEyeAdaptation
+[MaterialExpressionIf_0] MaterialExpressionIf
+    A <- MaterialExpressionMaterialFunctionCall_4
+    B <- MaterialExpressionConstant_3
+    AGreaterThanB <- MaterialExpressionConstant_4
+    ALessThanB <- MaterialExpressionConstant_5
+[MaterialExpressionMakeMaterialAttributes_0] MaterialExpressionMakeMaterialAttributes
+    Specular <- MaterialExpressionConstant_1
+    Roughness <- MaterialExpressionConstant_2
+    EmissiveColor <- MaterialExpressionDivide_0
+    Normal <- MaterialExpressionVertexInterpolator_0
+    WorldPositionOffset <- MaterialExpressionBreakMaterialAttributes_0
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_FlatShadingNormal.MF_FlatShadingNormal'"
+    FunctionInputs(0) = (ExpressionInputId=16153D63494C3983E2AB58B72A599955,Input=(OutputIndex=-1,InputName="In"))
+    FunctionOutputs(0) = (ExpressionOutputId=9E84770848DBF25140DEC78521BD3653,Output=(OutputName="Normal"))
+    Outputs(0) = (OutputName="Normal")
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFlux_Coastline.MF_SurfaceFlux_Coastline'"
+    FunctionOutputs(0) = (ExpressionOutputId=BA08A2E04BA053CB99A033B45DCCE791,Output=(OutputName="SurfaceLayer"))
+    FunctionOutputs(1) = (ExpressionOutputId=B44BC6264228A894468F3F9EDD14E2F7,Output=(OutputName="Distance"))
+    FunctionOutputs(2) = (ExpressionOutputId=B1C8D87847ABC0ACEE211898FA753BBD,Output=(OutputName="Intensity"))
+    FunctionOutputs(3) = (ExpressionOutputId=E7B422DB40001BB420234EB9F92BA729,Output=(OutputName="Shoreline"))
+    FunctionOutputs(4) = (ExpressionOutputId=287B80A240C3135023690EBC8873A76B,Output=(OutputName="Blend"))
+    Outputs(0) = (OutputName="SurfaceLayer")
+    Outputs(1) = (OutputName="Distance")
+    Outputs(2) = (OutputName="Intensity")
+    Outputs(3) = (OutputName="Shoreline")
+    Outputs(4) = (OutputName="Blend")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_1
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+[MaterialExpressionVertexInterpolator_0] MaterialExpressionVertexInterpolator
+    Input <- MaterialExpressionBreakMaterialAttributes_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

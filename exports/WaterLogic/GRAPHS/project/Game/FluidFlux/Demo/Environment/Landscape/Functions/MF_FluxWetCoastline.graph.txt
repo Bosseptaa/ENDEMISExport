@@ -1,0 +1,130 @@
+﻿# /Game/FluidFlux/Demo/Environment/Landscape/Functions/MF_FluxWetCoastline
+# класс: MaterialFunction; происхождение: проект; узлов: 22; связей: 46; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxWetCoastline] MaterialFunction
+    StateId = 6673681F4020291B36BC2E8E529262E5
+    CombinedInputTypes = 2063
+    CombinedOutputTypes = 2048
+    EditorOnlyData <- MF_FluxWetCoastlineEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxWetCoastlineEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionReroute_4
+    ExpressionCollection <- MaterialExpressionReroute_6
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionGetMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionSetMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionReroute_8
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_2
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionReroute_11
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Layer"
+    Id = B63A078B40E90B0049ED11A25ACBB30E
+    InputType = FunctionInput_MaterialAttributes
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Wet"
+    Id = EA9B5F9842433CFEC0E0469729134978
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 3837764F4A878EF3023AF2BF160288D9
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    A <- MaterialExpressionSetMaterialAttributes_0
+[MaterialExpressionGetMaterialAttributes_0] MaterialExpressionGetMaterialAttributes
+    AttributeGetTypes(0) = 69B8D33616ED4D499AA497292F050F7A
+    AttributeGetTypes(1) = D1DD967C4CAD47D39E6346FB08ECF210
+    AttributeGetTypes(2) = 9FDAB39925564CC98CD2D572C12C8FED
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    Outputs(1) = (OutputName="BaseColor")
+    Outputs(2) = (OutputName="Roughness")
+    Outputs(3) = (OutputName="Specular")
+    MaterialAttributes <- MaterialExpressionFunctionInput_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    ConstA = 0.400000
+    ConstB = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    A <- MaterialExpressionScalarParameter_1
+    B <- MaterialExpressionReroute_8
+    Alpha <- MaterialExpressionFunctionInput_1
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    ConstA = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    A <- MaterialExpressionMultiply_7
+    B <- MaterialExpressionReroute_2
+    Alpha <- MaterialExpressionFunctionInput_1
+[MaterialExpressionLinearInterpolate_2] MaterialExpressionLinearInterpolate
+    ConstA = 0.050000
+    ConstB = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    A <- MaterialExpressionScalarParameter_2
+    B <- MaterialExpressionGetMaterialAttributes_0
+    Alpha <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    A <- MaterialExpressionGetMaterialAttributes_0
+    B <- MaterialExpressionMultiply_0
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    Input <- MaterialExpressionLinearInterpolate_2
+[MaterialExpressionReroute_11] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    Input <- MaterialExpressionGetMaterialAttributes_0
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    Input <- MaterialExpressionGetMaterialAttributes_0
+[MaterialExpressionReroute_4] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    Input <- MaterialExpressionLinearInterpolate_1
+[MaterialExpressionReroute_6] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    Input <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionReroute_8] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    Input <- MaterialExpressionGetMaterialAttributes_0
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.350000
+    ParameterName = "CoastlineRoughness"
+    ExpressionGUID = 9812CA524D30AF4040CC00AB68F5F12B
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 0.022000
+    ParameterName = "CoastlineSpecular"
+    ExpressionGUID = D3060CE14AEDB4CAD90FC5857DA1DEDB
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+[MaterialExpressionSetMaterialAttributes_0] MaterialExpressionSetMaterialAttributes
+    AttributeSetTypes(0) = 69B8D33616ED4D499AA497292F050F7A
+    AttributeSetTypes(1) = D1DD967C4CAD47D39E6346FB08ECF210
+    AttributeSetTypes(2) = 9FDAB39925564CC98CD2D572C12C8FED
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+    Inputs(0) <- MaterialExpressionGetMaterialAttributes_0
+    Inputs(1) Base Color <- MaterialExpressionReroute_4
+    Inputs(2) Roughness <- MaterialExpressionReroute_6
+    Inputs(3) Specular <- MaterialExpressionReroute_0
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=1.000000,B=1.000000,A=0.650000)
+    ParameterName = "CoastlineColor"
+    ExpressionGUID = AB6BF12A4511C5819E04F192C8039CC6
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWetCoastline'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

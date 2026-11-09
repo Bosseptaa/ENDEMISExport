@@ -1,0 +1,196 @@
+﻿# /Game/FluidFlux/Demo/Tools/CausticsGenerator/Materials/M_CausticsGenerator
+# класс: Material; происхождение: проект; узлов: 43; связей: 85; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:411
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_CausticsGenerator] Material
+    BlendMode = BLEND_Additive
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    NumCustomizedUVs = 1
+    ShadingRate = MSR_2x2
+    EditorX = 48
+    EditorY = 201
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = EB64E757A440FCE69822BDB71B74B8F6
+    ReferencedTextureGuids(0) = ECAF96B84B45C31D455185B6793914C4
+    ReferencedTextureGuids(1) = 078DBA2A4771891F7AF6E1BF9A58997A
+    ReferencedTextureGuids(2) = 5A5056764DD33E3AF332F2BD3E044489
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_CausticsWave_02.T_CausticsWave_02'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Dust/T_CausticsWave_01.T_CausticsWave_01'"
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_SmoothNoiseDirections.T_SmoothNoiseDirections'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 0CC376844E5571155196DB87384F0533
+    EditorOnlyData <- M_CausticsGeneratorEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_CausticsGeneratorEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    ParameterGroupData(4) = (GroupName="None")
+    ParameterGroupData(5) = (GroupName="None")
+    ParameterGroupData(6) = (GroupName="None")
+    ParameterGroupData(7) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionClamp_0
+    WorldPositionOffset <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionClamp_0
+    ExpressionCollection <- MaterialExpressionMultiply_13
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionMultiply_15
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionTextureSample_4
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionMultiply_14
+    ExpressionCollection <- MaterialExpressionTextureSample_5
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionSquareRoot_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_7
+    ExpressionCollection <- MaterialExpressionAdd_5
+    ExpressionCollection <- MaterialExpressionAdd_8
+    ExpressionCollection <- MaterialExpressionSubtract_4
+    ExpressionCollection <- MaterialExpressionTextureSample_3
+    ExpressionCollection <- MaterialExpressionMultiply_9
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_3
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_24
+    ExpressionCollection <- MaterialExpressionSubtract_8
+    ExpressionCollection <- MaterialExpressionSubtract_9
+    ExpressionCollection <- MaterialExpressionFrac_1
+    ExpressionCollection <- MaterialExpressionMultiply_41
+    ExpressionCollection <- MaterialExpressionSubtract_10
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionAdd_36
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_7
+    ExpressionCollection <- MaterialExpressionComponentMask_7
+    ExpressionCollection <- MaterialExpressionAdd_37
+    ExpressionCollection <- MaterialExpressionMultiply_44
+    ExpressionCollection <- MaterialExpressionComponentMask_8
+    ExpressionCollection <- MaterialExpressionAdd_38
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Input <- MaterialExpressionSubtract_10
+[MaterialExpressionAdd_36] MaterialExpressionAdd
+    A <- MaterialExpressionScalarParameter_24
+    B <- MaterialExpressionAdd_38
+[MaterialExpressionAdd_37] MaterialExpressionAdd
+    A <- MaterialExpressionTextureSample_3
+    B <- MaterialExpressionComponentMask_7
+[MaterialExpressionAdd_38] MaterialExpressionAdd
+    A <- MaterialExpressionAdd_37
+    B <- MaterialExpressionComponentMask_8
+[MaterialExpressionAdd_5] MaterialExpressionAdd
+    A <- MaterialExpressionSquareRoot_0
+    B <- MaterialExpressionScalarParameter_7
+[MaterialExpressionAdd_8] MaterialExpressionAdd
+    A <- MaterialExpressionMultiply_15
+    B <- MaterialExpressionReroute_1
+[MaterialExpressionClamp_0] MaterialExpressionClamp
+    MaxDefault = 0.400000
+    Input <- MaterialExpressionMultiply_13
+[MaterialExpressionComponentMask_7] MaterialExpressionComponentMask
+    R = True
+    Input <- MaterialExpressionMultiply_44
+[MaterialExpressionComponentMask_8] MaterialExpressionComponentMask
+    G = True
+    Input <- MaterialExpressionMultiply_44
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionFrac_1] MaterialExpressionFrac
+    Input <- MaterialExpressionAdd_36
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionSubtract_8
+    B <- MaterialExpressionSubtract_9
+    Alpha <- MaterialExpressionAbs_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Materials/Functions/MF_CausticsArea.MF_CausticsArea'"
+    FunctionOutputs(0) = (ExpressionOutputId=C5FA1AA24506BBB2CA98D8AA378887F9,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionWorldPosition_0
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Materials/Functions/MF_CausticsArea.MF_CausticsArea'"
+    FunctionOutputs(0) = (ExpressionOutputId=C5FA1AA24506BBB2CA98D8AA378887F9,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionWorldPosition_3
+[MaterialExpressionMultiply_13] MaterialExpressionMultiply
+    ConstB = 0.100000
+    A <- MaterialExpressionAdd_5
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionMultiply_14] MaterialExpressionMultiply
+    ConstA = 1.000000
+    ConstB = 5.000000
+[MaterialExpressionMultiply_15] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionTextureCoordinate_2
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 12.000000
+    A <- MaterialExpressionNormalize_0
+    B <- MaterialExpressionMultiply_14
+[MaterialExpressionMultiply_41] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionFrac_1
+[MaterialExpressionMultiply_44] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionTextureCoordinate_7
+[MaterialExpressionMultiply_9] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionTextureCoordinate_3
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionLinearInterpolate_1
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Input <- MaterialExpressionConstant_2
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.250000
+    ParameterName = "ColorScale"
+    ExpressionGUID = D214206C49ECF001C53DCEB7DABF851B
+[MaterialExpressionScalarParameter_24] MaterialExpressionScalarParameter
+    ParameterName = "Time"
+    ExpressionGUID = F9B4FF9F4EF6528F0F0E2EA8976D4AED
+[MaterialExpressionScalarParameter_7] MaterialExpressionScalarParameter
+    DefaultValue = -0.400000
+    ParameterName = "ColorOffset"
+    ExpressionGUID = 012B6AEA4F0D29F7145A3DA64BF466DD
+[MaterialExpressionSquareRoot_0] MaterialExpressionSquareRoot
+    Input <- MaterialExpressionDivide_0
+[MaterialExpressionSubtract_10] MaterialExpressionSubtract
+    A <- MaterialExpressionMultiply_41
+[MaterialExpressionSubtract_4] MaterialExpressionSubtract
+    A <- MaterialExpressionMultiply_15
+    B <- MaterialExpressionReroute_1
+[MaterialExpressionSubtract_8] MaterialExpressionSubtract
+    ConstB = 0.500000
+    A <- MaterialExpressionTextureSample_5
+[MaterialExpressionSubtract_9] MaterialExpressionSubtract
+    ConstB = 0.500000
+    A <- MaterialExpressionTextureSample_4
+[MaterialExpressionTextureCoordinate_2] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureCoordinate_3] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureCoordinate_7] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureSample_3] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_SmoothNoiseDirections.T_SmoothNoiseDirections'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    Coordinates <- MaterialExpressionMultiply_9
+[MaterialExpressionTextureSample_4] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_CausticsWave_02.T_CausticsWave_02'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    Coordinates <- MaterialExpressionSubtract_4
+[MaterialExpressionTextureSample_5] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Dust/T_CausticsWave_01.T_CausticsWave_01'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    Coordinates <- MaterialExpressionAdd_8
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    WorldPositionShaderOffset = WPT_ExcludeAllShaderOffsets
+[MaterialExpressionWorldPosition_3] MaterialExpressionWorldPosition
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

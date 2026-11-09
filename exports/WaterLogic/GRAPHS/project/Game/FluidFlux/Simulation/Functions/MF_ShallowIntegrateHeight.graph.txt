@@ -1,0 +1,261 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_ShallowIntegrateHeight
+# класс: MaterialFunction; происхождение: проект; узлов: 40; связей: 89; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:392
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_ShallowIntegrateHeight] MaterialFunction
+    StateId = D40E1E0A4F7CBFEEDB67419E3DAB383C
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_27
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_28
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_29
+    DependentFunctionExpressionCandidates(4) <- MaterialExpressionMaterialFunctionCall_3
+    DependentFunctionExpressionCandidates(5) <- MaterialExpressionMaterialFunctionCall_4
+    DependentFunctionExpressionCandidates(6) <- MaterialExpressionMaterialFunctionCall_1
+    EditorOnlyData <- MF_ShallowIntegrateHeightEditorOnlyData
+[MF_ShallowIntegrateHeightEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionAppendVector_3
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_6
+    ExpressionCollection <- MaterialExpressionConstant2Vector_9
+    ExpressionCollection <- MaterialExpressionConstant2Vector_10
+    ExpressionCollection <- MaterialExpressionComponentMask_4
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionAppendVector_2
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_27
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_28
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_29
+    ExpressionCollection <- MaterialExpressionMax_9
+    ExpressionCollection <- MaterialExpressionIf_7
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_12
+    ExpressionCollection <- MaterialExpressionReroute_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionAppendVector_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionReroute_5
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_1
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionComment_0
+    ExpressionCollection <- MaterialExpressionComment_1
+    ExpressionCollection <- MaterialExpressionComment_2
+[MaterialExpressionAppendVector_2] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    A <- MaterialExpressionComponentMask_4
+    B <- MaterialExpressionComponentMask_5
+[MaterialExpressionAppendVector_3] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    A <- MaterialExpressionMaterialFunctionCall_27
+    B <- MaterialExpressionIf_7
+[MaterialExpressionAppendVector_4] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    A <- MaterialExpressionMaterialFunctionCall_27
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 912
+    SizeY = 544
+    Text = "Velocity advection"
+    CommentColor = (R=0.085594,G=0.220833,B=0.188876,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionComment_1] MaterialExpressionComment
+    SizeX = 528
+    SizeY = 448
+    Text = "New height"
+    CommentColor = (R=1.000000,G=0.868625,B=0.423850,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionComment_2] MaterialExpressionComment
+    SizeX = 992
+    SizeY = 448
+    Text = "Remove fluid if there is almost nothing"
+    CommentColor = (R=1.000000,G=0.239324,B=0.127581,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionComponentMask_4] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Input <- MaterialExpressionMaterialFunctionCall_28
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Input <- MaterialExpressionMaterialFunctionCall_29
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionConstant_12] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionConstant2Vector_10] MaterialExpressionConstant2Vector
+    R = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionConstant2Vector_6] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionConstant2Vector_9] MaterialExpressionConstant2Vector
+    G = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Foam"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = 422A62754CB1E5A39819BBBB03EFCBE6
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    bCollapsed = True
+    A <- MaterialExpressionReroute_1
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "VelocityHeight"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = 31F107AF45E7C8309D68ECB7B45D8477
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    bCollapsed = True
+    A <- MaterialExpressionAppendVector_3
+[MaterialExpressionIf_0] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    A <- MaterialExpressionReroute_3
+    B <- MaterialExpressionScalarParameter_2
+    AGreaterThanB <- MaterialExpressionConstant_12
+    AEqualsB <- MaterialExpressionConstant_12
+    ALessThanB <- MaterialExpressionReroute_3
+[MaterialExpressionIf_7] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    A <- MaterialExpressionReroute_5
+    B <- MaterialExpressionScalarParameter_2
+    AGreaterThanB <- MaterialExpressionReroute_5
+    AEqualsB <- MaterialExpressionStaticSwitchParameter_1
+    ALessThanB <- MaterialExpressionStaticSwitchParameter_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxFoam.MF_FluxFoam'"
+    FunctionOutputs(0) = (ExpressionOutputId=BCE0A96542303F816ECCB28DBD55F449,Output=(OutputName="Foam"))
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Outputs(0) = (OutputName="Foam")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_1
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_4
+    FunctionInputs(2) <- MaterialExpressionMax_9
+    FunctionInputs(3) <- MaterialExpressionAppendVector_4
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxAdvectFoam.MF_FluxAdvectFoam'"
+    FunctionOutputs(0) = (ExpressionOutputId=2D4B8B4941530B798135EBB79F964272,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=68013D5D474F97C52C9314ACD94DD498,Output=(OutputName="Foam"))
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="Foam")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionMaterialFunctionCall_27] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxAdvectSimulation.MF_FluxAdvectSimulation'"
+    FunctionOutputs(0) = (ExpressionOutputId=7FCAB76F482739C7D012F1B85E2B964C,Output=(OutputName="Volume"))
+    FunctionOutputs(1) = (ExpressionOutputId=68367DBA438A0D7AA774B2ACB933168D,Output=(OutputName="Velocity"))
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Outputs(0) = (OutputName="Volume")
+    Outputs(1) = (OutputName="Velocity")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_6
+[MaterialExpressionMaterialFunctionCall_28] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxAdvectSimulation.MF_FluxAdvectSimulation'"
+    FunctionOutputs(0) = (ExpressionOutputId=7FCAB76F482739C7D012F1B85E2B964C,Output=(OutputName="Volume"))
+    FunctionOutputs(1) = (ExpressionOutputId=68367DBA438A0D7AA774B2ACB933168D,Output=(OutputName="Velocity"))
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Outputs(0) = (OutputName="Volume")
+    Outputs(1) = (OutputName="Velocity")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_10
+[MaterialExpressionMaterialFunctionCall_29] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxAdvectSimulation.MF_FluxAdvectSimulation'"
+    FunctionOutputs(0) = (ExpressionOutputId=7FCAB76F482739C7D012F1B85E2B964C,Output=(OutputName="Volume"))
+    FunctionOutputs(1) = (ExpressionOutputId=68367DBA438A0D7AA774B2ACB933168D,Output=(OutputName="Velocity"))
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Outputs(0) = (OutputName="Volume")
+    Outputs(1) = (OutputName="Velocity")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_9
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(0) = (ExpressionInputId=DA7F932D4F48BC2231034E986A9CB554,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionInputs(2) = (ExpressionInputId=AEF4F886411D3426BD953487D66B2E9C,Input=(OutputIndex=2,InputName="Offset"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxHeight.MF_FluxHeight'"
+    FunctionOutputs(0) = (ExpressionOutputId=8117ADE74C1FDECDF1A962B96D537939,Output=(OutputName="Flux"))
+    FunctionOutputs(1) = (ExpressionOutputId=7AAA033F4A44DD9919AD608B0906EC1C,Output=(OutputName="IsWater"))
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Outputs(0) = (OutputName="Flux")
+    Outputs(1) = (OutputName="IsWater")
+    FunctionInputs(0) <- MaterialExpressionAppendVector_4
+[MaterialExpressionMax_9] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    A <- MaterialExpressionMaterialFunctionCall_27
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 1.200000
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    A <- MaterialExpressionMaterialFunctionCall_4
+    B <- MaterialExpressionMultiply_7
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    A <- MaterialExpressionAppendVector_2
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    A <- MaterialExpressionScalarParameter_1
+    B <- MaterialExpressionScalarParameter_3
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Input <- MaterialExpressionMax_9
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionReroute_3] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Input <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionReroute_5] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    Input <- MaterialExpressionSubtract_3
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "FluxEnergy"
+    ExpressionGUID = A8108865443953A960087B97A3D6537F
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 0.010000
+    ParameterName = "EvaporationHeight"
+    ExpressionGUID = B43FEB3848AD6A600DA07F963191300E
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "DeltaTime"
+    ExpressionGUID = F73BBABE44A93A266EF9FCA4A908E299
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+[MaterialExpressionStaticSwitchParameter_1] MaterialExpressionStaticSwitchParameter
+    ParameterName = "HeightInNegativeAmount"
+    ExpressionGUID = 8CC12A5C402E335E809A04B1E41A0DE5
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    A <- MaterialExpressionIf_0
+    B <- MaterialExpressionConstant_1
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ShallowIntegrateHeight'"
+    A <- MaterialExpressionReroute_0
+    B <- MaterialExpressionMultiply_2
+
+## СВЯЗИ

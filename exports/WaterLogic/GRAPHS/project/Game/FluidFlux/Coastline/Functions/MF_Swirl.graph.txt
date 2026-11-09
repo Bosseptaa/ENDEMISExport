@@ -1,0 +1,120 @@
+﻿# /Game/FluidFlux/Coastline/Functions/MF_Swirl
+# класс: MaterialFunction; происхождение: проект; узлов: 19; связей: 34; HLSL: 1; причина: папка /Game/FluidFlux; HLSL:1
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Swirl] MaterialFunction
+    StateId = EEDA9F174965F1815334B09CA53B79BC
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_SwirlEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/ArtTools/RenderToTexture/MaterialFunctions/CheckerPattern.CheckerPattern'"
+    FunctionOutputs(0) = (ExpressionOutputId=7183E0CD4C9C77E63748A3A80E7DB378,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionFunctionOutput_0
+    FunctionInputs(1) <- MaterialExpressionConstant2Vector_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 916824AE4E8B90BE67F756949DA08055
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+    A <- MaterialExpressionCustom_2
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "Scale"
+    Id = 2579AF4A409E3A81147D1393487AABEE
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_2
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "Power"
+    Id = 5AD3BDBD46B843E535DA329E5AFFD546
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_3
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Angle"
+    Id = 35465B0B422D3FFD375CAAB795A47C26
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Radius"
+    Id = E045EC8C4DA0C93289CF029E42098A7F
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_1
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "UV"
+    Id = 7FC9232B4EA3F647DE3535ADF3D8B8D5
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Position"
+    Id = 583488CC486E49CA78AA109B97EB0F68
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionCustom_2] MaterialExpressionCustom
+    описание: Swirl
+    OutputType = CMOT_Float2
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+    Inputs(0) uv <- MaterialExpressionFunctionInput_1
+    Inputs(1) center <- MaterialExpressionFunctionInput_0
+    Inputs(2) radius <- MaterialExpressionFunctionInput_2
+    Inputs(3) angle <- MaterialExpressionFunctionInput_3
+    Inputs(4) power <- MaterialExpressionFunctionInput_4
+    Inputs(5) scale <- MaterialExpressionFunctionInput_5
+    Code: HLSL, 11 строк (см. HLSL/)
+[MaterialExpressionConstant2Vector_2] MaterialExpressionConstant2Vector
+    R = 1.000000
+    G = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+[MaterialExpressionConstant2Vector_1] MaterialExpressionConstant2Vector
+    R = 4.000000
+    G = 4.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    R = 0.500000
+    G = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 4.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Swirl'"
+[MF_SwirlEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionCustom_2
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionConstant2Vector_2
+
+## СВЯЗИ

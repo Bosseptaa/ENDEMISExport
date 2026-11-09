@@ -1,0 +1,122 @@
+﻿# /Game/FluidFlux/Interaction/Functions/MF_TextureBorderFalloff
+# класс: MaterialFunction; происхождение: проект; узлов: 22; связей: 42; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_TextureBorderFalloff] MaterialFunction
+    StateId = 5C37CEE84689F85CFD3F9FBED5E1A9B6
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_5
+    EditorOnlyData <- MF_TextureBorderFalloffEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_TextureBorderFalloffEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionAbs_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionMax_3
+    ExpressionCollection <- MaterialExpressionOneMinus_4
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_3
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_2
+    ExpressionCollection <- MaterialExpressionOneMinus_5
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionViewProperty_4
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+[MaterialExpressionAbs_1] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    Input <- MaterialExpressionSubtract_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Falloff"
+    Id = F08BCE9A4DD85EAB741716B884AAEB45
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "TexelSize"
+    Id = EDDBEB49433F4FC4B62CA4A80F8646C7
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMultiply_6
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "TexCoord"
+    Id = 3EF1436C4AEE4749A5A653B6D0CEA96A
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_3
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = CD9685564E6B5F048B4BDBA4AB7ED696
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    bCollapsed = True
+    A <- MaterialExpressionSaturate_1
+[MaterialExpressionLinearInterpolate_2] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionOneMinus_5
+    Alpha <- MaterialExpressionFunctionInput_2
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionAbs_1
+[MaterialExpressionMax_3] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    A <- MaterialExpressionMaterialFunctionCall_5
+    B <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    A <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 10.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    A <- MaterialExpressionOneMinus_4
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    A <- MaterialExpressionViewProperty_4
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    A <- MaterialExpressionLinearInterpolate_2
+[MaterialExpressionOneMinus_4] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    Input <- MaterialExpressionMax_3
+[MaterialExpressionOneMinus_5] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    Input <- MaterialExpressionMultiply_0
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    Input <- MaterialExpressionMultiply_2
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+    A <- MaterialExpressionMultiply_7
+[MaterialExpressionTextureCoordinate_3] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+[MaterialExpressionViewProperty_4] MaterialExpressionViewProperty
+    Property = MEVP_ViewSize
+    Function = "/Script/Engine.MaterialFunction'MF_TextureBorderFalloff'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

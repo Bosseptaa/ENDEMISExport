@@ -1,0 +1,60 @@
+﻿# /Game/FluidFlux/Demo/Tools/CausticsGenerator/Materials/Functions/MF_CausticsArea
+# класс: MaterialFunction; происхождение: проект; узлов: 13; связей: 22; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:111
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CausticsArea] MaterialFunction
+    StateId = 83E2B0654CCEFA7AB5B951967E954DC1
+    CombinedInputTypes = 4
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_CausticsAreaEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CausticsAreaEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionDDX_0
+    ExpressionCollection <- MaterialExpressionDDY_0
+    ExpressionCollection <- MaterialExpressionDistance_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionDistance_1
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsArea'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsArea'"
+[MaterialExpressionDDX_0] MaterialExpressionDDX
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsArea'"
+    Value <- MaterialExpressionFunctionInput_0
+[MaterialExpressionDDY_0] MaterialExpressionDDY
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsArea'"
+    Value <- MaterialExpressionFunctionInput_0
+[MaterialExpressionDistance_0] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsArea'"
+    A <- MaterialExpressionDDX_0
+    B <- MaterialExpressionConstant_0
+[MaterialExpressionDistance_1] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsArea'"
+    A <- MaterialExpressionDDY_0
+    B <- MaterialExpressionConstant_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    Id = 08BBF0564EBC6E943C5F83A7CD46076C
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsArea'"
+    bCollapsed = True
+    Preview <- MaterialExpressionWorldPosition_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = C5FA1AA24506BBB2CA98D8AA378887F9
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsArea'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsArea'"
+    A <- MaterialExpressionDistance_0
+    B <- MaterialExpressionDistance_1
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_CausticsArea'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

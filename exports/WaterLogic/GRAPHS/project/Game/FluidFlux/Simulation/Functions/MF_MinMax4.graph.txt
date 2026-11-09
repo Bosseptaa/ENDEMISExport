@@ -1,0 +1,101 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_MinMax4
+# класс: MaterialFunction; происхождение: проект; узлов: 16; связей: 33; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:31
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_MinMax4] MaterialFunction
+    StateId = 57EDAE784C53D1555184AD95B529ADB8
+    CombinedInputTypes = 8
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_12
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_MinMax4EditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_MinMax4EditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionComponentMask_3
+    ExpressionCollection <- MaterialExpressionMin_14
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_12
+    ExpressionCollection <- MaterialExpressionMin_15
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionMax_1
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    B = True
+    A = True
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionComponentMask_3] MaterialExpressionComponentMask
+    B = True
+    A = True
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    Id = FC8EC29B4494F1306ACA58AC4A5C681B
+    InputType = FunctionInput_Vector4
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Min"
+    bLastPreviewed = True
+    Id = D232AEC44D0C60333E058895253141D1
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    bCollapsed = True
+    A <- MaterialExpressionMin_15
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Max"
+    bLastPreviewed = True
+    Id = 65E5010342606384C06BAEA1E24D4099
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    bCollapsed = True
+    A <- MaterialExpressionMax_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionMax_0
+[MaterialExpressionMaterialFunctionCall_12] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionMin_14
+[MaterialExpressionMax_0] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionComponentMask_1
+[MaterialExpressionMax_1] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMin_14] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    A <- MaterialExpressionComponentMask_2
+    B <- MaterialExpressionComponentMask_3
+[MaterialExpressionMin_15] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_MinMax4'"
+    A <- MaterialExpressionMaterialFunctionCall_12
+    B <- MaterialExpressionMaterialFunctionCall_12
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

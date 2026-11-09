@@ -1,0 +1,12 @@
+﻿// Источник: /Game/FluidFlux/Simulation/Functions/MF_DampWave (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_3 ключ: Code
+// Входы: u, vL, vR
+// Выход: CMOT_Float1
+// Описание: Damp
+
+    if (u < 0.0f && (vL > 0.0f && vR > 0.0f))
+      u = 0.0;
+    
+    if (u > 0.0f && (vL < 0.0f && vR < 0.0f))
+      u = 0.0;
+return u;

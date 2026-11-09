@@ -1,0 +1,70 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_ClampMax2
+# класс: MaterialFunction; происхождение: проект; узлов: 13; связей: 22; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:25
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_ClampMax2] MaterialFunction
+    StateId = 22BBB5BF44410B6B18C16ABF8F2A80A9
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_ClampMax2EditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_ClampMax2EditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionDistance_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionMin_1
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionMultiply_2
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_ClampMax2'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ClampMax2'"
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    R = 1.000000
+    G = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_ClampMax2'"
+[MaterialExpressionDistance_0] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_ClampMax2'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionConstant_0
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_ClampMax2'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionDistance_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Val"
+    Id = F00F25BD4345DBFE04BDA4932DBF3D95
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_ClampMax2'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Max"
+    Id = D1B3D54C4B5EA08C89E7278D0EB52B91
+    InputType = FunctionInput_Scalar
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_ClampMax2'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 46C19A4D494F80CBDD563A863C7A1095
+    Function = "/Script/Engine.MaterialFunction'MF_ClampMax2'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_2
+[MaterialExpressionMin_1] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_ClampMax2'"
+    A <- MaterialExpressionDivide_2
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_ClampMax2'"
+    A <- MaterialExpressionMin_1
+    B <- MaterialExpressionFunctionInput_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

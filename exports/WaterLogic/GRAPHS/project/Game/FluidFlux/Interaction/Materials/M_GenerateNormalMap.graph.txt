@@ -1,0 +1,132 @@
+﻿# /Game/FluidFlux/Interaction/Materials/M_GenerateNormalMap
+# класс: Material; происхождение: проект; узлов: 22; связей: 42; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_GenerateNormalMap] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    bUsedWithEditorCompositing = True
+    EditorX = 1376
+    EditorY = 624
+    bCanMaskedBeAssumedOpaque = True
+    bCastRayTracedShadows = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 862D70ED4E861EC3D293D6B176D902CB
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="DefaultTexture",TextureReference="/Engine/EngineResources/DefaultTexture.DefaultTexture")
+    ReferencedDefaultTextures(0) = None
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = F8532E73432A6B77C7C77FB3C9D47D0B
+    EditorOnlyData <- M_GenerateNormalMapEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_GenerateNormalMapEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    ParameterGroupData(4) = (GroupName="None")
+    ParameterGroupData(5) = (GroupName="None")
+    ParameterGroupData(6) = (GroupName="None")
+    ParameterGroupData(7) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionAppendVector_0
+    Opacity <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_5
+    ExpressionCollection <- MaterialExpressionTextureProperty_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionStaticBoolParameter_0
+    ExpressionCollection <- MaterialExpressionStaticBoolParameter_1
+    ExpressionCollection <- MaterialExpressionStaticBoolParameter_2
+    ExpressionCollection <- MaterialExpressionStaticBoolParameter_3
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionConstant_1
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    A <- MaterialExpressionMultiply_2
+    B <- MaterialExpressionDivide_0
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionSaturate_0
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstA = 127.500000
+    ConstB = 255.000000
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_EncodeNormal.MF_EncodeNormal'"
+    FunctionInputs(1) = (ExpressionInputId=E0DF728D4417EFB42C0FE7B67D6CF22C,Input=(OutputIndex=-1,InputName="NormalToDecode"))
+    FunctionOutputs(0) = (ExpressionOutputId=F689F601493C22F7997D8C88AF141B47,Output=(OutputName="EncodedNormal"))
+    FunctionOutputs(1) = (ExpressionOutputId=2D980D8145E3BDD265538C93BE45965A,Output=(OutputName="DecodedNormal"))
+    Outputs(0) = (OutputName="EncodedNormal")
+    Outputs(1) = (OutputName="DecodedNormal")
+    FunctionInputs(0) <- MaterialExpressionNormalize_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_NormalMap.MF_NormalMap'"
+    FunctionOutputs(0) = (ExpressionOutputId=8844D5BA424A212E6BEEE289BE4BD630,Output=(OutputName="Height"))
+    FunctionOutputs(1) = (ExpressionOutputId=81B4D4824CFD06FACBCE9DB19BF2E230,Output=(OutputName="Normal"))
+    FunctionOutputs(2) = (ExpressionOutputId=09F7A8CE4821019FF9F6E2B0FC27C212,Output=(OutputName="Blur"))
+    FunctionOutputs(3) = (ExpressionOutputId=A666A5FF4B8EF04CB0EC16A99861F2CE,Output=(OutputName="Slope"))
+    Outputs(0) = (OutputName="Height")
+    Outputs(1) = (OutputName="Normal")
+    Outputs(2) = (OutputName="Blur")
+    Outputs(3) = (OutputName="Slope")
+    FunctionInputs(0) <- MaterialExpressionTextureObjectParameter_0
+    FunctionInputs(1) <- MaterialExpressionScalarParameter_0
+    FunctionInputs(2) <- MaterialExpressionTextureProperty_0
+    FunctionInputs(3) <- MaterialExpressionTextureCoordinate_5
+    FunctionInputs(4) <- MaterialExpressionStaticBoolParameter_0
+    FunctionInputs(5) <- MaterialExpressionStaticBoolParameter_1
+    FunctionInputs(6) <- MaterialExpressionStaticBoolParameter_2
+    FunctionInputs(7) <- MaterialExpressionStaticBoolParameter_3
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    A <- MaterialExpressionReroute_0
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Input <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionAdd_1
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "NormalScale"
+    ExpressionGUID = D39EAE3E47F386B879E7D887C5418A90
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.500000
+    ParameterName = "HeightScale"
+    ExpressionGUID = 5C6C8F084B1F5D6F05EA9A87658ED8F0
+[MaterialExpressionStaticBoolParameter_0] MaterialExpressionStaticBoolParameter
+    ParameterName = "UseLowQuality"
+    ExpressionGUID = D96037244E5474944329E5BDAC250B3B
+[MaterialExpressionStaticBoolParameter_1] MaterialExpressionStaticBoolParameter
+    DefaultValue = True
+    ParameterName = "UseChannelR"
+    ExpressionGUID = EADF44534BEDC7DD9A2EFEB35F43F8A4
+[MaterialExpressionStaticBoolParameter_2] MaterialExpressionStaticBoolParameter
+    ParameterName = "UseChannelG"
+    ExpressionGUID = DD07AE034E9CDB1AD212F29F4D2D7D94
+[MaterialExpressionStaticBoolParameter_3] MaterialExpressionStaticBoolParameter
+    ParameterName = "UseChannelB"
+    ExpressionGUID = B19C25B74F40A65CD5B9AC89FF0BF169
+[MaterialExpressionTextureCoordinate_5] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "Heightfield"
+    ExpressionGUID = 679AE1FC4C4DFF1F76DC13BA920B8298
+    bCollapsed = True
+[MaterialExpressionTextureProperty_0] MaterialExpressionTextureProperty
+    Property = TMTM_TexelSize
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

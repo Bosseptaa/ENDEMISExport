@@ -1,0 +1,133 @@
+﻿# /Game/FluidFlux/Surface/Lighting/Blueprints/BP_FluxDecal
+# класс: Blueprint; происхождение: проект; узлов: 30; связей: 51; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:110
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxDecal] Blueprint
+    ParentClass = "/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Surface/Blueprints/BP_FluxActor.BP_FluxActor_C'"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxDecal_C:SimpleConstructionScript_0'"
+    InheritableComponentHandler = "/Script/Engine.InheritableComponentHandler'BP_FluxDecal_C:InheritableComponentHandler'"
+    CategorySorting(0) = ""
+    CategorySorting(1) = "Event Graph"
+    CategorySorting(2) = "Default"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Surface/Lighting/Blueprints/BP_FluxDecal.BP_FluxDecal:EventGraph",SavedViewOffset=(X=13.619108,Y=-113.742859),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Surface/Lighting/Blueprints/BP_FluxDecal.BP_FluxDecal:UserConstructionScript",SavedViewOffset=(X=-261.000000,Y=-158.000000),SavedZoomAmount=1.000000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Surface/Lighting/Blueprints/BP_FluxDecal.BP_FluxDecal:CreateMaterials",SavedViewOffset=(X=-68.924500,Y=-477.041809),SavedZoomAmount=0.675000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxDecal_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 217F20C4452B9A8F1761B5AC460B0D22
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- CreateMaterials
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = F0A70C8D4BA514C7431A03BFE978D05A
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallParentFunction_0
+    Nodes(2) <- K2Node_CallFunction_0
+    Nodes(3) <- K2Node_PromotableOperator_0
+    Nodes(4) <- K2Node_VariableGet_2
+    Nodes(5) <- K2Node_VariableGet_1
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_CallParentFunction_0@UserConstructionScript] K2Node_CallParentFunction
+[K2Node_CallFunction_0@UserConstructionScript] K2Node_CallFunction
+[K2Node_PromotableOperator_0] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 0.010000
+[K2Node_VariableGet_2] K2Node_VariableGet (переменная: Size)
+[K2Node_VariableGet_1@UserConstructionScript] K2Node_VariableGet
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = D301975745F4BB56ADE675A752A996AA
+    Nodes(0) <- K2Node_Event_1
+    Nodes(1) <- K2Node_CallParentFunction_0
+    Nodes(2) <- K2Node_Event_0
+    Nodes(3) <- K2Node_MakeArray_0
+    Nodes(4) <- K2Node_Message_0
+    Nodes(5) <- K2Node_VariableGet_3
+[K2Node_Event_1] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    EnabledState = Disabled
+    bCommentBubblePinned = True
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[K2Node_CallParentFunction_0@EventGraph] K2Node_CallParentFunction (вызов: ReceiveBeginPlay @ /Script/Engine.BlueprintGeneratedClass)
+    EnabledState = Disabled
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[K2Node_Event_0] K2Node_Event (событие: ApplySurfaceData @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_MakeArray_0] K2Node_MakeArray
+[K2Node_Message_0] K2Node_Message (вызов: ApplySurfaceMaterialData @ /Script/Engine.BlueprintGeneratedClass)
+    ErrorType = 1
+    вход Domains = true
+    вход Colors = true
+[K2Node_VariableGet_3] K2Node_VariableGet (переменная: MaterialInstance)
+    CurrentVariation = ValidatedObject
+[CreateMaterials] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = DE09AB624CE0FD573555C78038F0BB4D
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+    Nodes(2) <- K2Node_VariableGet_5
+    Nodes(3) <- K2Node_VariableGet_7
+    Nodes(4) <- K2Node_VariableGet_9
+    Nodes(5) <- K2Node_VariableSet_1
+    Nodes(6) <- K2Node_VariableGet_0
+    Nodes(7) <- K2Node_CallFunction_1
+    Nodes(8) <- K2Node_VariableGet_1
+[K2Node_FunctionEntry_0@CreateMaterials] K2Node_FunctionEntry
+[K2Node_CallFunction_0@CreateMaterials] K2Node_CallFunction
+[K2Node_VariableGet_5] K2Node_VariableGet (переменная: DecalMesh)
+[K2Node_VariableGet_7] K2Node_VariableGet (переменная: MaterialInstance)
+    CurrentVariation = ValidatedObject
+[K2Node_VariableGet_9] K2Node_VariableGet (переменная: Material)
+[K2Node_VariableSet_1] K2Node_VariableSet (переменная: MaterialInstance)
+[K2Node_VariableGet_0] K2Node_VariableGet (переменная: DecalMesh)
+[K2Node_CallFunction_1] K2Node_CallFunction (вызов: SetTranslucentSortPriority @ /Script/CoreUObject.Class)
+[K2Node_VariableGet_1@CreateMaterials] K2Node_VariableGet (переменная: TranslucencySortPriority)
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ApplySurfaceData] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 53A23E6B44F267D8209BB386E9D4DDE0
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ApplySurfaceData] K2Node_FunctionEntry (вызов: ApplySurfaceData @ /Script/Engine.BlueprintGeneratedClass)
+    CustomGeneratedFunctionName = "ApplySurfaceData"
+    bIsIntermediateNode = True
+[K2Node_SetVariableOnPersistentFrame_0] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@ApplySurfaceData] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_FluxDecal)
+    bIsIntermediateNode = True
+    вход ElementIndex = 0
+    вход OptionalName = None
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_CallFunction_0@ApplySurfaceData].ReturnValue -> [K2Node_VariableSet_1].MaterialInstance
+[K2Node_CallFunction_0@ApplySurfaceData].then -> [K2Node_VariableSet_1].execute
+[K2Node_CallParentFunction_0@EventGraph].then -> [K2Node_CallFunction_0@ApplySurfaceData].execute
+[K2Node_Event_0].SurfaceActor -> [K2Node_Message_0].self
+[K2Node_Event_0].then -> [K2Node_VariableGet_3].execute
+[K2Node_Event_1].then -> [K2Node_CallParentFunction_0@EventGraph].execute#2
+[K2Node_FunctionEntry_0@ApplySurfaceData].SurfaceActor -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_Event_SurfaceActor
+[K2Node_FunctionEntry_0@ApplySurfaceData].then -> [K2Node_CallParentFunction_0@EventGraph].execute
+[K2Node_FunctionEntry_0@ApplySurfaceData].then#2 -> [K2Node_VariableGet_7].execute
+[K2Node_FunctionEntry_0@ApplySurfaceData].then#3 -> [K2Node_SetVariableOnPersistentFrame_0].execute
+[K2Node_MakeArray_0].Array -> [K2Node_Message_0].Materials
+[K2Node_PromotableOperator_0].ReturnValue -> [K2Node_CallFunction_0@ApplySurfaceData].NewScale
+[K2Node_SetVariableOnPersistentFrame_0].then -> [K2Node_CallFunction_0@ApplySurfaceData].execute#3
+[K2Node_VariableGet_0].DecalMesh -> [K2Node_CallFunction_1].self
+[K2Node_VariableGet_1@CreateMaterials].DecalMesh -> [K2Node_CallFunction_0@ApplySurfaceData].self
+[K2Node_VariableGet_1@CreateMaterials].TranslucencySortPriority -> [K2Node_CallFunction_1].NewTranslucentSortPriority
+[K2Node_VariableGet_2].Size -> [K2Node_PromotableOperator_0].A
+[K2Node_VariableGet_3].MaterialInstance -> [K2Node_MakeArray_0].[0]
+[K2Node_VariableGet_3].then -> [K2Node_Message_0].execute
+[K2Node_VariableGet_5].DecalMesh -> [K2Node_CallFunction_0@ApplySurfaceData].self#2
+[K2Node_VariableGet_7].else -> [K2Node_CallFunction_0@ApplySurfaceData].execute#2
+[K2Node_VariableGet_9].Material -> [K2Node_CallFunction_0@ApplySurfaceData].SourceMaterial
+[K2Node_VariableSet_1].then -> [K2Node_CallFunction_1].execute

@@ -1,0 +1,100 @@
+﻿# /Game/FluidFlux/Surface/Lighting/Functions/MF_LightAttenuation
+# класс: MaterialFunction; происхождение: проект; узлов: 19; связей: 38; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:37
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_LightAttenuation] MaterialFunction
+    StateId = 1B0FCAC54258688EFB2475A82E22F3F4
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_LightAttenuationEditorOnlyData
+[MF_LightAttenuationEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionMultiply_11
+    ExpressionCollection <- MaterialExpressionOneMinus_2
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionSquareRoot_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionDistance_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    A <- MaterialExpressionMultiply_12
+    B <- MaterialExpressionMultiply_10
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.001000
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+[MaterialExpressionDistance_0] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    A <- MaterialExpressionTextureCoordinate_0
+    B <- MaterialExpressionConstant_1
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    ConstA = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    B <- MaterialExpressionMultiply_10
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionSquareRoot_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Radius"
+    Id = 11D209444F0CF65ACF0C0C907297AE57
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Distance"
+    Id = 412958E74876C6DD3C6F46BE20BF2EA6
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    bCollapsed = True
+    Preview <- MaterialExpressionDistance_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "WithoutSingularity"
+    bLastPreviewed = True
+    Id = 50F673F341E2BBBCBAC669B9411B5347
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.010000
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    A <- MaterialExpressionMultiply_11
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMultiply_11] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    A <- MaterialExpressionOneMinus_2
+    B <- MaterialExpressionDivide_1
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    A <- MaterialExpressionReroute_0
+    B <- MaterialExpressionReroute_0
+[MaterialExpressionOneMinus_2] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    Input <- MaterialExpressionDivide_2
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionSquareRoot_0] MaterialExpressionSquareRoot
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+    Input <- MaterialExpressionAdd_4
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_LightAttenuation'"
+
+## СВЯЗИ

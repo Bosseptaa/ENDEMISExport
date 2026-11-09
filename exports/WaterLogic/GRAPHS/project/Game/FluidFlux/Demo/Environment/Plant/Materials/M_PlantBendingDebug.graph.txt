@@ -1,0 +1,117 @@
+﻿# /Game/FluidFlux/Demo/Environment/Plant/Materials/M_PlantBendingDebug
+# класс: Material; происхождение: проект; узлов: 26; связей: 52; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_PlantBendingDebug] Material
+    BlendMode = BLEND_Masked
+    MaterialDecalResponse = MDR_None
+    OpacityMaskClipValue = 0.010000
+    bEnableResponsiveAA = True
+    TwoSided = True
+    bGenerateSphericalParticleNormals = True
+    bUsedWithParticleSprites = True
+    bUsedWithNiagaraSprites = True
+    bUsedWithNiagaraRibbons = True
+    EditorX = 688
+    EditorY = 128
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 44D6EC5DA5AE5F806193D2818626E129
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 040C747A4EEA7A2D1F89BE9338574A78
+    EditorOnlyData <- M_PlantBendingDebugEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_PlantBendingDebugEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    BaseColor <- MaterialExpressionConstant3Vector_0
+    Metallic <- MaterialExpressionConstant_8
+    Specular <- MaterialExpressionConstant_6
+    Roughness <- MaterialExpressionConstant_7
+    Opacity <- MaterialExpressionMultiply_9
+    OpacityMask <- MaterialExpressionSphereMask_0
+    WorldPositionOffset <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionConstant_8
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionConstant_7
+    ExpressionCollection <- MaterialExpressionMultiply_9
+    ExpressionCollection <- MaterialExpressionSphereMask_0
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionParticleColor_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionParticlePositionWS_2
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionDynamicParameter_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionParticlePositionWS_0
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    A <- MaterialExpressionMultiply_1
+    B <- MaterialExpressionSubtract_2
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.500000
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_7] MaterialExpressionConstant
+[MaterialExpressionConstant_8] MaterialExpressionConstant
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=1.000000,B=1.000000,A=0.000000)
+[MaterialExpressionDynamicParameter_1] MaterialExpressionDynamicParameter
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionDynamicParameter_1
+    FunctionInputs(1) <- MaterialExpressionDynamicParameter_1
+    FunctionInputs(2) <- MaterialExpressionDynamicParameter_1
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionSphereMask_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = -0.700000
+    A <- MaterialExpressionSubtract_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    A <- MaterialExpressionConstant_1
+    B <- MaterialExpressionParticleColor_0
+[MaterialExpressionMultiply_9] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionMultiply_0
+[MaterialExpressionParticleColor_0] MaterialExpressionParticleColor
+[MaterialExpressionParticlePositionWS_0] MaterialExpressionParticlePositionWS
+[MaterialExpressionParticlePositionWS_2] MaterialExpressionParticlePositionWS
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.500000
+    ParameterName = "Radius"
+    ExpressionGUID = 21A2D7924FC05315BDE010A2CC28C7B0
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.500000
+    ParameterName = "Hardness"
+    ExpressionGUID = 73A30FFB4A6CCC7AC64676BCE24C45A5
+[MaterialExpressionSphereMask_0] MaterialExpressionSphereMask
+    A <- MaterialExpressionTextureCoordinate_0
+    B <- MaterialExpressionConstant_0
+    Radius <- MaterialExpressionScalarParameter_0
+    Hardness <- MaterialExpressionScalarParameter_1
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    A <- MaterialExpressionWorldPosition_1
+    B <- MaterialExpressionParticlePositionWS_2
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionParticlePositionWS_0
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

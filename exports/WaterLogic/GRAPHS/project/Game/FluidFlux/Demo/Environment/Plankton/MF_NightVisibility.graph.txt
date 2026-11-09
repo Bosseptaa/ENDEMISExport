@@ -1,0 +1,95 @@
+﻿# /Game/FluidFlux/Demo/Environment/Plankton/MF_NightVisibility
+# класс: MaterialFunction; происхождение: проект; узлов: 18; связей: 29; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_NightVisibility] MaterialFunction
+    StateId = 5D37F63A43860D9E4AFBB98719EE2DC6
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_NightVisibilityEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_NightVisibiityEditorOnlyData] ObjectRedirector
+[MF_NightVisibilityEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSkyAtmosphereLightDirection_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionDotProduct_1
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+    A <- MaterialExpressionMultiply_5
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=1.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+    bCollapsed = True
+[MaterialExpressionDotProduct_1] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+    A <- MaterialExpressionSkyAtmosphereLightDirection_0
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Treshold"
+    Id = 588326CE476421263980D19F1F2105F7
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_3
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Normal"
+    Id = 742C34F04C635029E41A18A63F6CE21D
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Scale"
+    SortPriority = -1
+    bLastPreviewed = True
+    Id = 156186AF4C4496689B7F579ED7F94B8B
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+    bCollapsed = True
+    A <- MaterialExpressionSaturate_1
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Flag"
+    bLastPreviewed = True
+    Id = A7F4E53B45911877B3BFCE81EA61DCDD
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_0
+[MaterialExpressionIf_0] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+    A <- MaterialExpressionAdd_1
+    AGreaterThanB <- MaterialExpressionConstant_1
+    ALessThanB <- MaterialExpressionConstant_2
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+    A <- MaterialExpressionDotProduct_1
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+    Input <- MaterialExpressionAdd_1
+[MaterialExpressionSkyAtmosphereLightDirection_0] MaterialExpressionSkyAtmosphereLightDirection
+    Function = "/Script/Engine.MaterialFunction'MF_NightVisibility'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

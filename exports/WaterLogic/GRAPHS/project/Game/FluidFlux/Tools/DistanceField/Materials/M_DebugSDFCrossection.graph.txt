@@ -1,0 +1,111 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Materials/M_DebugSDFCrossection
+# класс: Material; происхождение: проект; узлов: 21; связей: 41; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_DebugSDFCrossection] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000100
+    EditorX = 1600
+    EditorY = -368
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = C88E673E449B7296D74B38B7C69F96CA
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 9BDF01AF43FB729EF1453A99EC06E997
+    EditorOnlyData <- M_DebugSDFCrossectionEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_DebugSDFCrossectionEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionDivide_6
+    ExpressionCollection <- MaterialExpressionDivide_6
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionEyeAdaptation_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionDivide_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_2
+    ExpressionCollection <- MaterialExpressionSubtract_4
+    ExpressionCollection <- MaterialExpressionActorPositionWS_2
+    ExpressionCollection <- MaterialExpressionAppendVector_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+[MaterialExpressionActorPositionWS_2] MaterialExpressionActorPositionWS
+[MaterialExpressionAppendVector_3] MaterialExpressionAppendVector
+    A <- MaterialExpressionMaterialFunctionCall_5
+    B <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 50.000000
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    G = 1.000000
+[MaterialExpressionDivide_3] MaterialExpressionDivide
+    ConstB = 16.000000
+    A <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionDivide_6] MaterialExpressionDivide
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionEyeAdaptation_0] MaterialExpressionEyeAdaptation
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionMultiply_4
+    B <- MaterialExpressionMaterialFunctionCall_0
+    Alpha <- MaterialExpressionSaturate_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_DebugSDF.MF_DebugSDF'"
+    FunctionInputs(1) = (ExpressionInputId=AC5899E448DD5892093FF8A38C4B6023,Input=(OutputIndex=-1,InputName="Intensity"))
+    FunctionOutputs(0) = (ExpressionOutputId=F52B6C104EA30AD484491DA12B6D54F9,Output=(OutputName="DebugTexture"))
+    Outputs(0) = (OutputName="DebugTexture")
+    FunctionInputs(0) <- MaterialExpressionConstant_1
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_3
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_3
+    FunctionInputs(4) <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFSample.MF_SDFSample'"
+    FunctionOutputs(0) = (ExpressionOutputId=09568A6342631401E9159C9BAB97741B,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=6981E48145096DC72470EDA9186B9188,Output=(OutputName="Range"))
+    FunctionOutputs(2) = (ExpressionOutputId=1B0B83B543436BADB6AC659F9A46E198,Output=(OutputName="GridUV"))
+    FunctionOutputs(3) = (ExpressionOutputId=8B36A4DA49C3868F30EE8DA1D6C3EC4D,Output=(OutputName="Sample"))
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Range")
+    Outputs(2) = (OutputName="GridUV")
+    Outputs(3) = (OutputName="Sample")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_0
+    FunctionInputs(1) <- MaterialExpressionAppendVector_3
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    FunctionOutputs(2) = (ExpressionOutputId=17CE6E2C4E70841B48F3D1B73828AA03,Output=(OutputName="B"))
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    Outputs(2) = (OutputName="B")
+    FunctionInputs(0) <- MaterialExpressionSubtract_4
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 100.000000
+    A <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionMultiply_0
+[MaterialExpressionSubtract_4] MaterialExpressionSubtract
+    A <- MaterialExpressionWorldPosition_2
+    B <- MaterialExpressionActorPositionWS_2
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.400000,B=1.000000,A=1.000000)
+    ParameterName = "Color"
+    ExpressionGUID = 546F0FB74042A6214876BE8BCE34E3EB
+[MaterialExpressionWorldPosition_2] MaterialExpressionWorldPosition
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+[M_SDFCrossectionDebugEditorOnlyData] ObjectRedirector
+
+## СВЯЗИ

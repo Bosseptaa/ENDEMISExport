@@ -1,0 +1,250 @@
+﻿# /Game/FluidFlux/Coastline/Functions/MF_CoastlineSample
+# класс: MaterialFunction; происхождение: проект; узлов: 42; связей: 86; HLSL: 0; причина: папка /Game/FluidFlux; тело:5
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CoastlineSample] MaterialFunction
+    StateId = CD26C26C44733AB52EB5C9AE73E51017
+    CombinedInputTypes = 514
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_5
+    EditorOnlyData <- MF_CoastlineSampleEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CoastlineSampleEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionSubtract_5
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionDistance_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionInverseLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionSaturate_2
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionComment_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    ConstB = 2.159091
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    A <- MaterialExpressionMultiply_2
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 992
+    SizeY = 496
+    Text = "Inverse lerp reconstruction used for calculating magic constants"
+    CommentColor = (R=0.206076,G=0.984083,B=1.000000,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    Input <- MaterialExpressionSubtract_5
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    G = True
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    Input <- MaterialExpressionSubtract_5
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    A = True
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    Input <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.950000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 0.510000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+[MaterialExpressionDistance_0] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    A <- MaterialExpressionComponentMask_1
+    B <- MaterialExpressionConstant_0
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    A <- MaterialExpressionComponentMask_1
+    B <- MaterialExpressionDistance_0
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    A <- MaterialExpressionConstant_4
+    B <- MaterialExpressionSubtract_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = 973F69F04A567D6C876F98B15939EE63
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    bCollapsed = True
+    Preview <- MaterialExpressionWorldPosition_1
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "PreciseCoastline"
+    Id = 53C5B050460378A559C2668D8C1BEB5C
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Coastline"
+    SortPriority = 12451
+    bLastPreviewed = True
+    Id = 94959DB3460B356F9AE744B5728E38DA
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionIf_0] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    A <- MaterialExpressionMultiply_4
+    B <- MaterialExpressionScalarParameter_4
+    AGreaterThanB <- MaterialExpressionSaturate_2
+    ALessThanB <- MaterialExpressionConstant_1
+[MaterialExpressionInverseLinearInterpolate_0] MaterialExpressionInverseLinearInterpolate
+    ConstA = 0.510000
+    ConstB = 0.950000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    Value <- MaterialExpressionMultiply_1
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineDataSet.MF_CoastlineDataSet'"
+    FunctionOutputs(0) = (ExpressionOutputId=A9D3ACA244AF21FD94A8CBAE174A4AE4,Output=(OutputName="Layer"))
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    Outputs(0) = (OutputName="Layer")
+    FunctionInputs(0) <- MaterialExpressionMultiply_4
+    FunctionInputs(1) <- MaterialExpressionDivide_0
+    FunctionInputs(2) <- MaterialExpressionComponentMask_2
+    FunctionInputs(3) <- MaterialExpressionIf_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_FluxWorldToCoastlineUV.MF_FluxWorldToCoastlineUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=E7854F864B404DDBFDE83C8D5C660588,Output=(OutputName="Scale"))
+    FunctionOutputs(1) = (ExpressionOutputId=CB6576E1418A4B7D0149429B6CEFED18,Output=(OutputName="UV"))
+    FunctionOutputs(2) = (ExpressionOutputId=AB54F8A04BF80648975AFEAEF6AA4B89,Output=(OutputName="Location"))
+    FunctionOutputs(3) = (ExpressionOutputId=CC73E6C2412A717020F206AE8D6F4D7F,Output=(OutputName="ReferencePlaneHeight"))
+    FunctionOutputs(4) = (ExpressionOutputId=D453923D4F896744C8CAB5BC03EE1446,Output=(OutputName="Resolution"))
+    FunctionOutputs(5) = (ExpressionOutputId=4ADE6B714BD48DB8764BF28BC453AAE2,Output=(OutputName="TexelSize"))
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    Outputs(0) = (OutputName="Scale")
+    Outputs(1) = (OutputName="UV")
+    Outputs(2) = (OutputName="Location")
+    Outputs(3) = (OutputName="ReferencePlaneHeight")
+    Outputs(4) = (OutputName="Resolution")
+    Outputs(5) = (OutputName="TexelSize")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Underwater/Functions/MF_TextureSamplePrecise2D.MF_TextureSamplePrecise2D'"
+    FunctionInputs(1) = (ExpressionInputId=9C8A9F4A4A314C30FBB52E8B3603C9CC,Input=(OutputIndex=-1,InputName="Mipmap"))
+    FunctionInputs(4) = (ExpressionInputId=0C70E65A4F619A9B77E9708B05A6396B,Input=(OutputIndex=-1,InputName="Scale"))
+    FunctionOutputs(0) = (ExpressionOutputId=67F4F1BE48CE40DA1EF29A9BE043C32A,Output=(OutputName="SampleR"))
+    FunctionOutputs(1) = (ExpressionOutputId=4650078740E7E8C5839CB38796265565,Output=(OutputName="SampleRGBA"))
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    Outputs(0) = (OutputName="SampleR")
+    Outputs(1) = (OutputName="SampleRGBA")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_1
+    FunctionInputs(2) <- MaterialExpressionSaturate_0
+    FunctionInputs(3) <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    A <- MaterialExpressionSubtract_2
+    B <- MaterialExpressionDivide_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    A <- MaterialExpressionReroute_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = -4.545450
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    A <- MaterialExpressionDistance_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    ConstB = 11000.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    Input <- MaterialExpressionMultiply_3
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    Input <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    Input <- MaterialExpressionInverseLinearInterpolate_0
+[MaterialExpressionSaturate_2] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    Input <- MaterialExpressionAdd_1
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 10640.000000
+    ParameterName = "FluxWorldCoastlineDecode"
+    ExpressionGUID = C99DF96D440BA63C4C9BBF9A3528EBBE
+    Group = "FluxData"
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    DefaultValue = -900.000000
+    ParameterName = "ShoreWaveWidth"
+    ExpressionGUID = AE1B0BCC43DD43AEFF47319704E0F06B
+    Group = "Coastline"
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    B <- MaterialExpressionMultiply_0
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    A <- MaterialExpressionConstant_2
+    B <- MaterialExpressionConstant_3
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionConstant_3
+[MaterialExpressionSubtract_5] MaterialExpressionSubtract
+    ConstA = 0.500000
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    B <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "FluxWorldCoastlineMap"
+    ExpressionGUID = 3FB7E0A94C25C7058E462994141BB516
+    Group = "FluxData"
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+    bCollapsed = True
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineSample'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

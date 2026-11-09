@@ -1,0 +1,44 @@
+﻿# /Game/FluidFlux/Simulation/Materials/M_ShallowIntegrateVelocity_Substrate
+# класс: Material; происхождение: проект; узлов: 5; связей: 7; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:46
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_ShallowIntegrateVelocity_Substrate] Material
+    BlendMode = BLEND_AlphaComposite
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    bAllowNegativeEmissiveColor = True
+    EditorX = 3456
+    EditorY = -217
+    bCanMaskedBeAssumedOpaque = True
+    bCastRayTracedShadows = False
+    bUseTranslucencyVertexFog = False
+    BlendableOutputAlpha = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = A37B6D3E4F2E4FFE15AD3DA6C20AA1BF
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="DefaultTexture",TextureReference="/Engine/EngineResources/DefaultTexture.DefaultTexture")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ParameterOverviewExpansion = (("-12Global", True),("-12Global FluxData", True))
+    LightingGuid = 4CD8DCDA497B85A67AC6B98052B8178A
+    EditorOnlyData <- M_ShallowIntegrateVelocity_SubstrateEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_ShallowIntegrateVelocity_SubstrateEditorOnlyData] MaterialEditorOnlyData
+    EmissiveColor <- MaterialExpressionMaterialFunctionCall_22
+    Opacity <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_22
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+[MaterialExpressionMaterialFunctionCall_22] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_ShallowIntegrateVelocity.MF_ShallowIntegrateVelocity'"
+    FunctionOutputs(0) = (ExpressionOutputId=2186E0554BC4AB924A453A8BA2AF3D35,Output=(OutputName="VelocityHeight"))
+    FunctionOutputs(1) = (ExpressionOutputId=4562D1B5494BF0DF98BBD781D3DA9260,Output=(OutputName="Foam"))
+    Outputs(0) = (OutputName="VelocityHeight")
+    Outputs(1) = (OutputName="Foam")
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionMaterialFunctionCall_22
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

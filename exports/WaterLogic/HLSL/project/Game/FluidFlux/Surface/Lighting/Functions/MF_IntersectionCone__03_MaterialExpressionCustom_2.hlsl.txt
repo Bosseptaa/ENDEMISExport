@@ -1,0 +1,86 @@
+﻿// Источник: /Game/FluidFlux/Surface/Lighting/Functions/MF_IntersectionCone (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_2 ключ: Code
+// Входы: org, dir
+// Выход: CMOT_Float1
+// Описание: нет
+
+	
+	
+		// scale and offset into a unit cube
+	org.x += 0.5;
+	float s = 0.5;
+	org.x *= s;
+	dir.x *= s;
+	
+	// quadratic x^2 = y^2 + z^2
+	float a = dir.y * dir.y + dir.z * dir.z - dir.x * dir.x;
+	float b = org.y * dir.y + org.z * dir.z - org.x * dir.x;
+	float c = org.y * org.y + org.z * org.z - org.x * org.x;
+	
+	float cap = (s - org.x) / dir.x;
+ 
+	// linear
+	if( a == 0.0 )
+	{
+		near = -0.5 * c/b;
+		float x = org.x + near * dir.x;
+		if( x < 0.0 || x > s )
+			return 0.0; 
+
+		far = cap;
+		float temp = min(far, near); 
+		far = max(far, near);
+		near = temp;
+
+		if (far < 0.0) return 0.0;
+
+	}
+
+	float delta = b * b - a * c;
+	if( delta < 0.0 )
+		return 0.0;
+
+	// 2 roots
+	float deltasqrt = sqrt(delta);
+	float arcp = 1.0 / a;
+	near = (-b - deltasqrt) * arcp;
+	far = (-b + deltasqrt) * arcp;
+	
+	// order roots
+	float temp = min(far, near);
+	far = max(far, near);
+	near = temp;
+
+	float xnear = org.x + near * dir.x;
+	float xfar = org.x + far * dir.x;
+
+	if( xnear < 0.0 )
+	{
+		if( xfar < 0.0 || xfar > s )
+			return 0.0;
+		
+		near = far;       
+		far = cap;
+	}
+	else if( xnear > s )
+	{
+		if( xfar < 0.0 || xfar > s )
+			return 0.0;
+		
+		near = cap;  
+	}
+	else if( xfar < 0.0 )
+	{
+		// The apex is problematic,
+		// additional checks needed to
+		// get rid of the blinking tip here.
+		far = near;
+		near = cap;
+	}
+	else if( xfar > s )
+	{
+		far = cap;
+	}
+ 	near = max(near, 0.0);
+	if  (far <= 0.0)  return 0.0;
+return 1.0;

@@ -1,0 +1,58 @@
+﻿// Источник: /Game/FluidFlux/Tools/DistanceField/Niagara/NS_RasterizeSDF (NiagaraNodeCustomHlsl, происхождение: проект)
+// Объект: NiagaraNodeCustomHlsl_1 ключ: CustomHlsl
+// Входы: нет
+// Выход: не указан
+// Описание: нет
+
+#if GPU_SIMULATION
+
+float ValSdf = -10000000.0;
+int Out_Num; InShapeLocationRadius.Length(Out_Num);
+for (int Index = 0; Index <= Out_Num; Index++)
+{
+    float4 ShapeLocationR;
+    InShapeLocationRadius.Get(Index, ShapeLocationR);
+
+ // Relative positon
+    float3 RelativeLocation = ShapeLocationR.xyz - InGridLocation.xyz;
+
+    const float Bounds = length(RelativeLocation);
+ 
+    if (Bounds < 2000.0f)
+    {
+
+        float3 ShapeForward;
+        float3 ShapeUp;
+        float3 ShapeSide;
+        InShapeForward.Get(Index, ShapeForward);
+        InShapeUp.Get(Index, ShapeUp);
+        ShapeSide = -cross(ShapeForward, ShapeUp);
+
+        RelativeLocation = 
+            ShapeForward * RelativeLocation.x +
+            ShapeSide * RelativeLocation.y +
+            ShapeUp * RelativeLocation.z;
+
+
+        float3 ShapeSize;
+        InSize.Get(Index, ShapeSize);
+        float3 q = abs(RelativeLocation) - ShapeSize + ShapeLocationR.w;
+        const float Distance = ShapeLocationR.w - (length(max(q,0.0)) + min(max(q.x,max(q.y,q.z)),0.0));
+        ValSdf = max(ValSdf, Distance);
+    }
+
+    // Sphere 
+    //  const float Distance = ShapeLocationR.w - length(RelativeLocation);
+}
+ 
+if (ValSdf < DistanceRange)
+{
+  OutRGBA = float4((ValSdf/DistanceRange) + 0.5f, 0.0, 0.0, 0.0);
+  Enabled = true;
+  return;
+}  
+
+#endif
+
+OutRGBA = float4(0.0, 0.0, 0.0, 0.0);
+Enabled = false;

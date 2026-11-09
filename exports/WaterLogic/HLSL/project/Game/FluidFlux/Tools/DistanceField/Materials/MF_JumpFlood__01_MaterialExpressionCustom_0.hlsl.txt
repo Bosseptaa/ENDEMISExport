@@ -1,0 +1,32 @@
+﻿// Источник: /Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: inTexture, textureSize, texelPosition, stepLength
+// Выход: CMOT_Float2
+// Описание: JumpFlood
+
+    float bestDist = 65535.0;
+	float2 bestSeed = Texture2DSample(inTexture, inTextureSampler, texelPosition / textureSize).xy;
+    float sdfSign = sign(bestSeed.x);
+	float2 adjustScale = float2(1.0, 1.0);// float2(1.0, textureSize.x/textureSize.y);
+    for(int i = -1;i <= 1;i++)
+    {
+        for(int j = -1;j <= 1;j++)
+        {
+            float2 curUV = texelPosition + float2(i,j) * stepLength;
+            float2 seedPosition = abs(Texture2DSample(inTexture, inTextureSampler, curUV / textureSize).xy);
+			
+			if (all(seedPosition != float2(0.0, 0.0)))
+			{
+				float curDist = length((seedPosition.xy - texelPosition) * adjustScale);
+				if (bestDist > curDist)
+				{
+					bestSeed = seedPosition;
+					bestDist = curDist;
+				}
+			}
+        }
+    }
+    
+    return float2(abs(bestSeed) * sdfSign);
+	
+	

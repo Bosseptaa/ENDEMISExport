@@ -1,0 +1,66 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood
+# класс: MaterialFunction; происхождение: проект; узлов: 10; связей: 16; HLSL: 1; причина: папка /Game/FluidFlux; HLSL:1
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_JumpFlood] MaterialFunction
+    StateId = 7443734F4DE7EAAFE8EA96BBDBB6F56E
+    CombinedInputTypes = 31
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_JumpFloodEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_JumpFloodEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionTextureProperty_0
+    ExpressionCollection <- MaterialExpressionTextureObject_0
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: JumpFlood
+    OutputType = CMOT_Float2
+    Function = "/Script/Engine.MaterialFunction'MF_JumpFlood'"
+    Desc = "texelPosition is center of texel (include half-texel offset)"
+    bRealtimePreview = True
+    Inputs(0) inTexture <- MaterialExpressionFunctionInput_0
+    Inputs(1) textureSize <- MaterialExpressionTextureProperty_0
+    Inputs(2) texelPosition <- MaterialExpressionFunctionInput_1
+    Inputs(3) stepLength <- MaterialExpressionFunctionInput_2
+    Code: HLSL, 26 строк (см. HLSL/)
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "in_texture"
+    Id = 54BC5ECC4582954C28FFCA9F1CFACB16
+    InputType = FunctionInput_Texture2D
+    Function = "/Script/Engine.MaterialFunction'MF_JumpFlood'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureObject_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    описание: texelPosition is center of texel (include half-texel offset)
+    InputName = "in_texel_position"
+    Id = 5CB30D96427C3323E2A223AA5D6E326D
+    InputType = FunctionInput_Vector2
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_JumpFlood'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "In_step_length"
+    Id = 220722324AFAC33D5CB5E08CA98DC936
+    InputType = FunctionInput_Scalar
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_JumpFlood'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = C08C87CD404DED7D91D147BFDB160E23
+    Function = "/Script/Engine.MaterialFunction'MF_JumpFlood'"
+    A <- MaterialExpressionCustom_0
+[MaterialExpressionTextureObject_0] MaterialExpressionTextureObject
+    Function = "/Script/Engine.MaterialFunction'MF_JumpFlood'"
+    bCollapsed = True
+[MaterialExpressionTextureProperty_0] MaterialExpressionTextureProperty
+    Function = "/Script/Engine.MaterialFunction'MF_JumpFlood'"
+    TextureObject <- MaterialExpressionFunctionInput_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

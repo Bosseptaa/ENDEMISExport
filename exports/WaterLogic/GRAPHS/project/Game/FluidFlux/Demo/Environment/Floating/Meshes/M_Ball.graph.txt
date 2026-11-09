@@ -1,0 +1,64 @@
+﻿# /Game/FluidFlux/Demo/Environment/Floating/Meshes/M_Ball
+# класс: Material; происхождение: проект; узлов: 15; связей: 29; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_Ball] Material
+    bUsedWithNiagaraMeshParticles = True
+    bUsedWithStaticLighting = True
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = C45606F4AE2067874A22B4877D7BAD9C
+    LightingGuid = 54F2ACDC46C0CE69519681987BF42395
+    EditorOnlyData <- M_BallEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_BallEditorOnlyData] MaterialEditorOnlyData
+    BaseColor <- MaterialExpressionLinearInterpolate_0
+    Specular <- MaterialExpressionConstant_2
+    Roughness <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionParticleColor_0
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionNormalize_1
+    ExpressionCollection <- MaterialExpressionSaturate_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.100000
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    R = 8.000000
+    G = 1.000000
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionMultiply_2
+    B <- MaterialExpressionOneMinus_0
+    Alpha <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/ArtTools/RenderToTexture/MaterialFunctions/CheckerPattern.CheckerPattern'"
+    FunctionOutputs(0) = (ExpressionOutputId=7183E0CD4C9C77E63748A3A80E7DB378,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionTextureCoordinate_0
+    FunctionInputs(1) <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    A <- MaterialExpressionNormalize_1
+    B <- MaterialExpressionSaturate_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_1
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionNormalize_1] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionParticleColor_0
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionMultiply_1
+[MaterialExpressionParticleColor_0] MaterialExpressionParticleColor
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionParticleColor_0
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

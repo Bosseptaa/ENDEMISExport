@@ -1,0 +1,47 @@
+﻿# /Game/FluidFlux/Interaction/Blueprints/Interfaces/BPI_FluxInteraction
+# класс: Blueprint; происхождение: проект; узлов: 8; связей: 9; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BPI_FluxInteraction] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/CoreUObject.Interface'"
+    BlueprintType = BPTYPE_Interface
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = ""
+    LastEditedDocuments(0) = ()
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BPI_FluxInteraction_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 9E2D43DC49E482C227E4AB8D61BD6D9C
+    FunctionGraphs(0) <- GetInteractions
+    FunctionGraphs(1) <- GetShape
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[GetInteractions] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 2C5F2F284ED0681AF2CD12AA73F8B1D0
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetInteractions] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetInteractions] K2Node_FunctionResult
+[GetShape] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 3A06096544620F95A19E06AC2624342C
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetShape] K2Node_FunctionEntry (вызов: GetShape)
+    MetaData = (ToolTip=NSLOCTEXT("", "46006C564DBA223BA2ACC2B36C9B76EB", "Returns the list of interactions implemented by the actor."))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+[K2Node_FunctionResult_0@GetShape] K2Node_FunctionResult (вызов: GetShape)
+    bIsEditable = True
+    bIsEditable = True
+    вход Location = 0, 0, 0
+    вход Radius = 0.0
+    вход Location = 0, 0, 0
+    вход Radius = 0.0
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+
+## СВЯЗИ
+[K2Node_FunctionEntry_0@GetShape].then -> [K2Node_FunctionResult_0@GetShape].execute
+[K2Node_FunctionEntry_0@GetShape].then#2 -> [K2Node_FunctionResult_0@GetShape].execute#2

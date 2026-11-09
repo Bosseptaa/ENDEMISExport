@@ -1,0 +1,63 @@
+﻿# /Game/FluidFlux/Coastline/Functions/MF_CoastlineDataSet
+# класс: MaterialFunction; происхождение: проект; узлов: 9; связей: 13; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CoastlineDataSet] MaterialFunction
+    bExposeToLibrary = True
+    LibraryCategoriesText(0) = NSLOCTEXT("", "3100EBEA4BF122CA702052840AB5F5C7", "ImaginaryBlend")
+    StateId = AB67D8D34BB1A685BE8F16931A355394
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 2048
+    EditorOnlyData <- MF_CoastlineDataSetEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CoastlineDataSetEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionMakeMaterialAttributes_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Distance"
+    Id = 1AEE66F5431935485C8F619FAD9072C0
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineDataSet'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Direction"
+    Id = 9461B8DC48E5208CA0E7DF9EEF43342D
+    InputType = FunctionInput_Vector2
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineDataSet'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Scale"
+    Id = 53FE4F8347FA9902C55094814DD48AF8
+    InputType = FunctionInput_Scalar
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineDataSet'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Mask"
+    Id = 0A14723B4D3EAD1258E25DA5C7FFA997
+    InputType = FunctionInput_Scalar
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineDataSet'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Layer"
+    bLastPreviewed = True
+    Id = A9D3ACA244AF21FD94A8CBAE174A4AE4
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineDataSet'"
+    bCollapsed = True
+    A <- MaterialExpressionMakeMaterialAttributes_0
+[MaterialExpressionMakeMaterialAttributes_0] MaterialExpressionMakeMaterialAttributes
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineDataSet'"
+    Metallic <- MaterialExpressionFunctionInput_3
+    Specular <- MaterialExpressionFunctionInput_2
+    Roughness <- MaterialExpressionFunctionInput_0
+    CustomizedUVs(0) <- MaterialExpressionFunctionInput_1
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,37 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Fluid/MF_Time
+# класс: MaterialFunction; происхождение: проект; узлов: 7; связей: 9; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:14
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Time] MaterialFunction
+    StateId = 12F2D1AD49204B79BB635F90168F6100
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_TimeEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_TimeEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionTime_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionCollectionParameter_0
+[MaterialExpressionCollectionParameter_0] MaterialExpressionCollectionParameter
+    Collection = "/Script/Engine.MaterialParameterCollection'/Game/FluidFlux/Surface/Materials/MPC_FluidFlux.MPC_FluidFlux'"
+    ParameterName = "TimeScale"
+    ParameterId = 7BDBB08F41796BB70FBE858496C4BA42
+    Function = "/Script/Engine.MaterialFunction'MF_Time'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Time"
+    bLastPreviewed = True
+    Id = D518ED86409053561A1E83BC4F7918B3
+    Function = "/Script/Engine.MaterialFunction'MF_Time'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Time'"
+    A <- MaterialExpressionTime_0
+    B <- MaterialExpressionCollectionParameter_0
+[MaterialExpressionTime_0] MaterialExpressionTime
+    Function = "/Script/Engine.MaterialFunction'MF_Time'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

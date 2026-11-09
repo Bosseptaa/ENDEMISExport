@@ -1,0 +1,158 @@
+﻿# /Game/FluidFlux/Demo/Environment/Palm/Functions/MF_InfinityPivot_TC2_TC3_VC
+# класс: MaterialFunction; происхождение: проект; узлов: 27; связей: 48; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_InfinityPivot_TC2_TC3_VC] MaterialFunction
+    описание: Calculate leaf animation.
+    LibraryCategoriesText(0) = NSLOCTEXT("", "40C9C46A419909F400661BBFB2DCEAE7", "ImaginaryBlend")
+    StateId = 3D7AA8CE443AF5189B9F1B81F7509B91
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_InfinityPivot_TC2_TC3_VCEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_InfinityPivot_TC2_TC3_VCEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_2
+    ExpressionCollection <- MaterialExpressionAppendVector_2
+    ExpressionCollection <- MaterialExpressionTransformPosition_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_3
+    ExpressionCollection <- MaterialExpressionComponentMask_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionComponentMask_8
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_5
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionTransform_3
+    ExpressionCollection <- MaterialExpressionConstantBiasScale_2
+    ExpressionCollection <- MaterialExpressionVertexColor_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_6
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionFunctionOutput_5
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionDistance_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+[MaterialExpressionAppendVector_2] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    A <- MaterialExpressionTextureCoordinate_2
+    B <- MaterialExpressionComponentMask_3
+[MaterialExpressionComponentMask_3] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    Input <- MaterialExpressionTextureCoordinate_3
+[MaterialExpressionComponentMask_8] MaterialExpressionComponentMask
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    Input <- MaterialExpressionTextureCoordinate_5
+[MaterialExpressionConstantBiasScale_2] MaterialExpressionConstantBiasScale
+    Bias = -0.500000
+    Scale = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    Input <- MaterialExpressionVertexColor_1
+[MaterialExpressionDistance_0] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    A <- MaterialExpressionTransformPosition_1
+    B <- MaterialExpressionWorldPosition_0
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    A <- MaterialExpressionFunctionOutput_3
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Mask"
+    SortPriority = 13
+    bLastPreviewed = True
+    Id = 588845854D206410F6642ABB8790D0E4
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    bCollapsed = True
+    A <- MaterialExpressionSaturate_1
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Postion"
+    bLastPreviewed = True
+    Id = A5AC8CB9457CA79C64FE9DBC803F2DBD
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    bCollapsed = True
+    A <- MaterialExpressionTransformPosition_1
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Random"
+    SortPriority = 22
+    bLastPreviewed = True
+    Id = A2D0765E4259DFF9029489864AF256AC
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    bCollapsed = True
+    A <- MaterialExpressionComponentMask_8
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "Distance"
+    SortPriority = 12
+    bLastPreviewed = True
+    Id = 69D07DD341107F0673F7808C32278E34
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    bCollapsed = True
+    A <- MaterialExpressionDistance_0
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "Normalized"
+    SortPriority = 3
+    bLastPreviewed = True
+    Id = 5F79C54246380446AB9A31BE9C29389E
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    bCollapsed = True
+    A <- MaterialExpressionVertexColor_1
+[MaterialExpressionFunctionOutput_5] MaterialExpressionFunctionOutput
+    OutputName = "Length"
+    SortPriority = 10
+    bLastPreviewed = True
+    Id = 6DC1634243AA9C2CF8A0F788E55AF4F8
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    bCollapsed = True
+    A <- MaterialExpressionDivide_0
+[MaterialExpressionFunctionOutput_6] MaterialExpressionFunctionOutput
+    OutputName = "Direction"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = 2B1E434649D9C3018B571A9E1814BB71
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    bCollapsed = True
+    A <- MaterialExpressionTransform_3
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 1000.000000
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    A <- MaterialExpressionVertexColor_1
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 1024.000000
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    A <- MaterialExpressionFunctionOutput_4
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    Input <- MaterialExpressionMultiply_1
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 1024.000000
+    ParameterName = "LengthScale"
+    ExpressionGUID = 2FF0CB6D420D47D33715948D497EA80E
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+[MaterialExpressionTextureCoordinate_2] MaterialExpressionTextureCoordinate
+    CoordinateIndex = 2
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+[MaterialExpressionTextureCoordinate_3] MaterialExpressionTextureCoordinate
+    CoordinateIndex = 3
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+[MaterialExpressionTextureCoordinate_5] MaterialExpressionTextureCoordinate
+    CoordinateIndex = 3
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+[MaterialExpressionTransform_3] MaterialExpressionTransform
+    TransformSourceType = TRANSFORMSOURCE_Local
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    Input <- MaterialExpressionConstantBiasScale_2
+[MaterialExpressionTransformPosition_1] MaterialExpressionTransformPosition
+    TransformType = TRANSFORMPOSSOURCE_World
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+    Input <- MaterialExpressionAppendVector_2
+[MaterialExpressionVertexColor_1] MaterialExpressionVertexColor
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_InfinityPivot_TC2_TC3_VC'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

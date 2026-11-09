@@ -1,0 +1,49 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Materials/M_DebugSDFHeightnap
+# класс: Material; происхождение: проект; узлов: 8; связей: 14; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_DebugSDFHeightnap] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.500000
+    EditorX = 1328
+    EditorY = -192
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 9B036F594B9F7C59DA8D12B192A8A47E
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = DD25C0344E8C875932312F9400D0E733
+    EditorOnlyData <- M_DebugSDFHeightnapEditorOnlyData
+[M_DebugSDFHeightnapEditorOnlyData] MaterialEditorOnlyData
+    EmissiveColor <- MaterialExpressionDivide_1
+    OpacityMask <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionDivide_4
+    ExpressionCollection <- MaterialExpressionEyeAdaptation_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionFrac_0
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    A <- MaterialExpressionSaturate_0
+    B <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionDivide_4] MaterialExpressionDivide
+    ConstB = 40.000000
+    A <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionEyeAdaptation_0] MaterialExpressionEyeAdaptation
+[MaterialExpressionFrac_0] MaterialExpressionFrac
+    Input <- MaterialExpressionDivide_4
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFHeightmapSample.MF_SDFHeightmapSample'"
+    FunctionInputs(0) = (ExpressionInputId=B3D683E84EB5BBF2103F75B1942A86E9,Input=(OutputIndex=-1,InputName="WorldPosition"))
+    FunctionOutputs(0) = (ExpressionOutputId=708295E34353B792CF1B398969D23468,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=D8B20A024F07D724667626A14B980640,Output=(OutputName="Mask"))
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Mask")
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionFrac_0
+
+## СВЯЗИ

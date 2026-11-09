@@ -1,0 +1,247 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFSample
+# класс: MaterialFunction; происхождение: проект; узлов: 36; связей: 76; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SDFSample] MaterialFunction
+    StateId = CD76DC7A464BE9E619E9C8882B4869B8
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_3
+    DependentFunctionExpressionCandidates(4) <- MaterialExpressionMaterialFunctionCall_4
+    EditorOnlyData <- MF_SDFSampleEditorOnlyData
+[MF_SDFSampleEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionSubtract_7
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMax_1
+    ExpressionCollection <- MaterialExpressionMax_2
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionTextureProperty_0
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    Input <- MaterialExpressionSubtract_1
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    Input <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    Input <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    Input <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstB = 800.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionConstant_0
+    B <- MaterialExpressionComponentMask_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = 2E2F054C40A449BB7D1136AC95E78A8D
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Flip"
+    Id = FB8CD75747D2A1B91BC58C8401FB19A4
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Sample"
+    bLastPreviewed = True
+    Id = 8B36A4DA49C3868F30EE8DA1D6C3EC4D
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    bCollapsed = True
+    A <- MaterialExpressionTextureSampleParameter2D_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Distance"
+    SortPriority = -3
+    bLastPreviewed = True
+    Id = 09568A6342631401E9159C9BAB97741B
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    bCollapsed = True
+    A <- MaterialExpressionSubtract_3
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "GridUV"
+    bLastPreviewed = True
+    Id = 1B0B83B543436BADB6AC659F9A46E198
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_2
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "Range"
+    SortPriority = -2
+    bLastPreviewed = True
+    Id = 6981E48145096DC72470EDA9186B9188
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionAdd_0
+    B <- MaterialExpressionOneMinus_0
+    Alpha <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionSubtract_7
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFData.MF_SDFData'"
+    FunctionOutputs(0) = (ExpressionOutputId=6F5E0EB4448F770782266A8988172AD7,Output=(OutputName="Tiles"))
+    FunctionOutputs(1) = (ExpressionOutputId=0390D16C4D284B24166BC49BF95BBB21,Output=(OutputName="Range"))
+    FunctionOutputs(2) = (ExpressionOutputId=8DA658C7473DFCB681BF998FD4A42D29,Output=(OutputName="Position"))
+    FunctionOutputs(3) = (ExpressionOutputId=F0B8A022418205E347BDF4BA4286EE9F,Output=(OutputName="Size"))
+    FunctionOutputs(4) = (ExpressionOutputId=153A2CE742276E00F08456BC91616A72,Output=(OutputName="Resolution"))
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    Outputs(0) = (OutputName="Tiles")
+    Outputs(1) = (OutputName="Range")
+    Outputs(2) = (OutputName="Position")
+    Outputs(3) = (OutputName="Size")
+    Outputs(4) = (OutputName="Resolution")
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFData.MF_SDFData'"
+    FunctionOutputs(0) = (ExpressionOutputId=6F5E0EB4448F770782266A8988172AD7,Output=(OutputName="Tiles"))
+    FunctionOutputs(1) = (ExpressionOutputId=0390D16C4D284B24166BC49BF95BBB21,Output=(OutputName="Range"))
+    FunctionOutputs(2) = (ExpressionOutputId=8DA658C7473DFCB681BF998FD4A42D29,Output=(OutputName="Position"))
+    FunctionOutputs(3) = (ExpressionOutputId=F0B8A022418205E347BDF4BA4286EE9F,Output=(OutputName="Size"))
+    FunctionOutputs(4) = (ExpressionOutputId=153A2CE742276E00F08456BC91616A72,Output=(OutputName="Resolution"))
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    Outputs(0) = (OutputName="Tiles")
+    Outputs(1) = (OutputName="Range")
+    Outputs(2) = (OutputName="Position")
+    Outputs(3) = (OutputName="Size")
+    Outputs(4) = (OutputName="Resolution")
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFData.MF_SDFData'"
+    FunctionOutputs(0) = (ExpressionOutputId=6F5E0EB4448F770782266A8988172AD7,Output=(OutputName="Tiles"))
+    FunctionOutputs(1) = (ExpressionOutputId=0390D16C4D284B24166BC49BF95BBB21,Output=(OutputName="Range"))
+    FunctionOutputs(2) = (ExpressionOutputId=8DA658C7473DFCB681BF998FD4A42D29,Output=(OutputName="Position"))
+    FunctionOutputs(3) = (ExpressionOutputId=F0B8A022418205E347BDF4BA4286EE9F,Output=(OutputName="Size"))
+    FunctionOutputs(4) = (ExpressionOutputId=153A2CE742276E00F08456BC91616A72,Output=(OutputName="Resolution"))
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    Outputs(0) = (OutputName="Tiles")
+    Outputs(1) = (OutputName="Range")
+    Outputs(2) = (OutputName="Position")
+    Outputs(3) = (OutputName="Size")
+    Outputs(4) = (OutputName="Resolution")
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFData.MF_SDFData'"
+    FunctionOutputs(0) = (ExpressionOutputId=6F5E0EB4448F770782266A8988172AD7,Output=(OutputName="Tiles"))
+    FunctionOutputs(1) = (ExpressionOutputId=0390D16C4D284B24166BC49BF95BBB21,Output=(OutputName="Range"))
+    FunctionOutputs(2) = (ExpressionOutputId=8DA658C7473DFCB681BF998FD4A42D29,Output=(OutputName="Position"))
+    FunctionOutputs(3) = (ExpressionOutputId=F0B8A022418205E347BDF4BA4286EE9F,Output=(OutputName="Size"))
+    FunctionOutputs(4) = (ExpressionOutputId=153A2CE742276E00F08456BC91616A72,Output=(OutputName="Resolution"))
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    Outputs(0) = (OutputName="Tiles")
+    Outputs(1) = (OutputName="Range")
+    Outputs(2) = (OutputName="Position")
+    Outputs(3) = (OutputName="Size")
+    Outputs(4) = (OutputName="Resolution")
+[MaterialExpressionMax_1] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMax_2] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionMax_1
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionSubtract_2
+    B <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionDivide_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionTextureProperty_0
+    B <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionComponentMask_2
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionComponentMask_0
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionTextureSampleParameter2D_0
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionMax_2
+[MaterialExpressionSubtract_7] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    A <- MaterialExpressionAbs_0
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "SDFMap"
+    ExpressionGUID = A608EF1043A565DD6859C7BE8468ADEE
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+[MaterialExpressionTextureProperty_0] MaterialExpressionTextureProperty
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionTextureSampleParameter2D_0] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "SDFMap"
+    ExpressionGUID = 661CA880434CD95EAAC5F18854A307DB
+    Function = "/Script/Engine.MaterialFunction'MF_SDFSample'"
+    Coordinates <- MaterialExpressionLinearInterpolate_0
+
+## СВЯЗИ

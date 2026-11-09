@@ -1,0 +1,86 @@
+﻿# /Game/FluidFlux/Editor/Materials/M_EditSphere
+# класс: Material; происхождение: проект; узлов: 19; связей: 36; HLSL: 0; причина: папка /Game/FluidFlux; тело:24
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_EditSphere] Material
+    BlendMode = BLEND_Translucent
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bDisableDepthTest = True
+    EditorX = 208
+    EditorY = -16
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 2D7D1EA546F0BD5F12C2C3A479D55B8C
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 0B6FE88D444CBF7EC913BFB52CAD9D45
+    EditorOnlyData <- M_EditSphereEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_EditSphereEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionMultiply_0
+    Opacity <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_0
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_0
+    ExpressionCollection <- MaterialExpressionSmoothStep_0
+    ExpressionCollection <- MaterialExpressionPixelDepth_0
+    ExpressionCollection <- MaterialExpressionSceneDepth_0
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionScreenPosition_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionVectorParameter_2
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.000000
+    A <- MaterialExpressionVectorParameter_2
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionCameraVectorWS_0] MaterialExpressionCameraVectorWS
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    A <- MaterialExpressionCameraVectorWS_0
+    B <- MaterialExpressionPixelNormalWS_0
+[MaterialExpressionIf_0] MaterialExpressionIf
+    A <- MaterialExpressionPixelDepth_0
+    B <- MaterialExpressionSceneDepth_0
+    AGreaterThanB <- MaterialExpressionMaterialFunctionCall_0
+    ALessThanB <- MaterialExpressionConstant_2
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/ArtTools/RenderToTexture/MaterialFunctions/CheckerPattern.CheckerPattern'"
+    FunctionInputs(1) = (ExpressionInputId=6DDA1BD541E6AB14DFB4E78F850A8945,Input=(OutputIndex=-1,InputName="Tiling"))
+    FunctionOutputs(0) = (ExpressionOutputId=7183E0CD4C9C77E63748A3A80E7DB378,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMultiply_1
+[MaterialExpressionMax_0] MaterialExpressionMax
+    A <- MaterialExpressionIf_0
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionMax_0
+    B <- MaterialExpressionVectorParameter_2
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.250000
+    A <- MaterialExpressionScreenPosition_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 0.400000
+    A <- MaterialExpressionSmoothStep_0
+[MaterialExpressionPixelDepth_0] MaterialExpressionPixelDepth
+[MaterialExpressionPixelNormalWS_0] MaterialExpressionPixelNormalWS
+[MaterialExpressionSceneDepth_0] MaterialExpressionSceneDepth
+[MaterialExpressionScreenPosition_0] MaterialExpressionScreenPosition
+[MaterialExpressionSmoothStep_0] MaterialExpressionSmoothStep
+    ConstMin = 0.260000
+    ConstMax = 0.250000
+    Value <- MaterialExpressionDotProduct_0
+[MaterialExpressionVectorParameter_2] MaterialExpressionVectorParameter
+    bUseCustomPrimitiveData = True
+    ExpressionGUID = 9A8F1CF848C29452ED84438BD0AD068C
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

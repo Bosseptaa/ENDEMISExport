@@ -1,0 +1,8 @@
+﻿// Источник: /Game/FluidFlux/Surface/Lighting/Functions/MF_LightScattering (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: нет
+// Выход: CMOT_Float1
+// Описание: CheapDither
+
+int3 randpos = int3(Parameters.SvPosition.xy, View.StateFrameIndexMod8);
+return float(Rand3DPCG16(randpos).x)/0xffff;

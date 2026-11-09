@@ -1,0 +1,377 @@
+﻿# /Game/FluidFlux/Demo/Environment/Rain/Materials/M_RainDecal
+# класс: Material; происхождение: проект; узлов: 87; связей: 183; HLSL: 0; причина: папка /Game/FluidFlux; тело:20
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_RainDecal] Material
+    BlendMode = BLEND_AlphaComposite
+    bScreenSpaceReflections = True
+    TwoSided = True
+    TranslucencyPass = MTP_BeforeDOF
+    TranslucencyLightingMode = TLM_Surface
+    TranslucentShadowStartOffset = 50.000000
+    bTangentSpaceNormal = False
+    bUsedWithNiagaraSprites = True
+    bUsedWithNiagaraMeshParticles = True
+    bUsesDistortion = True
+    EditorX = 3904
+    EditorY = 96
+    bCanMaskedBeAssumedOpaque = True
+    bCastRayTracedShadows = False
+    RefractionMethod = RM_PixelNormalOffset
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = FDF750D74587E3679D9A2E83BEB15F58
+    ReferencedTextureGuids(0) = 42C0D16B47406B05AE1035A6A695F609
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_SmoothNoise.T_SmoothNoise'"
+    ParameterOverviewExpansion = (("-12Global", True),("-12Global Decal", True))
+    LightingGuid = E590258D438A9FCC683F1C92C217E0FE
+    EditorOnlyData <- M_RainDecalEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+[MaterialExpressionWorldPosition_4] MaterialExpressionWorldPosition
+[MaterialExpressionWorldPosition_3] MaterialExpressionWorldPosition
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+[MaterialExpressionTwoSidedSign_1] MaterialExpressionTwoSidedSign
+[MaterialExpressionSubtract_4] MaterialExpressionSubtract
+    A <- MaterialExpressionParticlePositionWS_1
+    B <- MaterialExpressionAdd_3
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    A <- MaterialExpressionMultiply_9
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    A <- MaterialExpressionAdd_2
+    B <- MaterialExpressionCameraPositionWS_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    A <- MaterialExpressionParticlePositionWS_0
+    B <- MaterialExpressionWorldPosition_3
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+[MaterialExpressionSign_0] MaterialExpressionSign
+    Input <- MaterialExpressionComponentMask_1
+[MaterialExpressionScalarParameter_5] MaterialExpressionScalarParameter
+    DefaultValue = 0.700000
+    ParameterName = "Flatten"
+    ExpressionGUID = F1EB7A104CC4953E5E31108CD83BC075
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    DefaultValue = 3.800000
+    ParameterName = "Circles"
+    ExpressionGUID = 0E5A9A9D47F536D42460F1B305E51E98
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = 0.050000
+    ParameterName = "Refractrion"
+    ExpressionGUID = 687766B94299AD9040BEB6852C807723
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 0.005000
+    ParameterName = "White"
+    ExpressionGUID = CCD7B2764E3361A6DD83ABB47CBA9FEF
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.300000
+    ParameterName = "Specular"
+    ExpressionGUID = 2DDF37EC48CD0359126C27AF9694CF6C
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.050000
+    ParameterName = "Roughness"
+    ExpressionGUID = 01762B4243A6C664237949AA3196EB2D
+[MaterialExpressionSaturate_2] MaterialExpressionSaturate
+    Input <- MaterialExpressionSign_0
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionReroute_8] MaterialExpressionReroute
+    Input <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionReroute_7] MaterialExpressionReroute
+    Input <- MaterialExpressionMultiply_23
+[MaterialExpressionReroute_6] MaterialExpressionReroute
+    Input <- MaterialExpressionReroute_1
+[MaterialExpressionReroute_5] MaterialExpressionReroute
+    Input <- MaterialExpressionMultiply_3
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Input <- MaterialExpressionMultiply_10
+[MaterialExpressionReroute_11] MaterialExpressionReroute
+    Input <- MaterialExpressionComponentMask_2
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Input <- MaterialExpressionMultiply_15
+[MaterialExpressionPixelNormalWS_0] MaterialExpressionPixelNormalWS
+[MaterialExpressionParticlePositionWS_1] MaterialExpressionParticlePositionWS
+[MaterialExpressionParticlePositionWS_0] MaterialExpressionParticlePositionWS
+[MaterialExpressionParticleColor_2] MaterialExpressionParticleColor
+[MaterialExpressionParticleColor_1] MaterialExpressionParticleColor
+[MaterialExpressionParticleColor_0] MaterialExpressionParticleColor
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionDotProduct_0
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionSubtract_2
+[MaterialExpressionMultiply_9] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_24
+    B <- MaterialExpressionScalarParameter_3
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    A <- MaterialExpressionOneMinus_0
+    B <- MaterialExpressionOneMinus_0
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    A <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    A <- MaterialExpressionReroute_11
+    B <- MaterialExpressionMultiply_6
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    A <- MaterialExpressionScalarParameter_2
+    B <- MaterialExpressionMultiply_5
+[MaterialExpressionMultiply_24] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_7
+    B <- MaterialExpressionMultiply_7
+[MaterialExpressionMultiply_23] MaterialExpressionMultiply
+    A <- MaterialExpressionConstant_0
+    B <- MaterialExpressionReroute_2
+[MaterialExpressionMultiply_22] MaterialExpressionMultiply
+    ConstB = 0.100000
+    A <- MaterialExpressionMultiply_2
+    B <- MaterialExpressionMultiply_8
+[MaterialExpressionMultiply_21] MaterialExpressionMultiply
+    A <- MaterialExpressionAppendVector_1
+    B <- MaterialExpressionSubtract_4
+[MaterialExpressionMultiply_20] MaterialExpressionMultiply
+    ConstB = 12.000000
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionLinearInterpolate_1
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstA = 1.000000
+    A <- MaterialExpressionMultiply_13
+    B <- MaterialExpressionReroute_11
+[MaterialExpressionMultiply_18] MaterialExpressionMultiply
+    ConstA = 1.000000
+    B <- MaterialExpressionMultiply_14
+[MaterialExpressionMultiply_15] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_18
+    B <- MaterialExpressionReroute_11
+[MaterialExpressionMultiply_14] MaterialExpressionMultiply
+    A <- MaterialExpressionScalarParameter_1
+    B <- MaterialExpressionMultiply_13
+[MaterialExpressionMultiply_13] MaterialExpressionMultiply
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMultiply_11] MaterialExpressionMultiply
+    ConstB = -20.000000
+    A <- MaterialExpressionNormalize_0
+    B <- MaterialExpressionLinearInterpolate_2
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_6
+    B <- MaterialExpressionReroute_11
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    A <- MaterialExpressionMaterialFunctionCall_4
+    B <- MaterialExpressionAppendVector_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 0.001000
+    A <- MaterialExpressionComponentMask_3
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Rain/Materials/MF_AnimatedRipple.MF_AnimatedRipple'"
+    FunctionOutputs(0) = (ExpressionOutputId=7D3733F2466F785A3494B59DDE2D77D9,Output=(OutputName="Intensity"))
+    FunctionOutputs(1) = (ExpressionOutputId=BED99F78414A31900D3BA3A89BB3ECD0,Output=(OutputName="Normal"))
+    Outputs(0) = (OutputName="Intensity")
+    Outputs(1) = (OutputName="Normal")
+    FunctionInputs(0) <- MaterialExpressionSaturate_1
+    FunctionInputs(1) <- MaterialExpressionScalarParameter_4
+    FunctionInputs(2) <- MaterialExpressionSubtract_3
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_SceneNormal.MF_SceneNormal'"
+    FunctionOutputs(0) = (ExpressionOutputId=E36EA1A843948B1B583B6B85E625FF6C,Output=(OutputName="NormalScreenDepth"))
+    FunctionOutputs(1) = (ExpressionOutputId=8469EEFC4EF5415BA83E74A78A46FA3D,Output=(OutputName="NormalCustomDepth"))
+    FunctionOutputs(2) = (ExpressionOutputId=8F015A4A4C8EBA1949AF169964391464,Output=(OutputName="ScreenWorldNormal"))
+    Outputs(0) = (OutputName="NormalScreenDepth")
+    Outputs(1) = (OutputName="NormalCustomDepth")
+    Outputs(2) = (OutputName="ScreenWorldNormal")
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Lighting/Functions/MF_FluxSurfaceDecal.MF_FluxSurfaceDecal'"
+    FunctionOutputs(0) = (ExpressionOutputId=E732D9F6490C79B5B3102580D89FA735,Output=(OutputName="WorldPosition"))
+    FunctionOutputs(1) = (ExpressionOutputId=95201A5D457F3162538D2881FC5B6FBE,Output=(OutputName="UV"))
+    FunctionOutputs(2) = (ExpressionOutputId=0012545F4F5083DA66C71D84DA2BBF74,Output=(OutputName="Blend"))
+    FunctionOutputs(3) = (ExpressionOutputId=E5A075DD479D2FEE1D4EBD95D3EE3D02,Output=(OutputName="FrontSide"))
+    FunctionOutputs(4) = (ExpressionOutputId=474B96F94B439BD122A60F8ECC656166,Output=(OutputName="Normal"))
+    Outputs(0) = (OutputName="WorldPosition")
+    Outputs(1) = (OutputName="UV")
+    Outputs(2) = (OutputName="Blend")
+    Outputs(3) = (OutputName="FrontSide")
+    Outputs(4) = (OutputName="Normal")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_1
+    FunctionInputs(1) <- MaterialExpressionStaticBool_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.BlendAngleCorrectedNormals'"
+    FunctionOutputs(0) = (ExpressionOutputId=E2F3EA0E41E2637BBAA2A4A0FEF38E6A,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_3
+    FunctionInputs(1) <- MaterialExpressionMultiply_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_SceneNormal.MF_SceneNormal'"
+    FunctionOutputs(0) = (ExpressionOutputId=E36EA1A843948B1B583B6B85E625FF6C,Output=(OutputName="NormalScreenDepth"))
+    FunctionOutputs(1) = (ExpressionOutputId=8469EEFC4EF5415BA83E74A78A46FA3D,Output=(OutputName="NormalCustomDepth"))
+    FunctionOutputs(2) = (ExpressionOutputId=8F015A4A4C8EBA1949AF169964391464,Output=(OutputName="ScreenWorldNormal"))
+    Outputs(0) = (OutputName="NormalScreenDepth")
+    Outputs(1) = (OutputName="NormalCustomDepth")
+    Outputs(2) = (OutputName="ScreenWorldNormal")
+[MaterialExpressionLinearInterpolate_2] MaterialExpressionLinearInterpolate
+    ConstA = -5.000000
+    ConstB = -20.000000
+    Alpha <- MaterialExpressionParticleColor_2
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    ConstA = 0.950000
+    ConstB = -0.150000
+    Alpha <- MaterialExpressionParticleColor_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionMultiply_1
+    B <- MaterialExpressionMaterialFunctionCall_1
+    Alpha <- MaterialExpressionSaturate_2
+[MaterialExpressionDotProduct_2] MaterialExpressionDotProduct
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionSubtract_3
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    A <- MaterialExpressionCameraVectorWS_0
+    B <- MaterialExpressionPixelNormalWS_0
+[MaterialExpressionConstant2Vector_1] MaterialExpressionConstant2Vector
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    R = 1.000000
+    G = 1.000000
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.100000
+[MaterialExpressionComponentMask_3] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionParticleColor_1
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    B = True
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    B = True
+    Input <- MaterialExpressionCameraVectorWS_2
+[MaterialExpressionCameraVectorWS_2] MaterialExpressionCameraVectorWS
+[MaterialExpressionCameraVectorWS_0] MaterialExpressionCameraVectorWS
+[MaterialExpressionCameraPositionWS_0] MaterialExpressionCameraPositionWS
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    A <- MaterialExpressionConstant2Vector_1
+    B <- MaterialExpressionScalarParameter_5
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    A <- MaterialExpressionConstant2Vector_0
+    B <- MaterialExpressionTwoSidedSign_1
+[MaterialExpressionAdd_6] MaterialExpressionAdd
+    A <- MaterialExpressionAdd_4
+    B <- MaterialExpressionMultiply_11
+[MaterialExpressionAdd_5] MaterialExpressionAdd
+    A <- MaterialExpressionMultiply_22
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    A <- MaterialExpressionMultiply_21
+    B <- MaterialExpressionMultiply_20
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    A <- MaterialExpressionWorldPosition_4
+    B <- MaterialExpressionMultiply_20
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    A <- MaterialExpressionAdd_4
+    B <- MaterialExpressionWorldPosition_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    A <- MaterialExpressionParticleColor_1
+    B <- MaterialExpressionDotProduct_2
+[M_RainDecalEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    ParameterGroupData(4) = (GroupName="None")
+    ParameterGroupData(5) = (GroupName="None")
+    ParameterGroupData(6) = (GroupName="None")
+    BaseColor <- MaterialExpressionReroute_5
+    Metallic <- MaterialExpressionConstant_2
+    Specular <- MaterialExpressionReroute_6
+    Roughness <- MaterialExpressionScalarParameter_0
+    Normal <- MaterialExpressionReroute_8
+    Opacity <- MaterialExpressionReroute_7
+    WorldPositionOffset <- MaterialExpressionAdd_6
+    Refraction <- MaterialExpressionAdd_5
+    ExpressionCollection <- MaterialExpressionReroute_5
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionReroute_6
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionReroute_8
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionAdd_5
+    ExpressionCollection <- MaterialExpressionReroute_7
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionMultiply_23
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionMultiply_15
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionMultiply_18
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMultiply_9
+    ExpressionCollection <- MaterialExpressionMultiply_13
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionMultiply_22
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionParticleColor_1
+    ExpressionCollection <- MaterialExpressionTwoSidedSign_1
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_0
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_0
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionMultiply_14
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionSaturate_2
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_2
+    ExpressionCollection <- MaterialExpressionSign_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionDotProduct_2
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionComponentMask_3
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionParticlePositionWS_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_3
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_20
+    ExpressionCollection <- MaterialExpressionParticleColor_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_4
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionSubtract_4
+    ExpressionCollection <- MaterialExpressionParticlePositionWS_1
+    ExpressionCollection <- MaterialExpressionMultiply_21
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionMultiply_24
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionReroute_11
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+    ExpressionCollection <- MaterialExpressionConstant2Vector_1
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_5
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_0
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionMultiply_11
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionAdd_6
+    ExpressionCollection <- MaterialExpressionParticleColor_2
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_2
+
+## СВЯЗИ

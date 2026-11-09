@@ -1,0 +1,167 @@
+﻿# /Game/FluidFlux/Demo/Environment/Plankton/MF_PlanktonWPO
+# класс: MaterialFunction; происхождение: проект; узлов: 30; связей: 61; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_PlanktonWPO] MaterialFunction
+    StateId = 8E66C4D8461CE37AB1F091827711C73E
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_PlanktonWPOEditorOnlyData
+[MF_PlanktonWPOEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionParticlePositionWS_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionOneMinus_2
+    ExpressionCollection <- MaterialExpressionSaturate_3
+    ExpressionCollection <- MaterialExpressionDistance_1
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionMultiply_11
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionMultiply_14
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionWorldPosition_1
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionMultiply_6
+[MaterialExpressionCameraPositionWS_0] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+[MaterialExpressionDistance_1] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionConstant_5
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionSubtract_3
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionMultiply_14
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Scale"
+    Id = C421974D4C0F43AED989FB85A6A982B2
+    InputType = FunctionInput_Scalar
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Offset"
+    Id = 075BADB140987CF4007974939B7AB99A
+    InputType = FunctionInput_Scalar
+    SortPriority = -2
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "FallofRange"
+    Id = E319A8544B3E48E538BBBAAB9A04E704
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "StartFallowDistance"
+    Id = B01A37CF438567013AC1B28BFAF6350B
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 2CAAAFBF41BC001BC0EBE28F7F62B716
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    bCollapsed = True
+    A <- MaterialExpressionDivide_2
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Plankton/MF_NightVisibility.MF_NightVisibility'"
+    FunctionInputs(0) = (ExpressionInputId=742C34F04C635029E41A18A63F6CE21D,Input=(OutputIndex=-1,InputName="Normal"))
+    FunctionInputs(1) = (ExpressionInputId=588326CE476421263980D19F1F2105F7,Input=(OutputIndex=-1,InputName="Treshold"))
+    FunctionOutputs(0) = (ExpressionOutputId=156186AF4C4496689B7F579ED7F94B8B,Output=(OutputName="Scale"))
+    FunctionOutputs(1) = (ExpressionOutputId=A7F4E53B45911877B3BFCE81EA61DCDD,Output=(OutputName="Flag"))
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    Outputs(0) = (OutputName="Scale")
+    Outputs(1) = (OutputName="Flag")
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Plankton/MF_NightVisibility.MF_NightVisibility'"
+    FunctionInputs(0) = (ExpressionInputId=742C34F04C635029E41A18A63F6CE21D,Input=(OutputIndex=-1,InputName="Normal"))
+    FunctionInputs(1) = (ExpressionInputId=588326CE476421263980D19F1F2105F7,Input=(InputName="Treshold"))
+    FunctionOutputs(0) = (ExpressionOutputId=156186AF4C4496689B7F579ED7F94B8B,Output=(OutputName="Scale"))
+    FunctionOutputs(1) = (ExpressionOutputId=A7F4E53B45911877B3BFCE81EA61DCDD,Output=(OutputName="Flag"))
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    Outputs(0) = (OutputName="Scale")
+    Outputs(1) = (OutputName="Flag")
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 20.000000
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMultiply_11] MaterialExpressionMultiply
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionAdd_3
+    B <- MaterialExpressionMultiply_12
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionSaturate_3
+    B <- MaterialExpressionSaturate_3
+[MaterialExpressionMultiply_14] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionMultiply_11
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    ConstB = -15.000000
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionNormalize_0
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    VectorInput <- MaterialExpressionSubtract_1
+[MaterialExpressionOneMinus_2] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    Input <- MaterialExpressionDivide_1
+[MaterialExpressionParticlePositionWS_0] MaterialExpressionParticlePositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+[MaterialExpressionSaturate_3] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    Input <- MaterialExpressionOneMinus_2
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionParticlePositionWS_0
+    B <- MaterialExpressionWorldPosition_0
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionAdd_2
+    B <- MaterialExpressionCameraPositionWS_0
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+    A <- MaterialExpressionDistance_1
+    B <- MaterialExpressionFunctionInput_3
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_PlanktonWPO'"
+
+## СВЯЗИ

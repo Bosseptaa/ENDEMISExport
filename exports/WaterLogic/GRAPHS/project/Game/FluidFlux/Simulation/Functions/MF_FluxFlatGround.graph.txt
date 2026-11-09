@@ -1,0 +1,88 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_FluxFlatGround
+# класс: MaterialFunction; происхождение: проект; узлов: 17; связей: 30; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:35
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxFlatGround] MaterialFunction
+    StateId = 5533FE7840DFAED4FA32D5AEB4616AFF
+    CombinedInputTypes = 4
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FluxFlatGroundEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxFlatGroundEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionComponentMask_3
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionCollectionParameter_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionComponentMask_1
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    A <- MaterialExpressionComponentMask_3
+    B <- MaterialExpressionSubtract_0
+[MaterialExpressionCollectionParameter_0] MaterialExpressionCollectionParameter
+    Collection = "/Script/Engine.MaterialParameterCollection'/Game/FluidFlux/Surface/Materials/MPC_FluidFlux.MPC_FluidFlux'"
+    ParameterName = "SimulationTopPlane"
+    ParameterId = D2A6CA9549EAE2BF75032B85895C0F12
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    bCollapsed = True
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    Input <- MaterialExpressionWorldPosition_0
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    Input <- MaterialExpressionWorldPosition_1
+[MaterialExpressionComponentMask_3] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPositionOffset"
+    Id = 52A40CBD47E7A55D07D90195F6B542EE
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 5BE3445047A87E06C9445EA215427437
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    bCollapsed = True
+    A <- MaterialExpressionAppendVector_0
+[MaterialExpressionMin_0] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    A <- MaterialExpressionAdd_0
+    B <- MaterialExpressionCollectionParameter_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+    A <- MaterialExpressionMin_0
+    B <- MaterialExpressionComponentMask_2
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFlatGround'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

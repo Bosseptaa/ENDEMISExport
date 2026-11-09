@@ -1,0 +1,233 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_FluxHeight
+# класс: MaterialFunction; происхождение: проект; узлов: 29; связей: 62; HLSL: 1; причина: папка /Game/FluidFlux; имя/путь, тело:84, HLSL:1
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxHeight] MaterialFunction
+    StateId = 8C910FF34FFB7DD78CFF2899CEA4A039
+    CombinedInputTypes = 8
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_18
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_19
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_20
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_21
+    DependentFunctionExpressionCandidates(4) <- MaterialExpressionMaterialFunctionCall_22
+    DependentFunctionExpressionCandidates(5) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_FluxHeightEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxHeightEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_11
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_18
+    ExpressionCollection <- MaterialExpressionConstant2Vector_12
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_19
+    ExpressionCollection <- MaterialExpressionConstant2Vector_13
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_20
+    ExpressionCollection <- MaterialExpressionConstant2Vector_14
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_21
+    ExpressionCollection <- MaterialExpressionConstant2Vector_15
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_22
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionMin_1
+    ExpressionCollection <- MaterialExpressionMin_2
+    ExpressionCollection <- MaterialExpressionMax_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionConstant_9
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionClamp_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionComment_2
+[MaterialExpressionClamp_0] MaterialExpressionClamp
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    Input <- MaterialExpressionLinearInterpolate_0
+    Min <- MaterialExpressionConstant_0
+    Max <- MaterialExpressionScalarParameter_0
+[MaterialExpressionComment_2] MaterialExpressionComment
+    SizeX = 416
+    SizeY = 848
+    Text = "Water height"
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+[MaterialExpressionConstant_9] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+[MaterialExpressionConstant2Vector_11] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+[MaterialExpressionConstant2Vector_12] MaterialExpressionConstant2Vector
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+[MaterialExpressionConstant2Vector_13] MaterialExpressionConstant2Vector
+    G = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+[MaterialExpressionConstant2Vector_14] MaterialExpressionConstant2Vector
+    R = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+[MaterialExpressionConstant2Vector_15] MaterialExpressionConstant2Vector
+    G = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: Step
+    OutputType = CMOT_Float4
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    bCollapsed = True
+    Inputs(0) a <- MaterialExpressionFunctionInput_0
+    Inputs(1) b <- MaterialExpressionConstant_9
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    A <- MaterialExpressionClamp_0
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Velocity"
+    Id = DD268B7847BF9F3EFF8E1C8A113E5ED6
+    InputType = FunctionInput_Vector4
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Flux"
+    bLastPreviewed = True
+    Id = 8117ADE74C1FDECDF1A962B96D537939
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    bCollapsed = True
+    A <- MaterialExpressionDotProduct_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "IsWater"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = 7AAA033F4A44DD9919AD608B0906EC1C
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    bCollapsed = True
+    A <- MaterialExpressionMax_3
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    A <- MaterialExpressionMaterialFunctionCall_18
+    B <- MaterialExpressionMaterialFunctionCall_0
+    Alpha <- MaterialExpressionCustom_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.MakeFloat4'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_19
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_20
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_21
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_22
+[MaterialExpressionMaterialFunctionCall_18] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(0) = (ExpressionInputId=DA7F932D4F48BC2231034E986A9CB554,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(2) <- MaterialExpressionConstant2Vector_11
+[MaterialExpressionMaterialFunctionCall_19] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(0) = (ExpressionInputId=DA7F932D4F48BC2231034E986A9CB554,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(2) <- MaterialExpressionConstant2Vector_12
+[MaterialExpressionMaterialFunctionCall_20] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(0) = (ExpressionInputId=DA7F932D4F48BC2231034E986A9CB554,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(2) <- MaterialExpressionConstant2Vector_13
+[MaterialExpressionMaterialFunctionCall_21] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(0) = (ExpressionInputId=DA7F932D4F48BC2231034E986A9CB554,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(2) <- MaterialExpressionConstant2Vector_14
+[MaterialExpressionMaterialFunctionCall_22] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(0) = (ExpressionInputId=DA7F932D4F48BC2231034E986A9CB554,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(2) <- MaterialExpressionConstant2Vector_15
+[MaterialExpressionMax_3] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    A <- MaterialExpressionMin_2
+[MaterialExpressionMin_0] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    A <- MaterialExpressionMaterialFunctionCall_18
+    B <- MaterialExpressionMaterialFunctionCall_19
+[MaterialExpressionMin_1] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    A <- MaterialExpressionMaterialFunctionCall_20
+    B <- MaterialExpressionMaterialFunctionCall_22
+[MaterialExpressionMin_2] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+    A <- MaterialExpressionMin_0
+    B <- MaterialExpressionMin_1
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 100.000000
+    ParameterName = "FluidTransportMax"
+    ExpressionGUID = BEC4D6AA41FBF577B7F2B2AC10AD7DCE
+    Function = "/Script/Engine.MaterialFunction'MF_FluxHeight'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

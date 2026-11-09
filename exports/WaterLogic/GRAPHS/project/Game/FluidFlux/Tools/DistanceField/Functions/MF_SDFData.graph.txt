@@ -1,0 +1,108 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFData
+# класс: MaterialFunction; происхождение: проект; узлов: 16; связей: 28; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SDFData] MaterialFunction
+    StateId = FB5B0B5B458C356B49D3ADA672BAAFB6
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_SDFDataEditorOnlyData
+[MF_SDFDataEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionTextureProperty_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_2
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+    A <- MaterialExpressionDivide_0
+    B <- MaterialExpressionMultiply_0
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+    Input <- MaterialExpressionVectorParameter_2
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+    A <- MaterialExpressionTextureProperty_0
+    B <- MaterialExpressionComponentMask_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Position"
+    bLastPreviewed = True
+    Id = 8DA658C7473DFCB681BF998FD4A42D29
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+    bCollapsed = True
+    A <- MaterialExpressionVectorParameter_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Size"
+    SortPriority = 12
+    bLastPreviewed = True
+    Id = F0B8A022418205E347BDF4BA4286EE9F
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+    bCollapsed = True
+    A <- MaterialExpressionVectorParameter_3
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Tiles"
+    SortPriority = -3
+    bLastPreviewed = True
+    Id = 6F5E0EB4448F770782266A8988172AD7
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+    bCollapsed = True
+    A <- MaterialExpressionVectorParameter_2
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "Range"
+    bLastPreviewed = True
+    Id = 0390D16C4D284B24166BC49BF95BBB21
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+    bCollapsed = True
+    A <- MaterialExpressionVectorParameter_3
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "Resolution"
+    SortPriority = 22
+    bLastPreviewed = True
+    Id = 153A2CE742276E00F08456BC91616A72
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+    bCollapsed = True
+    A <- MaterialExpressionAppendVector_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+    A <- MaterialExpressionVectorParameter_2
+    B <- MaterialExpressionVectorParameter_2
+[MaterialExpressionTextureObjectParameter_1] MaterialExpressionTextureObjectParameter
+    ParameterName = "SDFMap"
+    ExpressionGUID = 763B1BD84B5DCBBA8B567C90E826F3E7
+    Group = "SignedDistance"
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+    bCollapsed = True
+[MaterialExpressionTextureProperty_0] MaterialExpressionTextureProperty
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+    TextureObject <- MaterialExpressionTextureObjectParameter_1
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    ParameterName = "SDFPosition"
+    ExpressionGUID = 946DBDD84870CEACABFA59A9E9D059C6
+    Group = "SignedDistance"
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+[MaterialExpressionVectorParameter_2] MaterialExpressionVectorParameter
+    DefaultValue = (R=100.000000,G=100.000000,B=0.000000,A=1.000000)
+    ParameterName = "SDFTiles"
+    ExpressionGUID = 91DDB0D0417D35D14F1A18BA2B448DEE
+    Group = "SignedDistance"
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+[MaterialExpressionVectorParameter_3] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=1.000000,B=1.000000,A=1000000.000000)
+    ParameterName = "SDFSize"
+    ExpressionGUID = 2C719A184B554F23B21A02BBF78D9C9A
+    Group = "SignedDistance"
+    Function = "/Script/Engine.MaterialFunction'MF_SDFData'"
+
+## СВЯЗИ

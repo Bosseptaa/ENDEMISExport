@@ -1,0 +1,152 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Materials/M_DebugSDFProjection
+# класс: Material; происхождение: проект; узлов: 33; связей: 63; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_DebugSDFProjection] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    EditorX = 1696
+    EditorY = 240
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 7E8AA525415DBC62EBC4F0A698EC8F1E
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    LightingGuid = 4103E24644E93AC34CB455A85414C79F
+    EditorOnlyData <- M_DebugSDFProjectionEditorOnlyData
+[M_DebugSDFProjectionEditorOnlyData] MaterialEditorOnlyData
+    BaseColor = (Constant=(R=0.501961,G=0.501961,B=0.501961,A=1.000000),Mask=1,MaskR=1,MaskG=1,MaskB=1)
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionMultiply_3
+    OpacityMask <- MaterialExpressionIf_0
+    WorldPositionOffset <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionTransform_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionEyeAdaptation_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_2
+    ExpressionCollection <- MaterialExpressionConstant3Vector_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionTextureProperty_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_2
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=-1.000000,A=0.000000)
+[MaterialExpressionConstant3Vector_2] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=1.000000,B=0.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionConstant3Vector_3] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=0.000000,B=0.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionNormalize_0
+[MaterialExpressionEyeAdaptation_0] MaterialExpressionEyeAdaptation
+[MaterialExpressionIf_0] MaterialExpressionIf
+    A <- MaterialExpressionTextureSample_0
+    B <- MaterialExpressionScalarParameter_1
+    AGreaterThanB <- MaterialExpressionConstant_3
+    ALessThanB <- MaterialExpressionConstant_4
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionConstant3Vector_3
+    B <- MaterialExpressionConstant3Vector_2
+    Alpha <- MaterialExpressionMultiply_4
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    ConstAlpha = 0.600000
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionLinearInterpolate_2] MaterialExpressionLinearInterpolate
+    B = (OutputIndex=1)
+    A <- MaterialExpressionMaterialFunctionCall_5
+    Alpha <- MaterialExpressionIf_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_FlatShadingNormal.MF_FlatShadingNormal'"
+    FunctionOutputs(0) = (ExpressionOutputId=9E84770848DBF25140DEC78521BD3653,Output=(OutputName="Normal"))
+    Outputs(0) = (OutputName="Normal")
+    FunctionInputs(0) <- MaterialExpressionWorldPosition_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/ArtTools/RenderToTexture/MaterialFunctions/CheckerPattern.CheckerPattern'"
+    FunctionOutputs(0) = (ExpressionOutputId=7183E0CD4C9C77E63748A3A80E7DB378,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionTextureCoordinate_0
+    FunctionInputs(1) <- MaterialExpressionTextureProperty_0
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_CheckerDither.MF_CheckerDither'"
+    FunctionInputs(0) = (ExpressionInputId=B7F7E9F14003E8528B7AFC83BA410BBB,Input=(OutputIndex=-1,InputName="UseTemporal"))
+    FunctionOutputs(0) = (ExpressionOutputId=49EC16034751E26AFD14CCB498A4013B,Output=(OutputName="TwoSided"))
+    FunctionOutputs(1) = (ExpressionOutputId=3D2C165F4A3443B7055E5D8978A589E0,Output=(OutputName="BackSide"))
+    FunctionOutputs(2) = (ExpressionOutputId=4D512265436E6E5E52875EA7837A6029,Output=(OutputName="FrontSide"))
+    Outputs(0) = (OutputName="TwoSided")
+    Outputs(1) = (OutputName="BackSide")
+    Outputs(2) = (OutputName="FrontSide")
+[MaterialExpressionMin_0] MaterialExpressionMin
+    ConstB = 500.000000
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -1.000000
+    A <- MaterialExpressionMin_0
+    B <- MaterialExpressionNormalize_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    A <- MaterialExpressionDivide_0
+    B <- MaterialExpressionLinearInterpolate_1
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    A <- MaterialExpressionDotProduct_0
+    B <- MaterialExpressionDotProduct_0
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionTransform_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 500.000000
+    ParameterName = "FarPlane"
+    ExpressionGUID = CDE50516416AD6D490473CB4EC108549
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 500.000000
+    ParameterName = "FarPlane"
+    ExpressionGUID = B83D037647491C0CACC3D7897B098C10
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.100000
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "DepthMap"
+    ExpressionGUID = 4ECDE23B447681D3657122BE0B8C579D
+[MaterialExpressionTextureProperty_0] MaterialExpressionTextureProperty
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionTransform_0] MaterialExpressionTransform
+    TransformSourceType = TRANSFORMSOURCE_Local
+    Input <- MaterialExpressionConstant3Vector_1
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+[M_DebugHeightnapEditorOnlyData] ObjectRedirector
+[M_DebugSDFHeightnapEditorOnlyData] ObjectRedirector
+
+## СВЯЗИ

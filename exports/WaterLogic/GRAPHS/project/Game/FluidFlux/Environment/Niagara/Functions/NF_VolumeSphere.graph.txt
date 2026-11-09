@@ -1,0 +1,55 @@
+﻿# /Game/FluidFlux/Environment/Niagara/Functions/NF_VolumeSphere
+# класс: NiagaraScript; происхождение: проект; узлов: 9; связей: 17; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[NF_VolumeSphere] NiagaraScript
+    ExposedVersion = 0F657655F16EB858CF94C578759C308F
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraScriptSource_0] NiagaraScriptSource
+    NodeGraph <- NiagaraGraph_0
+[NiagaraGraph_0] NiagaraGraph
+    ChangeId = 7A0DB03B436301F0C1796DAF13CFCB1B
+    LastBuiltTraversalDataChangeId = 7A0DB03B436301F0C1796DAF13CFCB1B
+    LastBuiltScriptVersionId = 87C7FB060084C92C80E1A4AB309BA6EA
+    ParameterHierarchyRoot = "ParameterHierarchyRoot"
+    bHasValidLastBuiltScriptVersionId = True
+    GraphGuid = C17850CF4D8633BB1AFAE59BDE1AC8D5
+    CachedUsageInfo(0) <- NiagaraNodeInput_1
+    CachedUsageInfo(0) <- NiagaraNodeOp_1
+    CachedUsageInfo(0) <- NiagaraNodeOp_0
+    CachedUsageInfo(0) <- NiagaraNodeOp_3
+    CachedUsageInfo(0) <- NiagaraNodeOutput_0
+    Nodes(0) <- NiagaraNodeOutput_0
+    Nodes(1) <- NiagaraNodeInput_1
+    Nodes(2) <- NiagaraNodeOp_1
+    Nodes(3) <- NiagaraNodeOp_0
+    Nodes(4) <- NiagaraNodeOp_3
+[ParameterHierarchyRoot] HierarchyRoot
+    Identity = (Guids=(CDBF776AE9E43468812360257C57C013))
+[NiagaraNodeInput_1] NiagaraNodeInput
+    Input = (VarData=(0,0,0,0),Name="R",TypeDefHandle=(RegisteredTypeIndex=99))
+    CallSortPriority = 2
+    ChangeId = CD04F81B47455631B54390BE599BBADC
+[NiagaraNodeOp_0] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 7794DC194F1B5CE448E33EB9AAD1ADA5
+[NiagaraNodeOp_1] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 55DD0FF54ED3426B4DF2C88532731E8E
+[NiagaraNodeOp_3] NiagaraNodeOp
+    OpName = "Numeric::Mul"
+    ChangeId = 4FE2B17C4D6218B8544CF98D463C808B
+    вход B = 4.188790
+[NiagaraNodeOutput_0] NiagaraNodeOutput
+    Outputs(0) = (VarData=(0,0,0,0),Name="Volume",TypeDefHandle=(RegisteredTypeIndex=99))
+    ChangeId = 7010201F4928DA226FC2BFACF2E963C1
+    ErrorType = 4
+
+## СВЯЗИ
+[NiagaraNodeInput_1].Input -> [NiagaraNodeOp_0].A
+[NiagaraNodeInput_1].Input -> [NiagaraNodeOp_0].B
+[NiagaraNodeOp_0].Result -> [NiagaraNodeOp_0].A
+[NiagaraNodeOp_0].Result -> [NiagaraNodeOp_3].A
+[NiagaraNodeOp_3].Result -> [NiagaraNodeOutput_0].Volume

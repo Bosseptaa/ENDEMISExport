@@ -1,0 +1,147 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Functions/MF_Distance
+# класс: MaterialFunction; происхождение: проект; узлов: 28; связей: 55; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Distance] MaterialFunction
+    StateId = 3005297543E3E0748B351482C1EB2583
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_1
+    EditorOnlyData <- MF_DistanceEditorOnlyData
+[MF_DistanceEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_0
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionDivide_3
+    ExpressionCollection <- MaterialExpressionVectorParameter_5
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionDivide_4
+    ExpressionCollection <- MaterialExpressionVectorParameter_6
+    ExpressionCollection <- MaterialExpressionWorldPosition_3
+    ExpressionCollection <- MaterialExpressionDistance_1
+    ExpressionCollection <- MaterialExpressionSign_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionSubtract_5
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_8
+    ExpressionCollection <- MaterialExpressionVectorParameter_9
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_1
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionAdd_2
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionVectorParameter_6
+    B <- MaterialExpressionAdd_3
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionMultiply_7
+    B <- MaterialExpressionMultiply_8
+[MaterialExpressionDistance_1] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionAdd_1
+    B <- MaterialExpressionWorldPosition_3
+[MaterialExpressionDivide_3] MaterialExpressionDivide
+    ConstB = -100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionSubtract_3
+[MaterialExpressionDivide_4] MaterialExpressionDivide
+    ConstB = 50.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionDistance_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 12C38B8F495A5901631EE8AE1C5586E3
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionSaturate_1
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionMultiply_10
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    ConstB = 500.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionSubtract_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionTextureSampleParameter2D_0
+    B <- MaterialExpressionVectorParameter_5
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionMultiply_6
+    B <- MaterialExpressionDivide_4
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionSign_0
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionVectorParameter_9
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionVectorParameter_8
+[MaterialExpressionNamedRerouteUsage_1] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = A6D37A714F9F6B73BDC39CAC2F0D4D1D
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    Input <- MaterialExpressionMultiply_5
+[MaterialExpressionSign_0] MaterialExpressionSign
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    Input <- MaterialExpressionSubtract_3
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionNamedRerouteUsage_1
+    B <- MaterialExpressionTextureSampleParameter2D_0
+[MaterialExpressionSubtract_5] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+    A <- MaterialExpressionMultiply_5
+[MaterialExpressionTextureSampleParameter2D_0] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "DepthMap"
+    ExpressionGUID = F199370E423117CA25D509810BF9E83F
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+[MaterialExpressionVectorParameter_5] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "Front"
+    ExpressionGUID = 60F0F0B8438A5AF3E8A46B8DB8E68A43
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+[MaterialExpressionVectorParameter_6] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "Position"
+    ExpressionGUID = 3CA5174745858EECC70C5EA7E6AC38C3
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+[MaterialExpressionVectorParameter_8] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=1.000000,A=1.000000)
+    ParameterName = "Up"
+    ExpressionGUID = E9F99BCF437C292429C78E8D5DF4E47B
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+[MaterialExpressionVectorParameter_9] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=1.000000,B=0.000000,A=1.000000)
+    ParameterName = "Right"
+    ExpressionGUID = C631BB9843B4CF34CA7500818057B89B
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+[MaterialExpressionWorldPosition_3] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_Distance'"
+
+## СВЯЗИ

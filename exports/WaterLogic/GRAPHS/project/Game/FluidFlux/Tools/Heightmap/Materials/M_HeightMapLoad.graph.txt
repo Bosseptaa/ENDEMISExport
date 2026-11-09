@@ -1,0 +1,168 @@
+﻿# /Game/FluidFlux/Tools/Heightmap/Materials/M_HeightMapLoad
+# класс: Material; происхождение: проект; узлов: 31; связей: 59; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_HeightMapLoad] Material
+    MaterialDomain = MD_UI
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    EditorX = 640
+    EditorY = 160
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 7FFB3DC1435FBB358783078714BFC0DB
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    LightingGuid = B98EA2E043962A3814963AAE953ABE7D
+    EditorOnlyData <- M_HeightMapLoadEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_HeightMapLoadEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    ParameterGroupData(4) = (GroupName="None")
+    ParameterGroupData(5) = (GroupName="None")
+    ParameterGroupData(6) = (GroupName="None")
+    ParameterGroupData(7) = (GroupName="None")
+    ParameterGroupData(8) = (GroupName="FluxData")
+    ParameterGroupData(9) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_1
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_6
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_7
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionVectorParameter_9
+    ExpressionCollection <- MaterialExpressionDivide_3
+    ExpressionCollection <- MaterialExpressionVectorParameter_10
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionComponentMask_3
+    ExpressionCollection <- MaterialExpressionComponentMask_4
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionComponentMask_6
+    ExpressionCollection <- MaterialExpressionVectorParameter_11
+    ExpressionCollection <- MaterialExpressionVectorParameter_12
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_7
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_4
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionViewProperty_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionAdd_5
+    ExpressionCollection <- MaterialExpressionVectorParameter_3
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    A <- MaterialExpressionTextureSampleParameter2D_0
+    B <- MaterialExpressionSubtract_3
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    A <- MaterialExpressionMultiply_1
+    B <- MaterialExpressionComponentMask_5
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    ConstB = 0.500000
+    A <- MaterialExpressionDivide_3
+[MaterialExpressionAdd_5] MaterialExpressionAdd
+    A <- MaterialExpressionVectorParameter_3
+    B <- MaterialExpressionVectorParameter_3
+[MaterialExpressionComponentMask_3] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionVectorParameter_10
+[MaterialExpressionComponentMask_4] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionVectorParameter_9
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionVectorParameter_6
+[MaterialExpressionComponentMask_6] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionVectorParameter_7
+[MaterialExpressionDivide_3] MaterialExpressionDivide
+    A <- MaterialExpressionSubtract_2
+    B <- MaterialExpressionComponentMask_3
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionAdd_5
+    B <- MaterialExpressionAdd_1
+    Alpha <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_TextureBorderFalloff.MF_TextureBorderFalloff'"
+    FunctionOutputs(0) = (ExpressionOutputId=CD9685564E6B5F048B4BDBA4AB7ED696,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMultiply_12
+    FunctionInputs(1) <- MaterialExpressionTextureCoordinate_4
+    FunctionInputs(2) <- MaterialExpressionScalarParameter_7
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionComponentMask_6
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionViewProperty_5
+[MaterialExpressionScalarParameter_7] MaterialExpressionScalarParameter
+    DefaultValue = 1000.000000
+    SliderMin = 1.000000
+    SliderMax = 100.000000
+    ParameterName = "EdgeBlend"
+    ExpressionGUID = 48CF40F9489D5E88AE9FE2BC0B55779C
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    ConstB = 0.500000
+    A <- MaterialExpressionTextureCoordinate_1
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    A <- MaterialExpressionAdd_2
+    B <- MaterialExpressionComponentMask_4
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    A <- MaterialExpressionVectorParameter_12
+    B <- MaterialExpressionVectorParameter_11
+[MaterialExpressionTextureCoordinate_1] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureCoordinate_4] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureSampleParameter2D_0] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "SourceMap"
+    ExpressionGUID = 9367961946B5EFCB4C6B1B8A413C2815
+    Coordinates <- MaterialExpressionAdd_3
+[MaterialExpressionVectorParameter_10] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "SourceSize"
+    ExpressionGUID = 0BB5FAE047701EBDA00916AC9E3111AD
+[MaterialExpressionVectorParameter_11] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "SourceLocation"
+    ExpressionGUID = C20CC27B4D014DE69A0BE58FF47C9F59
+[MaterialExpressionVectorParameter_12] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "TargetLocation"
+    ExpressionGUID = E17A110E45A97439B1C24FA48187FDFA
+[MaterialExpressionVectorParameter_3] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=0.000000,B=0.000000,A=0.000000)
+    ParameterName = "CaptureResolution"
+    ExpressionGUID = 8BAD751748582A684295938B6340B04B
+    Group = "FluxData"
+    Outputs(0) = (OutputName="")
+    Outputs(1) = (OutputName="X")
+    Outputs(2) = (OutputName="Y")
+    Outputs(3) = (OutputName="CaptureCap")
+    Outputs(4) = (OutputName="CaptureOffset")
+[MaterialExpressionVectorParameter_6] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "TargetLocation"
+    ExpressionGUID = 0561379E46D7C1662A235E90DFB7EB35
+[MaterialExpressionVectorParameter_7] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "TargetSize"
+    ExpressionGUID = B926A1C441EFBF9987CB4EB72E296E0A
+[MaterialExpressionVectorParameter_9] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "SourceLocation"
+    ExpressionGUID = 9A72206941F7AF9C9FBBEBB2FB767C40
+[MaterialExpressionViewProperty_5] MaterialExpressionViewProperty
+    Property = MEVP_ViewSize
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

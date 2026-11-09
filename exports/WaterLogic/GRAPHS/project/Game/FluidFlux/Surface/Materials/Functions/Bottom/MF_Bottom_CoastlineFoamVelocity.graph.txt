@@ -1,0 +1,218 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Bottom/MF_Bottom_CoastlineFoamVelocity
+# класс: MaterialFunction; происхождение: проект; узлов: 35; связей: 69; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:322
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Bottom_CoastlineFoamVelocity] MaterialFunction
+    StateId = 547292FA4B6360C76B27E8B4F9DB496F
+    CombinedInputTypes = 2063
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_9
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_18
+    EditorOnlyData <- MF_Bottom_CoastlineFoamVelocityEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_Bottom_CoastlineFoamVelocityEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionClamp_0
+    ExpressionCollection <- MaterialExpressionMultiply_20
+    ExpressionCollection <- MaterialExpressionAdd_8
+    ExpressionCollection <- MaterialExpressionSaturate_4
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionComponentMask_7
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_8
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMultiply_17
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_9
+    ExpressionCollection <- MaterialExpressionMultiply_18
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMax_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_18
+    ExpressionCollection <- MaterialExpressionReroute_4
+    ExpressionCollection <- MaterialExpressionReroute_10
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_9
+    ExpressionCollection <- MaterialExpressionScalarParameter_5
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionComment_3
+    ExpressionCollection <- MaterialExpressionComment_4
+[MaterialExpressionAdd_8] MaterialExpressionAdd
+    ConstB = -0.420000
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionClamp_0
+[MaterialExpressionClamp_0] MaterialExpressionClamp
+    MinDefault = -2.000000
+    MaxDefault = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    Input <- MaterialExpressionDivide_0
+[MaterialExpressionComment_3] MaterialExpressionComment
+    SizeX = 1344
+    SizeY = 688
+    Text = "Velocity"
+    CommentColor = (R=0.222989,G=0.351042,B=0.332110,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+[MaterialExpressionComment_4] MaterialExpressionComment
+    SizeX = 992
+    SizeY = 288
+    Text = "Foam shadow"
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    Input <- MaterialExpressionReroute_10
+[MaterialExpressionComponentMask_7] MaterialExpressionComponentMask
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    Input <- MaterialExpressionReroute_10
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionComponentMask_2
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Coastline"
+    Id = 49A6C4BE477447E681C6D0B1A1EF64DD
+    InputType = FunctionInput_MaterialAttributes
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Foam"
+    Id = 279963C342226A165BC06F963CAB75E4
+    InputType = FunctionInput_Scalar
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "ForwardUpward"
+    Id = 9810AB69403022F7C16EC0B3D7D1B7BE
+    InputType = FunctionInput_Vector2
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Depth"
+    Id = EE6AC7F64C1DE6BFE4E67EB3B4107B76
+    InputType = FunctionInput_Scalar
+    SortPriority = -3
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Bottom"
+    SortPriority = 22
+    bLastPreviewed = True
+    Id = A3B0B75041696D12D169E38F33AB20A8
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_9
+[MaterialExpressionMaterialFunctionCall_18] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineDataGet.MF_CoastlineDataGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=907637C844D6BC8298C5ACADA0E3B2C3,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=23481DEA4452179C8D2797B33CE20435,Output=(OutputName="Direction"))
+    FunctionOutputs(2) = (ExpressionOutputId=A84715A749104AD14C38248BBFD455E2,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=6346C58A410496BE2C7A25BD8D50DEAA,Output=(OutputName="Mask"))
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Direction")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMaterialFunctionCall_9] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Bottom/MF_BottomFluxSet.MF_BottomFluxSet'"
+    FunctionInputs(0) = (ExpressionInputId=DE39419B4858193E18F07EBD315C8BD4,Input=(InputName="Layer"))
+    FunctionOutputs(0) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Layer"))
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    Outputs(0) = (OutputName="Layer")
+    FunctionInputs(1) <- MaterialExpressionFunctionInput_3
+    FunctionInputs(2) <- MaterialExpressionFunctionInput_3
+    FunctionInputs(3) <- MaterialExpressionMultiply_17
+    FunctionInputs(4) <- MaterialExpressionMultiply_20
+[MaterialExpressionMax_3] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionReroute_4
+    B <- MaterialExpressionMultiply_10
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionMultiply_4
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    ConstB = 0.015000
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_17] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionSaturate_4
+    B <- MaterialExpressionMaterialFunctionCall_18
+[MaterialExpressionMultiply_18] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionMaterialFunctionCall_18
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionScalarParameter_8
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionMultiply_20] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionMaterialFunctionCall_18
+    B <- MaterialExpressionMultiply_18
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionScalarParameter_9
+    B <- MaterialExpressionScalarParameter_5
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    ConstB = 3.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionAdd_8
+[MaterialExpressionReroute_10] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    Input <- MaterialExpressionFunctionInput_2
+[MaterialExpressionReroute_4] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionSaturate_4] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    Input <- MaterialExpressionMax_3
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.015000
+    ParameterName = "CoastlineHeightShadow"
+    ExpressionGUID = 76EAD67A451DAFBF88283FB6F309B726
+    Group = "Coastline"
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 500.000000
+    ParameterName = "WaveProfileWidth"
+    ExpressionGUID = 6E7DEC7C413EEB087399AFAA52C9D23B
+    Group = "Coastline"
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+[MaterialExpressionScalarParameter_5] MaterialExpressionScalarParameter
+    DefaultValue = 0.900000
+    ParameterName = "WaveProfileSpeed"
+    ExpressionGUID = 57699F2642A4D31A0ECC21B592478CE7
+    Group = "WaveProfile"
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+[MaterialExpressionScalarParameter_8] MaterialExpressionScalarParameter
+    DefaultValue = 500.000000
+    ParameterName = "WaveProfileWidth"
+    ExpressionGUID = 4F0689214112D08F5D9A9A9890C5DCC4
+    Group = "Coastline"
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+[MaterialExpressionScalarParameter_9] MaterialExpressionScalarParameter
+    DefaultValue = 0.750000
+    ParameterName = "WaveProfileAnimationSpeed"
+    ExpressionGUID = 0C55BD52438C3B4C92AC0280B4FB232A
+    Group = "WaveProfile"
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    ConstB = 10.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Bottom_CoastlineFoamVelocity'"
+    A <- MaterialExpressionComponentMask_7
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

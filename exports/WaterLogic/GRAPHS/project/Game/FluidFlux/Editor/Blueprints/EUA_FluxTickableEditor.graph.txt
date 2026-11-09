@@ -1,0 +1,489 @@
+﻿# /Game/FluidFlux/Editor/Blueprints/EUA_FluxTickableEditor
+# класс: EditorUtilityBlueprint; происхождение: проект; узлов: 113; связей: 207; HLSL: 0; причина: папка /Game/FluidFlux; тело:86
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[EUA_FluxTickableEditor] EditorUtilityBlueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Blutility.EditorUtilityActor'"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'EUA_FluxTickableEditor_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    CategorySorting(3) = "Components"
+    ImplementedInterfaces(0) = (Interface="/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Editor/Blueprints/BPI_FluxTickableEditorEvents.BPI_FluxTickableEditorEvents_C'")
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/EUA_FluxTickableEditor.EUA_FluxTickableEditor:EditorUpdateLoop",SavedViewOffset=(X=-90.445984,Y=-366.503418),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/EUA_FluxTickableEditor.EUA_FluxTickableEditor:EditorUpdateSimulation",SavedViewOffset=(X=427.067139,Y=-466.458862),SavedZoomAmount=0.750000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/EUA_FluxTickableEditor.EUA_FluxTickableEditor:EditorSelectionLoop",SavedViewOffset=(X=-415.966064,Y=-306.398682),SavedZoomAmount=1.000000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/EUA_FluxTickableEditor.EUA_FluxTickableEditor:ValidParent",SavedViewOffset=(X=-646.915405,Y=812.301331),SavedZoomAmount=1.000000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/EUA_FluxTickableEditor.EUA_FluxTickableEditor:Select Actor",SavedViewOffset=(X=-383.319214,Y=-213.678955),SavedZoomAmount=1.000000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/EUA_FluxTickableEditor.EUA_FluxTickableEditor:EventGraph",SavedViewOffset=(X=696.264893,Y=806.762329),SavedZoomAmount=1.000000)
+    LastEditedDocuments(6) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/EUA_FluxTickableEditor.EUA_FluxTickableEditor:NotInGame",SavedViewOffset=(X=-385.874695,Y=1219.424805),SavedZoomAmount=1.000000)
+    LastEditedDocuments(7) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/EUA_FluxTickableEditor.EUA_FluxTickableEditor:UserConstructionScript",SavedViewOffset=(X=-667.063782,Y=-336.554871),SavedZoomAmount=1.000000)
+    LastEditedDocuments(8) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/EUA_FluxTickableEditor.EUA_FluxTickableEditor:EventGraph",SavedViewOffset=(X=-308.963654,Y=1738.408325),SavedZoomAmount=1.000000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'EUA_FluxTickableEditor_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 6D03B70F48BCD9CCDC82E19237B34283
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- EditorStartSimulation
+    FunctionGraphs(2) <- EditorUpdateSimulation
+    FunctionGraphs(3) <- EditorUpdateLoop
+    FunctionGraphs(4) <- EditorSelectionLoop
+    FunctionGraphs(5) <- Select Actor
+    MacroGraphs(0) <- ValidParent
+    MacroGraphs(1) <- NotInGame
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[RestartSimulation] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 0DD78BA84A5D1DA0445FFDA0494BEBBB
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_CallFunction_0@RestartSimulation] K2Node_CallFunction
+[K2Node_FunctionEntry_0@RestartSimulation] K2Node_FunctionEntry
+[StopSimulation] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 391E8E554164BAE38FE5A5A3A4A89F5A
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_CallFunction_0@StopSimulation] K2Node_CallFunction
+[K2Node_FunctionEntry_0@StopSimulation] K2Node_FunctionEntry
+[StartSimulation] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = F555BE9B40B3264C4BE737933F1D67D8
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_CallFunction_0@StartSimulation] K2Node_CallFunction
+[K2Node_SetVariableOnPersistentFrame_0@StartSimulation] K2Node_SetVariableOnPersistentFrame
+[K2Node_FunctionEntry_0@StartSimulation] K2Node_FunctionEntry
+[UpdateLoop] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 28D5573741AA0E6E2FBB5DAC96966B47
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_CallFunction_0@UpdateLoop] K2Node_CallFunction
+[K2Node_SetVariableOnPersistentFrame_0@UpdateLoop] K2Node_SetVariableOnPersistentFrame
+[K2Node_FunctionEntry_0@UpdateLoop] K2Node_FunctionEntry
+[PostLoad] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 30D25EAF4386CBC6988256BC68265421
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_CallFunction_0@PostLoad] K2Node_CallFunction
+[K2Node_SetVariableOnPersistentFrame_0@PostLoad] K2Node_SetVariableOnPersistentFrame
+[K2Node_FunctionEntry_0@PostLoad] K2Node_FunctionEntry
+[SelectionLoop] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 6F08D7044CA4B0C3D0A80A8FCC494305
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_CallFunction_0@SelectionLoop] K2Node_CallFunction
+[K2Node_SetVariableOnPersistentFrame_0@SelectionLoop] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_FunctionEntry_0@SelectionLoop] K2Node_FunctionEntry
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[EditorSelectionLoop] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = BE4A3A2245514296E12E92BC590E7A3D
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_MacroInstance_1
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_CallFunction_0@EditorSelectionLoop] K2Node_CallFunction
+[K2Node_MacroInstance_1@EditorSelectionLoop] K2Node_MacroInstance
+[K2Node_FunctionEntry_0@EditorSelectionLoop] K2Node_FunctionEntry
+[EditorUpdateSimulation] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 3F59839241DD0279D3D4B9984567DC50
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_Message_1
+    Nodes(2) <- K2Node_VariableGet_0
+    Nodes(3) <- K2Node_MacroInstance_1
+    Nodes(4) <- K2Node_IfThenElse_1
+    Nodes(5) <- K2Node_CallFunction_3
+    Nodes(6) <- K2Node_CallFunction_6
+    Nodes(7) <- K2Node_MacroInstance_0
+[K2Node_MacroInstance_0@EditorUpdateSimulation] K2Node_MacroInstance
+[K2Node_CallFunction_6@EditorUpdateSimulation] K2Node_CallFunction
+[K2Node_CallFunction_3@EditorUpdateSimulation] K2Node_CallFunction
+[K2Node_IfThenElse_1@EditorUpdateSimulation] K2Node_IfThenElse
+[K2Node_MacroInstance_1@EditorUpdateSimulation] K2Node_MacroInstance
+[K2Node_VariableGet_0@EditorUpdateSimulation] K2Node_VariableGet
+[K2Node_Message_1] K2Node_Message (вызов: OnEditorIterateSimulation @ /Script/Engine.BlueprintGeneratedClass)
+    вход Iterations = 1
+[K2Node_FunctionEntry_0@EditorUpdateSimulation] K2Node_FunctionEntry
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = AAA8E82949E2A2C4D226898969E435FA
+    Nodes(0) <- K2Node_CallFunction_7
+    Nodes(1) <- K2Node_Self_2
+    Nodes(2) <- K2Node_Event_0
+    Nodes(3) <- K2Node_Event_4
+    Nodes(4) <- K2Node_CallFunction_14
+    Nodes(5) <- K2Node_CallFunction_3
+    Nodes(6) <- K2Node_VariableSet_6
+    Nodes(7) <- K2Node_VariableSet_0
+    Nodes(8) <- K2Node_Event_5
+    Nodes(9) <- K2Node_Event_2
+    Nodes(10) <- K2Node_CallFunction_1
+    Nodes(11) <- K2Node_Self_3
+    Nodes(12) <- K2Node_CallFunction_2
+    Nodes(13) <- K2Node_IfThenElse_1
+    Nodes(14) <- K2Node_CallFunction_6
+    Nodes(15) <- K2Node_CallFunction_8
+    Nodes(16) <- K2Node_Self_1
+    Nodes(17) <- K2Node_Event_8
+    Nodes(18) <- K2Node_MacroInstance_0
+    Nodes(19) <- K2Node_MacroInstance_5
+    Nodes(20) <- K2Node_MacroInstance_3
+    Nodes(21) <- K2Node_Event_1
+    Nodes(22) <- K2Node_CallFunction_11
+    Nodes(23) <- K2Node_Self_0
+    Nodes(24) <- K2Node_CallFunction_10
+    Nodes(25) <- K2Node_IfThenElse_0
+    Nodes(26) <- K2Node_CallFunction_5
+    Nodes(27) <- K2Node_MacroInstance_4
+    Nodes(28) <- K2Node_MacroInstance_6
+    Nodes(29) <- K2Node_MacroInstance_7
+    Nodes(30) <- K2Node_MacroInstance_8
+    Nodes(31) <- K2Node_MacroInstance_9
+    Nodes(32) <- K2Node_MacroInstance_2
+    Nodes(33) <- K2Node_CallFunction_9
+[K2Node_CallFunction_9] K2Node_CallFunction (вызов: Select Actor)
+    вход Initialize = true
+[K2Node_MacroInstance_2] K2Node_MacroInstance
+    MacroGraphReference <- NotInGame
+[K2Node_MacroInstance_9] K2Node_MacroInstance
+    MacroGraphReference <- NotInGame
+[K2Node_MacroInstance_8] K2Node_MacroInstance
+    MacroGraphReference <- NotInGame
+[K2Node_MacroInstance_7] K2Node_MacroInstance
+    MacroGraphReference <- NotInGame
+[K2Node_MacroInstance_6] K2Node_MacroInstance
+    MacroGraphReference <- NotInGame
+[K2Node_MacroInstance_4] K2Node_MacroInstance
+    MacroGraphReference <- ValidParent
+[K2Node_CallFunction_5] K2Node_CallFunction (вызов: K2_ClearTimer @ /Script/CoreUObject.Class)
+    вход FunctionName = EditorSelectionLoop
+[K2Node_IfThenElse_0@EventGraph] K2Node_IfThenElse
+[K2Node_CallFunction_10@EventGraph] K2Node_CallFunction
+[K2Node_Self_0] K2Node_Self
+[K2Node_CallFunction_11] K2Node_CallFunction (вызов: K2_SetTimer @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Shown
+    вход FunctionName = EditorSelectionLoop
+    вход bLooping = true
+    вход bMaxOncePerFrame = false
+    вход InitialStartDelay = 0.000000
+    вход InitialStartDelayVariance = 0.000000
+[K2Node_Event_1] K2Node_Event (событие: SelectionLoop @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_MacroInstance_3] K2Node_MacroInstance
+    MacroGraphReference <- ValidParent
+[K2Node_MacroInstance_5] K2Node_MacroInstance
+    MacroGraphReference <- ValidParent
+[K2Node_MacroInstance_0@EventGraph] K2Node_MacroInstance
+[K2Node_Event_8] K2Node_Event (событие: PostLoad @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_Self_1] K2Node_Self
+[K2Node_CallFunction_8] K2Node_CallFunction (вызов: K2_SetTimer @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    вход FunctionName = EditorStartSimulation
+    вход bLooping = false
+    вход bMaxOncePerFrame = false
+    вход InitialStartDelay = 0.000000
+    вход InitialStartDelayVariance = 0.000000
+[K2Node_CallFunction_6@EventGraph] K2Node_CallFunction (вызов: K2_ClearTimer @ /Script/CoreUObject.Class)
+    вход FunctionName = EditorUpdateLoop
+[K2Node_IfThenElse_1@EventGraph] K2Node_IfThenElse
+[K2Node_CallFunction_2@EventGraph] K2Node_CallFunction
+[K2Node_Self_3] K2Node_Self
+[K2Node_CallFunction_1@EventGraph] K2Node_CallFunction
+[K2Node_Event_2] K2Node_Event (событие: UpdateLoop @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_Event_5] K2Node_Event (событие: StartSimulation @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_VariableSet_0@EventGraph] K2Node_VariableSet
+[K2Node_VariableSet_6] K2Node_VariableSet (переменная: IterationsToStop)
+[K2Node_CallFunction_3@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_14] K2Node_CallFunction (вызов: K2_SetTimer @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    вход FunctionName = EditorUpdateSimulation
+    вход bLooping = true
+    вход bMaxOncePerFrame = false
+    вход InitialStartDelay = 0.000000
+    вход InitialStartDelayVariance = 0.000000
+[K2Node_Event_4] K2Node_Event (событие: StopSimulation @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_Event_0] K2Node_Event (событие: RestartSimulation @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_Self_2] K2Node_Self
+[K2Node_CallFunction_7] K2Node_CallFunction (вызов: K2_SetTimer @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    вход FunctionName = EditorStartSimulation
+    вход Time = 0.005000
+    вход bLooping = false
+    вход bMaxOncePerFrame = false
+    вход InitialStartDelay = 0.000000
+    вход InitialStartDelayVariance = 0.000000
+[Select Actor] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E52C8EB1442BBA6F0A932490DF62D243
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_1
+    Nodes(2) <- K2Node_CallArrayFunction_1
+    Nodes(3) <- K2Node_CallFunction_10
+    Nodes(4) <- K2Node_IfThenElse_1
+    Nodes(5) <- K2Node_GetArrayItem_0
+    Nodes(6) <- K2Node_CallFunction_12
+    Nodes(7) <- K2Node_VariableSet_0
+    Nodes(8) <- K2Node_VariableGet_1
+    Nodes(9) <- K2Node_CallFunction_2
+    Nodes(10) <- K2Node_IfThenElse_0
+    Nodes(11) <- K2Node_VariableGet_0
+    Nodes(12) <- K2Node_CallFunction_3
+    Nodes(13) <- K2Node_MacroInstance_0
+    Nodes(14) <- K2Node_Message_2
+    Nodes(15) <- K2Node_VariableSet_1
+    Nodes(16) <- K2Node_VariableGet_2
+    Nodes(17) <- K2Node_VariableGet_3
+    Nodes(18) <- K2Node_IfThenElse_2
+    Nodes(19) <- K2Node_CallFunction_0
+[K2Node_CallFunction_0@Select Actor] K2Node_CallFunction
+[K2Node_IfThenElse_2] K2Node_IfThenElse
+[K2Node_VariableGet_3] K2Node_VariableGet (переменная: Initialize)
+    ErrorType = 1
+[K2Node_VariableGet_2] K2Node_VariableGet (переменная: Selected)
+[K2Node_VariableSet_1] K2Node_VariableSet (переменная: Selected)
+[K2Node_Message_2] K2Node_Message (вызов: OnEditorSelectionChanged @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_MacroInstance_0@Select Actor] K2Node_MacroInstance
+[K2Node_CallFunction_3@Select Actor] K2Node_CallFunction (вызов: Not_PreBool @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0
+    вход FunctionName = EditorUpdateSimulation
+[K2Node_VariableGet_0@Select Actor] K2Node_VariableGet (переменная: IsSelected)
+[K2Node_IfThenElse_0@Select Actor] K2Node_IfThenElse
+[K2Node_CallFunction_2@Select Actor] K2Node_CallFunction (вызов: EqualEqual_BoolBool @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.0
+[K2Node_VariableGet_1] K2Node_VariableGet (переменная: IsSelected)
+[K2Node_VariableSet_0@Select Actor] K2Node_VariableSet (переменная: IsSelected)
+    вход IterationsToStop = 0
+[K2Node_CallFunction_12] K2Node_CallFunction (вызов: EqualEqual_ObjectObject @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_GetArrayItem_0] K2Node_GetArrayItem
+    bReturnByRefDesired = False
+    вход Dimension 1 = 0
+[K2Node_IfThenElse_1@Select Actor] K2Node_IfThenElse
+[K2Node_CallFunction_10@Select Actor] K2Node_CallFunction (вызов: EqualEqual_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.0
+    вход B = 1
+[K2Node_CallArrayFunction_1] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_1@Select Actor] K2Node_CallFunction (вызов: GetSelectedActors @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Shown
+    вход FunctionName = EditorUpdateLoop
+    вход bLooping = true
+    вход bMaxOncePerFrame = false
+    вход InitialStartDelay = 0.000000
+    вход InitialStartDelayVariance = 0.000000
+[K2Node_FunctionEntry_0@Select Actor] K2Node_FunctionEntry
+[NotInGame] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 2818E59646F54E92C86DB4A0169D8F00
+    Nodes(0) <- K2Node_Tunnel_0
+    Nodes(1) <- K2Node_Tunnel_1
+    Nodes(2) <- K2Node_MacroInstance_1
+    Nodes(3) <- K2Node_CallFunction_0
+[K2Node_CallFunction_0@NotInGame] K2Node_CallFunction (вызов: GetGameInstance @ /Script/CoreUObject.Class)
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход Initialize = false
+[K2Node_MacroInstance_1@NotInGame] K2Node_MacroInstance
+[K2Node_Tunnel_1@NotInGame] K2Node_Tunnel
+[K2Node_Tunnel_0@NotInGame] K2Node_Tunnel
+[ValidParent] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 19CEDD3A46D6CAFB9186C2A4C5D1956F
+    Nodes(0) <- K2Node_Tunnel_0
+    Nodes(1) <- K2Node_Tunnel_1
+    Nodes(2) <- K2Node_MacroInstance_1
+    Nodes(3) <- K2Node_CallFunction_18
+[K2Node_CallFunction_18] K2Node_CallFunction (вызов: GetParentActor)
+    bDefaultsToPureFunc = True
+[K2Node_MacroInstance_1@ValidParent] K2Node_MacroInstance
+    MacroGraphReference <- ValidParent
+[K2Node_Tunnel_1@ValidParent] K2Node_Tunnel
+    bCanHaveInputs = True
+    bCanHaveInputs = True
+[K2Node_Tunnel_0@ValidParent] K2Node_Tunnel
+    bCanHaveOutputs = True
+    bCanHaveOutputs = True
+[EditorUpdateLoop] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 59DD4C3D4C2F647FE3BF6EA8C59A1059
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_Message_0
+    Nodes(2) <- K2Node_MacroInstance_0
+[K2Node_MacroInstance_0@EditorUpdateLoop] K2Node_MacroInstance
+[K2Node_Message_0@EditorUpdateLoop] K2Node_Message
+[K2Node_FunctionEntry_0@EditorUpdateLoop] K2Node_FunctionEntry
+[EditorStartSimulation] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = F4EC9ACE46B51AB611FA3D82DEE91FA6
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_Message_0
+    Nodes(2) <- K2Node_MacroInstance_0
+[K2Node_MacroInstance_0@EditorStartSimulation] K2Node_MacroInstance
+    MacroGraphReference <- ValidParent
+    MacroGraphReference <- ValidParent
+    MacroGraphReference <- ValidParent
+    MacroGraphReference <- ValidParent
+    MacroGraphReference <- ValidParent
+[K2Node_Message_0@EditorStartSimulation] K2Node_Message (вызов: OnEditorShowSimulation @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_FunctionEntry_0@EditorStartSimulation] K2Node_FunctionEntry
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 297CE4344E056FC958A12CBEB2349BEA
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry (вызов: UserConstructionScript @ /Script/CoreUObject.Class)
+    CustomGeneratedFunctionName = "RestartSimulation"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "StopSimulation"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "StartSimulation"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "UpdateLoop"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "PostLoad"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "SelectionLoop"
+    bIsIntermediateNode = True
+    MetaData = (Category=NSLOCTEXT("KismetSchema", "Default", "Default"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "334421224E6822C42D16D7932A6615EB", "Iterate simulaiton in the parent actor."),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("KismetSchema", "Default", "Default"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "FE9D03114EC084E746C551BCE1395999", "Starts simulaiton in the parent actor."),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+
+## СВЯЗИ
+[K2Node_CallArrayFunction_1].ReturnValue -> [K2Node_CallFunction_10@Select Actor].A
+[K2Node_CallFunction_0@NotInGame].ReturnValue -> [K2Node_CallFunction_12].B
+[K2Node_CallFunction_0@NotInGame].ReturnValue#2 -> [K2Node_MacroInstance_1@ValidParent].InputObject
+[K2Node_CallFunction_10@Select Actor].ReturnValue -> [K2Node_IfThenElse_1@Select Actor].Condition#2
+[K2Node_CallFunction_12].ReturnValue -> [K2Node_CallFunction_2@Select Actor].B#2
+[K2Node_CallFunction_18].ReturnValue -> [K2Node_MacroInstance_1@ValidParent].InputObject#2
+[K2Node_CallFunction_18].ReturnValue -> [K2Node_Tunnel_1@ValidParent].Parent
+[K2Node_CallFunction_1@Select Actor].ReturnValue -> [K2Node_CallArrayFunction_1].TargetArray
+[K2Node_CallFunction_1@Select Actor].ReturnValue -> [K2Node_GetArrayItem_0].Array
+[K2Node_CallFunction_1@Select Actor].then -> [K2Node_IfThenElse_1@Select Actor].execute#2
+[K2Node_CallFunction_2@Select Actor].ReturnValue -> [K2Node_IfThenElse_0@Select Actor].Condition
+[K2Node_CallFunction_2@Select Actor].ReturnValue#2 -> [K2Node_IfThenElse_0@Select Actor].Condition#2
+[K2Node_CallFunction_3@Select Actor].ReturnValue -> [K2Node_IfThenElse_1@Select Actor].Condition
+[K2Node_CallFunction_3@Select Actor].ReturnValue#2 -> [K2Node_VariableSet_0@Select Actor].IsSelected
+[K2Node_CallFunction_3@Select Actor].then -> [K2Node_VariableSet_6].execute
+[K2Node_CallFunction_9].then -> [K2Node_CallFunction_11].execute
+[K2Node_Event_0].then -> [K2Node_MacroInstance_2].In
+[K2Node_Event_1].DeltaTime -> [K2Node_CallFunction_11].Time
+[K2Node_Event_1].DeltaTime -> [K2Node_CallFunction_2@Select Actor].A
+[K2Node_Event_1].then -> [K2Node_MacroInstance_2].In
+[K2Node_Event_2].DeltaTime -> [K2Node_CallFunction_11].Time
+[K2Node_Event_2].DeltaTime -> [K2Node_CallFunction_2@Select Actor].A
+[K2Node_Event_2].then -> [K2Node_MacroInstance_2].In
+[K2Node_Event_4].then -> [K2Node_CallFunction_3@Select Actor].execute
+[K2Node_Event_5].Delay -> [K2Node_CallFunction_11].Time
+[K2Node_Event_5].Iterations -> [K2Node_VariableSet_6].IterationsToStop
+[K2Node_Event_5].then -> [K2Node_MacroInstance_2].In
+[K2Node_Event_8].Delay -> [K2Node_CallFunction_11].Time
+[K2Node_Event_8].then -> [K2Node_MacroInstance_2].In
+[K2Node_FunctionEntry_0@UserConstructionScript].Delay -> [K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].K2Node_Event_Delay_1
+[K2Node_FunctionEntry_0@UserConstructionScript].Delay#2 -> [K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].K2Node_Event_Delay
+[K2Node_FunctionEntry_0@UserConstructionScript].DeltaTime -> [K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].K2Node_Event_DeltaTime_1
+[K2Node_FunctionEntry_0@UserConstructionScript].DeltaTime#2 -> [K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].K2Node_Event_DeltaTime
+[K2Node_FunctionEntry_0@UserConstructionScript].Iterations -> [K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].K2Node_Event_Iterations
+[K2Node_FunctionEntry_0@UserConstructionScript].then -> [K2Node_CallFunction_0@NotInGame].execute
+[K2Node_FunctionEntry_0@UserConstructionScript].then#2 -> [K2Node_CallFunction_0@NotInGame].execute#2
+[K2Node_FunctionEntry_0@UserConstructionScript].then#3 -> [K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].execute
+[K2Node_FunctionEntry_0@UserConstructionScript].then#4 -> [K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].execute#2
+[K2Node_FunctionEntry_0@UserConstructionScript].then#5 -> [K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].execute#3
+[K2Node_FunctionEntry_0@UserConstructionScript].then#6 -> [K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].execute#4
+[K2Node_FunctionEntry_0@UserConstructionScript].then#7 -> [K2Node_MacroInstance_1@ValidParent].exec
+[K2Node_FunctionEntry_0@UserConstructionScript].then#8 -> [K2Node_MacroInstance_1@ValidParent].exec
+[K2Node_FunctionEntry_0@UserConstructionScript].then#9 -> [K2Node_CallFunction_1@Select Actor].execute
+[K2Node_GetArrayItem_0].Output -> [K2Node_VariableSet_1].Selected
+[K2Node_IfThenElse_0@Select Actor].else -> [K2Node_CallFunction_5].execute
+[K2Node_IfThenElse_0@Select Actor].else#2 -> [K2Node_VariableSet_0@Select Actor].execute
+[K2Node_IfThenElse_0@Select Actor].then -> [K2Node_CallFunction_11].execute
+[K2Node_IfThenElse_0@Select Actor].then -> [K2Node_CallFunction_9].execute
+[K2Node_IfThenElse_0@Select Actor].then#2 -> [K2Node_IfThenElse_2].execute
+[K2Node_IfThenElse_1@Select Actor].else -> [K2Node_IfThenElse_0@Select Actor].execute#2
+[K2Node_IfThenElse_1@Select Actor].then -> [K2Node_CallFunction_6@EventGraph].execute
+[K2Node_IfThenElse_1@Select Actor].then#2 -> [K2Node_VariableSet_1].execute
+[K2Node_IfThenElse_2].then -> [K2Node_MacroInstance_1@ValidParent].exec
+[K2Node_MacroInstance_0@EditorStartSimulation].Parent -> [K2Node_Message_1].self
+[K2Node_MacroInstance_0@EditorStartSimulation].Parent -> [K2Node_Message_2].self
+[K2Node_MacroInstance_0@EditorStartSimulation].Parent#2 -> [K2Node_Message_0@EditorStartSimulation].self
+[K2Node_MacroInstance_0@EditorStartSimulation].Parent#3 -> [K2Node_Message_0@EditorStartSimulation].self#2
+[K2Node_MacroInstance_1@ValidParent].   -> [K2Node_IfThenElse_1@Select Actor].execute
+[K2Node_MacroInstance_1@ValidParent].Is Not Valid -> [K2Node_Tunnel_1@ValidParent].Exec
+[K2Node_MacroInstance_1@ValidParent].Is Valid -> [K2Node_CallFunction_0@NotInGame].execute#7
+[K2Node_MacroInstance_1@ValidParent].Is Valid -> [K2Node_Message_0@EditorStartSimulation].execute
+[K2Node_MacroInstance_1@ValidParent].Is Valid -> [K2Node_Message_0@EditorStartSimulation].execute#2
+[K2Node_MacroInstance_1@ValidParent].Is Valid -> [K2Node_Message_1].execute
+[K2Node_MacroInstance_1@ValidParent].Is Valid -> [K2Node_Message_2].execute
+[K2Node_MacroInstance_1@ValidParent].Is Valid#2 -> [K2Node_Tunnel_1@ValidParent].Is Valid
+[K2Node_MacroInstance_2].Exec -> [K2Node_MacroInstance_4].exec
+[K2Node_MacroInstance_2].Exec -> [K2Node_VariableSet_6].execute
+[K2Node_MacroInstance_4].Is Valid -> [K2Node_CallFunction_11].execute
+[K2Node_MacroInstance_4].Is Valid -> [K2Node_IfThenElse_0@Select Actor].execute
+[K2Node_Message_1].then -> [K2Node_MacroInstance_1@ValidParent]. 
+[K2Node_Self_0].self -> [K2Node_CallFunction_11].Object
+[K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].then -> [K2Node_CallFunction_0@NotInGame].execute#3
+[K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].then#2 -> [K2Node_CallFunction_0@NotInGame].execute#4
+[K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].then#3 -> [K2Node_CallFunction_0@NotInGame].execute#5
+[K2Node_SetVariableOnPersistentFrame_0@SelectionLoop].then#4 -> [K2Node_CallFunction_0@NotInGame].execute#6
+[K2Node_Tunnel_0@ValidParent].In -> [K2Node_MacroInstance_1@ValidParent].exec#2
+[K2Node_Tunnel_0@ValidParent].exec -> [K2Node_MacroInstance_1@ValidParent].exec#3
+[K2Node_VariableGet_0@Select Actor].IsSelected -> [K2Node_CallFunction_2@Select Actor].A#2
+[K2Node_VariableGet_0@Select Actor].IsSelected -> [K2Node_CallFunction_3@Select Actor].A#2
+[K2Node_VariableGet_0@Select Actor].IterationsToStop -> [K2Node_CallFunction_3@Select Actor].A
+[K2Node_VariableGet_0@Select Actor].IterationsToStop -> [K2Node_MacroInstance_1@ValidParent].Value
+[K2Node_VariableGet_2].Selected -> [K2Node_CallFunction_12].A
+[K2Node_VariableGet_3].Initialize -> [K2Node_IfThenElse_2].Condition
+[K2Node_VariableSet_0@Select Actor].Output_Get -> [K2Node_Message_2].Selected
+[K2Node_VariableSet_0@Select Actor].then -> [K2Node_MacroInstance_1@ValidParent].exec
+[K2Node_VariableSet_1].then -> [K2Node_IfThenElse_0@Select Actor].execute#2
+[K2Node_VariableSet_6].then -> [K2Node_CallFunction_11].execute

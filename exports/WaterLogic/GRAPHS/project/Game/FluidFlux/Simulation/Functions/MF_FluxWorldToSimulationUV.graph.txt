@@ -1,0 +1,127 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_FluxWorldToSimulationUV
+# класс: MaterialFunction; происхождение: проект; узлов: 20; связей: 38; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:178
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxWorldToSimulationUV] MaterialFunction
+    StateId = D2AD7ABD4836D0AF21DB2CA482DC36BE
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_FluxWorldToSimulationUVEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxWorldToSimulationUVEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionSign_0
+    ExpressionCollection <- MaterialExpressionAdd_7
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionReroute_4
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionSaturate_1
+[MaterialExpressionAdd_7] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    A <- MaterialExpressionReroute_4
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    Input <- MaterialExpressionWorldPosition_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = A80FE39447F5474F2FD56F95C32EF3F9
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    bCollapsed = True
+    Preview <- MaterialExpressionComponentMask_2
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "UV"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = DF521043496F99477DD91C8D1F56A5CE
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    bCollapsed = True
+    A <- MaterialExpressionSaturate_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Height"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = 551C49EC423E491AAA708DBF1F9B7304
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "TexelSize"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = 4847B2E243584F862CA84D9166232711
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "UVEps"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = BC4E90BB479CE876117A3A88B38577C4
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    bCollapsed = True
+    A <- MaterialExpressionSaturate_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSimulationUV.MF_FluxSimulationUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=AB54F8A04BF80648975AFEAEF6AA4B89,Output=(OutputName="Location"))
+    FunctionOutputs(1) = (ExpressionOutputId=C95318454157AA05A02E1CB27B1B2D7E,Output=(OutputName="ScaleInv"))
+    FunctionOutputs(2) = (ExpressionOutputId=E7854F864B404DDBFDE83C8D5C660588,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=CC73E6C2412A717020F206AE8D6F4D7F,Output=(OutputName="Height"))
+    FunctionOutputs(4) = (ExpressionOutputId=D453923D4F896744C8CAB5BC03EE1446,Output=(OutputName="Resolution"))
+    FunctionOutputs(5) = (ExpressionOutputId=4ADE6B714BD48DB8764BF28BC453AAE2,Output=(OutputName="TexelSize"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    Outputs(0) = (OutputName="Location")
+    Outputs(1) = (OutputName="ScaleInv")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Height")
+    Outputs(4) = (OutputName="Resolution")
+    Outputs(5) = (OutputName="TexelSize")
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = -0.000100
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    A <- MaterialExpressionSign_0
+[MaterialExpressionReroute_4] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    Input <- MaterialExpressionMultiply_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    Input <- MaterialExpressionMultiply_0
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    Input <- MaterialExpressionAdd_7
+[MaterialExpressionSign_0] MaterialExpressionSign
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    Input <- MaterialExpressionSubtract_1
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+    A <- MaterialExpressionReroute_4
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToSimulationUV'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

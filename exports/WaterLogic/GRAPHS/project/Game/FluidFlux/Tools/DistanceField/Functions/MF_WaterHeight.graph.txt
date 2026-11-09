@@ -1,0 +1,38 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Functions/MF_WaterHeight
+# класс: MaterialFunction; происхождение: проект; узлов: 7; связей: 11; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:47
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_WaterHeight] MaterialFunction
+    StateId = EED5033E49085715DAA419B62C48D1A3
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_WaterHeightEditorOnlyData
+[MF_WaterHeightEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_3
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_0
+    ExpressionCollection <- MaterialExpressionCollectionParameter_0
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterHeight'"
+    A <- MaterialExpressionCollectionParameter_0
+[MaterialExpressionCollectionParameter_0] MaterialExpressionCollectionParameter
+    Collection = "/Script/Engine.MaterialParameterCollection'/Game/FluidFlux/Tools/DistanceField/Materials/MPC_Glass.MPC_Glass'"
+    ParameterName = "GenerateZ"
+    ParameterId = F8BDB3FA4B9F89CDE2850C9E5426F5E2
+    Function = "/Script/Engine.MaterialFunction'MF_WaterHeight'"
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 6B4D805A4E6365996263F797B491D4EE
+    Function = "/Script/Engine.MaterialFunction'MF_WaterHeight'"
+    A <- MaterialExpressionShaderStageSwitch_0
+[MaterialExpressionShaderStageSwitch_0] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_WaterHeight'"
+    PixelShader <- MaterialExpressionVertexInterpolator_3
+    VertexShader <- MaterialExpressionAdd_3
+[MaterialExpressionVertexInterpolator_3] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_WaterHeight'"
+    Input <- MaterialExpressionAdd_3
+
+## СВЯЗИ

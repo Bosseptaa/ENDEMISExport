@@ -1,0 +1,21 @@
+﻿// Источник: /Game/FluidFlux/Tools/DistanceField/Functions/MF_BayerDither (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_2 ключ: Code
+// Входы: a, Transparency
+// Выход: не указан
+// Описание: Dither 8
+
+    uint2 b = uint2(a);
+    uint c = (b.x^b.y)<<1u;
+    float t = float(
+        ((c&8u|b.y&4u)>>2u)|
+        ((c&4u|b.y&2u)<<1u)|
+        ((c&2u|b.y&1u)<<4u) 
+    )/8./8.;
+
+if (Transparency <  t + 0.5-0.4921875)
+{
+  return 0.0;
+} else
+{
+  return 1.0;
+}

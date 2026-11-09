@@ -1,0 +1,1869 @@
+﻿# /Game/1_Water/Niagara/NS_InfiniteSurfaceMesh
+# класс: NiagaraSystem; происхождение: проект; узлов: 500; связей: 1221; HLSL: 0; причина: ссылка из water scope; имя/путь, тело:4716
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[NS_InfiniteSurfaceMesh] NiagaraSystem
+    TemplateAssetDescription = NSLOCTEXT("[19C0B40B48D7B6CFD828108D07BD1B82]", "F347F16C44204BFBCE8EEF8E883EF151", "FluxInfiniteSurface")
+    bInitialOwnerVelocityFromActor = False
+    bRequireCurrentFrameData = False
+    bFixedBounds = True
+    FixedBounds = (Min=(X=-10000000.000000,Y=-10000000.000000,Z=-500000.000000),Max=(X=10000000.000000,Y=10000000.000000,Z=500000.000000),IsValid=True)
+    bDeterminism = True
+    MaxEmitterImportance = Normal
+    MaxPoolSize = 8
+    PoolPrimeSize = 2
+    ThumbnailImage <- ThumbnailTexture
+    ScratchPadScripts(0) <- ScratchDynamicInput
+    ScratchPadScripts(1) <- InverseMesh
+    ScratchPadScripts(2) <- GetCameraPosition
+    ScratchPadScripts(3) <- LoadCamera
+    ScratchPadScripts(4) <- SetAlive
+    EmitterHandles(0) <- MeshNear_1
+    EmitterHandles(1) <- MeshFar_0
+    SystemSpawnScript <- SystemSpawnScript
+    SystemUpdateScript <- SystemUpdateScript
+    SystemCompiledData <- NiagaraDataInterfaceTexture_8
+    SystemCompiledData <- NiagaraDataInterfaceTexture_3
+    SystemCompiledData <- NiagaraDataInterfaceTexture_2
+    SystemCompiledData <- NiagaraDataInterfaceTexture_1
+    SystemCompiledData <- NiagaraDataInterfaceTexture_0
+    SystemCompiledData <- NiagaraDataInterfaceTexture_5
+    SystemCompiledData <- NiagaraDataInterfaceTexture_7
+    SystemCompiledData <- NiagaraDataInterfaceVolumeTexture_0
+    SystemCompiledData <- NiagaraDataInterfaceTexture_4
+    SystemCompiledData <- NiagaraDataInterfaceTexture_6
+    ScriptRuntimeCompiledDataForEditor <- NiagaraScriptRuntimeCompiledDataEditorReference_1
+    ExposedParameters <- NiagaraDataInterfaceTexture_3
+    ExposedParameters <- NiagaraDataInterfaceTexture_2
+    ExposedParameters <- NiagaraDataInterfaceTexture_1
+    ExposedParameters <- NiagaraDataInterfaceTexture_0
+    ExposedParameters <- NiagaraDataInterfaceTexture_5
+    ExposedParameters <- NiagaraDataInterfaceTexture_7
+    ExposedParameters <- NiagaraDataInterfaceVolumeTexture_0
+    ExposedParameters <- NiagaraDataInterfaceTexture_4
+    ExposedParameters <- NiagaraDataInterfaceTexture_6
+    ExposedParameters <- NiagaraDataInterfaceTexture_8
+    EditorData <- NiagaraSystemEditorData_0
+    EditorParameters <- NiagaraEditorParametersAdapter_0
+    BakerSettings <- BakerSettings
+[ThumbnailTexture] Texture2D
+    ImportedSize = (X=512,Y=512)
+    LightingGuid = 2E109D1D49D3D04ED43121A1FF06CAD1
+    CompressionNoAlpha = True
+    AssetImportData <- AssetImportData
+[AssetImportData] AssetImportData
+[NiagaraSystemEditorData_0] NiagaraSystemEditorData
+    UserParameterHierarchy = "UserParameterHierarchyRoot"
+    RootFolder = "RootFolder"
+    StackEditorData = "StackEditorData"
+    PlaybackRangeMax = 23.229151
+    OverviewGraphViewSettings = (Location=(X=-272.247345,Y=154.574371),Zoom=1.000000,bIsValid=True)
+    AssetViewportSettings = (ViewLocation=(X=142.892050,Y=188.253328,Z=98.379604),ViewRotation=(Pitch=-22.600000,Yaw=-127.199997,Roll=-0.000001))
+    SystemOverviewGraph <- NiagaraOverview
+    UserParameterMetaData(0) <- NiagaraScriptVariable_0
+    UserParameterMetaData(1) <- NiagaraScriptVariable_1
+    UserParameterMetaData(2) <- NiagaraScriptVariable_2
+    UserParameterMetaData(3) <- NiagaraScriptVariable_3
+    UserParameterMetaData(4) <- NiagaraScriptVariable_4
+    UserParameterMetaData(5) <- NiagaraScriptVariable_5
+    UserParameterMetaData(6) <- NiagaraScriptVariable_6
+    UserParameterMetaData(7) <- NiagaraScriptVariable_7
+    UserParameterMetaData(8) <- NiagaraScriptVariable_8
+    UserParameterMetaData(9) <- NiagaraScriptVariable_9
+    UserParameterMetaData(10) <- NiagaraScriptVariable_10
+    UserParameterMetaData(11) <- NiagaraScriptVariable_11
+    UserParameterMetaData(12) <- NiagaraScriptVariable_12
+    UserParameterMetaData(13) <- NiagaraScriptVariable_13
+    UserParameterMetaData(14) <- NiagaraScriptVariable_14
+    UserParameterMetaData(15) <- NiagaraScriptVariable_15
+    UserParameterMetaData(16) <- NiagaraScriptVariable_16
+    UserParameterMetaData(17) <- NiagaraScriptVariable_17
+    UserParameterMetaData(18) <- NiagaraScriptVariable_18
+    UserParameterMetaData(19) <- NiagaraScriptVariable_19
+    UserParameterMetaData(20) <- NiagaraScriptVariable_20
+    UserParameterMetaData(21) <- NiagaraScriptVariable_21
+    UserParameterMetaData(22) <- NiagaraScriptVariable_22
+    UserParameterMetaData(23) <- NiagaraScriptVariable_23
+    UserParameterMetaData(24) <- NiagaraScriptVariable_24
+    UserParameterMetaData(25) <- NiagaraScriptVariable_25
+    UserParameterMetaData(26) <- NiagaraScriptVariable_26
+    UserParameterMetaData(27) <- NiagaraScriptVariable_27
+    UserParameterMetaData(28) <- NiagaraScriptVariable_28
+    UserParameterMetaData(29) <- NiagaraScriptVariable_29
+    UserParameterMetaData(30) <- NiagaraScriptVariable_30
+    UserParameterMetaData(31) <- NiagaraScriptVariable_31
+    UserParameterMetaData(32) <- NiagaraScriptVariable_32
+    UserParameterMetaData(33) <- NiagaraScriptVariable_33
+    UserParameterMetaData(34) <- NiagaraScriptVariable_34
+    UserParameterMetaData(35) <- NiagaraScriptVariable_35
+    UserParameterMetaData(36) <- NiagaraScriptVariable_36
+    UserParameterMetaData(37) <- NiagaraScriptVariable_39
+    UserParameterMetaData(38) <- NiagaraScriptVariable_43
+    UserParameterMetaData(39) <- NiagaraScriptVariable_44
+    UserParameterMetaData(40) <- NiagaraScriptVariable_46
+    UserParameterMetaData(41) <- NiagaraScriptVariable_37
+    UserParameterMetaData(42) <- NiagaraScriptVariable_41
+    UserParameterMetaData(43) <- NiagaraScriptVariable_45
+    UserParameterMetaData(44) <- NiagaraScriptVariable_48
+    UserParameterMetaData(45) <- NiagaraScriptVariable_50
+    UserParameterMetaData(46) <- NiagaraScriptVariable_52
+    UserParameterMetaData(47) <- NiagaraScriptVariable_38
+    UserParameterMetaData(48) <- NiagaraScriptVariable_47
+    UserParameterMetaData(49) <- NiagaraScriptVariable_40
+    UserParameterMetaData(50) <- NiagaraScriptVariable_49
+    UserParameterMetaData(51) <- NiagaraScriptVariable_51
+    UserParameterMetaData(52) <- NiagaraScriptVariable_53
+    UserParameterMetaData(53) <- NiagaraScriptVariable_54
+    UserParameterMetaData(54) <- NiagaraScriptVariable_55
+    UserParameterMetaData(55) <- NiagaraScriptVariable_56
+[RootFolder] NiagaraSystemEditorFolder
+[StackEditorData@NiagaraSystemEditorData_0] NiagaraStackEditorData
+[UserParameterHierarchyRoot] HierarchyRoot
+    Identity = (Guids=(FE5196204D08B98DD0E051AE5EB96C86))
+[NiagaraOverview] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/NiagaraEditor.EdGraphSchema_NiagaraSystemOverview'"
+    GraphGuid = 91569BD1468B81051372E9B66303E393
+    Nodes(0) <- NiagaraOverviewNode_0
+    Nodes(1) <- NiagaraOverviewNode_1
+    Nodes(2) <- NiagaraOverviewNode_3
+[NiagaraOverviewNode_0] NiagaraOverviewNode
+    OwningSystem = "/Script/Niagara.NiagaraSystem'NS_InfiniteSurfaceMesh'"
+[NiagaraOverviewNode_1] NiagaraOverviewNode
+    OwningSystem = "/Script/Niagara.NiagaraSystem'NS_InfiniteSurfaceMesh'"
+    EmitterHandleGuid = 71503566492ED2F3906E1F8D3C4893F6
+    bUserSetEnabledState = True
+[NiagaraOverviewNode_3] NiagaraOverviewNode
+    OwningSystem = "/Script/Niagara.NiagaraSystem'NS_InfiniteSurfaceMesh'"
+    EmitterHandleGuid = 4F75FBAA4356D4C0F24ABBBB4F98DD1B
+    bUserSetEnabledState = True
+[NiagaraScriptVariable_0@NiagaraSystemEditorData_0] NiagaraScriptVariable
+[NiagaraScriptVariable_1@NiagaraSystemEditorData_0] NiagaraScriptVariable
+[NiagaraScriptVariable_10] NiagaraScriptVariable
+    Variable = (Name="User.FluxStateHeightMap",TypeDefHandle=(RegisteredTypeIndex=47))
+    Metadata = (VariableGuid=096F5A9F44A037AD1679E3A956C4F299)
+    ChangeId = 28258E1D441BFDBF0BECDD8386CC0699
+[NiagaraScriptVariable_11] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.FluxStateHeightOffset",TypeDefHandle=(RegisteredTypeIndex=99))
+    Metadata = (VariableGuid=3FAAE5924AB94B734884BEA4900667A0)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 331DFDBC4E8B675E57A09DA24B56B7D1
+[NiagaraScriptVariable_12] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0),Name="User.FluxStateSampleSize",TypeDefHandle=(RegisteredTypeIndex=103))
+    Metadata = (VariableGuid=D4A4F7054F8A04DD4C01C69B81B78C0A)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = A8A8C12643FABEF10E11E9820192F136
+[NiagaraScriptVariable_13] NiagaraScriptVariable
+    Variable = (Name="User.FluxStateVelocityMap",TypeDefHandle=(RegisteredTypeIndex=47))
+    Metadata = (VariableGuid=6756269D48D56C02F85EE6AE88BF9D33)
+    ChangeId = 037E307A49BD64A47714A9A46CFF2362
+[NiagaraScriptVariable_14] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.FluxWaveHeight",TypeDefHandle=(RegisteredTypeIndex=99))
+    Metadata = (VariableGuid=ED3A6B3148640208ECE0CBA54566E67F)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = EDD505F848F37BCF680BB79F7FAC97A5
+[NiagaraScriptVariable_15] NiagaraScriptVariable
+    Variable = (Name="User.FluxWaveHeightMap",TypeDefHandle=(RegisteredTypeIndex=47))
+    Metadata = (VariableGuid=74DCFE154736C66E841FA680842C3B1B)
+    ChangeId = 3D5E315041C3D92C79DA42BCCBDC8C5F
+[NiagaraScriptVariable_16] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.FluxWaveOffsetZ",TypeDefHandle=(RegisteredTypeIndex=99))
+    Metadata = (VariableGuid=D4C60FE94A6C78B4D5F17B9FF349E975)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 9AEB348246D93C97C9E80A916107EDA6
+[NiagaraScriptVariable_17] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxWaveProfileDecode")
+    Metadata = (VariableGuid=F702A9B54C128953CE882B82050AC697)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 4043F46B417296A192130B988C1FAD89
+[NiagaraScriptVariable_18] NiagaraScriptVariable
+    Variable = (Name="User.FluxWaveProfileMap",TypeDefHandle=(RegisteredTypeIndex=47))
+    Metadata = (VariableGuid=9A3685E64BABABFEBFBAC184B945934B)
+    ChangeId = F6BC71994A03E03DD109918DB71C8617
+[NiagaraScriptVariable_19] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxWaveProfileParameters")
+    Metadata = (VariableGuid=4974F9744C49A5A2D5CB3C9A3385C3AD)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 2A30D1704F0D8F376F1D558A1AA66570
+[NiagaraScriptVariable_2@NiagaraSystemEditorData_0] NiagaraScriptVariable
+[NiagaraScriptVariable_20] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.FluxWaveSurfaceZ",TypeDefHandle=(RegisteredTypeIndex=99))
+    Metadata = (VariableGuid=F4A6C16C48180EF9C582F6A2227E1024)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 62E27085431D50C9435338AEA64353DE
+[NiagaraScriptVariable_21] NiagaraScriptVariable
+    Variable = (Name="User.FluxWaveTextureMap",TypeDefHandle=(RegisteredTypeIndex=47))
+    Metadata = (VariableGuid=A5752B8244F96F56FDD9F98887C268BC)
+    ChangeId = 8EC46B55430D90AB2C0F0EA8FCE003A6
+[NiagaraScriptVariable_22] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxWaveVelocityPush",TypeDefHandle=(RegisteredTypeIndex=104))
+    Metadata = (VariableGuid=62F6B2284F51DE98398AB9BCCDCF1680)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 15238082429A9D4763D976ABB003A32C
+[NiagaraScriptVariable_23] NiagaraScriptVariable
+    Variable = (Name="User.FluxWaveVolumeMap",TypeDefHandle=(RegisteredTypeIndex=51))
+    Metadata = (VariableGuid=D90999714C69A3D74770549A75BE5BA1)
+    ChangeId = 5A43C5364C72C5987F13ACBE7274DE8F
+[NiagaraScriptVariable_24] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxWaveWind")
+    Metadata = (VariableGuid=59BA53AD4EA0E939859092B16F608BEE)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = F98097764E90E084021A29B4272EB3DB
+[NiagaraScriptVariable_25] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxWaveWorldToUV")
+    Metadata = (VariableGuid=2FF5C7D54B9249D021D9B1851767DCDE)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 9143CE874662B3613CFFFB8C11528FD5
+[NiagaraScriptVariable_26] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxWorldAreaLocation",TypeDefHandle=(RegisteredTypeIndex=104))
+    Metadata = (VariableGuid=FA2AB4EB4E729FE8E397D78E364A8F1C)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = FA75E18049F3492F13542DBD1E30110F
+[NiagaraScriptVariable_27] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxWorldAreaSize",TypeDefHandle=(RegisteredTypeIndex=104))
+    Metadata = (VariableGuid=36EF752A4FDA15267D3B03876C6C174A)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 4245637D4244039744F20CADBC09599A
+[NiagaraScriptVariable_28] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.FluxWorldCoastlineDecode",TypeDefHandle=(RegisteredTypeIndex=99))
+    Metadata = (VariableGuid=37E35DA547702C5FFC920681F32E7D08)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = C7D02AE5447809B300BF0AB6600651AD
+[NiagaraScriptVariable_29] NiagaraScriptVariable
+    Variable = (Name="User.FluxWorldCoastMap",TypeDefHandle=(RegisteredTypeIndex=47))
+    Metadata = (VariableGuid=388080544ADC002BE3653D991E9DF900)
+    ChangeId = 8177D5554C9B6C84986283894B0C0385
+[NiagaraScriptVariable_3@NiagaraSystemEditorData_0] NiagaraScriptVariable
+[NiagaraScriptVariable_30] NiagaraScriptVariable
+    Variable = (Name="User.FluxWorldHeightMap",TypeDefHandle=(RegisteredTypeIndex=47))
+    Metadata = (VariableGuid=CAE37EAB40779D06A78EBABD1BC4C6DA)
+    ChangeId = 1A136DBE4F7C27A4B4AE62A778F93B42
+[NiagaraScriptVariable_31] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.FluxWorldPixelSize",TypeDefHandle=(RegisteredTypeIndex=99))
+    Metadata = (VariableGuid=D968F9F44B21DFF26D22D4A519D66545)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = C087D5324B69CFB67CA4248EFC33CA51
+[NiagaraScriptVariable_32] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.FluxWorldSurfaceHeight",TypeDefHandle=(RegisteredTypeIndex=99))
+    Metadata = (VariableGuid=A3C89CC74CD0153A6E3FE2904B33EAFF)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 87D5EBA54AAC4717200410BAD2A48A2F
+[NiagaraScriptVariable_33] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.GridLevels",TypeDefHandle=(RegisteredTypeIndex=101))
+    Metadata = (VariableGuid=9293374040C19318AC6F679011154D0B)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 4B87FFDA411F9926528475A111DA3A68
+[NiagaraScriptVariable_34] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.GridMeshScale",TypeDefHandle=(RegisteredTypeIndex=99))
+    Metadata = (VariableGuid=4874C84E463FB7A7EB4FAFB1A8429369)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 630941A24F5D66D253E08CACDD893AC6
+[NiagaraScriptVariable_35] NiagaraScriptVariable
+    Variable = (Name="User.SurfaceOverMaterial_SCW",TypeDefHandle=(RegisteredTypeIndex=2))
+    Metadata = (VariableGuid=3D57F2C34377BEF558421E855BA84322)
+    ChangeId = A9322AAF4FEFF9CE52959DB377CA0E35
+[NiagaraScriptVariable_36] NiagaraScriptVariable
+    Variable = (Name="User.MaterialOceanFar",TypeDefHandle=(RegisteredTypeIndex=2))
+    Metadata = (VariableGuid=9678FEB14944AC069D24D29E26FE365C)
+    ChangeId = 1146C9394C2F8811AB690BA8B4E6F76E
+[NiagaraScriptVariable_37] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.SurfaceOverMesh_00W",TypeDefHandle=(RegisteredTypeIndex=102))
+    Metadata = (VariableGuid=C082BC8349E60D026525FAACD52FDEAC)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = C6BD9E9C41311FCC6BC1E9BBE64DD6AF
+[NiagaraScriptVariable_38] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.SurfaceOverMesh_S00",TypeDefHandle=(RegisteredTypeIndex=102))
+    Metadata = (VariableGuid=600A361A4DADF651640DD3AA2ECE9022)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = BABEA59A410F74C65BACC8AA6D70872D
+[NiagaraScriptVariable_39] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.TopPlane",TypeDefHandle=(RegisteredTypeIndex=102))
+    Metadata = (VariableGuid=BB9E1D0A48BA3A4AFDF8219F706D744F)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = A780ADC84062B3D51D3B508B50EE625D
+[NiagaraScriptVariable_4] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.FluxStateAreaBlend",TypeDefHandle=(RegisteredTypeIndex=99))
+    Metadata = (VariableGuid=C650532C4A48071D5AC125A5A09B1C47)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 51C1622143A5CD512C803EA1CE34C925
+[NiagaraScriptVariable_40] NiagaraScriptVariable
+    Variable = (Name="User.FluxSDFMap",TypeDefHandle=(RegisteredTypeIndex=47))
+    Metadata = (VariableGuid=801BC4C64CF93F4D3768E2934383291E)
+    ChangeId = 1AA0B38240B6F3257EE1C8BB3A1E7855
+[NiagaraScriptVariable_41] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.SurfaceOverMesh_0CW",TypeDefHandle=(RegisteredTypeIndex=102))
+    Metadata = (VariableGuid=C3D13610405A3511EA7E7296C7E24126)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = ABB0C923487878D3E263CEABB0110250
+[NiagaraScriptVariable_43] NiagaraScriptVariable
+    Variable = (Name="User.MeshGrid",TypeDefHandle=(RegisteredTypeIndex=117))
+    Metadata = (VariableGuid=6A50158745A6D7F76CCFC7BEB91573F5)
+    ChangeId = 25AB50BD4D3BB65278E3C2914FC0E901
+[NiagaraScriptVariable_44] NiagaraScriptVariable
+    Variable = (Name="User.SurfaceOverMaterial_0CW",TypeDefHandle=(RegisteredTypeIndex=2))
+    Metadata = (VariableGuid=BDBFC26D4C4EB53076937F99E2FADAAB)
+    ChangeId = 0A268A1F46BA256DD599D29B991E225A
+[NiagaraScriptVariable_45] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.SurfaceOverMesh_SCW",TypeDefHandle=(RegisteredTypeIndex=102))
+    Metadata = (VariableGuid=3426A20F448C2C094283F8B6B96F3ECB)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 959F38F54B4979E9567E94AEEDCD4579
+[NiagaraScriptVariable_46] NiagaraScriptVariable
+    Variable = (Name="User.SurfaceOverMaterial_00W",TypeDefHandle=(RegisteredTypeIndex=2))
+    Metadata = (VariableGuid=4B23E30A4E8463DD850A3A88940217F1)
+    ChangeId = 6F2D47BE44761C2831A2F9926068E9CE
+[NiagaraScriptVariable_47] NiagaraScriptVariable
+    Variable = (Name="User.SurfaceOverMaterial_S00",TypeDefHandle=(RegisteredTypeIndex=2))
+    Metadata = (VariableGuid=4C5BC281499D2EB891B2F4A46D745CE8)
+    ChangeId = 302FC88A4561EAB29423368ADC25219B
+[NiagaraScriptVariable_48] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.SurfaceOverMask",TypeDefHandle=(RegisteredTypeIndex=101))
+    Metadata = (VariableGuid=E98632F14B6A7BF1C4B9D682208586BB)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 815D513D42B286D4AC14A1B673B3946D
+[NiagaraScriptVariable_49] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.FluxSDFRange",TypeDefHandle=(RegisteredTypeIndex=99))
+    Metadata = (VariableGuid=B37F739C425D81B52A058EAAAB433149)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = E56BC0C24B3B4E4AD3F31AA9EB8316C6
+[NiagaraScriptVariable_5] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxStateAreaBorders")
+    Metadata = (VariableGuid=F052515746AFD7A27AB5B2861FF6B42B)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = D9A071F7478D235695670A85A4B83639
+[NiagaraScriptVariable_50] NiagaraScriptVariable
+    Variable = (Name="User.SurfaceOverMaterial_S0W",TypeDefHandle=(RegisteredTypeIndex=2))
+    Metadata = (VariableGuid=604BDABC45AC42013DA43AAA0D975615)
+    ChangeId = B5D4D0A247AE50EA898700BECDF56F86
+[NiagaraScriptVariable_51] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxSDFSize",TypeDefHandle=(RegisteredTypeIndex=104))
+    Metadata = (VariableGuid=0E64865A4793066AB9ED7890F24FCB31)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 17F4BC0A4F02273864FCFE97045671E2
+[NiagaraScriptVariable_52] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.SurfaceOverMesh_S0W",TypeDefHandle=(RegisteredTypeIndex=102))
+    Metadata = (VariableGuid=9BE42E4F40513819D8761F902E9D3550)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = DE69C456428E595BFAACAF9D1B9B0248
+[NiagaraScriptVariable_53] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxSDFTiles",TypeDefHandle=(RegisteredTypeIndex=104))
+    Metadata = (VariableGuid=48E9C4DE4A575A9347F1F98EB36D5489)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 8496D9724065FB5EA46BA79986435036
+[NiagaraScriptVariable_54] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0),Name="User.FluxSDFTiles",TypeDefHandle=(RegisteredTypeIndex=103))
+    Metadata = (VariableGuid=519AF2C34EF98885D0ABF9AFA00A0EC0)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 15C0D3924FF29E6A31356CAF02D6AB44
+[NiagaraScriptVariable_55] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxSDFLocation",TypeDefHandle=(RegisteredTypeIndex=104))
+    Metadata = (VariableGuid=DBF657394C44B9AA64F260B780B62D1A)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = B4A32B4B4A82FD44CA8486AF0C5FCC7F
+[NiagaraScriptVariable_56] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxSDFPosition",TypeDefHandle=(RegisteredTypeIndex=107))
+    Metadata = (VariableGuid=4055653E43D0EFFDBBCC0197406FF16E)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 0A5335EA4FD04E4FE47B33BFD5F63EF1
+[NiagaraScriptVariable_6] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxStateAreaLocation",TypeDefHandle=(RegisteredTypeIndex=104))
+    Metadata = (VariableGuid=0C24CA734D4975B0E96E3B86F7722129)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 8605BDE74243F03E069E94B07026A85C
+[NiagaraScriptVariable_7@NiagaraSystemEditorData_0] NiagaraScriptVariable
+[NiagaraScriptVariable_8] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxStateDecodeData",TypeDefHandle=(RegisteredTypeIndex=104))
+    Metadata = (VariableGuid=D9F567D94CFED54072A1F7B0164D3ED0)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 1AB31781409680351C8A9097857A8A34
+[NiagaraScriptVariable_9] NiagaraScriptVariable
+    Variable = (Name="User.FluxStateGroundMap",TypeDefHandle=(RegisteredTypeIndex=47))
+    Metadata = (VariableGuid=31083B234496D663767A1192AE980954)
+    ChangeId = 6ABB081C49FFDEB98AF1B0A89B92369D
+[GetCameraPosition] NiagaraScript
+    Usage = DynamicInput
+    ExposedVersion = 37C35DCAE4597E63854D496DCF5EC785
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraScriptSource_0@GetCameraPosition] NiagaraScriptSource
+[NiagaraGraph_0@GetCameraPosition.NiagaraScriptSource_0] NiagaraGraph
+[ParameterHierarchyRoot@GetCameraPosition.NiagaraScriptSource_0.NiagaraGraph_0] HierarchyRoot
+[NiagaraHierarchyScriptParameter_0@GetCameraPosition.NiagaraScriptSource_0.NiagaraGraph_0.ParameterHierarchyRoot] NiagaraHierarchyScriptParameter
+[NiagaraNodeFunctionCall_292@GetCameraPosition.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeInput_169@GetCameraPosition.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_0@GetCameraPosition.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeParameterMapGet_6@GetCameraPosition.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraScriptVariable_0@GetCameraPosition.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[InverseMesh] NiagaraScript
+    Usage = Module
+    ExposedVersion = 7CC98BC4BA11B3819DC65436E014AE80
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraScriptSource_0@InverseMesh] NiagaraScriptSource
+[NiagaraGraph_0@InverseMesh.NiagaraScriptSource_0] NiagaraGraph
+[ParameterHierarchyRoot@InverseMesh.NiagaraScriptSource_0.NiagaraGraph_0] HierarchyRoot
+[NiagaraHierarchyScriptParameter_0@InverseMesh.NiagaraScriptSource_0.NiagaraGraph_0.ParameterHierarchyRoot] NiagaraHierarchyScriptParameter
+[NiagaraNodeConvert_12] NiagaraNodeConvert
+    AutowireMakeType = (ClassStructOrEnum="/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.Quat4f'",UnderlyingType=2)
+    Connections(0) = (SourcePinId=903841B849F31C0DFEEB9884D95C49B4,SourcePath=("Value"),DestinationPinId=ED98A3514FCC892AC2E75EB73D29F1CF,DestinationPath=("X"))
+    Connections(1) = (SourcePinId=1BA71E674D4D45A1CFAF37BEF44C0512,SourcePath=("Value"),DestinationPinId=ED98A3514FCC892AC2E75EB73D29F1CF,DestinationPath=("Y"))
+    Connections(2) = (SourcePinId=168310C0452D79EB5F9809B01ADD966B,SourcePath=("Value"),DestinationPinId=ED98A3514FCC892AC2E75EB73D29F1CF,DestinationPath=("Z"))
+    Connections(3) = (SourcePinId=A2654011481777F9ADAE44ADBB040C12,SourcePath=("Value"),DestinationPinId=ED98A3514FCC892AC2E75EB73D29F1CF,DestinationPath=("W"))
+    bIsWiringShown = False
+    ExpandedItems(0) = (PinId=903841B849F31C0DFEEB9884D95C49B4)
+    ExpandedItems(1) = (PinId=ED98A3514FCC892AC2E75EB73D29F1CF)
+    ExpandedItems(2) = (PinId=1BA71E674D4D45A1CFAF37BEF44C0512)
+    ExpandedItems(3) = (PinId=168310C0452D79EB5F9809B01ADD966B)
+    ExpandedItems(4) = (PinId=A2654011481777F9ADAE44ADBB040C12)
+    ChangeId = C49FACAD42F75ADFF8E2979132E65BE7
+    NodeComment = "Identity quat"
+    вход X = 0.000000
+    вход W = 1.000000
+[NiagaraNodeFunctionCall_6@InverseMesh.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeIf_0] NiagaraNodeIf
+    OutputVars(0) = (Name="Vector",TypeDefHandle=(RegisteredTypeIndex=104))
+    PathAssociatedPinGuids(0) = (OutputPinGuid=C21BC78947E84284982443B299D852BE,InputTruePinGuid=A22851A74D2B6A861C3272A5E0588800,InputFalsePinGuid=223B0AA246780921AF4F4E9374B0C3FC)
+    ConditionPinGuid = 9311E4814527DBD50CB163ACEDF56AF0
+    ChangeId = E7E62B1744AA198F50AB41AB90D30EF7
+    вход Vector if True = 0.000000,0,0
+    вход Vector if False = -0.500000,0,0
+[NiagaraNodeInput_169@InverseMesh.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_0@InverseMesh.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeParameterMapGet_6@InverseMesh.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapSet_2@InverseMesh.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraScriptVariable_0@InverseMesh.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraScriptVariable_1@InverseMesh.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraScriptVariable_2@InverseMesh.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[LoadCamera] NiagaraScript
+    Usage = Module
+    ExposedVersion = 0D1368513B4F1FAC322EFD49B143298A
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraScriptSource_0@LoadCamera] NiagaraScriptSource
+[NiagaraGraph_0@LoadCamera.NiagaraScriptSource_0] NiagaraGraph
+[ParameterHierarchyRoot@LoadCamera.NiagaraScriptSource_0.NiagaraGraph_0] HierarchyRoot
+[NiagaraHierarchyScriptParameter_0@LoadCamera.NiagaraScriptSource_0.NiagaraGraph_0.ParameterHierarchyRoot] NiagaraHierarchyScriptParameter
+[NiagaraNodeFunctionCall_292@LoadCamera.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+    FunctionDisplayName = "GetCameraPropertiesCPU/GPU"
+    ChangeId = 3BA47D6E49389321DB14D08C34588808
+    FunctionDisplayName = "GetCameraPropertiesCPU/GPU"
+    ChangeId = 73597A7A4EFA5F6C9092D98BB1F5D1BA
+[NiagaraNodeInput_169@LoadCamera.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_0@LoadCamera.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeParameterMapGet_2@LoadCamera.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapSet_6@LoadCamera.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraScriptVariable_2@LoadCamera.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0),Name="User.FluxShoreWaveScale",TypeDefHandle=(RegisteredTypeIndex=99))
+    Metadata = (VariableGuid=EED9C6454E4AD0884893B9AD920BB28D)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = C1FFAECD4A3289D54E87838783EF917D
+    Variable = (VarData=(0,0,0,0),Name="Module.TopPlane",TypeDefHandle=(RegisteredTypeIndex=102))
+    Metadata = (VariableGuid=6B7C9884996224D86D3E62C0B275D224)
+    DefaultValueVariant = (Bytes=(0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 4F3F52AA4FF5F6D55ECECD9A407207B3
+    DefaultMode = FailIfPreviouslyNotSet
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="Transient.CurrentCameraPosition",TypeDefHandle=(RegisteredTypeIndex=107))
+    Metadata = (VariableGuid=E56668D249C940DD3FD5EB986D1CBE14)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = CA8D87B54D1DCCDCF213EFB19DFFBCF6
+[NiagaraScriptVariable_3@LoadCamera.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraScriptVariable_7@LoadCamera.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="User.FluxStateAreaSize",TypeDefHandle=(RegisteredTypeIndex=104))
+    Metadata = (VariableGuid=DD265FE241F5EC68D80503A1722B179F)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 01246BC44C4FEEB220923AB34E21ABA9
+    Variable = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="Transient.CurrentCameraDirection",TypeDefHandle=(RegisteredTypeIndex=104))
+    Metadata = (VariableGuid=ED8908C7988467D7133470647B41F129)
+    DefaultValueVariant = (Bytes=(0,0,0,0,0,0,0,0,0,0,0,0),CurrentMode=Bytes)
+    ChangeId = 641DEC994F0CB2167325CAB3531B0DAD
+[MeshFar_0] NiagaraEmitter
+    ExposedVersion = 54659D01B89C43503D9411455B31A475
+    LibraryVisibility = Library
+    ChangeId = FABC2DA14BEF19EC85B1B6A2FA869B17
+    UniqueEmitterName = "MeshFar"
+    VersionData(0) <- UpdateScript
+    VersionData(0) <- SpawnScript
+    VersionData(0) <- EmitterSpawnScript
+    VersionData(0) <- EmitterUpdateScript
+    VersionData(0) <- NiagaraScriptSource_0
+    VersionData(0) <- NiagaraScratchPadContainer_0
+    VersionData(0) <- NiagaraScratchPadContainer_1
+    VersionData(0) <- NiagaraMeshRendererProperties_3
+    VersionData(0) <- NiagaraMeshRendererProperties_13
+    VersionData(0) <- GPUComputeScript
+    VersionData(0) <- NiagaraEmitterEditorData_0
+    VersionData(0) <- NiagaraEditorParametersAdapter_0
+[NiagaraEmitterEditorData_0@MeshFar_0] NiagaraEmitterEditorData
+[StackEditorData@MeshFar_0.NiagaraEmitterEditorData_0] NiagaraStackEditorData
+[SummaryViewRoot@MeshFar_0.NiagaraEmitterEditorData_0] HierarchyRoot
+[NiagaraScriptSource_0@MeshFar_0] NiagaraScriptSource
+[NiagaraGraph_0@MeshFar_0.NiagaraScriptSource_0] NiagaraGraph
+[ParameterHierarchyRoot@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] HierarchyRoot
+[NiagaraNodeInput_0@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[Directions@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0.NiagaraNodeInput_0] NiagaraDataInterfaceArrayFloat2
+[NiagaraNodeInput_7@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[New_Camera_Query] NiagaraDataInterfaceCamera
+    bRequireCurrentFrameData = False
+[NiagaraNodeInput_1@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[WaveProfileMap@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0.NiagaraNodeInput_1] NiagaraDataInterfaceTexture
+[NiagaraNodeInput_6@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[WaveAnimationVolume@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0.NiagaraNodeInput_6] NiagaraDataInterfaceVolumeTexture
+[NiagaraNodeFunctionCall_10@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_2@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_3@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_4@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_5@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_6@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeInput_2@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeInput_3@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeInput_4@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeInput_5@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_2@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeOutput_3@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeOutput_4@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeOutput_5@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeParameterMapGet_1@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_10@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_11@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_12@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_13@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_14@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_15@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_16@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_17@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_18@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_19@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_2@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_20@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_22@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_23@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_24@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_25@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_26@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_27@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_28@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_29@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_3@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_30@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_31@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_32@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_33@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_34@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_4@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_5@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_6@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_7@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_8@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_9@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapSet_0@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapSet_1@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapSet_2@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapSet_4@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapSet_6@MeshFar_0.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[GPUComputeScript@MeshFar_0] NiagaraScript
+[NiagaraDataInterfaceCamera_0@MeshFar_0.GPUComputeScript] NiagaraDataInterfaceCamera
+[NiagaraDataInterfaceTexture_0@MeshFar_0.GPUComputeScript] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@MeshFar_0.GPUComputeScript] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@MeshFar_0.GPUComputeScript] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3@MeshFar_0.GPUComputeScript] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceArrayFloat2_0@MeshFar_0.GPUComputeScript] NiagaraDataInterfaceArrayFloat2
+[UpdateScript@MeshFar_0] NiagaraScript
+[NiagaraDataInterfaceArrayFloat2_0@MeshFar_0.UpdateScript] NiagaraDataInterfaceArrayFloat2
+[NiagaraDataInterfaceCamera_0@MeshFar_0.UpdateScript] NiagaraDataInterfaceCamera
+[NiagaraDataInterfaceTexture_0@MeshFar_0.UpdateScript] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@MeshFar_0.UpdateScript] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@MeshFar_0.UpdateScript] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3@MeshFar_0.UpdateScript] NiagaraDataInterfaceTexture
+[NiagaraEditorParametersAdapter_0@MeshFar_0] NiagaraEditorParametersAdapter
+[NiagaraMeshRendererProperties_13] NiagaraMeshRendererProperties
+    Meshes(0) = (Mesh="/Script/Engine.StaticMesh'/Game/FluidFlux/Editor/Meshes/SM_DebugCube.SM_DebugCube'")
+    MeshesBinding = (ResolvedParameter=(TypeDefHandle=(RegisteredTypeIndex=105)),AliasedParameter=(TypeDefHandle=(RegisteredTypeIndex=105)))
+    bSubImageBlend = False
+    bEnableFrustumCulling = True
+    PositionBinding = (bBindingExistsOnSource=True)
+    MeshOrientationBinding = (bBindingExistsOnSource=True)
+    ScaleBinding = (bBindingExistsOnSource=True)
+    CustomSortingBinding = (RootName="NormalizedAge",ParamMapVariable=(Name="Particles.NormalizedAge"),DataSetName="NormalizedAge",CachedDisplayName="Particles.NormalizedAge")
+    bIsEnabled = False
+    RendererEnabledBinding = (bIsCachedParticleValue=True)
+    OuterEmitterVersion = 54659D01B89C43503D9411455B31A475
+    MergeId = 8A5EDB824D141A2DC3B546A06D1887DE
+[NiagaraMeshRendererProperties_3@MeshFar_0] NiagaraMeshRendererProperties
+[NiagaraScratchPadContainer_0@MeshFar_0] NiagaraScratchPadContainer
+[NiagaraScratchPadContainer_1@MeshFar_0] NiagaraScratchPadContainer
+[EmitterSpawnScript@MeshFar_0] NiagaraScript
+[EmitterUpdateScript@MeshFar_0] NiagaraScript
+[SpawnScript@MeshFar_0] NiagaraScript
+[MeshNear_1] NiagaraEmitter
+    ExposedVersion = EFF416B9AA3920EE2C8A42441869799B
+    LibraryVisibility = Library
+    ChangeId = 70B38C3F4FC586633F1B50B4A3C7FA1A
+    ParameterDefinitionsSubscriptions(0) = (Definitions="/Script/NiagaraEditor.NiagaraParameterDefinitions'/Niagara/ParameterDefinitions/CoreParameters.CoreParameters'",CachedChangeIdHash=-630998988)
+    ParameterDefinitionsSubscriptions(1) = (Definitions="/Script/NiagaraEditor.NiagaraParameterDefinitions'/Niagara/ParameterDefinitions/MeshRenderer.MeshRenderer'",CachedChangeIdHash=-711286553)
+    UniqueEmitterName = "MeshNear"
+    VersionData(0) <- UpdateScript_0
+    VersionData(0) <- SpawnScript_1
+    VersionData(0) <- EmitterSpawnScript_0
+    VersionData(0) <- EmitterUpdateScript_0
+    VersionData(0) <- NiagaraScriptSource_2
+    VersionData(0) <- NiagaraScratchPadContainer_1
+    VersionData(0) <- NiagaraScratchPadContainer_0
+    VersionData(0) <- NiagaraEmitter_1
+    VersionData(0) <- NiagaraMeshRendererProperties_0
+    VersionData(0) <- NiagaraMeshRendererProperties_1
+    VersionData(0) <- NiagaraMeshRendererProperties_2
+    VersionData(0) <- NiagaraMeshRendererProperties_3
+    VersionData(0) <- NiagaraMeshRendererProperties_4
+    VersionData(0) <- NiagaraMeshRendererProperties_5
+    VersionData(0) <- GPUComputeScript_0
+    VersionData(0) <- NiagaraEmitterEditorData_2
+    VersionData(0) <- NiagaraEditorParametersAdapter_0
+[NiagaraEmitter_1] NiagaraEmitter
+    ExposedVersion = 94A717F46F399E8DF103362B5640B01F
+    LibraryVisibility = Library
+    ChangeId = 12D00B784CD370DCFFAA88B25F07116F
+    UniqueEmitterName = "NE_FluxData"
+    VersionData(0) <- UpdateScript
+    VersionData(0) <- SpawnScript
+    VersionData(0) <- EmitterSpawnScript
+    VersionData(0) <- EmitterUpdateScript
+    VersionData(0) <- NiagaraScriptSource_0
+    VersionData(0) <- NiagaraScratchPadContainer_0
+    VersionData(0) <- NiagaraScratchPadContainer_1
+    VersionData(0) <- GPUComputeScript
+    VersionData(0) <- NiagaraEmitterEditorData_0
+    VersionData(0) <- NiagaraEditorParametersAdapter_0
+[NiagaraEmitterEditorData_0@MeshNear_1.NiagaraEmitter_1] NiagaraEmitterEditorData
+    StackEditorData = "StackEditorData"
+    PlaybackRangeMax = 23.229151
+    SummaryViewRoot = "SummaryViewRoot"
+    StackEditorData = "StackEditorData"
+    SummaryViewRoot = "SummaryViewRoot"
+[StackEditorData@MeshNear_1.NiagaraEmitter_1.NiagaraEmitterEditorData_0] NiagaraStackEditorData
+[SummaryViewRoot@MeshNear_1.NiagaraEmitter_1.NiagaraEmitterEditorData_0] HierarchyRoot
+[NiagaraScriptSource_0@MeshNear_1.NiagaraEmitter_1] NiagaraScriptSource
+[NiagaraGraph_0@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0] NiagaraGraph
+[ParameterHierarchyRoot@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] HierarchyRoot
+[NiagaraNodeFunctionCall_0@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_7] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Game/FluidFlux/Environment/Niagara/Modules/NMS_FluxStateData.NMS_FluxStateData'"
+    CachedChangeId = 1848062A4FF7672CAC58A78773FCF14A
+    FunctionDisplayName = "NMS_FluxStateData"
+    ChangeId = FF1A5FC0416B9ADC7B71D0B735F7C726
+    bUserSetEnabledState = True
+    вход UseAdvancedVelocity = false
+    вход UseCutMask = true
+    вход UseDistanceField = true
+    вход UseGroundMap = true
+    вход UseGroundNormal = false
+    вход UseStateData = true
+    вход UseWaveData = true
+    вход UseWaveProfile = true
+    вход UseWaveTextureRenderTarget = true
+    вход UseWorldData = true
+[NiagaraNodeInput_2@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeInput_3@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeInput_4@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeInput_5@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_2@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeOutput_3@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeOutput_4@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeOutput_5@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeParameterMapGet_0@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_1@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_10@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_11@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((CD1AD87843DA315005B8C1B030853D1E, E38810C94513B2D29E003AB12292670B))
+    ChangeId = 603FBA1E45D9FBF15BCAC6A96BB57706
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((3C9601B943D98CFF96C7AAB51EF8E4F6, 14DC8DC54F114400EFF4819A380A3F9A))
+    ChangeId = 319BD4154506A04290AD5B8DBB7A7873
+    bUserSetEnabledState = True
+    вход User.FluxStateSampleSize = X=0.000 Y=0.000
+[NiagaraNodeParameterMapGet_12@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((F8914F4B4339045F631B0284C9E42EB7, EBBEF4BD41DDD2A3815B218153D3FF1C))
+    ChangeId = 2AA6FE074D61443CA0EB8398E3D76816
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((8A45043445B6AA5C5128E1ABF99CBC22, 1C8596264E48C4A6BC2B329799501BB5))
+    ChangeId = 8A9985CC420750ACC4849AB7884E3D3E
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_13@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_14@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((B61DB8B74AEACE113CAFD9BFD912770D, C93555AC429186D577498BA4E34CF05C))
+    ChangeId = CDFA8C714016D237C80E77A950ABF84E
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((728F8D844CA3CDC8CCC461A686CABBDC, B2949BD9449338ECBC4B4F95FFDBFC07))
+    ChangeId = 2A08372D41BF935C8B0010B8EFB10126
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_15@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((8D005BD84512DD890711B6B75038386C, E4E79C9447872E878139E68F4DF68D23))
+    ChangeId = 67B1AC224B7E7A9B98B7F9A50537A52F
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((1A589B53479155BD76F1F99DD447BED2, 9F8DADE548B021855F13EEA8A7A12AB6))
+    ChangeId = 7B24C4C24F562531A3C2E4ACF4024148
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_16@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((8E050DBC4772F75C23422A8EBDC4D52C, DFDFBDE54A91E6EB150157A01DCA2DCC))
+    ChangeId = 6B3AC2A346BBD508D0D6FAB4FC94F431
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((16005166463D87B47D227BBC7F739F7F, A86D0161467DFA8B1AE0C89E5B8B4E66))
+    ChangeId = 7BD23468467244C69B3D4CA6313C1B2B
+    bUserSetEnabledState = True
+    вход User.FluxStateDecodeData = 0.000,0.000,0.000
+[NiagaraNodeParameterMapGet_17@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((0C0206254153252407262AAA5F8AB790, 34800CF649467E57194C39A357714D3F))
+    ChangeId = B339CC3343FC090C452F389119AEF088
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((E9C15029438E607590461DB222183F07, 8C15F10C4C7EF33B880C598386288CD8))
+    ChangeId = DB0A9F854FBA8A8E9202BDADBAE4A384
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_18@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((2659568E4300A34054AF0F94A648DBD0, 7D6762E24760994E6460BAA62D65AC24))
+    ChangeId = 5EAC65134D343DFA561B03B006E0BA8B
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((671A21BB4C480AE1FA3E76B748CF7D0E, D241E0CA4A5FDDD69D1CEB87351016F5))
+    ChangeId = 1D6E2906405B320E2172F1BAAD9F5BDC
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_19@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_2@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    ChangeId = C906322442AA63014985FE93461782D7
+    PinOutputToPinDefaultPersistentId = ((D2FE8C724B13F65BBAB1C985F9B8013D, F9BAA1194DDA98D8CEDCC6A5D88D13B2))
+    ChangeId = A4F503A34A9DB76A33EA05A9A54E88DF
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((3CEAC52744DB2423F17D31B57DDC30BF, 0F2F9DC24B9F87CE4779C382442F0AC8))
+    ChangeId = 54A852694FF985B2BAD542860855A3C3
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_20@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_21@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_22@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_23@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_24@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_25@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_26@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((2ED42E5E49752899A3622CB7FFD0BFC1, FF75B10C412CF23AE0B83A876EE7A8D9))
+    ChangeId = FAA7C76E4B19ABEBFEC22398C624AAC0
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((BC126879426F6B4E6D3392A7F5D4E5CB, CEB51DCF4C9B98E7770550B23DB879E4))
+    ChangeId = 86A461CE4051E290560C6F8D5D054717
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_27@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((63E86FA74FE2EBC880B781BBCD828493, D1D735134EECB14D77EA9C9213C23EA4))
+    ChangeId = D64BA566460D359296709DBCF4059349
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((2A869AC5433136E5FC5461A4492D69A9, 19B16114448575C5B47FB6AD8EEDE6F6))
+    ChangeId = 24014C1C4655E3A776BFBEAB94C65D2C
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_28@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_3@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((88E443904D79FA8F0AA1F5AF18868495, F42A4EC44527AA81AE41C0813804ACCA))
+    ChangeId = BC5505B345DDADD28389A89BBCFF9624
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((2E5DA3D943CB8B862A0967BDA2923C5E, D2FA6B3243E6303D08177AA8DA8BAADB))
+    ChangeId = 5A91D3224B9D28EDA55A57BF3D262360
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_30@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((49CE83CB45D4A54CC5F88F86704093E7, 1871A964446472A87A7B94951D744D55))
+    ChangeId = CED3D2354A8A061A7EC91EADB7E41528
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((E40E23A845D4FBD76DCFE48E63697CC3, 241274164CDC5328E84730BE7F0F9AF0))
+    ChangeId = 7B50E0A146C2CAF9C516B4B5BDEDC23A
+    bUserSetEnabledState = True
+    вход User.FluxStateAreaBorders = 0.000,0.000,0.000,0.000
+[NiagaraNodeParameterMapGet_31@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((D1830315444F3CCACB2AC3B3DE001700, F37D3B6F441AE5A91372508E65B3ED5D))
+    ChangeId = 685B40F74BF69AE119771CAA93EE056D
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((FE63A1D942DDF6F51F66BFAD304B6992, C25CFC4B48242AA2BC20BF914FFFB51D))
+    ChangeId = ECB4C9364406C96AD8C3518DCC1BAA7B
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_32@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((46C53443425EA58144F1E0ADFE8EC756, ED7E2BE54C34773D06FB5281C9DC5B31))
+    ChangeId = 2FE0217143FCB2A0E8D7ADA7F5165656
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((A5EC69EB43ECD56E27CB84B4F57924A3, E600FE044AA6754F644C97A2C24E8101))
+    ChangeId = A59360204CD7B1DC08DE6AAA89B93D93
+    bUserSetEnabledState = True
+    вход User.FluxStateAreaLocation = 0.000,0.000,0.000
+[NiagaraNodeParameterMapGet_33@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((22D4916A4C93F39D52D69BB985CCA15A, 68323C12407423D651DB2ABBDBDAA61A))
+    ChangeId = BB2B6BC1477D0A14A8B3FF8993242FC9
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((1BBE17B84A35DBB350EA62B4162C698C, F69DFB4E4A015521DDB2389BE19930C6))
+    ChangeId = 757DB26042C37762A79741A9CB924F5F
+    bUserSetEnabledState = True
+    вход User.FluxStateAreaSize = 0.000,0.000,0.000
+[NiagaraNodeParameterMapGet_34@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_35] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((2D8F4C714A05F8044757FAA9EE01E324, 57EC309C4B2C79AD5ABA73BC69FD5E0E))
+    ChangeId = 83672DCC41516D096301FE95959C9364
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_36@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_37@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_38@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_39@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_4@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((E4676050489C4A970ACDE68739E93D3C, CC030F0142D960B945636785BDAC2A6F))
+    ChangeId = C2D02B5E42AF63FFF2A17B8DEAE107E6
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((F70949454DE4F011E2261990E7DF2CEB, 448C2F7A4762DC4067FDFAABA4494F6E))
+    ChangeId = 68C468464E865374B25CADB851BD7E11
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_40@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_41@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_42] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((E03569BF4EC6B613E3C384BD8B8A7D6B, 218CAE584AB0ABA20358CEBE4EA54AFB))
+    ChangeId = 8F1BCF3D46551EAA421B5F907A3542C9
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_43@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_44] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((0CE1A942425E747653AD7992538BAD59, 2CBC00B04AA7AE192436DB90C660B9DB))
+    ChangeId = 227EA5CA49F7A1AF984329B433DEEE7C
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_45@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_46@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_47@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_48] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((7AA892944A9E9E5C21B602B112A5CF70, 9C3B155A4ACCCFD4303D5BAF11BC945A))
+    ChangeId = 75037A754A7AC5A1493A97992761ADF8
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_49@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_5@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((4CE0BDB641DAC95783C608A0386A4AE3, 8B9D61274B7C986641E49A8146B7B263))
+    ChangeId = 4CC6FBFB4A3E7CEE78CADE89A1058D3D
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((6249C5954008177B26F9569812D942A8, 7FE68A1348B5F0223D732DAF6C7F99BA))
+    ChangeId = 574AA2A447CE4D8AD16BB78A9EE5FCD6
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_50] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((BA8299DD4641FAC4C32FC1B8F1A70724, F8DD94044836187F2223D68146D5CDA0))
+    ChangeId = 544EE4384B1CED88C2CBE48A8A6ED906
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_51@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_52] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((1816563E49B7EE7C87E4639D2C2BBFF0, 5BEBBECA4EF34CFA69ED64ACF2DF5646))
+    ChangeId = 898B89EB48D3AC7E482F988A1F93A394
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_53@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_54@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_55] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((126DF0624BDCEEEBD41E86928C282819, 6E2E37BD492262404BA2C18A2AC7DE34))
+    ChangeId = 7F443BC04B619C512887DA9AF3FD288C
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_56@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_57@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_58] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((89E010084D9008BD8FE59E8F03265B19, 79D792D749B650766768289B88149FD4))
+    ChangeId = 74E9FFFA4F0F07CC5B372391745B2665
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_59@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_6@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_60@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_61@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_62] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((2728845F4885CBB8A4B442BEC27447A3, 680C9923440030517895DA8A4C386D6C))
+    ChangeId = 01FA2F384BC09CC9BB1FB0A35A7F1EC7
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_63] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((8E92C2794244E34AD395029126CB7512, D847C33F42F3C00A028CD49626C29152))
+    ChangeId = B62617B846741E699E3C02A2E3E9FB29
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_65] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((B5EB0E894704DA12D2BE01A7089D8C17, C989E653445C5A6703F4C2B5C7593C3F))
+    ChangeId = 80AEABD849315079E1876588B005FE79
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_66] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((4E952F5645C16517B45235B4533A5F5B, A15B61A74B0C1B6CF5962B880B41C8C3))
+    ChangeId = 28217B94462AB3666605DF8743F6A198
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_67@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_7@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((44104ED64EDAA383F89D849C3BA156B5, 8008C3234C22E6DB0EB436AADFC4BF33))
+    ChangeId = ED0B257D44FEB6D6F5E593B73C1908AD
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((9EF504C24A26A49F451D049C40DDF86A, 1CA25B7049540836148262821C69448B))
+    ChangeId = E06CA2114D7337FEAADD3E9337C9B538
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_70] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((54657C6B4F15F1B0FDBA95A6D211C18C, 4A3CF5564909E76D27331BBB56865663))
+    ChangeId = DF8E78B74B6B49F3C3020B9F010CEFBE
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_71@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_8@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((CBBC61F84E31FB0BE45393BA96E9B3C0, C55ED87B415C959F250885B58634C728))
+    ChangeId = 796D1A424595DD1DAC3E42BBF91AF083
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((95F2696D42B12D41085E138EE48C5435, 95A95493464FA561F0FE8E9A48578E2C))
+    ChangeId = 3A590E1940B9000576221988F1179D18
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_9@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapSet_0@MeshNear_1.NiagaraEmitter_1.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapSet_5] NiagaraNodeParameterMapSet
+    ChangeId = 64AF29644D6986CDEBECE581E279FBB8
+    bUserSetEnabledState = True
+[NiagaraEditorParametersAdapter_0@MeshNear_1.NiagaraEmitter_1] NiagaraEditorParametersAdapter
+[NiagaraScratchPadContainer_0@MeshNear_1.NiagaraEmitter_1] NiagaraScratchPadContainer
+[NiagaraScratchPadContainer_1@MeshNear_1.NiagaraEmitter_1] NiagaraScratchPadContainer
+[EmitterSpawnScript@MeshNear_1.NiagaraEmitter_1] NiagaraScript
+    Usage = EmitterSpawnScript
+    ExposedVersion = B2F93B10C427DDC302B329140076D8AB
+    RapidIterationParameters = ()
+    Usage = EmitterSpawnScript
+    ExposedVersion = 120BB4618E7848D10664F75D51392F62
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+    VersionData(0) <- NiagaraScriptSource_0
+[EmitterUpdateScript@MeshNear_1.NiagaraEmitter_1] NiagaraScript
+    Usage = EmitterUpdateScript
+    ExposedVersion = 5C0A6863EABBDDC3E2AD82C5D0632A1A
+    Usage = EmitterUpdateScript
+    ExposedVersion = F36E32734883315963D4DD59EBA66342
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+    VersionData(0) <- NiagaraScriptSource_0
+[GPUComputeScript@MeshNear_1.NiagaraEmitter_1] NiagaraScript
+    Usage = ParticleGPUComputeScript
+    ExposedVersion = 76CB38AF66B5EBF1CD89B7B11212928E
+    Usage = ParticleGPUComputeScript
+    ExposedVersion = 6E4623D191ED3431392922DB8DB0190E
+    VersionData(0) <- NiagaraScriptSource_0
+    CachedDefaultDataInterfaces(0) <- NiagaraDataInterfaceCamera_0
+    CachedDefaultDataInterfaces(1) <- NiagaraDataInterfaceTexture_0
+    CachedDefaultDataInterfaces(2) <- NiagaraDataInterfaceTexture_1
+    CachedDefaultDataInterfaces(3) <- NiagaraDataInterfaceTexture_2
+    CachedDefaultDataInterfaces(4) <- NiagaraDataInterfaceTexture_3
+    CachedDefaultDataInterfaces(5) <- NiagaraDataInterfaceArrayFloat2_0
+    VersionData(0) <- NiagaraScriptSource_0
+[SpawnScript@MeshNear_1.NiagaraEmitter_1] NiagaraScript
+    Usage = ParticleSpawnScript
+    ExposedVersion = 91902D1E67BE48BB5489FBCF5362208D
+    RapidIterationParameters = ()
+    Usage = ParticleSpawnScript
+    ExposedVersion = EB6D276A0D414D2301ADAC25FEFDF366
+    VersionData(0) <- NiagaraScriptSource_0
+    VersionData(0) <- NiagaraScriptSource_0
+[UpdateScript@MeshNear_1.NiagaraEmitter_1] NiagaraScript
+    Usage = ParticleUpdateScript
+    ExposedVersion = E584F9DDCA89904F7CDD8F53A070FAF5
+    Usage = ParticleUpdateScript
+    ExposedVersion = BF05462DF4B1EFFA71256B4826BF3CD7
+    VersionData(0) <- NiagaraScriptSource_0
+    CachedDefaultDataInterfaces(0) <- NiagaraDataInterfaceCamera_0
+    CachedDefaultDataInterfaces(1) <- NiagaraDataInterfaceTexture_0
+    CachedDefaultDataInterfaces(2) <- NiagaraDataInterfaceTexture_1
+    CachedDefaultDataInterfaces(3) <- NiagaraDataInterfaceTexture_2
+    CachedDefaultDataInterfaces(4) <- NiagaraDataInterfaceTexture_3
+    CachedDefaultDataInterfaces(5) <- NiagaraDataInterfaceArrayFloat2_0
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraEmitterEditorData_2] NiagaraEmitterEditorData
+    StackEditorData = "StackEditorData"
+    SummaryViewRoot = "SummaryViewRoot"
+[StackEditorData@MeshNear_1.NiagaraEmitterEditorData_2] NiagaraStackEditorData
+    DismissedStackIssueIds(0) = "5be17c8aa18d55d6f6f95345ece5ad86"
+    StackEntryKeyToExpandedOverviewMap = (("Particle Spawn", True),("Particle Update", True))
+    StackEntryKeyToExpandedOverviewMap = (("Particle Spawn", True),("Particle Update", True))
+[SummaryViewRoot@MeshNear_1.NiagaraEmitterEditorData_2] HierarchyRoot
+    Identity = (Guids=(CE1005784457D4F24192488D39CF044F))
+    Identity = (Guids=(B2B8DD7C4479884D0CAFE49BFE6B5F6A))
+    Identity = (Guids=(B2B8DD7C4479884D0CAFE49BFE6B5F6A))
+[NiagaraScriptSource_2] NiagaraScriptSource
+    NodeGraph <- NiagaraGraph_0
+[NiagaraGraph_0@MeshNear_1.NiagaraScriptSource_2] NiagaraGraph
+[ParameterHierarchyRoot@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] HierarchyRoot
+[NiagaraNodeAssignment_0] NiagaraNodeAssignment
+    AssignmentTargets(0) = (Name="Particles.Color",TypeDefHandle=(RegisteredTypeIndex=106))
+    AssignmentDefaultValues(0) = "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"
+    CachedChangeId = 9CC2E36F486A1A2348C635A81FAA9B11
+    FunctionDisplayName = "SetVariables_285982BC4B0B11840C0F9BAEDD86032F"
+    ChangeId = 92CCA8494B818D2A312794A22E9E555D
+    FunctionScript <- SetVariables_285982BC4B0B11840C0F9BAEDD86032F
+[SetVariables_285982BC4B0B11840C0F9BAEDD86032F] NiagaraScript
+    Usage = Module
+    ExposedVersion = B8630AA95A77705CB12755B6033F0515
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraScriptSource_0@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeAssignment_0.SetVariables_285982BC4B0B11840C0F9BAEDD86032F] NiagaraScriptSource
+[NiagaraGraph_0@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeAssignment_0.SetVariables_285982BC4B0B11840C0F9BAEDD86032F.NiagaraScriptSource_0] NiagaraGraph
+[ParameterHierarchyRoot@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeAssignment_0.SetVariables_285982BC4B0B11840C0F9BAEDD86032F.NiagaraScriptSource_0.NiagaraGraph_0] HierarchyRoot
+[NiagaraNodeInput_0@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeAssignment_0.SetVariables_285982BC4B0B11840C0F9BAEDD86032F.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeInput_1@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeAssignment_0.SetVariables_285982BC4B0B11840C0F9BAEDD86032F.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_0@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeAssignment_0.SetVariables_285982BC4B0B11840C0F9BAEDD86032F.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeParameterMapGet_0@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeAssignment_0.SetVariables_285982BC4B0B11840C0F9BAEDD86032F.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_1@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeAssignment_0.SetVariables_285982BC4B0B11840C0F9BAEDD86032F.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((88A40168445105F75A381495FF151BF8, AEAD8D6041A8B175EC45A08A9D253A09))
+    ChangeId = 1EB014FB4A840858D45E5C88BDC15BD2
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((50186D7A43F8927C338754B1AB88DDD8, F7A841F14C9452AC7F1B5FAF901AEFCB))
+    ChangeId = F9D3C8FA44A75D7F8B9215B46A9F9C93
+    bUserSetEnabledState = True
+    ChangeId = 92C9C20E4DADFE671DBC06A3A9A6884A
+[NiagaraNodeParameterMapSet_0@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeAssignment_0.SetVariables_285982BC4B0B11840C0F9BAEDD86032F.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraScriptVariable_0@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeAssignment_0.SetVariables_285982BC4B0B11840C0F9BAEDD86032F.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraScriptVariable_1@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeAssignment_0.SetVariables_285982BC4B0B11840C0F9BAEDD86032F.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraNodeInput_8] NiagaraNodeInput
+    Input = (Name="Directions",TypeDefHandle=(RegisteredTypeIndex=70))
+    CallSortPriority = 5
+    ExposureOptions = (bRequired=False)
+    ChangeId = ADC4858B4F7E6A36E9B1A8A1E9EE775B
+    DataInterface <- Directions
+[Directions@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeInput_8] NiagaraDataInterfaceArrayFloat2
+    FloatData(0) = (X=0.000000,Y=-0.500000)
+    FloatData(1) = (X=0.500000,Y=0.000000)
+    FloatData(2) = (X=0.000000,Y=0.500000)
+    FloatData(3) = (X=-0.500000,Y=0.000000)
+    InternalFloatData(0) = (X=0.000000,Y=-0.500000)
+    InternalFloatData(1) = (X=0.500000,Y=0.000000)
+    InternalFloatData(2) = (X=0.000000,Y=0.500000)
+    InternalFloatData(3) = (X=-0.500000,Y=0.000000)
+    FloatData(0) = (X=-1.500000,Y=-1.500000)
+    FloatData(1) = (X=-0.500000,Y=-1.500000)
+    FloatData(2) = (X=0.500000,Y=-1.500000)
+    FloatData(3) = (X=1.500000,Y=-1.500000)
+    FloatData(4) = (X=-1.500000,Y=1.500000)
+    FloatData(5) = (X=-0.500000,Y=1.500000)
+    FloatData(6) = (X=0.500000,Y=1.500000)
+    FloatData(7) = (X=1.500000,Y=1.500000)
+    FloatData(8) = (X=-1.500000,Y=0.500000)
+    FloatData(9) = (X=-1.500000,Y=-0.500000)
+    FloatData(10) = (X=1.500000,Y=0.500000)
+    FloatData(11) = (X=1.500000,Y=-0.500000)
+    InternalFloatData(0) = (X=-1.500000,Y=-1.500000)
+    InternalFloatData(1) = (X=-0.500000,Y=-1.500000)
+    InternalFloatData(2) = (X=0.500000,Y=-1.500000)
+    InternalFloatData(3) = (X=1.500000,Y=-1.500000)
+    InternalFloatData(4) = (X=-1.500000,Y=1.500000)
+    InternalFloatData(5) = (X=-0.500000,Y=1.500000)
+    InternalFloatData(6) = (X=0.500000,Y=1.500000)
+    InternalFloatData(7) = (X=1.500000,Y=1.500000)
+    InternalFloatData(8) = (X=-1.500000,Y=0.500000)
+    InternalFloatData(9) = (X=-1.500000,Y=-0.500000)
+    InternalFloatData(10) = (X=1.500000,Y=0.500000)
+    InternalFloatData(11) = (X=1.500000,Y=-0.500000)
+    MaxElements = 12
+[NiagaraNodeInput_0@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+[New_Camera_Query001] NiagaraDataInterfaceCamera
+    bRequireCurrentFrameData = False
+[NiagaraNodeInput_1@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+[WaveProfileMap@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeInput_1] NiagaraDataInterfaceTexture
+[NiagaraNodeInput_6@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+    Input = (Name="WaveAnimationVolume",TypeDefHandle=(RegisteredTypeIndex=51))
+    CallSortPriority = 13
+    ChangeId = 3CAE4074440F854E56EE9492593AB0D2
+    Input = (Name="GroundMap",TypeDefHandle=(RegisteredTypeIndex=47))
+    CallSortPriority = 3
+    ExposureOptions = (bRequired=False)
+    ChangeId = 2167551C4AEC1421C641AC920A9C0E04
+    DataInterface <- WaveAnimationVolume
+    DataInterface <- GroundMap
+[GroundMap] NiagaraDataInterfaceTexture
+[NiagaraNodeInput_7@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+    Input = (Name="New Camera Query001",TypeDefHandle=(RegisteredTypeIndex=30))
+    CallSortPriority = 11
+    ChangeId = 8E5E69EE42F25E015396F288F2A179F1
+    bUserSetEnabledState = True
+    Input = (Name="WaveAnimationVolume",TypeDefHandle=(RegisteredTypeIndex=51))
+    CallSortPriority = 4
+    ExposureOptions = (bRequired=False)
+    ChangeId = EDF551EC4A63EAF2A9E6D1BBF98D8E3A
+    DataInterface <- New_Camera_Query
+    DataInterface <- WaveAnimationVolume
+[WaveAnimationVolume@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0.NiagaraNodeInput_7] NiagaraDataInterfaceVolumeTexture
+[NiagaraNodeFunctionCall_0@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_1] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Niagara/Modules/Emitter/EmitterState.EmitterState'"
+    SelectedScriptVersion = CEC7D3454F48E874B57E76B5DDB298F9
+    CachedChangeId = C15183DB4EF4C14596D2F19940F0E0A6
+    FunctionDisplayName = "EmitterState"
+    ChangeId = 187087A649B9C2A76A3570B41B61F0B7
+    AdvancedPinDisplay = Hidden
+    bUserSetEnabledState = True
+    вход Enable Distance Culling = false
+    вход Enable Visibility Culling = false
+    вход Inactive Response = NewEnumerator2
+    вход Life Cycle Mode = NewEnumerator1
+    вход Loop Behavior = NewEnumerator1
+    вход Loop Duration Mode = NewEnumerator0
+    вход Scalability Mode = NewEnumerator1
+    вход Scale Spawn Count = false
+    вход UseLoopDelay = false
+[NiagaraNodeFunctionCall_10@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Niagara/DynamicInputs/TypeConversions/MakeCustomFloatFromBool.MakeCustomFloatFromBool'"
+    CachedChangeId = 06068DAA492EADAF090CCABF73FD2808
+    FunctionDisplayName = "MakeCustomFloatFromBool"
+    BoundPinNames = ((858BC16DCC4B5CD9A1BFC516536B3FC3, "MakeCustomFloatFromBool.Bool"))
+    ChangeId = E86398A8495DC4BFD3EBC18101DD5A4D
+    bUserSetEnabledState = True
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Game/FluidFlux/Surface/Meshes/Niagara/NMS_SurfaceGridOfset.NMS_SurfaceGridOfset'"
+    CachedChangeId = 7A38811F43854205D867BC95C1CE0DCF
+    FunctionDisplayName = "NMS_SurfaceGridOfset"
+    ChangeId = EE0425D0438C58BC35474292EB98DADE
+    bUserSetEnabledState = True
+    вход UseWorldData = true
+[NiagaraNodeFunctionCall_2@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+    CachedChangeId = B2EF9480419A86AFE5BB2C91F913BD37
+    FunctionDisplayName = "LoadCamera"
+    BoundPinNames = ((64D1E03B6536E590A00C378FF770BF1D, "LoadCamera.New Camera Query"))
+    ChangeId = F6309158428942F5F5B29DB252832300
+    bUserSetEnabledState = True
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Niagara/Modules/Emitter/SpawnBurst_Instantaneous.SpawnBurst_Instantaneous'"
+    SelectedScriptVersion = D8B333154794FC8529C2719150426501
+    CachedChangeId = 8187F42E4A2BBD8184FCF4B0379DFD5B
+    FunctionDisplayName = "SpawnBurst_Instantaneous"
+    ChangeId = 9BAE604C48D7260C42AD5EB2FCA6E15E
+    bUserSetEnabledState = True
+    FunctionScript <- LoadCamera
+    вход Use Spawn Probability = false
+[NiagaraNodeFunctionCall_3@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Niagara/Modules/Emitter/SpawnBurst_Instantaneous.SpawnBurst_Instantaneous'"
+    SelectedScriptVersion = D8B333154794FC8529C2719150426501
+    CachedChangeId = 8187F42E4A2BBD8184FCF4B0379DFD5B
+    FunctionDisplayName = "SpawnBurst_Instantaneous"
+    BoundPinNames = ((0DC197C04D4B0BE0C7A52A95F61C1A1E, "SpawnBurst_Instantaneous.Spawn Count"),(0D91E2B34A2F351D17D82AB8C3D2EE80, "SpawnBurst_Instantaneous.Spawn Probability"))
+    ChangeId = 63AFFFFD488590D4FFC5608B4C9889F0
+    bUserSetEnabledState = True
+    CachedChangeId = 0D1523E74751AA3060B3AFBF814472AF
+    FunctionDisplayName = "ScratchDynamicInput"
+    ChangeId = 2B1A172044BF8B108905789BA74F56ED
+    bUserSetEnabledState = True
+    FunctionScript <- ScratchDynamicInput
+    вход Use Spawn Probability = true
+[NiagaraNodeFunctionCall_4@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Niagara/Modules/Emitter/EmitterState.EmitterState'"
+    SelectedScriptVersion = CEC7D3454F48E874B57E76B5DDB298F9
+    CachedChangeId = C15183DB4EF4C14596D2F19940F0E0A6
+    FunctionDisplayName = "EmitterState"
+    ChangeId = 39B6141D400A72F0F123DA96877CCF18
+    AdvancedPinDisplay = Hidden
+    CachedChangeId = F00E443B449BF5BA55079D853CD4902F
+    FunctionDisplayName = "InverseMesh"
+    ChangeId = E5C95D974340D3FEA4FB419ABEEA1F9D
+    bUserSetEnabledState = True
+    FunctionScript <- InverseMesh
+    вход Enable Distance Culling = false
+    вход Enable Visibility Culling = false
+    вход Inactive Response = NewEnumerator2
+    вход Life Cycle Mode = NewEnumerator1
+    вход Loop Behavior = NewEnumerator1
+    вход Loop Duration Mode = NewEnumerator0
+    вход Scalability Mode = NewEnumerator1
+    вход Scale Spawn Count = false
+    вход UseLoopDelay = false
+[NiagaraNodeFunctionCall_5@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Game/FluidFlux/Surface/Meshes/Niagara/NMS_SurfaceGridLocation.NMS_SurfaceGridLocation'"
+    CachedChangeId = B26B7AD641D1FBCEC44B7EB472EE1657
+    FunctionDisplayName = "NMS_SurfacesGridNear"
+    ChangeId = 8A0805AC42C8881CD9D006BE19D5DF62
+    bUserSetEnabledState = True
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Niagara/DynamicInputs/UniformRange/V3/RandomRangeLinearColor.RandomRangeLinearColor'"
+    CachedChangeId = 2D532E0A4D86705FBCCF54914FC119AE
+    FunctionDisplayName = "RandomRangeLinearColor"
+    ChangeId = 3BEB5AB04BEDAAC9A26D8E84BF162597
+    вход UseNearDistance = false
+    вход Color Channel Mode = NewEnumerator2
+    вход Evaluation Type = NewEnumerator0
+    вход Fixed Random Seed = true
+    вход Override Seed = true
+    вход Randomness Mode = NewEnumerator0
+    вход Recalculate Random Each Loop = true
+[NiagaraNodeFunctionCall_6@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Niagara/Modules/Solvers/ApplyRotationVector.ApplyRotationVector'"
+    CachedChangeId = D50911C24503772570BD7CA9DBE1EDEC
+    FunctionDisplayName = "ApplyRotationVector"
+    ChangeId = 22889D9A44A766E27D24099D7304E512
+    ErrorType = 3
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Game/FluidFlux/Environment/Niagara/Modules/NMS_FluxStateData.NMS_FluxStateData'"
+    CachedChangeId = 1848062A4FF7672CAC58A78773FCF14A
+    FunctionDisplayName = "NMS_FluxStateData002"
+    ChangeId = 647B8D8F422158DEEB3F13B0FE91B4A8
+    bUserSetEnabledState = True
+    CachedChangeId = 00B5EB0241B8E9D70EB637B347D4CE94
+    FunctionDisplayName = "LoadCamera"
+    ChangeId = 33D3C7CB4B5643EF5B3042AC44BC2368
+    bUserSetEnabledState = True
+    FunctionScript <- LoadCamera
+    вход DeltaTime = 1.000000
+    вход Normalize Rotations = true
+    вход UseAdvancedVelocity = false
+    вход UseCutMask = false
+    вход UseDistanceField = false
+    вход UseGroundMap = false
+    вход UseGroundNormal = false
+    вход UseStateData = true
+    вход UseWaveData = true
+    вход UseWaveProfile = false
+    вход UseWaveTextureRenderTarget = true
+    вход UseWorldData = true
+[NiagaraNodeFunctionCall_8] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Game/FluidFlux/Environment/Niagara/Modules/NMS_FluxStateData.NMS_FluxStateData'"
+    CachedChangeId = 1848062A4FF7672CAC58A78773FCF14A
+    FunctionDisplayName = "NMS_FluxStateData002"
+    ChangeId = D5E1D592465846C158BD91BB638E5E37
+    bUserSetEnabledState = True
+    вход UseAdvancedVelocity = false
+    вход UseCutMask = false
+    вход UseDistanceField = false
+    вход UseGroundMap = false
+    вход UseGroundNormal = false
+    вход UseStateData = true
+    вход UseWaveData = true
+    вход UseWaveProfile = false
+    вход UseWaveTextureRenderTarget = true
+    вход UseWorldData = true
+[NiagaraNodeFunctionCall_9] NiagaraNodeFunctionCall
+    FunctionScript = "/Script/Niagara.NiagaraScript'/Game/FluidFlux/Surface/Meshes/Niagara/NMS_SurfaceGridLocation.NMS_SurfaceGridLocation'"
+    CachedChangeId = B26B7AD641D1FBCEC44B7EB472EE1657
+    FunctionDisplayName = "NMS_SurfaceGridLocation"
+    ChangeId = C7ED7ED648F102C3856835A91DCE6A50
+    bUserSetEnabledState = True
+    вход UseNearDistance = true
+[NiagaraNodeInput_2@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+    Input = (VarData=(0),Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = 628D1F844EA7EDDDD06D1F9267C04675
+    Input = (VarData=(0),Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = 85A02FB943581E0B0AA9DAA474FF6C3B
+    Input = (VarData=(0),Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = 85A02FB943581E0B0AA9DAA474FF6C3B
+[NiagaraNodeInput_3@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+    Input = (VarData=(0),Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = 04FD8FB949F276B1A5A5A7B90F1287E2
+    Input = (VarData=(0),Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = D043C1E04565F8005F4918973CF51206
+    Input = (VarData=(0),Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = EA5D30304E00B24097058EBB6480AE72
+[NiagaraNodeInput_4@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+    Input = (Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = E95FB0A94ED49ACF67A41D9965C6C4D3
+    Input = (Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = B238B8FC42143865336BB38D8CEF7763
+    Input = (Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = C4FC0521494E267A574537AA7A06D5EB
+[NiagaraNodeInput_5@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+    Input = (Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = 8B1CE77249B3C24C327A7FBBEBCA49BF
+    Input = (Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = E0ACA9E24362CBB74FEFFB88FDA15B52
+    Input = (Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = E14982774154AACE954AE2A68E374210
+[NiagaraNodeOutput_2@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeOutput
+    Outputs(0) = (Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = EmitterSpawnScript
+    ChangeId = 754CFCF246F40CDDB10537B2FE22609A
+    Outputs(0) = (Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = EmitterSpawnScript
+    ChangeId = 786208AD48DEBAD8C10C62A2EC6C07C3
+    Outputs(0) = (Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = EmitterSpawnScript
+    ChangeId = 786208AD48DEBAD8C10C62A2EC6C07C3
+[NiagaraNodeOutput_3@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeOutput
+    Outputs(0) = (Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = EmitterUpdateScript
+    ChangeId = 3F67CD2C41D0C79E0BB999A4CFE4BDE2
+    Outputs(0) = (Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = EmitterUpdateScript
+    ChangeId = 17E78F224D0274B8C90D718BA7ADFE64
+    Outputs(0) = (Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = EmitterUpdateScript
+    ChangeId = D2D0515440BD796AD0DD7990888783BE
+[NiagaraNodeOutput_4@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeOutput
+    Outputs(0) = (VarData=(0),Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = ParticleSpawnScript
+    ChangeId = 809033E44A9D6B2CBE850FBAA35932DC
+    Outputs(0) = (VarData=(0),Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = ParticleSpawnScript
+    ChangeId = C0547C0D43C7C7358811998094F0FC81
+    Outputs(0) = (VarData=(0),Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = ParticleSpawnScript
+    ChangeId = F96EB9434F481F996BFF6FAC0FE886E1
+[NiagaraNodeOutput_5@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeOutput
+    Outputs(0) = (Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = ParticleUpdateScript
+    ChangeId = DE179316493697FB66FE96BED7591377
+    Outputs(0) = (Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = ParticleUpdateScript
+    ChangeId = 51B484AC48686CA4DCDEB5B65A46DE34
+    Outputs(0) = (Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = ParticleUpdateScript
+    ChangeId = F0CC7F35424395A45F0E43B4A481E459
+[NiagaraNodeParameterMapGet_0@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((E579B09C45B161CBE9D51B8A747B3D85, 5E39F6FE4B48224278EF4B8771318AD2))
+    ChangeId = 7BBC72D043D53BA59CB26883A79D93DB
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((F5F25B2944FFF651A15DA296557EF123, 48D776BB4E0945A97BD275AA0CF36720))
+    ChangeId = F3B71EDB4500C090F34E6AB1F30975A3
+    PinOutputToPinDefaultPersistentId = ((E579B09C45B161CBE9D51B8A747B3D85, 5E39F6FE4B48224278EF4B8771318AD2))
+    ChangeId = EF12C969432A769E9E92E0AE9BFB81E8
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_10@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((746F3F254690D7382CA6BFB3ADE696FA, 009A31A34DB5011F376484BE68C3031D))
+    ChangeId = A202C23A4C4349282A31F0B30C077938
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((94BF7DF84D5B63D1F1F3A3A2C5A38C39, E9E5B016408399CAEA5244963D871E27))
+    ChangeId = AF1C5E874C42F22209FBC7A7970C99B8
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((94BF7DF84D5B63D1F1F3A3A2C5A38C39, E9E5B016408399CAEA5244963D871E27))
+    ChangeId = 49B7EEEE4DC21938DE107AB1BFF5B1F9
+    bUserSetEnabledState = True
+    вход User.FluxStateSampleSize = X=0.000 Y=0.000
+    вход User.FluxStateSampleSize = X=0.000 Y=0.000
+[NiagaraNodeParameterMapGet_100] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((9D5D20F2455E6504269D7A988E90D143, 77CE0A5E4F340A88ADEF449DD9E21ABC))
+    ChangeId = 215CD06A40332D0C1D21CA881616ED4E
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_101] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((FB8D70704853AC5FE195D3B97445765C, 665D4045493E084F17EC1B9ACE7C7A4D))
+    ChangeId = 7A8242D24FDE268000EC4D9A44657522
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_102] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((53F965AE49B188AB970204B605608FCF, CC2D971345BB2EC01BA6F5ADC6A2442C))
+    ChangeId = F30D10464A4C64E1406A5FA438FD702A
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_103] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((F1A7AEDB4560A14468A9D28A144C9994, 509DAA354B131634BE82D6BD8E4BED3F))
+    ChangeId = 3944911944973ACF85FEE88804D35F9C
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_104] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((C56DA1D046CE91B32F07BEA505A755DC, 26329A4A4D26BCD70F000D933CA8BC40))
+    ChangeId = 0185145B46232798F77058AAFC50461B
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_105] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((E7DA99484464E3492301FDB0A859FC13, 2458BD3C4D7FC37802F88982736E2B76))
+    ChangeId = EE0115BA486779E831430F8E7364D8D8
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_106] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((8A8EA31E45B978DC19BBBC97CCEEF5E3, 8E532A5641A63BBBEDCD04B4EBFA76AA))
+    ChangeId = 1FD75AC5466B226539747FB0856E1478
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_107] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((F4A7130B4D8FDA2135598E9C1C9646F1, 6D4C82914B97F0996A95F89B1F62A9C7))
+    ChangeId = 9218B70E4277E5C3566C64BBC5E941CC
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_13@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((0F8731784446A300F498BD8BD88B05C1, 2686F95A4F1B92A86E491D8EEF0BA464))
+    ChangeId = 8811116049AEB8582D462BB5C5C5978F
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((1F0DEDEE4491824C9B1F02ADA333D57F, 80A934AC4C4A13A76EFFFDBC55475CCA))
+    ChangeId = C633E89A4B547C77FA93BBAA37420BB1
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((1F0DEDEE4491824C9B1F02ADA333D57F, 80A934AC4C4A13A76EFFFDBC55475CCA))
+    ChangeId = A736C58E4FD4CD38FCCC56B8B4204C7A
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_19@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((840494FA4463BDCE07E7778D4ABD92D3, A667CE4144DDC09633F3D8A15D78FD87))
+    ChangeId = 4F1518554E3BF168EF8B08811BA41BC0
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((537425964081A3F249B3309EE5FFAFAF, 74E475494DFC2D2C86DE2AADF1768C46))
+    ChangeId = 24A30DD74C9376DD9C47E08C1BEB45C0
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((537425964081A3F249B3309EE5FFAFAF, 74E475494DFC2D2C86DE2AADF1768C46))
+    ChangeId = 4316327246FEADA3469633BDAC1AA081
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_20@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((4653491F41B57D4F29EAB796714F4E9A, AA2EF0314191303522D18FAAF67448D6))
+    ChangeId = 9D0ACDC8472BADB385BD3B8575BB2B0D
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((364644704EBFE74A0CA041B6F8905740, 01265196493B9178DD74C2800CC96097))
+    ChangeId = 4AA09B704A46C7EF7689AC99170B6643
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((364644704EBFE74A0CA041B6F8905740, 01265196493B9178DD74C2800CC96097))
+    ChangeId = 8FD3A0AD441D8F59E9452895511A3C3A
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_21@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((99D0F3744A251FBF652F53B7EC6A4440, 2B74A5034949D828C1FB8CA9C0A60FD6))
+    ChangeId = A568C23249D9FB6C4863F4ABB3013850
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((99D0F3744A251FBF652F53B7EC6A4440, 2B74A5034949D828C1FB8CA9C0A60FD6))
+    ChangeId = 9CE8968F43737B4B3983ADB0A98B67D4
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_22@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((BBBC51D5438CB2DEE2393EA2463DF17B, 785ADECF4DF14FB53A6C988C60D4B8FE))
+    ChangeId = 87F7C42642244AC8496E5583966E6C18
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((D265734D48E815F4BE0DD8B58A8E42F8, 5576EF6548BE62D696FC189C13A2FB3A))
+    ChangeId = 8082493747325458D3450A96333AA163
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((D265734D48E815F4BE0DD8B58A8E42F8, 5576EF6548BE62D696FC189C13A2FB3A))
+    ChangeId = 3CE5AD7546AC52B77AD557B2EC41F65B
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_23@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((5366B8C240191C2BF8E179B3F3BB55C8, 123CE72D4A3DE6CB0DD5CC8EE83AA315))
+    ChangeId = 4C508770454F3BA9D103A480D39F1F83
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((493657814A50AA94F370FE880ABF04BA, BE1C7D654972D5991EDCE38DF75F58FB))
+    ChangeId = 0DC2A21849A6386FD9BDE8AE74614825
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((493657814A50AA94F370FE880ABF04BA, BE1C7D654972D5991EDCE38DF75F58FB))
+    ChangeId = DB0515154954A2137916C38FD46CA1C2
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_24@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((B367627A41E034566D9D2698E8A623DD, 471CDA8D4F63303BBC9CFC80798A335F))
+    ChangeId = 1BAA9FF04FA8DB4A8CE4B3ACDD4CEB02
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((573B9FD34A58363D5DABF3A93E4B8D53, FA407A6C48F3097456FF4A8561CE4E7F))
+    ChangeId = 9D54974849DF8C97637625887D235229
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((573B9FD34A58363D5DABF3A93E4B8D53, FA407A6C48F3097456FF4A8561CE4E7F))
+    ChangeId = 0E04386349C8B206E805FFA4F0A6A5AC
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_25@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((B0CA128D4E7FE3AB6FF21B8A2679E75F, 75517CEA49C835677DDC22995CD9FE9D))
+    ChangeId = 8967BD4E4C2DE751D512AF920814B3F6
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((74A21C79471E80B1B166F2956CA889E3, A689E69549F17799730E949FB683F0B3))
+    ChangeId = 203AF6134680FA66686AAB8702F6A8E0
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((74A21C79471E80B1B166F2956CA889E3, A689E69549F17799730E949FB683F0B3))
+    ChangeId = E66ECEE746CA1EAB5E4EEB9A7972330C
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_28@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((C962F3F94F7F5413396CD19BA842D7DE, 93ACDE764F60A2C8348D7298FA0B54A0))
+    ChangeId = 801A5D6747161409D15DA1B32111F09F
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((B7F1833942CA0F004B42418FAFE0144C, DACC572146F6B8741C0D90B8BE5EF76B))
+    ChangeId = 9CC7BBB34F5234E8970C53BA1BD25CF7
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((B7F1833942CA0F004B42418FAFE0144C, DACC572146F6B8741C0D90B8BE5EF76B))
+    ChangeId = 8F35CEF14E6DC24DFC93A397B6F16372
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_29@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((B5F790314CE1AEE7D6FAB4BA03D8C081, 8AD63C4048F3AC5EC622C19D83A25A39))
+    ChangeId = 83C989CA4DB624B477128F8088D7F46E
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((BD85223247CCCE8DFDDE3ABD9F0A97C4, 504E2AE64B868F176335988B8A5C7538))
+    ChangeId = A3CA657E49C921283D6E8486B2A3BC09
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_34@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((F79348C54942285EDDA678A2C1DEE8DA, F6F709304D863A64305C9BA66DFFDE8B))
+    ChangeId = F9191DA945362F30D2F5519DCFE05ED7
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((0649D7AF4C1C5FFD6FD86FAFC23AB023, DA85DDC6492CCD82862CAE8DBE8D7729))
+    ChangeId = E24260784B602D414C609A914435A116
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((0649D7AF4C1C5FFD6FD86FAFC23AB023, DA85DDC6492CCD82862CAE8DBE8D7729))
+    ChangeId = D1C4275B4A8AB88467460FAFE8D4957E
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_36@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((99E03FDD486C75E9ECDE1E8EB5A172E0, 9819D0FA4A46CEDE1711A991896A48EE))
+    ChangeId = D1B354DB4FE373828732B4A870B09C18
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((99E03FDD486C75E9ECDE1E8EB5A172E0, 9819D0FA4A46CEDE1711A991896A48EE))
+    ChangeId = 7B69AB454C01879D7E1816B34CFD47F0
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_37@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((18A7F2D5400629A87EA1469357A0FBB2, F7542AF64EA17A29440ADF984D5E3930))
+    ChangeId = B904FF964F0BD0664FF76D8463E48A8B
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((18A7F2D5400629A87EA1469357A0FBB2, F7542AF64EA17A29440ADF984D5E3930))
+    ChangeId = F593E64644E48EF34CDBF48ACD203371
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_38@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((39E45B704BCB162F4D76DF97CEED5A9F, 7AC3E04C48BD862EC2C048B201E91EF1))
+    ChangeId = 4DA1E6CC4AD8C435FEBB34BBD1E058F3
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((39E45B704BCB162F4D76DF97CEED5A9F, 7AC3E04C48BD862EC2C048B201E91EF1))
+    ChangeId = FE838B4E468550EEA0D77BB114682D86
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_39@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((B7CB43574EA888C9AF0A908286EDA27E, BFA8A7574A08C64463C04D9FD1B2F57D))
+    ChangeId = 69791FD3439563B9190D388DDB38074D
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((B7CB43574EA888C9AF0A908286EDA27E, BFA8A7574A08C64463C04D9FD1B2F57D))
+    ChangeId = C6434BB846A38E57B6E85591964370A9
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_40@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((3229EEDD425342E546A5A5AFA013C4FE, 01DF102B4EE11C3478C6D28EE5A486F4))
+    ChangeId = 4EF592E54E6C9F340B612BA8432EC6A7
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((3229EEDD425342E546A5A5AFA013C4FE, 01DF102B4EE11C3478C6D28EE5A486F4))
+    ChangeId = 079840FC43A323D2D9ACA18A87101863
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_41@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((BD68C8E34E00F81E2B1DD2A8CE1B9BB2, 21FF6A0740C1DEF396FC6DAF80EBE6EB))
+    ChangeId = 6339FDA44504DA071E61D0A4881A3451
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((BD68C8E34E00F81E2B1DD2A8CE1B9BB2, 21FF6A0740C1DEF396FC6DAF80EBE6EB))
+    ChangeId = 6F304DC54A9E7CBF3188B19DC7A3FBBA
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_43@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((22F22797401A1A48FEDD21940A5C7510, 961AF8974FB32948FE48789F24427558))
+    ChangeId = AC35680E49674C1C0CCD239C73A155E5
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((22F22797401A1A48FEDD21940A5C7510, 961AF8974FB32948FE48789F24427558))
+    ChangeId = D25853BD4F46885C38ADD4B16375F342
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_45@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((ADD688C649609D8B4289F0A12F82C80D, 994C564D49180161E9F15F91BCFC40B5))
+    ChangeId = C0FC4F364CB3E9EFF213608E8DCFBD82
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((ADD688C649609D8B4289F0A12F82C80D, 994C564D49180161E9F15F91BCFC40B5))
+    ChangeId = 60C444674CF0CB170D6D0DBB06D80355
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_46@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((196B0D504745D9C0DE72779839817C3C, 0B3B08BD4CFEA05643C8BCB2ACB1B96B))
+    ChangeId = 2403CDAA410DB0A5FA221C92E829823B
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((196B0D504745D9C0DE72779839817C3C, 0B3B08BD4CFEA05643C8BCB2ACB1B96B))
+    ChangeId = FAC0D3C0432F67C94515DC9B0B05203A
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_47@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((09E7C77D483BC54C3EE7A8928E0C1ADF, 7949C1324DE8F79AF5C813ABFCEA3F1D))
+    ChangeId = DB494497431BD2427455FB8978012A56
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((09E7C77D483BC54C3EE7A8928E0C1ADF, 7949C1324DE8F79AF5C813ABFCEA3F1D))
+    ChangeId = 95AAEF484658389375BA12969822F0E8
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_49@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((A7EA7DCA4A803B31DCA0C799634E4EB3, CC30388E4671EAAE8FBE36A501288B97))
+    ChangeId = F6902DE14131ED855AFE28852975D147
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((A7EA7DCA4A803B31DCA0C799634E4EB3, CC30388E4671EAAE8FBE36A501288B97))
+    ChangeId = CEACDEE64F4D70E61873A4BA011BF62C
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_51@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((B509471D4227FCDADB9716995862C0EA, 4E4F1FA041A21BB3BCB4EE81369A50BD))
+    ChangeId = 50A4967A454FFF344F9635AC4B6F19C3
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((B509471D4227FCDADB9716995862C0EA, 4E4F1FA041A21BB3BCB4EE81369A50BD))
+    ChangeId = AB39CA96468B7B4C0193C1A01C7C3241
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_53@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((4AE2EC8042D63AE4E3E077AAE69C150C, 2D1E1E064DB5192D59362993069812F0))
+    ChangeId = 358C1E3D48E78F02FB6F90AE4FAD122B
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((4AE2EC8042D63AE4E3E077AAE69C150C, 2D1E1E064DB5192D59362993069812F0))
+    ChangeId = BD8BE0124433D4F2E54A70B8F3A8A5FB
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_54@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((3F6F4AD9455CD8F0D2D000B4684BD92D, 949989BF4955249CD2F556AA54D1E687))
+    ChangeId = 5AC8782B4D5709C855D15494BB34FC9B
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((3F6F4AD9455CD8F0D2D000B4684BD92D, 949989BF4955249CD2F556AA54D1E687))
+    ChangeId = 1E4E285E4AD237B860AE40AB4875CB65
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_56@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((96E999724721A4CC80FC6BA3679EE0F1, 6AC937274B144FE94E62E18CB6FA4DB7))
+    ChangeId = 32236B26434715C6950D7DB59B18D4C5
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((96E999724721A4CC80FC6BA3679EE0F1, 6AC937274B144FE94E62E18CB6FA4DB7))
+    ChangeId = A12A748642FC6709AEFB7FA16D48E2C5
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_57@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((2B9594544CC0CAC5231B16994EC8D004, 4A99D9E8409D980F7E216089F10D19E2))
+    ChangeId = AD5FAF814A6C563CC6C1C9AAB1D0A5E2
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((2B9594544CC0CAC5231B16994EC8D004, 4A99D9E8409D980F7E216089F10D19E2))
+    ChangeId = 8ED2E18F4901C526EC9F5F936076587A
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_59@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((CAC718E14265E360CDDA1FBC46F7D101, 577D2DA042815F19F56781B10347316C))
+    ChangeId = BA7F7E694C47CA48351DCDB41001678B
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((CAC718E14265E360CDDA1FBC46F7D101, 577D2DA042815F19F56781B10347316C))
+    ChangeId = 428808954DE48AF98B9729A014F01494
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_60@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((6D72A78B4254DBF23A8CD995D67900B9, 9440DB83414176B1222358B1BFFAF082))
+    ChangeId = 1C3D003A4A6E7ED1ED60D4A68C210185
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((6D72A78B4254DBF23A8CD995D67900B9, 9440DB83414176B1222358B1BFFAF082))
+    ChangeId = 9B2252404DE2836F51500F913E802879
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_61@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((FABF48B543BCA928EB78C78CB714C408, 7609481547FC9341D3EBDFBF377879F5))
+    ChangeId = 0A5930DB40434AD6BFACC1BA22BD8AB3
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((FABF48B543BCA928EB78C78CB714C408, 7609481547FC9341D3EBDFBF377879F5))
+    ChangeId = BEC422DA4392EE50ECABB3A4497E2DF9
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_64] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((AE573DEE41E7FF5879676081F4FB93C3, D24E3BA34B204BD829F7C7A4D31BCC33))
+    ChangeId = C04A50924108D2B8684C62BB3B435079
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_67@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((35034F4242BA9CB704DF39B5FF2C55A1, 6638A625410261771F73A79111924258))
+    ChangeId = B41EADD841702C9F7C260E8589536A53
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((35034F4242BA9CB704DF39B5FF2C55A1, 6638A625410261771F73A79111924258))
+    ChangeId = 52C954FC4526CB4C954202BF8C8804B0
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_68] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((7FC668E8465D4AE7CC2B359F6D676339, 74269DAC41D6E2035E2BD59A2E4EFCB7))
+    ChangeId = 56245DFD43C469D8DD961C8A0B163CDD
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_69] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((E142A6F34A900392F03808A784D47FCC, FB59234C45FA297BA5D5479E7C3F4552))
+    ChangeId = D9C2358A4BF19AA87D6C69993F921C73
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_71@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((EBA836EB4FE3082CC6C05E9C69E187E5, E9E3C7E142158826E397CC88FAA1787C))
+    ChangeId = 0C341A414622B58DCF9E87A17494FD33
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((EBA836EB4FE3082CC6C05E9C69E187E5, E9E3C7E142158826E397CC88FAA1787C))
+    ChangeId = AEF1AF6A4244ACC12FDD94B96D8DFFE5
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_72] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((4C0144504DCBB53B38952C9F353D6D2D, 112CC63D4AA84B07D5A85F84FF183205))
+    ChangeId = 833B791146681945FA1368B604343F8E
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_73] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((91F5328A488190C8B54FFCA374F77B13, DF31FECD4C50C95EFB5162A3FB81EEA5))
+    ChangeId = 25645E314102C2765A58728BCC71EA86
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_74] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((CDA878F947F569E3CA44A797C98F45E0, 81806F8D4C06EF30C094188767F6FD02))
+    ChangeId = B5742AB64DEA34F6EEDC078216A40F38
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_75] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((538D51B74CD9732B3E8FACA09893731B, 020FF4C240DDB2E97CC077A5D40F6F5C))
+    ChangeId = D7C0A017430D0C74D10D66B55AA986B2
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_76] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((A3B4D55B4A3E2D722C4BA3957E88083F, A659D9CB45845E82C9F1B996D5076C47))
+    ChangeId = DD65E871423BD74EE59C018FA04BCD0C
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_77] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((926C27B548A3904ABCC42FA112680BBA, CE02E4C1435FD63B09A545840FE18602))
+    ChangeId = EB90824540648D37AD3E4CA853B06571
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_78] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((83D9D70F4B334F68B809DABA1743952B, 3806B56141BD69084FB5C0BBC6AA58C7))
+    ChangeId = 8243F57A4A7FBF61B2747DB450FCA6F9
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_79] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((4936892F41EF0DD673B03CB94D2E3AC3, BC58449743C8A584156B1FAE143DB78D))
+    ChangeId = 3F8C4AD7418BDC53A2C88C9252824EC9
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_80] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((84B9A4CD4AEA0602E510BDA20512DEA1, 7EDA306743E758111A0616ABCB3A5DE3))
+    ChangeId = 0C2180F1454ABAF30509CD82B2E64CA6
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_81] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((8FDDED16477B47FE29CBA0A5320C3F16, 76CEAA5F43579D61334453A68A455B5B))
+    ChangeId = 07C8C254418CAB8FCFCC3F9705936B4E
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_82] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((9C26F689482AAAFF310A689281117FB1, 56F8F53B43F291D0089771B3D7DB6970))
+    ChangeId = 11FB2BB54F09BD1EA295318D4A7A463A
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_83] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((A44B1B28480BFC80CEF74195023BEBAF, BDD203134D49D4071C2181A41AC2B4D7))
+    ChangeId = CD7DCBC24610C7F23E1670A8002323D4
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_84] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((905601C2461F333760AE66B1BECD4608, 7F17645B4F3187F9A50D0683063056FD))
+    ChangeId = 3065D81C4776383EC4C3F8A030A48E75
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_85] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((4DB03B09433C53D43F80B69EE6BB26E9, 47F97EFF4B622FFFF66DC490F2E02D06))
+    ChangeId = 009F8C67421986D63367B3B1971564D8
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_86] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((B7FA4BD445EDAEA6391C889DF76C9A4A, 7CCEEA404701E060BDF2799E20055E69))
+    ChangeId = A1019DFE49D8DD4E6F7B3797749E3025
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_87] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((99109C944733E859AF87FE89113DFD9E, 8E83AF3E49C6FE89CAFDD98E32D18F9C))
+    ChangeId = 45216BA7435C4300A3735CAC4825FB1F
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_88] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((7C298E51417B99A3CD0F119DADB786C4, 3617ED694ACFE70459193282D0A8BD85))
+    ChangeId = DAF1C5FD4E427DBA02E4A3BC7B7DF36C
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_89] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((3B0BAB354BE157948045A09689AFF4C0, 24EF792949C597B6D2F91C9C32D00261))
+    ChangeId = D8A628894C10E95C6FAE218E73548E1A
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_9@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((5163C1AF46B33FB493B2F298EDADC071, 67075B704AADAF14CC2CF096DF1348E5))
+    ChangeId = A5BA50C74DFD030B6BB1C8BF1A50EFAF
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((AD39913C427A35A67AA56E80906238D9, DD4C9B1849E5C66E9778D1A6357BED7C))
+    ChangeId = B3BEFEA24EAF16F1E2BDD298C11CF4AE
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((AD39913C427A35A67AA56E80906238D9, DD4C9B1849E5C66E9778D1A6357BED7C))
+    ChangeId = E906650847427DB40A7C41A65C8314B3
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_90] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((6376222A419B2D0D818D65A33BEC14AB, 27287CBE47FA05C07FD679A75A05EBEC))
+    ChangeId = 4E842791462E7ED85BBA6F983BA1713F
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_91] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((3BFBB9BF47651BAA7BCFC3A843D24CDA, A006C29D45DCF9254F2A16A4C78CB2FD))
+    ChangeId = 3CBCE0CC456305E1D9A7D0B4FEBFC4C0
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_92] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((4BB9011349114DD24A661A9A1FEE362B, 9E5043B5435B23FE72BF2792CD602738))
+    ChangeId = 1D93D89F4B09552243177D8A1FE5EFE4
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_93] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((F8C5B7F0499752DFFE44BF89FC6FCAB0, F33C7F874F38C0088D852CB234EC2D2C))
+    ChangeId = 27167D2B475831EB84B344A241DA76FC
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_94] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((920F3E904F27AA303BEF54B63286E04F, B3971E2A40D12F81D6079AA46188C560))
+    ChangeId = 4D72C3FB425DCF484AB2F1BA4D77D573
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_95] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((69DB6AD74DCE61FEADB2B3AC7525A256, 274B1CCF43CF78E3FAAC468B39F9D55F))
+    ChangeId = F9A33EEB40D4743CC1DD2D9E9EA736C0
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_96] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((47B1E7B34C5BC7C2380973BF7D73D903, BFB957284FB49E702D8D27BA60CC8BC0))
+    ChangeId = 05D0D66C42990D363023EDA2DE4D76AC
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_97] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((1FF6595F406AC6D3202023AF253F7E2E, 21141A444944627B91292F8950E3FDCF))
+    ChangeId = 045721094599AB0EA3D294B5C05ACF4B
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_98] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((DFD367DF45870BA36694CC8AEF8F4431, 3DCEE3064E3E9E3B253ACE8F60E2B22A))
+    ChangeId = 6DAFD97D4B77FA1CD0AF3D9966D94913
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_99] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((271C2FEF44DFCEC77ABAF7A8DC1AE1B2, 021F3E1B4E71EA2ABCD14084545D2A29))
+    ChangeId = C82C14324599EEA9C092F3A03463324B
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapSet_0@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapSet_1@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = B21466344313372B63C02BA3D25D3372
+    bUserSetEnabledState = True
+    ChangeId = 67B3D6534FA53EDA33D9F1B6A698B072
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapSet_2@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = B51624F4423554860404D4BBE8342501
+    ChangeId = 1C4F0DEF41D4834E5E9A5F91DFD0D5F9
+    bUserSetEnabledState = True
+    ChangeId = C088EC004C546A901B4A869C4C51E413
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapSet_3] NiagaraNodeParameterMapSet
+    ChangeId = 346834974D41B495DF669EA89FC739E2
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapSet_4@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = B36F3E4C4395CAAFEF4B46990E150D68
+    bUserSetEnabledState = True
+    ChangeId = 45E30EB5469233A778B621B0FF008FE7
+[NiagaraNodeParameterMapSet_6@MeshNear_1.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = 0D6504A34890BA38B00DFBB0EE235887
+    ChangeId = E42DAAA04C509F5783C0369293B0F78D
+    bUserSetEnabledState = True
+    ChangeId = EF8B86CB4084169EDD6DA99FBA58731B
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapSet_7] NiagaraNodeParameterMapSet
+    ChangeId = 4C799D7542F045BE14F3F3AB68DDF0BE
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapSet_8] NiagaraNodeParameterMapSet
+    ChangeId = 88F57C3C46B3B709098FF7B66C604EAF
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapSet_9] NiagaraNodeParameterMapSet
+    ChangeId = DA22ABCB40540C12862C8AA3D116CEB7
+    bUserSetEnabledState = True
+[GPUComputeScript_0] NiagaraScript
+    Usage = ParticleGPUComputeScript
+    ExposedVersion = 6E4623D191ED3431392922DB8DB0190E
+    VersionData(0) <- NiagaraScriptSource_2
+    CachedDefaultDataInterfaces(0) <- NiagaraDataInterfaceCamera_0
+    CachedDefaultDataInterfaces(1) <- NiagaraDataInterfaceTexture_0
+    CachedDefaultDataInterfaces(2) <- NiagaraDataInterfaceTexture_1
+    CachedDefaultDataInterfaces(3) <- NiagaraDataInterfaceTexture_2
+    CachedDefaultDataInterfaces(4) <- NiagaraDataInterfaceTexture_3
+    CachedDefaultDataInterfaces(5) <- NiagaraDataInterfaceArrayFloat2_0
+    CachedDefaultDataInterfaces(6) <- NiagaraDataInterfaceTexture_4
+    CachedDefaultDataInterfaces(7) <- NiagaraDataInterfaceTexture_5
+[NiagaraDataInterfaceCamera_0@MeshNear_1.GPUComputeScript_0] NiagaraDataInterfaceCamera
+[NiagaraDataInterfaceTexture_0@MeshNear_1.GPUComputeScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@MeshNear_1.GPUComputeScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@MeshNear_1.GPUComputeScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3@MeshNear_1.GPUComputeScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceArrayFloat2_0@MeshNear_1.GPUComputeScript_0] NiagaraDataInterfaceArrayFloat2
+[NiagaraDataInterfaceTexture_4@MeshNear_1.GPUComputeScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_5@MeshNear_1.GPUComputeScript_0] NiagaraDataInterfaceTexture
+[UpdateScript_0] NiagaraScript
+    Usage = ParticleUpdateScript
+    ExposedVersion = BF05462DF4B1EFFA71256B4826BF3CD7
+    VersionData(0) <- NiagaraScriptSource_2
+    CachedDefaultDataInterfaces(0) <- NiagaraDataInterfaceCamera_0
+    CachedDefaultDataInterfaces(1) <- NiagaraDataInterfaceTexture_0
+    CachedDefaultDataInterfaces(2) <- NiagaraDataInterfaceTexture_1
+    CachedDefaultDataInterfaces(3) <- NiagaraDataInterfaceTexture_2
+    CachedDefaultDataInterfaces(4) <- NiagaraDataInterfaceTexture_3
+    CachedDefaultDataInterfaces(5) <- NiagaraDataInterfaceArrayFloat2_0
+    CachedDefaultDataInterfaces(6) <- NiagaraDataInterfaceTexture_4
+    CachedDefaultDataInterfaces(7) <- NiagaraDataInterfaceTexture_5
+[NiagaraDataInterfaceCamera_0@MeshNear_1.UpdateScript_0] NiagaraDataInterfaceCamera
+    bRequireCurrentFrameData = False
+    bRequireCurrentFrameData = False
+    bRequireCurrentFrameData = False
+    bRequireCurrentFrameData = False
+[NiagaraDataInterfaceTexture_0@MeshNear_1.UpdateScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@MeshNear_1.UpdateScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@MeshNear_1.UpdateScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3@MeshNear_1.UpdateScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceArrayFloat2_0@MeshNear_1.UpdateScript_0] NiagaraDataInterfaceArrayFloat2
+    FloatData(0) = (X=0.000000,Y=-0.500000)
+    FloatData(1) = (X=0.500000,Y=0.000000)
+    FloatData(2) = (X=0.000000,Y=0.500000)
+    FloatData(3) = (X=-0.500000,Y=0.000000)
+    InternalFloatData(0) = (X=0.000000,Y=-0.500000)
+    InternalFloatData(1) = (X=0.500000,Y=0.000000)
+    InternalFloatData(2) = (X=0.000000,Y=0.500000)
+    InternalFloatData(3) = (X=-0.500000,Y=0.000000)
+    FloatData(0) = (X=0.000000,Y=-0.500000)
+    FloatData(1) = (X=0.500000,Y=0.000000)
+    FloatData(2) = (X=0.000000,Y=0.500000)
+    FloatData(3) = (X=-0.500000,Y=0.000000)
+    InternalFloatData(0) = (X=0.000000,Y=-0.500000)
+    InternalFloatData(1) = (X=0.500000,Y=0.000000)
+    InternalFloatData(2) = (X=0.000000,Y=0.500000)
+    InternalFloatData(3) = (X=-0.500000,Y=0.000000)
+    FloatData(0) = (X=-1.500000,Y=-1.500000)
+    FloatData(1) = (X=-0.500000,Y=-1.500000)
+    FloatData(2) = (X=0.500000,Y=-1.500000)
+    FloatData(3) = (X=1.500000,Y=-1.500000)
+    FloatData(4) = (X=-1.500000,Y=1.500000)
+    FloatData(5) = (X=-0.500000,Y=1.500000)
+    FloatData(6) = (X=0.500000,Y=1.500000)
+    FloatData(7) = (X=1.500000,Y=1.500000)
+    FloatData(8) = (X=-1.500000,Y=0.500000)
+    FloatData(9) = (X=-1.500000,Y=-0.500000)
+    FloatData(10) = (X=1.500000,Y=0.500000)
+    FloatData(11) = (X=1.500000,Y=-0.500000)
+    InternalFloatData(0) = (X=-1.500000,Y=-1.500000)
+    InternalFloatData(1) = (X=-0.500000,Y=-1.500000)
+    InternalFloatData(2) = (X=0.500000,Y=-1.500000)
+    InternalFloatData(3) = (X=1.500000,Y=-1.500000)
+    InternalFloatData(4) = (X=-1.500000,Y=1.500000)
+    InternalFloatData(5) = (X=-0.500000,Y=1.500000)
+    InternalFloatData(6) = (X=0.500000,Y=1.500000)
+    InternalFloatData(7) = (X=1.500000,Y=1.500000)
+    InternalFloatData(8) = (X=-1.500000,Y=0.500000)
+    InternalFloatData(9) = (X=-1.500000,Y=-0.500000)
+    InternalFloatData(10) = (X=1.500000,Y=0.500000)
+    InternalFloatData(11) = (X=1.500000,Y=-0.500000)
+    MaxElements = 12
+    FloatData(0) = (X=-1.500000,Y=-1.500000)
+    FloatData(1) = (X=-0.500000,Y=-1.500000)
+    FloatData(2) = (X=0.500000,Y=-1.500000)
+    FloatData(3) = (X=1.500000,Y=-1.500000)
+    FloatData(4) = (X=-1.500000,Y=1.500000)
+    FloatData(5) = (X=-0.500000,Y=1.500000)
+    FloatData(6) = (X=0.500000,Y=1.500000)
+    FloatData(7) = (X=1.500000,Y=1.500000)
+    FloatData(8) = (X=-1.500000,Y=0.500000)
+    FloatData(9) = (X=-1.500000,Y=-0.500000)
+    FloatData(10) = (X=1.500000,Y=0.500000)
+    FloatData(11) = (X=1.500000,Y=-0.500000)
+    InternalFloatData(0) = (X=-1.500000,Y=-1.500000)
+    InternalFloatData(1) = (X=-0.500000,Y=-1.500000)
+    InternalFloatData(2) = (X=0.500000,Y=-1.500000)
+    InternalFloatData(3) = (X=1.500000,Y=-1.500000)
+    InternalFloatData(4) = (X=-1.500000,Y=1.500000)
+    InternalFloatData(5) = (X=-0.500000,Y=1.500000)
+    InternalFloatData(6) = (X=0.500000,Y=1.500000)
+    InternalFloatData(7) = (X=1.500000,Y=1.500000)
+    InternalFloatData(8) = (X=-1.500000,Y=0.500000)
+    InternalFloatData(9) = (X=-1.500000,Y=-0.500000)
+    InternalFloatData(10) = (X=1.500000,Y=0.500000)
+    InternalFloatData(11) = (X=1.500000,Y=-0.500000)
+    MaxElements = 12
+[NiagaraDataInterfaceTexture_4@MeshNear_1.UpdateScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_5@MeshNear_1.UpdateScript_0] NiagaraDataInterfaceTexture
+[NiagaraEditorParametersAdapter_0@MeshNear_1] NiagaraEditorParametersAdapter
+[NiagaraMeshRendererProperties_0] NiagaraMeshRendererProperties

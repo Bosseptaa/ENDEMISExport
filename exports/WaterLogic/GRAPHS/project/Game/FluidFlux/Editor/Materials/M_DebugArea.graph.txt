@@ -1,0 +1,174 @@
+﻿# /Game/FluidFlux/Editor/Materials/M_DebugArea
+# класс: Material; происхождение: проект; узлов: 37; связей: 70; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_DebugArea] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.500000
+    TwoSided = True
+    EditorX = 544
+    EditorY = 144
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 9C87955FA08101C822348FB8A28FDDFF
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = A469AEE942C30FEBCB3D3D96374F49AD
+    EditorOnlyData <- M_DebugAreaEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_DebugAreaEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionDivide_0
+    OpacityMask <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionEyeAdaptation_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionActorPositionWS_0
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_1
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionFrac_0
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionComponentMask_3
+    ExpressionCollection <- MaterialExpressionOneMinus_1
+    ExpressionCollection <- MaterialExpressionAbs_2
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionIf_2
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionFrac_2
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionSubtract_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionComment_0
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Input <- MaterialExpressionSubtract_1
+[MaterialExpressionAbs_2] MaterialExpressionAbs
+    Input <- MaterialExpressionComponentMask_2
+[MaterialExpressionActorPositionWS_0] MaterialExpressionActorPositionWS
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 768
+    SizeY = 368
+    Text = "Side"
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    B = True
+    Input <- MaterialExpressionVertexNormalWS_1
+[MaterialExpressionComponentMask_3] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionFrac_0
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    B = True
+    Input <- MaterialExpressionFrac_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+    R = 0.980000
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=-50.000000,G=-50.000000,B=0.000000,A=0.000000)
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    ConstB = 2048.000000
+    A <- MaterialExpressionSubtract_4
+    B <- MaterialExpressionMultiply_7
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    ConstB = 60.000000
+    A <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionEyeAdaptation_0] MaterialExpressionEyeAdaptation
+[MaterialExpressionFrac_0] MaterialExpressionFrac
+    Input <- MaterialExpressionDivide_1
+[MaterialExpressionFrac_2] MaterialExpressionFrac
+    Input <- MaterialExpressionDivide_2
+[MaterialExpressionIf_2] MaterialExpressionIf
+    A <- MaterialExpressionComponentMask_5
+    B <- MaterialExpressionConstant_6
+    AGreaterThanB <- MaterialExpressionConstant_5
+    ALessThanB <- MaterialExpressionSubtract_2
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionConstant_0
+    B <- MaterialExpressionIf_2
+    Alpha <- MaterialExpressionOneMinus_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionAbs_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/WorldPositionOffset/LocalPosition.LocalPosition'"
+    FunctionOutputs(0) = (ExpressionOutputId=27F0945D4ABD5C70C4034AAF01590188,Output=(OutputName="Local Position"))
+    FunctionOutputs(1) = (ExpressionOutputId=0EC5AE1C430459D37F99BC847711C064,Output=(OutputName="Instance Local Position"))
+    FunctionOutputs(2) = (ExpressionOutputId=74D70E1C49E1795CB21210A6161BD491,Output=(OutputName="Local Position (Excluding Offsets)"))
+    FunctionOutputs(3) = (ExpressionOutputId=23A516A24277CCAEF901BC8543E1BEAB,Output=(OutputName="Instance Local Position (Excluding Offsets)"))
+    Outputs(0) = (OutputName="Local Position")
+    Outputs(1) = (OutputName="Instance Local Position")
+    Outputs(2) = (OutputName="Local Position (Excluding Offsets)")
+    Outputs(3) = (OutputName="Instance Local Position (Excluding Offsets)")
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.ObjectScale'"
+    FunctionOutputs(0) = (ExpressionOutputId=BCB69D5945309E791CA6D5BAAEEB4640,Output=(OutputName="Scale XYZ"))
+    FunctionOutputs(1) = (ExpressionOutputId=E43D3D8744587DD99D067083827BBE09,Output=(OutputName="Scale X"))
+    FunctionOutputs(2) = (ExpressionOutputId=4E14A1064E83C8C589B19D9E7E1DFBA8,Output=(OutputName="Scale Y"))
+    FunctionOutputs(3) = (ExpressionOutputId=F299C8E84CE25E9B3767439611116C65,Output=(OutputName="Scale Z"))
+    Outputs(0) = (OutputName="Scale XYZ")
+    Outputs(1) = (OutputName="Scale X")
+    Outputs(2) = (OutputName="Scale Y")
+    Outputs(3) = (OutputName="Scale Z")
+[MaterialExpressionMin_0] MaterialExpressionMin
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -50.000000
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionConstant3Vector_1
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    ConstA = 64.000000
+    ConstB = 20.000000
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionOneMinus_1] MaterialExpressionOneMinus
+    Input <- MaterialExpressionAbs_2
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 20.000000
+    ParameterName = "WorldPixelSize"
+    ExpressionGUID = 4E2E896142D1F378FBAD9FA92C958A48
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    A <- MaterialExpressionWorldPosition_0
+    B <- MaterialExpressionActorPositionWS_0
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    ConstB = 0.500000
+    A <- MaterialExpressionComponentMask_3
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    ConstB = -0.010000
+    A <- MaterialExpressionMin_0
+[MaterialExpressionSubtract_4] MaterialExpressionSubtract
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionMultiply_0
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.100000,G=0.100000,B=0.100000,A=1.000000)
+    ParameterName = "Color"
+    ExpressionGUID = 622913D4478EF9DA94FEFDA233E07BD3
+[MaterialExpressionVertexNormalWS_1] MaterialExpressionVertexNormalWS
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

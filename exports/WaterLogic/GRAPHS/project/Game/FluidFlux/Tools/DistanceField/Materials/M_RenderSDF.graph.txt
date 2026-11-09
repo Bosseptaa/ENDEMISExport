@@ -1,0 +1,185 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Materials/M_RenderSDF
+# класс: Material; происхождение: проект; узлов: 30; связей: 61; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_RenderSDF] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.500000
+    EditorX = 1600
+    EditorY = 315
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 4F51EF7F4DFF8E254A245E883A78C678
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="Black",TextureReference="/Engine/EngineResources/Black.Black")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = F6D8572C471417CCC07ADAA051CA3951
+    EditorOnlyData <- M_RenderSDFEditorOnlyData
+[M_RenderSDFEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    ParameterGroupData(4) = (GroupName="None")
+    ParameterGroupData(5) = (GroupName="None")
+    ParameterGroupData(6) = (GroupName="None")
+    ParameterGroupData(7) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionIf_2
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_1
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionVectorParameter_5
+    ExpressionCollection <- MaterialExpressionVectorParameter_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_1
+    ExpressionCollection <- MaterialExpressionCrossProduct_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_2
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_4
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_6
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionIf_2
+    ExpressionCollection <- MaterialExpressionOneMinus_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMax_1
+    ExpressionCollection <- MaterialExpressionComment_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.500000
+    A <- MaterialExpressionDivide_2
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 480
+    SizeY = 336
+    Text = "Encode to normalized 8bit texture"
+    CommentColor = (R=0.258510,G=0.404167,B=0.378287,A=1.000000)
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = -1.000000
+[MaterialExpressionCrossProduct_0] MaterialExpressionCrossProduct
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionVectorParameter_1
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    A <- MaterialExpressionStaticSwitchParameter_0
+    B <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionIf_2] MaterialExpressionIf
+    ConstB = 0.500000
+    A <- MaterialExpressionScalarParameter_4
+    AGreaterThanB <- MaterialExpressionMin_0
+    ALessThanB <- MaterialExpressionMax_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Math/Transform3x3Matrix.Transform3x3Matrix'"
+    FunctionInputs(4) = (ExpressionInputId=ADEDE2874C64D48C2959798B5753E317,Input=(InputName="BasisPosition"))
+    FunctionOutputs(0) = (ExpressionOutputId=BB720F6C40263651E0C307B7D447486D,Output=(OutputName="Transformed Vector"))
+    Outputs(0) = (OutputName="Transformed Vector")
+    FunctionInputs(0) <- MaterialExpressionSubtract_0
+    FunctionInputs(1) <- MaterialExpressionVectorParameter_0
+    FunctionInputs(2) <- MaterialExpressionMultiply_0
+    FunctionInputs(3) <- MaterialExpressionVectorParameter_1
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFData.MF_SDFData'"
+    FunctionOutputs(0) = (ExpressionOutputId=6F5E0EB4448F770782266A8988172AD7,Output=(OutputName="Tiles"))
+    FunctionOutputs(1) = (ExpressionOutputId=0390D16C4D284B24166BC49BF95BBB21,Output=(OutputName="Range"))
+    FunctionOutputs(2) = (ExpressionOutputId=8DA658C7473DFCB681BF998FD4A42D29,Output=(OutputName="Position"))
+    FunctionOutputs(3) = (ExpressionOutputId=F0B8A022418205E347BDF4BA4286EE9F,Output=(OutputName="Size"))
+    FunctionOutputs(4) = (ExpressionOutputId=153A2CE742276E00F08456BC91616A72,Output=(OutputName="Resolution"))
+    Outputs(0) = (OutputName="Tiles")
+    Outputs(1) = (OutputName="Range")
+    Outputs(2) = (OutputName="Position")
+    Outputs(3) = (OutputName="Size")
+    Outputs(4) = (OutputName="Resolution")
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFHeightmapSample.MF_SDFHeightmapSample'"
+    FunctionOutputs(0) = (ExpressionOutputId=708295E34353B792CF1B398969D23468,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=D8B20A024F07D724667626A14B980640,Output=(OutputName="Mask"))
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_TileWorldPosition.MF_TileWorldPosition'"
+    FunctionOutputs(0) = (ExpressionOutputId=B7CE0AD54F92395BDBE680AE1C70659A,Output=(OutputName="WorldPosition"))
+    Outputs(0) = (OutputName="WorldPosition")
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_TileWorldPosition.MF_TileWorldPosition'"
+    FunctionOutputs(0) = (ExpressionOutputId=B7CE0AD54F92395BDBE680AE1C70659A,Output=(OutputName="WorldPosition"))
+    Outputs(0) = (OutputName="WorldPosition")
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFShapeSample3D.MF_SDFShapeSample3D'"
+    FunctionOutputs(0) = (ExpressionOutputId=16CBED1E4C62167323F701B5020B4839,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=E68AD63D4E0C38B5819D4787D0A9FE13,Output=(OutputName="Mask"))
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionVectorParameter_5
+    FunctionInputs(1) <- MaterialExpressionVectorParameter_2
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_0
+    FunctionInputs(3) <- MaterialExpressionConstant_0
+[MaterialExpressionMax_1] MaterialExpressionMax
+    A <- MaterialExpressionTextureSampleParameter2D_4
+    B <- MaterialExpressionAdd_0
+[MaterialExpressionMin_0] MaterialExpressionMin
+    A <- MaterialExpressionTextureSampleParameter2D_4
+    B <- MaterialExpressionOneMinus_1
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -1.000000
+    A <- MaterialExpressionCrossProduct_0
+[MaterialExpressionOneMinus_1] MaterialExpressionOneMinus
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Input <- MaterialExpressionTextureCoordinate_6
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    ParameterName = "SDFInverse"
+    ExpressionGUID = 62ECB9674370D87554586A825983B188
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseHeightmap"
+    ExpressionGUID = 73729E9F45C296F44901C3AC25B2FF5D
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionStaticSwitchParameter_1] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseHeightmap"
+    ExpressionGUID = 677B31654F23959FA165B1B70F418292
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    A <- MaterialExpressionVectorParameter_6
+    B <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionTextureCoordinate_6] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureSampleParameter2D_4] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "SDFPrevious"
+    ExpressionGUID = F2437CD54484FCF86C482CBA3B7CAFC2
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    Coordinates <- MaterialExpressionSaturate_1
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=500.000000,G=500.000000,B=500.000000,A=5.000000)
+    ParameterName = "ShapeForward"
+    ExpressionGUID = 35ECB0124B885E308F6ABA9CBE664895
+[MaterialExpressionVectorParameter_1] MaterialExpressionVectorParameter
+    DefaultValue = (R=500.000000,G=500.000000,B=500.000000,A=5.000000)
+    ParameterName = "ShapeUp"
+    ExpressionGUID = 31DF94F44C56B2F0B20533B7B980F5B6
+[MaterialExpressionVectorParameter_2] MaterialExpressionVectorParameter
+    DefaultValue = (R=500.000000,G=500.000000,B=500.000000,A=5.000000)
+    ParameterName = "ShapeLocationRadius"
+    ExpressionGUID = F300421548EA21346401C8B1E181C4C1
+[MaterialExpressionVectorParameter_5] MaterialExpressionVectorParameter
+    DefaultValue = (R=500.000000,G=500.000000,B=500.000000,A=5.000000)
+    ParameterName = "ShapeSize"
+    ExpressionGUID = E25CEFBB46B57F06FCAC1E8D7A707999
+    bCollapsed = True
+[MaterialExpressionVectorParameter_6] MaterialExpressionVectorParameter
+    DefaultValue = (R=500.000000,G=500.000000,B=500.000000,A=5.000000)
+    ParameterName = "ShapeLocationRadius"
+    ExpressionGUID = 99A4AC5243DC41202AAFAEBC2D77F1DE
+
+## СВЯЗИ

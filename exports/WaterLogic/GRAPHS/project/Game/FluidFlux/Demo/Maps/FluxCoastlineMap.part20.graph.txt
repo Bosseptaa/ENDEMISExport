@@ -1,0 +1,1925 @@
+﻿# /Game/FluidFlux/Demo/Maps/FluxCoastlineMap
+# класс: World; происхождение: проект; узлов: 4386; связей: 6219; HLSL: 0; причина: папка /Game/FluidFlux; тело:4149
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Waves/Materials/M_TextureWaveGenerator_Substrate.M_TextureWaveGenerator_Substrate'"
+    VectorParameterValues(0) = (ParameterInfo=(Name="Wind"),ParameterValue=(R=-0.141159,G=0.141159,B=0.870000,A=0.000000))
+    LightingGuid = 1C067C214B36E0DB3510FC849D62DC22
+    EditorOnlyData <- MID_M_TextureWaveGenerator_Substrate_0EditorOnlyData
+[MID_M_TextureWaveGenerator_Substrate_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[UpdateWindDirection] TimelineComponent
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+[Wind] ArrowComponent
+    AttachParent = "DefaultSceneRoot"
+    RelativeRotation = (Pitch=0.000000,Yaw=135.000000,Roll=-0.000000)
+    RelativeScale3D = (X=14.142136,Y=15.000000,Z=15.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxOceanWave_0] MaterialBillboardComponent
+    AttachParent = "DefaultSceneRoot"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DebugPlane] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Meshes/SM_FluxPlane32x32.SM_FluxPlane32x32'"
+    bEvaluateWorldPositionOffsetInRayTracing = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "SurfaceMesh"
+    RelativeScale3D = (X=1.000000,Y=1.000000,Z=50.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    OverrideMaterials(0) <- MID_M_TextureWavePreview_2
+[MID_M_TextureWavePreview_2] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Waves/Materials/M_TextureWavePreview.M_TextureWavePreview'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="WaveTextureHeight"),ParameterValue=230.000000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=980.000000)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="WaveTextureChoppiness"),ParameterValue=86.602539)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="WaveTextureRange"),ParameterValue=27000.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureFalloff"),ParameterValue=22000.000000)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureDivergenceScale"),ParameterValue=1.300000)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="ShoreWaveWidth"),ParameterValue=-1050.000000)
+    ScalarParameterValues(7) = (ParameterInfo=(Name="ShoreWaveScale"),ParameterValue=0.000556)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="CoastlineScattringDistance"),ParameterValue=20000.000000)
+    ScalarParameterValues(9) = (ParameterInfo=(Name="CoastlineScattringDepth"),ParameterValue=1200.000000)
+    ScalarParameterValues(10) = (ParameterInfo=(Name="WaveProfileDistance"),ParameterValue=2.300000)
+    ScalarParameterValues(11) = (ParameterInfo=(Name="WaveProfileWidth"),ParameterValue=600.000000)
+    ScalarParameterValues(12) = (ParameterInfo=(Name="WaveProfileSpeed"),ParameterValue=0.245000)
+    ScalarParameterValues(13) = (ParameterInfo=(Name="WaveProfileAnimationSpeed"),ParameterValue=0.700000)
+    ScalarParameterValues(14) = (ParameterInfo=(Name="WaveGroundPrediction"),ParameterValue=300.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="WaveTextureOffsetScale"),ParameterValue=(R=-3080.164795,G=-18872.083984,B=0.000087,A=0.000087))
+    VectorParameterValues(1) = (ParameterInfo=(Name="WaveTextureWind"),ParameterValue=(R=-100.000000,G=100.000000,B=0.300000,A=0.500000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="FluxWaveProfileDecode"),ParameterValue=(R=-0.330324,G=0.000000,B=0.470531,A=0.124962))
+    TextureParameterValues(1) = (ParameterInfo=(Name="FluxWaveProfileMap"),ParameterValue="/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultWaveProfile_Forard.T_DefaultWaveProfile_Forard'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="FluxWaveProfileInvMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'")
+    LightingGuid = F0B2006F43C0F93CF83F1AA9E3F4E43E
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_M_TextureWavePreview_2EditorOnlyData
+[MID_M_TextureWavePreview_2EditorOnlyData] MaterialInstanceEditorOnlyData
+[SurfaceMesh] BoxComponent
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "DefaultSceneRoot"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=-20.000000)
+    RelativeScale3D = (X=115.000000,Y=115.000000,Z=2.300000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DefaultSceneRoot@PersistentLevel.BP_FluxOceanWave_0] SceneComponent
+    RelativeLocation = (X=-3080.164720,Y=-18872.083345,Z=1000.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[TextureRenderTarget2D_0@PersistentLevel.BP_FluxOceanWave_0] TextureRenderTarget2D
+    SizeX = 256
+    SizeY = 256
+    ClearColor = (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+    Source = (BlockDataOffsets=(0))
+    OodleTextureSdkVersion = "2.9.10"
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+[AssetImportData@PersistentLevel.BP_FluxOceanWave_0.TextureRenderTarget2D_0] AssetImportData
+[MID_MI_FluxConeLight_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Lighting/Materials/MI_FluxConeLight.MI_FluxConeLight'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="ProjectionIntensity"),ParameterValue=8.000000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="SurfaceScatteringDepth"),ParameterValue=1200.000000)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="FalloffDistance"),ParameterValue=2000.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="ScatterringBleeding"),ParameterValue=0.300000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=4538.000000)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=2038.000000)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=40.000000)
+    ScalarParameterValues(7) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="FluxWorldGroundHeight"),ParameterValue=1000.000000)
+    ScalarParameterValues(9) = (ParameterInfo=(Name="FluxWorldCoastlineDecode"),ParameterValue=36000.000000)
+    ScalarParameterValues(10) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=980.000000)
+    ScalarParameterValues(11) = (ParameterInfo=(Name="WaveTextureHeight"),ParameterValue=230.000000)
+    ScalarParameterValues(12) = (ParameterInfo=(Name="WaveTextureChoppiness"),ParameterValue=86.602539)
+    ScalarParameterValues(13) = (ParameterInfo=(Name="WaveTextureRange"),ParameterValue=27000.000000)
+    ScalarParameterValues(14) = (ParameterInfo=(Name="WaveTextureFalloff"),ParameterValue=22000.000000)
+    ScalarParameterValues(15) = (ParameterInfo=(Name="WaveTextureDivergenceScale"),ParameterValue=1.300000)
+    ScalarParameterValues(16) = (ParameterInfo=(Name="ShoreWaveWidth"),ParameterValue=-1050.000000)
+    ScalarParameterValues(17) = (ParameterInfo=(Name="ShoreWaveScale"),ParameterValue=0.000556)
+    ScalarParameterValues(18) = (ParameterInfo=(Name="CoastlineScattringDistance"),ParameterValue=20000.000000)
+    ScalarParameterValues(19) = (ParameterInfo=(Name="CoastlineScattringDepth"),ParameterValue=1200.000000)
+    ScalarParameterValues(20) = (ParameterInfo=(Name="WaveProfileDistance"),ParameterValue=2.300000)
+    ScalarParameterValues(21) = (ParameterInfo=(Name="WaveProfileWidth"),ParameterValue=600.000000)
+    ScalarParameterValues(22) = (ParameterInfo=(Name="WaveProfileSpeed"),ParameterValue=0.245000)
+    ScalarParameterValues(23) = (ParameterInfo=(Name="WaveProfileAnimationSpeed"),ParameterValue=0.700000)
+    ScalarParameterValues(24) = (ParameterInfo=(Name="WaveGroundPrediction"),ParameterValue=300.000000)
+    ScalarParameterValues(25) = (ParameterInfo=(Name="SurfacePhaseG0"))
+    ScalarParameterValues(26) = (ParameterInfo=(Name="SurfacePhaseGShoreline"),ParameterValue=1.000000)
+    ScalarParameterValues(27) = (ParameterInfo=(Name="SurfacePhaseG1"))
+    VectorParameterValues(0) = (ParameterInfo=(Name="LightColor"),ParameterValue=(R=0.450000,G=0.869293,B=1.000000,A=1.500000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="LightColorAboveWater"),ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=5405.000000,G=22837.000000,B=4538.000000,A=1.000000))
+    VectorParameterValues(3) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000))
+    VectorParameterValues(4) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-4835.000000,G=17717.000000,B=20480.000000,A=10240.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=10.000000,B=12.500000,A=100000.000000))
+    VectorParameterValues(6) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=3520.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(7) = (ParameterInfo=(Name="FluxLevelToWorldGroundUV"),ParameterValue=(R=-153692.000000,G=-149001.000000,B=307200.000000,A=307200.000000))
+    VectorParameterValues(8) = (ParameterInfo=(Name="FluxWorldAreaLocation"),ParameterValue=(R=-92.000000,G=4599.000000,B=7809.000000,A=1.000000))
+    VectorParameterValues(9) = (ParameterInfo=(Name="FluxWorldGroundPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000))
+    VectorParameterValues(10) = (ParameterInfo=(Name="WaveTextureOffsetScale"),ParameterValue=(R=-3080.164795,G=-18872.083984,B=0.000087,A=0.000087))
+    VectorParameterValues(11) = (ParameterInfo=(Name="WaveTextureWind"),ParameterValue=(R=-100.000000,G=100.000000,B=0.300000,A=0.500000))
+    VectorParameterValues(12) = (ParameterInfo=(Name="FluxWaveProfileDecode"),ParameterValue=(R=-0.330324,G=0.000000,B=0.470531,A=0.124962))
+    VectorParameterValues(13) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.600000,G=1.000000,B=1.000000,A=0.000030))
+    VectorParameterValues(14) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=120.000000,G=250.000000,B=350.000000,A=4.000000))
+    VectorParameterValues(15) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=1.000000,G=1.200000,B=1.150000,A=0.650000))
+    VectorParameterValues(16) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.117708,G=0.294268,B=0.470833,A=0.000000))
+    VectorParameterValues(17) = (ParameterInfo=(Name="SurfaceScatteringShoreline"),ParameterValue=(R=0.070000,G=0.300000,B=0.650000,A=0.000064))
+    VectorParameterValues(18) = (ParameterInfo=(Name="SurfaceAbsorptionShoreline"),ParameterValue=(R=80.000000,G=500.000000,B=400.000000,A=8.800000))
+    VectorParameterValues(19) = (ParameterInfo=(Name="ColorBehindShoreline"),ParameterValue=(R=1.000000,G=1.000000,B=0.900000,A=0.700000))
+    VectorParameterValues(20) = (ParameterInfo=(Name="SurfaceOverlayShoreline"),ParameterValue=(R=0.300000,G=0.650000,B=0.650000,A=0.000000))
+    VectorParameterValues(21) = (ParameterInfo=(Name="SurfaceScattering1"),ParameterValue=(R=0.950000,G=0.800000,B=0.600000,A=0.000400))
+    VectorParameterValues(22) = (ParameterInfo=(Name="SurfaceAbsorption1"),ParameterValue=(R=290.000000,G=260.000000,B=140.000000,A=1.000000))
+    VectorParameterValues(23) = (ParameterInfo=(Name="ColorBehind1"),ParameterValue=(R=1.150000,G=1.000000,B=0.900000,A=0.600000))
+    VectorParameterValues(24) = (ParameterInfo=(Name="SurfaceOverlay1"),ParameterValue=(R=0.166667,G=0.106061,B=0.061033,A=0.000300))
+    VectorParameterValues(25) = (ParameterInfo=(Name="WorldToPainterUV"),ParameterValue=(R=-10606.000000,G=14122.000000,B=28800.000000,A=18000.000000))
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'")
+    TextureParameterValues(1) = (ParameterInfo=(Name="FluidHeightMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'")
+    TextureParameterValues(6) = (ParameterInfo=(Name="FluxWaveProfileMap"),ParameterValue="/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultWaveProfile_Forard.T_DefaultWaveProfile_Forard'")
+    TextureParameterValues(7) = (ParameterInfo=(Name="FluxWaveProfileInvMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'")
+    LightingGuid = 891CFB564E80727595107BB3301A9B44
+    TextureParameterValues(3) <- TextureRenderTarget2D_0
+    TextureParameterValues(4) <- TextureRenderTarget2D_3
+    TextureParameterValues(5) <- TextureRenderTarget2D_0
+    TextureParameterValues(8) <- TextureRenderTarget2D_7
+    EditorOnlyData <- MID_MI_FluxConeLight_0EditorOnlyData
+[MID_MI_FluxConeLight_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MaterialBillboard@PersistentLevel.BP_Flashlight_C_0] MaterialBillboardComponent
+    AttachParent = "DefaultSceneRoot"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[ShapeMesh] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "DefaultSceneRoot"
+    RelativeLocation = (X=1450.000000,Y=-0.000000,Z=0.000000)
+    RelativeScale3D = (X=29.000000,Y=48.667779,Z=48.667779)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    OverrideMaterials(0) <- MID_MI_FluxConeLight_0
+[DefaultSceneRoot@PersistentLevel.BP_Flashlight_C_0] SceneComponent
+    RelativeLocation = (X=26862.328940,Y=20789.247955,Z=678.049043)
+    RelativeRotation = (Pitch=-27.060979,Yaw=-175.466723,Roll=-62.877271)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Cone] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Engine/BasicShapes/Cone.Cone'"
+    OverrideMaterials(0) = "/Script/Engine.Material'/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial'"
+    bGenerateOverlapEvents = False
+    CastShadow = False
+    AttachParent = "DefaultSceneRoot"
+    RelativeRotation = (Pitch=90.000000,Yaw=0.000000,Roll=0.000000)
+    RelativeScale3D = (X=0.250000,Y=0.250000,Z=0.350000)
+    CreationMethod = Instance
+[DecalMesh] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -151
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "DefaultSceneRoot"
+    RelativeScale3D = (X=20.000000,Y=20.000000,Z=4.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    OverrideMaterials(0) <- MID_MI_FluxBaseDecal_0
+[MID_MI_FluxBaseDecal_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Lighting/Materials/MI_FluxBaseDecal.MI_FluxBaseDecal'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=4538.000000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=2038.000000)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=40.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"),ParameterValue=1.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="FluxWorldGroundHeight"),ParameterValue=1000.000000)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="FluxWorldCoastlineDecode"),ParameterValue=36000.000000)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ParameterValue=980.000000)
+    ScalarParameterValues(7) = (ParameterInfo=(Name="WaveTextureHeight"),ParameterValue=230.000000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="WaveTextureChoppiness"),ParameterValue=86.602539)
+    ScalarParameterValues(9) = (ParameterInfo=(Name="WaveTextureRange"),ParameterValue=27000.000000)
+    ScalarParameterValues(10) = (ParameterInfo=(Name="WaveTextureFalloff"),ParameterValue=22000.000000)
+    ScalarParameterValues(11) = (ParameterInfo=(Name="WaveTextureDivergenceScale"),ParameterValue=1.300000)
+    ScalarParameterValues(12) = (ParameterInfo=(Name="ShoreWaveWidth"),ParameterValue=-1050.000000)
+    ScalarParameterValues(13) = (ParameterInfo=(Name="ShoreWaveScale"),ParameterValue=0.000556)
+    ScalarParameterValues(14) = (ParameterInfo=(Name="CoastlineScattringDistance"),ParameterValue=20000.000000)
+    ScalarParameterValues(15) = (ParameterInfo=(Name="CoastlineScattringDepth"),ParameterValue=1200.000000)
+    ScalarParameterValues(16) = (ParameterInfo=(Name="WaveProfileDistance"),ParameterValue=2.300000)
+    ScalarParameterValues(17) = (ParameterInfo=(Name="WaveProfileWidth"),ParameterValue=600.000000)
+    ScalarParameterValues(18) = (ParameterInfo=(Name="WaveProfileSpeed"),ParameterValue=0.245000)
+    ScalarParameterValues(19) = (ParameterInfo=(Name="WaveProfileAnimationSpeed"),ParameterValue=0.700000)
+    ScalarParameterValues(20) = (ParameterInfo=(Name="WaveGroundPrediction"),ParameterValue=300.000000)
+    ScalarParameterValues(21) = (ParameterInfo=(Name="SurfacePhaseG0"))
+    ScalarParameterValues(22) = (ParameterInfo=(Name="SurfacePhaseGShoreline"),ParameterValue=1.000000)
+    ScalarParameterValues(23) = (ParameterInfo=(Name="SurfacePhaseG1"))
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=5405.000000,G=22837.000000,B=4538.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-4835.000000,G=17717.000000,B=20480.000000,A=10240.000000))
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=10.000000,B=12.500000,A=100000.000000))
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=1.000000,G=3520.000000,B=256.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="FluxLevelToWorldGroundUV"),ParameterValue=(R=-153692.000000,G=-149001.000000,B=307200.000000,A=307200.000000))
+    VectorParameterValues(6) = (ParameterInfo=(Name="FluxWorldAreaLocation"),ParameterValue=(R=-92.000000,G=4599.000000,B=7809.000000,A=1.000000))
+    VectorParameterValues(7) = (ParameterInfo=(Name="FluxWorldGroundPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000))
+    VectorParameterValues(8) = (ParameterInfo=(Name="WaveTextureOffsetScale"),ParameterValue=(R=-3080.164795,G=-18872.083984,B=0.000087,A=0.000087))
+    VectorParameterValues(9) = (ParameterInfo=(Name="WaveTextureWind"),ParameterValue=(R=-100.000000,G=100.000000,B=0.300000,A=0.500000))
+    VectorParameterValues(10) = (ParameterInfo=(Name="FluxWaveProfileDecode"),ParameterValue=(R=-0.330324,G=0.000000,B=0.470531,A=0.124962))
+    VectorParameterValues(11) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.600000,G=1.000000,B=1.000000,A=0.000030))
+    VectorParameterValues(12) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=120.000000,G=250.000000,B=350.000000,A=4.000000))
+    VectorParameterValues(13) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=1.000000,G=1.200000,B=1.150000,A=0.650000))
+    VectorParameterValues(14) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.117708,G=0.294268,B=0.470833,A=0.000000))
+    VectorParameterValues(15) = (ParameterInfo=(Name="SurfaceScatteringShoreline"),ParameterValue=(R=0.070000,G=0.300000,B=0.650000,A=0.000064))
+    VectorParameterValues(16) = (ParameterInfo=(Name="SurfaceAbsorptionShoreline"),ParameterValue=(R=80.000000,G=500.000000,B=400.000000,A=8.800000))
+    VectorParameterValues(17) = (ParameterInfo=(Name="ColorBehindShoreline"),ParameterValue=(R=1.000000,G=1.000000,B=0.900000,A=0.700000))
+    VectorParameterValues(18) = (ParameterInfo=(Name="SurfaceOverlayShoreline"),ParameterValue=(R=0.300000,G=0.650000,B=0.650000,A=0.000000))
+    VectorParameterValues(19) = (ParameterInfo=(Name="SurfaceScattering1"),ParameterValue=(R=0.950000,G=0.800000,B=0.600000,A=0.000400))
+    VectorParameterValues(20) = (ParameterInfo=(Name="SurfaceAbsorption1"),ParameterValue=(R=290.000000,G=260.000000,B=140.000000,A=1.000000))
+    VectorParameterValues(21) = (ParameterInfo=(Name="ColorBehind1"),ParameterValue=(R=1.150000,G=1.000000,B=0.900000,A=0.600000))
+    VectorParameterValues(22) = (ParameterInfo=(Name="SurfaceOverlay1"),ParameterValue=(R=0.166667,G=0.106061,B=0.061033,A=0.000300))
+    VectorParameterValues(23) = (ParameterInfo=(Name="WorldToPainterUV"),ParameterValue=(R=-10606.000000,G=14122.000000,B=28800.000000,A=18000.000000))
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'")
+    TextureParameterValues(1) = (ParameterInfo=(Name="FluidHeightMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="Ground"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'")
+    TextureParameterValues(6) = (ParameterInfo=(Name="FluxWaveProfileMap"),ParameterValue="/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultWaveProfile_Forard.T_DefaultWaveProfile_Forard'")
+    TextureParameterValues(7) = (ParameterInfo=(Name="FluxWaveProfileInvMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'")
+    LightingGuid = 71A8A6FC442FA230553D96B0DDF79F7E
+    TextureParameterValues(3) <- TextureRenderTarget2D_0
+    TextureParameterValues(4) <- TextureRenderTarget2D_3
+    TextureParameterValues(5) <- TextureRenderTarget2D_0
+    TextureParameterValues(8) <- TextureRenderTarget2D_7
+    EditorOnlyData <- MID_MI_FluxBaseDecal_0EditorOnlyData
+[MID_MI_FluxBaseDecal_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MaterialBillboard@PersistentLevel.BP_FluxDecal_C_1] MaterialBillboardComponent
+    AttachParent = "DefaultSceneRoot"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DefaultSceneRoot@PersistentLevel.BP_FluxDecal_C_1] SceneComponent
+    RelativeLocation = (X=-6850.000000,Y=-4376.000000,Z=970.000000)
+    RelativeRotation = (Pitch=0.000000,Yaw=30.000000,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxInteractionComponent@PersistentLevel.BP_FluxCrate_C_1] BP_FluxInteractionComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxDataComponent@PersistentLevel.BP_FluxCrate_C_1] BP_FluxDataComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Mesh@PersistentLevel.BP_FluxCrate_C_1] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    RelativeLocation = (X=-2845.000000,Y=4545.000000,Z=890.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxBuoyancyComponent@PersistentLevel.BP_FluxCrate_C_1] BP_FluxBuoyancyComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraTrash_0] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Floating/NS_FluxFloatingMeshes.NS_FluxFloatingMeshes'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraTrash_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraTrash_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraTrash_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraTrash_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraTrash_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraTrash_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_3
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraTrash_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraTrash_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraTrash_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'"
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraTrash_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'"
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraTrash_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'"
+[Volume@PersistentLevel.BP_FluxNiagaraTrash_0] BoxComponent
+    BoxExtent = (X=750.000000,Y=1500.000000,Z=150.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraTrash_0.Volume] BodySetup
+[Bounds@PersistentLevel.BP_FluxNiagaraTrash_0] BoxComponent
+    BoxExtent = (X=850.000000,Y=1600.000000,Z=150.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraTrash_0.Bounds] BodySetup
+    AggGeom = (BoxElems=((X=1500.000000,Y=3000.000000,Z=300.000000)))
+    AggGeom = (BoxElems=((X=1700.000000,Y=3200.000000,Z=300.000000)))
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraTrash_0] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraTrash_0] SceneComponent
+    RelativeLocation = (X=6929.244141,Y=10789.937500,Z=946.999023)
+    RelativeRotation = (Pitch=0.000000,Yaw=-70.000122,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraTrash3] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Floating/NS_FluxFloatingMeshes.NS_FluxFloatingMeshes'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraTrash3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraTrash3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraTrash3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraTrash3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraTrash3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraTrash3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_3
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraTrash3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraTrash3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraTrash3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'"
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraTrash3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'"
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraTrash3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'"
+[Volume@PersistentLevel.BP_FluxNiagaraTrash3] BoxComponent
+    BoxExtent = (X=750.000000,Y=1000.000000,Z=150.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraTrash3.Volume] BodySetup
+[Bounds@PersistentLevel.BP_FluxNiagaraTrash3] BoxComponent
+    BoxExtent = (X=850.000000,Y=1100.000000,Z=150.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraTrash3.Bounds] BodySetup
+    AggGeom = (BoxElems=((X=1500.000000,Y=2000.000000,Z=300.000000)))
+    AggGeom = (BoxElems=((X=1700.000000,Y=2200.000000,Z=300.000000)))
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraTrash3] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraTrash3] SceneComponent
+    RelativeLocation = (X=23728.244141,Y=23649.937500,Z=946.999023)
+    RelativeRotation = (Pitch=0.000000,Yaw=-45.000122,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraTrash2] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Floating/NS_FluxFloatingMeshes.NS_FluxFloatingMeshes'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraTrash2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraTrash2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraTrash2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraTrash2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraTrash2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraTrash2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_3
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraTrash2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraTrash2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraTrash2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'"
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraTrash2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'"
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraTrash2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'"
+[Volume@PersistentLevel.BP_FluxNiagaraTrash2] BoxComponent
+    BoxExtent = (X=400.000000,Y=500.000000,Z=250.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraTrash2.Volume] BodySetup
+[Bounds@PersistentLevel.BP_FluxNiagaraTrash2] BoxComponent
+    BoxExtent = (X=500.000000,Y=5100.000000,Z=450.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=4500.000000,Z=-200.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraTrash2.Bounds] BodySetup
+    AggGeom = (BoxElems=((X=800.000000,Y=1000.000000,Z=500.000000)))
+    AggGeom = (BoxElems=((X=1000.000000,Y=10200.000000,Z=900.000000)))
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraTrash2] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraTrash2] SceneComponent
+    RelativeLocation = (X=-152.669922,Y=22590.453125,Z=2949.999023)
+    RelativeRotation = (Pitch=0.000027,Yaw=-90.000150,Roll=6.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraSplashes3_0] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Splash/NS_FluxSplashArea.NS_FluxSplashArea'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraSplashes3_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraSplashes3_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraSplashes3_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraSplashes3_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraSplashes3_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_3
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraSplashes3_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraSplashes3_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraSplashes3_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'"
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraSplashes3_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'"
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraSplashes3_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'"
+[Volume@PersistentLevel.BP_FluxNiagaraSplashes3_0] BoxComponent
+    BoxExtent = (X=2250.000000,Y=200.000000,Z=15.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraSplashes3_0.Volume] BodySetup
+[Bounds@PersistentLevel.BP_FluxNiagaraSplashes3_0] BoxComponent
+    BoxExtent = (X=2350.000000,Y=300.000000,Z=15.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraSplashes3_0.Bounds] BodySetup
+    AggGeom = (BoxElems=((X=4500.000000,Y=400.000000,Z=30.000000)))
+    AggGeom = (BoxElems=((X=4700.000000,Y=600.000000,Z=30.000000)))
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraSplashes3_0] MaterialBillboardComponent
+    AttachParent = "Scene"
+    RelativeLocation = (X=179.871552,Y=-106.355652,Z=21.735275)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraSplashes3_0] SceneComponent
+    RelativeLocation = (X=-3498.818979,Y=5737.207764,Z=1022.397980)
+    RelativeRotation = (Pitch=0.000000,Yaw=45.000088,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraSplashes3] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Splash/NS_FluxSplashArea.NS_FluxSplashArea'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraSplashes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraSplashes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraSplashes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraSplashes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraSplashes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_3
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraSplashes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraSplashes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraSplashes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'"
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraSplashes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'"
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraSplashes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'"
+[Volume@PersistentLevel.BP_FluxNiagaraSplashes3] BoxComponent
+    BoxExtent = (X=2250.000000,Y=200.000000,Z=15.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraSplashes3.Volume] BodySetup
+[Bounds@PersistentLevel.BP_FluxNiagaraSplashes3] BoxComponent
+    BoxExtent = (X=2350.000000,Y=300.000000,Z=15.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraSplashes3.Bounds] BodySetup
+    AggGeom = (BoxElems=((X=4500.000000,Y=400.000000,Z=30.000000)))
+    AggGeom = (BoxElems=((X=4700.000000,Y=600.000000,Z=30.000000)))
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraSplashes3] MaterialBillboardComponent
+    AttachParent = "Scene"
+    RelativeLocation = (X=179.871552,Y=-106.355652,Z=21.735275)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraSplashes3] SceneComponent
+    RelativeLocation = (X=-6438.818979,Y=1467.207764,Z=1022.397980)
+    RelativeRotation = (Pitch=0.000000,Yaw=60.000088,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraSplashes2] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Splash/NS_FluxSplashArea.NS_FluxSplashArea'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_3
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'"
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'"
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'"
+[Volume@PersistentLevel.BP_FluxNiagaraSplashes2] BoxComponent
+    BoxExtent = (X=3250.000000,Y=500.000000,Z=100.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraSplashes2.Volume] BodySetup
+[Bounds@PersistentLevel.BP_FluxNiagaraSplashes2] BoxComponent
+    BoxExtent = (X=3350.000000,Y=600.000000,Z=100.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraSplashes2.Bounds] BodySetup
+    AggGeom = (BoxElems=((X=6500.000000,Y=1000.000000,Z=200.000000)))
+    AggGeom = (BoxElems=((X=6700.000000,Y=1200.000000,Z=200.000000)))
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraSplashes2] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraSplashes2] SceneComponent
+    RelativeLocation = (X=3816.780273,Y=22668.203125,Z=2821.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraPlants4] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Plant/NS_FluxPlantBending.NS_FluxPlantBending'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraPlants4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraPlants4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraPlants4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraPlants4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraPlants4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_3
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraPlants4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraPlants4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraPlants4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'"
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraPlants4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'"
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraPlants4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'"
+[Volume@PersistentLevel.BP_FluxNiagaraPlants4] BoxComponent
+    BoxExtent = (X=850.000000,Y=2250.000000,Z=400.000000)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=170.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraPlants4.Volume] BodySetup
+[Bounds@PersistentLevel.BP_FluxNiagaraPlants4] BoxComponent
+    BoxExtent = (X=950.000000,Y=2350.000000,Z=400.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraPlants4.Bounds] BodySetup
+    AggGeom = (BoxElems=((X=1700.000000,Y=4500.000000,Z=800.000000)))
+    AggGeom = (BoxElems=((X=1900.000000,Y=4700.000000,Z=800.000000)))
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraPlants4] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraPlants4] SceneComponent
+    RelativeLocation = (X=1698.661133,Y=9325.519531,Z=904.937378)
+    RelativeRotation = (Pitch=0.000000,Yaw=-70.000061,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraPlants3] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Plant/NS_FluxPlantBending.NS_FluxPlantBending'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_3
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'"
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'"
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'"
+[Volume@PersistentLevel.BP_FluxNiagaraPlants3] BoxComponent
+    BoxExtent = (X=800.000000,Y=1450.000000,Z=400.000000)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=170.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraPlants3.Volume] BodySetup
+[Bounds@PersistentLevel.BP_FluxNiagaraPlants3] BoxComponent
+    BoxExtent = (X=900.000000,Y=1550.000000,Z=400.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraPlants3.Bounds] BodySetup
+    AggGeom = (BoxElems=((X=1600.000000,Y=2900.000000,Z=800.000000)))
+    AggGeom = (BoxElems=((X=1800.000000,Y=3100.000000,Z=800.000000)))
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraPlants3] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraPlants3] SceneComponent
+    RelativeLocation = (X=12260.787109,Y=14328.564453,Z=-292.862793)
+    RelativeRotation = (Pitch=0.000000,Yaw=-40.000061,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraFishes] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Fish/NS_FluxFishes.NS_FluxFishes'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_3
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'"
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'"
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'"
+[Volume@PersistentLevel.BP_FluxNiagaraFishes] BoxComponent
+    BoxExtent = (X=1750.000000,Y=1750.000000,Z=300.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraFishes.Volume] BodySetup
+[Bounds@PersistentLevel.BP_FluxNiagaraFishes] BoxComponent
+    BoxExtent = (X=1850.000000,Y=1850.000000,Z=300.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraFishes.Bounds] BodySetup
+    AggGeom = (BoxElems=((X=3500.000000,Y=3500.000000,Z=600.000000)))
+    AggGeom = (BoxElems=((X=3700.000000,Y=3700.000000,Z=600.000000)))
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraFishes] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraFishes] SceneComponent
+    RelativeLocation = (X=-3664.000000,Y=-1900.000000,Z=751.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraDust_0] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Dust/NS_FluxDust.NS_FluxDust'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_3
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'"
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'"
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'"
+[Volume@PersistentLevel.BP_FluxNiagaraDust_0] BoxComponent
+    BoxExtent = (X=300.000000,Y=300.000000,Z=300.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraDust_0.Volume] BodySetup
+[Bounds@PersistentLevel.BP_FluxNiagaraDust_0] BoxComponent
+    BoxExtent = (X=400.000000,Y=400.000000,Z=300.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraDust_0.Bounds] BodySetup
+    AggGeom = (BoxElems=((X=600.000000,Y=600.000000,Z=600.000000)))
+    AggGeom = (BoxElems=((X=800.000000,Y=800.000000,Z=600.000000)))
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraDust_0] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraDust_0] SceneComponent
+    RelativeLocation = (X=-2340.000000,Y=1468.000000,Z=862.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraActor_C_0] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Plankton/NS_FluxSimulationPlankton.NS_FluxSimulationPlankton'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_3
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Velocity.CoastlineMap_Simulation_Velocity'"
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Height.CoastlineMap_Simulation_Height'"
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Maps/Coastline/CoastlineMap_Simulation_Ground.CoastlineMap_Simulation_Ground'"
+[Volume@PersistentLevel.BP_FluxNiagaraActor_C_0] BoxComponent
+    BoxExtent = (X=500.000000,Y=1500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraActor_C_0.Volume] BodySetup
+[Bounds@PersistentLevel.BP_FluxNiagaraActor_C_0] BoxComponent
+    BoxExtent = (X=600.000000,Y=1700.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BodySetup_0@PersistentLevel.BP_FluxNiagaraActor_C_0.Bounds] BodySetup
+    AggGeom = (BoxElems=((X=1000.000000,Y=3000.000000,Z=400.000000)))
+    AggGeom = (BoxElems=((X=1200.000000,Y=3400.000000,Z=400.000000)))
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraActor_C_0] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraActor_C_0] SceneComponent
+    RelativeLocation = (X=-4729.772734,Y=4199.149438,Z=1091.599249)
+    RelativeRotation = (Pitch=0.000000,Yaw=-50.000000,Roll=0.000000)
+    RelativeScale3D = (X=1.000000,Y=0.731852,Z=1.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddBoxComponent-0@PersistentLevel.BP_FluxModifierWaveActor_3] BoxComponent
+    AttachParent = "BP_FluxModifierWaveComponent"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+[BP_FluxModifierWaveComponent] BP_FluxModifierWaveComponent_C
+    VelocityScale = 0.040000
+    ActiveTime = 0.004545
+    Initialized = True
+    CanRender = True
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    MaterialInstance <- MaterialInstanceDynamic_56
+[MaterialInstanceDynamic_56] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Simulation/Modifiers/Materials/M_FluxModifierWave.M_FluxModifierWave'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="SurfaceHeight"),ParameterValue=998.291016,ExpressionGUID=E1AF8022423A994552B0D09ADF85AD76)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="VelocityScale"),ParameterValue=0.040000,ExpressionGUID=C09205DF4357A605B8B250AE53EEC36C)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="WaveCalming"),ParameterValue=0.015000,ExpressionGUID=1BEEFCF742C7167F7F5FCBABDB01141B)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=4538.000000,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="ModififersVelocityScale"),ParameterValue=1.000000)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="ActiveTime"),ParameterValue=0.004545,ExpressionGUID=171E705E4EB692CAD43B1C811FCA7AFF)
+    VectorParameterValues(0) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=10.000000,G=10.000000,B=10.000000,A=10.000000),ExpressionGUID=D188910E4CA2CC870466A3922EED0859)
+    VectorParameterValues(1) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-4835.000000,G=17717.000000,B=20480.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(2) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(3) = (ParameterInfo=(Name="LocationSize"),ParameterValue=(R=14066.737305,G=20192.136719,B=10000.000000,A=10000.000000),ExpressionGUID=25F4B8E84696B318C2F9C190AABC3500)
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ExpressionGUID=5592767D4999C540649362905BDF8FF5)
+    TextureParameterValues(1) = (ParameterInfo=(Name="Ground"),ExpressionGUID=A83E08DD4E112DFFF1CAB4A9D788A6C2)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 007DB14344A0BED7B312E7BA88C58C33
+    EditorOnlyData <- MaterialInstanceDynamic_56EditorOnlyData
+[MaterialInstanceDynamic_56EditorOnlyData] MaterialInstanceEditorOnlyData
+[MaterialBillboard@PersistentLevel.BP_FluxModifierWaveActor_3] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxModifierWaveActor_3] SceneComponent
+    RelativeLocation = (X=14066.737305,Y=20192.136719,Z=998.291016)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddBoxComponent-0@PersistentLevel.BP_FluxModifierSourceActor3] BoxComponent
+    AttachParent = "FluxModifierSource"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+[FluxModifierSource] BP_FluxModifierSourceComponent_C
+    Edge = 0.500000
+    Duration = -1.000000
+    ActiveTime = 0.004545
+    Initialized = True
+    CanRender = True
+    AttachParent = "Scene"
+    RelativeLocation = (X=120.000000,Y=0.000000,Z=0.000000)
+    RelativeScale3D = (X=2500.000000,Y=5000.000000,Z=100.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    MaterialInstance <- MaterialInstanceDynamic_18
+[MaterialInstanceDynamic_18] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Simulation/Modifiers/Materials/Shapes/MI_FluxModifierSourceCircle.MI_FluxModifierSourceCircle'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="ZOffset"),ParameterValue=3225.000000,ExpressionGUID=DD4D8E86470F106C37C508B097A49340)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="Hardness"),ParameterValue=0.500000,ExpressionGUID=3376A596447A1FE6016BADB4B9C37FE7)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="Intensity"),ParameterValue=1.000000,ExpressionGUID=42873B9E40C779AFB54ED69DA9BC13E1)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=4538.000000,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="ModififersVelocityScale"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="LocationSize"),ParameterValue=(R=-3163.000000,G=22666.000000,B=2500.000000,A=5000.000000),ExpressionGUID=25F4B8E84696B318C2F9C190AABC3500)
+    VectorParameterValues(1) = (ParameterInfo=(Name="Rotation"),ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=054030754F4737531BCE4CAA483340CE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="VelocityFlux"),ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=2.000000),ExpressionGUID=7722A6F945771F781D6C2FA9BAF1E159)
+    VectorParameterValues(3) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-4835.000000,G=17717.000000,B=20480.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(4) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.003906,B=512.000000,A=256.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    TextureParameterValues(0) = (ParameterInfo=(Name="FluidVelocityHeightFoam"),ExpressionGUID=5592767D4999C540649362905BDF8FF5)
+    TextureParameterValues(1) = (ParameterInfo=(Name="Ground"),ExpressionGUID=A83E08DD4E112DFFF1CAB4A9D788A6C2)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 9D7C16694A02B3D028048DAFD16ADF8C
+    EditorOnlyData <- MaterialInstanceDynamic_18EditorOnlyData
+[MaterialInstanceDynamic_18EditorOnlyData] MaterialInstanceEditorOnlyData
+[MaterialBillboard@PersistentLevel.BP_FluxModifierSourceActor3] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxModifierSourceActor3] SceneComponent
+    RelativeLocation = (X=-3283.000000,Y=22666.000000,Z=3225.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Ripple] BP_FluxSolverRippleComponent_C
+    SimulationResolution = 1024
+    WorldAreaSize = 6144
+    WaveDamping = 0.985000
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxInteractionCapture_2] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Preview@PersistentLevel.BP_FluxInteractionCapture_2] StaticMeshComponent
+    bEvaluateWorldPositionOffsetInRayTracing = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Area"
+    bVisible = False
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Area] BoxComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxInteractionCapture_2] SceneComponent
+    RelativeLocation = (X=-7276.000000,Y=-3818.000000,Z=2937.000000)
+    RelativeScale3D = (X=61.440000,Y=61.440000,Z=4000.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Camera@PersistentLevel.BP_FluxBoat_C_1] CameraComponent
+    AttachParent = "CameraArm"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[CameraArm@PersistentLevel.BP_FluxBoat_C_1] SpringArmComponent
+    AttachParent = "Mesh"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DetectCharacter@PersistentLevel.BP_FluxBoat_C_1] BoxComponent
+    AttachParent = "Mesh"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Mesh@PersistentLevel.BP_FluxBoat_C_1] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=-3470.000000,Y=4535.000000,Z=1105.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxInteractionComponent@PersistentLevel.BP_FluxBoat_C_1] BP_FluxInteractionComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxDataComponent@PersistentLevel.BP_FluxBoat_C_1] BP_FluxDataComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxBuoyancyComponent@PersistentLevel.BP_FluxBoat_C_1] BP_FluxBuoyancyComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Camera@PersistentLevel.BP_FluxBoat_C_0] CameraComponent
+    AttachParent = "CameraArm"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[CameraArm@PersistentLevel.BP_FluxBoat_C_0] SpringArmComponent
+    AttachParent = "Mesh"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DetectCharacter@PersistentLevel.BP_FluxBoat_C_0] BoxComponent
+    AttachParent = "Mesh"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Mesh@PersistentLevel.BP_FluxBoat_C_0] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=-2840.000000,Y=22505.000000,Z=3825.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxInteractionComponent@PersistentLevel.BP_FluxBoat_C_0] BP_FluxInteractionComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxDataComponent@PersistentLevel.BP_FluxBoat_C_0] BP_FluxDataComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxBuoyancyComponent@PersistentLevel.BP_FluxBoat_C_0] BP_FluxBuoyancyComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NavigationSystemConfig_0] NavigationSystemConfig
+    NavigationSystemClass = "/Script/NavigationSystem.NavigationSystemV1"
+[BookMark_0] BookMark
+    Location = (X=24239.755859,Y=12073.410156,Z=3883.021240)
+    Rotation = (Pitch=-17.199310,Yaw=-1228.965332,Roll=0.000009)
+[CubeBuilder_1@PersistentLevel.PostProcessVolume_0] CubeBuilder
+    Vertices(0) = (X=-100.000000,Y=-100.000000,Z=-100.000000)
+    Vertices(1) = (X=-100.000000,Y=-100.000000,Z=100.000000)
+    Vertices(2) = (X=-100.000000,Y=100.000000,Z=-100.000000)
+    Vertices(3) = (X=-100.000000,Y=100.000000,Z=100.000000)
+    Vertices(4) = (X=100.000000,Y=-100.000000,Z=-100.000000)
+    Vertices(5) = (X=100.000000,Y=-100.000000,Z=100.000000)
+    Vertices(6) = (X=100.000000,Y=100.000000,Z=-100.000000)
+    Vertices(7) = (X=100.000000,Y=100.000000,Z=100.000000)
+    Polys(0) = (VertexIndices=(0,1,3,2),Direction=1)
+    Polys(1) = (VertexIndices=(2,3,7,6),Direction=1)
+    Polys(2) = (VertexIndices=(6,7,5,4),Direction=1)
+    Polys(3) = (VertexIndices=(4,5,1,0),Direction=1)
+    Polys(4) = (VertexIndices=(3,1,5,7),Direction=1)
+    Polys(5) = (VertexIndices=(0,2,6,4),Direction=1)
+    Layer = "Cube"
+[BrushComponent0@PersistentLevel.PostProcessVolume_0] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=-1294.000000,Y=-5192.000000,Z=471.000000)
+    BrushBodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.PostProcessVolume_0.BrushComponent0] BodySetup
+    bGenerateMirroredCollision = False
+    CollisionTraceFlag = CTF_UseSimpleAsComplex
+[CubeBuilder_1@PersistentLevel.PhysicsVolume_1] CubeBuilder
+    Vertices(0) = (X=-100.000000,Y=-100.000000,Z=-100.000000)
+    Vertices(1) = (X=-100.000000,Y=-100.000000,Z=100.000000)
+    Vertices(2) = (X=-100.000000,Y=100.000000,Z=-100.000000)
+    Vertices(3) = (X=-100.000000,Y=100.000000,Z=100.000000)
+    Vertices(4) = (X=100.000000,Y=-100.000000,Z=-100.000000)
+    Vertices(5) = (X=100.000000,Y=-100.000000,Z=100.000000)
+    Vertices(6) = (X=100.000000,Y=100.000000,Z=-100.000000)
+    Vertices(7) = (X=100.000000,Y=100.000000,Z=100.000000)
+    Polys(0) = (VertexIndices=(0,1,3,2),Direction=1)
+    Polys(1) = (VertexIndices=(2,3,7,6),Direction=1)
+    Polys(2) = (VertexIndices=(6,7,5,4),Direction=1)
+    Polys(3) = (VertexIndices=(4,5,1,0),Direction=1)
+    Polys(4) = (VertexIndices=(3,1,5,7),Direction=1)
+    Polys(5) = (VertexIndices=(0,2,6,4),Direction=1)
+    Layer = "Cube"
+[BrushComponent0@PersistentLevel.PhysicsVolume_1] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    RelativeLocation = (X=2721.000000,Y=-24358.000000,Z=31.000000)
+    RelativeScale3D = (X=1750.000000,Y=1750.000000,Z=50.000000)
+    BrushBodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.PhysicsVolume_1.BrushComponent0] BodySetup
+    bGenerateMirroredCollision = False
+    CollisionTraceFlag = CTF_UseSimpleAsComplex
+[NODE_AddSplineMeshComponent-3_48] SplineMeshComponent
+    CachedMeshBodySetupGuid = 4148340D45684110FF9DB892186CF744
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Plane.SM_Tunnel_Plane'"
+    StaticMeshImportVersion = 1
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassCrossection"
+    UCSSerializationIndex = 49
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_1
+    OverrideMaterials(0) <- MID_M_RenderSDFSpline_0
+[BodySetup_1@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_48] BodySetup
+[NODE_AddSplineMeshComponent-3_47] SplineMeshComponent
+    CachedMeshBodySetupGuid = C1400CD64BEB68DC1726968C2F2A476E
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Frame.SM_Tunnel_Frame'"
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassFrame"
+    UCSSerializationIndex = 48
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_47] BodySetup
+[NODE_AddSplineMeshComponent-3_46] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -59
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassInside"
+    UCSSerializationIndex = 47
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_GlassInsideTranslucent_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_46] BodySetup
+[NODE_AddSplineMeshComponent-3_45] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    bReverseCulling = True
+    OverrideMaterials(0) = "/Script/Engine.Material'/Game/FluidFlux/Surface/Glass/Materials/M_GlassOutsideDithered.M_GlassOutsideDithered'"
+    CastShadow = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassOutside"
+    UCSSerializationIndex = 46
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_45] BodySetup
+[NODE_AddSplineMeshComponent-3_44] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -60
+    BodyInstance = (CollisionEnabled=QueryAndPhysics,CollisionProfileName="Custom",CollisionResponses=(ResponseArray=((Channel="Visibility",Response=ECR_Ignore))),MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassVolume"
+    UCSSerializationIndex = 45
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_OceanGlassAbsorptionVolume_0
+    OverlayMaterial <- MID_MI_OceanGlassScatteringVolume_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_44] BodySetup
+[NODE_AddSplineMeshComponent-3_43] SplineMeshComponent
+    CachedMeshBodySetupGuid = 4148340D45684110FF9DB892186CF744
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Plane.SM_Tunnel_Plane'"
+    StaticMeshImportVersion = 1
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassCrossection"
+    UCSSerializationIndex = 44
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_1
+    OverrideMaterials(0) <- MID_M_RenderSDFSpline_0
+[BodySetup_1@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_43] BodySetup
+[NODE_AddSplineMeshComponent-3_42] SplineMeshComponent
+    CachedMeshBodySetupGuid = C1400CD64BEB68DC1726968C2F2A476E
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Frame.SM_Tunnel_Frame'"
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassFrame"
+    UCSSerializationIndex = 43
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_42] BodySetup
+[NODE_AddSplineMeshComponent-3_41] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -59
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassInside"
+    UCSSerializationIndex = 42
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_GlassInsideTranslucent_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_41] BodySetup
+[NODE_AddSplineMeshComponent-3_40] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    bReverseCulling = True
+    OverrideMaterials(0) = "/Script/Engine.Material'/Game/FluidFlux/Surface/Glass/Materials/M_GlassOutsideDithered.M_GlassOutsideDithered'"
+    CastShadow = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassOutside"
+    UCSSerializationIndex = 41
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_40] BodySetup
+[NODE_AddSplineMeshComponent-3_39] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -60
+    BodyInstance = (CollisionEnabled=QueryAndPhysics,CollisionProfileName="Custom",CollisionResponses=(ResponseArray=((Channel="Visibility",Response=ECR_Ignore))),MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassVolume"
+    UCSSerializationIndex = 40
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_OceanGlassAbsorptionVolume_0
+    OverlayMaterial <- MID_MI_OceanGlassScatteringVolume_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_39] BodySetup
+[NODE_AddSplineMeshComponent-3_38] SplineMeshComponent
+    CachedMeshBodySetupGuid = 4148340D45684110FF9DB892186CF744
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Plane.SM_Tunnel_Plane'"
+    StaticMeshImportVersion = 1
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassCrossection"
+    UCSSerializationIndex = 39
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_1
+    OverrideMaterials(0) <- MID_M_RenderSDFSpline_0
+[BodySetup_1@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_38] BodySetup
+[NODE_AddSplineMeshComponent-3_37] SplineMeshComponent
+    CachedMeshBodySetupGuid = C1400CD64BEB68DC1726968C2F2A476E
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Frame.SM_Tunnel_Frame'"
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassFrame"
+    UCSSerializationIndex = 38
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_37] BodySetup
+[NODE_AddSplineMeshComponent-3_36] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -59
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassInside"
+    UCSSerializationIndex = 37
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_GlassInsideTranslucent_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_36] BodySetup
+[NODE_AddSplineMeshComponent-3_35] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    bReverseCulling = True
+    OverrideMaterials(0) = "/Script/Engine.Material'/Game/FluidFlux/Surface/Glass/Materials/M_GlassOutsideDithered.M_GlassOutsideDithered'"
+    CastShadow = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassOutside"
+    UCSSerializationIndex = 36
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_35] BodySetup
+[NODE_AddSplineMeshComponent-3_34] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -60
+    BodyInstance = (CollisionEnabled=QueryAndPhysics,CollisionProfileName="Custom",CollisionResponses=(ResponseArray=((Channel="Visibility",Response=ECR_Ignore))),MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassVolume"
+    UCSSerializationIndex = 35
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_OceanGlassAbsorptionVolume_0
+    OverlayMaterial <- MID_MI_OceanGlassScatteringVolume_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_34] BodySetup
+[NODE_AddSplineMeshComponent-3_33] SplineMeshComponent
+    CachedMeshBodySetupGuid = 4148340D45684110FF9DB892186CF744
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Plane.SM_Tunnel_Plane'"
+    StaticMeshImportVersion = 1
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassCrossection"
+    UCSSerializationIndex = 34
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_1
+    OverrideMaterials(0) <- MID_M_RenderSDFSpline_0
+[BodySetup_1@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_33] BodySetup
+[NODE_AddSplineMeshComponent-3_32] SplineMeshComponent
+    CachedMeshBodySetupGuid = C1400CD64BEB68DC1726968C2F2A476E
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Frame.SM_Tunnel_Frame'"
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassFrame"
+    UCSSerializationIndex = 33
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_32] BodySetup
+[NODE_AddSplineMeshComponent-3_31] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -59
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassInside"
+    UCSSerializationIndex = 32
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_GlassInsideTranslucent_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_31] BodySetup
+[NODE_AddSplineMeshComponent-3_30] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    bReverseCulling = True
+    OverrideMaterials(0) = "/Script/Engine.Material'/Game/FluidFlux/Surface/Glass/Materials/M_GlassOutsideDithered.M_GlassOutsideDithered'"
+    CastShadow = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassOutside"
+    UCSSerializationIndex = 31
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_30] BodySetup
+[NODE_AddSplineMeshComponent-3_29] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -60
+    BodyInstance = (CollisionEnabled=QueryAndPhysics,CollisionProfileName="Custom",CollisionResponses=(ResponseArray=((Channel="Visibility",Response=ECR_Ignore))),MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassVolume"
+    UCSSerializationIndex = 30
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_OceanGlassAbsorptionVolume_0
+    OverlayMaterial <- MID_MI_OceanGlassScatteringVolume_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_29] BodySetup
+[NODE_AddSplineMeshComponent-3_28] SplineMeshComponent
+    CachedMeshBodySetupGuid = 4148340D45684110FF9DB892186CF744
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Plane.SM_Tunnel_Plane'"
+    StaticMeshImportVersion = 1
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassCrossection"
+    UCSSerializationIndex = 29
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_1
+    OverrideMaterials(0) <- MID_M_RenderSDFSpline_0
+[BodySetup_1@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_28] BodySetup
+[NODE_AddSplineMeshComponent-3_27] SplineMeshComponent
+    CachedMeshBodySetupGuid = C1400CD64BEB68DC1726968C2F2A476E
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Frame.SM_Tunnel_Frame'"
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassFrame"
+    UCSSerializationIndex = 28
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_27] BodySetup
+[NODE_AddSplineMeshComponent-3_26] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -59
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassInside"
+    UCSSerializationIndex = 27
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_GlassInsideTranslucent_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_26] BodySetup
+[NODE_AddSplineMeshComponent-3_25] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    bReverseCulling = True
+    OverrideMaterials(0) = "/Script/Engine.Material'/Game/FluidFlux/Surface/Glass/Materials/M_GlassOutsideDithered.M_GlassOutsideDithered'"
+    CastShadow = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassOutside"
+    UCSSerializationIndex = 26
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_25] BodySetup
+[NODE_AddSplineMeshComponent-3_24] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -60
+    BodyInstance = (CollisionEnabled=QueryAndPhysics,CollisionProfileName="Custom",CollisionResponses=(ResponseArray=((Channel="Visibility",Response=ECR_Ignore))),MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassVolume"
+    UCSSerializationIndex = 25
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_OceanGlassAbsorptionVolume_0
+    OverlayMaterial <- MID_MI_OceanGlassScatteringVolume_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_24] BodySetup
+[NODE_AddSplineMeshComponent-3_23] SplineMeshComponent
+    CachedMeshBodySetupGuid = 4148340D45684110FF9DB892186CF744
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Plane.SM_Tunnel_Plane'"
+    StaticMeshImportVersion = 1
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassCrossection"
+    UCSSerializationIndex = 24
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_1
+    OverrideMaterials(0) <- MID_M_RenderSDFSpline_0
+[BodySetup_1@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_23] BodySetup
+[NODE_AddSplineMeshComponent-3_22] SplineMeshComponent
+    CachedMeshBodySetupGuid = C1400CD64BEB68DC1726968C2F2A476E
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Frame.SM_Tunnel_Frame'"
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassFrame"
+    UCSSerializationIndex = 23
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_22] BodySetup
+[NODE_AddSplineMeshComponent-3_21] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -59
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassInside"
+    UCSSerializationIndex = 22
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_GlassInsideTranslucent_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_21] BodySetup
+[NODE_AddSplineMeshComponent-3_20] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    bReverseCulling = True
+    OverrideMaterials(0) = "/Script/Engine.Material'/Game/FluidFlux/Surface/Glass/Materials/M_GlassOutsideDithered.M_GlassOutsideDithered'"
+    CastShadow = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassOutside"
+    UCSSerializationIndex = 21
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_20] BodySetup
+[NODE_AddSplineMeshComponent-3_19] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -60
+    BodyInstance = (CollisionEnabled=QueryAndPhysics,CollisionProfileName="Custom",CollisionResponses=(ResponseArray=((Channel="Visibility",Response=ECR_Ignore))),MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassVolume"
+    UCSSerializationIndex = 20
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_OceanGlassAbsorptionVolume_0
+    OverlayMaterial <- MID_MI_OceanGlassScatteringVolume_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_19] BodySetup
+[NODE_AddSplineMeshComponent-3_18] SplineMeshComponent
+    CachedMeshBodySetupGuid = 4148340D45684110FF9DB892186CF744
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Plane.SM_Tunnel_Plane'"
+    StaticMeshImportVersion = 1
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassCrossection"
+    UCSSerializationIndex = 19
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_1
+    OverrideMaterials(0) <- MID_M_RenderSDFSpline_0
+[BodySetup_1@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_18] BodySetup
+[NODE_AddSplineMeshComponent-3_17] SplineMeshComponent
+    CachedMeshBodySetupGuid = C1400CD64BEB68DC1726968C2F2A476E
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Frame.SM_Tunnel_Frame'"
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassFrame"
+    UCSSerializationIndex = 18
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_17] BodySetup
+[NODE_AddSplineMeshComponent-3_16] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -59
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassInside"
+    UCSSerializationIndex = 17
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_GlassInsideTranslucent_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_16] BodySetup
+[NODE_AddSplineMeshComponent-3_15] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    bReverseCulling = True
+    OverrideMaterials(0) = "/Script/Engine.Material'/Game/FluidFlux/Surface/Glass/Materials/M_GlassOutsideDithered.M_GlassOutsideDithered'"
+    CastShadow = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassOutside"
+    UCSSerializationIndex = 16
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_15] BodySetup
+[NODE_AddSplineMeshComponent-3_14] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -60
+    BodyInstance = (CollisionEnabled=QueryAndPhysics,CollisionProfileName="Custom",CollisionResponses=(ResponseArray=((Channel="Visibility",Response=ECR_Ignore))),MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassVolume"
+    UCSSerializationIndex = 15
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_OceanGlassAbsorptionVolume_0
+    OverlayMaterial <- MID_MI_OceanGlassScatteringVolume_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_14] BodySetup
+[NODE_AddSplineMeshComponent-3_13] SplineMeshComponent
+    CachedMeshBodySetupGuid = 4148340D45684110FF9DB892186CF744
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Plane.SM_Tunnel_Plane'"
+    StaticMeshImportVersion = 1
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassCrossection"
+    UCSSerializationIndex = 14
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_1
+    OverrideMaterials(0) <- MID_M_RenderSDFSpline_0
+[BodySetup_1@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_13] BodySetup
+[NODE_AddSplineMeshComponent-3_12] SplineMeshComponent
+    CachedMeshBodySetupGuid = C1400CD64BEB68DC1726968C2F2A476E
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Frame.SM_Tunnel_Frame'"
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassFrame"
+    UCSSerializationIndex = 13
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_12] BodySetup
+[NODE_AddSplineMeshComponent-3_11] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -59
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassInside"
+    UCSSerializationIndex = 12
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_GlassInsideTranslucent_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_11] BodySetup
+[NODE_AddSplineMeshComponent-3_10] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    bReverseCulling = True
+    OverrideMaterials(0) = "/Script/Engine.Material'/Game/FluidFlux/Surface/Glass/Materials/M_GlassOutsideDithered.M_GlassOutsideDithered'"
+    CastShadow = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassOutside"
+    UCSSerializationIndex = 11
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_10] BodySetup
+[NODE_AddSplineMeshComponent-3_9] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -60
+    BodyInstance = (CollisionEnabled=QueryAndPhysics,CollisionProfileName="Custom",CollisionResponses=(ResponseArray=((Channel="Visibility",Response=ECR_Ignore))),MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassVolume"
+    UCSSerializationIndex = 10
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_OceanGlassAbsorptionVolume_0
+    OverlayMaterial <- MID_MI_OceanGlassScatteringVolume_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_9] BodySetup
+[NODE_AddSplineMeshComponent-3_8] SplineMeshComponent
+    CachedMeshBodySetupGuid = 4148340D45684110FF9DB892186CF744
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Plane.SM_Tunnel_Plane'"
+    StaticMeshImportVersion = 1
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassCrossection"
+    UCSSerializationIndex = 9
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_1
+    OverrideMaterials(0) <- MID_M_RenderSDFSpline_0
+[BodySetup_1@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_8] BodySetup
+[NODE_AddSplineMeshComponent-3_7] SplineMeshComponent
+    CachedMeshBodySetupGuid = C1400CD64BEB68DC1726968C2F2A476E
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Frame.SM_Tunnel_Frame'"
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassFrame"
+    UCSSerializationIndex = 8
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_7] BodySetup
+[NODE_AddSplineMeshComponent-3_6] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -59
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassInside"
+    UCSSerializationIndex = 7
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_GlassInsideTranslucent_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_6] BodySetup
+[NODE_AddSplineMeshComponent-3_5] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    bReverseCulling = True
+    OverrideMaterials(0) = "/Script/Engine.Material'/Game/FluidFlux/Surface/Glass/Materials/M_GlassOutsideDithered.M_GlassOutsideDithered'"
+    CastShadow = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassOutside"
+    UCSSerializationIndex = 6
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_5] BodySetup
+[NODE_AddSplineMeshComponent-3_4] SplineMeshComponent
+    CachedMeshBodySetupGuid = 221F18B4465F6FD0F11F4EA08B8F0934
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Glass.SM_Tunnel_Glass'"
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -60
+    BodyInstance = (CollisionEnabled=QueryAndPhysics,CollisionProfileName="Custom",CollisionResponses=(ResponseArray=((Channel="Visibility",Response=ECR_Ignore))),MaxAngularVelocity=3599.999756)
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassVolume"
+    UCSSerializationIndex = 5
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_0
+    OverrideMaterials(0) <- MID_MI_OceanGlassAbsorptionVolume_0
+    OverlayMaterial <- MID_MI_OceanGlassScatteringVolume_0
+[BodySetup_0@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_4] BodySetup
+[NODE_AddSplineMeshComponent-3_3] SplineMeshComponent
+    CachedMeshBodySetupGuid = 4148340D45684110FF9DB892186CF744
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Glass/Meshes/Tunnel/SM_Tunnel_Plane.SM_Tunnel_Plane'"
+    StaticMeshImportVersion = 1
+    AttachParent = "Spline"
+    Mobility = Movable
+    ComponentTags(0) = "GlassCrossection"
+    UCSSerializationIndex = 4
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    BodySetup <- BodySetup_1
+    OverrideMaterials(0) <- MID_M_RenderSDFSpline_0
+[BodySetup_1@PersistentLevel.BP_VolumetricSplineActor_C_0.NODE_AddSplineMeshComponent-3_3] BodySetup
+    bDoubleSidedGeometry = True
+    DefaultInstance = (ObjectType=ECC_WorldStatic,CollisionProfileName="BlockAll")
+    CollisionTraceFlag = CTF_UseComplexAsSimple
+    bDoubleSidedGeometry = True
+    DefaultInstance = (ObjectType=ECC_WorldStatic,CollisionProfileName="BlockAll")
+    CollisionTraceFlag = CTF_UseComplexAsSimple
+    bDoubleSidedGeometry = True
+    DefaultInstance = (ObjectType=ECC_WorldStatic,CollisionProfileName="BlockAll")
+    CollisionTraceFlag = CTF_UseComplexAsSimple
+    bDoubleSidedGeometry = True
+    DefaultInstance = (ObjectType=ECC_WorldStatic,CollisionProfileName="BlockAll")
+    CollisionTraceFlag = CTF_UseComplexAsSimple
+    bDoubleSidedGeometry = True
+    DefaultInstance = (ObjectType=ECC_WorldStatic,CollisionProfileName="BlockAll")
+    CollisionTraceFlag = CTF_UseComplexAsSimple
+    bDoubleSidedGeometry = True
+    DefaultInstance = (ObjectType=ECC_WorldStatic,CollisionProfileName="BlockAll")
+    CollisionTraceFlag = CTF_UseComplexAsSimple
+    bDoubleSidedGeometry = True
+    DefaultInstance = (ObjectType=ECC_WorldStatic,CollisionProfileName="BlockAll")
+    CollisionTraceFlag = CTF_UseComplexAsSimple
+    bDoubleSidedGeometry = True
+    DefaultInstance = (ObjectType=ECC_WorldStatic,CollisionProfileName="BlockAll")
+    CollisionTraceFlag = CTF_UseComplexAsSimple
+    bDoubleSidedGeometry = True
+    DefaultInstance = (ObjectType=ECC_WorldStatic,CollisionProfileName="BlockAll")

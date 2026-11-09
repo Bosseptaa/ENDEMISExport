@@ -1,0 +1,102 @@
+Begin Object Class=/Script/Engine.MaterialFunction Name="MF_JumpFlood" ExportPath="/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood'"
+   Begin Object Class=/Script/Engine.MaterialFunctionEditorOnlyData Name="MF_JumpFloodEditorOnlyData" ExportPath="/Script/Engine.MaterialFunctionEditorOnlyData'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MF_JumpFloodEditorOnlyData'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCustom Name="MaterialExpressionCustom_0" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionCustom_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionFunctionInput_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_1" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionFunctionInput_1'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_2" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionFunctionInput_2'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionOutput Name="MaterialExpressionFunctionOutput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionFunctionOutput_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureObject Name="MaterialExpressionTextureObject_0" ExportPath="/Script/Engine.MaterialExpressionTextureObject'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionTextureObject_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureProperty Name="MaterialExpressionTextureProperty_0" ExportPath="/Script/Engine.MaterialExpressionTextureProperty'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionTextureProperty_0'"
+   End Object
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0" ExportPath="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:SceneThumbnailInfoWithPrimitive_0'"
+   End Object
+   Begin Object Name="MF_JumpFloodEditorOnlyData" ExportPath="/Script/Engine.MaterialFunctionEditorOnlyData'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MF_JumpFloodEditorOnlyData'"
+      ExpressionCollection=(Expressions=("/Script/Engine.MaterialExpressionFunctionOutput'MF_JumpFlood:MaterialExpressionFunctionOutput_0'","/Script/Engine.MaterialExpressionCustom'MF_JumpFlood:MaterialExpressionCustom_0'","/Script/Engine.MaterialExpressionFunctionInput'MF_JumpFlood:MaterialExpressionFunctionInput_0'","/Script/Engine.MaterialExpressionFunctionInput'MF_JumpFlood:MaterialExpressionFunctionInput_1'","/Script/Engine.MaterialExpressionFunctionInput'MF_JumpFlood:MaterialExpressionFunctionInput_2'","/Script/Engine.MaterialExpressionTextureProperty'MF_JumpFlood:MaterialExpressionTextureProperty_0'","/Script/Engine.MaterialExpressionTextureObject'MF_JumpFlood:MaterialExpressionTextureObject_0'"))
+   End Object
+   Begin Object Name="MaterialExpressionCustom_0" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionCustom_0'"
+      Code="    float bestDist = 65535.0;\r\n\tfloat2 bestSeed = Texture2DSample(inTexture, inTextureSampler, texelPosition / textureSize).xy;\r\n    float sdfSign = sign(bestSeed.x);\r\n\tfloat2 adjustScale = float2(1.0, 1.0);// float2(1.0, textureSize.x/textureSize.y);\r\n    for(int i = -1;i <= 1;i++)\r\n    {\r\n        for(int j = -1;j <= 1;j++)\r\n        {\r\n            float2 curUV = texelPosition + float2(i,j) * stepLength;\r\n            float2 seedPosition = abs(Texture2DSample(inTexture, inTextureSampler, curUV / textureSize).xy);\r\n\t\t\t\r\n\t\t\tif (all(seedPosition != float2(0.0, 0.0)))\r\n\t\t\t{\r\n\t\t\t\tfloat curDist = length((seedPosition.xy - texelPosition) * adjustScale);\r\n\t\t\t\tif (bestDist > curDist)\r\n\t\t\t\t{\r\n\t\t\t\t\tbestSeed = seedPosition;\r\n\t\t\t\t\tbestDist = curDist;\r\n\t\t\t\t}\r\n\t\t\t}\r\n        }\r\n    }\r\n    \r\n    return float2(abs(bestSeed) * sdfSign);\r\n\t\r\n\t"
+      OutputType=CMOT_Float2
+      Description="JumpFlood"
+      Inputs(0)=(InputName="inTexture",Input=(Expression="/Script/Engine.MaterialExpressionFunctionInput'MF_JumpFlood:MaterialExpressionFunctionInput_0'"))
+      Inputs(1)=(InputName="textureSize",Input=(Expression="/Script/Engine.MaterialExpressionTextureProperty'MF_JumpFlood:MaterialExpressionTextureProperty_0'"))
+      Inputs(2)=(InputName="texelPosition",Input=(Expression="/Script/Engine.MaterialExpressionFunctionInput'MF_JumpFlood:MaterialExpressionFunctionInput_1'"))
+      Inputs(3)=(InputName="stepLength",Input=(Expression="/Script/Engine.MaterialExpressionFunctionInput'MF_JumpFlood:MaterialExpressionFunctionInput_2'"))
+      MaterialExpressionEditorX=-80
+      MaterialExpressionEditorY=336
+      MaterialExpressionGuid=9B80D5064D05E18D4AD9679A739CC8BE
+      Function="/Script/Engine.MaterialFunction'MF_JumpFlood'"
+      Desc="texelPosition is center of texel (include half-texel offset)"
+      bRealtimePreview=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionFunctionInput_0'"
+      Preview=(Expression="/Script/Engine.MaterialExpressionTextureObject'MF_JumpFlood:MaterialExpressionTextureObject_0'")
+      InputName="in_texture"
+      Id=54BC5ECC4582954C28FFCA9F1CFACB16
+      InputType=FunctionInput_Texture2D
+      MaterialExpressionEditorX=-592
+      MaterialExpressionEditorY=336
+      MaterialExpressionGuid=E3425C0D4F5ECB326FF546A1E72A604C
+      Function="/Script/Engine.MaterialFunction'MF_JumpFlood'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_1" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionFunctionInput_1'"
+      InputName="in_texel_position"
+      Description="texelPosition is center of texel (include half-texel offset)"
+      Id=5CB30D96427C3323E2A223AA5D6E326D
+      InputType=FunctionInput_Vector2
+      SortPriority=1
+      MaterialExpressionEditorX=-400
+      MaterialExpressionEditorY=464
+      MaterialExpressionGuid=D05B90DA4F1D9F8682836CB20995FDCA
+      Function="/Script/Engine.MaterialFunction'MF_JumpFlood'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_2" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionFunctionInput_2'"
+      InputName="In_step_length"
+      Id=220722324AFAC33D5CB5E08CA98DC936
+      InputType=FunctionInput_Scalar
+      SortPriority=2
+      MaterialExpressionEditorX=-384
+      MaterialExpressionEditorY=528
+      MaterialExpressionGuid=D05B90DA4F1D9F8682836CB20995FDCA
+      Function="/Script/Engine.MaterialFunction'MF_JumpFlood'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionOutput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionFunctionOutput_0'"
+      A=(Expression="/Script/Engine.MaterialExpressionCustom'MF_JumpFlood:MaterialExpressionCustom_0'")
+      bLastPreviewed=True
+      Id=C08C87CD404DED7D91D147BFDB160E23
+      MaterialExpressionEditorX=200
+      MaterialExpressionEditorY=300
+      MaterialExpressionGuid=15DE29154E12124259E087AA9B965963
+      Function="/Script/Engine.MaterialFunction'MF_JumpFlood'"
+   End Object
+   Begin Object Name="MaterialExpressionTextureObject_0" ExportPath="/Script/Engine.MaterialExpressionTextureObject'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionTextureObject_0'"
+      MaterialExpressionEditorX=-752
+      MaterialExpressionEditorY=336
+      MaterialExpressionGuid=B6C474D1475F05D1121757A237D49D59
+      Function="/Script/Engine.MaterialFunction'MF_JumpFlood'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionTextureProperty_0" ExportPath="/Script/Engine.MaterialExpressionTextureProperty'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:MaterialExpressionTextureProperty_0'"
+      TextureObject=(Expression="/Script/Engine.MaterialExpressionFunctionInput'MF_JumpFlood:MaterialExpressionFunctionInput_0'")
+      MaterialExpressionEditorX=-304
+      MaterialExpressionEditorY=384
+      MaterialExpressionGuid=C90EF21C4B7656E4D58601B628706076
+      Function="/Script/Engine.MaterialFunction'MF_JumpFlood'"
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0" ExportPath="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood:SceneThumbnailInfoWithPrimitive_0'"
+   End Object
+   EditorOnlyData="/Script/Engine.MaterialFunctionEditorOnlyData'MF_JumpFloodEditorOnlyData'"
+   StateId=7443734F4DE7EAAFE8EA96BBDBB6F56E
+   CombinedInputTypes=31
+   CombinedOutputTypes=15
+   ThumbnailInfo="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'SceneThumbnailInfoWithPrimitive_0'"
+End Object

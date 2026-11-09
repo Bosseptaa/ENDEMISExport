@@ -1,0 +1,69 @@
+Begin Object Class=/Script/Engine.Material Name="M_InverseCopySDF" ExportPath="/Script/Engine.Material'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF'"
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0" ExportPath="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:SceneThumbnailInfoWithPrimitive_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSampleParameter2D Name="MaterialExpressionTextureSampleParameter2D_4" ExportPath="/Script/Engine.MaterialExpressionTextureSampleParameter2D'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:MaterialExpressionTextureSampleParameter2D_4'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_0" ExportPath="/Script/Engine.MaterialExpressionScalarParameter'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:MaterialExpressionScalarParameter_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionOneMinus Name="MaterialExpressionOneMinus_0" ExportPath="/Script/Engine.MaterialExpressionOneMinus'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:MaterialExpressionOneMinus_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionLinearInterpolate Name="MaterialExpressionLinearInterpolate_0" ExportPath="/Script/Engine.MaterialExpressionLinearInterpolate'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:MaterialExpressionLinearInterpolate_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialEditorOnlyData Name="M_InverseCopySDFEditorOnlyData" ExportPath="/Script/Engine.MaterialEditorOnlyData'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:M_InverseCopySDFEditorOnlyData'"
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0" ExportPath="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:SceneThumbnailInfoWithPrimitive_0'"
+   End Object
+   Begin Object Name="MaterialExpressionTextureSampleParameter2D_4" ExportPath="/Script/Engine.MaterialExpressionTextureSampleParameter2D'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:MaterialExpressionTextureSampleParameter2D_4'"
+      ParameterName="SDFPrevious"
+      ExpressionGUID=DBA1A95D4807FB4D0DAD55BDF5270BC2
+      Texture="/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+      MaterialExpressionEditorX=-880
+      MaterialExpressionEditorY=112
+      MaterialExpressionGuid=AF755FB74F71EB78598CB98C6F5E8CB5
+      Material="/Script/Engine.Material'M_InverseCopySDF'"
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_0" ExportPath="/Script/Engine.MaterialExpressionScalarParameter'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:MaterialExpressionScalarParameter_0'"
+      ParameterName="Inverse"
+      ExpressionGUID=5A565C2B4C95E1CD43C931BD1F94B541
+      MaterialExpressionEditorX=-624
+      MaterialExpressionEditorY=387
+      MaterialExpressionGuid=5566ED5B4A9AB884E159F092436474A7
+      Material="/Script/Engine.Material'M_InverseCopySDF'"
+   End Object
+   Begin Object Name="MaterialExpressionOneMinus_0" ExportPath="/Script/Engine.MaterialExpressionOneMinus'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:MaterialExpressionOneMinus_0'"
+      Input=(Expression="/Script/Engine.MaterialExpressionTextureSampleParameter2D'M_InverseCopySDF:MaterialExpressionTextureSampleParameter2D_4'",OutputIndex=1,Mask=1,MaskR=1)
+      MaterialExpressionEditorX=-544
+      MaterialExpressionEditorY=307
+      MaterialExpressionGuid=1D2F95A94CA9CEB087E7FA8F5C8A8BF7
+      Material="/Script/Engine.Material'M_InverseCopySDF'"
+   End Object
+   Begin Object Name="MaterialExpressionLinearInterpolate_0" ExportPath="/Script/Engine.MaterialExpressionLinearInterpolate'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:MaterialExpressionLinearInterpolate_0'"
+      A=(Expression="/Script/Engine.MaterialExpressionTextureSampleParameter2D'M_InverseCopySDF:MaterialExpressionTextureSampleParameter2D_4'",OutputIndex=1,Mask=1,MaskR=1)
+      B=(Expression="/Script/Engine.MaterialExpressionOneMinus'M_InverseCopySDF:MaterialExpressionOneMinus_0'")
+      Alpha=(Expression="/Script/Engine.MaterialExpressionScalarParameter'M_InverseCopySDF:MaterialExpressionScalarParameter_0'")
+      MaterialExpressionEditorX=-384
+      MaterialExpressionEditorY=240
+      MaterialExpressionGuid=25190AB44A8B1BD29BC276B9BB1F48A3
+      Material="/Script/Engine.Material'M_InverseCopySDF'"
+   End Object
+   Begin Object Name="M_InverseCopySDFEditorOnlyData" ExportPath="/Script/Engine.MaterialEditorOnlyData'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF:M_InverseCopySDFEditorOnlyData'"
+      EmissiveColor=(Expression="/Script/Engine.MaterialExpressionTextureSampleParameter2D'M_InverseCopySDF:MaterialExpressionTextureSampleParameter2D_4'",OutputIndex=1,Mask=1,MaskR=1)
+      ExpressionCollection=(Expressions=("/Script/Engine.MaterialExpressionLinearInterpolate'M_InverseCopySDF:MaterialExpressionLinearInterpolate_0'","/Script/Engine.MaterialExpressionTextureSampleParameter2D'M_InverseCopySDF:MaterialExpressionTextureSampleParameter2D_4'","/Script/Engine.MaterialExpressionOneMinus'M_InverseCopySDF:MaterialExpressionOneMinus_0'","/Script/Engine.MaterialExpressionScalarParameter'M_InverseCopySDF:MaterialExpressionScalarParameter_0'"))
+      ParameterGroupData(0)=(GroupName="None")
+      ParameterGroupData(1)=(GroupName="None")
+   End Object
+   ShadingModel=MSM_Unlit
+   ShadingModels=(ShadingModelField=1)
+   EditorX=-240
+   EditorY=5
+   bCanMaskedBeAssumedOpaque=True
+   PixelDepthOffsetMode=PDOM_Legacy
+   StateId=D583AAC44A371C7EF707E0844347B5A3
+   ReferencedTextureGuids(0)=00000000000000000000000000000000
+   EditorOnlyData="/Script/Engine.MaterialEditorOnlyData'M_InverseCopySDFEditorOnlyData'"
+   TextureStreamingDataVersion=1
+   TextureStreamingData(0)=(SamplingScale=1.000000,UVChannelIndex=0,TextureName="Black",TextureReference="/Engine/EngineResources/Black.Black")
+   ReferencedDefaultTextures(0)="/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+   ThumbnailInfo="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'SceneThumbnailInfoWithPrimitive_0'"
+   LightingGuid=AA8FEAB440999D0C5C7531993EF11833
+End Object

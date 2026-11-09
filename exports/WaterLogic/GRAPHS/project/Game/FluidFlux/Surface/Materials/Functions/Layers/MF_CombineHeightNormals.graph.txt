@@ -1,0 +1,114 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Layers/MF_CombineHeightNormals
+# класс: MaterialFunction; происхождение: проект; узлов: 19; связей: 36; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:37
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CombineHeightNormals] MaterialFunction
+    StateId = 20BA0D484E2DF592D620F2A2B3441456
+    CombinedInputTypes = 6
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_CombineHeightNormalsEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CombineHeightNormalsEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionComponentMask_6
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionSign_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    A <- MaterialExpressionFunctionInput_2
+    B <- MaterialExpressionFunctionInput_3
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    A <- MaterialExpressionAdd_0
+    B <- MaterialExpressionSign_0
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionComponentMask_6] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    A <- MaterialExpressionComponentMask_5
+    B <- MaterialExpressionComponentMask_6
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionComponentMask_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Normal1"
+    Id = 6873B5B64E5BF3747FCBD49C9A5A8137
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Normal2"
+    Id = 0AFE13A24527802DF126ACBC82E2924F
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Derivate1"
+    Id = 6A0066F94151A6E9504E98BC527DA513
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    bCollapsed = True
+    Preview <- MaterialExpressionDivide_0
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Derivate2"
+    Id = 40F2822245713890BF1EFCB59B7635A1
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    bCollapsed = True
+    Preview <- MaterialExpressionDivide_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Normal"
+    bLastPreviewed = True
+    Id = CAC6609345F753DB7B8090806E358E16
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    bCollapsed = True
+    A <- MaterialExpressionNormalize_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Derivate"
+    bLastPreviewed = True
+    Id = 292DF00F4E2D237A8205C9BD3C8B6525
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_0
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    VectorInput <- MaterialExpressionAppendVector_0
+[MaterialExpressionSign_0] MaterialExpressionSign
+    Function = "/Script/Engine.MaterialFunction'MF_CombineHeightNormals'"
+    Input <- MaterialExpressionComponentMask_6
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,1669 @@
+﻿# /Game/FluidFlux/Demo/Maps/FluxIslandMap
+# класс: World; происхождение: проект; узлов: 1492; связей: 1219; HLSL: 0; причина: папка /Game/FluidFlux; тело:6482
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+    ScalarParameterValues(8) = (ParameterInfo=(Name="WaveTextureFalloff"),ParameterValue=50000.000000,ExpressionGUID=031747FF479A65A7D06E1EB88E756593)
+    ScalarParameterValues(9) = (ParameterInfo=(Name="WaveTextureDivergenceScale"),ParameterValue=1.300000,ExpressionGUID=427384004A88E0E57BBDB6AF8E6F6576)
+    ScalarParameterValues(10) = (ParameterInfo=(Name="ShoreWaveWidth"),ParameterValue=-1050.000000,ExpressionGUID=6C32013D46C797F1A0D9D8846A1FB77C)
+    ScalarParameterValues(11) = (ParameterInfo=(Name="ShoreWaveScale"),ParameterValue=0.000556,ExpressionGUID=9311C2DE4756874DF03B278F0A8D574C)
+    ScalarParameterValues(12) = (ParameterInfo=(Name="CoastlineScattringDistance"),ParameterValue=20000.000000,ExpressionGUID=32013B5F4B410B6935EA7AA29DD48C82)
+    ScalarParameterValues(13) = (ParameterInfo=(Name="CoastlineScattringDepth"),ParameterValue=1600.000000,ExpressionGUID=5DC8A07D4D3A09AE74C6BD9174E688C4)
+    ScalarParameterValues(14) = (ParameterInfo=(Name="WaveProfileDistance"),ParameterValue=2.300000,ExpressionGUID=0E3760A1442793CD92EDB981CEF8025D)
+    ScalarParameterValues(15) = (ParameterInfo=(Name="WaveProfileWidth"),ParameterValue=600.000000,ExpressionGUID=11600F1C4B55C88A3D7E988145DF20FA)
+    ScalarParameterValues(16) = (ParameterInfo=(Name="WaveProfileSpeed"),ParameterValue=0.245000,ExpressionGUID=A68BEE7F45FBDBD339E47B8F4E315C9C)
+    ScalarParameterValues(17) = (ParameterInfo=(Name="WaveProfileAnimationSpeed"),ParameterValue=0.700000,ExpressionGUID=346F56A2490D96E3DE788386E322D1C4)
+    ScalarParameterValues(18) = (ParameterInfo=(Name="WaveGroundPrediction"),ParameterValue=300.000000)
+    ScalarParameterValues(19) = (ParameterInfo=(Name="SurfacePhaseG0"),ExpressionGUID=6B27B59B43C5F9D4AADE8794D82FD62D)
+    ScalarParameterValues(20) = (ParameterInfo=(Name="SurfacePhaseGShoreline"),ParameterValue=0.100000,ExpressionGUID=890A46F74AEC0FBF66E310B8B5E44178)
+    ScalarParameterValues(21) = (ParameterInfo=(Name="SurfacePhaseG1"),ExpressionGUID=DF6327DA465D7AB7EFCBC59AB07AB56B)
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-1399.999023,G=-2930.132812,B=520.014648,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=10.000000,G=10.000000,B=10.000000,A=10.000000),ExpressionGUID=52EAC78B45C6C264B1AB8E8D10C04E82)
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=0.000000,G=476.000000,B=1.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetScale"),ParameterValue=(R=-15226.380859,G=-2517.113281,B=0.000083,A=0.000083),ExpressionGUID=5C6FDDAA4571EBBB437BF9AFE16E1446)
+    VectorParameterValues(6) = (ParameterInfo=(Name="WaveTextureWind"),ParameterValue=(R=30.000000,G=-100.000000,B=0.220000,A=0.001000),ExpressionGUID=905081A9467D11DD522C39856E448FD6)
+    VectorParameterValues(7) = (ParameterInfo=(Name="FluxWaveProfileDecode"),ParameterValue=(R=-0.330324,G=0.000000,B=0.470531,A=0.124962),ExpressionGUID=0DDCCA8442093E85235A04A643106B08)
+    VectorParameterValues(8) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.500000,G=0.900000,B=1.000000,A=0.000040),ExpressionGUID=A42DD31A49C211935C2D6AADEF642F20)
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=120.000000,G=250.000000,B=350.000000,A=4.000000),ExpressionGUID=5E03E2964F70D69344B379886F946D2D)
+    VectorParameterValues(10) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.900000,G=1.000000,B=1.000000,A=0.750000),ExpressionGUID=FEA9FC144E87C27018CC96A9CB5A924E)
+    VectorParameterValues(11) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.090000,G=0.180000,B=0.200000,A=0.000000),ExpressionGUID=7B780EB6434588DA7A117B820D4269E6)
+    VectorParameterValues(12) = (ParameterInfo=(Name="SurfaceScatteringShoreline"),ParameterValue=(R=0.070000,G=0.210000,B=0.250000,A=0.000100),ExpressionGUID=C162B0C34D99D35D7EE63EBBE3651AF2)
+    VectorParameterValues(13) = (ParameterInfo=(Name="SurfaceAbsorptionShoreline"),ParameterValue=(R=2.857143,G=14.285714,B=33.333332,A=100.000000),ExpressionGUID=F8ECD5BE44ED1C6337A06F802492ADBF)
+    VectorParameterValues(14) = (ParameterInfo=(Name="ColorBehindShoreline"),ParameterValue=(R=0.900000,G=0.960000,B=1.000000,A=0.500000),ExpressionGUID=96C4A528462F2EA747F09D9965E858E4)
+    VectorParameterValues(15) = (ParameterInfo=(Name="SurfaceOverlayShoreline"),ParameterValue=(R=0.090000,G=0.180000,B=0.200000,A=0.000000),ExpressionGUID=5B1E1C88469901335741438C56D45217)
+    VectorParameterValues(16) = (ParameterInfo=(Name="SurfaceScattering1"),ParameterValue=(R=0.300000,G=0.200000,B=0.050000,A=0.000500),ExpressionGUID=0E17B4364B8A439CC8D7D7BE62D6E730)
+    VectorParameterValues(17) = (ParameterInfo=(Name="SurfaceAbsorption1"),ParameterValue=(R=200.000000,G=30.000000,B=30.000000,A=2.000000),ExpressionGUID=4057CEE54504043076F64CB4DFFD0A80)
+    VectorParameterValues(18) = (ParameterInfo=(Name="ColorBehind1"),ParameterValue=(R=1.100000,G=1.000000,B=0.700000,A=0.400000),ExpressionGUID=88BBCA6D400F32A18035DF8F9D67A054)
+    VectorParameterValues(19) = (ParameterInfo=(Name="SurfaceOverlay1"),ParameterValue=(R=0.870833,G=0.117000,B=0.074000,A=0.000000),ExpressionGUID=C3564CC44BF99139CB0F46A4B684217A)
+    VectorParameterValues(20) = (ParameterInfo=(Name="WorldToPainterUV"),ParameterValue=(R=-2950.000000,G=-8993.000000,B=5600.000000,A=5600.000000),ExpressionGUID=329B18504EC7339490E0F380351F92B7)
+    TextureParameterValues(5) = (ParameterInfo=(Name="FluxWaveProfileInvMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'")
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,OpacityMaskClipValue=0.333300,UsageFlags=4194368)
+    ReferencedTextureGuids(2) = 3D19C8004EF6228DE01788972AA7FE9B
+    ReferencedTextureGuids(3) = C40D27274EF5CCFCCE75F4A2F05A9C8E
+    LightingGuid = EB73D4964C3B7425909BEE8A9C5EBB61
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    TextureParameterValues(1) <- TextureRenderTarget2D_2
+    TextureParameterValues(2) <- TextureRenderTarget2D_0
+    TextureParameterValues(3) <- TextureRenderTarget2D_0
+    TextureParameterValues(6) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_MI_GlassInsideTranslucent_0EditorOnlyData
+[MID_MI_GlassInsideTranslucent_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[BrushComponent0@PersistentLevel.PhysicsVolume_1] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    RelativeLocation = (X=-1510.000000,Y=-2710.000000,Z=-1900.000000)
+    RelativeScale3D = (X=1450.000000,Y=1450.000000,Z=30.000000)
+    BrushBodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.PhysicsVolume_1.BrushComponent0] BodySetup
+    bGenerateMirroredCollision = False
+    CollisionTraceFlag = CTF_UseSimpleAsComplex
+[CubeBuilder_1@PersistentLevel.PhysicsVolume_1] CubeBuilder
+[BrushComponent0@PersistentLevel.PostProcessVolume_1] BrushComponent
+    Brush = "/Script/Engine.Model'Model_0'"
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=-300.000000,Y=-1036.000000,Z=876.000000)
+    BrushBodySetup <- BodySetup_0
+[BodySetup_0@PersistentLevel.PostProcessVolume_1.BrushComponent0] BodySetup
+    bGenerateMirroredCollision = False
+    CollisionTraceFlag = CTF_UseSimpleAsComplex
+[CubeBuilder_1@PersistentLevel.PostProcessVolume_1] CubeBuilder
+[DetectCharacter@PersistentLevel.BP_FluxBoat2_0] BoxComponent
+    AttachParent = "Mesh"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Mesh@PersistentLevel.BP_FluxBoat2_0] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=-4929.254841,Y=-4906.857457,Z=130.000000)
+    RelativeRotation = (Pitch=0.000000,Yaw=145.000000,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Camera@PersistentLevel.BP_FluxBoat2_0] CameraComponent
+    AttachParent = "CameraArm"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[CameraArm@PersistentLevel.BP_FluxBoat2_0] SpringArmComponent
+    AttachParent = "Mesh"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxInteractionComponent@PersistentLevel.BP_FluxBoat2_0] BP_FluxInteractionComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxDataComponent@PersistentLevel.BP_FluxBoat2_0] BP_FluxDataComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxBuoyancyComponent@PersistentLevel.BP_FluxBoat2_0] BP_FluxBuoyancyComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DetectCharacter@PersistentLevel.BP_FluxBoat2_2] BoxComponent
+    AttachParent = "Mesh"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Mesh@PersistentLevel.BP_FluxBoat2_2] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=-4523.851082,Y=-5740.072790,Z=130.000000)
+    RelativeRotation = (Pitch=0.000000,Yaw=-165.000000,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Camera@PersistentLevel.BP_FluxBoat2_2] CameraComponent
+    AttachParent = "CameraArm"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[CameraArm@PersistentLevel.BP_FluxBoat2_2] SpringArmComponent
+    AttachParent = "Mesh"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxInteractionComponent@PersistentLevel.BP_FluxBoat2_2] BP_FluxInteractionComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxDataComponent@PersistentLevel.BP_FluxBoat2_2] BP_FluxDataComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxBuoyancyComponent@PersistentLevel.BP_FluxBoat2_2] BP_FluxBuoyancyComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Area] BoxComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxInteraction_3] SceneComponent
+    RelativeLocation = (X=-6065.000000,Y=-6190.000000,Z=77.316101)
+    RelativeScale3D = (X=35.840000,Y=35.840000,Z=280.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxInteraction_3] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Preview@PersistentLevel.BP_FluxInteraction_3] StaticMeshComponent
+    bEvaluateWorldPositionOffsetInRayTracing = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Area"
+    bVisible = False
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Ripple] BP_FluxSolverRippleComponent_C
+    SimulationResolution = 512
+    WorldPixelSize = 7
+    WorldAreaSize = 3584
+    WaveDamping = 0.980000
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddBoxComponent-0] BoxComponent
+    AttachParent = "BP_FluxModifierWaveComponent"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+[BP_FluxModifierWaveComponent] BP_FluxModifierWaveComponent_C
+    SimulationAreaBlend = (AxisXNegative_19_BDCFAFC742FF8C7B9864BC9EE408F91A=0.000000)
+    ActiveTime = 0.007143
+    Initialized = True
+    CanRender = True
+    AttachParent = "Scene"
+    RelativeLocation = (X=-2981.000000,Y=-1580.405273,Z=0.002930)
+    RelativeScale3D = (X=15000.000000,Y=15000.000000,Z=100.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    MaterialInstance <- MID_M_FluxModifierWave_1
+[MID_M_FluxModifierWave_1] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Simulation/Modifiers/Materials/M_FluxModifierWave.M_FluxModifierWave'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="SurfaceHeight"),ParameterValue=50.002930,ExpressionGUID=E1AF8022423A994552B0D09ADF85AD76)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="VelocityScale"),ParameterValue=0.085000,ExpressionGUID=C09205DF4357A605B8B250AE53EEC36C)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="WaveCalming"),ParameterValue=0.015000,ExpressionGUID=1BEEFCF742C7167F7F5FCBABDB01141B)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=520.014648,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="ModififersVelocityScale"),ParameterValue=1.000000)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="ActiveTime"),ParameterValue=0.007143,ExpressionGUID=171E705E4EB692CAD43B1C811FCA7AFF)
+    VectorParameterValues(0) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=100000.000000,G=10.000000,B=10.000000,A=10.000000),ExpressionGUID=D188910E4CA2CC870466A3922EED0859)
+    VectorParameterValues(1) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(2) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(3) = (ParameterInfo=(Name="LocationSize"),ParameterValue=(R=-1363.227051,G=-2532.619141,B=15000.000000,A=15000.000000),ExpressionGUID=25F4B8E84696B318C2F9C190AABC3500)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = AD355F3D40AE0DDE6DD990BF8CEAA597
+    TextureParameterValues(0) <- TextureRenderTarget2D_1
+    TextureParameterValues(1) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_M_FluxModifierWave_1EditorOnlyData
+[MID_M_FluxModifierWave_1EditorOnlyData] MaterialInstanceEditorOnlyData
+[MaterialBillboard@PersistentLevel.BP_FluxModifierWaveActor_2] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxModifierWaveActor_2] SceneComponent
+    RelativeLocation = (X=1617.772949,Y=-952.213867,Z=50.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Bounds@PersistentLevel.BP_FluxNiagaraActor_C_0] BoxComponent
+    BoxExtent = (X=600.000000,Y=700.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraActor_C_0] SceneComponent
+    RelativeLocation = (X=918.889046,Y=-3126.739908,Z=50.572461)
+    RelativeRotation = (Pitch=0.000000,Yaw=-40.000000,Roll=0.000000)
+    RelativeScale3D = (X=1.000000,Y=0.731852,Z=1.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraActor_C_0] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraActor_C_0] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraActor_C_0] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Plankton/NS_FluxSimulationPlankton.NS_FluxSimulationPlankton'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+    OverrideParameters <- NiagaraDataInterfaceTexture_18
+    OverrideParameters <- NiagaraDataInterfaceTexture_19
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_18@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_19@PersistentLevel.BP_FluxNiagaraActor_C_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraActor_C_1] BoxComponent
+    BoxExtent = (X=660.000000,Y=510.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraActor_C_1] SceneComponent
+    RelativeLocation = (X=-1394.821674,Y=169.008158,Z=49.937876)
+    RelativeRotation = (Pitch=0.000000,Yaw=-30.000000,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraActor_C_1] BoxComponent
+    BoxExtent = (X=500.000000,Y=350.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraActor_C_1] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraActor_C_1] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Foam/NS_FluxFoam.NS_FluxFoam'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+    OverrideParameters <- NiagaraDataInterfaceTexture_18
+    OverrideParameters <- NiagaraDataInterfaceTexture_19
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_18@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_19@PersistentLevel.BP_FluxNiagaraActor_C_1.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraActor_C_3] BoxComponent
+    BoxExtent = (X=600.000000,Y=600.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraActor_C_3] SceneComponent
+    RelativeLocation = (X=-3345.979896,Y=-1293.392918,Z=0.572461)
+    RelativeRotation = (Pitch=0.000000,Yaw=30.000000,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraActor_C_3] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraActor_C_3] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraActor_C_3] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Foam/NS_FluxFoam.NS_FluxFoam'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+    OverrideParameters <- NiagaraDataInterfaceTexture_18
+    OverrideParameters <- NiagaraDataInterfaceTexture_19
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_18@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_19@PersistentLevel.BP_FluxNiagaraActor_C_3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraBubbles] BoxComponent
+    BoxExtent = (X=600.000000,Y=600.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraBubbles] SceneComponent
+    RelativeLocation = (X=-3135.328593,Y=2394.418952,Z=-563.260860)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraBubbles] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraBubbles] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraBubbles] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Bubbles/NS_Bubbles.NS_Bubbles'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraBubbles.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraBubbles2] BoxComponent
+    BoxExtent = (X=600.000000,Y=600.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraBubbles2] SceneComponent
+    RelativeLocation = (X=-448.547363,Y=-6741.373535,Z=-325.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraBubbles2] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraBubbles2] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraBubbles2] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Bubbles/NS_Bubbles.NS_Bubbles'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraBubbles2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraBubbles4] BoxComponent
+    BoxExtent = (X=430.000000,Y=80.000000,Z=255.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=250.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraBubbles4] SceneComponent
+    RelativeLocation = (X=-2413.547363,Y=2018.626465,Z=-620.000000)
+    RelativeRotation = (Pitch=-13.908332,Yaw=20.650110,Roll=-5.639447)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraBubbles4] BoxComponent
+    BoxExtent = (X=400.000000,Y=50.000000,Z=5.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraBubbles4] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraBubbles4] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Bubbles/NS_Bubbles.NS_Bubbles'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraBubbles4.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraBubbles5] BoxComponent
+    BoxExtent = (X=530.000000,Y=530.000000,Z=340.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=200.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraBubbles5] SceneComponent
+    RelativeLocation = (X=-1158.547241,Y=1273.626465,Z=-665.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraBubbles5] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraBubbles5] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraBubbles5] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Bubbles/NS_Bubbles.NS_Bubbles'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraBubbles5.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraBubbles6] BoxComponent
+    BoxExtent = (X=540.000000,Y=540.000000,Z=400.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=200.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraBubbles6] SceneComponent
+    RelativeLocation = (X=-78.547363,Y=2113.626465,Z=-1085.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraBubbles6] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraBubbles6] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraBubbles6] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Bubbles/NS_Bubbles.NS_Bubbles'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraBubbles6.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraBubbles7] BoxComponent
+    BoxExtent = (X=530.000000,Y=530.000000,Z=300.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=100.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraBubbles7] SceneComponent
+    RelativeLocation = (X=326.452759,Y=-1276.373535,Z=-165.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraBubbles7] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraBubbles7] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraBubbles7] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Bubbles/NS_Bubbles.NS_Bubbles'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraBubbles7.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraBubbles_0] BoxComponent
+    BoxExtent = (X=600.000000,Y=600.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraBubbles_0] SceneComponent
+    RelativeLocation = (X=3151.452637,Y=-1.373535,Z=-985.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraBubbles_0] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraBubbles_0] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraBubbles_0] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Bubbles/NS_Bubbles.NS_Bubbles'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraBubbles_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraDust_0] BoxComponent
+    BoxExtent = (X=475.000000,Y=475.000000,Z=300.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraDust_0] SceneComponent
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=-1000.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraDust_0] BoxComponent
+    BoxExtent = (X=375.000000,Y=375.000000,Z=300.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraDust_0] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraDust_0] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Dust/NS_FluxDust.NS_FluxDust'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraDust_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraFishes] BoxComponent
+    BoxExtent = (X=1100.000000,Y=1100.000000,Z=350.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    RelativeLocation = (X=190.000000,Y=-40.000000,Z=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraFishes] SceneComponent
+    RelativeLocation = (X=-4260.000000,Y=2006.000000,Z=-144.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraFishes] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraFishes] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraFishes] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Fish/NS_FluxFishes.NS_FluxFishes'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraFishes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraFishes3] BoxComponent
+    BoxExtent = (X=1200.000000,Y=1200.000000,Z=250.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraFishes3] SceneComponent
+    RelativeLocation = (X=1870.000000,Y=-1006.000000,Z=-235.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraFishes3] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=250.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraFishes3] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraFishes3] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Fish/NS_FluxFishes.NS_FluxFishes'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraFishes3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraPlants] BoxComponent
+    BoxExtent = (X=540.000000,Y=540.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraPlants] SceneComponent
+    RelativeLocation = (X=-2188.966797,Y=335.067505,Z=-298.000366)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraPlants] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraPlants] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraPlants] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Plant/NS_FluxPlantBending.NS_FluxPlantBending'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraPlants.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraPlants2] BoxComponent
+    BoxExtent = (X=600.000000,Y=600.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraPlants2] SceneComponent
+    RelativeLocation = (X=-585.878510,Y=744.067993,Z=-572.439758)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraPlants2] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=170.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraPlants2] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraPlants2] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Plant/NS_FluxPlantBending.NS_FluxPlantBending'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraPlants2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraPlants2_0] BoxComponent
+    BoxExtent = (X=750.000000,Y=300.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraPlants2_0] SceneComponent
+    RelativeLocation = (X=-15.878510,Y=-6865.932007,Z=-452.439758)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraPlants2_0] BoxComponent
+    BoxExtent = (X=650.000000,Y=200.000000,Z=200.000000)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=170.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraPlants2_0] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraPlants2_0] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Plant/NS_FluxPlantBending.NS_FluxPlantBending'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraPlants2_0.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraPlants3] BoxComponent
+    BoxExtent = (X=750.000000,Y=750.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraPlants3] SceneComponent
+    RelativeLocation = (X=2286.033203,Y=-2094.932617,Z=-413.000366)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraPlants3] BoxComponent
+    BoxExtent = (X=650.000000,Y=650.000000,Z=200.000000)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=170.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraPlants3] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraPlants3] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Plant/NS_FluxPlantBending.NS_FluxPlantBending'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraPlants3.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraSplashes] BoxComponent
+    BoxExtent = (X=1000.000000,Y=800.000000,Z=250.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=-1100.000000,Z=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraSplashes] SceneComponent
+    RelativeLocation = (X=-2600.219971,Y=815.202881,Z=95.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraSplashes] BoxComponent
+    BoxExtent = (X=1000.000000,Y=500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraSplashes] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraSplashes] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Splash/NS_FluxSplashArea.NS_FluxSplashArea'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraSplashes.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraSplashes2] BoxComponent
+    BoxExtent = (X=700.000000,Y=600.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    RelativeLocation = (X=-700.000000,Y=0.000000,Z=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraSplashes2] SceneComponent
+    RelativeLocation = (X=1813.206055,Y=-3209.672607,Z=50.001465)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraSplashes2] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraSplashes2] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraSplashes2] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Splash/NS_FluxSplashArea.NS_FluxSplashArea'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_9
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraSplashes2.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[Bounds@PersistentLevel.BP_FluxNiagaraTrash] BoxComponent
+    BoxExtent = (X=800.000000,Y=800.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    RelativeLocation = (X=-100.000000,Y=-100.000000,Z=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxNiagaraTrash] SceneComponent
+    RelativeLocation = (X=-39.863591,Y=-4813.990559,Z=-50.000000)
+    RelativeRotation = (Pitch=0.000000,Yaw=-50.000000,Roll=0.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Volume@PersistentLevel.BP_FluxNiagaraTrash] BoxComponent
+    BoxExtent = (X=500.000000,Y=500.000000,Z=200.000000)
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MaterialBillboard@PersistentLevel.BP_FluxNiagaraTrash] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[NODE_AddNiagaraComponent-0@PersistentLevel.BP_FluxNiagaraTrash] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Floating/NS_FluxFloatingMeshes.NS_FluxFloatingMeshes'"
+    TranslucencySortPriority = -100
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+    OverrideParameters <- NiagaraDataInterfaceTexture_10
+    OverrideParameters <- NiagaraDataInterfaceTexture_11
+    OverrideParameters <- NiagaraDataInterfaceTexture_12
+    OverrideParameters <- NiagaraDataInterfaceTexture_13
+    OverrideParameters <- NiagaraDataInterfaceTexture_14
+    OverrideParameters <- NiagaraDataInterfaceTexture_15
+    OverrideParameters <- NiagaraDataInterfaceTexture_16
+    OverrideParameters <- NiagaraDataInterfaceTexture_17
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_18
+    OverrideParameters <- NiagaraDataInterfaceTexture_19
+[NiagaraDataInterfaceTexture_0@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_1@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_2
+[NiagaraDataInterfaceTexture_2@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_3@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_5@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+[NiagaraDataInterfaceTexture_6@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'"
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_8@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_9@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+    Texture <- TextureRenderTarget2D_0
+[NiagaraDataInterfaceTexture_10@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_18@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_19@PersistentLevel.BP_FluxNiagaraTrash.NODE_AddNiagaraComponent-0] NiagaraDataInterfaceTexture
+[BP_FluxBuoyancyComponent@PersistentLevel.BP_FluxCrate_2] BP_FluxBuoyancyComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Mesh@PersistentLevel.BP_FluxCrate_2] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    RelativeLocation = (X=-996.993242,Y=1295.937583,Z=-356.106954)
+    RelativeRotation = (Pitch=-31.141048,Yaw=7.342359,Roll=0.435262)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxDataComponent@PersistentLevel.BP_FluxCrate_2] BP_FluxDataComponent_C
+    ReadbackEventInterval = 0.200000
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxInteractionComponent@PersistentLevel.BP_FluxCrate_2] BP_FluxInteractionComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxBuoyancyComponent@PersistentLevel.BP_FluxCrate_C_1] BP_FluxBuoyancyComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Mesh@PersistentLevel.BP_FluxCrate_C_1] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    RelativeLocation = (X=-1040.000000,Y=1660.000000,Z=-630.000000)
+    RelativeRotation = (Pitch=0.000000,Yaw=50.000000,Roll=94.999999)
+    RelativeScale3D = (X=1.100000,Y=1.100000,Z=1.100000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxDataComponent@PersistentLevel.BP_FluxCrate_C_1] BP_FluxDataComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxInteractionComponent@PersistentLevel.BP_FluxCrate_C_1] BP_FluxInteractionComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DecalMesh@PersistentLevel.BP_FluxDecal_C_1] StaticMeshComponent
+    StaticMeshImportVersion = 1
+    TranslucencySortPriority = -151
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "DefaultSceneRoot"
+    RelativeScale3D = (X=10.000000,Y=10.000000,Z=2.500000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    OverrideMaterials(0) <- MID_MI_FluxBaseDecal_0
+[MID_MI_FluxBaseDecal_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Surface/Lighting/Materials/MI_FluxBaseDecal.MI_FluxBaseDecal'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=520.014648)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-754.985352)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="StateWorldPixelSize"),ParameterValue=20.000000)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FluidStatic"))
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureHeight"),ParameterValue=220.000000)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetZ"))
+    ScalarParameterValues(6) = (ParameterInfo=(Name="WaveTextureChoppiness"),ParameterValue=89.113281)
+    ScalarParameterValues(7) = (ParameterInfo=(Name="WaveTextureRange"),ParameterValue=20000.000000)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="WaveTextureFalloff"),ParameterValue=50000.000000)
+    ScalarParameterValues(9) = (ParameterInfo=(Name="WaveTextureDivergenceScale"),ParameterValue=1.300000)
+    ScalarParameterValues(10) = (ParameterInfo=(Name="ShoreWaveWidth"),ParameterValue=-1050.000000)
+    ScalarParameterValues(11) = (ParameterInfo=(Name="ShoreWaveScale"),ParameterValue=0.000556)
+    ScalarParameterValues(12) = (ParameterInfo=(Name="CoastlineScattringDistance"),ParameterValue=20000.000000)
+    ScalarParameterValues(13) = (ParameterInfo=(Name="CoastlineScattringDepth"),ParameterValue=1600.000000)
+    ScalarParameterValues(14) = (ParameterInfo=(Name="WaveProfileDistance"),ParameterValue=2.300000)
+    ScalarParameterValues(15) = (ParameterInfo=(Name="WaveProfileWidth"),ParameterValue=600.000000)
+    ScalarParameterValues(16) = (ParameterInfo=(Name="WaveProfileSpeed"),ParameterValue=0.245000)
+    ScalarParameterValues(17) = (ParameterInfo=(Name="WaveProfileAnimationSpeed"),ParameterValue=0.700000)
+    ScalarParameterValues(18) = (ParameterInfo=(Name="WaveGroundPrediction"),ParameterValue=300.000000)
+    ScalarParameterValues(19) = (ParameterInfo=(Name="SurfacePhaseG0"))
+    ScalarParameterValues(20) = (ParameterInfo=(Name="SurfacePhaseGShoreline"),ParameterValue=0.100000)
+    ScalarParameterValues(21) = (ParameterInfo=(Name="SurfacePhaseG1"))
+    VectorParameterValues(0) = (ParameterInfo=(Name="AreaLocation"),ParameterValue=(R=-1399.999023,G=-2930.132812,B=520.014648,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000))
+    VectorParameterValues(3) = (ParameterInfo=(Name="FluxStateBorders"),ParameterValue=(R=10.000000,G=10.000000,B=10.000000,A=10.000000))
+    VectorParameterValues(4) = (ParameterInfo=(Name="StateDecodeData"),ParameterValue=(R=0.000000,G=476.000000,B=1.000000,A=1.000000))
+    VectorParameterValues(5) = (ParameterInfo=(Name="WaveTextureOffsetScale"),ParameterValue=(R=-15226.380859,G=-2517.113281,B=0.000083,A=0.000083))
+    VectorParameterValues(6) = (ParameterInfo=(Name="WaveTextureWind"),ParameterValue=(R=30.000000,G=-100.000000,B=0.220000,A=0.001000))
+    VectorParameterValues(7) = (ParameterInfo=(Name="FluxWaveProfileDecode"),ParameterValue=(R=-0.330324,G=0.000000,B=0.470531,A=0.124962))
+    VectorParameterValues(8) = (ParameterInfo=(Name="SurfaceScattering0"),ParameterValue=(R=0.500000,G=0.900000,B=1.000000,A=0.000040))
+    VectorParameterValues(9) = (ParameterInfo=(Name="SurfaceAbsorption0"),ParameterValue=(R=120.000000,G=250.000000,B=350.000000,A=4.000000))
+    VectorParameterValues(10) = (ParameterInfo=(Name="ColorBehind0"),ParameterValue=(R=0.900000,G=1.000000,B=1.000000,A=0.750000))
+    VectorParameterValues(11) = (ParameterInfo=(Name="SurfaceOverlay0"),ParameterValue=(R=0.090000,G=0.180000,B=0.200000,A=0.000000))
+    VectorParameterValues(12) = (ParameterInfo=(Name="SurfaceScatteringShoreline"),ParameterValue=(R=0.070000,G=0.210000,B=0.250000,A=0.000100))
+    VectorParameterValues(13) = (ParameterInfo=(Name="SurfaceAbsorptionShoreline"),ParameterValue=(R=2.857143,G=14.285714,B=33.333332,A=100.000000))

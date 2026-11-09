@@ -1,0 +1,31 @@
+﻿// Источник: /Game/FluidFlux/Surface/Underwater/Functions/MF_Aberration (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_3 ключ: Code
+// Входы: UV, Vector, Distance, Steps, DefaultColor, TestMask
+// Выход: не указан
+// Описание: Aberration
+
+BRANCH
+if (TestMask <=  0.0)
+{
+	int SceneTextureID = 14;
+	UV = ClampSceneTextureUV(ViewportUVToSceneTextureUV(UV, 14), 14);
+	
+	float2 StepSize = (Distance * Vector) / (int) Steps;
+	float2 NewUV =  UV - Vector * Distance * 0.5;
+	float3 CurColor = float3(0.0f, 0.0f,0.0f);
+	int i;
+	float3 sum = float3(0.0f, 0.0f,0.0f);
+	for (i = 0; i < (int)Steps; i++)
+	{
+		float3 CurrentAbberationValue=saturate(1.0-abs(3*(i/Steps)-float3(0.0,1.0,2.0)));
+		CurColor += SceneTextureLookup(NewUV, SceneTextureID, true).rgb * CurrentAbberationValue;
+		NewUV.xy += StepSize;
+		sum += CurrentAbberationValue;
+	}
+	CurColor = CurColor / sum;
+	return CurColor;
+} else
+{
+	return DefaultColor;	
+}
+ 

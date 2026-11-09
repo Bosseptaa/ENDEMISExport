@@ -1,0 +1,45 @@
+﻿# /Game/FluidFlux/Interaction/Blueprints/BP_FluxSolverRippleComponent
+# класс: Blueprint; происхождение: проект; узлов: 7; связей: 9; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:30
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxSolverRippleComponent] Blueprint
+    ParentClass = "/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Interaction/Blueprints/BP_FluxSolverComponent.BP_FluxSolverComponent_C'"
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = "Event Graph"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Interaction/Blueprints/BP_FluxSolverRippleComponent.BP_FluxSolverRippleComponent:EventGraph",SavedViewOffset=(X=-558.312683,Y=-418.666534),SavedZoomAmount=0.500000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxSolverRippleComponent_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 39D5B3544FD20B3BA633B0BF509D5A71
+    UbergraphPages(0) <- EventGraph
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 6DB79B784E72340ACB0A05B03B6C0239
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_CallParentFunction_0
+    Nodes(2) <- K2Node_Event_1
+    Nodes(3) <- K2Node_CallParentFunction_1
+[K2Node_CallParentFunction_0] K2Node_CallParentFunction (вызов: ReceiveBeginPlay @ /Script/Engine.BlueprintGeneratedClass)
+    EnabledState = Disabled
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[K2Node_CallParentFunction_1] K2Node_CallParentFunction (вызов: ReceiveTick @ /Script/Engine.BlueprintGeneratedClass)
+    EnabledState = Disabled
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[K2Node_Event_0] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    EnabledState = Disabled
+    bCommentBubblePinned = True
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[K2Node_Event_1] K2Node_Event (событие: ReceiveTick @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    EnabledState = Disabled
+    bCommentBubblePinned = True
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+
+## СВЯЗИ
+[K2Node_Event_0].then -> [K2Node_CallParentFunction_0].execute
+[K2Node_Event_1].DeltaSeconds -> [K2Node_CallParentFunction_1].DeltaSeconds
+[K2Node_Event_1].then -> [K2Node_CallParentFunction_1].execute

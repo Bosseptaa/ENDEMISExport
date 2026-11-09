@@ -1,0 +1,139 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Materials/M_JumpFloodInitialize
+# класс: Material; происхождение: проект; узлов: 20; связей: 33; HLSL: 5; причина: папка /Game/FluidFlux; HLSL:5
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_JumpFloodInitialize] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    bTangentSpaceNormal = False
+    EditorX = -304
+    EditorY = 160
+    bCanMaskedBeAssumedOpaque = True
+    bCastRayTracedShadows = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 9B9B06F84968A822EB63C3B51F2D15FE
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = BEE415814EE97AC3524B359BF95B906A
+    EditorOnlyData <- M_JumpFloodInitializeEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+[MaterialExpressionTextureProperty_0] MaterialExpressionTextureProperty
+    TextureObject <- MaterialExpressionTextureObjectParameter_1
+[MaterialExpressionTextureObjectParameter_1] MaterialExpressionTextureObjectParameter
+    ParameterName = "Surce"
+    ExpressionGUID = 22703CB640A9343854622AB0E4350914
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    bCollapsed = True
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "Surce"
+    ExpressionGUID = 50272CE24DC2722FF25048B3F0906356
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    bCollapsed = True
+[MaterialExpressionTextureCoordinate_4] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureCoordinate_1] MaterialExpressionTextureCoordinate
+[MaterialExpressionScalarParameter_9] MaterialExpressionScalarParameter
+    DefaultValue = 10.000000
+    ParameterName = "Iterations"
+    ExpressionGUID = 6A05A4E6407757529DDF4B8096D7F220
+[MaterialExpressionScalarParameter_8] MaterialExpressionScalarParameter
+    DefaultValue = 2.000000
+    ParameterName = "Width"
+    ExpressionGUID = AB2F9ADB4E50E525A78096932ECDE09A
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    ParameterName = "Offset"
+    ExpressionGUID = 706C274849DBB4E3FEA129BE6A6B360E
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    A <- MaterialExpressionTextureCoordinate_1
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/ScreenResolution.ScreenResolution'"
+    FunctionOutputs(0) = (ExpressionOutputId=D21EB3BE4C1789227FDE70B7A16D9AE8,Output=(OutputName="Visible Resolution"))
+    FunctionOutputs(1) = (ExpressionOutputId=2ED3DB9D4C40696F0C43FE8FD96180A7,Output=(OutputName="Buffer Resolution"))
+    Outputs(0) = (OutputName="Visible Resolution")
+    Outputs(1) = (OutputName="Buffer Resolution")
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionCustom_5] MaterialExpressionCustom
+    описание: CalulateEdgeDirections
+    OutputType = CMOT_Float2
+    bCollapsed = True
+    Inputs(0) Tex <- MaterialExpressionTextureObjectParameter_1
+    Inputs(1) TextureSize <- MaterialExpressionTextureProperty_0
+    Inputs(2) UV <- MaterialExpressionTextureCoordinate_4
+    Inputs(3) Width <- MaterialExpressionScalarParameter_8
+    Inputs(4) Clip <- MaterialExpressionScalarParameter_0
+    Inputs(5) Quality <- MaterialExpressionScalarParameter_9
+    Code: HLSL, 39 строк (см. HLSL/)
+[MaterialExpressionCustom_4] MaterialExpressionCustom
+    описание: Old
+    OutputType = CMOT_Float2
+    Inputs(0) uv = (InputName="uv")
+    Inputs(1) inTexture = (InputName="inTexture")
+    Inputs(2) TexInvR = (InputName="TexInvR")
+    Code: HLSL, 70 строк (см. HLSL/)
+[MaterialExpressionCustom_2] MaterialExpressionCustom
+    описание: Old
+    OutputType = CMOT_Float2
+    Inputs(0) SC = (InputName="SC")
+    Inputs(1) SR = (InputName="SR")
+    Inputs(2) SL = (InputName="SL")
+    Inputs(3) ST = (InputName="ST")
+    Inputs(4) SB = (InputName="SB")
+    Inputs(5) uv = (InputName="uv")
+    Code: HLSL, 28 строк (см. HLSL/)
+[MaterialExpressionCustom_1] MaterialExpressionCustom
+    OutputType = CMOT_Float2
+    Inputs(0) SC = (InputName="SC")
+    Inputs(1) SR = (InputName="SR")
+    Inputs(2) SL = (InputName="SL")
+    Inputs(3) ST = (InputName="ST")
+    Inputs(4) SB = (InputName="SB")
+    AdditionalOutputs(0) = (OutputName="Edge")
+    AdditionalOutputs(1) = (OutputName="Offset",OutputType=CMOT_Float2)
+    bShowOutputNameOnPin = True
+    Outputs(0) = (OutputName="return")
+    Outputs(1) = (OutputName="Edge")
+    Outputs(2) = (OutputName="Offset")
+    Code: HLSL, 13 строк (см. HLSL/)
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: Old
+    OutputType = CMOT_Float2
+    Inputs(0) uv <- MaterialExpressionMultiply_5
+    Inputs(1) inTexture <- MaterialExpressionTextureObjectParameter_0
+    Inputs(2) TexInvR <- MaterialExpressionDivide_0
+    Code: HLSL, 72 строк (см. HLSL/)
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 850
+    SizeY = 597
+    Text = "Previous cheap implementations "
+    CommentColor = (R=1.000000,G=0.502164,B=0.258658,A=1.000000)
+[M_JumpFloodInitializeEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    ParameterGroupData(4) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionCustom_5
+    ExpressionCollection <- MaterialExpressionCustom_5
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_1
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionCustom_1
+    ExpressionCollection <- MaterialExpressionCustom_2
+    ExpressionCollection <- MaterialExpressionCustom_4
+    ExpressionCollection <- MaterialExpressionScalarParameter_8
+    ExpressionCollection <- MaterialExpressionScalarParameter_9
+    ExpressionCollection <- MaterialExpressionTextureProperty_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_4
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionComment_0
+
+## СВЯЗИ

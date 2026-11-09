@@ -1,0 +1,733 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_FluxOutline
+# класс: MaterialFunction; происхождение: проект; узлов: 89; связей: 245; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:244
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxOutline] MaterialFunction
+    StateId = 866D2F804F65FFA2C0D7BC8CC9CA7423
+    CombinedInputTypes = 271
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_27
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_30
+    DependentFunctionExpressionCandidates(4) <- MaterialExpressionMaterialFunctionCall_31
+    DependentFunctionExpressionCandidates(5) <- MaterialExpressionMaterialFunctionCall_32
+    DependentFunctionExpressionCandidates(6) <- MaterialExpressionMaterialFunctionCall_33
+    DependentFunctionExpressionCandidates(7) <- MaterialExpressionMaterialFunctionCall_34
+    DependentFunctionExpressionCandidates(8) <- MaterialExpressionMaterialFunctionCall_35
+    DependentFunctionExpressionCandidates(9) <- MaterialExpressionMaterialFunctionCall_36
+    DependentFunctionExpressionCandidates(10) <- MaterialExpressionMaterialFunctionCall_37
+    DependentFunctionExpressionCandidates(11) <- MaterialExpressionMaterialFunctionCall_38
+    DependentFunctionExpressionCandidates(12) <- MaterialExpressionMaterialFunctionCall_39
+    DependentFunctionExpressionCandidates(13) <- MaterialExpressionMaterialFunctionCall_5
+    DependentFunctionExpressionCandidates(14) <- MaterialExpressionMaterialFunctionCall_8
+    DependentFunctionExpressionCandidates(15) <- MaterialExpressionMaterialFunctionCall_7
+    DependentFunctionExpressionCandidates(16) <- MaterialExpressionMaterialFunctionCall_3
+    DependentFunctionExpressionCandidates(17) <- MaterialExpressionMaterialFunctionCall_9
+    DependentFunctionExpressionCandidates(18) <- MaterialExpressionMaterialFunctionCall_13
+    DependentFunctionExpressionCandidates(19) <- MaterialExpressionMaterialFunctionCall_14
+    DependentFunctionExpressionCandidates(20) <- MaterialExpressionMaterialFunctionCall_15
+    DependentFunctionExpressionCandidates(21) <- MaterialExpressionMaterialFunctionCall_16
+    EditorOnlyData <- MF_FluxOutlineEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxOutlineEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_10
+    ExpressionCollection <- MaterialExpressionConstant2Vector_11
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_27
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_30
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_31
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_32
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_33
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_34
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_35
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_36
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_37
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_38
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_39
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionAdd_7
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionDotProduct_1
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionAdd_8
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionMin_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMax_10
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionMin_6
+    ExpressionCollection <- MaterialExpressionMax_14
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionIf_2
+    ExpressionCollection <- MaterialExpressionAdd_11
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_8
+    ExpressionCollection <- MaterialExpressionDotProduct_2
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_7
+    ExpressionCollection <- MaterialExpressionIf_3
+    ExpressionCollection <- MaterialExpressionMin_7
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionMin_13
+    ExpressionCollection <- MaterialExpressionReroute_4
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMax_17
+    ExpressionCollection <- MaterialExpressionAdd_12
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionClamp_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_9
+    ExpressionCollection <- MaterialExpressionFunctionOutput_6
+    ExpressionCollection <- MaterialExpressionFunctionOutput_5
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionDotProduct_3
+    ExpressionCollection <- MaterialExpressionConstant4Vector_0
+    ExpressionCollection <- MaterialExpressionDotProduct_4
+    ExpressionCollection <- MaterialExpressionConstant4Vector_1
+    ExpressionCollection <- MaterialExpressionAppendVector_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_8
+    ExpressionCollection <- MaterialExpressionFunctionOutput_7
+    ExpressionCollection <- MaterialExpressionMax_5
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionStaticSwitch_0
+    ExpressionCollection <- MaterialExpressionStaticSwitch_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_13
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_14
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_15
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_16
+[MaterialExpressionAdd_11] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMaterialFunctionCall_37
+    B <- MaterialExpressionMaterialFunctionCall_36
+[MaterialExpressionAdd_12] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMaterialFunctionCall_8
+    B <- MaterialExpressionDotProduct_2
+[MaterialExpressionAdd_7] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionSaturate_1
+    B <- MaterialExpressionSaturate_0
+[MaterialExpressionAdd_8] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionAppendVector_3] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionDotProduct_3
+    B <- MaterialExpressionDotProduct_4
+[MaterialExpressionClamp_0] MaterialExpressionClamp
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Input <- MaterialExpressionFunctionInput_0
+    Min <- MaterialExpressionScalarParameter_0
+    Max <- MaterialExpressionConstant_1
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+[MaterialExpressionConstant2Vector_10] MaterialExpressionConstant2Vector
+    R = 1.000000
+    G = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+[MaterialExpressionConstant2Vector_11] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+[MaterialExpressionConstant4Vector_0] MaterialExpressionConstant4Vector
+    Constant = (R=1.000000,G=1.000000,B=2.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+[MaterialExpressionConstant4Vector_1] MaterialExpressionConstant4Vector
+    Constant = (R=1.000000,G=-1.000000,B=0.000000,A=2.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstB = 9.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionAdd_12
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionDotProduct_0
+    B <- MaterialExpressionMax_5
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionAdd_8
+    B <- MaterialExpressionConstant_3
+[MaterialExpressionDotProduct_1] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Desc = "WaterCount"
+    A <- MaterialExpressionAdd_7
+    B <- MaterialExpressionConstant_0
+[MaterialExpressionDotProduct_2] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Desc = "WaterCount"
+    A <- MaterialExpressionAdd_11
+    B <- MaterialExpressionConstant_6
+[MaterialExpressionDotProduct_3] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionSubtract_2
+    B <- MaterialExpressionConstant4Vector_0
+[MaterialExpressionDotProduct_4] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionSubtract_2
+    B <- MaterialExpressionConstant4Vector_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Average"
+    Id = 0E376CB04E06109B2ACE07BDFBADF03D
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    Preview <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Offset"
+    Id = 33D92AD740B864AF402A83A026466323
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_10
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "TexCoord"
+    Id = C3FA71F045C8EEC7E93CF98F3E1E4598
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    SortPriority = -12
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "FullPrecision"
+    Id = 2642EE244AD43B2E9D0695AD893527CC
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "WaterHeight"
+    bLastPreviewed = True
+    Id = 7AEAC2034F8AB4B68D418FBB58BFA28D
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_3
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "WaterMin"
+    SortPriority = 15
+    bLastPreviewed = True
+    Id = 38CC7FBA44367388E07B669ADA5FC7A4
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    A <- MaterialExpressionMin_6
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "WaterMax"
+    SortPriority = 13
+    bLastPreviewed = True
+    Id = FF32C4454B806B87CC42018481C44C53
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    A <- MaterialExpressionMax_14
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "BorderWater"
+    SortPriority = 4
+    bLastPreviewed = True
+    Id = 716C3BF344F19C2EF7A4FBBCFB49FA4B
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    A <- MaterialExpressionMin_13
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "HeightAvg"
+    bLastPreviewed = True
+    Id = 669F86D84983A3D5B690CD9EFF7C036C
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    A <- MaterialExpressionDivide_0
+[MaterialExpressionFunctionOutput_5] MaterialExpressionFunctionOutput
+    OutputName = "GroundMax"
+    SortPriority = 33
+    bLastPreviewed = True
+    Id = 9D94EE634BB8561FD73E07AF0A664283
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_15
+[MaterialExpressionFunctionOutput_6] MaterialExpressionFunctionOutput
+    OutputName = "GroundMin"
+    SortPriority = 22
+    bLastPreviewed = True
+    Id = 464C0D3C4416D132EB96F4BA68031742
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionFunctionOutput_7] MaterialExpressionFunctionOutput
+    OutputName = "BorderHeight"
+    SortPriority = 4
+    bLastPreviewed = True
+    Id = 73DB759C4F7EAF0C94B52EA0A340B3B1
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    A <- MaterialExpressionDivide_1
+[MaterialExpressionFunctionOutput_8] MaterialExpressionFunctionOutput
+    OutputName = "Slope"
+    bLastPreviewed = True
+    Id = BDAE6A5C42612F42A86E53B53D5FBDCA
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    bCollapsed = True
+    A <- MaterialExpressionAppendVector_3
+[MaterialExpressionIf_2] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMax_14
+    B <- MaterialExpressionScalarParameter_1
+    AGreaterThanB <- MaterialExpressionMin_13
+    AEqualsB <- MaterialExpressionReroute_4
+    ALessThanB <- MaterialExpressionReroute_4
+[MaterialExpressionIf_3] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMaterialFunctionCall_7
+    B <- MaterialExpressionScalarParameter_1
+    AGreaterThanB <- MaterialExpressionMaterialFunctionCall_7
+    ALessThanB <- MaterialExpressionIf_2
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionMaterialFunctionCall_8
+    Alpha <- MaterialExpressionScalarParameter_2
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_SobelOffsets.MF_SobelOffsets'"
+    FunctionOutputs(0) = (ExpressionOutputId=CF0165184C36D908539074A60EBB75DE,Output=(OutputName="+x,+y"))
+    FunctionOutputs(1) = (ExpressionOutputId=6F7FFB2F403447687E84379FF7582449,Output=(OutputName="-x,+y"))
+    FunctionOutputs(2) = (ExpressionOutputId=BFB30EE24194DAC13C979BB58A4399C8,Output=(OutputName="+x,-y"))
+    FunctionOutputs(3) = (ExpressionOutputId=8084E2BF4C3DE6C0C54836B5D124B81D,Output=(OutputName="-x,-y"))
+    FunctionOutputs(4) = (ExpressionOutputId=59D2714C48FE4D09DA457793C7E98940,Output=(OutputName="-x,0"))
+    FunctionOutputs(5) = (ExpressionOutputId=37CFD99F432684355B55D99CC9EAB681,Output=(OutputName="0,+y"))
+    FunctionOutputs(6) = (ExpressionOutputId=4B7384144286026013B9968822D5E50C,Output=(OutputName="0,-y"))
+    FunctionOutputs(7) = (ExpressionOutputId=F55F7A3A4EAC3E4A84301CAB80195A7F,Output=(OutputName="+x,0"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="+x,+y")
+    Outputs(1) = (OutputName="-x,+y")
+    Outputs(2) = (OutputName="+x,-y")
+    Outputs(3) = (OutputName="-x,-y")
+    Outputs(4) = (OutputName="-x,0")
+    Outputs(5) = (OutputName="0,+y")
+    Outputs(6) = (OutputName="0,-y")
+    Outputs(7) = (OutputName="+x,0")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_11
+    FunctionInputs(1) <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMaterialFunctionCall_13] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_MinMax4.MF_MinMax4'"
+    FunctionOutputs(0) = (ExpressionOutputId=65E5010342606384C06BAEA1E24D4099,Output=(OutputName="Max"))
+    FunctionOutputs(1) = (ExpressionOutputId=D232AEC44D0C60333E058895253141D1,Output=(OutputName="Min"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Max")
+    Outputs(1) = (OutputName="Min")
+    FunctionInputs(0) <- MaterialExpressionMin_2
+[MaterialExpressionMaterialFunctionCall_14] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_MinMax4.MF_MinMax4'"
+    FunctionOutputs(0) = (ExpressionOutputId=65E5010342606384C06BAEA1E24D4099,Output=(OutputName="Max"))
+    FunctionOutputs(1) = (ExpressionOutputId=D232AEC44D0C60333E058895253141D1,Output=(OutputName="Min"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Max")
+    Outputs(1) = (OutputName="Min")
+    FunctionInputs(0) <- MaterialExpressionStaticSwitch_1
+[MaterialExpressionMaterialFunctionCall_15] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_MinMax4.MF_MinMax4'"
+    FunctionOutputs(0) = (ExpressionOutputId=65E5010342606384C06BAEA1E24D4099,Output=(OutputName="Max"))
+    FunctionOutputs(1) = (ExpressionOutputId=D232AEC44D0C60333E058895253141D1,Output=(OutputName="Min"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Max")
+    Outputs(1) = (OutputName="Min")
+    FunctionInputs(0) <- MaterialExpressionStaticSwitch_0
+[MaterialExpressionMaterialFunctionCall_16] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_MinMax4.MF_MinMax4'"
+    FunctionOutputs(0) = (ExpressionOutputId=65E5010342606384C06BAEA1E24D4099,Output=(OutputName="Max"))
+    FunctionOutputs(1) = (ExpressionOutputId=D232AEC44D0C60333E058895253141D1,Output=(OutputName="Min"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Max")
+    Outputs(1) = (OutputName="Min")
+    FunctionInputs(0) <- MaterialExpressionMax_10
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_27] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.MakeFloat4'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_32
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_33
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_34
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_35
+[MaterialExpressionMaterialFunctionCall_30] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_31] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_32] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_33] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_34] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_35] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_36] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.MakeFloat4'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_32
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_33
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_34
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_35
+[MaterialExpressionMaterialFunctionCall_37] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.MakeFloat4'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_2
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_27
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_30
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_31
+[MaterialExpressionMaterialFunctionCall_38] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.MakeFloat4'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_32
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_33
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_34
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_35
+[MaterialExpressionMaterialFunctionCall_39] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.MakeFloat4'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_2
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_27
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_30
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_31
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(0) = (ExpressionInputId=DA7F932D4F48BC2231034E986A9CB554,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionInputs(2) = (ExpressionInputId=AEF4F886411D3426BD953487D66B2E9C,Input=(InputName="Offset"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+[MaterialExpressionMaterialFunctionCall_7] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(0) = (ExpressionInputId=DA7F932D4F48BC2231034E986A9CB554,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionInputs(2) = (ExpressionInputId=AEF4F886411D3426BD953487D66B2E9C,Input=(InputName="Offset"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+[MaterialExpressionMaterialFunctionCall_8] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(0) = (ExpressionInputId=DA7F932D4F48BC2231034E986A9CB554,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionInputs(2) = (ExpressionInputId=AEF4F886411D3426BD953487D66B2E9C,Input=(OutputIndex=7,InputName="Offset"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+[MaterialExpressionMaterialFunctionCall_9] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.MakeFloat4'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_2
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_27
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_30
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_31
+[MaterialExpressionMax_0] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMaterialFunctionCall_9
+    B <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMax_10] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionReroute_1
+    B <- MaterialExpressionReroute_2
+[MaterialExpressionMax_14] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMaterialFunctionCall_5
+    B <- MaterialExpressionMaterialFunctionCall_16
+[MaterialExpressionMax_17] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMaterialFunctionCall_7
+[MaterialExpressionMax_5] MaterialExpressionMax
+    ConstB = 0.000010
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionDotProduct_1
+[MaterialExpressionMin_0] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMaterialFunctionCall_9
+    B <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMin_13] MaterialExpressionMin
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMin_7
+[MaterialExpressionMin_2] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionReroute_1
+    B <- MaterialExpressionReroute_2
+[MaterialExpressionMin_6] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMaterialFunctionCall_5
+    B <- MaterialExpressionMaterialFunctionCall_13
+[MaterialExpressionMin_7] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMax_17
+    B <- MaterialExpressionSubtract_1
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionSaturate_1
+    B <- MaterialExpressionMaterialFunctionCall_37
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionSaturate_0
+    B <- MaterialExpressionMaterialFunctionCall_36
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Input <- MaterialExpressionMaterialFunctionCall_39
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Input <- MaterialExpressionMaterialFunctionCall_38
+[MaterialExpressionReroute_4] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Input <- MaterialExpressionClamp_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Input <- MaterialExpressionMaterialFunctionCall_38
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    Input <- MaterialExpressionMaterialFunctionCall_39
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = -1300.000000
+    ParameterName = "Min"
+    ExpressionGUID = EE8E6BE549C39B1CED86D5A6D7FB87A5
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.007000
+    ParameterName = "MinWater"
+    ExpressionGUID = 30254DA94FA96DBCD0EB6D98C622C030
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 0.700000
+    ParameterName = "FallingSpeed"
+    ExpressionGUID = 7A426DBC4A00D3B85CB79291B58075DB
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+[MaterialExpressionStaticSwitch_0] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMax_0
+    B <- MaterialExpressionMaterialFunctionCall_3
+    Value <- MaterialExpressionFunctionInput_3
+[MaterialExpressionStaticSwitch_1] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMin_0
+    B <- MaterialExpressionMaterialFunctionCall_9
+    Value <- MaterialExpressionFunctionInput_3
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionDivide_0
+    B <- MaterialExpressionMaterialFunctionCall_8
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionFunctionOutput_7
+    B <- MaterialExpressionMaterialFunctionCall_7
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+    A <- MaterialExpressionMaterialFunctionCall_9
+    B <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxOutline'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,145 @@
+﻿# /Game/FluidFlux/Coastline/Functions/MF_FluxWorldToCoastlineUV
+# класс: MaterialFunction; происхождение: проект; узлов: 21; связей: 39; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxWorldToCoastlineUV] MaterialFunction
+    StateId = EDAE234446839985E6529E9AC15071CB
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FluxWorldToCoastlineUVEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxWorldToCoastlineUVEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionVectorParameter_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionAppendVector_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_6
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    A <- MaterialExpressionVectorParameter_1
+    B <- MaterialExpressionVectorParameter_1
+[MaterialExpressionAppendVector_2] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    A <- MaterialExpressionVectorParameter_1
+    B <- MaterialExpressionVectorParameter_1
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    Input <- MaterialExpressionVectorParameter_0
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    B <- MaterialExpressionAppendVector_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = 0CE7BE7F4EDF82DBAF2FD28BCD21C93A
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    bCollapsed = True
+    Preview <- MaterialExpressionWorldPosition_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Location"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = AB54F8A04BF80648975AFEAEF6AA4B89
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    bCollapsed = True
+    A <- MaterialExpressionComponentMask_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Scale"
+    bLastPreviewed = True
+    Id = E7854F864B404DDBFDE83C8D5C660588
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    bCollapsed = True
+    A <- MaterialExpressionAppendVector_0
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "TexelSize"
+    SortPriority = 3
+    bLastPreviewed = True
+    Id = 4ADE6B714BD48DB8764BF28BC453AAE2
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    bCollapsed = True
+    A <- MaterialExpressionAppendVector_2
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "ReferencePlaneHeight"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = CC73E6C2412A717020F206AE8D6F4D7F
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    bCollapsed = True
+    A <- MaterialExpressionScalarParameter_0
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "Resolution"
+    SortPriority = 3
+    bLastPreviewed = True
+    Id = D453923D4F896744C8CAB5BC03EE1446
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    bCollapsed = True
+    A <- MaterialExpressionAppendVector_1
+[MaterialExpressionFunctionOutput_6] MaterialExpressionFunctionOutput
+    OutputName = "UV"
+    bLastPreviewed = True
+    Id = CB6576E1418A4B7D0149429B6CEFED18
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionDivide_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = -1000000.000000
+    ParameterName = "FluxWorldGroundHeight"
+    ExpressionGUID = 0427DF304F022BAAED438B9A890486E3
+    Group = "FluxData"
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionOutput_0
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=1.000000,A=1.000000)
+    ParameterName = "FluxLevelToWorldGroundUV"
+    ExpressionGUID = 08A52CE24B09C9A878F2C4A37570967F
+    Group = "FluxData"
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    Outputs(0) = (OutputName="")
+    Outputs(1) = (OutputName="LocationX")
+    Outputs(2) = (OutputName="LocationY")
+    Outputs(3) = (OutputName="SizeX")
+    Outputs(4) = (OutputName="SizeY")
+[MaterialExpressionVectorParameter_1] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+    ParameterName = "FluxWorldGroundPixelSize"
+    ExpressionGUID = 5B9F53D043942DCABA3C2A81064D42BE
+    Group = "FluxData"
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+    Outputs(0) = (OutputName="")
+    Outputs(1) = (OutputName="TexelSizeX")
+    Outputs(2) = (OutputName="TexelSizeY")
+    Outputs(3) = (OutputName="ResolutionX")
+    Outputs(4) = (OutputName="ResolutionY")
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToCoastlineUV'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

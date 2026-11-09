@@ -1,0 +1,93 @@
+﻿# /Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxDonut
+# класс: MaterialFunction; происхождение: проект; узлов: 17; связей: 31; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:33
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxDonut] MaterialFunction
+    StateId = A775A9894FEFCD9D909135908DE5AC4A
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FluxDonutEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxDonutEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionDistance_1
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionOneMinus_2
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionSaturate_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_1
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionFunctionInput_6
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.200000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    R = 0.500000
+    G = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+[MaterialExpressionDistance_1] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+    A <- MaterialExpressionFunctionInput_4
+    B <- MaterialExpressionFunctionInput_5
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    ConstB = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+    A <- MaterialExpressionDistance_1
+    B <- MaterialExpressionFunctionInput_6
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "UV"
+    Id = 5D0085284E0D14B83E6A8C9EC1582AC2
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_1
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "Location"
+    Id = 9A7B1F6B4F64A6187A06FB85CECE7796
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionFunctionInput_6] MaterialExpressionFunctionInput
+    InputName = "Radius"
+    Id = 9ADA085E41F651005FC0CAB9719CFCAA
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Weight"
+    bLastPreviewed = True
+    Id = A074B420496974FCF88419B3C644CE22
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_8
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+    A <- MaterialExpressionMultiply_7
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+    A <- MaterialExpressionDivide_2
+    B <- MaterialExpressionOneMinus_2
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+    A <- MaterialExpressionSaturate_3
+    B <- MaterialExpressionSaturate_3
+[MaterialExpressionOneMinus_2] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+    Input <- MaterialExpressionDivide_2
+[MaterialExpressionSaturate_3] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+    Input <- MaterialExpressionMultiply_1
+[MaterialExpressionTextureCoordinate_1] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxDonut'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

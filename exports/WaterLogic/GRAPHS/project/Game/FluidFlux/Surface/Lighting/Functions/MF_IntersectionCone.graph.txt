@@ -1,0 +1,263 @@
+﻿# /Game/FluidFlux/Surface/Lighting/Functions/MF_IntersectionCone
+# класс: MaterialFunction; происхождение: проект; узлов: 47; связей: 97; HLSL: 3; причина: папка /Game/FluidFlux; имя/путь, тело:95, HLSL:3
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_IntersectionCone] MaterialFunction
+    StateId = 25058A1D4B2ED5A69EB5058F88C2493A
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_IntersectionConeEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_IntersectionConeEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_0
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionCustom_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionCustom_2
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_1
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_1
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionTransformPosition_0
+    ExpressionCollection <- MaterialExpressionTransform_0
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_7
+    ExpressionCollection <- MaterialExpressionFunctionInput_8
+    ExpressionCollection <- MaterialExpressionFunctionInput_9
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMin_1
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionIf_3
+    ExpressionCollection <- MaterialExpressionConstant_7
+    ExpressionCollection <- MaterialExpressionIf_4
+    ExpressionCollection <- MaterialExpressionConstant_8
+    ExpressionCollection <- MaterialExpressionConstant_9
+    ExpressionCollection <- MaterialExpressionMultiply_21
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMultiply_24
+    ExpressionCollection <- MaterialExpressionConstant_12
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_2
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionMultiply_4
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionNormalize_0
+    B <- MaterialExpressionConstant3Vector_1
+[MaterialExpressionCameraPositionWS_0] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionCameraPositionWS_1] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionCameraVectorWS_0] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionCameraVectorWS_1] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionConstant_12] MaterialExpressionConstant
+    R = 0.010000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.990000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionConstant_7] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionConstant_8] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionConstant_9] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=0.000000,B=0.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    bCollapsed = True
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    bCollapsed = True
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    OutputType = CMOT_Float1
+    AdditionalOutputs(0) = (OutputName="tmin")
+    AdditionalOutputs(1) = (OutputName="tmax")
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    bShowOutputNameOnPin = True
+    Outputs(0) = (OutputName="return")
+    Outputs(1) = (OutputName="tmin")
+    Outputs(2) = (OutputName="tmax")
+    Inputs(0) origin <- MaterialExpressionCameraPositionWS_0
+    Inputs(1) dir <- MaterialExpressionCameraVectorWS_0
+    Inputs(2) lightnormal <- MaterialExpressionNormalize_0
+    Inputs(3) lightpos <- MaterialExpressionConstant3Vector_1
+    Inputs(4) k <- MaterialExpressionConstant_2
+    Code: HLSL, 22 строк (см. HLSL/)
+[MaterialExpressionCustom_1] MaterialExpressionCustom
+    OutputType = CMOT_Float2
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    Inputs(0) ro <- MaterialExpressionCameraPositionWS_0
+    Inputs(1) rd <- MaterialExpressionCameraVectorWS_0
+    Inputs(2) pa <- MaterialExpressionConstant3Vector_1
+    Inputs(3) pb <- MaterialExpressionAdd_0
+    Inputs(4) ra <- MaterialExpressionConstant_0
+    Inputs(5) rb <- MaterialExpressionConstant_1
+    Code: HLSL, 39 строк (см. HLSL/)
+[MaterialExpressionCustom_2] MaterialExpressionCustom
+    OutputType = CMOT_Float1
+    AdditionalOutputs(0) = (OutputName="near")
+    AdditionalOutputs(1) = (OutputName="far")
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    bShowOutputNameOnPin = True
+    Outputs(0) = (OutputName="return")
+    Outputs(1) = (OutputName="near")
+    Outputs(2) = (OutputName="far")
+    Inputs(0) org <- MaterialExpressionFunctionInput_8
+    Inputs(1) dir <- MaterialExpressionFunctionInput_9
+    Code: HLSL, 80 строк (см. HLSL/)
+[MaterialExpressionFunctionInput_7] MaterialExpressionFunctionInput
+    Preview = (Mask=1,MaskR=1)
+    InputName = "SceneDepth"
+    Id = 2F87D3C64DD87C5C931EE5BED836DF6C
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_8] MaterialExpressionFunctionInput
+    InputName = "CameraOrigin"
+    Id = 53B4F9524F433B2D1E0E128EBB6341AD
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    bCollapsed = True
+    Preview <- MaterialExpressionVertexInterpolator_2
+[MaterialExpressionFunctionInput_9] MaterialExpressionFunctionInput
+    InputName = "CameraDirection"
+    Id = E5C892BF4F68805039993FA94495465A
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMultiply_2
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Near"
+    bLastPreviewed = True
+    Id = 65246D5147AB71FD6BE840B00B267748
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_4
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Far"
+    bLastPreviewed = True
+    Id = FBC620FB4FF75B11CF74FCBFE07A9871
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_3
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "IsOutside"
+    bLastPreviewed = True
+    Id = 3A8C4C694FCB0DAA0D034A8771C4539A
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_2
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "Depth"
+    bLastPreviewed = True
+    Id = A464576A430A2C1B7B9F188A2B2DFF0C
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_0
+[MaterialExpressionIf_0] MaterialExpressionIf
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionConstant_6
+    B <- MaterialExpressionReroute_0
+    AGreaterThanB <- MaterialExpressionConstant_3
+    ALessThanB <- MaterialExpressionMultiply_21
+[MaterialExpressionIf_3] MaterialExpressionIf
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionConstant_7
+    B <- MaterialExpressionReroute_0
+    AGreaterThanB <- MaterialExpressionConstant_9
+    ALessThanB <- MaterialExpressionMultiply_4
+[MaterialExpressionIf_4] MaterialExpressionIf
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionConstant_8
+    B <- MaterialExpressionReroute_0
+    AGreaterThanB <- MaterialExpressionConstant_4
+    ALessThanB <- MaterialExpressionMultiply_1
+[MaterialExpressionMin_0] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionCustom_2
+    B <- MaterialExpressionMultiply_24
+[MaterialExpressionMin_1] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionCustom_2
+    B <- MaterialExpressionMultiply_24
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionMin_1
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionTransform_0
+[MaterialExpressionMultiply_21] MaterialExpressionMultiply
+    ConstB = 100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionSubtract_0
+[MaterialExpressionMultiply_24] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionFunctionInput_7
+    B <- MaterialExpressionConstant_12
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 0.010000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionTransformPosition_0
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    ConstB = 100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionMin_0
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    VectorInput <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    Input <- MaterialExpressionFunctionOutput_2
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    A <- MaterialExpressionMin_0
+    B <- MaterialExpressionMin_1
+[MaterialExpressionTransform_0] MaterialExpressionTransform
+    TransformSourceType = TRANSFORMSOURCE_World
+    TransformType = TRANSFORM_Local
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    Input <- MaterialExpressionCameraVectorWS_1
+[MaterialExpressionTransformPosition_0] MaterialExpressionTransformPosition
+    TransformSourceType = TRANSFORMPOSSOURCE_World
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    Input <- MaterialExpressionCameraPositionWS_1
+[MaterialExpressionVertexInterpolator_2] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionCone'"
+    Input <- MaterialExpressionMultiply_3
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

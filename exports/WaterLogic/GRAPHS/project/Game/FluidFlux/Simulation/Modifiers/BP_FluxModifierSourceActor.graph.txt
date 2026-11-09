@@ -1,0 +1,133 @@
+﻿# /Game/FluidFlux/Simulation/Modifiers/BP_FluxModifierSourceActor
+# класс: Blueprint; происхождение: проект; узлов: 28; связей: 48; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:87
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxModifierSourceActor] Blueprint
+    ParentClass = "/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Simulation/Modifiers/BP_FluxModifierContainerActor.BP_FluxModifierContainerActor_C'"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxModifierSourceActor_C:SimpleConstructionScript_0'"
+    ComponentTemplates(0) = "/Script/Engine.BoxComponent'BP_FluxModifierSourceActor_C:NODE_AddBoxComponent-0'"
+    InheritableComponentHandler = "/Script/Engine.InheritableComponentHandler'BP_FluxModifierSourceActor_C:InheritableComponentHandler'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Editor"
+    CategorySorting(3) = "Modifier"
+    CategorySorting(4) = "Event Graph"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Simulation/Modifiers/BP_FluxModifierSourceActor.BP_FluxModifierSourceActor:EventGraph",SavedViewOffset=(X=-195.032013,Y=-6525.500000),SavedZoomAmount=0.750000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Simulation/Modifiers/BP_FluxModifierSourceActor.BP_FluxModifierSourceActor:AddModifiers",SavedViewOffset=(X=-186.009415,Y=-340.863495),SavedZoomAmount=1.000000)
+    ComponentTemplateNameIndex = (("BoxComponent", 1),("SphereComponent", 2))
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxModifierSourceActor_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = CD4AC33B4EACE01E8F2E97B0417F07FD
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- AddModifiers
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 527540E24EA6E4AC0ADD46B14E611F2A
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_2
+    Nodes(2) <- K2Node_CallFunction_3
+    Nodes(3) <- K2Node_AddComponent_0
+    Nodes(4) <- K2Node_VariableGet_0
+    Nodes(5) <- K2Node_VariableGet_1
+    Nodes(6) <- K2Node_CallFunction_4
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_VariableGet_2@UserConstructionScript] K2Node_VariableGet
+[K2Node_CallFunction_3] K2Node_CallFunction (вызов: ConstructComponent @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_AddComponent_0] K2Node_AddComponent (вызов: AddComponent)
+    TemplateBlueprint = "/Game/FluidFlux/Simulation/Modifiers/BP_FluxModifierSourceActor.BP_FluxModifierSourceActor"
+    TemplateType = "/Script/CoreUObject.Class'/Script/Engine.BoxComponent'"
+    вход TemplateName = NODE_AddBoxComponent-0
+    вход bManualAttachment = true
+    вход RelativeTransform_Location = 0, 0, 0
+    вход RelativeTransform_Rotation = 0, 0, 0
+    вход RelativeTransform_Scale = 1.000000,1.000000,1.000000
+    вход bDeferredFinish = false
+[K2Node_VariableGet_0@UserConstructionScript] K2Node_VariableGet
+[K2Node_VariableGet_1@UserConstructionScript] K2Node_VariableGet
+[K2Node_CallFunction_4] K2Node_CallFunction (вызов: K2_AttachToComponent @ /Script/CoreUObject.Class)
+    вход SocketName = None
+    вход LocationRule = SnapToTarget
+    вход RotationRule = SnapToTarget
+    вход ScaleRule = SnapToTarget
+    вход bWeldSimulatedBodies = TRUE
+[AddModifiers] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D65E84EE42347340B3C69A9F8052DC80
+    InterfaceGuid = 472A7FA34DCADA1B7CD1699C38C67A93
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_1
+    Nodes(2) <- K2Node_VariableGet_2
+    Nodes(3) <- K2Node_CallFunction_2
+[K2Node_FunctionResult_1] K2Node_FunctionResult (вызов: AddModifiers @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_FunctionEntry_0@AddModifiers] K2Node_FunctionEntry
+[K2Node_VariableGet_2@AddModifiers] K2Node_VariableGet
+[K2Node_CallFunction_2@AddModifiers] K2Node_CallFunction
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = AC897CEA43EA2D52CAB9C5BDC520757F
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_VariableGet_0
+    Nodes(2) <- K2Node_VariableGet_1
+    Nodes(3) <- K2Node_CallFunction_0
+    Nodes(4) <- K2Node_CallFunction_2
+    Nodes(5) <- K2Node_IfThenElse_0
+    Nodes(6) <- K2Node_VariableGet_2
+    Nodes(7) <- K2Node_IfThenElse_1
+    Nodes(8) <- K2Node_CommutativeAssociativeBinaryOperator_0
+[K2Node_Event_0] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[K2Node_VariableGet_0@EventGraph] K2Node_VariableGet (переменная: FluxModifierSource)
+[K2Node_VariableGet_1@EventGraph] K2Node_VariableGet (переменная: Duration @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_0@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_2@EventGraph] K2Node_CallFunction (вызов: GreaterEqual_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 0.0
+[K2Node_IfThenElse_0] K2Node_IfThenElse
+[K2Node_VariableGet_2@EventGraph] K2Node_VariableGet (переменная: DestroyonOnFinish)
+[K2Node_IfThenElse_1] K2Node_IfThenElse
+[K2Node_CommutativeAssociativeBinaryOperator_0] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 0.020000
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = FB5DD85B49965F5CDD221DAA82FD5943
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry (вызов: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    CustomGeneratedFunctionName = "ReceiveBeginPlay"
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_FluxModifierSourceActor)
+    bIsIntermediateNode = True
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_AddComponent_0].ReturnValue -> [K2Node_CallFunction_4].self
+[K2Node_AddComponent_0].then -> [K2Node_CallFunction_4].execute
+[K2Node_CallFunction_2@EventGraph].Finalized -> [K2Node_FunctionResult_1].Remove
+[K2Node_CallFunction_2@EventGraph].ReturnValue -> [K2Node_IfThenElse_0].Condition
+[K2Node_CallFunction_2@EventGraph].then -> [K2Node_FunctionResult_1].execute
+[K2Node_CallFunction_3].then -> [K2Node_AddComponent_0].execute
+[K2Node_CommutativeAssociativeBinaryOperator_0].ReturnValue -> [K2Node_CallFunction_0@ReceiveBeginPlay].InLifespan
+[K2Node_Event_0].then -> [K2Node_IfThenElse_1].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].Modifiers -> [K2Node_CallFunction_2@EventGraph].Modifiers
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then -> [K2Node_CallFunction_3].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#2 -> [K2Node_CallFunction_2@EventGraph].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#3 -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute#2
+[K2Node_IfThenElse_0].then -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute
+[K2Node_IfThenElse_1].then -> [K2Node_IfThenElse_0].execute
+[K2Node_VariableGet_0@EventGraph].FluxModifierSource -> [K2Node_VariableGet_1@EventGraph].self
+[K2Node_VariableGet_0@EventGraph].RestartSimulationOnEdit -> [K2Node_CallFunction_3].RestartSimulation
+[K2Node_VariableGet_1@EventGraph].Duration -> [K2Node_CallFunction_2@EventGraph].A
+[K2Node_VariableGet_1@EventGraph].Duration -> [K2Node_CommutativeAssociativeBinaryOperator_0].A
+[K2Node_VariableGet_1@EventGraph].FluxModifierSource -> [K2Node_CallFunction_4].Parent
+[K2Node_VariableGet_2@EventGraph].DestroyonOnFinish -> [K2Node_IfThenElse_1].Condition
+[K2Node_VariableGet_2@EventGraph].FluxModifierSource -> [K2Node_CallFunction_3].self
+[K2Node_VariableGet_2@EventGraph].FluxModifierSource#2 -> [K2Node_CallFunction_2@EventGraph].self

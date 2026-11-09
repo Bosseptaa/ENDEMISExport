@@ -1,0 +1,8 @@
+﻿// Источник: /Game/FluidFlux/Surface/Underwater/Materials/M_FogVolumePostprocess (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_10 ключ: Code
+// Входы: ScreenPos, NearPlane
+// Выход: CMOT_Float4
+// Описание: ScreenPos to ViewPos
+
+ float2 viewpos = (ScreenPos.xy - View.ScreenPositionScaleBias.wz) / View.ScreenPositionScaleBias.xy * NearPlane; 
+ return float4( viewpos, NearPlane, 1 ) ;

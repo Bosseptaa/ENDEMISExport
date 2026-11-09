@@ -1,0 +1,942 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFProjection
+# класс: Blueprint; происхождение: проект; узлов: 250; связей: 367; HLSL: 0; причина: папка /Game/FluidFlux; тело:40
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_SDFProjection] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    HideCategories(0) = "Input"
+    HideCategories(1) = "Rendering"
+    HideCategories(2) = "Actor"
+    HideCategories(3) = "HLOD"
+    HideCategories(4) = "Replication"
+    HideCategories(5) = "LOD"
+    HideCategories(6) = "Collision"
+    HideCategories(7) = "Actor"
+    HideCategories(8) = "Loading"
+    HideCategories(9) = "Networking"
+    HideCategories(10) = "Physics"
+    HideCategories(11) = "Deprecated"
+    HideCategories(12) = "Level Streaming"
+    HideCategories(13) = "Level Instance"
+    HideCategories(14) = "Cooking"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_SDFProjection_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFProjection.BP_SDFProjection:EventGraph",SavedViewOffset=(X=-133.973434,Y=-186.997665),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFProjection.BP_SDFProjection:ApplyMaterial",SavedViewOffset=(X=-79.645653,Y=-145.484970),SavedZoomAmount=0.675000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFProjection.BP_SDFProjection:UserConstructionScript",SavedViewOffset=(X=-486.615082,Y=-535.338318),SavedZoomAmount=0.875000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFProjection.BP_SDFProjection:GenerateDistanceFields",SavedViewOffset=(X=-188.782425,Y=-292.820465),SavedZoomAmount=0.750000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFProjection.BP_SDFProjection:EventGraph",SavedViewOffset=(X=-422.031921,Y=-214.851410),SavedZoomAmount=1.000000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFProjection.BP_SDFProjection:CaptureScene",SavedViewOffset=(X=2203.902588,Y=782.757996),SavedZoomAmount=1.000000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_SDFProjection_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = E7C2E1B0409383507BEC77A80CEC1FF4
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- ApplyMaterial
+    FunctionGraphs(2) <- GenerateDistanceFields
+    FunctionGraphs(3) <- InitializeAll
+    FunctionGraphs(4) <- CaptureScene
+    ImplementedInterfaces(0) <- GetSourceType
+    ImplementedInterfaces(0) <- GetShapes
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 2EFB37414102A4FD6C8971AFEBF26A1B
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_CallFunction_1
+    Nodes(3) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_CallFunction_7@UserConstructionScript] K2Node_CallFunction
+[K2Node_CallFunction_1@UserConstructionScript] K2Node_CallFunction
+[K2Node_CallFunction_0@UserConstructionScript] K2Node_CallFunction
+[ApplyMaterial] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1FCECB8741AE13C90B17A788BD271E80
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_CallFunction_12
+    Nodes(3) <- K2Node_CallFunction_28
+    Nodes(4) <- K2Node_CallFunction_0
+    Nodes(5) <- K2Node_VariableGet_0
+    Nodes(6) <- K2Node_CallFunction_3
+    Nodes(7) <- K2Node_VariableGet_13
+    Nodes(8) <- K2Node_CallFunction_29
+    Nodes(9) <- K2Node_CallFunction_6
+    Nodes(10) <- K2Node_CallFunction_4
+    Nodes(11) <- K2Node_CallFunction_5
+    Nodes(12) <- K2Node_CallFunction_8
+    Nodes(13) <- K2Node_CallFunction_9
+    Nodes(14) <- K2Node_CallFunction_10
+    Nodes(15) <- K2Node_CallFunction_11
+    Nodes(16) <- K2Node_CallFunction_13
+    Nodes(17) <- K2Node_CallFunction_14
+    Nodes(18) <- K2Node_VariableGet_9
+    Nodes(19) <- K2Node_PromotableOperator_0
+    Nodes(20) <- K2Node_VariableGet_2
+    Nodes(21) <- K2Node_VariableGet_3
+    Nodes(22) <- K2Node_VariableGet_4
+    Nodes(23) <- K2Node_VariableGet_5
+    Nodes(24) <- K2Node_VariableGet_6
+    Nodes(25) <- K2Node_VariableGet_7
+[K2Node_FunctionEntry_0@ApplyMaterial] K2Node_FunctionEntry
+[K2Node_CallFunction_7@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_12@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_28@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_0@ApplyMaterial] K2Node_CallFunction
+[K2Node_VariableGet_0@ApplyMaterial] K2Node_VariableGet
+[K2Node_CallFunction_3@ApplyMaterial] K2Node_CallFunction
+[K2Node_VariableGet_13@ApplyMaterial] K2Node_VariableGet
+[K2Node_CallFunction_29@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_6@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_4@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_5@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_8@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_9@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_10@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_11@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_13@ApplyMaterial] K2Node_CallFunction
+[K2Node_CallFunction_14@ApplyMaterial] K2Node_CallFunction
+[K2Node_VariableGet_9@ApplyMaterial] K2Node_VariableGet
+[K2Node_PromotableOperator_0@ApplyMaterial] K2Node_PromotableOperator
+[K2Node_VariableGet_2@ApplyMaterial] K2Node_VariableGet
+[K2Node_VariableGet_3@ApplyMaterial] K2Node_VariableGet
+[K2Node_VariableGet_4@ApplyMaterial] K2Node_VariableGet
+[K2Node_VariableGet_5@ApplyMaterial] K2Node_VariableGet
+[K2Node_VariableGet_6@ApplyMaterial] K2Node_VariableGet
+[K2Node_VariableGet_7@ApplyMaterial] K2Node_VariableGet
+[GetSourceType] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 702475C14BB860FBF83EFEAB55F0F205
+    InterfaceGuid = EA59C4064309A1ABC531A58A307FB476
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetSourceType] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetSourceType] K2Node_FunctionResult
+[GetShapes] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 0904125E482A71E010218CB88EA577E0
+    InterfaceGuid = 92F59D3644B5AFCF3ED9098D4B91EBA2
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetShapes] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetShapes] K2Node_FunctionResult
+[InitializeAll] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 2632702C4A19B5A26FB4259DFD3B71DE
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_16
+    Nodes(2) <- K2Node_VariableGet_24
+    Nodes(3) <- K2Node_VariableGet_1
+    Nodes(4) <- K2Node_VariableSet_9
+    Nodes(5) <- K2Node_VariableSet_10
+    Nodes(6) <- K2Node_ExecutionSequence_0
+    Nodes(7) <- K2Node_VariableGet_2
+    Nodes(8) <- K2Node_CallFunction_2
+    Nodes(9) <- K2Node_VariableSet_1
+    Nodes(10) <- K2Node_CallFunction_15
+    Nodes(11) <- K2Node_VariableGet_10
+    Nodes(12) <- K2Node_VariableGet_5
+    Nodes(13) <- K2Node_VariableSet_2
+    Nodes(14) <- K2Node_VariableGet_6
+    Nodes(15) <- K2Node_VariableGet_9
+    Nodes(16) <- K2Node_CallFunction_0
+    Nodes(17) <- K2Node_VariableGet_15
+    Nodes(18) <- K2Node_VariableGet_11
+    Nodes(19) <- K2Node_CallFunction_18
+    Nodes(20) <- K2Node_PromotableOperator_1
+    Nodes(21) <- K2Node_VariableGet_12
+    Nodes(22) <- K2Node_VariableSet_3
+    Nodes(23) <- K2Node_VariableGet_14
+    Nodes(24) <- K2Node_CallFunction_19
+    Nodes(25) <- K2Node_CallFunction_20
+    Nodes(26) <- K2Node_VariableGet_17
+    Nodes(27) <- K2Node_PromotableOperator_2
+    Nodes(28) <- K2Node_CallFunction_22
+    Nodes(29) <- K2Node_VariableGet_7
+    Nodes(30) <- K2Node_VariableGet_18
+    Nodes(31) <- K2Node_VariableGet_16
+    Nodes(32) <- K2Node_CallFunction_26
+    Nodes(33) <- K2Node_PromotableOperator_6
+    Nodes(34) <- K2Node_PromotableOperator_7
+    Nodes(35) <- K2Node_CallFunction_21
+    Nodes(36) <- K2Node_VariableGet_8
+    Nodes(37) <- K2Node_CallFunction_6
+[K2Node_FunctionEntry_0@InitializeAll] K2Node_FunctionEntry
+[K2Node_CallFunction_16@InitializeAll] K2Node_CallFunction
+[K2Node_VariableGet_24@InitializeAll] K2Node_VariableGet
+[K2Node_VariableGet_1@InitializeAll] K2Node_VariableGet
+[K2Node_VariableSet_9@InitializeAll] K2Node_VariableSet
+[K2Node_VariableSet_10@InitializeAll] K2Node_VariableSet
+[K2Node_ExecutionSequence_0@InitializeAll] K2Node_ExecutionSequence
+[K2Node_VariableGet_2@InitializeAll] K2Node_VariableGet
+[K2Node_CallFunction_2@InitializeAll] K2Node_CallFunction
+[K2Node_VariableSet_1@InitializeAll] K2Node_VariableSet
+[K2Node_CallFunction_15@InitializeAll] K2Node_CallFunction
+[K2Node_VariableGet_10@InitializeAll] K2Node_VariableGet
+[K2Node_VariableGet_5@InitializeAll] K2Node_VariableGet
+[K2Node_VariableSet_2@InitializeAll] K2Node_VariableSet
+[K2Node_VariableGet_6@InitializeAll] K2Node_VariableGet
+[K2Node_VariableGet_9@InitializeAll] K2Node_VariableGet
+[K2Node_CallFunction_0@InitializeAll] K2Node_CallFunction
+[K2Node_VariableGet_15@InitializeAll] K2Node_VariableGet
+[K2Node_VariableGet_11@InitializeAll] K2Node_VariableGet
+[K2Node_CallFunction_18@InitializeAll] K2Node_CallFunction
+[K2Node_PromotableOperator_1@InitializeAll] K2Node_PromotableOperator
+[K2Node_VariableGet_12@InitializeAll] K2Node_VariableGet
+[K2Node_VariableSet_3@InitializeAll] K2Node_VariableSet
+[K2Node_VariableGet_14@InitializeAll] K2Node_VariableGet
+[K2Node_CallFunction_19@InitializeAll] K2Node_CallFunction
+[K2Node_CallFunction_20@InitializeAll] K2Node_CallFunction
+[K2Node_VariableGet_17@InitializeAll] K2Node_VariableGet
+[K2Node_PromotableOperator_2@InitializeAll] K2Node_PromotableOperator
+[K2Node_CallFunction_22@InitializeAll] K2Node_CallFunction
+[K2Node_VariableGet_7@InitializeAll] K2Node_VariableGet
+[K2Node_VariableGet_18@InitializeAll] K2Node_VariableGet
+[K2Node_VariableGet_16@InitializeAll] K2Node_VariableGet
+[K2Node_CallFunction_26@InitializeAll] K2Node_CallFunction
+[K2Node_PromotableOperator_6@InitializeAll] K2Node_PromotableOperator
+[K2Node_PromotableOperator_7@InitializeAll] K2Node_PromotableOperator
+[K2Node_CallFunction_21@InitializeAll] K2Node_CallFunction
+[K2Node_VariableGet_8@InitializeAll] K2Node_VariableGet
+[K2Node_CallFunction_6@InitializeAll] K2Node_CallFunction
+[K2Node_CallFunction_1@InitializeAll] K2Node_CallFunction
+[K2Node_CallFunction_3@InitializeAll] K2Node_CallFunction
+[K2Node_CallFunction_4@InitializeAll] K2Node_CallFunction
+[K2Node_CallFunction_5@InitializeAll] K2Node_CallFunction
+[CaptureScene] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 0B85F8504133329A7F9C47B913D58B81
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_0
+    Nodes(2) <- K2Node_VariableSet_0
+    Nodes(3) <- K2Node_VariableGet_4
+    Nodes(4) <- K2Node_VariableGet_3
+    Nodes(5) <- K2Node_CallFunction_17
+    Nodes(6) <- K2Node_CallMaterialParameterCollectionFunction_0
+    Nodes(7) <- K2Node_CallMaterialParameterCollectionFunction_3
+    Nodes(8) <- K2Node_CallMaterialParameterCollectionFunction_1
+    Nodes(9) <- K2Node_CallMaterialParameterCollectionFunction_4
+    Nodes(10) <- K2Node_CallMaterialParameterCollectionFunction_2
+[K2Node_FunctionEntry_0@CaptureScene] K2Node_FunctionEntry
+[K2Node_VariableGet_0@CaptureScene] K2Node_VariableGet
+[K2Node_VariableSet_0@CaptureScene] K2Node_VariableSet
+[K2Node_VariableGet_4@CaptureScene] K2Node_VariableGet
+[K2Node_VariableGet_3@CaptureScene] K2Node_VariableGet
+[K2Node_CallFunction_17@CaptureScene] K2Node_CallFunction
+[K2Node_CallMaterialParameterCollectionFunction_0@CaptureScene] K2Node_CallMaterialParameterCollectionFunction
+[K2Node_CallMaterialParameterCollectionFunction_3@CaptureScene] K2Node_CallMaterialParameterCollectionFunction
+[K2Node_CallMaterialParameterCollectionFunction_1@CaptureScene] K2Node_CallMaterialParameterCollectionFunction
+[K2Node_CallMaterialParameterCollectionFunction_4@CaptureScene] K2Node_CallMaterialParameterCollectionFunction
+[K2Node_CallMaterialParameterCollectionFunction_2@CaptureScene] K2Node_CallMaterialParameterCollectionFunction
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = C69FDBB045B22180312F7F8E3DE58CD0
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_CallFunction_2
+    Nodes(2) <- K2Node_Event_1
+    Nodes(3) <- K2Node_CallFunction_7
+    Nodes(4) <- K2Node_CallFunction_1
+[K2Node_Event_0@EventGraph] K2Node_Event
+[K2Node_CallFunction_2@EventGraph] K2Node_CallFunction
+[K2Node_Event_1@EventGraph] K2Node_Event
+[K2Node_CallFunction_7@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_1@EventGraph] K2Node_CallFunction
+[GenerateDistanceFields] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D16808614C4FC156BC5AA3A019476EC5
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_33
+    Nodes(2) <- K2Node_Message_0
+    Nodes(3) <- K2Node_Self_0
+    Nodes(4) <- K2Node_Self_1
+    Nodes(5) <- K2Node_CallFunction_1
+    Nodes(6) <- K2Node_IfThenElse_0
+[K2Node_FunctionEntry_0@GenerateDistanceFields] K2Node_FunctionEntry
+[K2Node_CallFunction_33@GenerateDistanceFields] K2Node_CallFunction
+[K2Node_Message_0@GenerateDistanceFields] K2Node_Message
+[K2Node_Self_0@GenerateDistanceFields] K2Node_Self
+[K2Node_Self_1@GenerateDistanceFields] K2Node_Self
+[K2Node_CallFunction_1@GenerateDistanceFields] K2Node_CallFunction
+[K2Node_IfThenElse_0@GenerateDistanceFields] K2Node_IfThenElse
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ExecuteUbergraph_BP_SDFProjection] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 5EA9D7AB4C6765EF120F738829C53A5A
+    Nodes(0) <- K2Node_CallFunction_1
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_Event_1
+    Nodes(3) <- K2Node_CallFunction_2
+    Nodes(4) <- K2Node_Event_0
+    Nodes(5) <- K2Node_Event_2
+    Nodes(6) <- K2Node_FunctionEntry_0
+[K2Node_Event_0@ExecuteUbergraph_BP_SDFProjection] K2Node_Event (событие: PrepareMaterial @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+    bOverrideFunction = True
+[K2Node_CallFunction_2@ExecuteUbergraph_BP_SDFProjection] K2Node_CallFunction
+[K2Node_Event_1@ExecuteUbergraph_BP_SDFProjection] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    bOverrideFunction = True
+[K2Node_CallFunction_7@ExecuteUbergraph_BP_SDFProjection] K2Node_CallFunction
+[K2Node_CallFunction_1@ExecuteUbergraph_BP_SDFProjection] K2Node_CallFunction
+[K2Node_Event_2] K2Node_Event (событие: Capture @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+    bIsIntermediateNode = True
+[K2Node_FunctionEntry_0@ExecuteUbergraph_BP_SDFProjection] K2Node_FunctionEntry
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 07EB85A24CD2083601E8EE83871379E2
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction
+[PrepareMaterial] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 8A65FEF24431ACF0DB7930A7EDB2343B
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@PrepareMaterial] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@PrepareMaterial] K2Node_CallFunction
+[Capture] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 4ED476B347FADC2738AC9F812BE931A5
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@Capture] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@Capture] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@Capture] K2Node_CallFunction
+[UserConstructionScript_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 2EFB37414102A4FD6C8971AFEBF26A1B
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_CallFunction_1
+    Nodes(3) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_7@UserConstructionScript_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_1@UserConstructionScript_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_0@UserConstructionScript_MERGED] K2Node_CallFunction
+[ApplyMaterial_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1FCECB8741AE13C90B17A788BD271E80
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_CallFunction_12
+    Nodes(3) <- K2Node_CallFunction_28
+    Nodes(4) <- K2Node_CallFunction_0
+    Nodes(5) <- K2Node_VariableGet_0
+    Nodes(6) <- K2Node_CallFunction_3
+    Nodes(7) <- K2Node_VariableGet_13
+    Nodes(8) <- K2Node_CallFunction_29
+    Nodes(9) <- K2Node_CallFunction_6
+    Nodes(10) <- K2Node_CallFunction_4
+    Nodes(11) <- K2Node_CallFunction_5
+    Nodes(12) <- K2Node_CallFunction_8
+    Nodes(13) <- K2Node_CallFunction_9
+    Nodes(14) <- K2Node_CallFunction_10
+    Nodes(15) <- K2Node_CallFunction_11
+    Nodes(16) <- K2Node_CallFunction_13
+    Nodes(17) <- K2Node_CallFunction_14
+    Nodes(18) <- K2Node_VariableGet_9
+    Nodes(19) <- K2Node_CallFunction_2
+    Nodes(20) <- K2Node_VariableGet_2
+    Nodes(21) <- K2Node_VariableGet_3
+    Nodes(22) <- K2Node_VariableGet_4
+    Nodes(23) <- K2Node_VariableGet_5
+    Nodes(24) <- K2Node_VariableGet_6
+    Nodes(25) <- K2Node_VariableGet_7
+    Nodes(26) <- K2Node_CallFunction_1
+[K2Node_FunctionEntry_0@ApplyMaterial_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_7@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_12@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_28@ApplyMaterial_MERGED] K2Node_CallFunction (вызов: SetVectorParameterValue @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    ErrorType = 1
+    вход ParameterName = Position
+    вход ParameterName = Position
+[K2Node_CallFunction_0@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_0@ApplyMaterial_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_3@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_13@ApplyMaterial_MERGED] K2Node_VariableGet (переменная: Volume)
+[K2Node_CallFunction_29@ApplyMaterial_MERGED] K2Node_CallFunction (вызов: Conv_VectorToLinearColor @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_6@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_4@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_5@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_8@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_9@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_10@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_11@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_13@ApplyMaterial_MERGED] K2Node_CallFunction (вызов: K2_GetComponentLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_14@ApplyMaterial_MERGED] K2Node_CallFunction (вызов: Conv_VectorToLinearColor @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_9@ApplyMaterial_MERGED] K2Node_VariableGet
+[K2Node_PromotableOperator_0@ApplyMaterial_MERGED] K2Node_PromotableOperator (вызов: Multiply_LinearColorLinearColor @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = -1.000000
+    вход B = -1.000000
+[K2Node_VariableGet_2@ApplyMaterial_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_3@ApplyMaterial_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_4@ApplyMaterial_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_5@ApplyMaterial_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_6@ApplyMaterial_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_7@ApplyMaterial_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_1@ApplyMaterial_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_2@ApplyMaterial_MERGED] K2Node_CallFunction
+[GenerateDistanceFields_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D16808614C4FC156BC5AA3A019476EC5
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_33
+    Nodes(2) <- K2Node_CallFunction_3
+    Nodes(3) <- K2Node_Self_0
+    Nodes(4) <- K2Node_Self_1
+    Nodes(5) <- K2Node_CallFunction_1
+    Nodes(6) <- K2Node_IfThenElse_0
+    Nodes(7) <- K2Node_TemporaryVariable_0
+    Nodes(8) <- K2Node_AssignmentStatement_0
+    Nodes(9) <- K2Node_IfThenElse_1
+    Nodes(10) <- K2Node_CallFunction_0
+    Nodes(11) <- K2Node_CallArrayFunction_0
+    Nodes(12) <- K2Node_CallArrayFunction_1
+    Nodes(13) <- K2Node_CallFunction_2
+    Nodes(14) <- K2Node_AssignmentStatement_1
+    Nodes(15) <- K2Node_DynamicCast_0
+[K2Node_FunctionEntry_0@GenerateDistanceFields_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_33@GenerateDistanceFields_MERGED] K2Node_CallFunction (вызов: GetAllActorsWithInterface @ /Script/CoreUObject.Class)
+[K2Node_Message_0@GenerateDistanceFields_MERGED] K2Node_Message (вызов: OnCapturedShapeChanged @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_Self_0@GenerateDistanceFields_MERGED] K2Node_Self
+[K2Node_Self_1@GenerateDistanceFields_MERGED] K2Node_Self
+[K2Node_CallFunction_1@GenerateDistanceFields_MERGED] K2Node_CallFunction
+[K2Node_IfThenElse_0@GenerateDistanceFields_MERGED] K2Node_IfThenElse
+[K2Node_TemporaryVariable_0] K2Node_TemporaryVariable
+    VariableType = (PinCategory="int")
+    bIsIntermediateNode = True
+[K2Node_AssignmentStatement_0] K2Node_AssignmentStatement
+    bIsIntermediateNode = True
+    вход Value = 0
+[K2Node_IfThenElse_1] K2Node_IfThenElse
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@GenerateDistanceFields_MERGED] K2Node_CallFunction
+[K2Node_CallArrayFunction_0] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CallArrayFunction_1] K2Node_CallArrayFunction (вызов: Array_Get @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_2@GenerateDistanceFields_MERGED] K2Node_CallFunction
+[K2Node_AssignmentStatement_1] K2Node_AssignmentStatement
+    bIsIntermediateNode = True
+[K2Node_DynamicCast_0] K2Node_DynamicCast
+    TargetType = "/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Tools/DistanceField/Blueprints/BPI_SDFVolume.BPI_SDFVolume_C'"
+    PureState = Impure
+    bIsIntermediateNode = True
+[K2Node_CallFunction_3@GenerateDistanceFields_MERGED] K2Node_CallFunction
+[InitializeAll_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 2632702C4A19B5A26FB4259DFD3B71DE
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_16
+    Nodes(2) <- K2Node_VariableGet_24
+    Nodes(3) <- K2Node_VariableGet_1
+    Nodes(4) <- K2Node_VariableSet_9
+    Nodes(5) <- K2Node_VariableSet_10
+    Nodes(6) <- K2Node_ExecutionSequence_0
+    Nodes(7) <- K2Node_VariableGet_2
+    Nodes(8) <- K2Node_CallFunction_2
+    Nodes(9) <- K2Node_VariableSet_1
+    Nodes(10) <- K2Node_CallFunction_15
+    Nodes(11) <- K2Node_VariableGet_10
+    Nodes(12) <- K2Node_VariableGet_5
+    Nodes(13) <- K2Node_VariableSet_2
+    Nodes(14) <- K2Node_VariableGet_6
+    Nodes(15) <- K2Node_VariableGet_9
+    Nodes(16) <- K2Node_CallFunction_0
+    Nodes(17) <- K2Node_VariableGet_15
+    Nodes(18) <- K2Node_VariableGet_11
+    Nodes(19) <- K2Node_CallFunction_18
+    Nodes(20) <- K2Node_CallFunction_12
+    Nodes(21) <- K2Node_VariableGet_12
+    Nodes(22) <- K2Node_VariableSet_3
+    Nodes(23) <- K2Node_VariableGet_14
+    Nodes(24) <- K2Node_CallFunction_19
+    Nodes(25) <- K2Node_CallFunction_20
+    Nodes(26) <- K2Node_VariableGet_17
+    Nodes(27) <- K2Node_VariableGet_3
+    Nodes(28) <- K2Node_CallFunction_22
+    Nodes(29) <- K2Node_VariableGet_7
+    Nodes(30) <- K2Node_VariableGet_18
+    Nodes(31) <- K2Node_VariableGet_16
+    Nodes(32) <- K2Node_CallFunction_26
+    Nodes(33) <- K2Node_CallFunction_11
+    Nodes(34) <- K2Node_CallFunction_10
+    Nodes(35) <- K2Node_CallFunction_21
+    Nodes(36) <- K2Node_IfThenElse_0
+    Nodes(37) <- K2Node_CallFunction_6
+    Nodes(38) <- K2Node_VariableGet_0
+    Nodes(39) <- K2Node_CallFunction_1
+    Nodes(40) <- K2Node_CallFunction_3
+    Nodes(41) <- K2Node_CallFunction_4
+    Nodes(42) <- K2Node_CallFunction_5
+    Nodes(43) <- K2Node_CallFunction_7
+    Nodes(44) <- K2Node_CallFunction_8
+    Nodes(45) <- K2Node_CallFunction_9
+[K2Node_FunctionEntry_0@InitializeAll_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_16@InitializeAll_MERGED] K2Node_CallFunction (вызов: RecreateRenderTarget @ /Script/Engine.BlueprintGeneratedClass)
+    вход Format = RTF_R16f
+    вход ClearColor = (R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+    вход Lod = 0
+    вход GenerateMipmaps = false
+    вход Clear = true
+    вход AllowResize = true
+    вход Format = RTF_R16f
+    вход ClearColor = (R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+    вход Lod = 0
+    вход GenerateMipmaps = false
+    вход Clear = true
+    вход AllowResize = true
+[K2Node_VariableGet_24@InitializeAll_MERGED] K2Node_VariableGet (переменная: Resolution)
+[K2Node_VariableGet_1@InitializeAll_MERGED] K2Node_VariableGet (переменная: CurrentFrame)
+[K2Node_VariableSet_9@InitializeAll_MERGED] K2Node_VariableSet (переменная: SRGB @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+    SelfContextInfo = NotSelfContext
+    вход SRGB = false
+    вход SRGB = false
+[K2Node_VariableSet_10@InitializeAll_MERGED] K2Node_VariableSet (переменная: CurrentFrame)
+[K2Node_ExecutionSequence_0@InitializeAll_MERGED] K2Node_ExecutionSequence
+[K2Node_VariableGet_2@InitializeAll_MERGED] K2Node_VariableGet (переменная: Plane)
+[K2Node_CallFunction_2@InitializeAll_MERGED] K2Node_CallFunction (вызов: CreateDynamicMaterialInstance @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход ElementIndex = 0
+    вход SourceMaterial = None
+    вход OptionalName = None
+    вход InDouble = -1.000000
+    вход B = 1
+    вход ElementIndex = 0
+    вход SourceMaterial = None
+    вход OptionalName = None
+[K2Node_VariableSet_1@InitializeAll_MERGED] K2Node_VariableSet (переменная: MaterialInsatnce)
+[K2Node_CallFunction_15@InitializeAll_MERGED] K2Node_CallFunction (вызов: SetTextureParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = DepthMap
+    вход ParameterName = DepthMap
+[K2Node_VariableGet_10@InitializeAll_MERGED] K2Node_VariableGet (переменная: CurrentFrame)
+[K2Node_VariableGet_5@InitializeAll_MERGED] K2Node_VariableGet (переменная: SceneCaptureComponent2D)
+[K2Node_VariableSet_2@InitializeAll_MERGED] K2Node_VariableSet (переменная: ShowOnlyActors @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_6@InitializeAll_MERGED] K2Node_VariableGet (переменная: Show Only Actors)
+[K2Node_VariableGet_9@InitializeAll_MERGED] K2Node_VariableGet (переменная: DebugPlane)
+[K2Node_CallFunction_0@InitializeAll_MERGED] K2Node_CallFunction (вызов: CreateDynamicMaterialInstance @ /Script/CoreUObject.Class)
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход ParameterName = DepthMap
+    вход ElementIndex = 0
+    вход SourceMaterial = None
+    вход OptionalName = None
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход ParameterName = DepthMap
+    вход ElementIndex = 0
+    вход SourceMaterial = None
+    вход OptionalName = None
+[K2Node_VariableGet_15@InitializeAll_MERGED] K2Node_VariableGet (переменная: Volume)
+[K2Node_VariableGet_11@InitializeAll_MERGED] K2Node_VariableGet (переменная: Box)
+[K2Node_CallFunction_18@InitializeAll_MERGED] K2Node_CallFunction (вызов: SetWorldScale3D @ /Script/CoreUObject.Class)
+[K2Node_PromotableOperator_1@InitializeAll_MERGED] K2Node_PromotableOperator (вызов: Divide_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    вход B = 100.000000
+    вход B = 100.000000
+[K2Node_VariableGet_12@InitializeAll_MERGED] K2Node_VariableGet (переменная: SceneCaptureComponent2D)
+[K2Node_VariableSet_3@InitializeAll_MERGED] K2Node_VariableSet (переменная: OrthoWidth @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_14@InitializeAll_MERGED] K2Node_VariableGet (переменная: Box)
+[K2Node_CallFunction_19@InitializeAll_MERGED] K2Node_CallFunction (вызов: K2_SetRelativeLocation @ /Script/CoreUObject.Class)
+    вход bSweep = false
+    вход bTeleport = false
+    вход bSweep = false
+    вход bTeleport = false
+[K2Node_CallFunction_20@InitializeAll_MERGED] K2Node_CallFunction (вызов: MakeVector_NetQuantize @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Y = 0.0
+    вход Z = 0.0
+    вход Y = 0.0
+    вход Z = 0.0
+[K2Node_VariableGet_17@InitializeAll_MERGED] K2Node_VariableGet (переменная: Volume)
+[K2Node_PromotableOperator_2@InitializeAll_MERGED] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 0.500000
+    вход B = 0.500000
+[K2Node_CallFunction_22@InitializeAll_MERGED] K2Node_CallFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = FarPlane
+    вход ParameterName = FarPlane
+[K2Node_VariableGet_7@InitializeAll_MERGED] K2Node_VariableGet (переменная: Volume)
+[K2Node_VariableGet_18@InitializeAll_MERGED] K2Node_VariableGet (переменная: Volume)
+[K2Node_VariableGet_16@InitializeAll_MERGED] K2Node_VariableGet (переменная: Volume)
+[K2Node_CallFunction_26@InitializeAll_MERGED] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_6@InitializeAll_MERGED] K2Node_PromotableOperator (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_7@InitializeAll_MERGED] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_21@InitializeAll_MERGED] K2Node_CallFunction (вызов: FTrunc @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_8@InitializeAll_MERGED] K2Node_VariableGet (переменная: DebugPlane)
+    CurrentVariation = ValidatedObject
+    CurrentVariation = ValidatedObject
+[K2Node_CallFunction_6@InitializeAll_MERGED] K2Node_CallFunction (вызов: PrepareMaterial)
+    вход ParameterName = Front
+    вход ParameterName = Front
+[K2Node_VariableGet_0@InitializeAll_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_1@InitializeAll_MERGED] K2Node_CallFunction (вызов: Divide_VectorVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход InVec = 0, 0, 0
+[K2Node_CallFunction_3@InitializeAll_MERGED] K2Node_CallFunction (вызов: Conv_DoubleToVector @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход ParameterName = Size
+    вход InVec = 0, 0, 0
+    вход ParameterName = Size
+    вход InDouble = 100.000000
+[K2Node_CallFunction_4@InitializeAll_MERGED] K2Node_CallFunction (вызов: BreakVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход InVec = 0, 0, 0
+[K2Node_CallFunction_5@InitializeAll_MERGED] K2Node_CallFunction (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход InVec = 0, 0, 0
+    вход B = 0.500000
+[K2Node_CallFunction_7@InitializeAll_MERGED] K2Node_CallFunction (вызов: BreakVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход ParameterName = Right
+    вход ParameterName = Right
+[K2Node_CallFunction_8@InitializeAll_MERGED] K2Node_CallFunction (вызов: BreakVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_9@InitializeAll_MERGED] K2Node_CallFunction (вызов: BreakVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_10@InitializeAll_MERGED] K2Node_CallFunction (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_11@InitializeAll_MERGED] K2Node_CallFunction (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_VariableGet_3@InitializeAll_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_12@InitializeAll_MERGED] K2Node_CallFunction (вызов: IsValid @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход ParameterName = Up
+    вход ParameterName = Up
+[K2Node_IfThenElse_0@InitializeAll_MERGED] K2Node_IfThenElse
+    bIsIntermediateNode = True
+[CaptureScene_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 0B85F8504133329A7F9C47B913D58B81
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_0
+    Nodes(2) <- K2Node_VariableSet_0
+    Nodes(3) <- K2Node_VariableGet_4
+    Nodes(4) <- K2Node_VariableGet_3
+    Nodes(5) <- K2Node_CallFunction_17
+    Nodes(6) <- K2Node_CallMaterialParameterCollectionFunction_0
+    Nodes(7) <- K2Node_CallMaterialParameterCollectionFunction_3
+    Nodes(8) <- K2Node_CallMaterialParameterCollectionFunction_1
+    Nodes(9) <- K2Node_CallMaterialParameterCollectionFunction_4
+    Nodes(10) <- K2Node_CallMaterialParameterCollectionFunction_2
+[K2Node_FunctionEntry_0@CaptureScene_MERGED] K2Node_FunctionEntry
+[K2Node_VariableGet_0@CaptureScene_MERGED] K2Node_VariableGet (переменная: SceneCaptureComponent2D)
+    bIsIntermediateNode = True
+[K2Node_VariableSet_0@CaptureScene_MERGED] K2Node_VariableSet (переменная: TextureTarget @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_4@CaptureScene_MERGED] K2Node_VariableGet (переменная: CurrentFrame)
+[K2Node_VariableGet_3@CaptureScene_MERGED] K2Node_VariableGet (переменная: SceneCaptureComponent2D)
+    bIsIntermediateNode = True
+[K2Node_CallFunction_17@CaptureScene_MERGED] K2Node_CallFunction (вызов: CaptureScene @ /Script/CoreUObject.Class)
+[K2Node_CallMaterialParameterCollectionFunction_0@CaptureScene_MERGED] K2Node_CallMaterialParameterCollectionFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = CaptureHeightmap
+    вход ParameterValue = 1.000000
+    вход ParameterName = CaptureHeightmap
+    вход ParameterValue = 1.000000
+[K2Node_CallMaterialParameterCollectionFunction_3@CaptureScene_MERGED] K2Node_CallMaterialParameterCollectionFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = CaptureHeightmap
+    вход ParameterValue = 0.0
+    вход ParameterName = CaptureHeightmap
+    вход ParameterValue = 0.0
+[K2Node_CallMaterialParameterCollectionFunction_1@CaptureScene_MERGED] K2Node_CallMaterialParameterCollectionFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = ShowPhantoms
+    вход ParameterValue = 1.000000
+    вход ParameterName = ShowPhantoms
+    вход ParameterValue = 1.000000
+[K2Node_CallMaterialParameterCollectionFunction_4@CaptureScene_MERGED] K2Node_CallMaterialParameterCollectionFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = CaptureProjection
+    вход ParameterValue = 1.000000
+    вход ParameterName = CaptureProjection
+    вход ParameterValue = 1.000000
+[K2Node_CallMaterialParameterCollectionFunction_2@CaptureScene_MERGED] K2Node_CallMaterialParameterCollectionFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = CaptureProjection
+    вход ParameterValue = 0.0
+    вход ParameterName = CaptureProjection
+    вход ParameterValue = 0.0
+[GetSourceType_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 702475C14BB860FBF83EFEAB55F0F205
+    InterfaceGuid = EA59C4064309A1ABC531A58A307FB476
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetSourceType_MERGED] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetSourceType_MERGED] K2Node_FunctionResult
+[GetShapes_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 0904125E482A71E010218CB88EA577E0
+    InterfaceGuid = 92F59D3644B5AFCF3ED9098D4B91EBA2
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetShapes_MERGED] K2Node_FunctionEntry (вызов: GetShapes @ /Script/Engine.BlueprintGeneratedClass)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 1073741824
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("KismetSchema", "Default", "Default"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "ExecuteUbergraph_BP_SDFProjection"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveBeginPlay"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "PrepareMaterial"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "Capture"
+    bIsIntermediateNode = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("KismetSchema", "Default", "Default"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 1073741824
+[K2Node_FunctionResult_0@GetShapes_MERGED] K2Node_FunctionResult (вызов: GetShapes @ /Script/Engine.BlueprintGeneratedClass)
+    вход Type = NewEnumerator1
+    вход Type = NewEnumerator1
+
+## СВЯЗИ
+[K2Node_AssignmentStatement_0].then -> [K2Node_IfThenElse_1].execute
+[K2Node_AssignmentStatement_1].then -> [K2Node_IfThenElse_1].execute
+[K2Node_CallArrayFunction_0].ReturnValue -> [K2Node_CallFunction_0@InitializeAll_MERGED].B
+[K2Node_CallArrayFunction_1].Item -> [K2Node_DynamicCast_0].Object
+[K2Node_CallFunction_0@InitializeAll_MERGED].ReturnValue -> [K2Node_IfThenElse_1].Condition
+[K2Node_CallFunction_10@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_11@InitializeAll_MERGED].InVec
+[K2Node_CallFunction_10@InitializeAll_MERGED].ReturnValue#2 -> [K2Node_CallFunction_11@InitializeAll_MERGED].B
+[K2Node_CallFunction_11@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_1@InitializeAll_MERGED].A
+[K2Node_CallFunction_11@InitializeAll_MERGED].ReturnValue -> [K2Node_PromotableOperator_0@ApplyMaterial_MERGED].A
+[K2Node_CallFunction_11@InitializeAll_MERGED].ReturnValue#2 -> [K2Node_CallFunction_21@InitializeAll_MERGED].A
+[K2Node_CallFunction_12@InitializeAll_MERGED].ReturnValue -> [K2Node_IfThenElse_0@InitializeAll_MERGED].Condition#2
+[K2Node_CallFunction_13@ApplyMaterial_MERGED].ReturnValue -> [K2Node_CallFunction_14@ApplyMaterial_MERGED].InVec
+[K2Node_CallFunction_14@ApplyMaterial_MERGED].ReturnValue -> [K2Node_CallFunction_28@ApplyMaterial_MERGED].Value
+[K2Node_CallFunction_15@InitializeAll_MERGED].then -> [K2Node_CallFunction_22@InitializeAll_MERGED].execute
+[K2Node_CallFunction_16@InitializeAll_MERGED].NewTexture -> [K2Node_VariableSet_10@InitializeAll_MERGED].CurrentFrame
+[K2Node_CallFunction_16@InitializeAll_MERGED].NewTexture -> [K2Node_VariableSet_9@InitializeAll_MERGED].self
+[K2Node_CallFunction_16@InitializeAll_MERGED].then -> [K2Node_VariableSet_10@InitializeAll_MERGED].execute
+[K2Node_CallFunction_17@CaptureScene_MERGED].then -> [K2Node_CallMaterialParameterCollectionFunction_0@CaptureScene_MERGED].execute
+[K2Node_CallFunction_18@InitializeAll_MERGED].then -> [K2Node_CallFunction_19@InitializeAll_MERGED].execute
+[K2Node_CallFunction_1@InitializeAll_MERGED].ReturnValue -> [K2Node_IfThenElse_0@InitializeAll_MERGED].Condition
+[K2Node_CallFunction_1@InitializeAll_MERGED].ReturnValue#2 -> [K2Node_CallFunction_28@ApplyMaterial_MERGED].Value
+[K2Node_CallFunction_1@InitializeAll_MERGED].ReturnValue#3 -> [K2Node_CallFunction_18@InitializeAll_MERGED].NewScale
+[K2Node_CallFunction_1@InitializeAll_MERGED].then -> [K2Node_CallFunction_0@InitializeAll_MERGED].execute
+[K2Node_CallFunction_20@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_19@InitializeAll_MERGED].NewLocation
+[K2Node_CallFunction_21@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_16@InitializeAll_MERGED].Height
+[K2Node_CallFunction_26@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_11@InitializeAll_MERGED].A
+[K2Node_CallFunction_26@InitializeAll_MERGED].ReturnValue -> [K2Node_PromotableOperator_7@InitializeAll_MERGED].A
+[K2Node_CallFunction_28@ApplyMaterial_MERGED].then -> [K2Node_CallFunction_15@InitializeAll_MERGED].execute
+[K2Node_CallFunction_28@ApplyMaterial_MERGED].then -> [K2Node_CallFunction_28@ApplyMaterial_MERGED].execute
+[K2Node_CallFunction_29@ApplyMaterial_MERGED].ReturnValue -> [K2Node_CallFunction_28@ApplyMaterial_MERGED].Value
+[K2Node_CallFunction_2@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_6@InitializeAll_MERGED].Material
+[K2Node_CallFunction_2@InitializeAll_MERGED].ReturnValue -> [K2Node_VariableSet_1@InitializeAll_MERGED].MaterialInsatnce
+[K2Node_CallFunction_2@InitializeAll_MERGED].ReturnValue#2 -> [K2Node_CallFunction_1@InitializeAll_MERGED].B
+[K2Node_CallFunction_2@InitializeAll_MERGED].ReturnValue#3 -> [K2Node_AssignmentStatement_1].Value
+[K2Node_CallFunction_2@InitializeAll_MERGED].then -> [K2Node_CallFunction_6@InitializeAll_MERGED].execute
+[K2Node_CallFunction_2@InitializeAll_MERGED].then -> [K2Node_VariableSet_1@InitializeAll_MERGED].execute
+[K2Node_CallFunction_33@GenerateDistanceFields_MERGED].OutActors -> [K2Node_CallArrayFunction_0].TargetArray
+[K2Node_CallFunction_33@GenerateDistanceFields_MERGED].OutActors -> [K2Node_CallArrayFunction_1].TargetArray
+[K2Node_CallFunction_33@GenerateDistanceFields_MERGED].OutActors -> [K2Node_Message_0@GenerateDistanceFields_MERGED].self
+[K2Node_CallFunction_33@GenerateDistanceFields_MERGED].then -> [K2Node_AssignmentStatement_0].execute
+[K2Node_CallFunction_33@GenerateDistanceFields_MERGED].then -> [K2Node_Message_0@GenerateDistanceFields_MERGED].execute
+[K2Node_CallFunction_3@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_1@InitializeAll_MERGED].B#2
+[K2Node_CallFunction_3@InitializeAll_MERGED].then -> [K2Node_AssignmentStatement_1].execute
+[K2Node_CallFunction_4@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_5@InitializeAll_MERGED].InVec
+[K2Node_CallFunction_4@InitializeAll_MERGED].Z -> [K2Node_CallFunction_5@InitializeAll_MERGED].A
+[K2Node_CallFunction_5@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_28@ApplyMaterial_MERGED].Value
+[K2Node_CallFunction_5@InitializeAll_MERGED].ReturnValue#2 -> [K2Node_CallFunction_20@InitializeAll_MERGED].X
+[K2Node_CallFunction_7@InitializeAll_MERGED].Z -> [K2Node_CallFunction_22@InitializeAll_MERGED].Value
+[K2Node_CallFunction_7@InitializeAll_MERGED].then -> [K2Node_CallFunction_1@InitializeAll_MERGED].execute
+[K2Node_CallFunction_8@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_9@InitializeAll_MERGED].InVec
+[K2Node_CallFunction_8@InitializeAll_MERGED].X -> [K2Node_CallFunction_10@InitializeAll_MERGED].B
+[K2Node_CallFunction_8@InitializeAll_MERGED].Y -> [K2Node_CallFunction_10@InitializeAll_MERGED].A
+[K2Node_CallFunction_9@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_28@ApplyMaterial_MERGED].Value
+[K2Node_CallFunction_9@InitializeAll_MERGED].X -> [K2Node_VariableSet_3@InitializeAll_MERGED].OrthoWidth
+[K2Node_CallMaterialParameterCollectionFunction_0@CaptureScene_MERGED].then -> [K2Node_CallFunction_17@CaptureScene_MERGED].execute
+[K2Node_CallMaterialParameterCollectionFunction_0@CaptureScene_MERGED].then -> [K2Node_CallMaterialParameterCollectionFunction_0@CaptureScene_MERGED].execute
+[K2Node_DynamicCast_0].AsBPI SDFVolume -> [K2Node_CallFunction_3@InitializeAll_MERGED].self
+[K2Node_DynamicCast_0].CastFailed -> [K2Node_AssignmentStatement_1].execute
+[K2Node_DynamicCast_0].then -> [K2Node_CallFunction_3@InitializeAll_MERGED].execute
+[K2Node_Event_0@ExecuteUbergraph_BP_SDFProjection].Material -> [K2Node_CallFunction_2@InitializeAll_MERGED].Instance
+[K2Node_Event_0@ExecuteUbergraph_BP_SDFProjection].then -> [K2Node_CallFunction_2@InitializeAll_MERGED].execute#2
+[K2Node_Event_1@ExecuteUbergraph_BP_SDFProjection].then -> [K2Node_CallFunction_7@InitializeAll_MERGED].execute
+[K2Node_ExecutionSequence_0@InitializeAll_MERGED].then_0 -> [K2Node_CallFunction_18@InitializeAll_MERGED].execute
+[K2Node_ExecutionSequence_0@InitializeAll_MERGED].then_1 -> [K2Node_CallFunction_16@InitializeAll_MERGED].execute
+[K2Node_ExecutionSequence_0@InitializeAll_MERGED].then_2 -> [K2Node_CallFunction_2@InitializeAll_MERGED].execute
+[K2Node_ExecutionSequence_0@InitializeAll_MERGED].then_3 -> [K2Node_IfThenElse_0@InitializeAll_MERGED].execute#2
+[K2Node_ExecutionSequence_0@InitializeAll_MERGED].then_3 -> [K2Node_VariableGet_8@InitializeAll_MERGED].execute
+[K2Node_ExecutionSequence_0@InitializeAll_MERGED].then_4 -> [K2Node_VariableSet_2@InitializeAll_MERGED].execute
+[K2Node_FunctionEntry_0@GetShapes_MERGED].Material -> [K2Node_SetVariableOnPersistentFrame_0@Capture].K2Node_Event_Material
+[K2Node_FunctionEntry_0@GetShapes_MERGED].ZPosition -> [K2Node_SetVariableOnPersistentFrame_0@Capture].K2Node_Event_ZPosition
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then -> [K2Node_CallFunction_7@InitializeAll_MERGED].execute
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#10 -> [K2Node_SetVariableOnPersistentFrame_0@Capture].execute#2
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#2 -> [K2Node_CallFunction_28@ApplyMaterial_MERGED].execute
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#3 -> [K2Node_FunctionResult_0@GetShapes_MERGED].execute
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#4 -> [K2Node_FunctionResult_0@GetShapes_MERGED].execute#2
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#5 -> [K2Node_ExecutionSequence_0@InitializeAll_MERGED].execute
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#6 -> [K2Node_VariableSet_0@CaptureScene_MERGED].execute
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#7 -> [K2Node_IfThenElse_0@InitializeAll_MERGED].execute
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#8 -> [K2Node_CallFunction_0@InitializeAll_MERGED].execute#2
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#9 -> [K2Node_SetVariableOnPersistentFrame_0@Capture].execute
+[K2Node_IfThenElse_0@InitializeAll_MERGED].then -> [K2Node_CallFunction_33@GenerateDistanceFields_MERGED].execute
+[K2Node_IfThenElse_0@InitializeAll_MERGED].then#2 -> [K2Node_CallFunction_2@InitializeAll_MERGED].execute
+[K2Node_IfThenElse_1].then -> [K2Node_DynamicCast_0].execute
+[K2Node_PromotableOperator_0@ApplyMaterial_MERGED].ReturnValue -> [K2Node_CallFunction_28@ApplyMaterial_MERGED].Value
+[K2Node_PromotableOperator_1@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_18@InitializeAll_MERGED].NewScale
+[K2Node_PromotableOperator_2@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_20@InitializeAll_MERGED].X
+[K2Node_PromotableOperator_6@InitializeAll_MERGED].ReturnValue -> [K2Node_PromotableOperator_7@InitializeAll_MERGED].B
+[K2Node_PromotableOperator_7@InitializeAll_MERGED].ReturnValue -> [K2Node_CallFunction_21@InitializeAll_MERGED].A
+[K2Node_Self_0@GenerateDistanceFields_MERGED].self -> [K2Node_CallFunction_3@InitializeAll_MERGED].Source
+[K2Node_Self_0@GenerateDistanceFields_MERGED].self -> [K2Node_Message_0@GenerateDistanceFields_MERGED].Source
+[K2Node_Self_1@GenerateDistanceFields_MERGED].self -> [K2Node_CallFunction_1@InitializeAll_MERGED].TestObject
+[K2Node_SetVariableOnPersistentFrame_0@Capture].then -> [K2Node_CallFunction_0@InitializeAll_MERGED].execute#3
+[K2Node_SetVariableOnPersistentFrame_0@Capture].then#2 -> [K2Node_CallFunction_0@InitializeAll_MERGED].execute#4
+[K2Node_TemporaryVariable_0].Variable -> [K2Node_AssignmentStatement_0].Variable
+[K2Node_TemporaryVariable_0].Variable -> [K2Node_AssignmentStatement_1].Variable
+[K2Node_TemporaryVariable_0].Variable -> [K2Node_CallArrayFunction_1].Index
+[K2Node_TemporaryVariable_0].Variable -> [K2Node_CallFunction_0@InitializeAll_MERGED].A
+[K2Node_TemporaryVariable_0].Variable -> [K2Node_CallFunction_2@InitializeAll_MERGED].A
+[K2Node_VariableGet_0@CaptureScene_MERGED].MaterialInsatnce -> [K2Node_CallFunction_15@InitializeAll_MERGED].self
+[K2Node_VariableGet_0@CaptureScene_MERGED].MaterialInsatnce -> [K2Node_CallFunction_22@InitializeAll_MERGED].self
+[K2Node_VariableGet_0@CaptureScene_MERGED].SceneCaptureComponent2D -> [K2Node_VariableSet_0@CaptureScene_MERGED].self
+[K2Node_VariableGet_11@InitializeAll_MERGED].Box -> [K2Node_CallFunction_18@InitializeAll_MERGED].self
+[K2Node_VariableGet_12@InitializeAll_MERGED].SceneCaptureComponent2D -> [K2Node_VariableSet_3@InitializeAll_MERGED].self
+[K2Node_VariableGet_13@ApplyMaterial_MERGED].Volume -> [K2Node_CallFunction_29@ApplyMaterial_MERGED].InVec
+[K2Node_VariableGet_14@InitializeAll_MERGED].Box -> [K2Node_CallFunction_19@InitializeAll_MERGED].self
+[K2Node_VariableGet_15@InitializeAll_MERGED].Volume -> [K2Node_CallFunction_1@InitializeAll_MERGED].A#2
+[K2Node_VariableGet_15@InitializeAll_MERGED].Volume -> [K2Node_CallFunction_4@InitializeAll_MERGED].InVec#2
+[K2Node_VariableGet_15@InitializeAll_MERGED].Volume -> [K2Node_CallFunction_7@InitializeAll_MERGED].InVec
+[K2Node_VariableGet_15@InitializeAll_MERGED].Volume -> [K2Node_CallFunction_8@InitializeAll_MERGED].InVec
+[K2Node_VariableGet_15@InitializeAll_MERGED].Volume -> [K2Node_CallFunction_9@InitializeAll_MERGED].InVec#2
+[K2Node_VariableGet_15@InitializeAll_MERGED].Volume -> [K2Node_PromotableOperator_1@InitializeAll_MERGED].A
+[K2Node_VariableGet_17@InitializeAll_MERGED].Volume_X -> [K2Node_PromotableOperator_6@InitializeAll_MERGED].B
+[K2Node_VariableGet_17@InitializeAll_MERGED].Volume_X -> [K2Node_VariableSet_3@InitializeAll_MERGED].OrthoWidth
+[K2Node_VariableGet_17@InitializeAll_MERGED].Volume_Y -> [K2Node_PromotableOperator_6@InitializeAll_MERGED].A
+[K2Node_VariableGet_17@InitializeAll_MERGED].Volume_Z -> [K2Node_CallFunction_22@InitializeAll_MERGED].Value
+[K2Node_VariableGet_17@InitializeAll_MERGED].Volume_Z -> [K2Node_PromotableOperator_2@InitializeAll_MERGED].A
+[K2Node_VariableGet_1@InitializeAll_MERGED].CurrentFrame -> [K2Node_CallFunction_15@InitializeAll_MERGED].Value
+[K2Node_VariableGet_1@InitializeAll_MERGED].CurrentFrame -> [K2Node_CallFunction_16@InitializeAll_MERGED].CurrentTexture
+[K2Node_VariableGet_1@InitializeAll_MERGED].CurrentFrame -> [K2Node_VariableSet_0@CaptureScene_MERGED].TextureTarget
+[K2Node_VariableGet_24@InitializeAll_MERGED].Resolution -> [K2Node_CallFunction_16@InitializeAll_MERGED].Width
+[K2Node_VariableGet_24@InitializeAll_MERGED].Resolution -> [K2Node_CallFunction_26@InitializeAll_MERGED].InInt
+[K2Node_VariableGet_2@InitializeAll_MERGED].Instance -> [K2Node_CallFunction_15@InitializeAll_MERGED].self
+[K2Node_VariableGet_2@InitializeAll_MERGED].Instance -> [K2Node_CallFunction_28@ApplyMaterial_MERGED].self
+[K2Node_VariableGet_2@InitializeAll_MERGED].Plane -> [K2Node_CallFunction_2@InitializeAll_MERGED].self
+[K2Node_VariableGet_3@CaptureScene_MERGED].DebugPlane -> [K2Node_CallFunction_12@InitializeAll_MERGED].Object
+[K2Node_VariableGet_3@CaptureScene_MERGED].SceneCaptureComponent2D -> [K2Node_CallFunction_17@CaptureScene_MERGED].self
+[K2Node_VariableGet_5@InitializeAll_MERGED].SceneCaptureComponent2D -> [K2Node_VariableSet_2@InitializeAll_MERGED].self
+[K2Node_VariableGet_6@InitializeAll_MERGED].Show Only Actors -> [K2Node_VariableSet_2@InitializeAll_MERGED].ShowOnlyActors
+[K2Node_VariableGet_8@InitializeAll_MERGED].then -> [K2Node_CallFunction_2@InitializeAll_MERGED].execute
+[K2Node_VariableGet_9@InitializeAll_MERGED].DebugPlane -> [K2Node_CallFunction_2@InitializeAll_MERGED].self
+[K2Node_VariableGet_9@InitializeAll_MERGED].SceneCaptureComponent2D -> [K2Node_CallFunction_10@InitializeAll_MERGED].self
+[K2Node_VariableGet_9@InitializeAll_MERGED].SceneCaptureComponent2D -> [K2Node_CallFunction_13@ApplyMaterial_MERGED].self
+[K2Node_VariableGet_9@InitializeAll_MERGED].SceneCaptureComponent2D -> [K2Node_CallFunction_4@InitializeAll_MERGED].self
+[K2Node_VariableGet_9@InitializeAll_MERGED].SceneCaptureComponent2D -> [K2Node_CallFunction_8@InitializeAll_MERGED].self
+[K2Node_VariableSet_0@CaptureScene_MERGED].then -> [K2Node_CallMaterialParameterCollectionFunction_0@CaptureScene_MERGED].execute
+[K2Node_VariableSet_10@InitializeAll_MERGED].then -> [K2Node_VariableSet_9@InitializeAll_MERGED].execute
+[K2Node_VariableSet_1@InitializeAll_MERGED].Output_Get -> [K2Node_CallFunction_15@InitializeAll_MERGED].self
+[K2Node_VariableSet_1@InitializeAll_MERGED].Output_Get -> [K2Node_CallFunction_22@InitializeAll_MERGED].self
+[K2Node_VariableSet_1@InitializeAll_MERGED].then -> [K2Node_CallFunction_15@InitializeAll_MERGED].execute
+[K2Node_VariableSet_2@InitializeAll_MERGED].then -> [K2Node_VariableSet_3@InitializeAll_MERGED].execute

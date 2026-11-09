@@ -1,0 +1,1207 @@
+﻿# /Game/FluidFlux/Editor/Blueprints/BP_FluxViewportEditor
+# класс: Blueprint; происхождение: проект; узлов: 299; связей: 424; HLSL: 0; причина: папка /Game/FluidFlux; тело:266
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxViewportEditor] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/UMG.Viewport'"
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = "Events"
+    CategorySorting(1) = "Camera"
+    CategorySorting(2) = "Mouse"
+    CategorySorting(3) = "Event Graph"
+    CategorySorting(4) = "Default"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BP_FluxViewportEditor.BP_FluxViewportEditor:SetCameraRotation",SavedViewOffset=(X=2571.176758,Y=-330.226959),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BP_FluxViewportEditor.BP_FluxViewportEditor:Unproject Position",SavedViewOffset=(X=1687.827759,Y=-726.755371),SavedZoomAmount=0.225000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BP_FluxViewportEditor.BP_FluxViewportEditor:OnMouseWheel",SavedViewOffset=(X=-152.880859,Y=-238.317413),SavedZoomAmount=1.000000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BP_FluxViewportEditor.BP_FluxViewportEditor:UpdateCamera",SavedViewOffset=(X=790.758057,Y=174.984207),SavedZoomAmount=0.750000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BP_FluxViewportEditor.BP_FluxViewportEditor:OnMouseOver",SavedViewOffset=(X=-241.880859,Y=-286.317413),SavedZoomAmount=1.000000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BP_FluxViewportEditor.BP_FluxViewportEditor:EventGraph",SavedViewOffset=(X=101.404411,Y=-143.860138),SavedZoomAmount=0.875000)
+    LastEditedDocuments(6) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BP_FluxViewportEditor.BP_FluxViewportEditor:OnMouseMove",SavedViewOffset=(X=-1220.506348,Y=-691.392822),SavedZoomAmount=0.675000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxViewportEditor_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = C015C14647BCD1A3279491AFA26DAB27
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- OnMouseMove
+    FunctionGraphs(1) <- OnMouseOver
+    FunctionGraphs(2) <- OnMouseWheel
+    FunctionGraphs(3) <- SetCameraRotation
+    FunctionGraphs(4) <- Unproject Position
+    FunctionGraphs(5) <- UpdateCamera
+    FunctionGraphs(6) <- OnConstruct
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[OnMouseWheel] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D6B697F34E1C187C16AADA9E328AB2DC
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_5
+    Nodes(2) <- K2Node_VariableGet_8
+    Nodes(3) <- K2Node_PromotableOperator_3
+    Nodes(4) <- K2Node_PromotableOperator_7
+    Nodes(5) <- K2Node_VariableSet_1
+[K2Node_FunctionEntry_0@OnMouseWheel] K2Node_FunctionEntry
+[K2Node_CallFunction_5@OnMouseWheel] K2Node_CallFunction
+[K2Node_VariableGet_8@OnMouseWheel] K2Node_VariableGet
+[K2Node_PromotableOperator_3@OnMouseWheel] K2Node_PromotableOperator
+[K2Node_PromotableOperator_7@OnMouseWheel] K2Node_PromotableOperator
+[K2Node_VariableSet_1@OnMouseWheel] K2Node_VariableSet
+[OnMouseOver] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 49F3044F4A27E3CF23FC18AF5F536293
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_0
+[K2Node_FunctionEntry_0@OnMouseOver] K2Node_FunctionEntry
+[K2Node_VariableSet_0@OnMouseOver] K2Node_VariableSet
+[OnConstruct] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 71123B5E4C7A3611C5976493C35DD008
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+    Nodes(2) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@OnConstruct] K2Node_FunctionEntry
+[K2Node_CallFunction_0@OnConstruct] K2Node_CallFunction
+[K2Node_VariableGet_0@OnConstruct] K2Node_VariableGet
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = B4B99C8349E2D755DC3B1D9707010C40
+    Nodes(0) <- K2Node_CustomEvent_0
+    Nodes(1) <- K2Node_CallFunction_6
+    Nodes(2) <- K2Node_CallFunction_5
+    Nodes(3) <- K2Node_VariableGet_0
+    Nodes(4) <- K2Node_VariableSet_0
+    Nodes(5) <- K2Node_VariableGet_1
+    Nodes(6) <- K2Node_IfThenElse_0
+[K2Node_CustomEvent_0@EventGraph] K2Node_CustomEvent
+[K2Node_CallFunction_6@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_5@EventGraph] K2Node_CallFunction
+[K2Node_VariableGet_0@EventGraph] K2Node_VariableGet
+[K2Node_VariableSet_0@EventGraph] K2Node_VariableSet
+[K2Node_VariableGet_1@EventGraph] K2Node_VariableGet
+[K2Node_IfThenElse_0@EventGraph] K2Node_IfThenElse
+[OnMouseMove] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E55157684C35480D02279586D7AC4133
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_CallFunction_0
+    Nodes(3) <- K2Node_VariableSet_0
+    Nodes(4) <- K2Node_CallFunction_1
+    Nodes(5) <- K2Node_VariableSet_1
+    Nodes(6) <- K2Node_CallFunction_2
+    Nodes(7) <- K2Node_VariableSet_2
+    Nodes(8) <- K2Node_VariableSet_3
+    Nodes(9) <- K2Node_CallFunction_9
+    Nodes(10) <- K2Node_CallFunction_16
+    Nodes(11) <- K2Node_PromotableOperator_3
+    Nodes(12) <- K2Node_PromotableOperator_4
+    Nodes(13) <- K2Node_CallFunction_17
+    Nodes(14) <- K2Node_VariableSet_4
+    Nodes(15) <- K2Node_CallFunction_3
+    Nodes(16) <- K2Node_PromotableOperator_0
+    Nodes(17) <- K2Node_VariableSet_5
+    Nodes(18) <- K2Node_VariableGet_7
+    Nodes(19) <- K2Node_VariableGet_1
+    Nodes(20) <- K2Node_VariableGet_5
+    Nodes(21) <- K2Node_VariableGet_4
+    Nodes(22) <- K2Node_VariableGet_6
+    Nodes(23) <- K2Node_Self_0
+[K2Node_FunctionEntry_0@OnMouseMove] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@OnMouseMove] K2Node_FunctionResult
+[K2Node_CallFunction_0@OnMouseMove] K2Node_CallFunction
+[K2Node_VariableSet_0@OnMouseMove] K2Node_VariableSet
+[K2Node_CallFunction_1@OnMouseMove] K2Node_CallFunction
+[K2Node_VariableSet_1@OnMouseMove] K2Node_VariableSet
+[K2Node_CallFunction_2@OnMouseMove] K2Node_CallFunction
+[K2Node_VariableSet_2@OnMouseMove] K2Node_VariableSet
+[K2Node_VariableSet_3@OnMouseMove] K2Node_VariableSet
+[K2Node_CallFunction_9@OnMouseMove] K2Node_CallFunction
+[K2Node_CallFunction_16@OnMouseMove] K2Node_CallFunction
+[K2Node_PromotableOperator_3@OnMouseMove] K2Node_PromotableOperator
+[K2Node_PromotableOperator_4@OnMouseMove] K2Node_PromotableOperator
+[K2Node_CallFunction_17@OnMouseMove] K2Node_CallFunction
+[K2Node_VariableSet_4@OnMouseMove] K2Node_VariableSet
+[K2Node_CallFunction_3@OnMouseMove] K2Node_CallFunction
+[K2Node_PromotableOperator_0@OnMouseMove] K2Node_PromotableOperator
+[K2Node_VariableSet_5@OnMouseMove] K2Node_VariableSet
+[K2Node_VariableGet_7@OnMouseMove] K2Node_VariableGet
+[K2Node_VariableGet_1@OnMouseMove] K2Node_VariableGet
+[K2Node_VariableGet_5@OnMouseMove] K2Node_VariableGet
+[K2Node_VariableGet_4@OnMouseMove] K2Node_VariableGet
+[K2Node_VariableGet_6@OnMouseMove] K2Node_VariableGet
+[K2Node_Self_0@OnMouseMove] K2Node_Self
+[SetCameraRotation] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E04E16224393DF5CC1003C9153DF2ED3
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_14
+    Nodes(2) <- K2Node_CallFunction_11
+    Nodes(3) <- K2Node_CallFunction_50
+    Nodes(4) <- K2Node_CallFunction_13
+    Nodes(5) <- K2Node_PromotableOperator_6
+    Nodes(6) <- K2Node_VariableGet_8
+    Nodes(7) <- K2Node_PromotableOperator_0
+[K2Node_FunctionEntry_0@SetCameraRotation] K2Node_FunctionEntry
+[K2Node_CallFunction_14@SetCameraRotation] K2Node_CallFunction
+[K2Node_CallFunction_11@SetCameraRotation] K2Node_CallFunction
+[K2Node_CallFunction_50@SetCameraRotation] K2Node_CallFunction
+[K2Node_CallFunction_13@SetCameraRotation] K2Node_CallFunction
+[K2Node_PromotableOperator_6@SetCameraRotation] K2Node_PromotableOperator
+[K2Node_VariableGet_8@SetCameraRotation] K2Node_VariableGet
+[K2Node_PromotableOperator_0@SetCameraRotation] K2Node_PromotableOperator
+[Unproject Position] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 192135A84C22E7F994F5B5A39B68BFC1
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_PromotableOperator_10
+    Nodes(2) <- K2Node_PromotableOperator_2
+    Nodes(3) <- K2Node_PromotableOperator_1
+    Nodes(4) <- K2Node_CallFunction_4
+    Nodes(5) <- K2Node_CallFunction_38
+    Nodes(6) <- K2Node_PromotableOperator_27
+    Nodes(7) <- K2Node_CallFunction_39
+    Nodes(8) <- K2Node_PromotableOperator_15
+    Nodes(9) <- K2Node_PromotableOperator_8
+    Nodes(10) <- K2Node_PromotableOperator_29
+    Nodes(11) <- K2Node_CallFunction_40
+    Nodes(12) <- K2Node_CallFunction_46
+    Nodes(13) <- K2Node_PromotableOperator_18
+    Nodes(14) <- K2Node_FunctionResult_1
+    Nodes(15) <- K2Node_CallFunction_1
+    Nodes(16) <- K2Node_CallFunction_5
+    Nodes(17) <- K2Node_CallFunction_15
+    Nodes(18) <- K2Node_CallFunction_17
+    Nodes(19) <- K2Node_CallFunction_19
+    Nodes(20) <- K2Node_CallFunction_20
+    Nodes(21) <- K2Node_PromotableOperator_4
+    Nodes(22) <- K2Node_PromotableOperator_7
+    Nodes(23) <- K2Node_CallFunction_16
+    Nodes(24) <- K2Node_MakeStruct_1
+    Nodes(25) <- K2Node_CallFunction_27
+    Nodes(26) <- K2Node_VariableGet_13
+    Nodes(27) <- K2Node_VariableGet_3
+    Nodes(28) <- K2Node_CallFunction_26
+    Nodes(29) <- K2Node_CallFunction_23
+    Nodes(30) <- K2Node_CallFunction_25
+    Nodes(31) <- K2Node_PromotableOperator_17
+    Nodes(32) <- K2Node_CallFunction_2
+    Nodes(33) <- K2Node_VariableGet_0
+    Nodes(34) <- K2Node_CallFunction_28
+    Nodes(35) <- K2Node_VariableGet_9
+    Nodes(36) <- K2Node_CallFunction_24
+    Nodes(37) <- K2Node_PromotableOperator_21
+    Nodes(38) <- K2Node_PromotableOperator_22
+    Nodes(39) <- K2Node_CallFunction_33
+    Nodes(40) <- K2Node_CallFunction_34
+    Nodes(41) <- K2Node_CallFunction_35
+    Nodes(42) <- EdGraphNode_Comment_0
+    Nodes(43) <- K2Node_VariableGet_2
+    Nodes(44) <- K2Node_VariableGet_6
+    Nodes(45) <- K2Node_VariableGet_11
+    Nodes(46) <- K2Node_VariableGet_18
+    Nodes(47) <- K2Node_VariableGet_1
+    Nodes(48) <- K2Node_VariableGet_4
+    Nodes(49) <- K2Node_CallFunction_0
+    Nodes(50) <- K2Node_CallFunction_3
+[K2Node_FunctionEntry_0@Unproject Position] K2Node_FunctionEntry
+[K2Node_PromotableOperator_10@Unproject Position] K2Node_PromotableOperator
+[K2Node_PromotableOperator_2@Unproject Position] K2Node_PromotableOperator
+[K2Node_PromotableOperator_1@Unproject Position] K2Node_PromotableOperator
+[K2Node_CallFunction_4@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_38@Unproject Position] K2Node_CallFunction
+[K2Node_PromotableOperator_27@Unproject Position] K2Node_PromotableOperator
+[K2Node_CallFunction_39@Unproject Position] K2Node_CallFunction
+[K2Node_PromotableOperator_15@Unproject Position] K2Node_PromotableOperator
+[K2Node_PromotableOperator_8@Unproject Position] K2Node_PromotableOperator
+[K2Node_PromotableOperator_29@Unproject Position] K2Node_PromotableOperator
+[K2Node_CallFunction_40@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_46@Unproject Position] K2Node_CallFunction
+[K2Node_PromotableOperator_18@Unproject Position] K2Node_PromotableOperator
+[K2Node_FunctionResult_1@Unproject Position] K2Node_FunctionResult
+[K2Node_CallFunction_1@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_5@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_15@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_17@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_19@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_20@Unproject Position] K2Node_CallFunction
+[K2Node_PromotableOperator_4@Unproject Position] K2Node_PromotableOperator
+[K2Node_PromotableOperator_7@Unproject Position] K2Node_PromotableOperator
+[K2Node_CallFunction_16@Unproject Position] K2Node_CallFunction
+[K2Node_MakeStruct_1@Unproject Position] K2Node_MakeStruct
+[K2Node_CallFunction_27@Unproject Position] K2Node_CallFunction
+[K2Node_VariableGet_13@Unproject Position] K2Node_VariableGet
+[K2Node_VariableGet_3@Unproject Position] K2Node_VariableGet
+[K2Node_CallFunction_26@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_23@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_25@Unproject Position] K2Node_CallFunction
+[K2Node_PromotableOperator_17@Unproject Position] K2Node_PromotableOperator
+[K2Node_CallFunction_2@Unproject Position] K2Node_CallFunction
+[K2Node_VariableGet_0@Unproject Position] K2Node_VariableGet
+[K2Node_CallFunction_28@Unproject Position] K2Node_CallFunction
+[K2Node_VariableGet_9@Unproject Position] K2Node_VariableGet
+[K2Node_CallFunction_24@Unproject Position] K2Node_CallFunction
+[K2Node_PromotableOperator_21@Unproject Position] K2Node_PromotableOperator
+[K2Node_PromotableOperator_22@Unproject Position] K2Node_PromotableOperator
+[K2Node_CallFunction_33@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_34@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_35@Unproject Position] K2Node_CallFunction
+[EdGraphNode_Comment_0@Unproject Position] EdGraphNode_Comment
+[K2Node_VariableGet_2@Unproject Position] K2Node_VariableGet
+[K2Node_VariableGet_6@Unproject Position] K2Node_VariableGet
+[K2Node_VariableGet_11@Unproject Position] K2Node_VariableGet
+[K2Node_VariableGet_18@Unproject Position] K2Node_VariableGet
+[K2Node_VariableGet_1@Unproject Position] K2Node_VariableGet
+[K2Node_VariableGet_4@Unproject Position] K2Node_VariableGet
+[K2Node_CallFunction_0@Unproject Position] K2Node_CallFunction
+[K2Node_CallFunction_3@Unproject Position] K2Node_CallFunction
+[UpdateCamera] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 457444B549B40D573061958736DA1E8F
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_PromotableOperator_0
+    Nodes(2) <- K2Node_CallFunction_12
+    Nodes(3) <- K2Node_CallFunction_5
+    Nodes(4) <- K2Node_PromotableOperator_1
+    Nodes(5) <- K2Node_IfThenElse_0
+    Nodes(6) <- K2Node_VariableGet_3
+    Nodes(7) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(8) <- K2Node_CallFunction_7
+    Nodes(9) <- K2Node_CallFunction_10
+    Nodes(10) <- K2Node_PromotableOperator_5
+    Nodes(11) <- K2Node_PromotableOperator_4
+    Nodes(12) <- K2Node_PromotableOperator_2
+    Nodes(13) <- K2Node_ExecutionSequence_0
+    Nodes(14) <- K2Node_CallFunction_2
+    Nodes(15) <- K2Node_VariableGet_6
+    Nodes(16) <- K2Node_CallFunction_3
+    Nodes(17) <- K2Node_PromotableOperator_6
+    Nodes(18) <- K2Node_VariableGet_15
+    Nodes(19) <- K2Node_CallFunction_0
+    Nodes(20) <- K2Node_VariableGet_7
+    Nodes(21) <- K2Node_VariableGet_4
+    Nodes(22) <- K2Node_VariableGet_16
+    Nodes(23) <- K2Node_VariableGet_17
+    Nodes(24) <- K2Node_VariableSet_0
+[K2Node_FunctionEntry_0@UpdateCamera] K2Node_FunctionEntry
+[K2Node_PromotableOperator_0@UpdateCamera] K2Node_PromotableOperator
+[K2Node_CallFunction_12@UpdateCamera] K2Node_CallFunction
+[K2Node_CallFunction_5@UpdateCamera] K2Node_CallFunction
+[K2Node_PromotableOperator_1@UpdateCamera] K2Node_PromotableOperator
+[K2Node_IfThenElse_0@UpdateCamera] K2Node_IfThenElse
+[K2Node_VariableGet_3@UpdateCamera] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_0@UpdateCamera] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_7@UpdateCamera] K2Node_CallFunction
+[K2Node_CallFunction_10@UpdateCamera] K2Node_CallFunction
+[K2Node_PromotableOperator_5@UpdateCamera] K2Node_PromotableOperator
+[K2Node_PromotableOperator_4@UpdateCamera] K2Node_PromotableOperator
+[K2Node_PromotableOperator_2@UpdateCamera] K2Node_PromotableOperator
+[K2Node_ExecutionSequence_0@UpdateCamera] K2Node_ExecutionSequence
+[K2Node_CallFunction_2@UpdateCamera] K2Node_CallFunction
+[K2Node_VariableGet_6@UpdateCamera] K2Node_VariableGet
+[K2Node_CallFunction_3@UpdateCamera] K2Node_CallFunction
+[K2Node_PromotableOperator_6@UpdateCamera] K2Node_PromotableOperator
+[K2Node_VariableGet_15@UpdateCamera] K2Node_VariableGet
+[K2Node_CallFunction_0@UpdateCamera] K2Node_CallFunction
+[K2Node_VariableGet_7@UpdateCamera] K2Node_VariableGet
+[K2Node_VariableGet_4@UpdateCamera] K2Node_VariableGet
+[K2Node_VariableGet_16@UpdateCamera] K2Node_VariableGet
+[K2Node_VariableGet_17@UpdateCamera] K2Node_VariableGet
+[K2Node_VariableSet_0@UpdateCamera] K2Node_VariableSet
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ExecuteUbergraph_BP_FluxViewportEditor] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = DC7D49A048E55AD6F63C4AB0791E3698
+    Nodes(0) <- K2Node_IfThenElse_0
+    Nodes(1) <- K2Node_VariableGet_1
+    Nodes(2) <- K2Node_VariableSet_0
+    Nodes(3) <- K2Node_VariableGet_0
+    Nodes(4) <- K2Node_CallFunction_5
+    Nodes(5) <- K2Node_CallFunction_6
+    Nodes(6) <- K2Node_CustomEvent_0
+    Nodes(7) <- K2Node_FunctionEntry_0
+[K2Node_CustomEvent_0@ExecuteUbergraph_BP_FluxViewportEditor] K2Node_CustomEvent
+    CustomFunctionName = "Tick"
+    ErrorType = 1
+    CustomFunctionName = "Tick"
+    ErrorType = 1
+[K2Node_CallFunction_6@ExecuteUbergraph_BP_FluxViewportEditor] K2Node_CallFunction
+[K2Node_CallFunction_5@ExecuteUbergraph_BP_FluxViewportEditor] K2Node_CallFunction
+[K2Node_VariableGet_0@ExecuteUbergraph_BP_FluxViewportEditor] K2Node_VariableGet
+[K2Node_VariableSet_0@ExecuteUbergraph_BP_FluxViewportEditor] K2Node_VariableSet
+[K2Node_VariableGet_1@ExecuteUbergraph_BP_FluxViewportEditor] K2Node_VariableGet
+[K2Node_IfThenElse_0@ExecuteUbergraph_BP_FluxViewportEditor] K2Node_IfThenElse
+[K2Node_FunctionEntry_0@ExecuteUbergraph_BP_FluxViewportEditor] K2Node_FunctionEntry
+[Tick] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 8AD6C3C84DC49CC623B63D9ADF665EEF
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@Tick] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@Tick] K2Node_CallFunction
+[OnMouseMove_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E55157684C35480D02279586D7AC4133
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_CallFunction_0
+    Nodes(3) <- K2Node_VariableSet_0
+    Nodes(4) <- K2Node_CallFunction_1
+    Nodes(5) <- K2Node_VariableSet_1
+    Nodes(6) <- K2Node_CallFunction_2
+    Nodes(7) <- K2Node_VariableSet_2
+    Nodes(8) <- K2Node_VariableSet_3
+    Nodes(9) <- K2Node_CallFunction_9
+    Nodes(10) <- K2Node_CallFunction_16
+    Nodes(11) <- K2Node_CallFunction_6
+    Nodes(12) <- K2Node_CallFunction_5
+    Nodes(13) <- K2Node_CallFunction_17
+    Nodes(14) <- K2Node_VariableSet_4
+    Nodes(15) <- K2Node_CallFunction_3
+    Nodes(16) <- K2Node_CallFunction_4
+    Nodes(17) <- K2Node_VariableSet_5
+    Nodes(18) <- K2Node_VariableGet_7
+    Nodes(19) <- K2Node_VariableGet_1
+    Nodes(20) <- K2Node_VariableGet_5
+    Nodes(21) <- K2Node_VariableGet_4
+    Nodes(22) <- K2Node_VariableGet_6
+    Nodes(23) <- K2Node_Self_0
+[K2Node_FunctionEntry_0@OnMouseMove_MERGED] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@OnMouseMove_MERGED] K2Node_FunctionResult (вызов: OnMouseMove)
+    bIsEditable = True
+    bIsEditable = True
+[K2Node_CallFunction_0@OnMouseMove_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_0@OnMouseMove_MERGED] K2Node_VariableSet
+[K2Node_CallFunction_1@OnMouseMove_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_1@OnMouseMove_MERGED] K2Node_VariableSet
+[K2Node_CallFunction_2@OnMouseMove_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_2@OnMouseMove_MERGED] K2Node_VariableSet (переменная: MousePosition)
+[K2Node_VariableSet_3@OnMouseMove_MERGED] K2Node_VariableSet (переменная: WindowPosition)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_CallFunction_9@OnMouseMove_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_16@OnMouseMove_MERGED] K2Node_CallFunction
+[K2Node_PromotableOperator_3@OnMouseMove_MERGED] K2Node_PromotableOperator
+[K2Node_PromotableOperator_4@OnMouseMove_MERGED] K2Node_PromotableOperator
+[K2Node_CallFunction_17@OnMouseMove_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_4@OnMouseMove_MERGED] K2Node_VariableSet (переменная: WindowAspectRatio)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_CallFunction_3@OnMouseMove_MERGED] K2Node_CallFunction
+[K2Node_PromotableOperator_0@OnMouseMove_MERGED] K2Node_PromotableOperator
+[K2Node_VariableSet_5@OnMouseMove_MERGED] K2Node_VariableSet (переменная: WindowSize)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_VariableGet_7@OnMouseMove_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_1@OnMouseMove_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_5@OnMouseMove_MERGED] K2Node_VariableGet (переменная: WindowSize)
+[K2Node_VariableGet_4@OnMouseMove_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_6@OnMouseMove_MERGED] K2Node_VariableGet
+[K2Node_Self_0@OnMouseMove_MERGED] K2Node_Self
+[K2Node_CallFunction_4@OnMouseMove_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_5@OnMouseMove_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_6@OnMouseMove_MERGED] K2Node_CallFunction
+[OnMouseOver_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 49F3044F4A27E3CF23FC18AF5F536293
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_0
+[K2Node_FunctionEntry_0@OnMouseOver_MERGED] K2Node_FunctionEntry
+[K2Node_VariableSet_0@OnMouseOver_MERGED] K2Node_VariableSet
+[OnMouseWheel_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D6B697F34E1C187C16AADA9E328AB2DC
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_5
+    Nodes(2) <- K2Node_VariableGet_8
+    Nodes(3) <- K2Node_CallFunction_1
+    Nodes(4) <- K2Node_CallFunction_0
+    Nodes(5) <- K2Node_VariableSet_1
+[K2Node_FunctionEntry_0@OnMouseWheel_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_5@OnMouseWheel_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_8@OnMouseWheel_MERGED] K2Node_VariableGet
+[K2Node_PromotableOperator_3@OnMouseWheel_MERGED] K2Node_PromotableOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_7@OnMouseWheel_MERGED] K2Node_PromotableOperator
+[K2Node_VariableSet_1@OnMouseWheel_MERGED] K2Node_VariableSet (переменная: CameraDistanceTarget)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_CallFunction_0@OnMouseWheel_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_1@OnMouseWheel_MERGED] K2Node_CallFunction
+[SetCameraRotation_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E04E16224393DF5CC1003C9153DF2ED3
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_14
+    Nodes(2) <- K2Node_CallFunction_11
+    Nodes(3) <- K2Node_CallFunction_50
+    Nodes(4) <- K2Node_CallFunction_13
+    Nodes(5) <- K2Node_CallFunction_1
+    Nodes(6) <- K2Node_VariableGet_8
+    Nodes(7) <- K2Node_CallFunction_2
+    Nodes(8) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@SetCameraRotation_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_14@SetCameraRotation_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_11@SetCameraRotation_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_50@SetCameraRotation_MERGED] K2Node_CallFunction (вызов: GetViewRotation)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_13@SetCameraRotation_MERGED] K2Node_CallFunction
+[K2Node_PromotableOperator_6@SetCameraRotation_MERGED] K2Node_PromotableOperator
+[K2Node_VariableGet_8@SetCameraRotation_MERGED] K2Node_VariableGet (переменная: CameraDistanceTarget)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_PromotableOperator_0@SetCameraRotation_MERGED] K2Node_PromotableOperator
+[K2Node_CallFunction_0@SetCameraRotation_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_1@SetCameraRotation_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_2@SetCameraRotation_MERGED] K2Node_CallFunction
+[Unproject Position_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 192135A84C22E7F994F5B5A39B68BFC1
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_14
+    Nodes(2) <- K2Node_CallFunction_13
+    Nodes(3) <- K2Node_CallFunction_12
+    Nodes(4) <- K2Node_CallFunction_4
+    Nodes(5) <- K2Node_CallFunction_38
+    Nodes(6) <- K2Node_CallFunction_11
+    Nodes(7) <- K2Node_CallFunction_39
+    Nodes(8) <- K2Node_CallFunction_10
+    Nodes(9) <- K2Node_CallFunction_9
+    Nodes(10) <- K2Node_CallFunction_8
+    Nodes(11) <- K2Node_CallFunction_40
+    Nodes(12) <- K2Node_CallFunction_46
+    Nodes(13) <- K2Node_CallFunction_7
+    Nodes(14) <- K2Node_FunctionResult_1
+    Nodes(15) <- K2Node_CallFunction_3
+    Nodes(16) <- K2Node_CallFunction_0
+    Nodes(17) <- K2Node_VariableGet_4
+    Nodes(18) <- K2Node_VariableGet_1
+    Nodes(19) <- K2Node_CallFunction_6
+[K2Node_FunctionEntry_0@Unproject Position_MERGED] K2Node_FunctionEntry
+[K2Node_PromotableOperator_10@Unproject Position_MERGED] K2Node_PromotableOperator (вызов: Add_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_2@Unproject Position_MERGED] K2Node_PromotableOperator
+[K2Node_PromotableOperator_1@Unproject Position_MERGED] K2Node_PromotableOperator
+[K2Node_CallFunction_4@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_38@Unproject Position_MERGED] K2Node_CallFunction (вызов: Tan @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_27@Unproject Position_MERGED] K2Node_PromotableOperator (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    вход B = 2.000000
+    вход B = 2.000000
+[K2Node_CallFunction_39@Unproject Position_MERGED] K2Node_CallFunction (вызов: DegreesToRadians @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_15@Unproject Position_MERGED] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_8@Unproject Position_MERGED] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_29@Unproject Position_MERGED] K2Node_PromotableOperator (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_40@Unproject Position_MERGED] K2Node_CallFunction (вызов: MakeVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход X = 1.000000
+    вход X = 1.000000
+[K2Node_CallFunction_46@Unproject Position_MERGED] K2Node_CallFunction (вызов: GreaterGreater_VectorRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_18@Unproject Position_MERGED] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_FunctionResult_1@Unproject Position_MERGED] K2Node_FunctionResult (вызов: Unproject Position)
+    bIsEditable = True
+    bIsEditable = True
+    вход WorldPosition = 0, 0, 0
+    вход WorldDirection = 0, 0, 0
+    вход WorldPosition = 0, 0, 0
+    вход WorldDirection = 0, 0, 0
+[K2Node_CallFunction_1@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_5@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_15@Unproject Position_MERGED] K2Node_CallFunction (вызов: BreakVector4 @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_17@Unproject Position_MERGED] K2Node_CallFunction (вызов: MakeVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход X = 0.0
+    вход Y = 0.0
+    вход Z = 0.0
+[K2Node_CallFunction_19@Unproject Position_MERGED] K2Node_CallFunction (вызов: MakeVector4 @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Z = 0.0
+    вход W = 1.000000
+    вход X = 0.0
+    вход Y = 0.0
+    вход Z = 0.0
+    вход W = 1.000000
+[K2Node_CallFunction_20@Unproject Position_MERGED] K2Node_CallFunction (вызов: BreakVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_4@Unproject Position_MERGED] K2Node_PromotableOperator
+[K2Node_PromotableOperator_7@Unproject Position_MERGED] K2Node_PromotableOperator (вызов: Subtract_Vector2DVector2D @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    вход B = -100.000000
+    вход B = (X=0.500000,Y=0.500000)
+    вход B = -100.000000
+    вход B = (X=0.500000,Y=0.500000)
+[K2Node_CallFunction_16@Unproject Position_MERGED] K2Node_CallFunction (вызов: GetViewProjectionMatrix @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_MakeStruct_1@Unproject Position_MERGED] K2Node_MakeStruct
+    bMadeAfterOverridePinRemoval = True
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/Engine.MinimalViewInfo'"
+    AdvancedPinDisplay = Hidden
+    bMadeAfterOverridePinRemoval = True
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/Engine.MinimalViewInfo'"
+    AdvancedPinDisplay = Hidden
+    вход FirstPersonFOV = 90.000000
+    вход FirstPersonScale = 1.000000
+    вход OrthoWidth = 1.000000
+    вход bAutoCalculateOrthoPlanes = True
+    вход AutoPlaneShift = 0.000000
+    вход bUpdateOrthoPlanes = False
+    вход bUseCameraHeightAsViewTarget = False
+    вход OrthoNearClipPlane = 0.000000
+    вход OrthoFarClipPlane = 2097152.000000
+    вход PerspectiveNearClipPlane = 10.000000
+    вход bConstrainAspectRatio = False
+    вход bUseFirstPersonParameters = False
+    вход bUseFieldOfViewForLOD = True
+    вход ProjectionMode = Perspective
+    вход PostProcessBlendWeight = 0.000000
+    вход PostProcessSettings = (bOverride_TemperatureType=False,bOverride_WhiteTemp=False,bOverride_WhiteTint=False,bOverride_ColorSaturation=False,bOverride_ColorContrast=False,bOverride_ColorGamma=False,bOverride_ColorGain=False,bOverride_ColorOffset=False,bOverride_ColorSaturationShadows=False,bOverride_ColorContrastShadows=False,bOverride_ColorGammaShadows=False,bOverride_ColorGainShadows=False,bOverride_ColorOffsetShadows=False,bOverride_ColorSaturationMidtones=False,bOverride_ColorContrastMidtones=False,bOverride_ColorGammaMidtones=False,bOverride_ColorGainMidtones=False,bOverride_ColorOffsetMidtones=False,bOverride_ColorSaturationHighlights=False,bOverride_ColorContrastHighlights=False,bOverride_ColorGammaHighlights=False,bOverride_ColorGainHighlights=False,bOverride_ColorOffsetHighlights=False,bOverride_ColorCorrectionShadowsMax=False,bOverride_ColorCorrectionHighlightsMin=False,bOverride_ColorCorrectionHighlightsMax=False,bOverride_BlueCorrection=False,bOverride_ExpandGamut=False,bOverride_ToneCurveAmount=False,bOverride_TonemappingMethod=False,bOverride_FilmSlope=False,bOverride_FilmToe=False,bOverride_FilmShoulder=False,bOverride_FilmBlackClip=False,bOverride_FilmWhiteClip=False,bOverride_SceneColorTint=False,bOverride_SceneFringeIntensity=False,bOverride_ChromaticAberrationStartOffset=False,bOverride_bMegaLights=False,bOverride_MegaLightsFrontLayerTranslucency=False,bOverride_AmbientCubemapTint=False,bOverride_AmbientCubemapIntensity=False,bOverride_BloomMethod=False,bOverride_BloomIntensity=False,bOverride_BloomGaussianIntensity=False,bOverride_BloomThreshold=False,bOverride_Bloom1Tint=False,bOverride_Bloom1Size=False,bOverride_Bloom2Size=False,bOverride_Bloom2Tint=False,bOverride_Bloom3Tint=False,bOverride_Bloom3Size=False,bOverride_Bloom4Tint=False,bOverride_Bloom4Size=False,bOverride_Bloom5Tint=False,bOverride_Bloom5Size=False,bOverride_Bloom6Tint=False,bOverride_Bloom6Size=False,bOverride_BloomSizeScale=False,bOverride_BloomConvolutionIntensity=False,bOverride_BloomConvolutionTexture=False,bOverride_BloomConvolutionScatterDispersion=False,bOverride_BloomConvolutionSize=False,bOverride_BloomConvolutionCenterUV=False,bOverride_BloomConvolutionPreFilterMin=False,bOverride_BloomConvolutionPreFilterMax=False,bOverride_BloomConvolutionPreFilterMult=False,bOverride_BloomConvolutionBufferScale=False,bOverride_BloomDirtMaskIntensity=False,bOverride_BloomDirtMaskTint=False,bOverride_BloomDirtMask=False,bOverride_CameraShutterSpeed=False,bOverride_CameraISO=False,bOverride_AutoExposureMethod=False,bOverride_AutoExposureLowPercent=False,bOverride_AutoExposureHighPercent=False,bOverride_AutoExposureMinBrightness=False,bOverride_AutoExposureMaxBrightness=False,bOverride_AutoExposureSpeedUp=False,bOverride_AutoExposureSpeedDown=False,bOverride_AutoExposureBias=False,bOverride_AutoExposureBiasCurve=False,bOverride_AutoExposureMeterMask=False,bOverride_AutoExposureApplyPhysicalCameraExposure=False,bOverride_HistogramLogMin=False,bOverride_HistogramLogMax=False,bOverride_LocalExposureMethod=False,bOverride_LocalExposureHighlightContrastScale=False,bOverride_LocalExposureShadowContrastScale=False,bOverride_LocalExposureHighlightContrastCurve=False,bOverride_LocalExposureShadowContrastCurve=False,bOverride_LocalExposureHighlightThreshold=False,bOverride_LocalExposureShadowThreshold=False,bOverride_LocalExposureDetailStrength=False,bOverride_LocalExposureBlurredLuminanceBlend=False,bOverride_LocalExposureBlurredLuminanceKernelSizePercent=False,bOverride_LocalExposureHighlightThresholdStrength=False,bOverride_LocalExposureShadowThresholdStrength=False,bOverride_LocalExposureMiddleGreyBias=False,bOverride_LensFlareIntensity=False,bOverride_LensFlareTint=False,bOverride_LensFlareTints=False,bOverride_LensFlareBokehSize=False,bOverride_LensFlareBokehShape=False,bOverride_LensFlareThreshold=False,bOverride_VignetteIntensity=False,bOverride_VignetteType=False,bOverride_VignetteCenter=False,bOverride_VignetteColor=False,bOverride_VignetteSize=False,bOverride_VignetteSoftness=False,bOverride_VignetteTexture=False,bOverride_Sharpen=False,bOverride_FilmGrainIntensity=False,bOverride_FilmGrainIntensityShadows=False,bOverride_FilmGrainIntensityMidtones=False,bOverride_FilmGrainIntensityHighlights=False,bOverride_FilmGrainShadowsMax=False,bOverride_FilmGrainHighlightsMin=False,bOverride_FilmGrainHighlightsMax=False,bOverride_FilmGrainScale=False,bOverride_FilmGrainTexture=False,bOverride_AmbientOcclusionIntensity=False,bOverride_AmbientOcclusionStaticFraction=False,bOverride_AmbientOcclusionRadius=False,bOverride_AmbientOcclusionFadeDistance=False,bOverride_AmbientOcclusionFadeRadius=False,bOverride_AmbientOcclusionRadiusInWS=False,bOverride_AmbientOcclusionPower=False,bOverride_AmbientOcclusionBias=False,bOverride_AmbientOcclusionQuality=False,bOverride_AmbientOcclusionMipBlend=False,bOverride_AmbientOcclusionMipScale=False,bOverride_AmbientOcclusionMipThreshold=False,bOverride_AmbientOcclusionTemporalBlendWeight=False,bOverride_RayTracingAO=False,bOverride_RayTracingAOSamplesPerPixel=False,bOverride_RayTracingAOIntensity=False,bOverride_RayTracingAORadius=False,bOverride_IndirectLightingColor=False,bOverride_IndirectLightingIntensity=False,bOverride_ColorGradingIntensity=False,bOverride_ColorGradingLUT=False,bOverride_DepthOfFieldEnabled=False,bOverride_DepthOfFieldFocalDistance=False,bOverride_DepthOfFieldFstop=False,bOverride_DepthOfFieldMinFstop=False,bOverride_DepthOfFieldBladeCount=False,bOverride_DepthOfFieldSensorWidth=False,bOverride_DepthOfFieldSqueezeFactor=False,bOverride_DepthOfFieldDepthBlurRadius=False,bOverride_DepthOfFieldUseHairDepth=False,bOverride_DepthOfFieldPetzvalBokeh=False,bOverride_DepthOfFieldPetzvalBokehFalloff=False,bOverride_DepthOfFieldPetzvalExclusionBoxExtents=False,bOverride_DepthOfFieldPetzvalExclusionBoxRadius=False,bOverride_DepthOfFieldAspectRatioScalar=False,bOverride_DepthOfFieldMatteBoxFlags=False,bOverride_DepthOfFieldBarrelRadius=False,bOverride_DepthOfFieldBarrelLength=False,bOverride_DepthOfFieldDepthBlurAmount=False,bOverride_DepthOfFieldFocalRegion=False,bOverride_DepthOfFieldNearTransitionRegion=False,bOverride_DepthOfFieldFarTransitionRegion=False,bOverride_DepthOfFieldScale=False,bOverride_DepthOfFieldNearBlurSize=False,bOverride_DepthOfFieldFarBlurSize=False,bOverride_MobileHQGaussian=False,bOverride_DepthOfFieldOcclusion=False,bOverride_DepthOfFieldSkyFocusDistance=False,bOverride_DepthOfFieldVignetteSize=False,bOverride_MotionBlurAmount=False,bOverride_MotionBlurMax=False,bOverride_MotionBlurTargetFPS=False,bOverride_MotionBlurPerObjectSize=False,bOverride_ReflectionMethod=False,bOverride_LumenReflectionQuality=False,bOverride_ScreenSpaceReflectionIntensity=False,bOverride_ScreenSpaceReflectionQuality=False,bOverride_ScreenSpaceReflectionMaxRoughness=False,bOverride_ScreenSpaceReflectionRoughnessScale=False,bOverride_UserFlags=False,bOverride_RayTracingReflectionsMaxRoughness=False,bOverride_RayTracingReflectionsMaxBounces=False,bOverride_RayTracingReflectionsSamplesPerPixel=False,bOverride_RayTracingReflectionsShadows=False,bOverride_RayTracingReflectionsTranslucency=False,bOverride_TranslucencyType=False,bOverride_RayTracingTranslucencyMaxRoughness=False,bOverride_RayTracingTranslucencyRefractionRays=False,bOverride_RayTracingTranslucencySamplesPerPixel=False,bOverride_RayTracingTranslucencyShadows=False,bOverride_RayTracingTranslucencyRefraction=False,bOverride_RayTracingTranslucencyMaxPrimaryHitEvents=False,bOverride_RayTracingTranslucencyMaxSecondaryHitEvents=False,bOverride_RayTracingTranslucencyUseRayTracedRefraction=False,bOverride_DynamicGlobalIlluminationMethod=False,bOverride_LumenSceneLightingQuality=False,bOverride_LumenSceneDetail=False,bOverride_LumenSceneViewDistance=False,bOverride_LumenSceneLightingUpdateSpeed=False,bOverride_LumenFinalGatherQuality=False,bOverride_LumenFinalGatherLightingUpdateSpeed=False,bOverride_LumenFinalGatherScreenTraces=False,bOverride_LumenMaxTraceDistance=False,bOverride_LumenDiffuseColorBoost=False,bOverride_LumenAmbientOcclusionIntensity=False,bOverride_LumenSkylightLeaking=False,bOverride_LumenSkylightLeakingTint=False,bOverride_LumenFullSkylightLeakingDistance=False,bOverride_LumenRayLightingMode=False,bOverride_LumenReflectionsScreenTraces=False,bOverride_LumenFrontLayerTranslucencyReflections=False,bOverride_LumenMaxRoughnessToTraceReflections=False,bOverride_LumenMaxReflectionBounces=False,bOverride_LumenMaxRefractionBounces=False,bOverride_LumenSurfaceCacheResolution=False,bOverride_RayTracingGI=False,bOverride_RayTracingGIMaxBounces=False,bOverride_RayTracingGISamplesPerPixel=False,bOverride_PathTracingMaxBounces=False,bOverride_PathTracingSamplesPerPixel=False,bOverride_PathTracingMaxPathIntensity=False,bOverride_PathTracingEnableEmissiveMaterials=False,bOverride_PathTracingEnableReferenceDOF=False,bOverride_PathTracingEnableReferenceAtmosphere=False,bOverride_PathTracingEnableDenoiser=False,bOverride_PathTracingIncludeEmissive=False,bOverride_PathTracingIncludeDiffuse=False,bOverride_PathTracingIncludeIndirectDiffuse=False,bOverride_PathTracingIncludeSpecular=False,bOverride_PathTracingIncludeIndirectSpecular=False,bOverride_PathTracingIncludeVolume=False,bOverride_PathTracingIncludeIndirectVolume=False,bMobileHQGaussian=False,BloomMethod=BM_SOG,AutoExposureMethod=AEM_Histogram,TemperatureType=TEMP_WhiteBalance,WhiteTemp=6500.000000,WhiteTint=0.000000,ColorSaturation=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorContrast=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGamma=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGain=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorOffset=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),ColorSaturationShadows=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorContrastShadows=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGammaShadows=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGainShadows=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorOffsetShadows=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),ColorSaturationMidtones=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorContrastMidtones=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGammaMidtones=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGainMidtones=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorOffsetMidtones=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),ColorSaturationHighlights=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorContrastHighlights=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGammaHighlights=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGainHighlights=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorOffsetHighlights=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),ColorCorrectionHighlightsMin=0.500000,ColorCorrectionHighlightsMax=1.000000,ColorCorrectionShadowsMax=0.090000,BlueCorrection=0.600000,ExpandGamut=1.000000,ToneCurveAmount=1.000000,TonemappingMethod=Filmic,FilmSlope=0.880000,FilmToe=0.550000,FilmShoulder=0.260000,FilmBlackClip=0.000000,FilmWhiteClip=0.040000,SceneColorTint=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),SceneFringeIntensity=0.000000,ChromaticAberrationStartOffset=0.000000,BloomIntensity=0.675000,BloomGaussianIntensity=1.000000,BloomThreshold=-1.000000,BloomSizeScale=4.000000,Bloom1Size=0.300000,Bloom2Size=1.000000,Bloom3Size=2.000000,Bloom4Size=10.000000,Bloom5Size=30.000000,Bloom6Size=64.000000,Bloom1Tint=(R=0.346500,G=0.346500,B=0.346500,A=1.000000),Bloom2Tint=(R=0.138000,G=0.138000,B=0.138000,A=1.000000),Bloom3Tint=(R=0.117600,G=0.117600,B=0.117600,A=1.000000),Bloom4Tint=(R=0.066000,G=0.066000,B=0.066000,A=1.000000),Bloom5Tint=(R=0.066000,G=0.066000,B=0.066000,A=1.000000),Bloom6Tint=(R=0.061000,G=0.061000,B=0.061000,A=1.000000),BloomConvolutionIntensity=1.000000,BloomConvolutionScatterDispersion=1.000000,BloomConvolutionSize=1.000000,BloomConvolutionTexture=None,BloomConvolutionCenterUV=(X=0.500000,Y=0.500000),BloomConvolutionPreFilterMin=7.000000,BloomConvolutionPreFilterMax=15000.000000,BloomConvolutionPreFilterMult=15.000000,BloomConvolutionBufferScale=0.133000,BloomDirtMask=None,BloomDirtMaskIntensity=0.000000,BloomDirtMaskTint=(R=0.500000,G=0.500000,B=0.500000,A=1.000000),DynamicGlobalIlluminationMethod=Lumen,IndirectLightingColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),IndirectLightingIntensity=1.000000,LumenRayLightingMode=Default,LumenSceneLightingQuality=1.000000,LumenSceneDetail=1.000000,LumenSceneViewDistance=20000.000000,LumenSceneLightingUpdateSpeed=1.000000,LumenFinalGatherQuality=1.000000,LumenFinalGatherLightingUpdateSpeed=1.000000,LumenFinalGatherScreenTraces=True,LumenMaxTraceDistance=20000.000000,LumenDiffuseColorBoost=1.000000,LumenAmbientOcclusionIntensity=1.000000,LumenSkylightLeaking=0.000000,LumenSkylightLeakingTint=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),LumenFullSkylightLeakingDistance=1000.000000,LumenSurfaceCacheResolution=1.000000,ReflectionMethod=Lumen,LumenReflectionQuality=1.000000,LumenReflectionsScreenTraces=True,LumenFrontLayerTranslucencyReflections=False,LumenMaxRoughnessToTraceReflections=0.400000,LumenMaxReflectionBounces=1,LumenMaxRefractionBounces=0,ScreenSpaceReflectionIntensity=100.000000,ScreenSpaceReflectionQuality=50.000000,ScreenSpaceReflectionMaxRoughness=0.600000,bMegaLights=True,MegaLightsFrontLayerTranslucency=False,AmbientCubemapTint=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),AmbientCubemapIntensity=1.000000,AmbientCubemap=None,CameraShutterSpeed=60.000000,CameraISO=100.000000,DepthOfFieldFstop=4.000000,DepthOfFieldMinFstop=1.200000,DepthOfFieldBladeCount=5,AutoExposureBias=1.000000,AutoExposureBiasBackup=0.000000,bOverride_AutoExposureBiasBackup=False,AutoExposureApplyPhysicalCameraExposure=True,AutoExposureBiasCurve=None,AutoExposureMeterMask=None,AutoExposureLowPercent=10.000000,AutoExposureHighPercent=90.000000,AutoExposureMinBrightness=-10.000000,AutoExposureMaxBrightness=20.000000,AutoExposureSpeedUp=3.000000,AutoExposureSpeedDown=1.000000,HistogramLogMin=-10.000000,HistogramLogMax=20.000000,LocalExposureMethod=Bilateral,LocalExposureHighlightContrastScale=1.000000,LocalExposureShadowContrastScale=1.000000,LocalExposureHighlightContrastCurve=None,LocalExposureShadowContrastCurve=None,LocalExposureHighlightThreshold=0.000000,LocalExposureShadowThreshold=0.000000,LocalExposureDetailStrength=1.000000,LocalExposureBlurredLuminanceBlend=0.600000,LocalExposureBlurredLuminanceKernelSizePercent=50.000000,LocalExposureHighlightThresholdStrength=1.000000,LocalExposureShadowThresholdStrength=1.000000,LocalExposureMiddleGreyBias=0.000000,LensFlareIntensity=1.000000,LensFlareTint=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),LensFlareBokehSize=3.000000,LensFlareThreshold=8.000000,LensFlareBokehShape=None,LensFlareTints[0]=(R=1.000000,G=0.800000,B=0.400000,A=0.600000),LensFlareTints[1]=(R=1.000000,G=1.000000,B=0.600000,A=0.530000),LensFlareTints[2]=(R=0.800000,G=0.800000,B=1.000000,A=0.460000),LensFlareTints[3]=(R=0.500000,G=1.000000,B=0.400000,A=0.390000),LensFlareTints[4]=(R=0.500000,G=0.800000,B=1.000000,A=0.310000),LensFlareTints[5]=(R=0.900000,G=1.000000,B=0.800000,A=0.270000),LensFlareTints[6]=(R=1.000000,G=0.800000,B=0.400000,A=0.220000),LensFlareTints[7]=(R=0.900000,G=0.700000,B=0.700000,A=0.150000),VignetteIntensity=0.400000,VignetteType=CosineFourthLaw,VignetteCenter=(X=0.500000,Y=0.500000),VignetteColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),VignetteSize=(X=1.000000,Y=1.000000),VignetteSoftness=5.000000,VignetteTexture=None,Sharpen=0.000000,FilmGrainIntensity=0.000000,FilmGrainIntensityShadows=1.000000,FilmGrainIntensityMidtones=1.000000,FilmGrainIntensityHighlights=1.000000,FilmGrainShadowsMax=0.090000,FilmGrainHighlightsMin=0.500000,FilmGrainHighlightsMax=1.000000,FilmGrainScale=(X=1.000000,Y=1.000000),FilmGrainTexture=None,AmbientOcclusionIntensity=0.500000,AmbientOcclusionStaticFraction=1.000000,AmbientOcclusionRadius=200.000000,AmbientOcclusionRadiusInWS=False,AmbientOcclusionFadeDistance=8000.000000,AmbientOcclusionFadeRadius=5000.000000,AmbientOcclusionPower=2.000000,AmbientOcclusionBias=3.000000,AmbientOcclusionQuality=50.000000,AmbientOcclusionMipBlend=0.600000,AmbientOcclusionMipScale=1.700000,AmbientOcclusionMipThreshold=0.010000,AmbientOcclusionTemporalBlendWeight=0.100000,RayTracingAO=False,RayTracingAOSamplesPerPixel=1,RayTracingAOIntensity=1.000000,RayTracingAORadius=200.000000,ColorGradingIntensity=1.000000,ColorGradingLUT=None,DepthOfFieldEnabled=True,DepthOfFieldSensorWidth=24.576000,DepthOfFieldSqueezeFactor=1.000000,DepthOfFieldFocalDistance=0.000000,DepthOfFieldDepthBlurAmount=1.000000,DepthOfFieldDepthBlurRadius=0.000000,DepthOfFieldUseHairDepth=False,DepthOfFieldPetzvalBokeh=0.000000,DepthOfFieldPetzvalBokehFalloff=1.000000,DepthOfFieldPetzvalExclusionBoxExtents=(X=0.000000,Y=0.000000),DepthOfFieldPetzvalExclusionBoxRadius=0.000000,DepthOfFieldAspectRatioScalar=1.000000,DepthOfFieldBarrelRadius=5.000000,DepthOfFieldBarrelLength=0.000000,DepthOfFieldMatteBoxFlags[0]=(Pitch=0.000000,Roll=0.000000,Length=0.000000),DepthOfFieldMatteBoxFlags[1]=(Pitch=0.000000,Roll=0.000000,Length=0.000000),DepthOfFieldMatteBoxFlags[2]=(Pitch=0.000000,Roll=0.000000,Length=0.000000),DepthOfFieldFocalRegion=0.000000,DepthOfFieldNearTransitionRegion=300.000000,DepthOfFieldFarTransitionRegion=500.000000,DepthOfFieldScale=0.000000,DepthOfFieldNearBlurSize=15.000000,DepthOfFieldFarBlurSize=15.000000,DepthOfFieldOcclusion=0.400000,DepthOfFieldSkyFocusDistance=0.000000,DepthOfFieldVignetteSize=200.000000,MotionBlurAmount=0.500000,MotionBlurMax=5.000000,MotionBlurTargetFPS=30,MotionBlurPerObjectSize=0.000000,TranslucencyType=Raster,RayTracingTranslucencyMaxRoughness=0.600000,RayTracingTranslucencyRefractionRays=3,RayTracingTranslucencySamplesPerPixel=1,RayTracingTranslucencyMaxPrimaryHitEvents=4,RayTracingTranslucencyMaxSecondaryHitEvents=2,RayTracingTranslucencyShadows=Hard_shadows,RayTracingTranslucencyRefraction=True,RayTracingTranslucencyUseRayTracedRefraction=False,PathTracingMaxBounces=32,PathTracingSamplesPerPixel=2048,PathTracingMaxPathIntensity=24.000000,PathTracingEnableEmissiveMaterials=True,PathTracingEnableReferenceDOF=False,PathTracingEnableReferenceAtmosphere=False,PathTracingEnableDenoiser=True,PathTracingIncludeEmissive=True,PathTracingIncludeDiffuse=True,PathTracingIncludeIndirectDiffuse=True,PathTracingIncludeSpecular=True,PathTracingIncludeIndirectSpecular=True,PathTracingIncludeVolume=True,PathTracingIncludeIndirectVolume=True,UserFlags=0,WeightedBlendables=(Array=))
+    вход OffCenterProjectionOffset = (X=0.000000,Y=0.000000)
+    вход OverscanResolutionFraction = 1.000000
+    вход CropFraction = 1.000000
+    вход AsymmetricCropFraction = (X=1.000000,Y=1.000000,Z=1.000000,W=1.000000)
+    вход Location = 0.000000,0.000000,0.000000
+    вход Rotation = 0.000000,0.000000,0.000000
+    вход FOV = 90.000000
+    вход FirstPersonFOV = 90.000000
+    вход FirstPersonScale = 1.000000
+    вход OrthoWidth = 1.000000
+    вход bAutoCalculateOrthoPlanes = True
+    вход AutoPlaneShift = 0.000000
+    вход bUpdateOrthoPlanes = False
+    вход bUseCameraHeightAsViewTarget = False
+    вход OrthoNearClipPlane = 0.000000
+    вход OrthoFarClipPlane = 2097152.000000
+    вход PerspectiveNearClipPlane = 10.000000
+    вход AspectRatio = 1.333333
+    вход bConstrainAspectRatio = False
+    вход bUseFirstPersonParameters = False
+    вход bUseFieldOfViewForLOD = True
+    вход ProjectionMode = Perspective
+    вход PostProcessBlendWeight = 0.000000
+    вход PostProcessSettings = (bOverride_TemperatureType=False,bOverride_WhiteTemp=False,bOverride_WhiteTint=False,bOverride_ColorSaturation=False,bOverride_ColorContrast=False,bOverride_ColorGamma=False,bOverride_ColorGain=False,bOverride_ColorOffset=False,bOverride_ColorSaturationShadows=False,bOverride_ColorContrastShadows=False,bOverride_ColorGammaShadows=False,bOverride_ColorGainShadows=False,bOverride_ColorOffsetShadows=False,bOverride_ColorSaturationMidtones=False,bOverride_ColorContrastMidtones=False,bOverride_ColorGammaMidtones=False,bOverride_ColorGainMidtones=False,bOverride_ColorOffsetMidtones=False,bOverride_ColorSaturationHighlights=False,bOverride_ColorContrastHighlights=False,bOverride_ColorGammaHighlights=False,bOverride_ColorGainHighlights=False,bOverride_ColorOffsetHighlights=False,bOverride_ColorCorrectionShadowsMax=False,bOverride_ColorCorrectionHighlightsMin=False,bOverride_ColorCorrectionHighlightsMax=False,bOverride_BlueCorrection=False,bOverride_ExpandGamut=False,bOverride_ToneCurveAmount=False,bOverride_TonemappingMethod=False,bOverride_FilmSlope=False,bOverride_FilmToe=False,bOverride_FilmShoulder=False,bOverride_FilmBlackClip=False,bOverride_FilmWhiteClip=False,bOverride_SceneColorTint=False,bOverride_SceneFringeIntensity=False,bOverride_ChromaticAberrationStartOffset=False,bOverride_bMegaLights=False,bOverride_MegaLightsFrontLayerTranslucency=False,bOverride_AmbientCubemapTint=False,bOverride_AmbientCubemapIntensity=False,bOverride_BloomMethod=False,bOverride_BloomIntensity=False,bOverride_BloomGaussianIntensity=False,bOverride_BloomThreshold=False,bOverride_Bloom1Tint=False,bOverride_Bloom1Size=False,bOverride_Bloom2Size=False,bOverride_Bloom2Tint=False,bOverride_Bloom3Tint=False,bOverride_Bloom3Size=False,bOverride_Bloom4Tint=False,bOverride_Bloom4Size=False,bOverride_Bloom5Tint=False,bOverride_Bloom5Size=False,bOverride_Bloom6Tint=False,bOverride_Bloom6Size=False,bOverride_BloomSizeScale=False,bOverride_BloomConvolutionIntensity=False,bOverride_BloomConvolutionTexture=False,bOverride_BloomConvolutionScatterDispersion=False,bOverride_BloomConvolutionSize=False,bOverride_BloomConvolutionCenterUV=False,bOverride_BloomConvolutionPreFilterMin=False,bOverride_BloomConvolutionPreFilterMax=False,bOverride_BloomConvolutionPreFilterMult=False,bOverride_BloomConvolutionBufferScale=False,bOverride_BloomDirtMaskIntensity=False,bOverride_BloomDirtMaskTint=False,bOverride_BloomDirtMask=False,bOverride_CameraShutterSpeed=False,bOverride_CameraISO=False,bOverride_AutoExposureMethod=False,bOverride_AutoExposureLowPercent=False,bOverride_AutoExposureHighPercent=False,bOverride_AutoExposureMinBrightness=False,bOverride_AutoExposureMaxBrightness=False,bOverride_AutoExposureSpeedUp=False,bOverride_AutoExposureSpeedDown=False,bOverride_AutoExposureBias=False,bOverride_AutoExposureBiasCurve=False,bOverride_AutoExposureMeterMask=False,bOverride_AutoExposureApplyPhysicalCameraExposure=False,bOverride_HistogramLogMin=False,bOverride_HistogramLogMax=False,bOverride_LocalExposureMethod=False,bOverride_LocalExposureHighlightContrastScale=False,bOverride_LocalExposureShadowContrastScale=False,bOverride_LocalExposureHighlightContrastCurve=False,bOverride_LocalExposureShadowContrastCurve=False,bOverride_LocalExposureHighlightThreshold=False,bOverride_LocalExposureShadowThreshold=False,bOverride_LocalExposureDetailStrength=False,bOverride_LocalExposureBlurredLuminanceBlend=False,bOverride_LocalExposureBlurredLuminanceKernelSizePercent=False,bOverride_LocalExposureHighlightThresholdStrength=False,bOverride_LocalExposureShadowThresholdStrength=False,bOverride_LocalExposureMiddleGreyBias=False,bOverride_LensFlareIntensity=False,bOverride_LensFlareTint=False,bOverride_LensFlareTints=False,bOverride_LensFlareBokehSize=False,bOverride_LensFlareBokehShape=False,bOverride_LensFlareThreshold=False,bOverride_VignetteIntensity=False,bOverride_VignetteType=False,bOverride_VignetteCenter=False,bOverride_VignetteColor=False,bOverride_VignetteSize=False,bOverride_VignetteSoftness=False,bOverride_VignetteTexture=False,bOverride_Sharpen=False,bOverride_FilmGrainIntensity=False,bOverride_FilmGrainIntensityShadows=False,bOverride_FilmGrainIntensityMidtones=False,bOverride_FilmGrainIntensityHighlights=False,bOverride_FilmGrainShadowsMax=False,bOverride_FilmGrainHighlightsMin=False,bOverride_FilmGrainHighlightsMax=False,bOverride_FilmGrainScale=False,bOverride_FilmGrainTexture=False,bOverride_AmbientOcclusionIntensity=False,bOverride_AmbientOcclusionStaticFraction=False,bOverride_AmbientOcclusionRadius=False,bOverride_AmbientOcclusionFadeDistance=False,bOverride_AmbientOcclusionFadeRadius=False,bOverride_AmbientOcclusionRadiusInWS=False,bOverride_AmbientOcclusionPower=False,bOverride_AmbientOcclusionBias=False,bOverride_AmbientOcclusionQuality=False,bOverride_AmbientOcclusionMipBlend=False,bOverride_AmbientOcclusionMipScale=False,bOverride_AmbientOcclusionMipThreshold=False,bOverride_AmbientOcclusionTemporalBlendWeight=False,bOverride_RayTracingAO=False,bOverride_RayTracingAOSamplesPerPixel=False,bOverride_RayTracingAOIntensity=False,bOverride_RayTracingAORadius=False,bOverride_IndirectLightingColor=False,bOverride_IndirectLightingIntensity=False,bOverride_ColorGradingIntensity=False,bOverride_ColorGradingLUT=False,bOverride_DepthOfFieldEnabled=False,bOverride_DepthOfFieldFocalDistance=False,bOverride_DepthOfFieldFstop=False,bOverride_DepthOfFieldMinFstop=False,bOverride_DepthOfFieldBladeCount=False,bOverride_DepthOfFieldSensorWidth=False,bOverride_DepthOfFieldSqueezeFactor=False,bOverride_DepthOfFieldDepthBlurRadius=False,bOverride_DepthOfFieldUseHairDepth=False,bOverride_DepthOfFieldPetzvalBokeh=False,bOverride_DepthOfFieldPetzvalBokehFalloff=False,bOverride_DepthOfFieldPetzvalExclusionBoxExtents=False,bOverride_DepthOfFieldPetzvalExclusionBoxRadius=False,bOverride_DepthOfFieldAspectRatioScalar=False,bOverride_DepthOfFieldMatteBoxFlags=False,bOverride_DepthOfFieldBarrelRadius=False,bOverride_DepthOfFieldBarrelLength=False,bOverride_DepthOfFieldDepthBlurAmount=False,bOverride_DepthOfFieldFocalRegion=False,bOverride_DepthOfFieldNearTransitionRegion=False,bOverride_DepthOfFieldFarTransitionRegion=False,bOverride_DepthOfFieldScale=False,bOverride_DepthOfFieldNearBlurSize=False,bOverride_DepthOfFieldFarBlurSize=False,bOverride_MobileHQGaussian=False,bOverride_DepthOfFieldOcclusion=False,bOverride_DepthOfFieldSkyFocusDistance=False,bOverride_DepthOfFieldVignetteSize=False,bOverride_MotionBlurAmount=False,bOverride_MotionBlurMax=False,bOverride_MotionBlurTargetFPS=False,bOverride_MotionBlurPerObjectSize=False,bOverride_ReflectionMethod=False,bOverride_LumenReflectionQuality=False,bOverride_ScreenSpaceReflectionIntensity=False,bOverride_ScreenSpaceReflectionQuality=False,bOverride_ScreenSpaceReflectionMaxRoughness=False,bOverride_ScreenSpaceReflectionRoughnessScale=False,bOverride_UserFlags=False,bOverride_RayTracingReflectionsMaxRoughness=False,bOverride_RayTracingReflectionsMaxBounces=False,bOverride_RayTracingReflectionsSamplesPerPixel=False,bOverride_RayTracingReflectionsShadows=False,bOverride_RayTracingReflectionsTranslucency=False,bOverride_TranslucencyType=False,bOverride_RayTracingTranslucencyMaxRoughness=False,bOverride_RayTracingTranslucencyRefractionRays=False,bOverride_RayTracingTranslucencySamplesPerPixel=False,bOverride_RayTracingTranslucencyShadows=False,bOverride_RayTracingTranslucencyRefraction=False,bOverride_RayTracingTranslucencyMaxPrimaryHitEvents=False,bOverride_RayTracingTranslucencyMaxSecondaryHitEvents=False,bOverride_RayTracingTranslucencyUseRayTracedRefraction=False,bOverride_DynamicGlobalIlluminationMethod=False,bOverride_LumenSceneLightingQuality=False,bOverride_LumenSceneDetail=False,bOverride_LumenSceneViewDistance=False,bOverride_LumenSceneLightingUpdateSpeed=False,bOverride_LumenFinalGatherQuality=False,bOverride_LumenFinalGatherLightingUpdateSpeed=False,bOverride_LumenFinalGatherScreenTraces=False,bOverride_LumenMaxTraceDistance=False,bOverride_LumenDiffuseColorBoost=False,bOverride_LumenAmbientOcclusionIntensity=False,bOverride_LumenSkylightLeaking=False,bOverride_LumenSkylightLeakingTint=False,bOverride_LumenFullSkylightLeakingDistance=False,bOverride_LumenRayLightingMode=False,bOverride_LumenReflectionsScreenTraces=False,bOverride_LumenFrontLayerTranslucencyReflections=False,bOverride_LumenMaxRoughnessToTraceReflections=False,bOverride_LumenMaxReflectionBounces=False,bOverride_LumenMaxRefractionBounces=False,bOverride_LumenSurfaceCacheResolution=False,bOverride_RayTracingGI=False,bOverride_RayTracingGIMaxBounces=False,bOverride_RayTracingGISamplesPerPixel=False,bOverride_PathTracingMaxBounces=False,bOverride_PathTracingSamplesPerPixel=False,bOverride_PathTracingMaxPathIntensity=False,bOverride_PathTracingEnableEmissiveMaterials=False,bOverride_PathTracingEnableReferenceDOF=False,bOverride_PathTracingEnableReferenceAtmosphere=False,bOverride_PathTracingEnableDenoiser=False,bOverride_PathTracingIncludeEmissive=False,bOverride_PathTracingIncludeDiffuse=False,bOverride_PathTracingIncludeIndirectDiffuse=False,bOverride_PathTracingIncludeSpecular=False,bOverride_PathTracingIncludeIndirectSpecular=False,bOverride_PathTracingIncludeVolume=False,bOverride_PathTracingIncludeIndirectVolume=False,bMobileHQGaussian=False,BloomMethod=BM_SOG,AutoExposureMethod=AEM_Histogram,TemperatureType=TEMP_WhiteBalance,WhiteTemp=6500.000000,WhiteTint=0.000000,ColorSaturation=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorContrast=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGamma=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGain=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorOffset=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),ColorSaturationShadows=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorContrastShadows=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGammaShadows=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGainShadows=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorOffsetShadows=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),ColorSaturationMidtones=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorContrastMidtones=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGammaMidtones=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGainMidtones=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorOffsetMidtones=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),ColorSaturationHighlights=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorContrastHighlights=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGammaHighlights=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorGainHighlights=(X=1.000000,Y=1.000000,Z=1.000000,W=1.000000),ColorOffsetHighlights=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),ColorCorrectionHighlightsMin=0.500000,ColorCorrectionHighlightsMax=1.000000,ColorCorrectionShadowsMax=0.090000,BlueCorrection=0.600000,ExpandGamut=1.000000,ToneCurveAmount=1.000000,TonemappingMethod=Filmic,FilmSlope=0.880000,FilmToe=0.550000,FilmShoulder=0.260000,FilmBlackClip=0.000000,FilmWhiteClip=0.040000,SceneColorTint=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),SceneFringeIntensity=0.000000,ChromaticAberrationStartOffset=0.000000,BloomIntensity=0.675000,BloomGaussianIntensity=1.000000,BloomThreshold=-1.000000,BloomSizeScale=4.000000,Bloom1Size=0.300000,Bloom2Size=1.000000,Bloom3Size=2.000000,Bloom4Size=10.000000,Bloom5Size=30.000000,Bloom6Size=64.000000,Bloom1Tint=(R=0.346500,G=0.346500,B=0.346500,A=1.000000),Bloom2Tint=(R=0.138000,G=0.138000,B=0.138000,A=1.000000),Bloom3Tint=(R=0.117600,G=0.117600,B=0.117600,A=1.000000),Bloom4Tint=(R=0.066000,G=0.066000,B=0.066000,A=1.000000),Bloom5Tint=(R=0.066000,G=0.066000,B=0.066000,A=1.000000),Bloom6Tint=(R=0.061000,G=0.061000,B=0.061000,A=1.000000),BloomConvolutionIntensity=1.000000,BloomConvolutionScatterDispersion=1.000000,BloomConvolutionSize=1.000000,BloomConvolutionTexture=None,BloomConvolutionCenterUV=(X=0.500000,Y=0.500000),BloomConvolutionPreFilterMin=7.000000,BloomConvolutionPreFilterMax=15000.000000,BloomConvolutionPreFilterMult=15.000000,BloomConvolutionBufferScale=0.133000,BloomDirtMask=None,BloomDirtMaskIntensity=0.000000,BloomDirtMaskTint=(R=0.500000,G=0.500000,B=0.500000,A=1.000000),DynamicGlobalIlluminationMethod=Lumen,IndirectLightingColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),IndirectLightingIntensity=1.000000,LumenRayLightingMode=Default,LumenSceneLightingQuality=1.000000,LumenSceneDetail=1.000000,LumenSceneViewDistance=20000.000000,LumenSceneLightingUpdateSpeed=1.000000,LumenFinalGatherQuality=1.000000,LumenFinalGatherLightingUpdateSpeed=1.000000,LumenFinalGatherScreenTraces=True,LumenMaxTraceDistance=20000.000000,LumenDiffuseColorBoost=1.000000,LumenAmbientOcclusionIntensity=1.000000,LumenSkylightLeaking=0.000000,LumenSkylightLeakingTint=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),LumenFullSkylightLeakingDistance=1000.000000,LumenSurfaceCacheResolution=1.000000,ReflectionMethod=Lumen,LumenReflectionQuality=1.000000,LumenReflectionsScreenTraces=True,LumenFrontLayerTranslucencyReflections=False,LumenMaxRoughnessToTraceReflections=0.400000,LumenMaxReflectionBounces=1,LumenMaxRefractionBounces=0,ScreenSpaceReflectionIntensity=100.000000,ScreenSpaceReflectionQuality=50.000000,ScreenSpaceReflectionMaxRoughness=0.600000,bMegaLights=True,MegaLightsFrontLayerTranslucency=False,AmbientCubemapTint=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),AmbientCubemapIntensity=1.000000,AmbientCubemap=None,CameraShutterSpeed=60.000000,CameraISO=100.000000,DepthOfFieldFstop=4.000000,DepthOfFieldMinFstop=1.200000,DepthOfFieldBladeCount=5,AutoExposureBias=1.000000,AutoExposureBiasBackup=0.000000,bOverride_AutoExposureBiasBackup=False,AutoExposureApplyPhysicalCameraExposure=True,AutoExposureBiasCurve=None,AutoExposureMeterMask=None,AutoExposureLowPercent=10.000000,AutoExposureHighPercent=90.000000,AutoExposureMinBrightness=-10.000000,AutoExposureMaxBrightness=20.000000,AutoExposureSpeedUp=3.000000,AutoExposureSpeedDown=1.000000,HistogramLogMin=-10.000000,HistogramLogMax=20.000000,LocalExposureMethod=Bilateral,LocalExposureHighlightContrastScale=1.000000,LocalExposureShadowContrastScale=1.000000,LocalExposureHighlightContrastCurve=None,LocalExposureShadowContrastCurve=None,LocalExposureHighlightThreshold=0.000000,LocalExposureShadowThreshold=0.000000,LocalExposureDetailStrength=1.000000,LocalExposureBlurredLuminanceBlend=0.600000,LocalExposureBlurredLuminanceKernelSizePercent=50.000000,LocalExposureHighlightThresholdStrength=1.000000,LocalExposureShadowThresholdStrength=1.000000,LocalExposureMiddleGreyBias=0.000000,LensFlareIntensity=1.000000,LensFlareTint=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),LensFlareBokehSize=3.000000,LensFlareThreshold=8.000000,LensFlareBokehShape=None,LensFlareTints[0]=(R=1.000000,G=0.800000,B=0.400000,A=0.600000),LensFlareTints[1]=(R=1.000000,G=1.000000,B=0.600000,A=0.530000),LensFlareTints[2]=(R=0.800000,G=0.800000,B=1.000000,A=0.460000),LensFlareTints[3]=(R=0.500000,G=1.000000,B=0.400000,A=0.390000),LensFlareTints[4]=(R=0.500000,G=0.800000,B=1.000000,A=0.310000),LensFlareTints[5]=(R=0.900000,G=1.000000,B=0.800000,A=0.270000),LensFlareTints[6]=(R=1.000000,G=0.800000,B=0.400000,A=0.220000),LensFlareTints[7]=(R=0.900000,G=0.700000,B=0.700000,A=0.150000),VignetteIntensity=0.400000,VignetteType=CosineFourthLaw,VignetteCenter=(X=0.500000,Y=0.500000),VignetteColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),VignetteSize=(X=1.000000,Y=1.000000),VignetteSoftness=5.000000,VignetteTexture=None,Sharpen=0.000000,FilmGrainIntensity=0.000000,FilmGrainIntensityShadows=1.000000,FilmGrainIntensityMidtones=1.000000,FilmGrainIntensityHighlights=1.000000,FilmGrainShadowsMax=0.090000,FilmGrainHighlightsMin=0.500000,FilmGrainHighlightsMax=1.000000,FilmGrainScale=(X=1.000000,Y=1.000000),FilmGrainTexture=None,AmbientOcclusionIntensity=0.500000,AmbientOcclusionStaticFraction=1.000000,AmbientOcclusionRadius=200.000000,AmbientOcclusionRadiusInWS=False,AmbientOcclusionFadeDistance=8000.000000,AmbientOcclusionFadeRadius=5000.000000,AmbientOcclusionPower=2.000000,AmbientOcclusionBias=3.000000,AmbientOcclusionQuality=50.000000,AmbientOcclusionMipBlend=0.600000,AmbientOcclusionMipScale=1.700000,AmbientOcclusionMipThreshold=0.010000,AmbientOcclusionTemporalBlendWeight=0.100000,RayTracingAO=False,RayTracingAOSamplesPerPixel=1,RayTracingAOIntensity=1.000000,RayTracingAORadius=200.000000,ColorGradingIntensity=1.000000,ColorGradingLUT=None,DepthOfFieldEnabled=True,DepthOfFieldSensorWidth=24.576000,DepthOfFieldSqueezeFactor=1.000000,DepthOfFieldFocalDistance=0.000000,DepthOfFieldDepthBlurAmount=1.000000,DepthOfFieldDepthBlurRadius=0.000000,DepthOfFieldUseHairDepth=False,DepthOfFieldPetzvalBokeh=0.000000,DepthOfFieldPetzvalBokehFalloff=1.000000,DepthOfFieldPetzvalExclusionBoxExtents=(X=0.000000,Y=0.000000),DepthOfFieldPetzvalExclusionBoxRadius=0.000000,DepthOfFieldAspectRatioScalar=1.000000,DepthOfFieldBarrelRadius=5.000000,DepthOfFieldBarrelLength=0.000000,DepthOfFieldMatteBoxFlags[0]=(Pitch=0.000000,Roll=0.000000,Length=0.000000),DepthOfFieldMatteBoxFlags[1]=(Pitch=0.000000,Roll=0.000000,Length=0.000000),DepthOfFieldMatteBoxFlags[2]=(Pitch=0.000000,Roll=0.000000,Length=0.000000),DepthOfFieldFocalRegion=0.000000,DepthOfFieldNearTransitionRegion=300.000000,DepthOfFieldFarTransitionRegion=500.000000,DepthOfFieldScale=0.000000,DepthOfFieldNearBlurSize=15.000000,DepthOfFieldFarBlurSize=15.000000,DepthOfFieldOcclusion=0.400000,DepthOfFieldSkyFocusDistance=0.000000,DepthOfFieldVignetteSize=200.000000,MotionBlurAmount=0.500000,MotionBlurMax=5.000000,MotionBlurTargetFPS=30,MotionBlurPerObjectSize=0.000000,TranslucencyType=Raster,RayTracingTranslucencyMaxRoughness=0.600000,RayTracingTranslucencyRefractionRays=3,RayTracingTranslucencySamplesPerPixel=1,RayTracingTranslucencyMaxPrimaryHitEvents=4,RayTracingTranslucencyMaxSecondaryHitEvents=2,RayTracingTranslucencyShadows=Hard_shadows,RayTracingTranslucencyRefraction=True,RayTracingTranslucencyUseRayTracedRefraction=False,PathTracingMaxBounces=32,PathTracingSamplesPerPixel=2048,PathTracingMaxPathIntensity=24.000000,PathTracingEnableEmissiveMaterials=True,PathTracingEnableReferenceDOF=False,PathTracingEnableReferenceAtmosphere=False,PathTracingEnableDenoiser=True,PathTracingIncludeEmissive=True,PathTracingIncludeDiffuse=True,PathTracingIncludeIndirectDiffuse=True,PathTracingIncludeSpecular=True,PathTracingIncludeIndirectSpecular=True,PathTracingIncludeVolume=True,PathTracingIncludeIndirectVolume=True,UserFlags=0,WeightedBlendables=(Array=))
+    вход OffCenterProjectionOffset = (X=0.000000,Y=0.000000)
+    вход OverscanResolutionFraction = 1.000000
+    вход CropFraction = 1.000000
+    вход AsymmetricCropFraction = (X=1.000000,Y=1.000000,Z=1.000000,W=1.000000)
+[K2Node_CallFunction_27@Unproject Position_MERGED] K2Node_CallFunction (вызов: GetViewRotation)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_13@Unproject Position_MERGED] K2Node_VariableGet (переменная: Viewport)
+[K2Node_VariableGet_3@Unproject Position_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_26@Unproject Position_MERGED] K2Node_CallFunction (вызов: GetViewLocation)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_23@Unproject Position_MERGED] K2Node_CallFunction (вызов: Matrix_TransformPosition @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход V = 0, 0, 0
+[K2Node_CallFunction_25@Unproject Position_MERGED] K2Node_CallFunction (вызов: Conv_Vector4ToVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_17@Unproject Position_MERGED] K2Node_PromotableOperator (вызов: Add_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_2@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_0@Unproject Position_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_28@Unproject Position_MERGED] K2Node_CallFunction (вызов: Conv_RotatorToVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход InRot = 0, 0, 0
+[K2Node_VariableGet_9@Unproject Position_MERGED] K2Node_VariableGet (переменная: Viewport)
+[K2Node_CallFunction_24@Unproject Position_MERGED] K2Node_CallFunction (вызов: GetViewLocation)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_21@Unproject Position_MERGED] K2Node_PromotableOperator (вызов: Add_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_22@Unproject Position_MERGED] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 10.000000
+    вход B = 10.000000
+[K2Node_CallFunction_33@Unproject Position_MERGED] K2Node_CallFunction (вызов: Matrix_InverseTransformVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход V = 0, 0, 0
+[K2Node_CallFunction_34@Unproject Position_MERGED] K2Node_CallFunction (вызов: Conv_Vector4ToVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_35@Unproject Position_MERGED] K2Node_CallFunction (вызов: Matrix_GetInverse @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[EdGraphNode_Comment_0@Unproject Position_MERGED] EdGraphNode_Comment
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 3200
+    NodeHeight = 944
+    bCommentBubblePinned = False
+    NodeComment = "It could be cleaner to use build in engine functions but it does not work and I dont have time and energy to debug it"
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 3200
+    NodeHeight = 944
+    bCommentBubblePinned = False
+    NodeComment = "It could be cleaner to use build in engine functions but it does not work and I dont have time and energy to debug it"
+[K2Node_VariableGet_2@Unproject Position_MERGED] K2Node_VariableGet (переменная: Viewport)
+[K2Node_VariableGet_6@Unproject Position_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_11@Unproject Position_MERGED] K2Node_VariableGet (переменная: Viewport)
+[K2Node_VariableGet_18@Unproject Position_MERGED] K2Node_VariableGet (переменная: CameraFov @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_1@Unproject Position_MERGED] K2Node_VariableGet (переменная: CameraFov)
+[K2Node_VariableGet_4@Unproject Position_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_0@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_3@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_6@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_7@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_8@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_9@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_10@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_11@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_12@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_13@Unproject Position_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_14@Unproject Position_MERGED] K2Node_CallFunction (вызов: Conv_DoubleToVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[UpdateCamera_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 457444B549B40D573061958736DA1E8F
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_4
+    Nodes(2) <- K2Node_CallFunction_12
+    Nodes(3) <- K2Node_CallFunction_5
+    Nodes(4) <- K2Node_CallFunction_13
+    Nodes(5) <- K2Node_IfThenElse_0
+    Nodes(6) <- K2Node_VariableGet_3
+    Nodes(7) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(8) <- K2Node_CallFunction_7
+    Nodes(9) <- K2Node_CallFunction_10
+    Nodes(10) <- K2Node_CallFunction_11
+    Nodes(11) <- K2Node_CallFunction_9
+    Nodes(12) <- K2Node_CallFunction_8
+    Nodes(13) <- K2Node_ExecutionSequence_0
+    Nodes(14) <- K2Node_CallFunction_2
+    Nodes(15) <- K2Node_VariableGet_6
+    Nodes(16) <- K2Node_CallFunction_3
+    Nodes(17) <- K2Node_CallFunction_6
+    Nodes(18) <- K2Node_VariableGet_15
+    Nodes(19) <- K2Node_CallFunction_0
+    Nodes(20) <- K2Node_VariableGet_7
+    Nodes(21) <- K2Node_VariableGet_4
+    Nodes(22) <- K2Node_VariableGet_16
+    Nodes(23) <- K2Node_VariableGet_17
+    Nodes(24) <- K2Node_VariableSet_0
+    Nodes(25) <- K2Node_CallFunction_1
+[K2Node_FunctionEntry_0@UpdateCamera_MERGED] K2Node_FunctionEntry
+[K2Node_PromotableOperator_0@UpdateCamera_MERGED] K2Node_PromotableOperator (вызов: Multiply_Vector2DVector2D @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = -1.000000
+    вход B = -1.000000
+[K2Node_CallFunction_12@UpdateCamera_MERGED] K2Node_CallFunction (вызов: GetViewRotation)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_5@UpdateCamera_MERGED] K2Node_CallFunction (вызов: BreakVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Depth = 10.000000
+    вход Depth = 10.000000
+[K2Node_PromotableOperator_1@UpdateCamera_MERGED] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = (X=0.500000,Y=0.500000)
+    вход B = 100.000000
+    вход B = (X=0.500000,Y=0.500000)
+    вход B = 100.000000
+[K2Node_IfThenElse_0@UpdateCamera_MERGED] K2Node_IfThenElse
+[K2Node_VariableGet_3@UpdateCamera_MERGED] K2Node_VariableGet (переменная: IsMouseOver)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_CommutativeAssociativeBinaryOperator_0@UpdateCamera_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: BooleanAND @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_7@UpdateCamera_MERGED] K2Node_CallFunction (вызов: MakeRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    вход B = (X=2.000000,Y=-2.000000)
+[K2Node_CallFunction_10@UpdateCamera_MERGED] K2Node_CallFunction (вызов: BreakRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_5@UpdateCamera_MERGED] K2Node_PromotableOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_4@UpdateCamera_MERGED] K2Node_PromotableOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    вход B = (X=2.000000,Y=-2.000000)
+    вход B = (X=2.000000,Y=-2.000000)
+[K2Node_PromotableOperator_2@UpdateCamera_MERGED] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = (X=2.000000,Y=-2.000000)
+    вход B = -1.000000
+    вход B = (X=2.000000,Y=-2.000000)
+    вход B = -1.000000
+[K2Node_ExecutionSequence_0@UpdateCamera_MERGED] K2Node_ExecutionSequence
+[K2Node_CallFunction_2@UpdateCamera_MERGED] K2Node_CallFunction (вызов: RLerp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход bShortestPath = true
+    вход B = -1.000000
+    вход bShortestPath = true
+[K2Node_VariableGet_6@UpdateCamera_MERGED] K2Node_VariableGet (переменная: Delta)
+    SelfContextInfo = NotSelfContext
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_3@UpdateCamera_MERGED] K2Node_CallFunction (вызов: MultiplyMultiply_FloatFloat @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Base = 0.000002
+    вход Base = 0.000002
+[K2Node_PromotableOperator_6@UpdateCamera_MERGED] K2Node_PromotableOperator (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    вход A = 1.000000
+    вход A = 1.000000
+[K2Node_VariableGet_15@UpdateCamera_MERGED] K2Node_VariableGet (переменная: Delta)
+[K2Node_CallFunction_0@UpdateCamera_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_7@UpdateCamera_MERGED] K2Node_VariableGet (переменная: CameraRotationTarget)
+[K2Node_VariableGet_4@UpdateCamera_MERGED] K2Node_VariableGet (переменная: CameraRotationTarget)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_VariableGet_16@UpdateCamera_MERGED] K2Node_VariableGet (переменная: MouseDelta)
+[K2Node_VariableGet_17@UpdateCamera_MERGED] K2Node_VariableGet (переменная: IsMouseDown)
+[K2Node_VariableSet_0@UpdateCamera_MERGED] K2Node_VariableSet (переменная: CameraRotationTarget)
+[K2Node_CallFunction_1@UpdateCamera_MERGED] K2Node_CallFunction (вызов: Multiply_Vector2DVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход MouseButton = RightMouseButton
+    вход MouseButton = RightMouseButton
+    вход B = -100.000000
+[K2Node_CallFunction_4@UpdateCamera_MERGED] K2Node_CallFunction (вызов: Conv_DoubleToVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_6@UpdateCamera_MERGED] K2Node_CallFunction (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = 100.000000
+[K2Node_CallFunction_8@UpdateCamera_MERGED] K2Node_CallFunction (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = (X=0.500000,Y=0.500000)
+[K2Node_CallFunction_9@UpdateCamera_MERGED] K2Node_CallFunction (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = 2.000000
+[K2Node_CallFunction_11@UpdateCamera_MERGED] K2Node_CallFunction (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = -1.000000
+[K2Node_CallFunction_13@UpdateCamera_MERGED] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход A = 1.000000
+[OnConstruct_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 71123B5E4C7A3611C5976493C35DD008
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+    Nodes(2) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@OnConstruct_MERGED] K2Node_FunctionEntry (вызов: OnConstruct)
+    MetaData = (Category=NSLOCTEXT("", "90D055F6480A3003024DCEA88F4479E4", "Events"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "89B9E1654C1913497CA00F8DB5C7413E", "Events"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "FD0149694FBA763CA5D3A9B8FFADA574", "Events"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "5FEECD264832D53751B94EB1E942E741", "Events"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "88C50F774DAD1DD98E5A078D72037CA0", "Camera"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "12CBDF5C41C65E9B0DE63185F7FE44B1", "Camera"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "B35D684B49762AE3ECBB69803EED68EF", "Camera"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "ExecuteUbergraph_BP_FluxViewportEditor"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "Tick"
+    bIsIntermediateNode = True
+    MetaData = (Category=NSLOCTEXT("", "5FEECD264832D53751B94EB1E942E741", "Events"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "89B9E1654C1913497CA00F8DB5C7413E", "Events"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "90D055F6480A3003024DCEA88F4479E4", "Events"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "88C50F774DAD1DD98E5A078D72037CA0", "Camera"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "12CBDF5C41C65E9B0DE63185F7FE44B1", "Camera"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "B35D684B49762AE3ECBB69803EED68EF", "Camera"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "FD0149694FBA763CA5D3A9B8FFADA574", "Events"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+[K2Node_CallFunction_0@OnConstruct_MERGED] K2Node_CallFunction (вызов: SetCameraRotation)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    вход EntryPoint = 0
+[K2Node_VariableGet_0@OnConstruct_MERGED] K2Node_VariableGet (переменная: CameraRotationTarget)
+
+## СВЯЗИ
+[K2Node_CallFunction_0@OnConstruct_MERGED].ReturnValue -> [K2Node_VariableSet_0@UpdateCamera_MERGED].MouseDelta
+[K2Node_CallFunction_0@OnConstruct_MERGED].ReturnValue#2 -> [K2Node_CallFunction_46@Unproject Position_MERGED].B
+[K2Node_CallFunction_0@OnConstruct_MERGED].ReturnValue#3 -> [K2Node_VariableSet_1@OnMouseWheel_MERGED].CameraDistanceTarget
+[K2Node_CallFunction_0@OnConstruct_MERGED].ReturnValue#4 -> [K2Node_CallFunction_11@UpdateCamera_MERGED].Location
+[K2Node_CallFunction_10@UpdateCamera_MERGED].Pitch -> [K2Node_CallFunction_8@UpdateCamera_MERGED].A#2
+[K2Node_CallFunction_10@UpdateCamera_MERGED].Pitch -> [K2Node_PromotableOperator_5@UpdateCamera_MERGED].A
+[K2Node_CallFunction_10@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_40@Unproject Position_MERGED].Z
+[K2Node_CallFunction_10@UpdateCamera_MERGED].Roll -> [K2Node_CallFunction_7@UpdateCamera_MERGED].Roll
+[K2Node_CallFunction_10@UpdateCamera_MERGED].Yaw -> [K2Node_CallFunction_9@UpdateCamera_MERGED].A#2
+[K2Node_CallFunction_10@UpdateCamera_MERGED].Yaw -> [K2Node_PromotableOperator_5@UpdateCamera_MERGED].A
+[K2Node_CallFunction_11@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_40@Unproject Position_MERGED].Y
+[K2Node_CallFunction_11@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_8@UpdateCamera_MERGED].B#2
+[K2Node_CallFunction_12@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_11@UpdateCamera_MERGED].B
+[K2Node_CallFunction_13@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_0@OnConstruct_MERGED].A#2
+[K2Node_CallFunction_13@UpdateCamera_MERGED].ReturnValue -> [K2Node_PromotableOperator_6@UpdateCamera_MERGED].A
+[K2Node_CallFunction_13@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_46@Unproject Position_MERGED].A
+[K2Node_CallFunction_13@UpdateCamera_MERGED].ReturnValue#3 -> [K2Node_CallFunction_2@UpdateCamera_MERGED].Alpha
+[K2Node_CallFunction_14@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_13@UpdateCamera_MERGED].B
+[K2Node_CallFunction_14@Unproject Position_MERGED].then -> [K2Node_CallFunction_11@UpdateCamera_MERGED].execute
+[K2Node_CallFunction_15@Unproject Position_MERGED].X -> [K2Node_CallFunction_17@Unproject Position_MERGED].X
+[K2Node_CallFunction_15@Unproject Position_MERGED].Y -> [K2Node_CallFunction_17@Unproject Position_MERGED].Y
+[K2Node_CallFunction_15@Unproject Position_MERGED].Z -> [K2Node_CallFunction_17@Unproject Position_MERGED].Z
+[K2Node_CallFunction_16@Unproject Position_MERGED].ProjectionMatrix -> [K2Node_CallFunction_23@Unproject Position_MERGED].M
+[K2Node_CallFunction_16@Unproject Position_MERGED].ProjectionMatrix -> [K2Node_CallFunction_33@Unproject Position_MERGED].M
+[K2Node_CallFunction_16@Unproject Position_MERGED].ProjectionMatrix -> [K2Node_CallFunction_35@Unproject Position_MERGED].M
+[K2Node_CallFunction_16@Unproject Position_MERGED].ReturnValue -> [K2Node_VariableSet_3@OnMouseMove_MERGED].WindowPosition
+[K2Node_CallFunction_17@Unproject Position_MERGED].ReturnValue -> [K2Node_VariableSet_5@OnMouseMove_MERGED].WindowSize
+[K2Node_CallFunction_19@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_1@UpdateCamera_MERGED].V
+[K2Node_CallFunction_19@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_25@Unproject Position_MERGED].InVector4
+[K2Node_CallFunction_19@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_34@Unproject Position_MERGED].InVector4
+[K2Node_CallFunction_1@UpdateCamera_MERGED].ReturnValue -> [K2Node_VariableSet_1@OnMouseWheel_MERGED].IsMouseDown
+[K2Node_CallFunction_1@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_5@UpdateCamera_MERGED].InVector4
+[K2Node_CallFunction_1@UpdateCamera_MERGED].ReturnValue#3 -> [K2Node_CallFunction_0@OnConstruct_MERGED].B
+[K2Node_CallFunction_1@UpdateCamera_MERGED].ReturnValue#4 -> [K2Node_CallFunction_0@OnConstruct_MERGED].B#2
+[K2Node_CallFunction_1@UpdateCamera_MERGED].ReturnValue#5 -> [K2Node_CallFunction_5@UpdateCamera_MERGED].InVec
+[K2Node_CallFunction_20@Unproject Position_MERGED].X -> [K2Node_CallFunction_19@Unproject Position_MERGED].X
+[K2Node_CallFunction_20@Unproject Position_MERGED].Y -> [K2Node_CallFunction_19@Unproject Position_MERGED].Y
+[K2Node_CallFunction_23@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_15@Unproject Position_MERGED].InVec
+[K2Node_CallFunction_25@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_23@Unproject Position_MERGED].V
+[K2Node_CallFunction_26@Unproject Position_MERGED].ReturnValue -> [K2Node_MakeStruct_1@Unproject Position_MERGED].Location
+[K2Node_CallFunction_26@Unproject Position_MERGED].ReturnValue -> [K2Node_PromotableOperator_21@Unproject Position_MERGED].B
+[K2Node_CallFunction_28@Unproject Position_MERGED].ReturnValue -> [K2Node_PromotableOperator_22@Unproject Position_MERGED].A
+[K2Node_CallFunction_2@UpdateCamera_MERGED].ReturnValue -> [K2Node_FunctionResult_0@OnMouseMove_MERGED].ReturnValue
+[K2Node_CallFunction_2@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_0@OnConstruct_MERGED].Rotation
+[K2Node_CallFunction_2@UpdateCamera_MERGED].ReturnValue#3 -> [K2Node_CallFunction_1@UpdateCamera_MERGED].InDouble
+[K2Node_CallFunction_34@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_33@Unproject Position_MERGED].V
+[K2Node_CallFunction_35@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_1@UpdateCamera_MERGED].M
+[K2Node_CallFunction_38@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_10@UpdateCamera_MERGED].B
+[K2Node_CallFunction_38@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_12@UpdateCamera_MERGED].A
+[K2Node_CallFunction_38@Unproject Position_MERGED].ReturnValue -> [K2Node_PromotableOperator_15@Unproject Position_MERGED].B
+[K2Node_CallFunction_38@Unproject Position_MERGED].ReturnValue -> [K2Node_PromotableOperator_29@Unproject Position_MERGED].A
+[K2Node_CallFunction_39@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_38@Unproject Position_MERGED].A
+[K2Node_CallFunction_3@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_6@UpdateCamera_MERGED].A#2
+[K2Node_CallFunction_3@UpdateCamera_MERGED].ReturnValue -> [K2Node_PromotableOperator_10@Unproject Position_MERGED].A
+[K2Node_CallFunction_3@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_13@UpdateCamera_MERGED].B#2
+[K2Node_CallFunction_3@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_PromotableOperator_6@UpdateCamera_MERGED].B#2
+[K2Node_CallFunction_3@UpdateCamera_MERGED].X -> [K2Node_CallFunction_6@UpdateCamera_MERGED].B
+[K2Node_CallFunction_3@UpdateCamera_MERGED].X -> [K2Node_PromotableOperator_0@UpdateCamera_MERGED].B
+[K2Node_CallFunction_3@UpdateCamera_MERGED].Y -> [K2Node_CallFunction_6@UpdateCamera_MERGED].A
+[K2Node_CallFunction_3@UpdateCamera_MERGED].Y -> [K2Node_PromotableOperator_0@UpdateCamera_MERGED].A
+[K2Node_CallFunction_40@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_13@UpdateCamera_MERGED].A
+[K2Node_CallFunction_40@Unproject Position_MERGED].ReturnValue -> [K2Node_PromotableOperator_18@Unproject Position_MERGED].A
+[K2Node_CallFunction_46@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_6@UpdateCamera_MERGED].B#2
+[K2Node_CallFunction_46@Unproject Position_MERGED].ReturnValue -> [K2Node_FunctionResult_1@Unproject Position_MERGED].WorldDirection
+[K2Node_CallFunction_46@Unproject Position_MERGED].ReturnValue -> [K2Node_PromotableOperator_10@Unproject Position_MERGED].B
+[K2Node_CallFunction_4@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_5@UpdateCamera_MERGED].A
+[K2Node_CallFunction_4@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_1@UpdateCamera_MERGED].B#2
+[K2Node_CallFunction_4@UpdateCamera_MERGED].X -> [K2Node_CallFunction_11@UpdateCamera_MERGED].A
+[K2Node_CallFunction_4@UpdateCamera_MERGED].X -> [K2Node_PromotableOperator_8@Unproject Position_MERGED].A
+[K2Node_CallFunction_4@UpdateCamera_MERGED].Y -> [K2Node_CallFunction_10@UpdateCamera_MERGED].A
+[K2Node_CallFunction_4@UpdateCamera_MERGED].Y -> [K2Node_PromotableOperator_15@Unproject Position_MERGED].A
+[K2Node_CallFunction_50@SetCameraRotation_MERGED].ReturnValue -> [K2Node_CallFunction_13@UpdateCamera_MERGED].InRot
+[K2Node_CallFunction_50@SetCameraRotation_MERGED].ReturnValue -> [K2Node_CallFunction_28@Unproject Position_MERGED].InRot
+[K2Node_CallFunction_50@SetCameraRotation_MERGED].ReturnValue -> [K2Node_CallFunction_2@UpdateCamera_MERGED].A
+[K2Node_CallFunction_50@SetCameraRotation_MERGED].ReturnValue -> [K2Node_MakeStruct_1@Unproject Position_MERGED].Rotation
+[K2Node_CallFunction_5@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_1@UpdateCamera_MERGED].A
+[K2Node_CallFunction_5@UpdateCamera_MERGED].ReturnValue -> [K2Node_PromotableOperator_7@Unproject Position_MERGED].A
+[K2Node_CallFunction_5@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_PromotableOperator_17@Unproject Position_MERGED].A
+[K2Node_CallFunction_5@UpdateCamera_MERGED].ReturnValue#3 -> [K2Node_VariableSet_2@OnMouseMove_MERGED].MousePosition
+[K2Node_CallFunction_5@UpdateCamera_MERGED].WorldDirection -> [K2Node_VariableSet_0@UpdateCamera_MERGED].MouseDirection
+[K2Node_CallFunction_5@UpdateCamera_MERGED].X -> [K2Node_CallFunction_9@UpdateCamera_MERGED].B#2
+[K2Node_CallFunction_5@UpdateCamera_MERGED].X -> [K2Node_PromotableOperator_5@UpdateCamera_MERGED].B
+[K2Node_CallFunction_5@UpdateCamera_MERGED].Y -> [K2Node_CallFunction_11@UpdateCamera_MERGED].A#2
+[K2Node_CallFunction_5@UpdateCamera_MERGED].Y -> [K2Node_PromotableOperator_2@UpdateCamera_MERGED].A
+[K2Node_CallFunction_5@UpdateCamera_MERGED].then -> [K2Node_VariableSet_0@UpdateCamera_MERGED].execute#2
+[K2Node_CallFunction_6@UpdateCamera_MERGED].ReturnValue -> [K2Node_VariableSet_4@OnMouseMove_MERGED].WindowAspectRatio
+[K2Node_CallFunction_6@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_FunctionResult_1@Unproject Position_MERGED].WorldPosition
+[K2Node_CallFunction_6@UpdateCamera_MERGED].ReturnValue#3 -> [K2Node_CallFunction_4@UpdateCamera_MERGED].InDouble
+[K2Node_CallFunction_6@UpdateCamera_MERGED].then -> [K2Node_IfThenElse_0@UpdateCamera_MERGED].execute
+[K2Node_CallFunction_7@UpdateCamera_MERGED].ReturnValue -> [K2Node_VariableSet_0@UpdateCamera_MERGED].CameraRotationTarget
+[K2Node_CallFunction_7@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_4@UpdateCamera_MERGED].InVec
+[K2Node_CallFunction_8@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_7@UpdateCamera_MERGED].A
+[K2Node_CallFunction_8@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_7@UpdateCamera_MERGED].Pitch
+[K2Node_CallFunction_9@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_16@Unproject Position_MERGED].Geometry
+[K2Node_CallFunction_9@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_17@Unproject Position_MERGED].Geometry
+[K2Node_CallFunction_9@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_39@Unproject Position_MERGED].A
+[K2Node_CallFunction_9@UpdateCamera_MERGED].ReturnValue#3 -> [K2Node_CallFunction_7@UpdateCamera_MERGED].Yaw
+[K2Node_CommutativeAssociativeBinaryOperator_0@UpdateCamera_MERGED].ReturnValue -> [K2Node_IfThenElse_0@UpdateCamera_MERGED].Condition#2
+[K2Node_CustomEvent_0@ExecuteUbergraph_BP_FluxViewportEditor].DeltaTime -> [K2Node_CallFunction_6@UpdateCamera_MERGED].Delta
+[K2Node_CustomEvent_0@ExecuteUbergraph_BP_FluxViewportEditor].then -> [K2Node_CallFunction_6@UpdateCamera_MERGED].execute
+[K2Node_ExecutionSequence_0@UpdateCamera_MERGED].then_0 -> [K2Node_IfThenElse_0@UpdateCamera_MERGED].execute#2
+[K2Node_ExecutionSequence_0@UpdateCamera_MERGED].then_1 -> [K2Node_CallFunction_0@OnConstruct_MERGED].execute
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].DeltaTime -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_CustomEvent_DeltaTime
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].Depth -> [K2Node_CallFunction_14@Unproject Position_MERGED].InDouble
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].Depth -> [K2Node_PromotableOperator_18@Unproject Position_MERGED].B
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].Input -> [K2Node_CallFunction_5@UpdateCamera_MERGED].Input
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].IsMouseOver -> [K2Node_VariableSet_0@UpdateCamera_MERGED].IsMouseOver
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].MouseOnVIew -> [K2Node_CallFunction_4@UpdateCamera_MERGED].A
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].MouseOnVIew -> [K2Node_PromotableOperator_3@OnMouseWheel_MERGED].A#2
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].Rotation -> [K2Node_CallFunction_14@Unproject Position_MERGED].Rotation
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].ScreenPosition -> [K2Node_CallFunction_8@UpdateCamera_MERGED].A
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].ScreenPosition -> [K2Node_PromotableOperator_1@UpdateCamera_MERGED].A
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].then -> [K2Node_VariableSet_1@OnMouseWheel_MERGED].execute
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].then#2 -> [K2Node_VariableSet_0@UpdateCamera_MERGED].execute
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].then#3 -> [K2Node_CallFunction_0@OnConstruct_MERGED].execute
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].then#4 -> [K2Node_VariableSet_5@OnMouseMove_MERGED].execute
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].then#5 -> [K2Node_CallFunction_14@Unproject Position_MERGED].execute
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].then#6 -> [K2Node_FunctionResult_1@Unproject Position_MERGED].execute
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].then#7 -> [K2Node_ExecutionSequence_0@UpdateCamera_MERGED].execute
+[K2Node_FunctionEntry_0@OnConstruct_MERGED].then#8 -> [K2Node_SetVariableOnPersistentFrame_0].execute
+[K2Node_IfThenElse_0@UpdateCamera_MERGED].then -> [K2Node_CallFunction_5@UpdateCamera_MERGED].execute
+[K2Node_IfThenElse_0@UpdateCamera_MERGED].then#2 -> [K2Node_VariableSet_0@UpdateCamera_MERGED].execute#4
+[K2Node_MakeStruct_1@Unproject Position_MERGED].MinimalViewInfo -> [K2Node_CallFunction_16@Unproject Position_MERGED].DesiredView
+[K2Node_PromotableOperator_0@UpdateCamera_MERGED].ReturnValue -> [K2Node_VariableSet_4@OnMouseMove_MERGED].WindowAspectRatio
+[K2Node_PromotableOperator_0@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_PromotableOperator_6@UpdateCamera_MERGED].B
+[K2Node_PromotableOperator_0@UpdateCamera_MERGED].ReturnValue#3 -> [K2Node_CallFunction_5@UpdateCamera_MERGED].InVec
+[K2Node_PromotableOperator_10@Unproject Position_MERGED].ReturnValue -> [K2Node_FunctionResult_1@Unproject Position_MERGED].WorldPosition
+[K2Node_PromotableOperator_15@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_40@Unproject Position_MERGED].Z
+[K2Node_PromotableOperator_18@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_46@Unproject Position_MERGED].A
+[K2Node_PromotableOperator_1@UpdateCamera_MERGED].ReturnValue -> [K2Node_PromotableOperator_0@UpdateCamera_MERGED].B#3
+[K2Node_PromotableOperator_21@Unproject Position_MERGED].ReturnValue -> [K2Node_PromotableOperator_17@Unproject Position_MERGED].B
+[K2Node_PromotableOperator_22@Unproject Position_MERGED].ReturnValue -> [K2Node_PromotableOperator_21@Unproject Position_MERGED].A
+[K2Node_PromotableOperator_27@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_39@Unproject Position_MERGED].A
+[K2Node_PromotableOperator_29@Unproject Position_MERGED].ReturnValue -> [K2Node_PromotableOperator_8@Unproject Position_MERGED].B
+[K2Node_PromotableOperator_2@UpdateCamera_MERGED].ReturnValue -> [K2Node_PromotableOperator_5@UpdateCamera_MERGED].B
+[K2Node_PromotableOperator_3@OnMouseWheel_MERGED].ReturnValue -> [K2Node_VariableSet_1@OnMouseWheel_MERGED].CameraDistanceTarget
+[K2Node_PromotableOperator_3@OnMouseWheel_MERGED].ReturnValue#2 -> [K2Node_PromotableOperator_4@UpdateCamera_MERGED].A
+[K2Node_PromotableOperator_4@UpdateCamera_MERGED].ReturnValue -> [K2Node_VariableSet_2@OnMouseMove_MERGED].MousePosition
+[K2Node_PromotableOperator_4@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_20@Unproject Position_MERGED].InVec
+[K2Node_PromotableOperator_4@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_4@UpdateCamera_MERGED].InVec
+[K2Node_PromotableOperator_5@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_7@UpdateCamera_MERGED].Pitch
+[K2Node_PromotableOperator_5@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_7@UpdateCamera_MERGED].Yaw
+[K2Node_PromotableOperator_6@UpdateCamera_MERGED].ReturnValue -> [K2Node_CallFunction_11@UpdateCamera_MERGED].Location
+[K2Node_PromotableOperator_6@UpdateCamera_MERGED].ReturnValue#2 -> [K2Node_CallFunction_2@UpdateCamera_MERGED].Alpha
+[K2Node_PromotableOperator_7@Unproject Position_MERGED].ReturnValue -> [K2Node_PromotableOperator_3@OnMouseWheel_MERGED].B
+[K2Node_PromotableOperator_7@Unproject Position_MERGED].ReturnValue#2 -> [K2Node_PromotableOperator_4@UpdateCamera_MERGED].A#2
+[K2Node_PromotableOperator_8@Unproject Position_MERGED].ReturnValue -> [K2Node_CallFunction_40@Unproject Position_MERGED].Y
+[K2Node_Self_0@OnMouseMove_MERGED].self -> [K2Node_CallFunction_9@UpdateCamera_MERGED].self
+[K2Node_SetVariableOnPersistentFrame_0].then -> [K2Node_CallFunction_0@OnConstruct_MERGED].execute#2
+[K2Node_VariableGet_0@OnConstruct_MERGED].CameraRotationTarget -> [K2Node_CallFunction_0@OnConstruct_MERGED].Rotation
+[K2Node_VariableGet_0@OnConstruct_MERGED].MousePosition -> [K2Node_CallFunction_5@UpdateCamera_MERGED].ScreenPosition
+[K2Node_VariableGet_13@Unproject Position_MERGED].Viewport -> [K2Node_CallFunction_26@Unproject Position_MERGED].self
+[K2Node_VariableGet_13@Unproject Position_MERGED].Viewport -> [K2Node_CallFunction_27@Unproject Position_MERGED].self
+[K2Node_VariableGet_13@Unproject Position_MERGED].Viewport -> [K2Node_VariableGet_18@Unproject Position_MERGED].self
+[K2Node_VariableGet_13@Unproject Position_MERGED].Viewport -> [K2Node_VariableGet_6@UpdateCamera_MERGED].self
+[K2Node_VariableGet_15@UpdateCamera_MERGED].Delta -> [K2Node_CallFunction_6@UpdateCamera_MERGED].A#3
+[K2Node_VariableGet_15@UpdateCamera_MERGED].Delta -> [K2Node_PromotableOperator_1@UpdateCamera_MERGED].A#2
+[K2Node_VariableGet_16@UpdateCamera_MERGED].MouseDelta -> [K2Node_CallFunction_1@UpdateCamera_MERGED].A#2
+[K2Node_VariableGet_16@UpdateCamera_MERGED].MouseDelta -> [K2Node_PromotableOperator_0@UpdateCamera_MERGED].A#3
+[K2Node_VariableGet_17@UpdateCamera_MERGED].IsMouseDown -> [K2Node_CommutativeAssociativeBinaryOperator_0@UpdateCamera_MERGED].A
+[K2Node_VariableGet_18@Unproject Position_MERGED].CameraFov -> [K2Node_MakeStruct_1@Unproject Position_MERGED].FOV
+[K2Node_VariableGet_1@Unproject Position_MERGED].CameraFov -> [K2Node_CallFunction_9@UpdateCamera_MERGED].A
+[K2Node_VariableGet_1@Unproject Position_MERGED].CameraFov -> [K2Node_PromotableOperator_27@Unproject Position_MERGED].A
+[K2Node_VariableGet_1@Unproject Position_MERGED].IsMouseOver -> [K2Node_IfThenElse_0@UpdateCamera_MERGED].Condition
+[K2Node_VariableGet_1@Unproject Position_MERGED].MouseEvent -> [K2Node_CallFunction_0@OnConstruct_MERGED].Input
+[K2Node_VariableGet_1@Unproject Position_MERGED].MouseEvent -> [K2Node_CallFunction_1@UpdateCamera_MERGED].Input
+[K2Node_VariableGet_3@UpdateCamera_MERGED].IsMouseOver -> [K2Node_CommutativeAssociativeBinaryOperator_0@UpdateCamera_MERGED].B
+[K2Node_VariableGet_4@UpdateCamera_MERGED].WindowAspectRatio -> [K2Node_CallFunction_12@UpdateCamera_MERGED].B
+[K2Node_VariableGet_4@UpdateCamera_MERGED].WindowAspectRatio -> [K2Node_PromotableOperator_29@Unproject Position_MERGED].B
+[K2Node_VariableGet_5@OnMouseMove_MERGED].WindowSize -> [K2Node_CallFunction_3@UpdateCamera_MERGED].InVec
+[K2Node_VariableGet_5@OnMouseMove_MERGED].WindowSize -> [K2Node_CallFunction_5@UpdateCamera_MERGED].B
+[K2Node_VariableGet_5@OnMouseMove_MERGED].WindowSize -> [K2Node_PromotableOperator_4@UpdateCamera_MERGED].B
+[K2Node_VariableGet_6@UpdateCamera_MERGED].Delta -> [K2Node_CallFunction_3@UpdateCamera_MERGED].Exp
+[K2Node_VariableGet_6@UpdateCamera_MERGED].WindowAspectRatio -> [K2Node_MakeStruct_1@Unproject Position_MERGED].AspectRatio
+[K2Node_VariableGet_6@UpdateCamera_MERGED].WindowPosition -> [K2Node_CallFunction_4@UpdateCamera_MERGED].B
+[K2Node_VariableGet_6@UpdateCamera_MERGED].WindowPosition -> [K2Node_PromotableOperator_3@OnMouseWheel_MERGED].B#2
+[K2Node_VariableGet_7@UpdateCamera_MERGED].CameraRotationTarget -> [K2Node_CallFunction_10@UpdateCamera_MERGED].InRot
+[K2Node_VariableGet_7@UpdateCamera_MERGED].CameraRotationTarget -> [K2Node_CallFunction_2@UpdateCamera_MERGED].B
+[K2Node_VariableGet_8@SetCameraRotation_MERGED].CameraDistanceTarget -> [K2Node_CallFunction_0@OnConstruct_MERGED].A
+[K2Node_VariableGet_8@SetCameraRotation_MERGED].CameraDistanceTarget -> [K2Node_CallFunction_2@UpdateCamera_MERGED].A#2
+[K2Node_VariableGet_8@SetCameraRotation_MERGED].CameraDistanceTarget -> [K2Node_PromotableOperator_0@UpdateCamera_MERGED].A#2
+[K2Node_VariableGet_8@SetCameraRotation_MERGED].CameraDistanceTarget -> [K2Node_PromotableOperator_3@OnMouseWheel_MERGED].A
+[K2Node_VariableSet_0@UpdateCamera_MERGED].then -> [K2Node_VariableSet_1@OnMouseWheel_MERGED].execute#2
+[K2Node_VariableSet_1@OnMouseWheel_MERGED].then -> [K2Node_FunctionResult_0@OnMouseMove_MERGED].execute
+[K2Node_VariableSet_2@OnMouseMove_MERGED].then -> [K2Node_VariableSet_0@UpdateCamera_MERGED].execute#3
+[K2Node_VariableSet_3@OnMouseMove_MERGED].then -> [K2Node_VariableSet_4@OnMouseMove_MERGED].execute
+[K2Node_VariableSet_4@OnMouseMove_MERGED].then -> [K2Node_VariableSet_2@OnMouseMove_MERGED].execute
+[K2Node_VariableSet_5@OnMouseMove_MERGED].then -> [K2Node_VariableSet_3@OnMouseMove_MERGED].execute

@@ -1,0 +1,1967 @@
+﻿# /Game/FluidFlux/Demo/Environment/Foam/NS_FluxFoam
+# класс: NiagaraSystem; происхождение: проект; узлов: 607; связей: 1252; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:5443
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[NS_FluxFoam] NiagaraSystem
+    bInitialOwnerVelocityFromActor = False
+    bRequireCurrentFrameData = False
+    bFixedBounds = True
+    FixedBounds = (Min=(X=-1000000.000000,Y=-100000.000000,Z=-100000.000000),Max=(X=100000.000000,Y=100000.000000,Z=100000.000000),IsValid=True)
+    bDeterminism = True
+    MaxEmitterImportance = Normal
+    MaxPoolSize = 16
+    ThumbnailImage <- ThumbnailTexture
+    ScratchPadScripts(0) <- To2
+    ScratchPadScripts(1) <- SetHeight
+    ScratchPadScripts(2) <- FluxAdvect
+    EmitterHandles(0) <- NE_Surface
+    SystemSpawnScript <- SystemSpawnScript
+    SystemUpdateScript <- SystemUpdateScript
+    SystemCompiledData <- NiagaraDataInterfaceTexture_5
+    SystemCompiledData <- NiagaraDataInterfaceTexture_9
+    SystemCompiledData <- NiagaraDataInterfaceTexture_8
+    SystemCompiledData <- NiagaraDataInterfaceTexture_7
+    SystemCompiledData <- NiagaraDataInterfaceTexture_1
+    SystemCompiledData <- NiagaraDataInterfaceTexture_4
+    SystemCompiledData <- NiagaraDataInterfaceTexture_6
+    SystemCompiledData <- NiagaraDataInterfaceVolumeTexture_0
+    SystemCompiledData <- NiagaraDataInterfaceTexture_0
+    SystemCompiledData <- NiagaraDataInterfaceTexture_2
+    SystemCompiledData <- NiagaraDataInterfaceTexture_3
+    ExposedParameters <- NiagaraDataInterfaceTexture_9
+    ExposedParameters <- NiagaraDataInterfaceTexture_8
+    ExposedParameters <- NiagaraDataInterfaceTexture_7
+    ExposedParameters <- NiagaraDataInterfaceTexture_1
+    ExposedParameters <- NiagaraDataInterfaceTexture_4
+    ExposedParameters <- NiagaraDataInterfaceVolumeTexture_0
+    ExposedParameters <- NiagaraDataInterfaceTexture_0
+    ExposedParameters <- NiagaraDataInterfaceTexture_2
+    ExposedParameters <- NiagaraDataInterfaceTexture_3
+    ExposedParameters <- NiagaraDataInterfaceTexture_6
+    ExposedParameters <- NiagaraDataInterfaceTexture_5
+    EditorData <- NiagaraSystemEditorData_0
+    EditorParameters <- NiagaraEditorParametersAdapter_0
+    BakerSettings <- BakerSettings
+[To2] NiagaraScript
+    Usage = DynamicInput
+    ExposedVersion = 209BC70E5DB5472C2750CE07FD7ECE8C
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraScriptSource_0@To2] NiagaraScriptSource
+[NiagaraGraph_0@To2.NiagaraScriptSource_0] NiagaraGraph
+[NiagaraScriptVariable_0@To2.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraNodeParameterMapGet_6@To2.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeOutput_0@To2.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeInput_169@To2.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeConvert_2] NiagaraNodeConvert
+    AutowireBreakType = (ClassStructOrEnum="/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.Vector2f'",UnderlyingType=2)
+    Connections(0) = (SourcePinId=9CB39DA84FEF637295357A8AA6962AA9,SourcePath=("X"),DestinationPinId=910E8C1B4D810C100156B8AC7F687B71,DestinationPath=("Value"))
+    Connections(1) = (SourcePinId=9CB39DA84FEF637295357A8AA6962AA9,SourcePath=("Y"),DestinationPinId=4CB6BFB142EBB5BE6A3D689D1F48CF55,DestinationPath=("Value"))
+    ExpandedItems(0) = (PinId=910E8C1B4D810C100156B8AC7F687B71)
+    ExpandedItems(1) = (PinId=9CB39DA84FEF637295357A8AA6962AA9)
+    ExpandedItems(2) = (PinId=4CB6BFB142EBB5BE6A3D689D1F48CF55)
+    ChangeId = 41F1A5D54FB1B1A4EA356D992E6EC2D6
+[NiagaraNodeConvert_1@To2.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeConvert
+[ParameterHierarchyRoot@To2.NiagaraScriptSource_0.NiagaraGraph_0] HierarchyRoot
+[SystemSpawnScript] NiagaraScript
+    Usage = SystemSpawnScript
+    ExposedVersion = A11A38CFFF989AB1B3B1434504772345
+    RapidIterationParameters = (ParameterGuidMapping=(((Name="Constants.NE_Surface.EmitterState.MaxDistance",TypeDefHandle=(RegisteredTypeIndex=99)), 7EBD2A1540BEED1125E64385CE4CF00D)))
+    VersionData(0) <- SystemScriptSource
+[SystemScriptSource] NiagaraScriptSource
+    NodeGraph <- SystemScriptGraph
+[SystemScriptGraph] NiagaraGraph
+    ChangeId = 5A95BFF94DF12F11FA410782E03EFD6E
+    LastBuiltTraversalDataChangeId = 5A95BFF94DF12F11FA410782E03EFD6E
+    LastBuiltScriptVersionId = 87C7FB060084C92C80E1A4AB309BA6EA
+    ParameterHierarchyRoot = "ParameterHierarchyRoot"
+    bHasValidLastBuiltScriptVersionId = True
+    GraphGuid = 56AB800B413E8F8C22B531ADC14D30FC
+    CachedUsageInfo(0) <- NiagaraNodeInput_0
+    CachedUsageInfo(0) <- NiagaraNodeEmitter_10
+    CachedUsageInfo(0) <- NiagaraNodeOutput_0
+    CachedUsageInfo(1) <- NiagaraNodeInput_1
+    CachedUsageInfo(1) <- NiagaraNodeFunctionCall_0
+    CachedUsageInfo(1) <- NiagaraNodeEmitter_11
+    CachedUsageInfo(1) <- NiagaraNodeOutput_1
+    Nodes(0) <- NiagaraNodeOutput_0
+    Nodes(1) <- NiagaraNodeInput_0
+    Nodes(2) <- NiagaraNodeOutput_1
+    Nodes(3) <- NiagaraNodeInput_1
+    Nodes(4) <- NiagaraNodeFunctionCall_0
+    Nodes(5) <- NiagaraNodeEmitter_10
+    Nodes(6) <- NiagaraNodeEmitter_11
+[NiagaraNodeOutput_1] NiagaraNodeOutput
+    Outputs(0) = (Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = SystemUpdateScript
+    ChangeId = CC01AA024562A2AB46A68EA44038E4F7
+[NiagaraNodeOutput_0@SystemSpawnScript.SystemScriptSource.SystemScriptGraph] NiagaraNodeOutput
+[NiagaraNodeInput_1] NiagaraNodeInput
+    Input = (VarData=(0),Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ChangeId = DC5680EB4CE61B6CDC65B2B7E92E8DFA
+[NiagaraNodeInput_0@SystemSpawnScript.SystemScriptSource.SystemScriptGraph] NiagaraNodeInput
+[NiagaraNodeFunctionCall_0@SystemSpawnScript.SystemScriptSource.SystemScriptGraph] NiagaraNodeFunctionCall
+[NiagaraNodeEmitter_11] NiagaraNodeEmitter
+    OwnerSystem = "/Script/Niagara.NiagaraSystem'NS_FluxFoam'"
+    EmitterHandleId = A9F75E334F57F1556B5428858E878C21
+    DisplayName = INVTEXT("NE_Surface")
+    ScriptType = EmitterUpdateScript
+    ChangeId = 9044586347A01862443538AE0157B2EB
+[NiagaraNodeEmitter_10] NiagaraNodeEmitter
+    OwnerSystem = "/Script/Niagara.NiagaraSystem'NS_FluxFoam'"
+    EmitterHandleId = A9F75E334F57F1556B5428858E878C21
+    DisplayName = INVTEXT("NE_Surface")
+    ScriptType = EmitterSpawnScript
+    ChangeId = 513CCB3E4991FA91FF72458DEC1B639B
+[ParameterHierarchyRoot@SystemSpawnScript.SystemScriptSource.SystemScriptGraph] HierarchyRoot
+[SetHeight] NiagaraScript
+    Usage = Module
+    ExposedVersion = 0A01F6D1412565A452E9528F75EA77C3
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraScriptSource_0@SetHeight] NiagaraScriptSource
+[NiagaraGraph_0@SetHeight.NiagaraScriptSource_0] NiagaraGraph
+[NiagaraScriptVariable_9@SetHeight.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraScriptVariable_3@SetHeight.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraScriptVariable_1@SetHeight.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraNodeParameterMapSet_6@SetHeight.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapGet_6@SetHeight.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeOutput_0@SetHeight.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeInput_169@SetHeight.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeConvert_1@SetHeight.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeConvert
+[NiagaraNodeConvert_0] NiagaraNodeConvert
+    AutowireBreakType = (ClassStructOrEnum="/Script/CoreUObject.ScriptStruct'/Script/Niagara.NiagaraPosition'",UnderlyingType=2)
+    Connections(0) = (SourcePinId=8C45114045FF348A29A7AE8E313A9095,SourcePath=("X"),DestinationPinId=B0AFC6A444E730E4363FAC988802D825,DestinationPath=("Value"))
+    Connections(1) = (SourcePinId=8C45114045FF348A29A7AE8E313A9095,SourcePath=("Y"),DestinationPinId=8A1B4A9648B108FAAF033D890FF2370C,DestinationPath=("Value"))
+    Connections(2) = (SourcePinId=8C45114045FF348A29A7AE8E313A9095,SourcePath=("Z"),DestinationPinId=01C0F78D484F3BE2980E258941231785,DestinationPath=("Value"))
+    bIsWiringShown = False
+    ExpandedItems(0) = (PinId=B0AFC6A444E730E4363FAC988802D825)
+    ExpandedItems(1) = (PinId=8C45114045FF348A29A7AE8E313A9095)
+    ExpandedItems(2) = (PinId=8A1B4A9648B108FAAF033D890FF2370C)
+    ExpandedItems(3) = (PinId=01C0F78D484F3BE2980E258941231785)
+    ChangeId = 1216AEDF42FD1DBFF4B51F99BB9279E3
+[ParameterHierarchyRoot@SetHeight.NiagaraScriptSource_0.NiagaraGraph_0] HierarchyRoot
+[NiagaraHierarchyScriptParameter_0@SetHeight.NiagaraScriptSource_0.NiagaraGraph_0.ParameterHierarchyRoot] NiagaraHierarchyScriptParameter
+[FluxAdvect] NiagaraScript
+    Usage = Module
+    ExposedVersion = 0A01F6D1412565A452E9528F75EA77C3
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraScriptSource_0@FluxAdvect] NiagaraScriptSource
+[NiagaraGraph_0@FluxAdvect.NiagaraScriptSource_0] NiagaraGraph
+[NiagaraScriptVariable_5@FluxAdvect.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraScriptVariable_2@FluxAdvect.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraNodeParameterMapSet_6@FluxAdvect.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapGet_6@FluxAdvect.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeOutput_0@FluxAdvect.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+    Outputs(0) = (VarData=(0,0,0,0,0,0,0,0,0,0,0,0),Name="Output",TypeDefHandle=(RegisteredTypeIndex=104))
+    ScriptType = DynamicInput
+    ChangeId = 739A4B1A48C43CC3AFCBB39D29D786DA
+    ErrorType = 4
+    Outputs(0) = (Name="Out",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = SystemSpawnScript
+    ChangeId = 9D6330AC42A1AF0712239E85734B410D
+    Outputs(0) = (VarData=(0),Name="OutputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = Module
+    ChangeId = 127CACD44256DF6B1F2C1FA9401996D2
+    ErrorType = 4
+    Outputs(0) = (VarData=(0),Name="OutputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    ScriptType = Module
+    ChangeId = 127CACD44256DF6B1F2C1FA9401996D2
+    ErrorType = 4
+[NiagaraNodeOp_66] NiagaraNodeOp
+    OpName = "Numeric::CmpLT"
+    ChangeId = 8A91536D4343679708930D84B8E6535D
+    вход B = 100.000000
+[NiagaraNodeOp_51] NiagaraNodeOp
+    OpName = "Numeric::Length"
+    ChangeId = 8166558A4B0119C472DCBC865365200E
+[NiagaraNodeInput_169@FluxAdvect.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+    Input = (VarData=(0),Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    CallSortPriority = 1
+    ChangeId = AAD57CF24FB5F4B659333BB38228D478
+    Input = (VarData=(0),Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    CallSortPriority = 1
+    ChangeId = CC7AA51F43C7A96976FB79A1BB92C4AE
+    Input = (VarData=(0),Name="InputMap",TypeDefHandle=(RegisteredTypeIndex=95))
+    CallSortPriority = 1
+    ChangeId = CC7AA51F43C7A96976FB79A1BB92C4AE
+[NiagaraNodeConvert_1@FluxAdvect.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeConvert
+    AutowireMakeType = (ClassStructOrEnum="/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.Vector3f'",UnderlyingType=2)
+    Connections(0) = (SourcePinId=C295DCA24280821C6368D3B6B7C298DF,SourcePath=("Value"),DestinationPinId=8E402D7844C2017328B916B0521F4CC9,DestinationPath=("X"))
+    Connections(1) = (SourcePinId=98C16D664A6B794CF2CC13AF625684AC,SourcePath=("Value"),DestinationPinId=8E402D7844C2017328B916B0521F4CC9,DestinationPath=("Y"))
+    Connections(2) = (SourcePinId=6282D264481731F181877AB673EE4EA6,SourcePath=("Value"),DestinationPinId=8E402D7844C2017328B916B0521F4CC9,DestinationPath=("Z"))
+    bIsWiringShown = False
+    ExpandedItems(0) = (PinId=C295DCA24280821C6368D3B6B7C298DF)
+    ExpandedItems(1) = (PinId=8E402D7844C2017328B916B0521F4CC9)
+    ExpandedItems(2) = (PinId=98C16D664A6B794CF2CC13AF625684AC)
+    ExpandedItems(3) = (PinId=6282D264481731F181877AB673EE4EA6)
+    ChangeId = 631A62824A86A9EFC0A155B90BF1953C
+    AutowireMakeType = (ClassStructOrEnum="/Script/CoreUObject.ScriptStruct'/Script/Niagara.NiagaraPosition'",UnderlyingType=2)
+    Connections(0) = (SourcePinId=C319F53B477FB13BC6A8AD9B07C52EA7,SourcePath=("Value"),DestinationPinId=116F52F64E6D3AD0694A28A3D54A1D3D,DestinationPath=("X"))
+    Connections(1) = (SourcePinId=BE3200524052789CD0DF39929C49E7AE,SourcePath=("Value"),DestinationPinId=116F52F64E6D3AD0694A28A3D54A1D3D,DestinationPath=("Y"))
+    Connections(2) = (SourcePinId=1D3C99854EBEA8C1FC58D391CAB74F8A,SourcePath=("Value"),DestinationPinId=116F52F64E6D3AD0694A28A3D54A1D3D,DestinationPath=("Z"))
+    bIsWiringShown = False
+    ExpandedItems(0) = (PinId=C319F53B477FB13BC6A8AD9B07C52EA7)
+    ExpandedItems(1) = (PinId=116F52F64E6D3AD0694A28A3D54A1D3D)
+    ExpandedItems(2) = (PinId=BE3200524052789CD0DF39929C49E7AE)
+    ExpandedItems(3) = (PinId=1D3C99854EBEA8C1FC58D391CAB74F8A)
+    ChangeId = D07289DA4B92E465D4B015B9593CD487
+    Connections(0) = (SourcePinId=BA0EF9AE4A8FBFA29D31DA84AB40C923,SourcePath=("X"),DestinationPinId=D0BD9C1045DFF5DE12A2389DC3CE0913,DestinationPath=("X"))
+    Connections(1) = (SourcePinId=BA0EF9AE4A8FBFA29D31DA84AB40C923,SourcePath=("Y"),DestinationPinId=D0BD9C1045DFF5DE12A2389DC3CE0913,DestinationPath=("Y"))
+    Connections(2) = (SourcePinId=BA0EF9AE4A8FBFA29D31DA84AB40C923,SourcePath=("Y"),DestinationPinId=D0BD9C1045DFF5DE12A2389DC3CE0913,DestinationPath=("Z"))
+    ExpandedItems(0) = (PinId=BA0EF9AE4A8FBFA29D31DA84AB40C923)
+    ExpandedItems(1) = (PinId=D0BD9C1045DFF5DE12A2389DC3CE0913)
+    ChangeId = FBE9F7DA4C68056AAA4223BFB3E21D9B
+[ParameterHierarchyRoot@FluxAdvect.NiagaraScriptSource_0.NiagaraGraph_0] HierarchyRoot
+[NiagaraHierarchyScriptParameter_0@FluxAdvect.NiagaraScriptSource_0.NiagaraGraph_0.ParameterHierarchyRoot] NiagaraHierarchyScriptParameter
+    Identity = (Guids=(32CEE31942C2CD6D9E4ACD9EC012145E))
+    Identity = (Guids=(8565A39E417E73CE4DBE93BACFDB0A44))
+[NiagaraEditorParametersAdapter_0] NiagaraEditorParametersAdapter
+[NiagaraDataInterfaceVolumeTexture_0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_9] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_8] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_7] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_5] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_0] NiagaraDataInterfaceTexture
+[SystemUpdateScript] NiagaraScript
+    Usage = SystemUpdateScript
+    ExposedVersion = 878DF08C4F440C11FFEC84211FED6409
+    VersionData(0) <- SystemScriptSource
+[NiagaraDataInterfaceCurve_4] NiagaraDataInterfaceCurve
+    Curve = (Keys=((Value=1.000000),(Time=0.750000,Value=1.000000),(Time=1.000000)))
+    ShaderLUT(0) = 1.000000
+    ShaderLUT(1) = 1.000000
+    ShaderLUT(2) = 1.000000
+    ShaderLUT(3) = 1.000000
+    ShaderLUT(4) = 1.000000
+    ShaderLUT(5) = 1.000000
+    ShaderLUT(6) = 1.000000
+    ShaderLUT(7) = 1.000000
+    ShaderLUT(8) = 1.000000
+    ShaderLUT(9) = 1.000000
+    ShaderLUT(10) = 1.000000
+    ShaderLUT(11) = 1.000000
+    ShaderLUT(12) = 1.000000
+    ShaderLUT(13) = 1.000000
+    ShaderLUT(14) = 1.000000
+    ShaderLUT(15) = 1.000000
+    ShaderLUT(16) = 1.000000
+    ShaderLUT(17) = 1.000000
+    ShaderLUT(18) = 1.000000
+    ShaderLUT(19) = 1.000000
+    ShaderLUT(20) = 1.000000
+    ShaderLUT(21) = 1.000000
+    ShaderLUT(22) = 1.000000
+    ShaderLUT(23) = 1.000000
+    ShaderLUT(24) = 1.000000
+    ShaderLUT(25) = 1.000000
+    ShaderLUT(26) = 1.000000
+    ShaderLUT(27) = 1.000000
+    ShaderLUT(28) = 1.000000
+    ShaderLUT(29) = 1.000000
+    ShaderLUT(30) = 1.000000
+    ShaderLUT(31) = 1.000000
+    ShaderLUT(32) = 1.000000
+    ShaderLUT(33) = 1.000000
+    ShaderLUT(34) = 1.000000
+    ShaderLUT(35) = 1.000000
+    ShaderLUT(36) = 1.000000
+    ShaderLUT(37) = 1.000000
+    ShaderLUT(38) = 1.000000
+    ShaderLUT(39) = 1.000000
+    ShaderLUT(40) = 1.000000
+    ShaderLUT(41) = 1.000000
+    ShaderLUT(42) = 1.000000
+    ShaderLUT(43) = 1.000000
+    ShaderLUT(44) = 1.000000
+    ShaderLUT(45) = 1.000000
+    ShaderLUT(46) = 1.000000
+    ShaderLUT(47) = 1.000000
+    ShaderLUT(48) = 1.000000
+    ShaderLUT(49) = 1.000000
+    ShaderLUT(50) = 1.000000
+    ShaderLUT(51) = 1.000000
+    ShaderLUT(52) = 1.000000
+    ShaderLUT(53) = 1.000000
+    ShaderLUT(54) = 1.000000
+    ShaderLUT(55) = 1.000000
+    ShaderLUT(56) = 1.000000
+    ShaderLUT(57) = 1.000000
+    ShaderLUT(58) = 1.000000
+    ShaderLUT(59) = 1.000000
+    ShaderLUT(60) = 1.000000
+    ShaderLUT(61) = 1.000000
+    ShaderLUT(62) = 1.000000
+    ShaderLUT(63) = 1.000000
+    ShaderLUT(64) = 1.000000
+    ShaderLUT(65) = 1.000000
+    ShaderLUT(66) = 1.000000
+    ShaderLUT(67) = 1.000000
+    ShaderLUT(68) = 1.000000
+    ShaderLUT(69) = 1.000000
+    ShaderLUT(70) = 1.000000
+    ShaderLUT(71) = 1.000000
+    ShaderLUT(72) = 1.000000
+    ShaderLUT(73) = 0.989691
+    ShaderLUT(74) = 0.948454
+    ShaderLUT(75) = 0.907217
+    ShaderLUT(76) = 0.865979
+    ShaderLUT(77) = 0.824742
+    ShaderLUT(78) = 0.783505
+    ShaderLUT(79) = 0.742268
+    ShaderLUT(80) = 0.701031
+    ShaderLUT(81) = 0.659794
+    ShaderLUT(82) = 0.618557
+    ShaderLUT(83) = 0.577320
+    ShaderLUT(84) = 0.536083
+    ShaderLUT(85) = 0.494845
+    ShaderLUT(86) = 0.453608
+    ShaderLUT(87) = 0.412371
+    ShaderLUT(88) = 0.371134
+    ShaderLUT(89) = 0.329897
+    ShaderLUT(90) = 0.288660
+    ShaderLUT(91) = 0.247423
+    ShaderLUT(92) = 0.206186
+    ShaderLUT(93) = 0.164948
+    ShaderLUT(94) = 0.123711
+    ShaderLUT(95) = 0.082474
+    ShaderLUT(96) = 0.041237
+    ShaderLUT(97) = 0.000000
+    LUTNumSamplesMinusOne = 97.000000
+[NE_Surface] NiagaraEmitter
+    ExposedVersion = 34C8F05F05B691EA5968E6A50403B112
+    LibraryVisibility = Library
+    ChangeId = EFF1CA6B40F55890B158E1AAAD1A96B3
+    UniqueEmitterName = "NE_Surface"
+    VersionData(0) <- UpdateScript_2
+    VersionData(0) <- SpawnScript_1
+    VersionData(0) <- EmitterSpawnScript_1
+    VersionData(0) <- EmitterUpdateScript_1
+    VersionData(0) <- NiagaraScriptSource_0
+    VersionData(0) <- NiagaraScratchPadContainer_1
+    VersionData(0) <- NiagaraScratchPadContainer_0
+    VersionData(0) <- NiagaraEmitter_1
+    VersionData(0) <- NiagaraSpriteRendererProperties_0
+    VersionData(0) <- GPUComputeScript_1
+    VersionData(0) <- NiagaraEmitterEditorData_0
+    VersionData(0) <- NiagaraEditorParametersAdapter_0
+[NiagaraEmitter_1] NiagaraEmitter
+    ExposedVersion = 08EC206F3ECA2602DE9207EDA3DC0F50
+    LibraryVisibility = Library
+    ChangeId = DCA9465C4FE7E8323A7FFAA9506040C7
+    UniqueEmitterName = "NE_FluxEmitter"
+    VersionData(0) <- UpdateScript_0
+    VersionData(0) <- SpawnScript_0
+    VersionData(0) <- EmitterSpawnScript_0
+    VersionData(0) <- EmitterUpdateScript_0
+    VersionData(0) <- NiagaraScriptSource_1
+    VersionData(0) <- NiagaraScratchPadContainer_3
+    VersionData(0) <- NiagaraScratchPadContainer_2
+    VersionData(0) <- NiagaraSpriteRendererProperties_0
+    VersionData(0) <- GPUComputeScript_0
+    VersionData(0) <- NiagaraEmitterEditorData_1
+    VersionData(0) <- NiagaraEditorParametersAdapter_0
+[NiagaraEmitterEditorData_1@NE_Surface.NiagaraEmitter_1] NiagaraEmitterEditorData
+[SummaryViewRoot@NE_Surface.NiagaraEmitter_1.NiagaraEmitterEditorData_1] HierarchyRoot
+[StackEditorData@NE_Surface.NiagaraEmitter_1.NiagaraEmitterEditorData_1] NiagaraStackEditorData
+[GPUComputeScript_0] NiagaraScript
+    Usage = ParticleGPUComputeScript
+    ExposedVersion = 6E4623D191ED3431392922DB8DB0190E
+    VersionData(0) <- NiagaraScriptSource_1
+[NiagaraSpriteRendererProperties_0@NE_Surface.NiagaraEmitter_1] NiagaraSpriteRendererProperties
+[NiagaraScratchPadContainer_2@NE_Surface.NiagaraEmitter_1] NiagaraScratchPadContainer
+[NiagaraScratchPadContainer_3@NE_Surface.NiagaraEmitter_1] NiagaraScratchPadContainer
+[NiagaraScriptSource_1@NE_Surface.NiagaraEmitter_1] NiagaraScriptSource
+[NiagaraGraph_0@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1] NiagaraGraph
+[NiagaraNodeFunctionCall_5@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeParameterMapGet_29@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapSet_1@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeFunctionCall_4@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_3@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_2@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_1@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraScriptVariable_0@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraNodeOutput_5@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeFunctionCall_0@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeParameterMapSet_0@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapGet_67@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_71@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_61@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_57@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_9@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_21@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_60@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_59@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_56@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_54@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_53@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_51@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_49@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_47@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_46@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_45@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_34@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_28@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_24@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_20@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_19@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_13@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_43@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_41@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_40@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_39@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_38@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_37@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_36@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_25@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_23@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_22@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_10@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_0@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeInput_5@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_4@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeFunctionCall_7@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeParameterMapSet_5@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapGet_62@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_70@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_66@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_65@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_63@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_4@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_8@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_58@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_55@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_52@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_50@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_48@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_44@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_42@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_35@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_31@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_27@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_26@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_15@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_14@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_7@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_6@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_33@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_32@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_30@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_5@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_3@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_1@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_12@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_11@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_2@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_18@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_17@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_16@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeInput_4@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_3@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeInput_3@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_2@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeInput_2@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeInput
+[ParameterHierarchyRoot@NE_Surface.NiagaraEmitter_1.NiagaraScriptSource_1.NiagaraGraph_0] HierarchyRoot
+[EmitterUpdateScript_0] NiagaraScript
+    Usage = EmitterUpdateScript
+    ExposedVersion = F36E32734883315963D4DD59EBA66342
+    VersionData(0) <- NiagaraScriptSource_1
+[EmitterSpawnScript_0] NiagaraScript
+    Usage = EmitterSpawnScript
+    ExposedVersion = 120BB4618E7848D10664F75D51392F62
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_1
+[SpawnScript_0@NE_Surface.NiagaraEmitter_1] NiagaraScript
+[UpdateScript_0] NiagaraScript
+    Usage = ParticleUpdateScript
+    ExposedVersion = BF05462DF4B1EFFA71256B4826BF3CD7
+    VersionData(0) <- NiagaraScriptSource_1
+[NiagaraEmitterEditorData_0@NE_Surface.NiagaraEmitter_1] NiagaraEmitterEditorData
+[SummaryViewRoot@NE_Surface.NiagaraEmitter_1.NiagaraEmitterEditorData_0] HierarchyRoot
+[StackEditorData@NE_Surface.NiagaraEmitter_1.NiagaraEmitterEditorData_0] NiagaraStackEditorData
+[NiagaraEditorParametersAdapter_0@NE_Surface.NiagaraEmitter_1] NiagaraEditorParametersAdapter
+[GPUComputeScript_1_0] NiagaraScript
+    Usage = ParticleGPUComputeScript
+    RapidIterationParameters = ()
+[EmitterUpdateScript_1_0] NiagaraScript
+    Usage = EmitterUpdateScript
+    RapidIterationParameters = ()
+[EmitterSpawnScript_1_0] NiagaraScript
+    Usage = EmitterSpawnScript
+    RapidIterationParameters = ()
+[UpdateScript_1_0] NiagaraScript
+    Usage = ParticleUpdateScript
+    RapidIterationParameters = ()
+[SpawnScript_1_0] NiagaraScript
+    Usage = ParticleSpawnScript
+    RapidIterationParameters = ()
+[NiagaraScratchPadContainer_1@NE_Surface.NiagaraEmitter_1] NiagaraScratchPadContainer
+[NiagaraScratchPadContainer_0@NE_Surface.NiagaraEmitter_1] NiagaraScratchPadContainer
+[NiagaraScratchPadContainer_1@NE_Surface] NiagaraScratchPadContainer
+[NiagaraScratchPadContainer_0@NE_Surface] NiagaraScratchPadContainer
+[NiagaraSpriteRendererProperties_0@NE_Surface] NiagaraSpriteRendererProperties
+    Alignment = Unaligned
+    FacingMode = FaceCamera
+    bSubImageBlend = False
+    CustomSortingBinding = (RootName="NormalizedAge",ParamMapVariable=(Name="Particles.NormalizedAge"),DataSetName="NormalizedAge",CachedDisplayName="Particles.NormalizedAge")
+    RendererEnabledBinding = (bIsCachedParticleValue=True)
+    OuterEmitterVersion = 08EC206F3ECA2602DE9207EDA3DC0F50
+    MergeId = 164710914613E478BE42D890335955D4
+    Alignment = CustomAlignment
+    bSubImageBlend = False
+    CustomSortingBinding = (RootName="NormalizedAge",ParamMapVariable=(Name="Particles.NormalizedAge"),DataSetName="NormalizedAge",CachedDisplayName="Particles.NormalizedAge")
+    RendererEnabledBinding = (bIsCachedParticleValue=True)
+    OuterEmitterVersion = 34C8F05F05B691EA5968E6A50403B112
+    MergeId = 164710914613E478BE42D890335955D4
+[NiagaraEmitterEditorData_0@NE_Surface] NiagaraEmitterEditorData
+    StackEditorData = "StackEditorData"
+    SummaryViewRoot = "SummaryViewRoot"
+    StackEditorData = "StackEditorData"
+    SummaryViewRoot = "SummaryViewRoot"
+[SummaryViewRoot@NE_Surface.NiagaraEmitterEditorData_0] HierarchyRoot
+[StackEditorData@NE_Surface.NiagaraEmitterEditorData_0] NiagaraStackEditorData
+[GPUComputeScript_1] NiagaraScript
+    Usage = ParticleGPUComputeScript
+    ExposedVersion = 6E4623D191ED3431392922DB8DB0190E
+    VersionData(0) <- NiagaraScriptSource_0
+[NiagaraScriptSource_0@NE_Surface] NiagaraScriptSource
+    NodeGraph <- NiagaraGraph_0
+    NodeGraph <- NiagaraGraph_0
+    NodeGraph <- NiagaraGraph_0
+    NodeGraph <- NiagaraGraph_0
+[NiagaraGraph_0@NE_Surface.NiagaraScriptSource_0] NiagaraGraph
+[NiagaraNodeParameterMapSet_7@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeFunctionCall_10@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraScriptVariable_3@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraNodeParameterMapGet_69@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapSet_6@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeFunctionCall_9@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraScriptVariable_2@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraNodeParameterMapGet_68@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapSet_4@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeFunctionCall_8@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_6@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraScriptVariable_1@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraNodeParameterMapGet_64@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapSet_3@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeInput_0@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[Spawn_Count_Scale_By_Distance@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0.NiagaraNodeInput_0] NiagaraDataInterfaceCurve
+[NiagaraDataInterfaceCurve_0] NiagaraDataInterfaceCurve
+[NiagaraNodeParameterMapSet_2@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeFunctionCall_5@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeParameterMapGet_29@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapSet_1@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeFunctionCall_4@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_3@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_2@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_1@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraScriptVariable_0@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraScriptVariable
+[NiagaraNodeOutput_5@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeFunctionCall_0@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeParameterMapSet_0@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapGet_67@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_71@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_61@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_57@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_9@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_21@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_60@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_59@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_56@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_54@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_53@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_51@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_49@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_47@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_46@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_45@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_34@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_28@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_24@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_20@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_19@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_13@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_43@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_41@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_40@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_39@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_38@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_37@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_36@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_25@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_23@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_22@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_10@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_0@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeInput_5@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_4@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeFunctionCall_7@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeParameterMapSet_5@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapGet_62@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_70@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_66@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_65@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_63@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_4@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_8@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_58@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_55@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_52@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_50@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_48@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_44@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_42@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_35@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_31@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_27@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_26@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_15@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_14@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_7@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_6@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_33@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_32@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_30@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_5@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_3@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_1@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_12@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_11@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_2@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_18@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_17@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_16@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeInput_4@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_3@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeInput_3@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeOutput_2@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeInput_2@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] NiagaraNodeInput
+[ParameterHierarchyRoot@NE_Surface.NiagaraScriptSource_0.NiagaraGraph_0] HierarchyRoot
+[EmitterUpdateScript_1] NiagaraScript
+    Usage = EmitterUpdateScript
+    ExposedVersion = F36E32734883315963D4DD59EBA66342
+    VersionData(0) <- NiagaraScriptSource_0
+[EmitterSpawnScript_1] NiagaraScript
+    Usage = EmitterSpawnScript
+    ExposedVersion = 120BB4618E7848D10664F75D51392F62
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_0
+[SpawnScript_1@NE_Surface] NiagaraScript
+[UpdateScript_2@NE_Surface] NiagaraScript
+[NiagaraSpriteRendererProperties_1@NE_Surface] NiagaraSpriteRendererProperties
+[EmitterUpdateScript_3] NiagaraScript
+    Usage = EmitterUpdateScript
+    ExposedVersion = F36E32734883315963D4DD59EBA66342
+    VersionData(0) <- NiagaraScriptSource_1
+[EmitterSpawnScript_2] NiagaraScript
+    Usage = EmitterSpawnScript
+    ExposedVersion = 120BB4618E7848D10664F75D51392F62
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_1
+[NiagaraScratchPadContainer_3@NE_Surface] NiagaraScratchPadContainer
+[NiagaraScratchPadContainer_2@NE_Surface] NiagaraScratchPadContainer
+[NiagaraEmitterEditorData_1@NE_Surface] NiagaraEmitterEditorData
+    StackEditorData = "StackEditorData"
+    SummaryViewRoot = "SummaryViewRoot"
+    StackEditorData = "StackEditorData"
+    SummaryViewRoot = "SummaryViewRoot"
+[SummaryViewRoot@NE_Surface.NiagaraEmitterEditorData_1] HierarchyRoot
+[StackEditorData@NE_Surface.NiagaraEmitterEditorData_1] NiagaraStackEditorData
+[NiagaraEditorParametersAdapter_0@NE_Surface] NiagaraEditorParametersAdapter
+[UpdateScript_1] NiagaraScript
+    Usage = ParticleUpdateScript
+    ExposedVersion = BF05462DF4B1EFFA71256B4826BF3CD7
+    VersionData(0) <- NiagaraScriptSource_1
+[NiagaraDataInterfaceTexture_3@NE_Surface.UpdateScript_1] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@NE_Surface.UpdateScript_1] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@NE_Surface.UpdateScript_1] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_0@NE_Surface.UpdateScript_1] NiagaraDataInterfaceTexture
+[SpawnScript_0@NE_Surface] NiagaraScript
+    Usage = ParticleSpawnScriptInterpolated
+    ExposedVersion = EB6D276A0D414D2301ADAC25FEFDF366
+    Usage = ParticleSpawnScriptInterpolated
+    ExposedVersion = EB6D276A0D414D2301ADAC25FEFDF366
+    VersionData(0) <- NiagaraScriptSource_1
+    VersionData(0) <- NiagaraScriptSource_1
+[NiagaraDataInterfaceTexture_3@NE_Surface.SpawnScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@NE_Surface.SpawnScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@NE_Surface.SpawnScript_0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_0@NE_Surface.SpawnScript_0] NiagaraDataInterfaceTexture
+[NiagaraEmitter_0] NiagaraEmitter
+    ExposedVersion = 08EC206F3ECA2602DE9207EDA3DC0F50
+    LibraryVisibility = Library
+    ChangeId = BA5BACD74ED2D4ACCF95F299EAB9B2E4
+    UniqueEmitterName = "NE_FluxEmitter"
+    VersionData(0) <- UpdateScript_2
+    VersionData(0) <- SpawnScript_1
+    VersionData(0) <- EmitterSpawnScript_3
+    VersionData(0) <- EmitterUpdateScript_4
+    VersionData(0) <- NiagaraScriptSource_2
+    VersionData(0) <- NiagaraScratchPadContainer_1
+    VersionData(0) <- NiagaraScratchPadContainer_0
+    VersionData(0) <- NiagaraSpriteRendererProperties_1
+    VersionData(0) <- GPUComputeScript_5
+    VersionData(0) <- NiagaraEmitterEditorData_2
+    VersionData(0) <- NiagaraEditorParametersAdapter_0
+[NiagaraSpriteRendererProperties_1@NE_Surface.NiagaraEmitter_0] NiagaraSpriteRendererProperties
+    Alignment = CustomAlignment
+    bSubImageBlend = False
+    PositionBinding = (bBindingExistsOnSource=True)
+    ColorBinding = (bBindingExistsOnSource=True)
+    VelocityBinding = (bBindingExistsOnSource=True)
+    SpriteRotationBinding = (bBindingExistsOnSource=True)
+    SpriteSizeBinding = (bBindingExistsOnSource=True)
+    SpriteFacingBinding = (bBindingExistsOnSource=True)
+    MaterialRandomBinding = (bBindingExistsOnSource=True)
+    CustomSortingBinding = (RootName="NormalizedAge",ParamMapVariable=(Name="Particles.NormalizedAge"),DataSetName="NormalizedAge",CachedDisplayName="Particles.NormalizedAge",bBindingExistsOnSource=True)
+    NormalizedAgeBinding = (bBindingExistsOnSource=True)
+    RendererEnabledBinding = ()
+    OuterEmitterVersion = 34C8F05F05B691EA5968E6A50403B112
+    MergeId = 164710914613E478BE42D890335955D4
+    Alignment = Unaligned
+    FacingMode = FaceCamera
+    bSubImageBlend = False
+    CustomSortingBinding = (RootName="NormalizedAge",ParamMapVariable=(Name="Particles.NormalizedAge"),DataSetName="NormalizedAge",CachedDisplayName="Particles.NormalizedAge")
+    RendererEnabledBinding = ()
+    OuterEmitterVersion = 08EC206F3ECA2602DE9207EDA3DC0F50
+    MergeId = 164710914613E478BE42D890335955D4
+[EmitterUpdateScript_4] NiagaraScript
+    Usage = EmitterUpdateScript
+    ExposedVersion = F36E32734883315963D4DD59EBA66342
+    VersionData(0) <- NiagaraScriptSource_2
+[EmitterSpawnScript_3] NiagaraScript
+    Usage = EmitterSpawnScript
+    ExposedVersion = 120BB4618E7848D10664F75D51392F62
+    RapidIterationParameters = ()
+    VersionData(0) <- NiagaraScriptSource_2
+[NiagaraScratchPadContainer_1@NE_Surface.NiagaraEmitter_0] NiagaraScratchPadContainer
+[NiagaraScratchPadContainer_0@NE_Surface.NiagaraEmitter_0] NiagaraScratchPadContainer
+[NiagaraScriptSource_2] NiagaraScriptSource
+    NodeGraph <- NiagaraGraph_0
+[NiagaraGraph_0@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2] NiagaraGraph
+[NiagaraNodeParameterMapSet_5@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapSet_1@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapSet_0@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapSet
+[NiagaraNodeParameterMapGet_9@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_8@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_71@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_70@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_7@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_67@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_66@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_65@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_63@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_62@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_61@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_60@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_6@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_59@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_58@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_57@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_56@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_55@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_54@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_53@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_52@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_51@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_50@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_5@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_49@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_48@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_47@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_46@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_45@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_44@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_43@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_42@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_41@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_40@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_4@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_39@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_38@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_37@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_36@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_35@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_34@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_33@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_32@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_31@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_30@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_3@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_29@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_28@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_27@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_26@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_25@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_24@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_23@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_22@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_21@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_20@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_2@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_19@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_18@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_17@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_16@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_15@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_14@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_13@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_12@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_11@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_10@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_1@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeParameterMapGet_0@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeParameterMapGet
+[NiagaraNodeOutput_5@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeOutput_4@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeOutput_3@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeOutput_2@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeOutput
+[NiagaraNodeInput_5@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeInput_4@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeInput_3@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeInput_2@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeInput
+[NiagaraNodeFunctionCall_7@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_5@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_4@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_3@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_2@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_1@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+[NiagaraNodeFunctionCall_0@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] NiagaraNodeFunctionCall
+[ParameterHierarchyRoot@NE_Surface.NiagaraEmitter_0.NiagaraScriptSource_2.NiagaraGraph_0] HierarchyRoot
+[NiagaraEmitterEditorData_2] NiagaraEmitterEditorData
+    StackEditorData = "StackEditorData"
+    SummaryViewRoot = "SummaryViewRoot"
+[SummaryViewRoot@NE_Surface.NiagaraEmitter_0.NiagaraEmitterEditorData_2] HierarchyRoot
+    Identity = (Guids=(B2B8DD7C4479884D0CAFE49BFE6B5F6A))
+    Identity = (Guids=(5BC489BCF9693C9BA2C2932F8E1DC3B4))
+    Identity = (Guids=(B2B8DD7C4479884D0CAFE49BFE6B5F6A))
+    Identity = (Guids=(B2B8DD7C4479884D0CAFE49BFE6B5F6A))
+    Identity = (Guids=(B2B8DD7C4479884D0CAFE49BFE6B5F6A))
+[StackEditorData@NE_Surface.NiagaraEmitter_0.NiagaraEmitterEditorData_2] NiagaraStackEditorData
+[NiagaraEditorParametersAdapter_0@NE_Surface.NiagaraEmitter_0] NiagaraEditorParametersAdapter
+[UpdateScript_2@NE_Surface.NiagaraEmitter_0] NiagaraScript
+    Usage = ParticleUpdateScript
+    ExposedVersion = BF05462DF4B1EFFA71256B4826BF3CD7
+    Usage = ParticleUpdateScript
+    ExposedVersion = BF05462DF4B1EFFA71256B4826BF3CD7
+    VersionData(0) <- NiagaraScriptSource_0
+    VersionData(0) <- NiagaraScriptSource_2
+[NiagaraDataInterfaceTexture_39@NE_Surface.NiagaraEmitter_0.UpdateScript_2] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_38@NE_Surface.NiagaraEmitter_0.UpdateScript_2] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_37@NE_Surface.NiagaraEmitter_0.UpdateScript_2] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_36@NE_Surface.NiagaraEmitter_0.UpdateScript_2] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_35@NE_Surface.NiagaraEmitter_0.UpdateScript_2] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_34@NE_Surface.NiagaraEmitter_0.UpdateScript_2] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_33@NE_Surface.NiagaraEmitter_0.UpdateScript_2] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_32@NE_Surface.NiagaraEmitter_0.UpdateScript_2] NiagaraDataInterfaceTexture
+[SpawnScript_1@NE_Surface.NiagaraEmitter_0] NiagaraScript
+    Usage = ParticleSpawnScriptInterpolated
+    ExposedVersion = EB6D276A0D414D2301ADAC25FEFDF366
+    Usage = ParticleSpawnScriptInterpolated
+    ExposedVersion = EB6D276A0D414D2301ADAC25FEFDF366
+    VersionData(0) <- NiagaraScriptSource_0
+    VersionData(0) <- NiagaraScriptSource_2
+[NiagaraDataInterfaceTexture_39@NE_Surface.NiagaraEmitter_0.SpawnScript_1] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_38@NE_Surface.NiagaraEmitter_0.SpawnScript_1] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_37@NE_Surface.NiagaraEmitter_0.SpawnScript_1] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_36@NE_Surface.NiagaraEmitter_0.SpawnScript_1] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_35@NE_Surface.NiagaraEmitter_0.SpawnScript_1] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_34@NE_Surface.NiagaraEmitter_0.SpawnScript_1] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_33@NE_Surface.NiagaraEmitter_0.SpawnScript_1] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_32@NE_Surface.NiagaraEmitter_0.SpawnScript_1] NiagaraDataInterfaceTexture
+[GPUComputeScript_5] NiagaraScript
+    Usage = ParticleGPUComputeScript
+    ExposedVersion = 6E4623D191ED3431392922DB8DB0190E
+    VersionData(0) <- NiagaraScriptSource_2
+[NiagaraDataInterfaceTexture_39@NE_Surface.NiagaraEmitter_0.GPUComputeScript_5] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_38@NE_Surface.NiagaraEmitter_0.GPUComputeScript_5] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_37@NE_Surface.NiagaraEmitter_0.GPUComputeScript_5] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_36@NE_Surface.NiagaraEmitter_0.GPUComputeScript_5] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_35@NE_Surface.NiagaraEmitter_0.GPUComputeScript_5] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_34@NE_Surface.NiagaraEmitter_0.GPUComputeScript_5] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_33@NE_Surface.NiagaraEmitter_0.GPUComputeScript_5] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_32@NE_Surface.NiagaraEmitter_0.GPUComputeScript_5] NiagaraDataInterfaceTexture
+[GPUComputeScript_4] NiagaraScript
+    Usage = ParticleGPUComputeScript
+    ExposedVersion = 6E4623D191ED3431392922DB8DB0190E
+    VersionData(0) <- NiagaraScriptSource_1
+[NiagaraDataInterfaceTexture_3@NE_Surface.GPUComputeScript_4] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@NE_Surface.GPUComputeScript_4] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@NE_Surface.GPUComputeScript_4] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_0@NE_Surface.GPUComputeScript_4] NiagaraDataInterfaceTexture
+[NiagaraScriptSource_1@NE_Surface] NiagaraScriptSource
+    NodeGraph <- NiagaraGraph_0
+    NodeGraph <- NiagaraGraph_0
+[NiagaraGraph_0@NE_Surface.NiagaraScriptSource_1] NiagaraGraph
+    ChangeId = 2261C43D41D4036AFDCD879BA0CD1780
+    LastBuiltTraversalDataChangeId = 2261C43D41D4036AFDCD879BA0CD1780
+    LastBuiltScriptVersionId = 87C7FB060084C92C80E1A4AB309BA6EA
+    ParameterHierarchyRoot = "ParameterHierarchyRoot"
+    bHasValidLastBuiltScriptVersionId = True
+    GraphGuid = C17850CF4D8633BB1AFAE59BDE1AC8D5
+    ChangeId = 8BA6456A422C7569782AD3A1D4DC45AC
+    LastBuiltTraversalDataChangeId = 8BA6456A422C7569782AD3A1D4DC45AC
+    LastBuiltScriptVersionId = 87C7FB060084C92C80E1A4AB309BA6EA
+    ParameterHierarchyRoot = "ParameterHierarchyRoot"
+    bHasValidLastBuiltScriptVersionId = True
+    GraphGuid = C17850CF4D8633BB1AFAE59BDE1AC8D5
+    ChangeId = F04FA4024D565E107D7AB3A4DE147F77
+    LastBuiltTraversalDataChangeId = F04FA4024D565E107D7AB3A4DE147F77
+    LastBuiltScriptVersionId = 87C7FB060084C92C80E1A4AB309BA6EA
+    ParameterHierarchyRoot = "ParameterHierarchyRoot"
+    bHasValidLastBuiltScriptVersionId = True
+    GraphGuid = C17850CF4D8633BB1AFAE59BDE1AC8D5
+    ChangeId = 5800255146D38180B2FA60B5E775F0C1
+    ForceRebuildId = AD9553564AAAF2740FAA4AA512361CBC
+    LastBuiltTraversalDataChangeId = 5800255146D38180B2FA60B5E775F0C1
+    LastBuiltScriptVersionId = 87C7FB060084C92C80E1A4AB309BA6EA
+    ParameterHierarchyRoot = "ParameterHierarchyRoot"
+    bHasValidLastBuiltScriptVersionId = True
+    GraphGuid = D79A8093498F1F73DDBBFA81EF418805
+    ChangeId = 85392694451259F10B0A45B0FA4ECD62
+    ForceRebuildId = AD9553564AAAF2740FAA4AA512361CBC
+    LastBuiltTraversalDataChangeId = 85392694451259F10B0A45B0FA4ECD62
+    LastBuiltScriptVersionId = 87C7FB060084C92C80E1A4AB309BA6EA
+    ParameterHierarchyRoot = "ParameterHierarchyRoot"
+    bHasValidLastBuiltScriptVersionId = True
+    GraphGuid = D79A8093498F1F73DDBBFA81EF418805
+    ChangeId = 138EE198432F806BED86BE91E168605F
+    ForceRebuildId = AD9553564AAAF2740FAA4AA512361CBC
+    LastBuiltTraversalDataChangeId = 138EE198432F806BED86BE91E168605F
+    LastBuiltScriptVersionId = 87C7FB060084C92C80E1A4AB309BA6EA
+    ParameterHierarchyRoot = "ParameterHierarchyRoot"
+    bHasValidLastBuiltScriptVersionId = True
+    GraphGuid = D79A8093498F1F73DDBBFA81EF418805
+    ChangeId = E493D2BA46CFB8ABE347FBADCA404B13
+    ForceRebuildId = AD9553564AAAF2740FAA4AA512361CBC
+    LastBuiltTraversalDataChangeId = E493D2BA46CFB8ABE347FBADCA404B13
+    LastBuiltScriptVersionId = 87C7FB060084C92C80E1A4AB309BA6EA
+    ParameterHierarchyRoot = "ParameterHierarchyRoot"
+    bHasValidLastBuiltScriptVersionId = True
+    GraphGuid = D79A8093498F1F73DDBBFA81EF418805
+    CachedUsageInfo(0) <- NiagaraNodeInput_169
+    CachedUsageInfo(0) <- NiagaraNodeParameterMapGet_6
+    CachedUsageInfo(0) <- NiagaraNodeConvert_2
+    CachedUsageInfo(0) <- NiagaraNodeConvert_1
+    CachedUsageInfo(0) <- NiagaraNodeOutput_0
+    VariableToScriptVariable <- NiagaraScriptVariable_0
+    Nodes(0) <- NiagaraNodeOutput_0
+    Nodes(1) <- NiagaraNodeInput_169
+    Nodes(2) <- NiagaraNodeParameterMapGet_6
+    Nodes(3) <- NiagaraNodeConvert_1
+    Nodes(4) <- NiagaraNodeConvert_2
+    CachedUsageInfo(0) <- NiagaraNodeInput_169
+    CachedUsageInfo(0) <- NiagaraNodeParameterMapGet_6
+    CachedUsageInfo(0) <- NiagaraNodeConvert_0
+    CachedUsageInfo(0) <- NiagaraNodeConvert_1
+    CachedUsageInfo(0) <- NiagaraNodeParameterMapSet_6
+    CachedUsageInfo(0) <- NiagaraNodeOutput_0
+    VariableToScriptVariable <- NiagaraScriptVariable_3
+    VariableToScriptVariable <- NiagaraScriptVariable_1
+    VariableToScriptVariable <- NiagaraScriptVariable_9
+    Nodes(0) <- NiagaraNodeOutput_0
+    Nodes(1) <- NiagaraNodeInput_169
+    Nodes(2) <- NiagaraNodeParameterMapGet_6
+    Nodes(3) <- NiagaraNodeParameterMapSet_6
+    Nodes(4) <- NiagaraNodeConvert_0
+    Nodes(5) <- NiagaraNodeConvert_1
+    CachedUsageInfo(0) <- NiagaraNodeInput_169
+    CachedUsageInfo(0) <- NiagaraNodeParameterMapGet_6
+    CachedUsageInfo(0) <- NiagaraNodeConvert_1
+    CachedUsageInfo(0) <- NiagaraNodeParameterMapSet_6
+    CachedUsageInfo(0) <- NiagaraNodeOutput_0
+    VariableToScriptVariable <- NiagaraScriptVariable_2
+    VariableToScriptVariable <- NiagaraScriptVariable_5
+    Nodes(0) <- NiagaraNodeOutput_0
+    Nodes(1) <- NiagaraNodeInput_169
+    Nodes(2) <- NiagaraNodeParameterMapGet_6
+    Nodes(3) <- NiagaraNodeParameterMapSet_6
+    Nodes(4) <- NiagaraNodeConvert_1
+    Nodes(5) <- NiagaraNodeOp_51
+    Nodes(6) <- NiagaraNodeOp_66
+    CachedUsageInfo(0) <- NiagaraNodeInput_2
+    CachedUsageInfo(0) <- NiagaraNodeOutput_2
+    CachedUsageInfo(1) <- NiagaraNodeInput_3
+    CachedUsageInfo(1) <- NiagaraNodeFunctionCall_1
+    CachedUsageInfo(1) <- NiagaraNodeFunctionCall_2
+    CachedUsageInfo(1) <- NiagaraNodeOutput_3
+    CachedUsageInfo(2) <- NiagaraNodeInput_4
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_3
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_29
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapSet_1
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_4
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_16
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_17
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_18
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_2
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_11
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_12
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_1
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_3
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_5
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_30
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_32
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_33
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_6
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_7
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_14
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_15
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_26
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_27
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_31
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_35
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_42
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_44
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_48
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_50
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_52
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_55
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_58
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_8
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_4
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_63
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_65
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_66
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_70
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_62
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapSet_5
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_7
+    CachedUsageInfo(2) <- NiagaraNodeOutput_4
+    CachedUsageInfo(3) <- NiagaraNodeInput_5
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_5
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_0
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_10
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_22
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_23
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_25
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_36
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_37
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_38
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_39
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_40
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_41
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_43
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_13
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_19
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_20
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_24
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_28
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_34
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_45
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_46
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_47
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_49
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_51
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_53
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_54
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_56
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_59
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_60
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_21
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_9
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_57
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_61
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_71
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_67
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapSet_0
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_0
+    CachedUsageInfo(3) <- NiagaraNodeOutput_5
+    Nodes(0) <- NiagaraNodeOutput_2
+    Nodes(1) <- NiagaraNodeInput_2
+    Nodes(2) <- NiagaraNodeOutput_3
+    Nodes(3) <- NiagaraNodeInput_3
+    Nodes(4) <- NiagaraNodeOutput_4
+    Nodes(5) <- NiagaraNodeInput_4
+    Nodes(6) <- NiagaraNodeOutput_5
+    Nodes(7) <- NiagaraNodeInput_5
+    Nodes(8) <- NiagaraNodeFunctionCall_7
+    Nodes(9) <- NiagaraNodeParameterMapSet_5
+    Nodes(10) <- NiagaraNodeParameterMapGet_16
+    Nodes(11) <- NiagaraNodeParameterMapGet_17
+    Nodes(12) <- NiagaraNodeParameterMapGet_18
+    Nodes(13) <- NiagaraNodeParameterMapGet_2
+    Nodes(14) <- NiagaraNodeParameterMapGet_11
+    Nodes(15) <- NiagaraNodeParameterMapGet_12
+    Nodes(16) <- NiagaraNodeParameterMapGet_1
+    Nodes(17) <- NiagaraNodeParameterMapGet_3
+    Nodes(18) <- NiagaraNodeParameterMapGet_5
+    Nodes(19) <- NiagaraNodeFunctionCall_0
+    Nodes(20) <- NiagaraNodeParameterMapSet_0
+    Nodes(21) <- NiagaraNodeParameterMapGet_0
+    Nodes(22) <- NiagaraNodeParameterMapGet_10
+    Nodes(23) <- NiagaraNodeParameterMapGet_22
+    Nodes(24) <- NiagaraNodeParameterMapGet_23
+    Nodes(25) <- NiagaraNodeParameterMapGet_25
+    Nodes(26) <- NiagaraNodeParameterMapGet_30
+    Nodes(27) <- NiagaraNodeParameterMapGet_32
+    Nodes(28) <- NiagaraNodeParameterMapGet_33
+    Nodes(29) <- NiagaraNodeParameterMapGet_36
+    Nodes(30) <- NiagaraNodeParameterMapGet_37
+    Nodes(31) <- NiagaraNodeParameterMapGet_38
+    Nodes(32) <- NiagaraNodeParameterMapGet_39
+    Nodes(33) <- NiagaraNodeParameterMapGet_40
+    Nodes(34) <- NiagaraNodeParameterMapGet_41
+    Nodes(35) <- NiagaraNodeParameterMapGet_43
+    Nodes(36) <- NiagaraNodeParameterMapGet_6
+    Nodes(37) <- NiagaraNodeParameterMapGet_7
+    Nodes(38) <- NiagaraNodeParameterMapGet_14
+    Nodes(39) <- NiagaraNodeParameterMapGet_15
+    Nodes(40) <- NiagaraNodeParameterMapGet_13
+    Nodes(41) <- NiagaraNodeParameterMapGet_19
+    Nodes(42) <- NiagaraNodeParameterMapGet_20
+    Nodes(43) <- NiagaraNodeParameterMapGet_24
+    Nodes(44) <- NiagaraNodeParameterMapGet_26
+    Nodes(45) <- NiagaraNodeParameterMapGet_27
+    Nodes(46) <- NiagaraNodeParameterMapGet_28
+    Nodes(47) <- NiagaraNodeParameterMapGet_31
+    Nodes(48) <- NiagaraNodeParameterMapGet_34
+    Nodes(49) <- NiagaraNodeParameterMapGet_35
+    Nodes(50) <- NiagaraNodeParameterMapGet_42
+    Nodes(51) <- NiagaraNodeParameterMapGet_44
+    Nodes(52) <- NiagaraNodeParameterMapGet_45
+    Nodes(53) <- NiagaraNodeParameterMapGet_46
+    Nodes(54) <- NiagaraNodeParameterMapGet_47
+    Nodes(55) <- NiagaraNodeParameterMapGet_48
+    Nodes(56) <- NiagaraNodeParameterMapGet_49
+    Nodes(57) <- NiagaraNodeParameterMapGet_50
+    Nodes(58) <- NiagaraNodeParameterMapGet_51
+    Nodes(59) <- NiagaraNodeParameterMapGet_52
+    Nodes(60) <- NiagaraNodeParameterMapGet_53
+    Nodes(61) <- NiagaraNodeParameterMapGet_54
+    Nodes(62) <- NiagaraNodeParameterMapGet_55
+    Nodes(63) <- NiagaraNodeParameterMapGet_56
+    Nodes(64) <- NiagaraNodeParameterMapGet_58
+    Nodes(65) <- NiagaraNodeParameterMapGet_59
+    Nodes(66) <- NiagaraNodeParameterMapGet_8
+    Nodes(67) <- NiagaraNodeParameterMapGet_60
+    Nodes(68) <- NiagaraNodeParameterMapGet_4
+    Nodes(69) <- NiagaraNodeParameterMapGet_21
+    Nodes(70) <- NiagaraNodeParameterMapGet_9
+    Nodes(71) <- NiagaraNodeParameterMapGet_57
+    Nodes(72) <- NiagaraNodeParameterMapGet_61
+    Nodes(73) <- NiagaraNodeParameterMapGet_63
+    Nodes(74) <- NiagaraNodeParameterMapGet_65
+    Nodes(75) <- NiagaraNodeParameterMapGet_66
+    Nodes(76) <- NiagaraNodeParameterMapGet_70
+    Nodes(77) <- NiagaraNodeParameterMapGet_71
+    Nodes(78) <- NiagaraNodeParameterMapGet_62
+    Nodes(79) <- NiagaraNodeParameterMapGet_67
+    Nodes(80) <- NiagaraNodeFunctionCall_1
+    Nodes(81) <- NiagaraNodeFunctionCall_2
+    Nodes(82) <- NiagaraNodeFunctionCall_3
+    Nodes(83) <- NiagaraNodeFunctionCall_4
+    Nodes(84) <- NiagaraNodeParameterMapSet_1
+    Nodes(85) <- NiagaraNodeParameterMapGet_29
+    Nodes(86) <- NiagaraNodeFunctionCall_5
+    CachedUsageInfo(0) <- NiagaraNodeInput_2
+    CachedUsageInfo(0) <- NiagaraNodeOutput_2
+    CachedUsageInfo(1) <- NiagaraNodeInput_3
+    CachedUsageInfo(1) <- NiagaraNodeInput_0
+    CachedUsageInfo(1) <- NiagaraNodeParameterMapSet_2
+    CachedUsageInfo(1) <- NiagaraNodeFunctionCall_1
+    CachedUsageInfo(1) <- NiagaraNodeParameterMapGet_64
+    CachedUsageInfo(1) <- NiagaraNodeParameterMapSet_3
+    CachedUsageInfo(1) <- NiagaraNodeFunctionCall_2
+    CachedUsageInfo(1) <- NiagaraNodeOutput_3
+    CachedUsageInfo(2) <- NiagaraNodeInput_4
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_3
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_29
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapSet_1
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_4
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_16
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_17
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_18
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_2
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_11
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_12
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_1
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_3
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_5
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_30
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_32
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_33
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_6
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_7
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_14
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_15
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_26
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_27
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_31
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_35
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_42
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_44
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_48
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_50
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_52
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_55
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_58
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_8
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_4
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_63
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_65
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_66
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_70
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_62
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapSet_5
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_7
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_6
+    CachedUsageInfo(2) <- NiagaraNodeOutput_4
+    CachedUsageInfo(3) <- NiagaraNodeInput_5
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapSet_7
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_5
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_0
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_10
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_22
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_23
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_25
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_36
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_37
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_38
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_39
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_40
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_41
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_43
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_13
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_19
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_20
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_24
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_28
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_34
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_45
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_46
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_47
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_49
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_51
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_53
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_54
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_56
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_59
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_60
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_21
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_9
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_57
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_61
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_71
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_67
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapSet_0
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_0
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_68
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapSet_4
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_8
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_69
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapSet_6
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_9
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_10
+    CachedUsageInfo(3) <- NiagaraNodeOutput_5
+    VariableToScriptVariable <- NiagaraScriptVariable_1
+    VariableToScriptVariable <- NiagaraScriptVariable_2
+    VariableToScriptVariable <- NiagaraScriptVariable_3
+    Nodes(0) <- NiagaraNodeOutput_2
+    Nodes(1) <- NiagaraNodeInput_2
+    Nodes(2) <- NiagaraNodeOutput_3
+    Nodes(3) <- NiagaraNodeInput_3
+    Nodes(4) <- NiagaraNodeOutput_4
+    Nodes(5) <- NiagaraNodeInput_4
+    Nodes(6) <- NiagaraNodeOutput_5
+    Nodes(7) <- NiagaraNodeInput_5
+    Nodes(8) <- NiagaraNodeFunctionCall_7
+    Nodes(9) <- NiagaraNodeParameterMapSet_5
+    Nodes(10) <- NiagaraNodeParameterMapGet_16
+    Nodes(11) <- NiagaraNodeParameterMapGet_17
+    Nodes(12) <- NiagaraNodeParameterMapGet_18
+    Nodes(13) <- NiagaraNodeParameterMapGet_2
+    Nodes(14) <- NiagaraNodeParameterMapGet_11
+    Nodes(15) <- NiagaraNodeParameterMapGet_12
+    Nodes(16) <- NiagaraNodeParameterMapGet_1
+    Nodes(17) <- NiagaraNodeParameterMapGet_3
+    Nodes(18) <- NiagaraNodeParameterMapGet_5
+    Nodes(19) <- NiagaraNodeFunctionCall_0
+    Nodes(20) <- NiagaraNodeParameterMapSet_0
+    Nodes(21) <- NiagaraNodeParameterMapGet_0
+    Nodes(22) <- NiagaraNodeParameterMapGet_10
+    Nodes(23) <- NiagaraNodeParameterMapGet_22
+    Nodes(24) <- NiagaraNodeParameterMapGet_23
+    Nodes(25) <- NiagaraNodeParameterMapGet_25
+    Nodes(26) <- NiagaraNodeParameterMapGet_30
+    Nodes(27) <- NiagaraNodeParameterMapGet_32
+    Nodes(28) <- NiagaraNodeParameterMapGet_33
+    Nodes(29) <- NiagaraNodeParameterMapGet_36
+    Nodes(30) <- NiagaraNodeParameterMapGet_37
+    Nodes(31) <- NiagaraNodeParameterMapGet_38
+    Nodes(32) <- NiagaraNodeParameterMapGet_39
+    Nodes(33) <- NiagaraNodeParameterMapGet_40
+    Nodes(34) <- NiagaraNodeParameterMapGet_41
+    Nodes(35) <- NiagaraNodeParameterMapGet_43
+    Nodes(36) <- NiagaraNodeParameterMapGet_6
+    Nodes(37) <- NiagaraNodeParameterMapGet_7
+    Nodes(38) <- NiagaraNodeParameterMapGet_14
+    Nodes(39) <- NiagaraNodeParameterMapGet_15
+    Nodes(40) <- NiagaraNodeParameterMapGet_13
+    Nodes(41) <- NiagaraNodeParameterMapGet_19
+    Nodes(42) <- NiagaraNodeParameterMapGet_20
+    Nodes(43) <- NiagaraNodeParameterMapGet_24
+    Nodes(44) <- NiagaraNodeParameterMapGet_26
+    Nodes(45) <- NiagaraNodeParameterMapGet_27
+    Nodes(46) <- NiagaraNodeParameterMapGet_28
+    Nodes(47) <- NiagaraNodeParameterMapGet_31
+    Nodes(48) <- NiagaraNodeParameterMapGet_34
+    Nodes(49) <- NiagaraNodeParameterMapGet_35
+    Nodes(50) <- NiagaraNodeParameterMapGet_42
+    Nodes(51) <- NiagaraNodeParameterMapGet_44
+    Nodes(52) <- NiagaraNodeParameterMapGet_45
+    Nodes(53) <- NiagaraNodeParameterMapGet_46
+    Nodes(54) <- NiagaraNodeParameterMapGet_47
+    Nodes(55) <- NiagaraNodeParameterMapGet_48
+    Nodes(56) <- NiagaraNodeParameterMapGet_49
+    Nodes(57) <- NiagaraNodeParameterMapGet_50
+    Nodes(58) <- NiagaraNodeParameterMapGet_51
+    Nodes(59) <- NiagaraNodeParameterMapGet_52
+    Nodes(60) <- NiagaraNodeParameterMapGet_53
+    Nodes(61) <- NiagaraNodeParameterMapGet_54
+    Nodes(62) <- NiagaraNodeParameterMapGet_55
+    Nodes(63) <- NiagaraNodeParameterMapGet_56
+    Nodes(64) <- NiagaraNodeParameterMapGet_58
+    Nodes(65) <- NiagaraNodeParameterMapGet_59
+    Nodes(66) <- NiagaraNodeParameterMapGet_8
+    Nodes(67) <- NiagaraNodeParameterMapGet_60
+    Nodes(68) <- NiagaraNodeParameterMapGet_4
+    Nodes(69) <- NiagaraNodeParameterMapGet_21
+    Nodes(70) <- NiagaraNodeParameterMapGet_9
+    Nodes(71) <- NiagaraNodeParameterMapGet_57
+    Nodes(72) <- NiagaraNodeParameterMapGet_61
+    Nodes(73) <- NiagaraNodeParameterMapGet_63
+    Nodes(74) <- NiagaraNodeParameterMapGet_65
+    Nodes(75) <- NiagaraNodeParameterMapGet_66
+    Nodes(76) <- NiagaraNodeParameterMapGet_70
+    Nodes(77) <- NiagaraNodeParameterMapGet_71
+    Nodes(78) <- NiagaraNodeParameterMapGet_62
+    Nodes(79) <- NiagaraNodeParameterMapGet_67
+    Nodes(80) <- NiagaraNodeFunctionCall_1
+    Nodes(81) <- NiagaraNodeFunctionCall_2
+    Nodes(82) <- NiagaraNodeFunctionCall_3
+    Nodes(83) <- NiagaraNodeFunctionCall_4
+    Nodes(84) <- NiagaraNodeParameterMapSet_1
+    Nodes(85) <- NiagaraNodeParameterMapGet_29
+    Nodes(86) <- NiagaraNodeFunctionCall_5
+    Nodes(87) <- NiagaraNodeParameterMapSet_2
+    Nodes(88) <- NiagaraNodeInput_0
+    Nodes(89) <- NiagaraNodeParameterMapSet_3
+    Nodes(90) <- NiagaraNodeParameterMapGet_64
+    Nodes(91) <- NiagaraNodeFunctionCall_6
+    Nodes(92) <- NiagaraNodeFunctionCall_8
+    Nodes(93) <- NiagaraNodeParameterMapSet_4
+    Nodes(94) <- NiagaraNodeParameterMapGet_68
+    Nodes(95) <- NiagaraNodeFunctionCall_9
+    Nodes(96) <- NiagaraNodeParameterMapSet_6
+    Nodes(97) <- NiagaraNodeParameterMapGet_69
+    Nodes(98) <- NiagaraNodeFunctionCall_10
+    Nodes(99) <- NiagaraNodeParameterMapSet_7
+    CachedUsageInfo(0) <- NiagaraNodeInput_2
+    CachedUsageInfo(0) <- NiagaraNodeOutput_2
+    CachedUsageInfo(1) <- NiagaraNodeInput_3
+    CachedUsageInfo(1) <- NiagaraNodeFunctionCall_1
+    CachedUsageInfo(1) <- NiagaraNodeFunctionCall_2
+    CachedUsageInfo(1) <- NiagaraNodeOutput_3
+    CachedUsageInfo(2) <- NiagaraNodeInput_4
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_3
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_29
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapSet_1
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_4
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_16
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_17
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_18
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_2
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_11
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_12
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_1
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_3
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_5
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_30
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_32
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_33
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_6
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_7
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_14
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_15
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_26
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_27
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_31
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_35
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_42
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_44
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_48
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_50
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_52
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_55
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_58
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_8
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_4
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_63
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_65
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_66
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_70
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_62
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapSet_5
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_7
+    CachedUsageInfo(2) <- NiagaraNodeOutput_4
+    CachedUsageInfo(3) <- NiagaraNodeInput_5
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_5
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_0
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_10
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_22
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_23
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_25
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_36
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_37
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_38
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_39
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_40
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_41
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_43
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_13
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_19
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_20
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_24
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_28
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_34
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_45
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_46
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_47
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_49
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_51
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_53
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_54
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_56
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_59
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_60
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_21
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_9
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_57
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_61
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_71
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_67
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapSet_0
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_0
+    CachedUsageInfo(3) <- NiagaraNodeOutput_5
+    Nodes(0) <- NiagaraNodeOutput_2
+    Nodes(1) <- NiagaraNodeInput_2
+    Nodes(2) <- NiagaraNodeOutput_3
+    Nodes(3) <- NiagaraNodeInput_3
+    Nodes(4) <- NiagaraNodeOutput_4
+    Nodes(5) <- NiagaraNodeInput_4
+    Nodes(6) <- NiagaraNodeOutput_5
+    Nodes(7) <- NiagaraNodeInput_5
+    Nodes(8) <- NiagaraNodeFunctionCall_7
+    Nodes(9) <- NiagaraNodeParameterMapSet_5
+    Nodes(10) <- NiagaraNodeParameterMapGet_16
+    Nodes(11) <- NiagaraNodeParameterMapGet_17
+    Nodes(12) <- NiagaraNodeParameterMapGet_18
+    Nodes(13) <- NiagaraNodeParameterMapGet_2
+    Nodes(14) <- NiagaraNodeParameterMapGet_11
+    Nodes(15) <- NiagaraNodeParameterMapGet_12
+    Nodes(16) <- NiagaraNodeParameterMapGet_1
+    Nodes(17) <- NiagaraNodeParameterMapGet_3
+    Nodes(18) <- NiagaraNodeParameterMapGet_5
+    Nodes(19) <- NiagaraNodeFunctionCall_0
+    Nodes(20) <- NiagaraNodeParameterMapSet_0
+    Nodes(21) <- NiagaraNodeParameterMapGet_0
+    Nodes(22) <- NiagaraNodeParameterMapGet_10
+    Nodes(23) <- NiagaraNodeParameterMapGet_22
+    Nodes(24) <- NiagaraNodeParameterMapGet_23
+    Nodes(25) <- NiagaraNodeParameterMapGet_25
+    Nodes(26) <- NiagaraNodeParameterMapGet_30
+    Nodes(27) <- NiagaraNodeParameterMapGet_32
+    Nodes(28) <- NiagaraNodeParameterMapGet_33
+    Nodes(29) <- NiagaraNodeParameterMapGet_36
+    Nodes(30) <- NiagaraNodeParameterMapGet_37
+    Nodes(31) <- NiagaraNodeParameterMapGet_38
+    Nodes(32) <- NiagaraNodeParameterMapGet_39
+    Nodes(33) <- NiagaraNodeParameterMapGet_40
+    Nodes(34) <- NiagaraNodeParameterMapGet_41
+    Nodes(35) <- NiagaraNodeParameterMapGet_43
+    Nodes(36) <- NiagaraNodeParameterMapGet_6
+    Nodes(37) <- NiagaraNodeParameterMapGet_7
+    Nodes(38) <- NiagaraNodeParameterMapGet_14
+    Nodes(39) <- NiagaraNodeParameterMapGet_15
+    Nodes(40) <- NiagaraNodeParameterMapGet_13
+    Nodes(41) <- NiagaraNodeParameterMapGet_19
+    Nodes(42) <- NiagaraNodeParameterMapGet_20
+    Nodes(43) <- NiagaraNodeParameterMapGet_24
+    Nodes(44) <- NiagaraNodeParameterMapGet_26
+    Nodes(45) <- NiagaraNodeParameterMapGet_27
+    Nodes(46) <- NiagaraNodeParameterMapGet_28
+    Nodes(47) <- NiagaraNodeParameterMapGet_31
+    Nodes(48) <- NiagaraNodeParameterMapGet_34
+    Nodes(49) <- NiagaraNodeParameterMapGet_35
+    Nodes(50) <- NiagaraNodeParameterMapGet_42
+    Nodes(51) <- NiagaraNodeParameterMapGet_44
+    Nodes(52) <- NiagaraNodeParameterMapGet_45
+    Nodes(53) <- NiagaraNodeParameterMapGet_46
+    Nodes(54) <- NiagaraNodeParameterMapGet_47
+    Nodes(55) <- NiagaraNodeParameterMapGet_48
+    Nodes(56) <- NiagaraNodeParameterMapGet_49
+    Nodes(57) <- NiagaraNodeParameterMapGet_50
+    Nodes(58) <- NiagaraNodeParameterMapGet_51
+    Nodes(59) <- NiagaraNodeParameterMapGet_52
+    Nodes(60) <- NiagaraNodeParameterMapGet_53
+    Nodes(61) <- NiagaraNodeParameterMapGet_54
+    Nodes(62) <- NiagaraNodeParameterMapGet_55
+    Nodes(63) <- NiagaraNodeParameterMapGet_56
+    Nodes(64) <- NiagaraNodeParameterMapGet_58
+    Nodes(65) <- NiagaraNodeParameterMapGet_59
+    Nodes(66) <- NiagaraNodeParameterMapGet_8
+    Nodes(67) <- NiagaraNodeParameterMapGet_60
+    Nodes(68) <- NiagaraNodeParameterMapGet_4
+    Nodes(69) <- NiagaraNodeParameterMapGet_21
+    Nodes(70) <- NiagaraNodeParameterMapGet_9
+    Nodes(71) <- NiagaraNodeParameterMapGet_57
+    Nodes(72) <- NiagaraNodeParameterMapGet_61
+    Nodes(73) <- NiagaraNodeParameterMapGet_63
+    Nodes(74) <- NiagaraNodeParameterMapGet_65
+    Nodes(75) <- NiagaraNodeParameterMapGet_66
+    Nodes(76) <- NiagaraNodeParameterMapGet_70
+    Nodes(77) <- NiagaraNodeParameterMapGet_71
+    Nodes(78) <- NiagaraNodeParameterMapGet_62
+    Nodes(79) <- NiagaraNodeParameterMapGet_67
+    Nodes(80) <- NiagaraNodeFunctionCall_1
+    Nodes(81) <- NiagaraNodeFunctionCall_2
+    Nodes(82) <- NiagaraNodeFunctionCall_3
+    Nodes(83) <- NiagaraNodeFunctionCall_4
+    Nodes(84) <- NiagaraNodeParameterMapSet_1
+    Nodes(85) <- NiagaraNodeParameterMapGet_29
+    Nodes(86) <- NiagaraNodeFunctionCall_5
+    CachedUsageInfo(0) <- NiagaraNodeInput_2
+    CachedUsageInfo(0) <- NiagaraNodeOutput_2
+    CachedUsageInfo(1) <- NiagaraNodeInput_3
+    CachedUsageInfo(1) <- NiagaraNodeInput_0
+    CachedUsageInfo(1) <- NiagaraNodeParameterMapSet_2
+    CachedUsageInfo(1) <- NiagaraNodeFunctionCall_1
+    CachedUsageInfo(1) <- NiagaraNodeParameterMapGet_64
+    CachedUsageInfo(1) <- NiagaraNodeParameterMapSet_3
+    CachedUsageInfo(1) <- NiagaraNodeFunctionCall_2
+    CachedUsageInfo(1) <- NiagaraNodeOutput_3
+    CachedUsageInfo(2) <- NiagaraNodeInput_4
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_3
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_29
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapSet_1
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_4
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_16
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_17
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_18
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_2
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_11
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_12
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_1
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_3
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_5
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_30
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_32
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_33
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_6
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_7
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_14
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_15
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_26
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_27
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_31
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_35
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_42
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_44
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_48
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_50
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_52
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_55
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_58
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_8
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_4
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_63
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_65
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_66
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_70
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapGet_62
+    CachedUsageInfo(2) <- NiagaraNodeParameterMapSet_5
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_7
+    CachedUsageInfo(2) <- NiagaraNodeFunctionCall_6
+    CachedUsageInfo(2) <- NiagaraNodeOutput_4
+    CachedUsageInfo(3) <- NiagaraNodeInput_5
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapSet_7
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_5
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_0
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_10
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_22
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_23
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_25
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_36
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_37
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_38
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_39
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_40
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_41
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_43
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_13
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_19
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_20
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_24
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_28
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_34
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_45
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_46
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_47
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_49
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_51
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_53
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_54
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_56
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_59
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_60
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_21
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_9
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_57
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_61
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_71
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_67
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapSet_0
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_0
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_68
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapSet_4
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_8
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapGet_69
+    CachedUsageInfo(3) <- NiagaraNodeParameterMapSet_6
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_9
+    CachedUsageInfo(3) <- NiagaraNodeFunctionCall_10
+    CachedUsageInfo(3) <- NiagaraNodeOutput_5
+    Nodes(0) <- NiagaraNodeOutput_2
+    Nodes(1) <- NiagaraNodeInput_2
+    Nodes(2) <- NiagaraNodeOutput_3
+    Nodes(3) <- NiagaraNodeInput_3
+    Nodes(4) <- NiagaraNodeOutput_4
+    Nodes(5) <- NiagaraNodeInput_4
+    Nodes(6) <- NiagaraNodeOutput_5
+    Nodes(7) <- NiagaraNodeInput_5
+    Nodes(8) <- NiagaraNodeFunctionCall_7
+    Nodes(9) <- NiagaraNodeParameterMapSet_5
+    Nodes(10) <- NiagaraNodeParameterMapGet_16
+    Nodes(11) <- NiagaraNodeParameterMapGet_17
+    Nodes(12) <- NiagaraNodeParameterMapGet_18
+    Nodes(13) <- NiagaraNodeParameterMapGet_2
+    Nodes(14) <- NiagaraNodeParameterMapGet_11
+    Nodes(15) <- NiagaraNodeParameterMapGet_12
+    Nodes(16) <- NiagaraNodeParameterMapGet_1
+    Nodes(17) <- NiagaraNodeParameterMapGet_3
+    Nodes(18) <- NiagaraNodeParameterMapGet_5
+    Nodes(19) <- NiagaraNodeFunctionCall_0
+    Nodes(20) <- NiagaraNodeParameterMapSet_0
+    Nodes(21) <- NiagaraNodeParameterMapGet_0
+    Nodes(22) <- NiagaraNodeParameterMapGet_10
+    Nodes(23) <- NiagaraNodeParameterMapGet_22
+    Nodes(24) <- NiagaraNodeParameterMapGet_23
+    Nodes(25) <- NiagaraNodeParameterMapGet_25
+    Nodes(26) <- NiagaraNodeParameterMapGet_30
+    Nodes(27) <- NiagaraNodeParameterMapGet_32
+    Nodes(28) <- NiagaraNodeParameterMapGet_33
+    Nodes(29) <- NiagaraNodeParameterMapGet_36
+    Nodes(30) <- NiagaraNodeParameterMapGet_37
+    Nodes(31) <- NiagaraNodeParameterMapGet_38
+    Nodes(32) <- NiagaraNodeParameterMapGet_39
+    Nodes(33) <- NiagaraNodeParameterMapGet_40
+    Nodes(34) <- NiagaraNodeParameterMapGet_41
+    Nodes(35) <- NiagaraNodeParameterMapGet_43
+    Nodes(36) <- NiagaraNodeParameterMapGet_6
+    Nodes(37) <- NiagaraNodeParameterMapGet_7
+    Nodes(38) <- NiagaraNodeParameterMapGet_14
+    Nodes(39) <- NiagaraNodeParameterMapGet_15
+    Nodes(40) <- NiagaraNodeParameterMapGet_13
+    Nodes(41) <- NiagaraNodeParameterMapGet_19
+    Nodes(42) <- NiagaraNodeParameterMapGet_20
+    Nodes(43) <- NiagaraNodeParameterMapGet_24
+    Nodes(44) <- NiagaraNodeParameterMapGet_26
+    Nodes(45) <- NiagaraNodeParameterMapGet_27
+    Nodes(46) <- NiagaraNodeParameterMapGet_28
+    Nodes(47) <- NiagaraNodeParameterMapGet_31
+    Nodes(48) <- NiagaraNodeParameterMapGet_34
+    Nodes(49) <- NiagaraNodeParameterMapGet_35
+    Nodes(50) <- NiagaraNodeParameterMapGet_42
+    Nodes(51) <- NiagaraNodeParameterMapGet_44
+    Nodes(52) <- NiagaraNodeParameterMapGet_45
+    Nodes(53) <- NiagaraNodeParameterMapGet_46
+    Nodes(54) <- NiagaraNodeParameterMapGet_47
+    Nodes(55) <- NiagaraNodeParameterMapGet_48
+    Nodes(56) <- NiagaraNodeParameterMapGet_49
+    Nodes(57) <- NiagaraNodeParameterMapGet_50
+    Nodes(58) <- NiagaraNodeParameterMapGet_51
+    Nodes(59) <- NiagaraNodeParameterMapGet_52
+    Nodes(60) <- NiagaraNodeParameterMapGet_53
+    Nodes(61) <- NiagaraNodeParameterMapGet_54
+    Nodes(62) <- NiagaraNodeParameterMapGet_55
+    Nodes(63) <- NiagaraNodeParameterMapGet_56
+    Nodes(64) <- NiagaraNodeParameterMapGet_58
+    Nodes(65) <- NiagaraNodeParameterMapGet_59
+    Nodes(66) <- NiagaraNodeParameterMapGet_8
+    Nodes(67) <- NiagaraNodeParameterMapGet_60
+    Nodes(68) <- NiagaraNodeParameterMapGet_4
+    Nodes(69) <- NiagaraNodeParameterMapGet_21
+    Nodes(70) <- NiagaraNodeParameterMapGet_9
+    Nodes(71) <- NiagaraNodeParameterMapGet_57
+    Nodes(72) <- NiagaraNodeParameterMapGet_61
+    Nodes(73) <- NiagaraNodeParameterMapGet_63
+    Nodes(74) <- NiagaraNodeParameterMapGet_65
+    Nodes(75) <- NiagaraNodeParameterMapGet_66
+    Nodes(76) <- NiagaraNodeParameterMapGet_70
+    Nodes(77) <- NiagaraNodeParameterMapGet_71
+    Nodes(78) <- NiagaraNodeParameterMapGet_62
+    Nodes(79) <- NiagaraNodeParameterMapGet_67
+    Nodes(80) <- NiagaraNodeFunctionCall_1
+    Nodes(81) <- NiagaraNodeFunctionCall_2
+    Nodes(82) <- NiagaraNodeFunctionCall_3
+    Nodes(83) <- NiagaraNodeFunctionCall_4
+    Nodes(84) <- NiagaraNodeParameterMapSet_1
+    Nodes(85) <- NiagaraNodeParameterMapGet_29
+    Nodes(86) <- NiagaraNodeFunctionCall_5
+    Nodes(87) <- NiagaraNodeParameterMapSet_2
+    Nodes(88) <- NiagaraNodeInput_0
+    Nodes(89) <- NiagaraNodeParameterMapSet_3
+    Nodes(90) <- NiagaraNodeParameterMapGet_64
+    Nodes(91) <- NiagaraNodeFunctionCall_6
+    Nodes(92) <- NiagaraNodeFunctionCall_8
+    Nodes(93) <- NiagaraNodeParameterMapSet_4
+    Nodes(94) <- NiagaraNodeParameterMapGet_68
+    Nodes(95) <- NiagaraNodeFunctionCall_9
+    Nodes(96) <- NiagaraNodeParameterMapSet_6
+    Nodes(97) <- NiagaraNodeParameterMapGet_69
+    Nodes(98) <- NiagaraNodeFunctionCall_10
+    Nodes(99) <- NiagaraNodeParameterMapSet_7
+[NiagaraNodeParameterMapSet_7@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = B272C41F48DD10EB3C3409A950CF74A2
+    ChangeId = 6CA22E12422884561E8E9693947FF85C
+    вход ParticleState.Let Infinitely Lived Particles Die When Emitter Deactivates = true
+    вход ParticleState.Let Infinitely Lived Particles Die When Emitter Deactivates = true
+[NiagaraNodeParameterMapSet_6@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = 987E473A402C44CDE538A39A3F22CC25
+    ChangeId = F4026A90483FBF20071C6881C4EA30C5
+    ChangeId = 6DFEB2994188C838B6954ABA45000E32
+    bUserSetEnabledState = True
+    ChangeId = 44DBF0AD474508DF22F37FB51E2E8631
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapSet_5@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = 001BD2E942F667130E0F3581BDF2A7B3
+    bUserSetEnabledState = True
+    ChangeId = E802D59345F32FF0F3C84F9291E37349
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+    ChangeId = E0603D19444F8953D2B7589A865523E0
+    bUserSetEnabledState = True
+    ChangeId = 8B81B7334DCC281C43F87697BB8579AF
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapSet_4@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = 1F10375A44B10A1E5E443397ED82B98C
+    ChangeId = 6EA2CF5A43B9CC5F8BE28489BE31AD72
+[NiagaraNodeParameterMapSet_3@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = 038C09FD4FEB515DB088E2B8C6D18FAF
+    ChangeId = 03E868904D7FA28FA2795DB117407657
+[NiagaraNodeParameterMapSet_2@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = C4BEA694495B34669DCE79878DA89A36
+    ChangeId = BD82FCBD445B6FF576FC6289BD572A2C
+    вход EmitterState.bUseMinDistance = false
+    вход EmitterState.bUseMaxDistance = true
+    вход EmitterState.Max Distance Response = NewEnumerator1
+    вход EmitterState.bUseMinDistance = false
+    вход EmitterState.bUseMaxDistance = true
+    вход EmitterState.Max Distance Response = NewEnumerator1
+[NiagaraNodeParameterMapSet_1@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = 1DF9F66D4F91E928E80A1591C9F72792
+    ChangeId = 1DF9F66D4F91E928E80A1591C9F72792
+    ChangeId = 7329092E400AAB4B9045569FB8F9A01B
+    ChangeId = 7329092E400AAB4B9045569FB8F9A01B
+[NiagaraNodeParameterMapSet_0@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapSet
+    ChangeId = F85824334153F3214F62EAAB5167EE60
+    bUserSetEnabledState = True
+    ChangeId = F85824334153F3214F62EAAB5167EE60
+    bUserSetEnabledState = True
+    ChangeId = AEDA6CB14351C686DB2873BA18B97FC7
+    bUserSetEnabledState = True
+    ChangeId = AEDA6CB14351C686DB2873BA18B97FC7
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_9@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((AD39913C427A35A67AA56E80906238D9, DD4C9B1849E5C66E9778D1A6357BED7C))
+    ChangeId = EC18D44E4CDD7520D8B4D192C0DF5C60
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((AD39913C427A35A67AA56E80906238D9, DD4C9B1849E5C66E9778D1A6357BED7C))
+    ChangeId = EC18D44E4CDD7520D8B4D192C0DF5C60
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((AD39913C427A35A67AA56E80906238D9, DD4C9B1849E5C66E9778D1A6357BED7C))
+    ChangeId = 9DC8C04D4F0A7B837EF0E3959CDAECAD
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((AD39913C427A35A67AA56E80906238D9, DD4C9B1849E5C66E9778D1A6357BED7C))
+    ChangeId = 9DC8C04D4F0A7B837EF0E3959CDAECAD
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_8@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((95F2696D42B12D41085E138EE48C5435, 95A95493464FA561F0FE8E9A48578E2C))
+    ChangeId = 0061A8F1416C63EBDEBB6BA81210832D
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((95F2696D42B12D41085E138EE48C5435, 95A95493464FA561F0FE8E9A48578E2C))
+    ChangeId = 60F08E6F43021773257F49AF4A77329F
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((95F2696D42B12D41085E138EE48C5435, 95A95493464FA561F0FE8E9A48578E2C))
+    ChangeId = D87CA05941BB74EC8FE3F59DF64AC1A6
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((95F2696D42B12D41085E138EE48C5435, 95A95493464FA561F0FE8E9A48578E2C))
+    ChangeId = EB6408514E1C7C00AE1643A4C02AD686
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_71@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((EBA836EB4FE3082CC6C05E9C69E187E5, E9E3C7E142158826E397CC88FAA1787C))
+    ChangeId = BC489EA34DDC11F064E30B9540FD3C35
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((EBA836EB4FE3082CC6C05E9C69E187E5, E9E3C7E142158826E397CC88FAA1787C))
+    ChangeId = BC489EA34DDC11F064E30B9540FD3C35
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((EBA836EB4FE3082CC6C05E9C69E187E5, E9E3C7E142158826E397CC88FAA1787C))
+    ChangeId = 24C7E86845CF020F8665EB8B03294B9F
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((EBA836EB4FE3082CC6C05E9C69E187E5, E9E3C7E142158826E397CC88FAA1787C))
+    ChangeId = 24C7E86845CF020F8665EB8B03294B9F
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_70@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((54657C6B4F15F1B0FDBA95A6D211C18C, 4A3CF5564909E76D27331BBB56865663))
+    ChangeId = 575E822343C3C983A63569BF1318A647
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((54657C6B4F15F1B0FDBA95A6D211C18C, 4A3CF5564909E76D27331BBB56865663))
+    ChangeId = 193F168248E1B064E084DFA258265D29
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((54657C6B4F15F1B0FDBA95A6D211C18C, 4A3CF5564909E76D27331BBB56865663))
+    ChangeId = 8BB5849F4341CD48A0C7A5921135C30D
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((54657C6B4F15F1B0FDBA95A6D211C18C, 4A3CF5564909E76D27331BBB56865663))
+    ChangeId = 201239134EEEAA5B3CBAB5968046CDAA
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_7@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((9EF504C24A26A49F451D049C40DDF86A, 1CA25B7049540836148262821C69448B))
+    ChangeId = 49AB501C4C516AE0B221AE9D71FCF620
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((9EF504C24A26A49F451D049C40DDF86A, 1CA25B7049540836148262821C69448B))
+    ChangeId = D8EB1FC149C0673652E9929038215483
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((9EF504C24A26A49F451D049C40DDF86A, 1CA25B7049540836148262821C69448B))
+    ChangeId = 7B7A7D3A4831B6B39083A19A9072CAAB
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((9EF504C24A26A49F451D049C40DDF86A, 1CA25B7049540836148262821C69448B))
+    ChangeId = 8FDAD59F47A4C9B0A672BEA0899D4C42
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_69@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((189F5E9B43DEAA442F6FFF869A13019F, DE61A5E64741DBB5D7FFC39F486D1B3A))
+    ChangeId = 79118CFB43AD3A8E23FD2A9E1BE10D1A
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((5DF9FFA7451ED2755C94D98070D48B20, 40CA1F9D4F9BDA18AD1570B7D7AFE898))
+    ChangeId = A526A8DA452709379A5A7EA717A109FA
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_68@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((FE13B0C543F0B901CE14E18AE8E32773, 0824970240447B640C1D27882747913D))
+    ChangeId = 12A64E584DCD51409D9A2B95ACA039D7
+    PinOutputToPinDefaultPersistentId = ((509E302B4633274142F556ABA864F611, A63AF7C74850057D6FEDA18B188AAC88))
+    ChangeId = 2F570C6144AF480936479EB74B27B26E
+[NiagaraNodeParameterMapGet_67@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((35034F4242BA9CB704DF39B5FF2C55A1, 6638A625410261771F73A79111924258))
+    ChangeId = 27DC8F4245BECE37A7878BB286577BFE
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((35034F4242BA9CB704DF39B5FF2C55A1, 6638A625410261771F73A79111924258))
+    ChangeId = 27DC8F4245BECE37A7878BB286577BFE
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((35034F4242BA9CB704DF39B5FF2C55A1, 6638A625410261771F73A79111924258))
+    ChangeId = 9B9F2B10417014376CEDC6B53EDA0655
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((35034F4242BA9CB704DF39B5FF2C55A1, 6638A625410261771F73A79111924258))
+    ChangeId = 9B9F2B10417014376CEDC6B53EDA0655
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_66@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((4E952F5645C16517B45235B4533A5F5B, A15B61A74B0C1B6CF5962B880B41C8C3))
+    ChangeId = 1848E4BD437DFFECC3777C89A128716E
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((4E952F5645C16517B45235B4533A5F5B, A15B61A74B0C1B6CF5962B880B41C8C3))
+    ChangeId = 31BB7AB1468C26EF60D1D6B61F716581
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((4E952F5645C16517B45235B4533A5F5B, A15B61A74B0C1B6CF5962B880B41C8C3))
+    ChangeId = 1D3F7B8841CF3D22D1DB15BC5B7D59E1
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((4E952F5645C16517B45235B4533A5F5B, A15B61A74B0C1B6CF5962B880B41C8C3))
+    ChangeId = 2F86E1F44EDAFB5770DF04BB1788B070
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_65@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((B5EB0E894704DA12D2BE01A7089D8C17, C989E653445C5A6703F4C2B5C7593C3F))
+    ChangeId = 82C4B8C3415A34BE5EE0E896E310689D
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((B5EB0E894704DA12D2BE01A7089D8C17, C989E653445C5A6703F4C2B5C7593C3F))
+    ChangeId = DBA07B48405A0364E627379EC82F39AB
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((B5EB0E894704DA12D2BE01A7089D8C17, C989E653445C5A6703F4C2B5C7593C3F))
+    ChangeId = B065C68E43608B5572E25DA88C65CCDA
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((B5EB0E894704DA12D2BE01A7089D8C17, C989E653445C5A6703F4C2B5C7593C3F))
+    ChangeId = E1DB61F940F0409057C62EB519755B12
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_64@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((0C47ABA14A8A502D871A439C7DC581F1, A636DCF04D4C8BBCE398D4864C166C66))
+    ChangeId = 2BF8A1904173AF6DF05E3DB152EE9579
+    PinOutputToPinDefaultPersistentId = ((E5C6CE5649116EFD71C3249A6F77017F, C6E8E6C5467C58B12A384284EBE00279))
+    ChangeId = 61119E2E44A1431E28AC75958CB6E8F7
+[NiagaraNodeParameterMapGet_63@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((8E92C2794244E34AD395029126CB7512, D847C33F42F3C00A028CD49626C29152))
+    ChangeId = 3E9CAB0D4042977AEA52AA9AD3D8F990
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((8E92C2794244E34AD395029126CB7512, D847C33F42F3C00A028CD49626C29152))
+    ChangeId = F3D4F47A4FF394A043BB2993C46CA08F
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((8E92C2794244E34AD395029126CB7512, D847C33F42F3C00A028CD49626C29152))
+    ChangeId = BA1E5C3B45D0D2CA4C9600800B4E07DD
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((8E92C2794244E34AD395029126CB7512, D847C33F42F3C00A028CD49626C29152))
+    ChangeId = 6BE47BF54CC8DCA845FE168972F65FE3
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_62@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((2728845F4885CBB8A4B442BEC27447A3, 680C9923440030517895DA8A4C386D6C))
+    ChangeId = 467D4E544EA0B7F20890048DC1518988
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((2728845F4885CBB8A4B442BEC27447A3, 680C9923440030517895DA8A4C386D6C))
+    ChangeId = 1B53DDDA419C6A346D391C94B30F8E95
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((2728845F4885CBB8A4B442BEC27447A3, 680C9923440030517895DA8A4C386D6C))
+    ChangeId = 4217E42C45848DF4BDF6C2803D81896F
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((2728845F4885CBB8A4B442BEC27447A3, 680C9923440030517895DA8A4C386D6C))
+    ChangeId = FCCC16844C291B04D2468D86BB4C9F00
+    EnabledState = Disabled
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_61@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((FABF48B543BCA928EB78C78CB714C408, 7609481547FC9341D3EBDFBF377879F5))
+    ChangeId = 5B418EF542011EA98AED80B69BCF5753
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((FABF48B543BCA928EB78C78CB714C408, 7609481547FC9341D3EBDFBF377879F5))
+    ChangeId = 5B418EF542011EA98AED80B69BCF5753
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((FABF48B543BCA928EB78C78CB714C408, 7609481547FC9341D3EBDFBF377879F5))
+    ChangeId = 68FD82BA452A97BA0E82479C98359D97
+    bUserSetEnabledState = True
+    PinOutputToPinDefaultPersistentId = ((FABF48B543BCA928EB78C78CB714C408, 7609481547FC9341D3EBDFBF377879F5))
+    ChangeId = 68FD82BA452A97BA0E82479C98359D97
+    bUserSetEnabledState = True
+[NiagaraNodeParameterMapGet_60@NE_Surface.NiagaraScriptSource_1.NiagaraGraph_0] NiagaraNodeParameterMapGet
+    PinOutputToPinDefaultPersistentId = ((6D72A78B4254DBF23A8CD995D67900B9, 9440DB83414176B1222358B1BFFAF082))
+    ChangeId = EE745F0543BDE4FCA99DE6B0F272865C

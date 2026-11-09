@@ -1,0 +1,231 @@
+﻿# /Game/FluidFlux/Tools/Mapping/MF_TriplanarBasic
+# класс: MaterialFunction; происхождение: проект; узлов: 40; связей: 91; HLSL: 2; причина: папка /Game/FluidFlux; HLSL:2
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_TriplanarBasic] MaterialFunction
+    StateId = 5C6814664DC1904D5554CE90C1ABDB43
+    CombinedInputTypes = 4
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_4
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_8
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_12
+    EditorOnlyData <- MF_TriplanarBasicEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_TriplanarBasicEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_0
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionMax_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionInverseLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_8
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_2
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionComponentMask_6
+    ExpressionCollection <- MaterialExpressionComponentMask_7
+    ExpressionCollection <- MaterialExpressionSign_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionAppendVector_3
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_12
+    ExpressionCollection <- MaterialExpressionAppendVector_4
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionAppendVector_5
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionCustom_1
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    Input <- MaterialExpressionNormalize_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionMaterialFunctionCall_8
+    B <- MaterialExpressionMaterialFunctionCall_8
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionAdd_1
+    B <- MaterialExpressionMaterialFunctionCall_8
+[MaterialExpressionAppendVector_3] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionConstant_3
+    B <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionAppendVector_4] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionMaterialFunctionCall_12
+    B <- MaterialExpressionConstant_4
+[MaterialExpressionAppendVector_5] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionMultiply_8
+    B <- MaterialExpressionConstant_5
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    G = True
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionComponentMask_6] MaterialExpressionComponentMask
+    R = True
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionComponentMask_7] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.001000
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    R = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    OutputType = CMOT_Float2
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    Inputs(0) Weights <- MaterialExpressionDivide_1
+    Inputs(1) XUV <- MaterialExpressionMultiply_7
+    Inputs(2) YUV <- MaterialExpressionMultiply_6
+    Inputs(3) ZUV <- MaterialExpressionMultiply_5
+    Code: HLSL, 20 строк (см. HLSL/)
+[MaterialExpressionCustom_1] MaterialExpressionCustom
+    OutputType = CMOT_Float2
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    Inputs(0) Weights <- MaterialExpressionDivide_1
+    Inputs(1) XUV <- MaterialExpressionMultiply_7
+    Inputs(2) YUV <- MaterialExpressionMultiply_6
+    Inputs(3) ZUV <- MaterialExpressionMultiply_5
+    Code: HLSL, 7 строк (см. HLSL/)
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionInverseLinearInterpolate_0
+    B <- MaterialExpressionAdd_2
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "WordUV"
+    Id = E5ECC01042176C103D5D33AC087CA031
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMultiply_1
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "WorldNormal"
+    Id = DD6C18E64E3C2F595C3053B7E2BAE6E8
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    bCollapsed = True
+    Preview <- MaterialExpressionPixelNormalWS_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "UV"
+    bLastPreviewed = True
+    Id = B71057B6405EF9349887DE8E83750077
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_1
+[MaterialExpressionInverseLinearInterpolate_0] MaterialExpressionInverseLinearInterpolate
+    ConstB = 0.000000
+    bClampResult = True
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionScalarParameter_1
+    Value <- MaterialExpressionSubtract_0
+[MaterialExpressionMaterialFunctionCall_12] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    FunctionOutputs(2) = (ExpressionOutputId=17CE6E2C4E70841B48F3D1B73828AA03,Output=(OutputName="B"))
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    Outputs(2) = (OutputName="B")
+    FunctionInputs(0) <- MaterialExpressionSign_0
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    FunctionOutputs(2) = (ExpressionOutputId=17CE6E2C4E70841B48F3D1B73828AA03,Output=(OutputName="B"))
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    Outputs(2) = (OutputName="B")
+    FunctionInputs(0) <- MaterialExpressionAbs_0
+[MaterialExpressionMaterialFunctionCall_8] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    FunctionOutputs(2) = (ExpressionOutputId=17CE6E2C4E70841B48F3D1B73828AA03,Output=(OutputName="B"))
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    Outputs(2) = (OutputName="B")
+    FunctionInputs(0) <- MaterialExpressionInverseLinearInterpolate_0
+[MaterialExpressionMax_0] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionMaterialFunctionCall_4
+    B <- MaterialExpressionMax_1
+[MaterialExpressionMax_1] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionMaterialFunctionCall_4
+    B <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionWorldPosition_2
+    B <- MaterialExpressionConstant_2
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionComponentMask_7
+    B <- MaterialExpressionAppendVector_3
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionComponentMask_6
+    B <- MaterialExpressionAppendVector_4
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionComponentMask_5
+    B <- MaterialExpressionAppendVector_5
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    VectorInput <- MaterialExpressionFunctionInput_2
+[MaterialExpressionPixelNormalWS_0] MaterialExpressionPixelNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "Smoothness"
+    ExpressionGUID = D00C421D4AB33B2A20291CA34F27BA0B
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+[MaterialExpressionSign_0] MaterialExpressionSign
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    Input <- MaterialExpressionNormalize_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+    A <- MaterialExpressionMax_0
+    B <- MaterialExpressionAbs_0
+[MaterialExpressionWorldPosition_2] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_TriplanarBasic'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

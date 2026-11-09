@@ -1,0 +1,106 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Functions/MF_CheckerDither
+# класс: MaterialFunction; происхождение: проект; узлов: 20; связей: 36; HLSL: 1; причина: папка /Game/FluidFlux; HLSL:1
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CheckerDither] MaterialFunction
+    StateId = D132A15F47BB7F8137A881B9959036CF
+    CombinedInputTypes = 512
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_CheckerDitherEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CheckerDitherEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionViewProperty_0
+    ExpressionCollection <- MaterialExpressionScreenPosition_3
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionConstant2Vector_3
+    ExpressionCollection <- MaterialExpressionTwoSidedSign_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionStaticSwitch_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+    A <- MaterialExpressionScreenPosition_3
+    B <- MaterialExpressionStaticSwitch_0
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+[MaterialExpressionConstant2Vector_3] MaterialExpressionConstant2Vector
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: Checker2D
+    OutputType = CMOT_Float1
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+    bCollapsed = True
+    Inputs(0) position <- MaterialExpressionAdd_2
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "UseTemporal"
+    Id = B7F7E9F14003E8528B7AFC83BA410BBB
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "FrontSide"
+    bLastPreviewed = True
+    Id = 4D512265436E6E5E52875EA7837A6029
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "TwoSided"
+    bLastPreviewed = True
+    Id = 49EC16034751E26AFD14CCB498A4013B
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+    bCollapsed = True
+    A <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "BackSide"
+    bLastPreviewed = True
+    Id = 3D2C165F4A3443B7055E5D8978A589E0
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+    bCollapsed = True
+    A <- MaterialExpressionOneMinus_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+    A <- MaterialExpressionCustom_0
+    B <- MaterialExpressionOneMinus_0
+    Alpha <- MaterialExpressionSaturate_0
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+    A <- MaterialExpressionViewProperty_0
+    B <- MaterialExpressionConstant2Vector_3
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+    Input <- MaterialExpressionCustom_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+    Input <- MaterialExpressionTwoSidedSign_0
+[MaterialExpressionScreenPosition_3] MaterialExpressionScreenPosition
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+[MaterialExpressionStaticSwitch_0] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+    A <- MaterialExpressionMultiply_5
+    B <- MaterialExpressionConstant_1
+    Value <- MaterialExpressionFunctionInput_1
+[MaterialExpressionTwoSidedSign_0] MaterialExpressionTwoSidedSign
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+[MaterialExpressionViewProperty_0] MaterialExpressionViewProperty
+    Property = MEVP_TemporalSampleIndex
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerDither'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

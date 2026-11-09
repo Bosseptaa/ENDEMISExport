@@ -1,0 +1,57 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_FluxSimulationUVToWorld
+# класс: MaterialFunction; происхождение: проект; узлов: 8; связей: 13; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:69
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxSimulationUVToWorld] MaterialFunction
+    StateId = 7F3178EA4D4D211E64315E9DFEC0C9EA
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_FluxSimulationUVToWorldEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxSimulationUVToWorldEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSimulationUVToWorld'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "UV"
+    Id = B22AEC234E25421B5182089384020370
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSimulationUVToWorld'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "WorldPosition"
+    SortPriority = -1
+    bLastPreviewed = True
+    Id = 95D094FA430297A593B0A089DBD5B4E3
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSimulationUVToWorld'"
+    A <- MaterialExpressionAdd_2
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSimulationUV.MF_FluxSimulationUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=AB54F8A04BF80648975AFEAEF6AA4B89,Output=(OutputName="Location"))
+    FunctionOutputs(1) = (ExpressionOutputId=C95318454157AA05A02E1CB27B1B2D7E,Output=(OutputName="ScaleInv"))
+    FunctionOutputs(2) = (ExpressionOutputId=E7854F864B404DDBFDE83C8D5C660588,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=CC73E6C2412A717020F206AE8D6F4D7F,Output=(OutputName="Height"))
+    FunctionOutputs(4) = (ExpressionOutputId=D453923D4F896744C8CAB5BC03EE1446,Output=(OutputName="Resolution"))
+    FunctionOutputs(5) = (ExpressionOutputId=4ADE6B714BD48DB8764BF28BC453AAE2,Output=(OutputName="TexelSize"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSimulationUVToWorld'"
+    Outputs(0) = (OutputName="Location")
+    Outputs(1) = (OutputName="ScaleInv")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Height")
+    Outputs(4) = (OutputName="Resolution")
+    Outputs(5) = (OutputName="TexelSize")
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSimulationUVToWorld'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionMaterialFunctionCall_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

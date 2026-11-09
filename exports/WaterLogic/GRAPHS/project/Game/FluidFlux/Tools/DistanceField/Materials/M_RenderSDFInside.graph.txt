@@ -1,0 +1,122 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Materials/M_RenderSDFInside
+# класс: Material; происхождение: проект; узлов: 25; связей: 46; HLSL: 0; причина: папка /Game/FluidFlux; тело:5
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_RenderSDFInside] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    TwoSided = True
+    bUsedWithSplineMeshes = True
+    EditorX = 1360
+    EditorY = 272
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 21712E3145DC8793C4E059A776D0593F
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 7AC5CB104EB709E1A86FCB9D339AD9FB
+    EditorOnlyData <- M_RenderSDFInsideEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_RenderSDFInsideEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    BaseColor <- MaterialExpressionConstant3Vector_0
+    EmissiveColor <- MaterialExpressionIf_0
+    OpacityMask <- MaterialExpressionSubtract_1
+    WorldPositionOffset <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_8
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_2
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_3
+    ExpressionCollection <- MaterialExpressionEyeAdaptation_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    A <- MaterialExpressionConstant3Vector_3
+    B <- MaterialExpressionDivide_0
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=1.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=0.050000,G=0.300000,B=1.000000,A=0.000000)
+[MaterialExpressionConstant3Vector_2] MaterialExpressionConstant3Vector
+    Constant = (R=0.500000,G=0.200000,B=1.000000,A=0.000000)
+[MaterialExpressionConstant3Vector_3] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=0.000000,B=0.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    A <- MaterialExpressionVertexNormalWS_0
+    B <- MaterialExpressionNormalize_0
+[MaterialExpressionEyeAdaptation_0] MaterialExpressionEyeAdaptation
+[MaterialExpressionIf_0] MaterialExpressionIf
+    ConstB = 1.000000
+    A <- MaterialExpressionMaterialFunctionCall_4
+    AGreaterThanB <- MaterialExpressionConstant3Vector_3
+    ALessThanB <- MaterialExpressionDivide_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    ConstB = 0.500000
+    A <- MaterialExpressionDotProduct_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_WaterHeight.MF_WaterHeight'"
+    FunctionOutputs(0) = (ExpressionOutputId=6B4D805A4E6365996263F797B491D4EE,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxPhantom.MF_FluxPhantom'"
+    FunctionOutputs(0) = (ExpressionOutputId=952F33E84669F008FED6A69447C48B78,Output=(OutputName="VisibleInWorldOnly"))
+    FunctionOutputs(1) = (ExpressionOutputId=F7C65AF84365C80134A16B8BCAA6DCDD,Output=(OutputName="VisibleInCaptureOnly"))
+    FunctionOutputs(2) = (ExpressionOutputId=90AD37CA48E557769A7A6DB4F898F298,Output=(OutputName="IsRenderingCapture"))
+    Outputs(0) = (OutputName="VisibleInWorldOnly")
+    Outputs(1) = (OutputName="VisibleInCaptureOnly")
+    Outputs(2) = (OutputName="IsRenderingCapture")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_0
+    FunctionInputs(1) <- MaterialExpressionStaticBool_1
+    FunctionInputs(2) <- MaterialExpressionVectorParameter_0
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxPhantom.MF_FluxPhantom'"
+    FunctionInputs(0) = (ExpressionInputId=C0539CA24323537369B8729D42344871,Input=(OutputIndex=-1,InputName="IsPhantom"))
+    FunctionInputs(1) = (ExpressionInputId=5510FBC7464B9923A9C0CCAB247C52B7,Input=(OutputIndex=-1,InputName="IsDistanceField"))
+    FunctionOutputs(0) = (ExpressionOutputId=952F33E84669F008FED6A69447C48B78,Output=(OutputName="VisibleInWorldOnly"))
+    FunctionOutputs(1) = (ExpressionOutputId=F7C65AF84365C80134A16B8BCAA6DCDD,Output=(OutputName="VisibleInCaptureOnly"))
+    FunctionOutputs(2) = (ExpressionOutputId=90AD37CA48E557769A7A6DB4F898F298,Output=(OutputName="IsRenderingCapture"))
+    Outputs(0) = (OutputName="VisibleInWorldOnly")
+    Outputs(1) = (OutputName="VisibleInCaptureOnly")
+    Outputs(2) = (OutputName="IsRenderingCapture")
+    FunctionInputs(2) <- MaterialExpressionAdd_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionConstant3Vector_1
+    B <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionConstant3Vector_2
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+    Value = True
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionWorldPosition_8
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    ExpressionGUID = B2899EC54315D3275E12449B3EB197CD
+[MaterialExpressionVertexNormalWS_0] MaterialExpressionVertexNormalWS
+[MaterialExpressionWorldPosition_8] MaterialExpressionWorldPosition
+    WorldPositionShaderOffset = WPT_ExcludeAllShaderOffsets
+[M_SDFInsideEditorOnlyData] ObjectRedirector
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

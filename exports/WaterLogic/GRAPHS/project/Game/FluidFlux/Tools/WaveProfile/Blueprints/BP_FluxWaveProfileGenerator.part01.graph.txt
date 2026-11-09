@@ -1,0 +1,2249 @@
+﻿# /Game/FluidFlux/Tools/WaveProfile/Blueprints/BP_FluxWaveProfileGenerator
+# класс: Blueprint; происхождение: проект; узлов: 1078; связей: 1646; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:8623
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxWaveProfileGenerator] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    HideCategories(0) = "Input"
+    HideCategories(1) = "Rendering"
+    HideCategories(2) = "HLOD"
+    HideCategories(3) = "Replication"
+    HideCategories(4) = "LOD"
+    HideCategories(5) = "Collision"
+    HideCategories(6) = "Actor"
+    HideCategories(7) = "Cooking"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxWaveProfileGenerator_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    CategorySorting(3) = "Animation"
+    CategorySorting(4) = "Materials"
+    CategorySorting(5) = "Output"
+    CategorySorting(6) = "Source"
+    CategorySorting(7) = "Initialization"
+    CategorySorting(8) = "Components"
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxWaveProfileGenerator_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 5A75A50D40A28405FEAEA1B0B6F9D4E4
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- Generate Wave Profile
+    FunctionGraphs(2) <- LoadSpline
+    FunctionGraphs(3) <- Initialize
+    FunctionGraphs(4) <- CaptureInverseMap
+    FunctionGraphs(5) <- BuildProfile
+    FunctionGraphs(6) <- InitRenderTargets
+    FunctionGraphs(7) <- ClearRemap
+    FunctionGraphs(8) <- CreateProfile
+    ImplementedInterfaces(0) <- GetProfileSplines
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 023AD1D844DF9A8DF77566A6D1D28CA7
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_32
+    Nodes(2) <- K2Node_MacroInstance_1
+    Nodes(3) <- K2Node_Self_0
+    Nodes(4) <- K2Node_CallFunction_2
+    Nodes(5) <- K2Node_VariableSet_0
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_CallFunction_32@UserConstructionScript] K2Node_CallFunction
+[K2Node_MacroInstance_1@UserConstructionScript] K2Node_MacroInstance
+[K2Node_Self_0@UserConstructionScript] K2Node_Self
+[K2Node_CallFunction_2@UserConstructionScript] K2Node_CallFunction
+[K2Node_VariableSet_0@UserConstructionScript] K2Node_VariableSet
+[Generate Wave Profile] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 627630684D640985859631960AE9EA01
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_6
+    Nodes(2) <- K2Node_CallFunction_7
+    Nodes(3) <- K2Node_CallFunction_9
+    Nodes(4) <- K2Node_ExecutionSequence_0
+    Nodes(5) <- K2Node_Knot_0
+    Nodes(6) <- K2Node_VariableSet_3
+    Nodes(7) <- K2Node_MacroInstance_1
+    Nodes(8) <- K2Node_CallFunction_23
+    Nodes(9) <- K2Node_VariableGet_35
+    Nodes(10) <- K2Node_CallFunction_53
+    Nodes(11) <- K2Node_MacroInstance_0
+    Nodes(12) <- K2Node_VariableGet_0
+    Nodes(13) <- K2Node_CallFunction_5
+    Nodes(14) <- K2Node_CallFunction_8
+    Nodes(15) <- K2Node_CallFunction_15
+    Nodes(16) <- K2Node_CallFunction_25
+    Nodes(17) <- K2Node_CallFunction_24
+    Nodes(18) <- K2Node_CallFunction_44
+    Nodes(19) <- K2Node_VariableGet_18
+    Nodes(20) <- K2Node_VariableGet_19
+    Nodes(21) <- K2Node_VariableGet_30
+    Nodes(22) <- K2Node_VariableGet_39
+    Nodes(23) <- K2Node_CommutativeAssociativeBinaryOperator_8
+    Nodes(24) <- K2Node_CallFunction_3
+    Nodes(25) <- K2Node_VariableGet_13
+    Nodes(26) <- K2Node_CallFunction_4
+    Nodes(27) <- K2Node_VariableSet_2
+    Nodes(28) <- K2Node_CallFunction_20
+    Nodes(29) <- K2Node_VariableSet_0
+    Nodes(30) <- K2Node_VariableGet_26
+    Nodes(31) <- K2Node_VariableSet_4
+    Nodes(32) <- K2Node_CallFunction_48
+    Nodes(33) <- K2Node_CallFunction_49
+    Nodes(34) <- K2Node_VariableGet_37
+    Nodes(35) <- K2Node_CallFunction_50
+    Nodes(36) <- K2Node_VariableGet_38
+    Nodes(37) <- K2Node_CommutativeAssociativeBinaryOperator_13
+    Nodes(38) <- K2Node_VariableGet_21
+    Nodes(39) <- K2Node_CallFunction_12
+    Nodes(40) <- K2Node_VariableGet_7
+    Nodes(41) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(42) <- K2Node_CommutativeAssociativeBinaryOperator_9
+    Nodes(43) <- K2Node_CallFunction_46
+    Nodes(44) <- K2Node_CallFunction_42
+    Nodes(45) <- K2Node_CallFunction_21
+    Nodes(46) <- K2Node_CommutativeAssociativeBinaryOperator_4
+    Nodes(47) <- K2Node_VariableGet_8
+    Nodes(48) <- K2Node_CallFunction_29
+    Nodes(49) <- K2Node_VariableGet_4
+    Nodes(50) <- K2Node_CommutativeAssociativeBinaryOperator_5
+    Nodes(51) <- K2Node_CallFunction_30
+    Nodes(52) <- K2Node_VariableGet_16
+    Nodes(53) <- K2Node_CallFunction_11
+    Nodes(54) <- K2Node_CallFunction_16
+    Nodes(55) <- K2Node_CallFunction_63
+    Nodes(56) <- K2Node_CallFunction_22
+    Nodes(57) <- K2Node_CommutativeAssociativeBinaryOperator_7
+    Nodes(58) <- K2Node_CommutativeAssociativeBinaryOperator_6
+    Nodes(59) <- K2Node_CallFunction_32
+    Nodes(60) <- K2Node_VariableGet_11
+    Nodes(61) <- K2Node_CallMaterialParameterCollectionFunction_0
+    Nodes(62) <- K2Node_VariableSet_1
+    Nodes(63) <- K2Node_VariableGet_17
+    Nodes(64) <- K2Node_VariableGet_15
+    Nodes(65) <- K2Node_CallFunction_36
+    Nodes(66) <- K2Node_VariableSet_5
+    Nodes(67) <- K2Node_VariableGet_9
+    Nodes(68) <- K2Node_VariableGet_28
+    Nodes(69) <- K2Node_VariableGet_2
+    Nodes(70) <- K2Node_CommutativeAssociativeBinaryOperator_11
+    Nodes(71) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(72) <- K2Node_VariableGet_3
+    Nodes(73) <- K2Node_VariableSet_9
+    Nodes(74) <- K2Node_VariableSet_10
+    Nodes(75) <- K2Node_VariableGet_22
+    Nodes(76) <- K2Node_VariableGet_40
+    Nodes(77) <- K2Node_VariableSet_11
+    Nodes(78) <- K2Node_VariableGet_25
+    Nodes(79) <- K2Node_VariableGet_34
+    Nodes(80) <- K2Node_VariableGet_29
+    Nodes(81) <- K2Node_CommutativeAssociativeBinaryOperator_17
+    Nodes(82) <- K2Node_VariableGet_24
+    Nodes(83) <- K2Node_CommutativeAssociativeBinaryOperator_15
+    Nodes(84) <- K2Node_CommutativeAssociativeBinaryOperator_16
+    Nodes(85) <- K2Node_CommutativeAssociativeBinaryOperator_12
+    Nodes(86) <- K2Node_ExecutionSequence_1
+    Nodes(87) <- K2Node_CallFunction_43
+    Nodes(88) <- K2Node_VariableGet_33
+    Nodes(89) <- K2Node_VariableGet_31
+    Nodes(90) <- K2Node_VariableGet_27
+    Nodes(91) <- K2Node_CallFunction_41
+    Nodes(92) <- K2Node_VariableGet_32
+    Nodes(93) <- K2Node_VariableGet_14
+    Nodes(94) <- K2Node_VariableGet_20
+    Nodes(95) <- K2Node_CallFunction_14
+    Nodes(96) <- K2Node_CallFunction_26
+    Nodes(97) <- K2Node_CallFunction_19
+    Nodes(98) <- K2Node_Knot_6
+    Nodes(99) <- K2Node_Knot_7
+    Nodes(100) <- K2Node_Knot_8
+    Nodes(101) <- K2Node_Knot_9
+    Nodes(102) <- K2Node_CallFunction_13
+    Nodes(103) <- K2Node_CallFunction_17
+    Nodes(104) <- K2Node_VariableSet_6
+    Nodes(105) <- K2Node_Knot_1
+    Nodes(106) <- K2Node_VariableGet_5
+    Nodes(107) <- K2Node_CallFunction_28
+    Nodes(108) <- K2Node_CallFunction_55
+    Nodes(109) <- K2Node_CallFunction_56
+    Nodes(110) <- K2Node_CallFunction_57
+    Nodes(111) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(112) <- K2Node_VariableGet_1
+    Nodes(113) <- K2Node_CallFunction_35
+    Nodes(114) <- K2Node_CallFunction_37
+    Nodes(115) <- K2Node_CallFunction_38
+    Nodes(116) <- K2Node_CallFunction_39
+    Nodes(117) <- K2Node_CommutativeAssociativeBinaryOperator_14
+    Nodes(118) <- K2Node_CommutativeAssociativeBinaryOperator_18
+    Nodes(119) <- K2Node_CallFunction_47
+    Nodes(120) <- K2Node_CallFunction_59
+    Nodes(121) <- K2Node_CallFunction_58
+    Nodes(122) <- K2Node_CallFunction_60
+    Nodes(123) <- K2Node_CallFunction_40
+    Nodes(124) <- K2Node_CallFunction_64
+    Nodes(125) <- K2Node_CallFunction_65
+    Nodes(126) <- K2Node_CallFunction_66
+    Nodes(127) <- K2Node_CallFunction_68
+    Nodes(128) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(129) <- K2Node_CallFunction_61
+    Nodes(130) <- K2Node_CommutativeAssociativeBinaryOperator_19
+    Nodes(131) <- K2Node_VariableSet_8
+    Nodes(132) <- K2Node_CallFunction_0
+    Nodes(133) <- K2Node_VariableSet_7
+    Nodes(134) <- K2Node_VariableGet_12
+    Nodes(135) <- K2Node_VariableGet_10
+    Nodes(136) <- K2Node_CommutativeAssociativeBinaryOperator_21
+    Nodes(137) <- K2Node_VariableGet_41
+    Nodes(138) <- K2Node_CallFunction_1
+    Nodes(139) <- K2Node_CallFunction_45
+[K2Node_FunctionEntry_0@Generate Wave Profile] K2Node_FunctionEntry
+[K2Node_VariableGet_6@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_7@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_9@Generate Wave Profile] K2Node_CallFunction
+[K2Node_ExecutionSequence_0@Generate Wave Profile] K2Node_ExecutionSequence
+[K2Node_Knot_0@Generate Wave Profile] K2Node_Knot
+[K2Node_VariableSet_3@Generate Wave Profile] K2Node_VariableSet
+[K2Node_MacroInstance_1@Generate Wave Profile] K2Node_MacroInstance
+[K2Node_CallFunction_23@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableGet_35@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_53@Generate Wave Profile] K2Node_CallFunction
+[K2Node_MacroInstance_0@Generate Wave Profile] K2Node_MacroInstance
+[K2Node_VariableGet_0@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_5@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_8@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_15@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_25@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_24@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_44@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableGet_18@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_19@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_30@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_39@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_8@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_3@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableGet_13@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_4@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableSet_2@Generate Wave Profile] K2Node_VariableSet
+[K2Node_CallFunction_20@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableSet_0@Generate Wave Profile] K2Node_VariableSet
+[K2Node_VariableGet_26@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableSet_4@Generate Wave Profile] K2Node_VariableSet
+[K2Node_CallFunction_48@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_49@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableGet_37@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_50@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableGet_38@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_13@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_21@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_12@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableGet_7@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_2@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_9@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_46@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_42@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_21@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_4@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_8@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_29@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableGet_4@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_5@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_30@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableGet_16@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_11@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_16@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_63@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_22@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_7@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_6@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_32@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableGet_11@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallMaterialParameterCollectionFunction_0@Generate Wave Profile] K2Node_CallMaterialParameterCollectionFunction
+[K2Node_VariableSet_1@Generate Wave Profile] K2Node_VariableSet
+[K2Node_VariableGet_17@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_15@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_36@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableSet_5@Generate Wave Profile] K2Node_VariableSet
+[K2Node_VariableGet_9@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_28@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_2@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_11@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_3@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_3@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableSet_9@Generate Wave Profile] K2Node_VariableSet
+[K2Node_VariableSet_10@Generate Wave Profile] K2Node_VariableSet
+[K2Node_VariableGet_22@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_40@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableSet_11@Generate Wave Profile] K2Node_VariableSet
+[K2Node_VariableGet_25@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_34@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_29@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_17@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_24@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_15@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_16@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_12@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_ExecutionSequence_1@Generate Wave Profile] K2Node_ExecutionSequence
+[K2Node_CallFunction_43@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableGet_33@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_31@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_27@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_41@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableGet_32@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_14@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_20@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_14@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_26@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_19@Generate Wave Profile] K2Node_CallFunction
+[K2Node_Knot_6@Generate Wave Profile] K2Node_Knot
+[K2Node_Knot_7@Generate Wave Profile] K2Node_Knot
+[K2Node_Knot_8@Generate Wave Profile] K2Node_Knot
+[K2Node_Knot_9@Generate Wave Profile] K2Node_Knot
+[K2Node_CallFunction_13@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_17@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableSet_6@Generate Wave Profile] K2Node_VariableSet
+[K2Node_Knot_1@Generate Wave Profile] K2Node_Knot
+[K2Node_VariableGet_5@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_28@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_55@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_56@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_57@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_1@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_1@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_35@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_37@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_38@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_39@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_14@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_18@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_47@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_59@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_58@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_60@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_40@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_64@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_65@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_66@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_68@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_0@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_61@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_19@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableSet_8@Generate Wave Profile] K2Node_VariableSet
+[K2Node_CallFunction_0@Generate Wave Profile] K2Node_CallFunction
+[K2Node_VariableSet_7@Generate Wave Profile] K2Node_VariableSet
+[K2Node_VariableGet_12@Generate Wave Profile] K2Node_VariableGet
+[K2Node_VariableGet_10@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_21@Generate Wave Profile] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_41@Generate Wave Profile] K2Node_VariableGet
+[K2Node_CallFunction_1@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_45@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_2@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_6@Generate Wave Profile] K2Node_CallFunction
+[K2Node_MakeStruct_0@Generate Wave Profile] K2Node_MakeStruct
+[K2Node_CallFunction_10@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_18@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_27@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_31@Generate Wave Profile] K2Node_CallFunction
+[K2Node_BreakStruct_0@Generate Wave Profile] K2Node_BreakStruct
+[K2Node_BreakStruct_1@Generate Wave Profile] K2Node_BreakStruct
+[K2Node_BreakStruct_2@Generate Wave Profile] K2Node_BreakStruct
+[K2Node_CallFunction_33@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_34@Generate Wave Profile] K2Node_CallFunction
+[K2Node_BreakStruct_3@Generate Wave Profile] K2Node_BreakStruct
+[K2Node_BreakStruct_4@Generate Wave Profile] K2Node_BreakStruct
+[K2Node_CallFunction_51@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_52@Generate Wave Profile] K2Node_CallFunction
+[K2Node_CallFunction_54@Generate Wave Profile] K2Node_CallFunction
+[LoadSpline] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 8B75D54542CE13FE7AB584B3A8B36E78
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_7
+    Nodes(2) <- K2Node_VariableGet_6
+    Nodes(3) <- K2Node_VariableGet_15
+    Nodes(4) <- K2Node_CallFunction_21
+    Nodes(5) <- K2Node_VariableGet_1
+    Nodes(6) <- K2Node_CallFunction_12
+    Nodes(7) <- K2Node_VariableGet_3
+    Nodes(8) <- K2Node_CallFunction_13
+    Nodes(9) <- K2Node_VariableGet_0
+    Nodes(10) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(11) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(12) <- K2Node_CallFunction_2
+    Nodes(13) <- K2Node_VariableGet_2
+    Nodes(14) <- K2Node_CallFunction_1
+    Nodes(15) <- K2Node_CallArrayFunction_1
+    Nodes(16) <- K2Node_MacroInstance_1
+    Nodes(17) <- K2Node_VariableGet_10
+    Nodes(18) <- K2Node_GetArrayItem_0
+    Nodes(19) <- K2Node_CallFunction_4
+    Nodes(20) <- K2Node_VariableGet_13
+    Nodes(21) <- K2Node_CallFunction_11
+    Nodes(22) <- K2Node_VariableGet_9
+    Nodes(23) <- K2Node_CallFunction_7
+    Nodes(24) <- K2Node_VariableGet_8
+    Nodes(25) <- K2Node_CallArrayFunction_2
+    Nodes(26) <- K2Node_VariableGet_14
+    Nodes(27) <- K2Node_CallFunction_6
+    Nodes(28) <- K2Node_VariableGet_7
+    Nodes(29) <- K2Node_CallFunction_8
+    Nodes(30) <- K2Node_CallFunction_9
+    Nodes(31) <- K2Node_CallFunction_10
+    Nodes(32) <- K2Node_VariableSet_0
+    Nodes(33) <- K2Node_CallFunction_5
+    Nodes(34) <- K2Node_VariableGet_12
+    Nodes(35) <- K2Node_VariableGet_11
+    Nodes(36) <- K2Node_VariableGet_5
+    Nodes(37) <- EdGraphNode_Comment_0
+    Nodes(38) <- K2Node_ExecutionSequence_0
+    Nodes(39) <- K2Node_CallFunction_20
+    Nodes(40) <- K2Node_VariableGet_19
+    Nodes(41) <- K2Node_CallFunction_3
+    Nodes(42) <- K2Node_VariableGet_20
+    Nodes(43) <- K2Node_CallFunction_15
+    Nodes(44) <- K2Node_VariableGet_16
+    Nodes(45) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(46) <- K2Node_CallFunction_16
+    Nodes(47) <- K2Node_VariableGet_4
+    Nodes(48) <- K2Node_VariableGet_23
+    Nodes(49) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(50) <- K2Node_MacroInstance_2
+    Nodes(51) <- K2Node_BreakStruct_6
+[K2Node_FunctionEntry_0@LoadSpline] K2Node_FunctionEntry
+[K2Node_VariableSet_7@LoadSpline] K2Node_VariableSet
+[K2Node_VariableGet_6@LoadSpline] K2Node_VariableGet
+[K2Node_VariableGet_15@LoadSpline] K2Node_VariableGet
+[K2Node_CallFunction_21@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_1@LoadSpline] K2Node_VariableGet
+[K2Node_CallFunction_12@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_3@LoadSpline] K2Node_VariableGet
+[K2Node_CallFunction_13@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_0@LoadSpline] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_0@LoadSpline] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_1@LoadSpline] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_2@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_2@LoadSpline] K2Node_VariableGet
+[K2Node_CallFunction_1@LoadSpline] K2Node_CallFunction
+[K2Node_CallArrayFunction_1@LoadSpline] K2Node_CallArrayFunction
+[K2Node_MacroInstance_1@LoadSpline] K2Node_MacroInstance
+[K2Node_VariableGet_10@LoadSpline] K2Node_VariableGet
+[K2Node_GetArrayItem_0@LoadSpline] K2Node_GetArrayItem
+[K2Node_CallFunction_4@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_13@LoadSpline] K2Node_VariableGet
+[K2Node_CallFunction_11@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_9@LoadSpline] K2Node_VariableGet
+[K2Node_CallFunction_7@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_8@LoadSpline] K2Node_VariableGet
+[K2Node_CallArrayFunction_2@LoadSpline] K2Node_CallArrayFunction
+[K2Node_VariableGet_14@LoadSpline] K2Node_VariableGet
+[K2Node_CallFunction_6@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_7@LoadSpline] K2Node_VariableGet
+[K2Node_CallFunction_8@LoadSpline] K2Node_CallFunction
+[K2Node_CallFunction_9@LoadSpline] K2Node_CallFunction
+[K2Node_CallFunction_10@LoadSpline] K2Node_CallFunction
+[K2Node_VariableSet_0@LoadSpline] K2Node_VariableSet
+[K2Node_CallFunction_5@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_12@LoadSpline] K2Node_VariableGet
+[K2Node_VariableGet_11@LoadSpline] K2Node_VariableGet
+[K2Node_VariableGet_5@LoadSpline] K2Node_VariableGet
+[EdGraphNode_Comment_0@LoadSpline] EdGraphNode_Comment
+[K2Node_ExecutionSequence_0@LoadSpline] K2Node_ExecutionSequence
+[K2Node_CallFunction_20@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_19@LoadSpline] K2Node_VariableGet
+[K2Node_CallFunction_3@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_20@LoadSpline] K2Node_VariableGet
+[K2Node_CallFunction_15@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_16@LoadSpline] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_2@LoadSpline] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_16@LoadSpline] K2Node_CallFunction
+[K2Node_VariableGet_4@LoadSpline] K2Node_VariableGet
+[K2Node_VariableGet_23@LoadSpline] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_3@LoadSpline] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_MacroInstance_2@LoadSpline] K2Node_MacroInstance
+[K2Node_BreakStruct_6@LoadSpline] K2Node_BreakStruct
+[K2Node_CallFunction_0@LoadSpline] K2Node_CallFunction
+[K2Node_CallFunction_14@LoadSpline] K2Node_CallFunction
+[Initialize] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1B9DB07741A7B8D435571D902EC7DA75
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_ExecutionSequence_2
+    Nodes(2) <- K2Node_MacroInstance_0
+    Nodes(3) <- K2Node_VariableGet_7
+    Nodes(4) <- K2Node_CallFunction_2
+    Nodes(5) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(6) <- K2Node_CallFunction_15
+    Nodes(7) <- K2Node_VariableGet_19
+    Nodes(8) <- K2Node_CallFunction_9
+    Nodes(9) <- K2Node_VariableGet_47
+    Nodes(10) <- K2Node_CallArrayFunction_0
+    Nodes(11) <- K2Node_CallFunction_16
+    Nodes(12) <- K2Node_VariableGet_13
+    Nodes(13) <- K2Node_CallFunction_18
+    Nodes(14) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(15) <- K2Node_CallFunction_20
+    Nodes(16) <- K2Node_Knot_1
+    Nodes(17) <- K2Node_CallFunction_27
+    Nodes(18) <- K2Node_CallFunction_30
+    Nodes(19) <- K2Node_VariableGet_48
+    Nodes(20) <- K2Node_CallFunction_51
+    Nodes(21) <- K2Node_CommutativeAssociativeBinaryOperator_9
+    Nodes(22) <- K2Node_CallFunction_38
+    Nodes(23) <- K2Node_VariableGet_49
+    Nodes(24) <- K2Node_CallArrayFunction_1
+    Nodes(25) <- K2Node_VariableGet_18
+    Nodes(26) <- K2Node_CallArrayFunction_3
+    Nodes(27) <- K2Node_CallFunction_53
+    Nodes(28) <- K2Node_VariableGet_50
+    Nodes(29) <- K2Node_VariableGet_0
+    Nodes(30) <- K2Node_CallFunction_35
+    Nodes(31) <- K2Node_CallFunction_36
+    Nodes(32) <- K2Node_VariableGet_44
+    Nodes(33) <- K2Node_CallFunction_13
+    Nodes(34) <- K2Node_CallFunction_14
+    Nodes(35) <- K2Node_CallFunction_17
+    Nodes(36) <- K2Node_VariableGet_45
+    Nodes(37) <- K2Node_VariableGet_46
+    Nodes(38) <- K2Node_CallFunction_34
+    Nodes(39) <- K2Node_CallFunction_31
+    Nodes(40) <- K2Node_CallFunction_32
+    Nodes(41) <- K2Node_Knot_0
+    Nodes(42) <- K2Node_VariableSet_1
+    Nodes(43) <- K2Node_VariableGet_2
+    Nodes(44) <- K2Node_Select_0
+    Nodes(45) <- K2Node_CallFunction_5
+    Nodes(46) <- K2Node_VariableGet_1
+    Nodes(47) <- K2Node_Self_0
+    Nodes(48) <- K2Node_Message_0
+    Nodes(49) <- K2Node_CallArrayFunction_2
+[K2Node_FunctionEntry_0@Initialize] K2Node_FunctionEntry
+[K2Node_ExecutionSequence_2@Initialize] K2Node_ExecutionSequence
+[K2Node_MacroInstance_0@Initialize] K2Node_MacroInstance
+[K2Node_VariableGet_7@Initialize] K2Node_VariableGet
+[K2Node_CallFunction_2@Initialize] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_3@Initialize] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_15@Initialize] K2Node_CallFunction
+[K2Node_VariableGet_19@Initialize] K2Node_VariableGet
+[K2Node_CallFunction_9@Initialize] K2Node_CallFunction
+[K2Node_VariableGet_47@Initialize] K2Node_VariableGet
+[K2Node_CallArrayFunction_0@Initialize] K2Node_CallArrayFunction
+[K2Node_CallFunction_16@Initialize] K2Node_CallFunction
+[K2Node_VariableGet_13@Initialize] K2Node_VariableGet
+[K2Node_CallFunction_18@Initialize] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_1@Initialize] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_20@Initialize] K2Node_CallFunction
+[K2Node_Knot_1@Initialize] K2Node_Knot
+[K2Node_CallFunction_27@Initialize] K2Node_CallFunction
+[K2Node_CallFunction_30@Initialize] K2Node_CallFunction
+[K2Node_VariableGet_48@Initialize] K2Node_VariableGet
+[K2Node_CallFunction_51@Initialize] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_9@Initialize] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_38@Initialize] K2Node_CallFunction
+[K2Node_VariableGet_49@Initialize] K2Node_VariableGet
+[K2Node_CallArrayFunction_1@Initialize] K2Node_CallArrayFunction
+[K2Node_VariableGet_18@Initialize] K2Node_VariableGet
+[K2Node_CallArrayFunction_3@Initialize] K2Node_CallArrayFunction
+[K2Node_CallFunction_53@Initialize] K2Node_CallFunction
+[K2Node_VariableGet_50@Initialize] K2Node_VariableGet
+[K2Node_VariableGet_0@Initialize] K2Node_VariableGet
+[K2Node_CallFunction_35@Initialize] K2Node_CallFunction
+[K2Node_CallFunction_36@Initialize] K2Node_CallFunction
+[K2Node_VariableGet_44@Initialize] K2Node_VariableGet
+[K2Node_CallFunction_13@Initialize] K2Node_CallFunction
+[K2Node_CallFunction_14@Initialize] K2Node_CallFunction
+[K2Node_CallFunction_17@Initialize] K2Node_CallFunction
+[K2Node_VariableGet_45@Initialize] K2Node_VariableGet
+[K2Node_VariableGet_46@Initialize] K2Node_VariableGet
+[K2Node_CallFunction_34@Initialize] K2Node_CallFunction
+[K2Node_CallFunction_31@Initialize] K2Node_CallFunction
+[K2Node_CallFunction_32@Initialize] K2Node_CallFunction
+[K2Node_Knot_0@Initialize] K2Node_Knot
+[K2Node_VariableSet_1@Initialize] K2Node_VariableSet
+[K2Node_VariableGet_2@Initialize] K2Node_VariableGet
+[K2Node_Select_0@Initialize] K2Node_Select
+[K2Node_CallFunction_5@Initialize] K2Node_CallFunction
+[K2Node_VariableGet_1@Initialize] K2Node_VariableGet
+[K2Node_Self_0@Initialize] K2Node_Self
+[K2Node_Message_0@Initialize] K2Node_Message
+[K2Node_CallArrayFunction_2@Initialize] K2Node_CallArrayFunction
+[K2Node_CallFunction_0@Initialize] K2Node_CallFunction
+[K2Node_CallFunction_1@Initialize] K2Node_CallFunction
+[K2Node_CallFunction_3@Initialize] K2Node_CallFunction
+[CaptureInverseMap] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E71E2FEE410F1E4AA0B6C9B534398448
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_42
+    Nodes(2) <- K2Node_VariableGet_0
+    Nodes(3) <- K2Node_VariableSet_4
+    Nodes(4) <- K2Node_VariableGet_35
+    Nodes(5) <- K2Node_VariableGet_34
+    Nodes(6) <- K2Node_Self_1
+    Nodes(7) <- K2Node_MakeArray_1
+    Nodes(8) <- K2Node_VariableSet_2
+    Nodes(9) <- K2Node_CallFunction_0
+    Nodes(10) <- K2Node_VariableGet_2
+    Nodes(11) <- K2Node_VariableGet_3
+[K2Node_FunctionEntry_0@CaptureInverseMap] K2Node_FunctionEntry
+[K2Node_CallFunction_42@CaptureInverseMap] K2Node_CallFunction
+[K2Node_VariableGet_0@CaptureInverseMap] K2Node_VariableGet
+[K2Node_VariableSet_4@CaptureInverseMap] K2Node_VariableSet
+[K2Node_VariableGet_35@CaptureInverseMap] K2Node_VariableGet
+[K2Node_VariableGet_34@CaptureInverseMap] K2Node_VariableGet
+[K2Node_Self_1@CaptureInverseMap] K2Node_Self
+[K2Node_MakeArray_1@CaptureInverseMap] K2Node_MakeArray
+[K2Node_VariableSet_2@CaptureInverseMap] K2Node_VariableSet
+[K2Node_CallFunction_0@CaptureInverseMap] K2Node_CallFunction
+[K2Node_VariableGet_2@CaptureInverseMap] K2Node_VariableGet
+[K2Node_VariableGet_3@CaptureInverseMap] K2Node_VariableGet
+[BuildProfile] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = CB1015BE4A1E0C5C8A973384CA7F3ED8
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_53
+    Nodes(2) <- K2Node_CallFunction_26
+    Nodes(3) <- K2Node_VariableSet_5
+    Nodes(4) <- K2Node_CallFunction_6
+    Nodes(5) <- K2Node_VariableGet_36
+    Nodes(6) <- K2Node_CallFunction_22
+    Nodes(7) <- K2Node_VariableGet_8
+    Nodes(8) <- K2Node_CallFunction_3
+    Nodes(9) <- K2Node_VariableGet_7
+    Nodes(10) <- K2Node_ExecutionSequence_3
+    Nodes(11) <- K2Node_CallFunction_7
+    Nodes(12) <- K2Node_VariableGet_0
+    Nodes(13) <- K2Node_VariableSet_10
+    Nodes(14) <- K2Node_Message_1
+    Nodes(15) <- K2Node_ExecutionSequence_4
+    Nodes(16) <- K2Node_CallMaterialParameterCollectionFunction_0
+    Nodes(17) <- K2Node_CallFunction_1
+    Nodes(18) <- K2Node_CallFunction_0
+    Nodes(19) <- K2Node_CallFunction_2
+    Nodes(20) <- K2Node_VariableGet_33
+    Nodes(21) <- K2Node_VariableGet_5
+    Nodes(22) <- K2Node_VariableGet_6
+    Nodes(23) <- K2Node_CallFunction_21
+    Nodes(24) <- K2Node_VariableGet_1
+    Nodes(25) <- K2Node_VariableGet_2
+    Nodes(26) <- K2Node_VariableSet_0
+    Nodes(27) <- K2Node_CallFunction_4
+    Nodes(28) <- K2Node_VariableSet_2
+    Nodes(29) <- K2Node_VariableGet_11
+    Nodes(30) <- K2Node_CallFunction_9
+    Nodes(31) <- K2Node_VariableGet_14
+    Nodes(32) <- K2Node_VariableGet_15
+    Nodes(33) <- K2Node_MakeArray_1
+    Nodes(34) <- K2Node_VariableGet_16
+    Nodes(35) <- K2Node_VariableGet_19
+    Nodes(36) <- K2Node_VariableGet_22
+    Nodes(37) <- K2Node_CallFunction_12
+[K2Node_FunctionEntry_0@BuildProfile] K2Node_FunctionEntry
+[K2Node_VariableGet_53@BuildProfile] K2Node_VariableGet
+[K2Node_CallFunction_26@BuildProfile] K2Node_CallFunction
+[K2Node_VariableSet_5@BuildProfile] K2Node_VariableSet
+[K2Node_CallFunction_6@BuildProfile] K2Node_CallFunction
+[K2Node_VariableGet_36@BuildProfile] K2Node_VariableGet
+[K2Node_CallFunction_22@BuildProfile] K2Node_CallFunction
+[K2Node_VariableGet_8@BuildProfile] K2Node_VariableGet
+[K2Node_CallFunction_3@BuildProfile] K2Node_CallFunction
+[K2Node_VariableGet_7@BuildProfile] K2Node_VariableGet
+[K2Node_ExecutionSequence_3@BuildProfile] K2Node_ExecutionSequence
+[K2Node_CallFunction_7@BuildProfile] K2Node_CallFunction
+[K2Node_VariableGet_0@BuildProfile] K2Node_VariableGet
+[K2Node_VariableSet_10@BuildProfile] K2Node_VariableSet
+[K2Node_Message_1@BuildProfile] K2Node_Message
+[K2Node_ExecutionSequence_4@BuildProfile] K2Node_ExecutionSequence
+[K2Node_CallMaterialParameterCollectionFunction_0@BuildProfile] K2Node_CallMaterialParameterCollectionFunction
+[K2Node_CallFunction_1@BuildProfile] K2Node_CallFunction
+[K2Node_CallFunction_0@BuildProfile] K2Node_CallFunction
+[K2Node_CallFunction_2@BuildProfile] K2Node_CallFunction
+[K2Node_VariableGet_33@BuildProfile] K2Node_VariableGet
+[K2Node_VariableGet_5@BuildProfile] K2Node_VariableGet
+[K2Node_VariableGet_6@BuildProfile] K2Node_VariableGet
+[K2Node_CallFunction_21@BuildProfile] K2Node_CallFunction
+[K2Node_VariableGet_1@BuildProfile] K2Node_VariableGet
+[K2Node_VariableGet_2@BuildProfile] K2Node_VariableGet
+[K2Node_VariableSet_0@BuildProfile] K2Node_VariableSet
+[K2Node_CallFunction_4@BuildProfile] K2Node_CallFunction
+[K2Node_VariableSet_2@BuildProfile] K2Node_VariableSet
+[K2Node_VariableGet_11@BuildProfile] K2Node_VariableGet
+[K2Node_CallFunction_9@BuildProfile] K2Node_CallFunction
+[K2Node_VariableGet_14@BuildProfile] K2Node_VariableGet
+[K2Node_VariableGet_15@BuildProfile] K2Node_VariableGet
+[K2Node_MakeArray_1@BuildProfile] K2Node_MakeArray
+[K2Node_VariableGet_16@BuildProfile] K2Node_VariableGet
+[K2Node_VariableGet_19@BuildProfile] K2Node_VariableGet
+[K2Node_VariableGet_22@BuildProfile] K2Node_VariableGet
+[K2Node_CallFunction_12@BuildProfile] K2Node_CallFunction
+[InitRenderTargets] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A9AF619B444F1E15DFBCEC94EF182484
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_6
+    Nodes(2) <- K2Node_VariableGet_10
+    Nodes(3) <- K2Node_VariableGet_11
+    Nodes(4) <- K2Node_VariableGet_2
+    Nodes(5) <- K2Node_VariableGet_3
+    Nodes(6) <- K2Node_VariableSet_1
+    Nodes(7) <- K2Node_CallFunction_25
+    Nodes(8) <- K2Node_CallFunction_2
+    Nodes(9) <- K2Node_VariableGet_12
+    Nodes(10) <- K2Node_VariableGet_5
+    Nodes(11) <- K2Node_CallFunction_0
+    Nodes(12) <- K2Node_CallFunction_3
+    Nodes(13) <- K2Node_Knot_0
+    Nodes(14) <- K2Node_CallFunction_12
+    Nodes(15) <- K2Node_VariableGet_1
+    Nodes(16) <- K2Node_VariableSet_9
+    Nodes(17) <- K2Node_VariableSet_7
+    Nodes(18) <- K2Node_ExecutionSequence_5
+    Nodes(19) <- K2Node_VariableGet_6
+    Nodes(20) <- K2Node_VariableGet_7
+    Nodes(21) <- K2Node_CallFunction_4
+    Nodes(22) <- K2Node_CallFunction_5
+    Nodes(23) <- K2Node_VariableGet_15
+    Nodes(24) <- K2Node_VariableGet_4
+    Nodes(25) <- K2Node_CallFunction_24
+    Nodes(26) <- K2Node_CallFunction_1
+    Nodes(27) <- K2Node_VariableGet_13
+    Nodes(28) <- K2Node_VariableGet_14
+    Nodes(29) <- K2Node_VariableSet_8
+    Nodes(30) <- K2Node_VariableSet_10
+    Nodes(31) <- K2Node_VariableGet_8
+    Nodes(32) <- K2Node_VariableGet_9
+    Nodes(33) <- K2Node_VariableGet_16
+    Nodes(34) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@InitRenderTargets] K2Node_FunctionEntry
+[K2Node_VariableSet_6@InitRenderTargets] K2Node_VariableSet
+[K2Node_VariableGet_10@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableGet_11@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableGet_2@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableGet_3@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableSet_1@InitRenderTargets] K2Node_VariableSet
+[K2Node_CallFunction_25@InitRenderTargets] K2Node_CallFunction
+[K2Node_CallFunction_2@InitRenderTargets] K2Node_CallFunction
+[K2Node_VariableGet_12@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableGet_5@InitRenderTargets] K2Node_VariableGet
+[K2Node_CallFunction_0@InitRenderTargets] K2Node_CallFunction
+[K2Node_CallFunction_3@InitRenderTargets] K2Node_CallFunction
+[K2Node_Knot_0@InitRenderTargets] K2Node_Knot
+[K2Node_CallFunction_12@InitRenderTargets] K2Node_CallFunction
+[K2Node_VariableGet_1@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableSet_9@InitRenderTargets] K2Node_VariableSet
+[K2Node_VariableSet_7@InitRenderTargets] K2Node_VariableSet
+[K2Node_ExecutionSequence_5@InitRenderTargets] K2Node_ExecutionSequence
+[K2Node_VariableGet_6@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableGet_7@InitRenderTargets] K2Node_VariableGet
+[K2Node_CallFunction_4@InitRenderTargets] K2Node_CallFunction
+[K2Node_CallFunction_5@InitRenderTargets] K2Node_CallFunction
+[K2Node_VariableGet_15@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableGet_4@InitRenderTargets] K2Node_VariableGet
+[K2Node_CallFunction_24@InitRenderTargets] K2Node_CallFunction
+[K2Node_CallFunction_1@InitRenderTargets] K2Node_CallFunction
+[K2Node_VariableGet_13@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableGet_14@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableSet_8@InitRenderTargets] K2Node_VariableSet
+[K2Node_VariableSet_10@InitRenderTargets] K2Node_VariableSet
+[K2Node_VariableGet_8@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableGet_9@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableGet_16@InitRenderTargets] K2Node_VariableGet
+[K2Node_VariableGet_0@InitRenderTargets] K2Node_VariableGet
+[CreateProfile] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E28175DA4EB8E663F759E5B698764BEB
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_9
+    Nodes(2) <- K2Node_MacroInstance_1
+    Nodes(3) <- K2Node_GenericCreateObject_0
+    Nodes(4) <- K2Node_Self_0
+    Nodes(5) <- K2Node_VariableSet_1
+    Nodes(6) <- K2Node_ExecutionSequence_1
+    Nodes(7) <- K2Node_VariableGet_38
+    Nodes(8) <- K2Node_VariableGet_39
+    Nodes(9) <- K2Node_VariableGet_40
+    Nodes(10) <- K2Node_CallFunction_19
+    Nodes(11) <- K2Node_VariableGet_0
+    Nodes(12) <- K2Node_VariableGet_1
+    Nodes(13) <- K2Node_CallArrayFunction_0
+    Nodes(14) <- K2Node_VariableGet_2
+    Nodes(15) <- K2Node_VariableGet_3
+[K2Node_FunctionEntry_0@CreateProfile] K2Node_FunctionEntry
+[K2Node_VariableGet_9@CreateProfile] K2Node_VariableGet
+[K2Node_MacroInstance_1@CreateProfile] K2Node_MacroInstance
+[K2Node_GenericCreateObject_0@CreateProfile] K2Node_GenericCreateObject
+[K2Node_Self_0@CreateProfile] K2Node_Self
+[K2Node_VariableSet_1@CreateProfile] K2Node_VariableSet
+[K2Node_ExecutionSequence_1@CreateProfile] K2Node_ExecutionSequence
+[K2Node_VariableGet_38@CreateProfile] K2Node_VariableGet
+[K2Node_VariableGet_39@CreateProfile] K2Node_VariableGet
+[K2Node_VariableGet_40@CreateProfile] K2Node_VariableGet
+[K2Node_CallFunction_19@CreateProfile] K2Node_CallFunction
+[K2Node_VariableGet_0@CreateProfile] K2Node_VariableGet
+[K2Node_VariableGet_1@CreateProfile] K2Node_VariableGet
+[K2Node_CallArrayFunction_0@CreateProfile] K2Node_CallArrayFunction
+[K2Node_VariableGet_2@CreateProfile] K2Node_VariableGet
+[K2Node_VariableGet_3@CreateProfile] K2Node_VariableGet
+[ClearRemap] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 20A5472646A93EA485F65A93F70B55C2
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_7
+    Nodes(2) <- K2Node_VariableSet_8
+[K2Node_FunctionEntry_0@ClearRemap] K2Node_FunctionEntry
+[K2Node_VariableSet_7@ClearRemap] K2Node_VariableSet
+[K2Node_VariableSet_8@ClearRemap] K2Node_VariableSet
+[GetProfileSplines] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 9CA12C8F447603102D166384398ADAFA
+    InterfaceGuid = 2BB93BF54AF8201FADBBC7A434390A47
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_VariableGet_65
+    Nodes(3) <- K2Node_VariableGet_66
+    Nodes(4) <- K2Node_VariableGet_67
+    Nodes(5) <- K2Node_VariableGet_68
+    Nodes(6) <- K2Node_VariableGet_69
+    Nodes(7) <- K2Node_VariableGet_70
+    Nodes(8) <- K2Node_VariableGet_71
+    Nodes(9) <- K2Node_VariableGet_72
+    Nodes(10) <- K2Node_VariableGet_74
+    Nodes(11) <- K2Node_VariableGet_75
+    Nodes(12) <- K2Node_VariableGet_23
+    Nodes(13) <- K2Node_VariableGet_25
+    Nodes(14) <- K2Node_VariableGet_26
+    Nodes(15) <- K2Node_VariableGet_27
+    Nodes(16) <- K2Node_VariableGet_1
+    Nodes(17) <- K2Node_VariableGet_50
+    Nodes(18) <- K2Node_VariableGet_51
+    Nodes(19) <- K2Node_VariableGet_52
+    Nodes(20) <- K2Node_VariableGet_9
+    Nodes(21) <- K2Node_VariableGet_10
+    Nodes(22) <- K2Node_MakeArray_3
+[K2Node_FunctionEntry_0@GetProfileSplines] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetProfileSplines] K2Node_FunctionResult
+[K2Node_VariableGet_65@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_66@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_67@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_68@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_69@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_70@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_71@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_72@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_74@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_75@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_23@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_25@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_26@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_27@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_1@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_50@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_51@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_52@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_9@GetProfileSplines] K2Node_VariableGet
+[K2Node_VariableGet_10@GetProfileSplines] K2Node_VariableGet
+[K2Node_MakeArray_3@GetProfileSplines] K2Node_MakeArray
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 5B82B7EC41B0A539B92FC08B442E9486
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_Event_0@EventGraph] K2Node_Event
+[K2Node_CallFunction_0@EventGraph] K2Node_CallFunction
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[EdGraph_0] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 99DBFD5540A796041F72A5A9DA655026
+    Nodes(0) <- K2Node_Tunnel_0
+    Nodes(1) <- K2Node_Tunnel_1
+    Nodes(2) <- EdGraphNode_Comment_652
+    Nodes(3) <- EdGraphNode_Comment_440
+    Nodes(4) <- EdGraphNode_Comment_438
+    Nodes(5) <- EdGraphNode_Comment_436
+    Nodes(6) <- EdGraphNode_Comment_26
+    Nodes(7) <- K2Node_TemporaryVariable_4
+    Nodes(8) <- K2Node_AssignmentStatement_23
+    Nodes(9) <- K2Node_CallFunction_563
+    Nodes(10) <- K2Node_AssignmentStatement_7
+    Nodes(11) <- K2Node_IfThenElse_7
+    Nodes(12) <- K2Node_ExecutionSequence_8
+    Nodes(13) <- K2Node_CallArrayFunction_836
+    Nodes(14) <- K2Node_CallFunction_36741
+    Nodes(15) <- K2Node_TemporaryVariable_31
+    Nodes(16) <- EdGraphNode_Comment_434
+    Nodes(17) <- K2Node_AssignmentStatement_24
+    Nodes(18) <- K2Node_AssignmentStatement_25
+    Nodes(19) <- K2Node_GetArrayItem_0
+[K2Node_Tunnel_0@EdGraph_0] K2Node_Tunnel
+[K2Node_Tunnel_1@EdGraph_0] K2Node_Tunnel
+[EdGraphNode_Comment_652@EdGraph_0] EdGraphNode_Comment
+[EdGraphNode_Comment_440@EdGraph_0] EdGraphNode_Comment
+[EdGraphNode_Comment_438@EdGraph_0] EdGraphNode_Comment
+[EdGraphNode_Comment_436@EdGraph_0] EdGraphNode_Comment
+[EdGraphNode_Comment_26@EdGraph_0] EdGraphNode_Comment
+[K2Node_TemporaryVariable_4@EdGraph_0] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_23@EdGraph_0] K2Node_AssignmentStatement
+[K2Node_CallFunction_563@EdGraph_0] K2Node_CallFunction
+[K2Node_AssignmentStatement_7@EdGraph_0] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@EdGraph_0] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@EdGraph_0] K2Node_ExecutionSequence
+[K2Node_CallArrayFunction_836@EdGraph_0] K2Node_CallArrayFunction
+[K2Node_CallFunction_36741@EdGraph_0] K2Node_CallFunction
+[K2Node_TemporaryVariable_31@EdGraph_0] K2Node_TemporaryVariable
+[EdGraphNode_Comment_434@EdGraph_0] EdGraphNode_Comment
+[K2Node_AssignmentStatement_24@EdGraph_0] K2Node_AssignmentStatement
+[K2Node_AssignmentStatement_25@EdGraph_0] K2Node_AssignmentStatement
+[K2Node_GetArrayItem_0@EdGraph_0] K2Node_GetArrayItem
+[EdGraph_1] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 55C904AF4B45FE1761FB55A8DB9FB801
+    Nodes(0) <- K2Node_Tunnel_2
+    Nodes(1) <- K2Node_Tunnel_3
+    Nodes(2) <- K2Node_TemporaryVariable_4
+    Nodes(3) <- K2Node_AssignmentStatement_3
+    Nodes(4) <- K2Node_CallFunction_454
+    Nodes(5) <- K2Node_CallFunction_563
+    Nodes(6) <- K2Node_AssignmentStatement_7
+    Nodes(7) <- K2Node_IfThenElse_7
+    Nodes(8) <- K2Node_ExecutionSequence_8
+[K2Node_Tunnel_2@EdGraph_1] K2Node_Tunnel
+[K2Node_Tunnel_3@EdGraph_1] K2Node_Tunnel
+[K2Node_TemporaryVariable_4@EdGraph_1] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_3@EdGraph_1] K2Node_AssignmentStatement
+[K2Node_CallFunction_454@EdGraph_1] K2Node_CallFunction
+[K2Node_CallFunction_563@EdGraph_1] K2Node_CallFunction
+[K2Node_AssignmentStatement_7@EdGraph_1] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@EdGraph_1] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@EdGraph_1] K2Node_ExecutionSequence
+[EdGraph_2] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 6B5EB0814F4D34E271098AA9342BBE14
+    Nodes(0) <- K2Node_Tunnel_0
+    Nodes(1) <- K2Node_Tunnel_1
+    Nodes(2) <- EdGraphNode_Comment_652
+    Nodes(3) <- K2Node_TemporaryVariable_4
+    Nodes(4) <- K2Node_AssignmentStatement_23
+    Nodes(5) <- K2Node_IfThenElse_7
+    Nodes(6) <- K2Node_ExecutionSequence_8
+    Nodes(7) <- K2Node_CallArrayFunction_836
+    Nodes(8) <- K2Node_CallFunction_36741
+    Nodes(9) <- K2Node_TemporaryVariable_31
+    Nodes(10) <- K2Node_AssignmentStatement_24
+    Nodes(11) <- K2Node_GetArrayItem_0
+    Nodes(12) <- K2Node_MacroInstance_0
+[K2Node_Tunnel_0@EdGraph_2] K2Node_Tunnel
+[K2Node_Tunnel_1@EdGraph_2] K2Node_Tunnel
+[EdGraphNode_Comment_652@EdGraph_2] EdGraphNode_Comment
+[K2Node_TemporaryVariable_4@EdGraph_2] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_23@EdGraph_2] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@EdGraph_2] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@EdGraph_2] K2Node_ExecutionSequence
+[K2Node_CallArrayFunction_836@EdGraph_2] K2Node_CallArrayFunction
+[K2Node_CallFunction_36741@EdGraph_2] K2Node_CallFunction
+[K2Node_TemporaryVariable_31@EdGraph_2] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_24@EdGraph_2] K2Node_AssignmentStatement
+[K2Node_GetArrayItem_0@EdGraph_2] K2Node_GetArrayItem
+[K2Node_MacroInstance_0@EdGraph_2] K2Node_MacroInstance
+[EdGraph_3] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 55C904AF4B45FE1761FB55A8DB9FB801
+    Nodes(0) <- K2Node_Tunnel_2
+    Nodes(1) <- K2Node_Tunnel_3
+    Nodes(2) <- K2Node_TemporaryVariable_4
+    Nodes(3) <- K2Node_AssignmentStatement_3
+    Nodes(4) <- K2Node_CallFunction_454
+    Nodes(5) <- K2Node_CallFunction_563
+    Nodes(6) <- K2Node_AssignmentStatement_7
+    Nodes(7) <- K2Node_IfThenElse_7
+    Nodes(8) <- K2Node_ExecutionSequence_8
+[K2Node_Tunnel_2@EdGraph_3] K2Node_Tunnel
+[K2Node_Tunnel_3@EdGraph_3] K2Node_Tunnel
+[K2Node_TemporaryVariable_4@EdGraph_3] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_3@EdGraph_3] K2Node_AssignmentStatement
+[K2Node_CallFunction_454@EdGraph_3] K2Node_CallFunction
+[K2Node_CallFunction_563@EdGraph_3] K2Node_CallFunction
+[K2Node_AssignmentStatement_7@EdGraph_3] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@EdGraph_3] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@EdGraph_3] K2Node_ExecutionSequence
+[EdGraph_4] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 99DBFD5540A796041F72A5A9DA655026
+    Nodes(0) <- K2Node_Tunnel_0
+    Nodes(1) <- K2Node_Tunnel_1
+    Nodes(2) <- EdGraphNode_Comment_652
+    Nodes(3) <- EdGraphNode_Comment_440
+    Nodes(4) <- EdGraphNode_Comment_438
+    Nodes(5) <- EdGraphNode_Comment_436
+    Nodes(6) <- EdGraphNode_Comment_26
+    Nodes(7) <- K2Node_TemporaryVariable_4
+    Nodes(8) <- K2Node_AssignmentStatement_23
+    Nodes(9) <- K2Node_CallFunction_563
+    Nodes(10) <- K2Node_AssignmentStatement_7
+    Nodes(11) <- K2Node_IfThenElse_7
+    Nodes(12) <- K2Node_ExecutionSequence_8
+    Nodes(13) <- K2Node_CallArrayFunction_836
+    Nodes(14) <- K2Node_CallFunction_36741
+    Nodes(15) <- K2Node_TemporaryVariable_31
+    Nodes(16) <- EdGraphNode_Comment_434
+    Nodes(17) <- K2Node_AssignmentStatement_24
+    Nodes(18) <- K2Node_AssignmentStatement_25
+    Nodes(19) <- K2Node_GetArrayItem_0
+[K2Node_Tunnel_0@EdGraph_4] K2Node_Tunnel
+[K2Node_Tunnel_1@EdGraph_4] K2Node_Tunnel
+[EdGraphNode_Comment_652@EdGraph_4] EdGraphNode_Comment
+[EdGraphNode_Comment_440@EdGraph_4] EdGraphNode_Comment
+[EdGraphNode_Comment_438@EdGraph_4] EdGraphNode_Comment
+[EdGraphNode_Comment_436@EdGraph_4] EdGraphNode_Comment
+[EdGraphNode_Comment_26@EdGraph_4] EdGraphNode_Comment
+[K2Node_TemporaryVariable_4@EdGraph_4] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_23@EdGraph_4] K2Node_AssignmentStatement
+[K2Node_CallFunction_563@EdGraph_4] K2Node_CallFunction
+[K2Node_AssignmentStatement_7@EdGraph_4] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@EdGraph_4] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@EdGraph_4] K2Node_ExecutionSequence
+[K2Node_CallArrayFunction_836@EdGraph_4] K2Node_CallArrayFunction
+[K2Node_CallFunction_36741@EdGraph_4] K2Node_CallFunction
+[K2Node_TemporaryVariable_31@EdGraph_4] K2Node_TemporaryVariable
+[EdGraphNode_Comment_434@EdGraph_4] EdGraphNode_Comment
+[K2Node_AssignmentStatement_24@EdGraph_4] K2Node_AssignmentStatement
+[K2Node_AssignmentStatement_25@EdGraph_4] K2Node_AssignmentStatement
+[K2Node_GetArrayItem_0@EdGraph_4] K2Node_GetArrayItem
+[EdGraph_5] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 55C904AF4B45FE1761FB55A8DB9FB801
+    Nodes(0) <- K2Node_Tunnel_2
+    Nodes(1) <- K2Node_Tunnel_3
+    Nodes(2) <- K2Node_TemporaryVariable_4
+    Nodes(3) <- K2Node_AssignmentStatement_3
+    Nodes(4) <- K2Node_CallFunction_454
+    Nodes(5) <- K2Node_CallFunction_563
+    Nodes(6) <- K2Node_AssignmentStatement_7
+    Nodes(7) <- K2Node_IfThenElse_7
+    Nodes(8) <- K2Node_ExecutionSequence_8
+[K2Node_Tunnel_2@EdGraph_5] K2Node_Tunnel
+[K2Node_Tunnel_3@EdGraph_5] K2Node_Tunnel
+[K2Node_TemporaryVariable_4@EdGraph_5] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_3@EdGraph_5] K2Node_AssignmentStatement
+[K2Node_CallFunction_454@EdGraph_5] K2Node_CallFunction
+[K2Node_CallFunction_563@EdGraph_5] K2Node_CallFunction
+[K2Node_AssignmentStatement_7@EdGraph_5] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@EdGraph_5] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@EdGraph_5] K2Node_ExecutionSequence
+[EdGraph_6] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 64422BCD430703FF5CAEA8B79A32AA65
+    Nodes(0) <- K2Node_Tunnel_90
+    Nodes(1) <- K2Node_Tunnel_91
+    Nodes(2) <- K2Node_IfThenElse_15
+    Nodes(3) <- K2Node_CallFunction_4347
+[K2Node_Tunnel_90@EdGraph_6] K2Node_Tunnel
+[K2Node_Tunnel_91@EdGraph_6] K2Node_Tunnel
+[K2Node_IfThenElse_15@EdGraph_6] K2Node_IfThenElse
+[K2Node_CallFunction_4347@EdGraph_6] K2Node_CallFunction
+[ExecuteUbergraph_BP_FluxWaveProfileGenerator] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1E265CAF4F774AF8D06728B69568D13A
+    Nodes(0) <- K2Node_CallFunction_0
+    Nodes(1) <- K2Node_Event_0
+    Nodes(2) <- K2Node_FunctionEntry_0
+[K2Node_Event_0@ExecuteUbergraph_BP_FluxWaveProfileGenerator] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    bOverrideFunction = True
+[K2Node_CallFunction_0@ExecuteUbergraph_BP_FluxWaveProfileGenerator] K2Node_CallFunction
+[K2Node_FunctionEntry_0@ExecuteUbergraph_BP_FluxWaveProfileGenerator] K2Node_FunctionEntry
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = B0C9D70C4996A4F5597FD8A76D750650
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction
+[UserConstructionScript_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 023AD1D844DF9A8DF77566A6D1D28CA7
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_32
+    Nodes(2) <- K2Node_TunnelBoundary_3
+    Nodes(3) <- K2Node_Self_0
+    Nodes(4) <- K2Node_CallFunction_2
+    Nodes(5) <- K2Node_VariableSet_0
+    Nodes(6) <- K2Node_TunnelBoundary_2
+    Nodes(7) <- K2Node_AssignmentStatement_25
+    Nodes(8) <- K2Node_AssignmentStatement_24
+    Nodes(9) <- K2Node_TunnelBoundary_1
+    Nodes(10) <- K2Node_TemporaryVariable_31
+    Nodes(11) <- K2Node_CallFunction_36741
+    Nodes(12) <- K2Node_CallArrayFunction_836
+    Nodes(13) <- K2Node_ExecutionSequence_8
+    Nodes(14) <- K2Node_IfThenElse_7
+    Nodes(15) <- K2Node_AssignmentStatement_7
+    Nodes(16) <- K2Node_CallFunction_563
+    Nodes(17) <- K2Node_AssignmentStatement_23
+    Nodes(18) <- K2Node_TemporaryVariable_4
+    Nodes(19) <- K2Node_TunnelBoundary_0
+    Nodes(20) <- K2Node_CallArrayFunction_0
+    Nodes(21) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_32@UserConstructionScript_MERGED] K2Node_CallFunction
+[K2Node_MacroInstance_1@UserConstructionScript_MERGED] K2Node_MacroInstance
+[K2Node_Self_0@UserConstructionScript_MERGED] K2Node_Self
+[K2Node_CallFunction_2@UserConstructionScript_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_0@UserConstructionScript_MERGED] K2Node_VariableSet
+[K2Node_Tunnel_0@UserConstructionScript_MERGED] K2Node_Tunnel
+[K2Node_Tunnel_1@UserConstructionScript_MERGED] K2Node_Tunnel
+[EdGraphNode_Comment_652@UserConstructionScript_MERGED] EdGraphNode_Comment
+[EdGraphNode_Comment_440@UserConstructionScript_MERGED] EdGraphNode_Comment
+[EdGraphNode_Comment_438@UserConstructionScript_MERGED] EdGraphNode_Comment
+[EdGraphNode_Comment_436@UserConstructionScript_MERGED] EdGraphNode_Comment
+[EdGraphNode_Comment_26@UserConstructionScript_MERGED] EdGraphNode_Comment
+[K2Node_TemporaryVariable_4@UserConstructionScript_MERGED] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_23@UserConstructionScript_MERGED] K2Node_AssignmentStatement
+[K2Node_CallFunction_563@UserConstructionScript_MERGED] K2Node_CallFunction
+[K2Node_AssignmentStatement_7@UserConstructionScript_MERGED] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@UserConstructionScript_MERGED] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@UserConstructionScript_MERGED] K2Node_ExecutionSequence
+[K2Node_CallArrayFunction_836@UserConstructionScript_MERGED] K2Node_CallArrayFunction
+[K2Node_CallFunction_36741@UserConstructionScript_MERGED] K2Node_CallFunction
+[K2Node_TemporaryVariable_31@UserConstructionScript_MERGED] K2Node_TemporaryVariable
+[EdGraphNode_Comment_434@UserConstructionScript_MERGED] EdGraphNode_Comment
+[K2Node_AssignmentStatement_24@UserConstructionScript_MERGED] K2Node_AssignmentStatement
+[K2Node_AssignmentStatement_25@UserConstructionScript_MERGED] K2Node_AssignmentStatement
+[K2Node_GetArrayItem_0@UserConstructionScript_MERGED] K2Node_GetArrayItem
+[K2Node_TunnelBoundary_0@UserConstructionScript_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_1@UserConstructionScript_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_2@UserConstructionScript_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_3@UserConstructionScript_MERGED] K2Node_TunnelBoundary
+[K2Node_CallArrayFunction_0@UserConstructionScript_MERGED] K2Node_CallArrayFunction
+[K2Node_CallFunction_0@UserConstructionScript_MERGED] K2Node_CallFunction
+[Generate Wave Profile_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 627630684D640985859631960AE9EA01
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_6
+    Nodes(2) <- K2Node_CallFunction_7
+    Nodes(3) <- K2Node_CallFunction_9
+    Nodes(4) <- K2Node_ExecutionSequence_0
+    Nodes(5) <- K2Node_VariableGet_23
+    Nodes(6) <- K2Node_VariableSet_3
+    Nodes(7) <- K2Node_TunnelBoundary_7
+    Nodes(8) <- K2Node_CallFunction_23
+    Nodes(9) <- K2Node_VariableGet_35
+    Nodes(10) <- K2Node_CallFunction_53
+    Nodes(11) <- K2Node_TunnelBoundary_6
+    Nodes(12) <- K2Node_VariableGet_0
+    Nodes(13) <- K2Node_CallFunction_5
+    Nodes(14) <- K2Node_TunnelBoundary_5
+    Nodes(15) <- K2Node_CallFunction_15
+    Nodes(16) <- K2Node_CallFunction_25
+    Nodes(17) <- K2Node_CallFunction_24
+    Nodes(18) <- K2Node_CallFunction_44
+    Nodes(19) <- K2Node_VariableGet_18
+    Nodes(20) <- K2Node_VariableGet_19
+    Nodes(21) <- K2Node_VariableGet_30
+    Nodes(22) <- K2Node_VariableGet_39
+    Nodes(23) <- K2Node_CommutativeAssociativeBinaryOperator_8
+    Nodes(24) <- K2Node_CallFunction_3
+    Nodes(25) <- K2Node_VariableGet_13
+    Nodes(26) <- K2Node_CallFunction_4
+    Nodes(27) <- K2Node_VariableSet_2
+    Nodes(28) <- K2Node_CallFunction_20
+    Nodes(29) <- K2Node_VariableSet_0
+    Nodes(30) <- K2Node_VariableGet_26
+    Nodes(31) <- K2Node_VariableSet_4
+    Nodes(32) <- K2Node_CallFunction_48
+    Nodes(33) <- K2Node_CallFunction_49
+    Nodes(34) <- K2Node_VariableGet_37
+    Nodes(35) <- K2Node_CallFunction_50
+    Nodes(36) <- K2Node_VariableGet_38
+    Nodes(37) <- K2Node_CommutativeAssociativeBinaryOperator_13
+    Nodes(38) <- K2Node_VariableGet_21
+    Nodes(39) <- K2Node_CallFunction_12
+    Nodes(40) <- K2Node_VariableGet_7
+    Nodes(41) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(42) <- K2Node_CommutativeAssociativeBinaryOperator_9
+    Nodes(43) <- K2Node_CallFunction_46
+    Nodes(44) <- K2Node_CallFunction_42
+    Nodes(45) <- K2Node_CallFunction_21
+    Nodes(46) <- K2Node_CommutativeAssociativeBinaryOperator_4
+    Nodes(47) <- K2Node_VariableGet_8
+    Nodes(48) <- K2Node_CallFunction_29
+    Nodes(49) <- K2Node_VariableGet_4
+    Nodes(50) <- K2Node_CommutativeAssociativeBinaryOperator_5
+    Nodes(51) <- K2Node_CallFunction_30
+    Nodes(52) <- K2Node_VariableGet_16
+    Nodes(53) <- K2Node_CallFunction_11
+    Nodes(54) <- K2Node_CallFunction_16
+    Nodes(55) <- K2Node_CallFunction_63
+    Nodes(56) <- K2Node_CallFunction_22
+    Nodes(57) <- K2Node_CommutativeAssociativeBinaryOperator_7
+    Nodes(58) <- K2Node_CommutativeAssociativeBinaryOperator_6
+    Nodes(59) <- K2Node_CallFunction_32
+    Nodes(60) <- K2Node_VariableGet_11
+    Nodes(61) <- K2Node_CallMaterialParameterCollectionFunction_0
+    Nodes(62) <- K2Node_VariableSet_1
+    Nodes(63) <- K2Node_VariableGet_17
+    Nodes(64) <- K2Node_VariableGet_15
+    Nodes(65) <- K2Node_CallFunction_36
+    Nodes(66) <- K2Node_VariableSet_5
+    Nodes(67) <- K2Node_VariableGet_9
+    Nodes(68) <- K2Node_TunnelBoundary_2
+    Nodes(69) <- K2Node_TunnelBoundary_1
+    Nodes(70) <- K2Node_TunnelBoundary_0
+    Nodes(71) <- K2Node_CallFunction_67
+    Nodes(72) <- K2Node_TunnelBoundary_3
+    Nodes(73) <- K2Node_VariableSet_9
+    Nodes(74) <- K2Node_VariableSet_10
+    Nodes(75) <- K2Node_VariableGet_22
+    Nodes(76) <- K2Node_VariableGet_40
+    Nodes(77) <- K2Node_VariableSet_11
+    Nodes(78) <- K2Node_TemporaryVariable_0
+    Nodes(79) <- K2Node_VariableGet_34
+    Nodes(80) <- K2Node_VariableGet_29
+    Nodes(81) <- K2Node_CommutativeAssociativeBinaryOperator_17
+    Nodes(82) <- K2Node_VariableGet_24
+    Nodes(83) <- K2Node_CommutativeAssociativeBinaryOperator_15
+    Nodes(84) <- K2Node_CommutativeAssociativeBinaryOperator_16
+    Nodes(85) <- K2Node_CommutativeAssociativeBinaryOperator_12
+    Nodes(86) <- K2Node_ExecutionSequence_1
+    Nodes(87) <- K2Node_CallFunction_43
+    Nodes(88) <- K2Node_VariableGet_33
+    Nodes(89) <- K2Node_VariableGet_31
+    Nodes(90) <- K2Node_VariableGet_27
+    Nodes(91) <- K2Node_CallFunction_41
+    Nodes(92) <- K2Node_VariableGet_32
+    Nodes(93) <- K2Node_VariableGet_14
+    Nodes(94) <- K2Node_VariableGet_20
+    Nodes(95) <- K2Node_CallFunction_14
+    Nodes(96) <- K2Node_CallFunction_26
+    Nodes(97) <- K2Node_CallFunction_19
+    Nodes(98) <- K2Node_CallFunction_54
+    Nodes(99) <- K2Node_CallFunction_52
+    Nodes(100) <- K2Node_BreakStruct_4
+    Nodes(101) <- K2Node_BreakStruct_3
+    Nodes(102) <- K2Node_CallFunction_13
+    Nodes(103) <- K2Node_CallFunction_17
+    Nodes(104) <- K2Node_VariableSet_6
+    Nodes(105) <- K2Node_CallFunction_51
+    Nodes(106) <- K2Node_VariableGet_5
+    Nodes(107) <- K2Node_CallFunction_28
+    Nodes(108) <- K2Node_CallFunction_55
+    Nodes(109) <- K2Node_CallFunction_56
+    Nodes(110) <- K2Node_CallFunction_57
+    Nodes(111) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(112) <- K2Node_IfThenElse_1
+    Nodes(113) <- K2Node_CallFunction_35
+    Nodes(114) <- K2Node_CallFunction_37
+    Nodes(115) <- K2Node_AssignmentStatement_1
+    Nodes(116) <- K2Node_CallFunction_6
+    Nodes(117) <- K2Node_CallFunction_2
+    Nodes(118) <- K2Node_AssignmentStatement_0
+    Nodes(119) <- K2Node_CallFunction_47
+    Nodes(120) <- K2Node_CallFunction_59
+    Nodes(121) <- K2Node_CallFunction_58
+    Nodes(122) <- K2Node_CallFunction_60
+    Nodes(123) <- K2Node_CallFunction_40
+    Nodes(124) <- K2Node_CallFunction_64
+    Nodes(125) <- K2Node_CallFunction_65
+    Nodes(126) <- K2Node_CallFunction_66
+    Nodes(127) <- K2Node_CallFunction_68
+    Nodes(128) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(129) <- K2Node_CallFunction_61
+    Nodes(130) <- K2Node_CommutativeAssociativeBinaryOperator_19
+    Nodes(131) <- K2Node_VariableSet_8
+    Nodes(132) <- K2Node_CallFunction_0
+    Nodes(133) <- K2Node_VariableSet_7
+    Nodes(134) <- K2Node_VariableGet_12
+    Nodes(135) <- K2Node_VariableGet_10
+    Nodes(136) <- K2Node_CommutativeAssociativeBinaryOperator_21
+    Nodes(137) <- K2Node_VariableGet_41
+    Nodes(138) <- K2Node_CallFunction_1
+    Nodes(139) <- K2Node_CallFunction_45
+    Nodes(140) <- K2Node_ExecutionSequence_8
+    Nodes(141) <- K2Node_IfThenElse_7
+    Nodes(142) <- K2Node_AssignmentStatement_7
+    Nodes(143) <- K2Node_CallFunction_563
+    Nodes(144) <- K2Node_CallFunction_454
+    Nodes(145) <- K2Node_AssignmentStatement_3
+    Nodes(146) <- K2Node_TemporaryVariable_4
+    Nodes(147) <- K2Node_TunnelBoundary_4
+    Nodes(148) <- K2Node_CallFunction_62
+    Nodes(149) <- K2Node_ExecutionSequence_2
+    Nodes(150) <- K2Node_IfThenElse_0
+    Nodes(151) <- K2Node_VariableSet_12
+    Nodes(152) <- K2Node_VariableSet_13
+    Nodes(153) <- K2Node_VariableSet_14
+    Nodes(154) <- K2Node_VariableSet_15
+    Nodes(155) <- K2Node_CallFunction_10
+    Nodes(156) <- K2Node_MakeStruct_0
+    Nodes(157) <- K2Node_CallFunction_18
+    Nodes(158) <- K2Node_CallFunction_27
+    Nodes(159) <- K2Node_CallFunction_31
+    Nodes(160) <- K2Node_CallFunction_33
+    Nodes(161) <- K2Node_BreakStruct_0
+    Nodes(162) <- K2Node_BreakStruct_1
+    Nodes(163) <- K2Node_BreakStruct_2
+    Nodes(164) <- K2Node_CallFunction_34
+[K2Node_FunctionEntry_0@Generate Wave Profile_MERGED] K2Node_FunctionEntry
+[K2Node_VariableGet_6@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_7@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_9@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_ExecutionSequence_0@Generate Wave Profile_MERGED] K2Node_ExecutionSequence
+[K2Node_Knot_0@Generate Wave Profile_MERGED] K2Node_Knot
+[K2Node_VariableSet_3@Generate Wave Profile_MERGED] K2Node_VariableSet (переменная: Canvas)
+[K2Node_MacroInstance_1@Generate Wave Profile_MERGED] K2Node_MacroInstance
+[K2Node_CallFunction_23@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: LoadSpline)
+[K2Node_VariableGet_35@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_53@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_MacroInstance_0@Generate Wave Profile_MERGED] K2Node_MacroInstance
+[K2Node_VariableGet_0@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_5@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_8@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_15@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_25@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_24@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_44@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: MakeColor @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход A = 1.000000
+    вход A = 1.000000
+[K2Node_VariableGet_18@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_19@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_30@Generate Wave Profile_MERGED] K2Node_VariableGet (переменная: Canvas)
+[K2Node_VariableGet_39@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_8@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.500000
+    вход B = 0.500000
+[K2Node_CallFunction_3@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_13@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_4@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_2@Generate Wave Profile_MERGED] K2Node_VariableSet
+[K2Node_CallFunction_20@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_0@Generate Wave Profile_MERGED] K2Node_VariableSet
+[K2Node_VariableGet_26@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableSet_4@Generate Wave Profile_MERGED] K2Node_VariableSet
+[K2Node_CallFunction_48@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_49@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_37@Generate Wave Profile_MERGED] K2Node_VariableGet (переменная: CurveSamples(X))
+[K2Node_CallFunction_50@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Subtract_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0
+    вход B = 0
+[K2Node_VariableGet_38@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_13@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.500000
+    вход B = 0.500000
+[K2Node_VariableGet_21@Generate Wave Profile_MERGED] K2Node_VariableGet (переменная: Y)
+[K2Node_CallFunction_12@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_7@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_2@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_9@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_46@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 1.000000
+    вход B = 1.000000
+[K2Node_CallFunction_42@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_21@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_4@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_8@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_29@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_4@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_5@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 1
+    вход B = 1
+[K2Node_CallFunction_30@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_16@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_11@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_16@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_63@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: FClamp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Min = 0.0
+    вход Max = 1.0
+    вход Min = 0.0
+    вход Max = 1.0
+[K2Node_CallFunction_22@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_7@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_6@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 1.000000
+    вход B = 1.000000
+[K2Node_CallFunction_32@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_11@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallMaterialParameterCollectionFunction_0@Generate Wave Profile_MERGED] K2Node_CallMaterialParameterCollectionFunction
+[K2Node_VariableSet_1@Generate Wave Profile_MERGED] K2Node_VariableSet
+[K2Node_VariableGet_17@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_15@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_36@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_5@Generate Wave Profile_MERGED] K2Node_VariableSet
+[K2Node_VariableGet_9@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_28@Generate Wave Profile_MERGED] K2Node_VariableGet (переменная: Y)
+[K2Node_VariableGet_2@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_11@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.500000
+    вход A = 0.0
+    вход B = 0.500000
+[K2Node_CommutativeAssociativeBinaryOperator_3@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_3@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableSet_9@Generate Wave Profile_MERGED] K2Node_VariableSet
+[K2Node_VariableSet_10@Generate Wave Profile_MERGED] K2Node_VariableSet
+[K2Node_VariableGet_22@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_40@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableSet_11@Generate Wave Profile_MERGED] K2Node_VariableSet (переменная: Sample)
+[K2Node_VariableGet_25@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_34@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_29@Generate Wave Profile_MERGED] K2Node_VariableGet (переменная: Sample)
+[K2Node_CommutativeAssociativeBinaryOperator_17@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: FMin @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_24@Generate Wave Profile_MERGED] K2Node_VariableGet (переменная: Sample)
+[K2Node_CommutativeAssociativeBinaryOperator_15@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: FMax @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_16@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: FMax @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_12@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: FMin @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_ExecutionSequence_1@Generate Wave Profile_MERGED] K2Node_ExecutionSequence
+[K2Node_CallFunction_43@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: MapRangeClamped @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход OutRangeA = 0.0
+    вход OutRangeB = 1.000000
+    вход OutRangeA = 0.0
+    вход OutRangeB = 1.000000
+[K2Node_VariableGet_33@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_31@Generate Wave Profile_MERGED] K2Node_VariableGet (переменная: RemapY)
+[K2Node_VariableGet_27@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_41@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: MapRangeClamped @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход OutRangeA = 0.0
+    вход OutRangeB = 1.000000
+    вход OutRangeA = 0.0
+    вход OutRangeB = 1.000000
+[K2Node_VariableGet_32@Generate Wave Profile_MERGED] K2Node_VariableGet (переменная: Sample)
+[K2Node_VariableGet_14@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_20@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_14@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_26@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_19@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_Knot_6@Generate Wave Profile_MERGED] K2Node_Knot
+[K2Node_Knot_7@Generate Wave Profile_MERGED] K2Node_Knot
+[K2Node_Knot_8@Generate Wave Profile_MERGED] K2Node_Knot
+[K2Node_Knot_9@Generate Wave Profile_MERGED] K2Node_Knot
+[K2Node_CallFunction_13@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_17@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_6@Generate Wave Profile_MERGED] K2Node_VariableSet
+[K2Node_Knot_1@Generate Wave Profile_MERGED] K2Node_Knot
+[K2Node_VariableGet_5@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_28@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Subtract_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 1
+    вход B = 1
+[K2Node_CallFunction_55@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: GetLocationAtTime @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход CoordinateSpace = Local
+    вход bUseConstantVelocity = false
+    вход CoordinateSpace = Local
+    вход bUseConstantVelocity = false
+[K2Node_CallFunction_56@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: BreakVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_57@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: BreakVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_1@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_1@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_35@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_37@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: MakeColor @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход R = 1.000000
+    вход G = 0.500000
+    вход B = 0.0
+    вход A = 1.000000
+    вход R = 1.000000
+    вход G = 0.500000
+    вход B = 0.0
+    вход A = 1.000000
+[K2Node_CallFunction_38@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_39@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Sin @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход A = 0.0
+[K2Node_CommutativeAssociativeBinaryOperator_14@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.009000
+    вход A = 0.0
+    вход B = 0.009000
+[K2Node_CommutativeAssociativeBinaryOperator_18@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход A = 0
+    вход B = 1
+[K2Node_CallFunction_47@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: LinearColorLerp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_59@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_58@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_60@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_40@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход A = 1.000000
+    вход A = 1.000000
+[K2Node_CallFunction_64@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Abs @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_65@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Multiply_IntFloat @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход A = 4
+    вход A = 4
+[K2Node_CallFunction_66@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: FClamp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Min = 0.0
+    вход Max = 1.0
+    вход Min = 0.0
+    вход Max = 1.0
+[K2Node_CallFunction_68@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 1.000000
+    вход B = 1.000000
+[K2Node_CommutativeAssociativeBinaryOperator_0@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_61@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход A = 1.000000
+    вход A = 1.000000
+[K2Node_CommutativeAssociativeBinaryOperator_19@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: FMax @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.0
+    вход B = 0.0
+[K2Node_VariableSet_8@Generate Wave Profile_MERGED] K2Node_VariableSet
+[K2Node_CallFunction_0@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_7@Generate Wave Profile_MERGED] K2Node_VariableSet
+[K2Node_VariableGet_12@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_10@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_21@Generate Wave Profile_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_41@Generate Wave Profile_MERGED] K2Node_VariableGet (переменная: WaveWidth)
+[K2Node_CallFunction_1@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_45@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход A = 1.000000
+    вход A = 1.000000
+[K2Node_Tunnel_2@Generate Wave Profile_MERGED] K2Node_Tunnel
+[K2Node_Tunnel_3@Generate Wave Profile_MERGED] K2Node_Tunnel
+[K2Node_TemporaryVariable_4@Generate Wave Profile_MERGED] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_3@Generate Wave Profile_MERGED] K2Node_AssignmentStatement
+[K2Node_CallFunction_454@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_563@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_AssignmentStatement_7@Generate Wave Profile_MERGED] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@Generate Wave Profile_MERGED] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@Generate Wave Profile_MERGED] K2Node_ExecutionSequence
+[K2Node_Tunnel_1@Generate Wave Profile_MERGED] K2Node_Tunnel
+[K2Node_Tunnel_0@Generate Wave Profile_MERGED] K2Node_Tunnel
+[K2Node_TemporaryVariable_0@Generate Wave Profile_MERGED] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_1] K2Node_AssignmentStatement
+[K2Node_CallFunction_6@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_2@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_AssignmentStatement_0] K2Node_AssignmentStatement
+[K2Node_IfThenElse_0@Generate Wave Profile_MERGED] K2Node_IfThenElse
+[K2Node_ExecutionSequence_2@Generate Wave Profile_MERGED] K2Node_ExecutionSequence
+[K2Node_TunnelBoundary_0@Generate Wave Profile_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_1@Generate Wave Profile_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_2@Generate Wave Profile_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_3@Generate Wave Profile_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_4@Generate Wave Profile_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_5@Generate Wave Profile_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_6@Generate Wave Profile_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_7@Generate Wave Profile_MERGED] K2Node_TunnelBoundary
+[K2Node_VariableSet_12] K2Node_VariableSet (переменная: StartPoint @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+    bIsIntermediateNode = True
+    вход StartPoint = 0.000000,0.000000,0.000000
+[K2Node_VariableSet_13] K2Node_VariableSet (переменная: Y @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+    bIsIntermediateNode = True
+    вход Y = 0.000000
+[K2Node_VariableSet_14] K2Node_VariableSet (переменная: X @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+    bIsIntermediateNode = True
+    вход X = 0.000000
+[K2Node_VariableSet_15] K2Node_VariableSet (переменная: SplineWidth @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+    bIsIntermediateNode = True
+    вход SplineWidth = 0.000000
+[K2Node_CallFunction_10@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_MakeStruct_0@Generate Wave Profile_MERGED] K2Node_MakeStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bIsIntermediateNode = True
+[K2Node_CallFunction_18@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_27@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_31@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_33@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: BreakVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_BreakStruct_0@Generate Wave Profile_MERGED] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bIsIntermediateNode = True
+[K2Node_BreakStruct_1@Generate Wave Profile_MERGED] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bIsIntermediateNode = True
+[K2Node_BreakStruct_2@Generate Wave Profile_MERGED] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bIsIntermediateNode = True
+[K2Node_CallFunction_34@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_51@Generate Wave Profile_MERGED] K2Node_CallFunction
+[K2Node_BreakStruct_3@Generate Wave Profile_MERGED] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bIsIntermediateNode = True
+[K2Node_BreakStruct_4@Generate Wave Profile_MERGED] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="R",PropertyFriendlyName="R",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="G",PropertyFriendlyName="G",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(3) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="LinearColor",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.LinearColor'"
+    bIsIntermediateNode = True
+[K2Node_CallFunction_52@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: BreakVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_54@Generate Wave Profile_MERGED] K2Node_CallFunction (вызов: BreakVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_VariableGet_23@Generate Wave Profile_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_62] K2Node_CallFunction (вызов: IsValid @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_IfThenElse_1] K2Node_IfThenElse
+    bIsIntermediateNode = True
+[K2Node_CallFunction_67] K2Node_CallFunction (вызов: BreakVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[LoadSpline_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 8B75D54542CE13FE7AB584B3A8B36E78
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_7
+    Nodes(2) <- K2Node_VariableGet_6
+    Nodes(3) <- K2Node_VariableGet_15
+    Nodes(4) <- K2Node_CallFunction_21
+    Nodes(5) <- K2Node_VariableGet_1
+    Nodes(6) <- K2Node_CallFunction_12
+    Nodes(7) <- K2Node_VariableGet_3
+    Nodes(8) <- K2Node_CallFunction_13
+    Nodes(9) <- K2Node_VariableGet_0
+    Nodes(10) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(11) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(12) <- K2Node_CallFunction_2
+    Nodes(13) <- K2Node_VariableGet_2
+    Nodes(14) <- K2Node_CallFunction_1
+    Nodes(15) <- K2Node_CallArrayFunction_1
+    Nodes(16) <- K2Node_TunnelBoundary_13
+    Nodes(17) <- K2Node_VariableGet_10
+    Nodes(18) <- K2Node_VariableSet_1
+    Nodes(19) <- K2Node_TemporaryVariable_1
+    Nodes(20) <- K2Node_VariableGet_13
+    Nodes(21) <- K2Node_CallFunction_11
+    Nodes(22) <- K2Node_VariableGet_9
+    Nodes(23) <- K2Node_CallFunction_7
+    Nodes(24) <- K2Node_VariableGet_8
+    Nodes(25) <- K2Node_CallArrayFunction_2
+    Nodes(26) <- K2Node_VariableGet_14
+    Nodes(27) <- K2Node_CallFunction_6
+    Nodes(28) <- K2Node_VariableGet_7
+    Nodes(29) <- K2Node_CallFunction_8
+    Nodes(30) <- K2Node_CallFunction_9
+    Nodes(31) <- K2Node_CallFunction_10
+    Nodes(32) <- K2Node_VariableSet_0
+    Nodes(33) <- K2Node_CallFunction_5
+    Nodes(34) <- K2Node_VariableGet_12
+    Nodes(35) <- K2Node_VariableGet_11
+    Nodes(36) <- K2Node_VariableGet_5
+    Nodes(37) <- K2Node_VariableSetRef_0
+    Nodes(38) <- K2Node_ExecutionSequence_0
+    Nodes(39) <- K2Node_CallFunction_20
+    Nodes(40) <- K2Node_VariableGet_19
+    Nodes(41) <- K2Node_CallFunction_3
+    Nodes(42) <- K2Node_VariableGet_20
+    Nodes(43) <- K2Node_CallFunction_15
+    Nodes(44) <- K2Node_VariableGet_16
+    Nodes(45) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(46) <- K2Node_CallFunction_16
+    Nodes(47) <- K2Node_VariableGet_4
+    Nodes(48) <- K2Node_VariableGet_23
+    Nodes(49) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(50) <- K2Node_TunnelBoundary_12
+    Nodes(51) <- K2Node_BreakStruct_6
+    Nodes(52) <- K2Node_ExecutionSequence_8
+    Nodes(53) <- K2Node_IfThenElse_7
+    Nodes(54) <- K2Node_AssignmentStatement_7
+    Nodes(55) <- K2Node_CallFunction_563
+    Nodes(56) <- K2Node_CallFunction_454
+    Nodes(57) <- K2Node_AssignmentStatement_3
+    Nodes(58) <- K2Node_TemporaryVariable_4
+    Nodes(59) <- K2Node_TunnelBoundary_11
+    Nodes(60) <- K2Node_CallArrayFunction_3
+    Nodes(61) <- K2Node_TunnelBoundary_10
+    Nodes(62) <- K2Node_TunnelBoundary_7
+    Nodes(63) <- K2Node_AssignmentStatement_24
+    Nodes(64) <- K2Node_TemporaryVariable_31
+    Nodes(65) <- K2Node_CallFunction_36741
+    Nodes(66) <- K2Node_CallArrayFunction_836
+    Nodes(67) <- K2Node_ExecutionSequence_1
+    Nodes(68) <- K2Node_IfThenElse_0
+    Nodes(69) <- K2Node_AssignmentStatement_23
+    Nodes(70) <- K2Node_TemporaryVariable_0
+    Nodes(71) <- K2Node_VariableSetRef_1
+    Nodes(72) <- K2Node_TunnelBoundary_9
+    Nodes(73) <- K2Node_CallFunction_14
+    Nodes(74) <- K2Node_TunnelBoundary_0
+    Nodes(75) <- K2Node_TunnelBoundary_1
+    Nodes(76) <- K2Node_TunnelBoundary_2
+    Nodes(77) <- K2Node_TunnelBoundary_3
+    Nodes(78) <- K2Node_TunnelBoundary_8
+    Nodes(79) <- K2Node_CommutativeAssociativeBinaryOperator_49
+    Nodes(80) <- K2Node_CallArrayFunction_0
+    Nodes(81) <- K2Node_CallFunction_0
+    Nodes(82) <- K2Node_TunnelBoundary_4
+    Nodes(83) <- K2Node_TunnelBoundary_5
+    Nodes(84) <- K2Node_TunnelBoundary_6
+[K2Node_FunctionEntry_0@LoadSpline_MERGED] K2Node_FunctionEntry
+[K2Node_VariableSet_7@LoadSpline_MERGED] K2Node_VariableSet
+[K2Node_VariableGet_6@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_15@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_21@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_1@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_12@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_3@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_13@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_0@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_0@LoadSpline_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 2.000000
+    вход B = 100
+    вход B = 2.000000
+    вход B = 100
+[K2Node_CommutativeAssociativeBinaryOperator_1@LoadSpline_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_2@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_2@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_1@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_CallArrayFunction_1@LoadSpline_MERGED] K2Node_CallArrayFunction
+[K2Node_MacroInstance_1@LoadSpline_MERGED] K2Node_MacroInstance
+[K2Node_VariableGet_10@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_GetArrayItem_0@LoadSpline_MERGED] K2Node_GetArrayItem
+[K2Node_CallFunction_4@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_13@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_11@LoadSpline_MERGED] K2Node_CallFunction (вызов: SetTangentAtSplinePoint @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход CoordinateSpace = Local
+    вход bUpdateSpline = true
+    вход CoordinateSpace = Local
+    вход bUpdateSpline = true
+[K2Node_VariableGet_9@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_7@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_8@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CallArrayFunction_2@LoadSpline_MERGED] K2Node_CallArrayFunction
+[K2Node_VariableGet_14@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_6@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_7@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_8@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_9@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_10@LoadSpline_MERGED] K2Node_CallFunction (вызов: VLerp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    вход Alpha = 0.500000
+    вход Alpha = 0.500000
+[K2Node_VariableSet_0@LoadSpline_MERGED] K2Node_VariableSet
+[K2Node_CallFunction_5@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_12@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_11@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_5@LoadSpline_MERGED] K2Node_VariableGet
+[EdGraphNode_Comment_0@LoadSpline_MERGED] EdGraphNode_Comment
+    NodeWidth = 2554
+    NodeHeight = 568
+    NodeComment = "Correct start and end"
+    NodeWidth = 2554
+    NodeHeight = 568
+    NodeComment = "Correct start and end"
+[K2Node_ExecutionSequence_0@LoadSpline_MERGED] K2Node_ExecutionSequence
+[K2Node_CallFunction_20@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_19@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_3@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_20@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_15@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_16@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_2@LoadSpline_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Min @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.000000
+    вход B = 0.000000
+[K2Node_CallFunction_16@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_4@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_23@LoadSpline_MERGED] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_3@LoadSpline_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_MacroInstance_2@LoadSpline_MERGED] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="struct",PinSubCategoryObject="/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Tools/WaveProfile/Blueprints/BS_FluxWaveProfilePoint.BS_FluxWaveProfilePoint'",ContainerType=Array)
+    ResolvedWildcardType = (PinCategory="struct",PinSubCategoryObject="/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Tools/WaveProfile/Blueprints/BS_FluxWaveProfilePoint.BS_FluxWaveProfilePoint'",ContainerType=Array)
+    OutputSourceNode <- K2Node_Tunnel_1
+    InputSinkNode <- K2Node_Tunnel_0
+[K2Node_BreakStruct_6@LoadSpline_MERGED] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="Positon_2_0DD61E0A489915C8FB34EAAEE5DBAA00",PropertyFriendlyName="Positon",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Intensity_4_B3288C7A42851B36490DC0BAFA2047B9",PropertyFriendlyName="Intensity",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="Radius_7_D0A1A43C4FECF3ECFE0279ADCBE52DA5",PropertyFriendlyName="Radius",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Tools/WaveProfile/Blueprints/BS_FluxWaveProfilePoint.BS_FluxWaveProfilePoint'"
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="Positon_2_0DD61E0A489915C8FB34EAAEE5DBAA00",PropertyFriendlyName="Positon",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Intensity_4_B3288C7A42851B36490DC0BAFA2047B9",PropertyFriendlyName="Intensity",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="Radius_7_D0A1A43C4FECF3ECFE0279ADCBE52DA5",PropertyFriendlyName="Radius",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Tools/WaveProfile/Blueprints/BS_FluxWaveProfilePoint.BS_FluxWaveProfilePoint'"
+[K2Node_Tunnel_2@LoadSpline_MERGED] K2Node_Tunnel
+    bCanHaveOutputs = True
+    bCanHaveOutputs = True
+    bCanHaveOutputs = True
+    bCanHaveOutputs = True
+    bCanHaveOutputs = True
+    OutputSourceNode <- K2Node_MacroInstance_1
+    OutputSourceNode <- K2Node_MacroInstance_1
+[K2Node_Tunnel_3@LoadSpline_MERGED] K2Node_Tunnel
+    bCanHaveInputs = True
+    bCanHaveInputs = True
+    bCanHaveInputs = True
+    bCanHaveInputs = True
+    bCanHaveInputs = True
+    InputSinkNode <- K2Node_MacroInstance_1
+    InputSinkNode <- K2Node_MacroInstance_1
+[K2Node_TemporaryVariable_4@LoadSpline_MERGED] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_3@LoadSpline_MERGED] K2Node_AssignmentStatement
+[K2Node_CallFunction_454@LoadSpline_MERGED] K2Node_CallFunction (вызов: LessEqual_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_563@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_AssignmentStatement_7@LoadSpline_MERGED] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@LoadSpline_MERGED] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@LoadSpline_MERGED] K2Node_ExecutionSequence
+[K2Node_Tunnel_0@LoadSpline_MERGED] K2Node_Tunnel
+[K2Node_Tunnel_1@LoadSpline_MERGED] K2Node_Tunnel
+[EdGraphNode_Comment_652@LoadSpline_MERGED] EdGraphNode_Comment
+[K2Node_TemporaryVariable_0@LoadSpline_MERGED] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_23@LoadSpline_MERGED] K2Node_AssignmentStatement
+[K2Node_IfThenElse_0@LoadSpline_MERGED] K2Node_IfThenElse
+[K2Node_ExecutionSequence_1@LoadSpline_MERGED] K2Node_ExecutionSequence
+[K2Node_CallArrayFunction_836@LoadSpline_MERGED] K2Node_CallArrayFunction
+[K2Node_CallFunction_36741@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_TemporaryVariable_31@LoadSpline_MERGED] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_24@LoadSpline_MERGED] K2Node_AssignmentStatement
+[K2Node_GetArrayItem_1] K2Node_GetArrayItem
+    bReturnByRefDesired = False
+    вход Dimension 1 = 0
+[K2Node_MacroInstance_0@LoadSpline_MERGED] K2Node_MacroInstance
+[K2Node_TunnelBoundary_0@LoadSpline_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_1@LoadSpline_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_2@LoadSpline_MERGED] K2Node_TunnelBoundary
+[K2Node_TunnelBoundary_3@LoadSpline_MERGED] K2Node_TunnelBoundary
+[K2Node_Tunnel_14] K2Node_Tunnel
+    bCanHaveOutputs = True
+    OutputSourceNode <- K2Node_MacroInstance_0
+[K2Node_Tunnel_15] K2Node_Tunnel
+    bCanHaveInputs = True
+    InputSinkNode <- K2Node_MacroInstance_0
+[K2Node_CommutativeAssociativeBinaryOperator_49] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 1
+[K2Node_MacroInstance_3] K2Node_MacroInstance
+    OutputSourceNode <- K2Node_Tunnel_23
+    InputSinkNode <- K2Node_Tunnel_22
+[K2Node_TunnelBoundary_4@LoadSpline_MERGED] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_5@LoadSpline_MERGED] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_6@LoadSpline_MERGED] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_7@LoadSpline_MERGED] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_Tunnel_22] K2Node_Tunnel
+    bCanHaveOutputs = True
+    MetaData = (ToolTip=NSLOCTEXT("", "9C5149274B51F4B7ED2DD3BE88C590AE", "Multiply the specifed value by -1 then set it"),Category=NSLOCTEXT("", "ADC4F012482FF27A2BBD5F93334B6118", "Math| Integer"))
+    OutputSourceNode <- K2Node_MacroInstance_3
+[K2Node_Tunnel_23] K2Node_Tunnel
+    bCanHaveInputs = True
+    InputSinkNode <- K2Node_MacroInstance_3
+[K2Node_VariableSetRef_0] K2Node_VariableSetRef
+[K2Node_VariableSetRef_1] K2Node_VariableSetRef
+[K2Node_TemporaryVariable_1@LoadSpline_MERGED] K2Node_TemporaryVariable
+[K2Node_Knot_1@LoadSpline_MERGED] K2Node_Knot
+[K2Node_Knot_2] K2Node_Knot
+[K2Node_Knot_4] K2Node_Knot
+[K2Node_Knot_5] K2Node_Knot
+[K2Node_Knot_7@LoadSpline_MERGED] K2Node_Knot
+[K2Node_TunnelBoundary_8] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_9] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_10] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_11] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_12] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_13] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_VariableSet_1@LoadSpline_MERGED] K2Node_VariableSet
+[K2Node_CallFunction_0@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_CallArrayFunction_0@LoadSpline_MERGED] K2Node_CallArrayFunction
+[K2Node_CallFunction_14@LoadSpline_MERGED] K2Node_CallFunction
+[K2Node_CallArrayFunction_3@LoadSpline_MERGED] K2Node_CallArrayFunction
+[Initialize_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1B9DB07741A7B8D435571D902EC7DA75
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_ExecutionSequence_2
+    Nodes(2) <- K2Node_TunnelBoundary_3
+    Nodes(3) <- K2Node_VariableGet_7
+    Nodes(4) <- K2Node_CallFunction_2
+    Nodes(5) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(6) <- K2Node_CallFunction_15
+    Nodes(7) <- K2Node_VariableGet_19
+    Nodes(8) <- K2Node_CallFunction_9
+    Nodes(9) <- K2Node_VariableGet_47
+    Nodes(10) <- K2Node_CallArrayFunction_0
+    Nodes(11) <- K2Node_CallFunction_16
+    Nodes(12) <- K2Node_VariableGet_13
+    Nodes(13) <- K2Node_CallFunction_18
+    Nodes(14) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(15) <- K2Node_CallFunction_20
+    Nodes(16) <- K2Node_CallArrayFunction_4
+    Nodes(17) <- K2Node_CallFunction_27
+    Nodes(18) <- K2Node_CallFunction_30
+    Nodes(19) <- K2Node_VariableGet_48
+    Nodes(20) <- K2Node_CallFunction_51
+    Nodes(21) <- K2Node_CommutativeAssociativeBinaryOperator_9
+    Nodes(22) <- K2Node_CallFunction_38
+    Nodes(23) <- K2Node_VariableGet_49
+    Nodes(24) <- K2Node_CallArrayFunction_1
+    Nodes(25) <- K2Node_VariableGet_18
+    Nodes(26) <- K2Node_CallArrayFunction_3
+    Nodes(27) <- K2Node_CallFunction_53
+    Nodes(28) <- K2Node_VariableGet_50
+    Nodes(29) <- K2Node_VariableGet_0
+    Nodes(30) <- K2Node_CallFunction_35
+    Nodes(31) <- K2Node_CallFunction_36
+    Nodes(32) <- K2Node_VariableGet_44
+    Nodes(33) <- K2Node_CallFunction_13
+    Nodes(34) <- K2Node_CallFunction_14
+    Nodes(35) <- K2Node_CallFunction_17
+    Nodes(36) <- K2Node_VariableGet_45
+    Nodes(37) <- K2Node_VariableGet_46
+    Nodes(38) <- K2Node_CallFunction_34
+    Nodes(39) <- K2Node_CallFunction_31
+    Nodes(40) <- K2Node_CallFunction_32
+    Nodes(41) <- K2Node_CallFunction_4
+    Nodes(42) <- K2Node_VariableSet_1
+    Nodes(43) <- K2Node_VariableGet_2
+    Nodes(44) <- K2Node_Select_0
+    Nodes(45) <- K2Node_CallFunction_5
+    Nodes(46) <- K2Node_VariableGet_1
+    Nodes(47) <- K2Node_Self_0
+    Nodes(48) <- K2Node_CallArrayFunction_5
+    Nodes(49) <- K2Node_CallArrayFunction_2
+    Nodes(50) <- K2Node_DynamicCast_0
+    Nodes(51) <- K2Node_AssignmentStatement_25
+    Nodes(52) <- K2Node_AssignmentStatement_24
+    Nodes(53) <- K2Node_TunnelBoundary_1
+    Nodes(54) <- K2Node_TemporaryVariable_31
+    Nodes(55) <- K2Node_CallFunction_36741
+    Nodes(56) <- K2Node_CallArrayFunction_836
+    Nodes(57) <- K2Node_ExecutionSequence_8
+    Nodes(58) <- K2Node_IfThenElse_7
+    Nodes(59) <- K2Node_AssignmentStatement_7
+    Nodes(60) <- K2Node_CallFunction_563
+    Nodes(61) <- K2Node_AssignmentStatement_23
+    Nodes(62) <- K2Node_TemporaryVariable_4
+    Nodes(63) <- K2Node_TunnelBoundary_0
+    Nodes(64) <- K2Node_TemporaryVariable_1
+    Nodes(65) <- K2Node_TunnelBoundary_2
+    Nodes(66) <- K2Node_CallFunction_0
+    Nodes(67) <- K2Node_CallFunction_1
+    Nodes(68) <- K2Node_CallFunction_3
+    Nodes(69) <- K2Node_VariableGet_3
+    Nodes(70) <- K2Node_TemporaryVariable_0
+    Nodes(71) <- K2Node_PureAssignmentStatement_0
+[K2Node_FunctionEntry_0@Initialize_MERGED] K2Node_FunctionEntry
+[K2Node_ExecutionSequence_2@Initialize_MERGED] K2Node_ExecutionSequence
+[K2Node_MacroInstance_0@Initialize_MERGED] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.SplineComponent'",ContainerType=Array)
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.SplineComponent'",ContainerType=Array)
+    OutputSourceNode <- K2Node_Tunnel_0
+    InputSinkNode <- K2Node_Tunnel_1
+    OutputSourceNode <- K2Node_Tunnel_15
+    InputSinkNode <- K2Node_Tunnel_14
+    OutputSourceNode <- K2Node_Tunnel_1
+    InputSinkNode <- K2Node_Tunnel_0
+[K2Node_VariableGet_7@Initialize_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_2@Initialize_MERGED] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_3@Initialize_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.500000
+    вход B = 100.000000
+    вход A = 0.0
+    вход B = 0.500000
+    вход B = 100.000000
+[K2Node_CallFunction_15@Initialize_MERGED] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_19@Initialize_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_9@Initialize_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_47@Initialize_MERGED] K2Node_VariableGet (переменная: Curves)
+[K2Node_CallArrayFunction_0@Initialize_MERGED] K2Node_CallArrayFunction
+[K2Node_CallFunction_16@Initialize_MERGED] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 1
+    вход B = 1
+[K2Node_VariableGet_13@Initialize_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_18@Initialize_MERGED] K2Node_CallFunction (вызов: K2_SetRelativeLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход NewLocation = 0, 0, 0
+    вход NewLocation_X = 500.000000
+    вход NewLocation_Z = -0.100000
+    вход bSweep = false
+    вход bTeleport = false
+    вход bSweep = false
+    вход bTeleport = false
+[K2Node_CommutativeAssociativeBinaryOperator_1@Initialize_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.000001
+    вход B = 0, 0, 0
+    вход B_X = 0.0
+    вход B_Z = 0.0
+    вход B = 50
+    вход B = 0.000001
+    вход B = 50
+[K2Node_CallFunction_20@Initialize_MERGED] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход bUpdateSpline = true
+    вход bUpdateSpline = true
+[K2Node_Knot_1@Initialize_MERGED] K2Node_Knot
+[K2Node_CallFunction_27@Initialize_MERGED] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    вход B = 0.000000
+    вход B = 0.000000
+[K2Node_CallFunction_30@Initialize_MERGED] K2Node_CallFunction (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_48@Initialize_MERGED] K2Node_VariableGet (переменная: TimeSamples(Y))
+[K2Node_CallFunction_51@Initialize_MERGED] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_9@Initialize_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.500000
+    вход B = 0.500000
+[K2Node_CallFunction_38@Initialize_MERGED] K2Node_CallFunction (вызов: Multiply_IntFloat @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.500000
+    вход A = -50
+    вход A = 0
+    вход B = 0.500000
+    вход A = -50
+[K2Node_VariableGet_49@Initialize_MERGED] K2Node_VariableGet (переменная: Curves)
+[K2Node_CallArrayFunction_1@Initialize_MERGED] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_18@Initialize_MERGED] K2Node_VariableGet
+[K2Node_CallArrayFunction_3@Initialize_MERGED] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_53@Initialize_MERGED] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 1
+    вход B = 1
+[K2Node_VariableGet_50@Initialize_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_0@Initialize_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_35@Initialize_MERGED] K2Node_CallFunction (вызов: BuildProfile)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_36@Initialize_MERGED] K2Node_CallFunction (вызов: InitRenderTargets)
+    вход ParameterName = Color
+    вход ParameterName = Color
+[K2Node_VariableGet_44@Initialize_MERGED] K2Node_VariableGet (переменная: RenderInverse)
+[K2Node_CallFunction_13@Initialize_MERGED] K2Node_CallFunction (вызов: SetRelativeScale3D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход CoordinateSpace = Local
+    вход bUpdateSpline = false
+    вход CoordinateSpace = Local
+    вход bUpdateSpline = false
+[K2Node_CallFunction_14@Initialize_MERGED] K2Node_CallFunction (вызов: MakeVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True

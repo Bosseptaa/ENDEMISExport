@@ -1,0 +1,86 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_HeightMap
+# класс: MaterialFunction; происхождение: проект; узлов: 13; связей: 23; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:28
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_HeightMap] MaterialFunction
+    LibraryCategoriesText(0) = NSLOCTEXT("", "3CF9768542AAC35FCD6F35B56C5ACAA9", "ImaginaryBlend")
+    StateId = 0B1619C1439FD7EE1B64349A97D75BB4
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_HeightMapEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_HeightMapEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionTextureSample_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionSaturate_8
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldLocation"
+    Id = D4AF55A643C2C7540B137DAEB9B32623
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_HeightMap'"
+    bCollapsed = True
+    Preview <- MaterialExpressionWorldPosition_1
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "UV"
+    Id = A468651C4C01F965EA8568A46EC8593D
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_HeightMap'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Height"
+    bLastPreviewed = True
+    Id = 14B3F3A94E1A351B168C428E76FAA872
+    Function = "/Script/Engine.MaterialFunction'MF_HeightMap'"
+    bCollapsed = True
+    A <- MaterialExpressionSubtract_2
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "UV"
+    bLastPreviewed = True
+    Id = AC7EAFC8498CF26C8A253A895B73A046
+    Function = "/Script/Engine.MaterialFunction'MF_HeightMap'"
+    bCollapsed = True
+    A <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxWorldToSimulationUV.MF_FluxWorldToSimulationUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=BC4E90BB479CE876117A3A88B38577C4,Output=(OutputName="UVEps"))
+    FunctionOutputs(1) = (ExpressionOutputId=4847B2E243584F862CA84D9166232711,Output=(OutputName="TexelSize"))
+    FunctionOutputs(2) = (ExpressionOutputId=DF521043496F99477DD91C8D1F56A5CE,Output=(OutputName="UV"))
+    FunctionOutputs(3) = (ExpressionOutputId=551C49EC423E491AAA708DBF1F9B7304,Output=(OutputName="Height"))
+    Function = "/Script/Engine.MaterialFunction'MF_HeightMap'"
+    Outputs(0) = (OutputName="UVEps")
+    Outputs(1) = (OutputName="TexelSize")
+    Outputs(2) = (OutputName="UV")
+    Outputs(3) = (OutputName="Height")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionSaturate_8] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_HeightMap'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_HeightMap'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionTextureSample_1
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "Ground"
+    ExpressionGUID = 724FE13B46AC7AAFA22016A9E50F80E6
+    Function = "/Script/Engine.MaterialFunction'MF_HeightMap'"
+    bCollapsed = True
+[MaterialExpressionTextureSample_1] MaterialExpressionTextureSample
+    Function = "/Script/Engine.MaterialFunction'MF_HeightMap'"
+    Coordinates <- MaterialExpressionSaturate_8
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_HeightMap'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

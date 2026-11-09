@@ -1,0 +1,58 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Blueprints/BPI_SDFSource
+# класс: Blueprint; происхождение: проект; узлов: 11; связей: 12; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BPI_SDFSource] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/CoreUObject.Interface'"
+    BlueprintType = BPTYPE_Interface
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = ""
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BPI_SDFSource.BPI_SDFSource:GetSDFType",SavedViewOffset=(X=-499.192749,Y=-470.124969),SavedZoomAmount=1.000000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BPI_SDFSource_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = A830D732481DE856C064E69E2EB713F0
+    FunctionGraphs(0) <- PrepareMaterial
+    FunctionGraphs(1) <- GetSourceType
+    FunctionGraphs(2) <- Capture
+    FunctionGraphs(3) <- GetShapes
+[PrepareMaterial] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = FCB7C57F4929F9AD13035BAF39A92FAB
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@PrepareMaterial] K2Node_FunctionEntry
+[GetSourceType] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = EA59C4064309A1ABC531A58A307FB476
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetSourceType] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetSourceType] K2Node_FunctionResult
+[Capture] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A4F0EDE343BBA6A2ED8AC3BCC1E27999
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@Capture] K2Node_FunctionEntry
+[GetShapes] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 92F59D3644B5AFCF3ED9098D4B91EBA2
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetShapes] K2Node_FunctionEntry (вызов: GetShapes)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 1275199488
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+[K2Node_FunctionResult_0@GetShapes] K2Node_FunctionResult (вызов: GetShapes)
+    bIsEditable = True
+    bIsEditable = True
+    вход Type = NewEnumerator1
+    вход Type = NewEnumerator1
+
+## СВЯЗИ
+[K2Node_FunctionEntry_0@GetShapes].then -> [K2Node_FunctionResult_0@GetShapes].execute
+[K2Node_FunctionEntry_0@GetShapes].then#2 -> [K2Node_FunctionResult_0@GetShapes].execute#2

@@ -1,0 +1,2170 @@
+﻿# /Game/FluidFlux/Demo/Maps/FluxIslandMap
+# класс: World; происхождение: проект; узлов: 1492; связей: 1219; HLSL: 0; причина: папка /Game/FluidFlux; тело:6482
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[CollisionCylinder] CapsuleComponent
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    RelativeLocation = (X=-1775.429411,Y=374.182904,Z=131.409076)
+[Arrow@PersistentLevel.BP_DemoCharacter_C_1] ArrowComponent
+    AttachParent = "CollisionCylinder"
+[CharMoveComp] CharacterMovementComponent
+[CharacterMesh0] SkeletalMeshComponent
+    AttachParent = "CollisionCylinder"
+    PrimaryComponentTick = (EndTickGroup=TG_PostPhysics)
+[ABP_ThirdPerson_C_0] ABP_ThirdPerson_C
+    AnimGraphNode_BlendSpacePlayer = ()
+    AnimGraphNode_ModifyBone_3 = (Rotation=(Pitch=0.000000,Yaw=12.000000,Roll=0.000000))
+    AnimGraphNode_ModifyBone_2 = (Rotation=(Pitch=0.000000,Yaw=12.000000,Roll=0.000000))
+    AnimGraphNode_ModifyBone_1 = (Translation=(X=12.000000,Y=12.000000,Z=12.000000),Rotation=(Pitch=0.000000,Yaw=12.000000,Roll=6.000000))
+    AnimGraphNode_ModifyBone = (Rotation=(Pitch=0.000000,Yaw=12.000000,Roll=0.000000))
+[CameraArm@PersistentLevel.BP_DemoCharacter_C_1] SpringArmComponent
+    AttachParent = "CollisionCylinder"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Camera@PersistentLevel.BP_DemoCharacter_C_1] CameraComponent
+    AttachParent = "CameraArm"
+    AttachSocketName = "SpringEndpoint"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxModifierForceComponent] BP_FluxModifierForceComponent_C
+    ActiveTime = 0.007143
+    Initialized = True
+    CanRender = True
+    AttachParent = "CollisionCylinder"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    MaterialInstance <- MID_M_FluxModifierForce_1
+[MID_M_FluxModifierForce_1] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Simulation/Modifiers/Materials/M_FluxModifierForce.M_FluxModifierForce'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=520.014648,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="ModififersVelocityScale"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    BasePropertyOverrides = (BlendMode=BLEND_Additive,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(1) = 00000000000000000000000000000000
+    LightingGuid = EFB994E24E6DC5FC6BABBFAD7AC5F468
+    TextureParameterValues(0) <- TextureRenderTarget2D_1
+    TextureParameterValues(1) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_M_FluxModifierForce_1EditorOnlyData
+[MID_M_FluxModifierForce_1EditorOnlyData] MaterialInstanceEditorOnlyData
+[BP_FluxInteraction] BP_FluxInteractionComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxData] BP_FluxDataComponent_C
+    FindWorldSurface = True
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxBuoyancy] BP_FluxBuoyancyComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxSwimming] BP_FluxSwimmingComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[BP_FluxDriver] BP_FluxDriverComponent_C
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Wind] ArrowComponent
+    AttachParent = "DefaultSceneRoot"
+    RelativeRotation = (Pitch=-0.000000,Yaw=-73.300756,Roll=0.000000)
+    RelativeScale3D = (X=10.440307,Y=15.000000,Z=15.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[TextureRenderTarget2D_0@PersistentLevel.BP_FluxOceanWave] TextureRenderTarget2D
+    SizeX = 256
+    SizeY = 256
+    ClearColor = (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+    RenderTargetFormat = RTF_RGBA8
+    Source = (BlockDataOffsets=(0))
+    OodleTextureSdkVersion = "2.9.10"
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+[AssetImportData@PersistentLevel.BP_FluxOceanWave.TextureRenderTarget2D_0] AssetImportData
+[DefaultSceneRoot@PersistentLevel.BP_FluxOceanWave] SceneComponent
+    RelativeLocation = (X=-15226.380859,Y=-2517.113281,Z=0.000000)
+    RelativeScale3D = (X=1.000000,Y=3.375000,Z=1.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[SurfaceMesh] BoxComponent
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "DefaultSceneRoot"
+    RelativeScale3D = (X=120.000000,Y=35.555556,Z=2.200000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DebugPlane] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Meshes/SM_FluxPlane32x32.SM_FluxPlane32x32'"
+    bEvaluateWorldPositionOffsetInRayTracing = True
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "SurfaceMesh"
+    RelativeScale3D = (X=1.000000,Y=1.000000,Z=54.545455)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    OverrideMaterials(0) <- MID_M_TextureWavePreview_1
+[MID_M_TextureWavePreview_1] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Waves/Materials/M_TextureWavePreview.M_TextureWavePreview'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="WaveTextureHeight"),ParameterValue=220.000000,ExpressionGUID=1DCA5B824BB115B1668FC79410D563DA)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="WaveTextureOffsetZ"),ExpressionGUID=F9A197E5491F1B2FB7423FB0F6E42782)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="WaveTextureChoppiness"),ParameterValue=89.113281,ExpressionGUID=148D124440B3F2794C3175B874308887)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="WaveTextureRange"),ParameterValue=20000.000000,ExpressionGUID=AA1BEA3E46AA231C3E44D088A19275FE)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="WaveTextureFalloff"),ParameterValue=50000.000000,ExpressionGUID=031747FF479A65A7D06E1EB88E756593)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="WaveTextureDivergenceScale"),ParameterValue=1.300000,ExpressionGUID=427384004A88E0E57BBDB6AF8E6F6576)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="ShoreWaveWidth"),ParameterValue=-1050.000000)
+    ScalarParameterValues(7) = (ParameterInfo=(Name="ShoreWaveScale"),ParameterValue=0.000556)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="CoastlineScattringDistance"),ParameterValue=20000.000000)
+    ScalarParameterValues(9) = (ParameterInfo=(Name="CoastlineScattringDepth"),ParameterValue=1600.000000)
+    ScalarParameterValues(10) = (ParameterInfo=(Name="WaveProfileDistance"),ParameterValue=2.300000)
+    ScalarParameterValues(11) = (ParameterInfo=(Name="WaveProfileWidth"),ParameterValue=600.000000)
+    ScalarParameterValues(12) = (ParameterInfo=(Name="WaveProfileSpeed"),ParameterValue=0.245000)
+    ScalarParameterValues(13) = (ParameterInfo=(Name="WaveProfileAnimationSpeed"),ParameterValue=0.700000)
+    ScalarParameterValues(14) = (ParameterInfo=(Name="WaveGroundPrediction"),ParameterValue=300.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="WaveTextureOffsetScale"),ParameterValue=(R=-15226.380859,G=-2517.113281,B=0.000083,A=0.000083),ExpressionGUID=5C6FDDAA4571EBBB437BF9AFE16E1446)
+    VectorParameterValues(1) = (ParameterInfo=(Name="WaveTextureWind"),ParameterValue=(R=30.000000,G=-100.000000,B=0.220000,A=0.001000),ExpressionGUID=905081A9467D11DD522C39856E448FD6)
+    VectorParameterValues(2) = (ParameterInfo=(Name="FluxWaveProfileDecode"),ParameterValue=(R=-0.330324,G=0.000000,B=0.470531,A=0.124962))
+    TextureParameterValues(1) = (ParameterInfo=(Name="FluxWaveProfileMap"),ParameterValue="/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultWaveProfile_Forard.T_DefaultWaveProfile_Forard'")
+    TextureParameterValues(2) = (ParameterInfo=(Name="FluxWaveProfileInvMap"),ParameterValue="/Script/Engine.Texture2D'/Game/FluidFlux/Tools/WaveProfile/Waves/T_DefaultWaveProfile_Inverse.T_DefaultWaveProfile_Inverse'")
+    BasePropertyOverrides = (ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 584D86E14216A3FB038F6E9A53562CB6
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_M_TextureWavePreview_1EditorOnlyData
+[MID_M_TextureWavePreview_1EditorOnlyData] MaterialInstanceEditorOnlyData
+[MaterialBillboard@PersistentLevel.BP_FluxOceanWave] MaterialBillboardComponent
+    AttachParent = "DefaultSceneRoot"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[UpdateWindDirection] TimelineComponent
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+[MID_M_TextureWaveGenerator_Substrate_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Waves/Materials/M_TextureWaveGenerator_Substrate.M_TextureWaveGenerator_Substrate'"
+    VectorParameterValues(0) = (ParameterInfo=(Name="Wind"),ParameterValue=(R=0.065604,G=-0.552014,B=0.773120,A=0.000000),ExpressionGUID=8964D8AE49D02FBA35F9FE8B0931F699)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.000000,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 18D6C5BC40AF0351E5721EB385907638
+    LightingGuid = 4E0B887B44B7AFA7BEE2EC8176948D90
+    EditorOnlyData <- MID_M_TextureWaveGenerator_Substrate_0EditorOnlyData
+[MID_M_TextureWaveGenerator_Substrate_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[LightComponent0] DirectionalLightComponent
+    DynamicShadowDistanceMovableLight = 20000.000000
+    DynamicShadowCascades = 3
+    DistanceFieldShadowDistance = 30000.000000
+    LightSourceAngle = 3.000000
+    bCastCloudShadows = True
+    CloudShadowExtent = 100.000000
+    ShadowAmount = 0.700000
+    bUseRayTracedDistanceFieldShadows = False
+    Intensity = 3.139999
+    RelativeLocation = (X=-332.908539,Y=-1086.231323,Z=836.364502)
+    RelativeRotation = (Pitch=-57.269791,Yaw=-91.508776,Roll=-35.145198)
+    RelativeScale3D = (X=1.000000,Y=1.000000,Z=1.000000)
+    Mobility = Movable
+[ArrowComponent0@PersistentLevel.DirectionalLightSun] ArrowComponent
+    ArrowColor = (B=255,G=255,R=255,A=255)
+    AttachParent = "LightComponent0"
+[NiagaraComponent0] NiagaraComponent
+    Asset = "/Script/Niagara.NiagaraSystem'/Game/FluidFlux/Demo/Environment/Plankton/NS_FluxSimulationPlankton.NS_FluxSimulationPlankton'"
+    OnSystemFinished = (/Game/FluidFlux/Demo/Maps/FluxIslandMap.FluxIslandMap:PersistentLevel.NiagaraActor_1.OnNiagaraSystemFinished)
+    RelativeLocation = (X=-2020.000000,Y=-2390.000000,Z=45.000000)
+    OverrideParameters <- NiagaraDataInterfaceTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_1
+    OverrideParameters <- NiagaraDataInterfaceTexture_2
+    OverrideParameters <- NiagaraDataInterfaceTexture_3
+    OverrideParameters <- NiagaraDataInterfaceTexture_4
+    OverrideParameters <- NiagaraDataInterfaceVolumeTexture_0
+    OverrideParameters <- NiagaraDataInterfaceTexture_5
+    OverrideParameters <- NiagaraDataInterfaceTexture_6
+    OverrideParameters <- NiagaraDataInterfaceTexture_7
+    OverrideParameters <- NiagaraDataInterfaceTexture_8
+    OverrideParameters <- NiagaraDataInterfaceTexture_18
+[NiagaraDataInterfaceTexture_9@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_10@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_11@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_12@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_13@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_1@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_14@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_15@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_16@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_17@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_19@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_0@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_1@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_2@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_3@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_4@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceVolumeTexture_0@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceVolumeTexture
+[NiagaraDataInterfaceTexture_5@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_6@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_7@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_8@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[NiagaraDataInterfaceTexture_18@PersistentLevel.NiagaraActor_1.NiagaraComponent0] NiagaraDataInterfaceTexture
+[Sprite@PersistentLevel.NiagaraActor_1] BillboardComponent
+    AttachParent = "NiagaraComponent0"
+[ArrowComponent0@PersistentLevel.NiagaraActor_1] ArrowComponent
+    AttachParent = "NiagaraComponent0"
+[CollisionCapsule@PersistentLevel.PlayerStart_0] CapsuleComponent
+    AreaClass = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    bUseSystemDefaultObstacleAreaClass = False
+    AreaClassOverride = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    RelativeLocation = (X=-4086.118164,Y=-4703.122559,Z=255.816528)
+    RelativeRotation = (Pitch=0.000000,Yaw=585.000426,Roll=0.000000)
+[Sprite@PersistentLevel.PlayerStart_0] BillboardComponent
+    AttachParent = "CollisionCapsule"
+[Sprite2@PersistentLevel.PlayerStart_0] BillboardComponent
+    AttachParent = "CollisionCapsule"
+[Arrow@PersistentLevel.PlayerStart_0] ArrowComponent
+    AttachParent = "CollisionCapsule"
+[CollisionCapsule@PersistentLevel.PlayerStart_1] CapsuleComponent
+    AreaClass = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    bUseSystemDefaultObstacleAreaClass = False
+    AreaClassOverride = "/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+    RelativeLocation = (X=-4206.118164,Y=-4573.122559,Z=255.816528)
+    RelativeRotation = (Pitch=0.000000,Yaw=575.000426,Roll=0.000000)
+[Sprite@PersistentLevel.PlayerStart_1] BillboardComponent
+    AttachParent = "CollisionCapsule"
+[Sprite2@PersistentLevel.PlayerStart_1] BillboardComponent
+    AttachParent = "CollisionCapsule"
+[Arrow@PersistentLevel.PlayerStart_1] ArrowComponent
+    AttachParent = "CollisionCapsule"
+[Sprite@PersistentLevel.SkyAtmosphere_1] BillboardComponent
+    AttachParent = "SkyAtmosphereComponent"
+[SkyAtmosphereComponent] SkyAtmosphereComponent
+    TraceSampleCountScale = 4.000000
+    RayleighScattering = (R=0.175287,G=0.409607,B=1.000000,A=30.211479)
+    OtherAbsorption = (R=0.345561,G=1.000000,B=0.045189,A=531.632080)
+    bStaticLightingBuiltGUID = FD241AFF4062097961CA018C94886586
+    RelativeLocation = (X=-300.000000,Y=-1036.000000,Z=876.000000)
+[ArrowComponent] ArrowComponent
+    AttachParent = "SkyAtmosphereComponent"
+[TextureRenderTarget2D_0@PersistentLevel.BP_Capture_C_0] TextureRenderTarget2D
+    SizeX = 512
+    SizeY = 512
+    ClearColor = (R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    RenderTargetFormat = RTF_R8
+    Source = (BlockDataOffsets=(0))
+    OodleTextureSdkVersion = "2.9.13"
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+[AssetImportData@PersistentLevel.BP_Capture_C_0.TextureRenderTarget2D_0] AssetImportData
+[TextureRenderTarget2D_1@PersistentLevel.BP_Capture_C_0] TextureRenderTarget2D
+    SizeX = 512
+    SizeY = 512
+    ClearColor = (R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    RenderTargetFormat = RTF_R8
+    Source = (BlockDataOffsets=(0))
+    OodleTextureSdkVersion = "2.9.13"
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+[AssetImportData@PersistentLevel.BP_Capture_C_0.TextureRenderTarget2D_1] AssetImportData
+[Bounds@PersistentLevel.BP_Capture_C_0] BoxComponent
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "DefaultSceneRoot"
+    RelativeScale3D = (X=12800.000000,Y=12800.000000,Z=960.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DefaultSceneRoot@PersistentLevel.BP_Capture_C_0] SceneComponent
+    RelativeLocation = (X=800.000000,Y=-2220.000000,Z=-270.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[PDA_FluxSignedDistanceField_C_0@PersistentLevel.BP_Capture_C_0] PDA_FluxSignedDistanceField_C
+    Size = (X=12800.000000,Y=12800.000000,Z=960.000000)
+    Position = (X=800.000000,Y=-2220.000000,Z=-270.000000)
+    DistanceRange = 600.000000
+    Tiles = (X=4,Y=4)
+    SignedDistanceField <- TextureRenderTarget2D_0
+[MaterialBillboard@PersistentLevel.BP_Capture_C_0] MaterialBillboardComponent
+    AttachParent = "DefaultSceneRoot"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Debug@PersistentLevel.BP_Capture_C_0] StaticMeshComponent
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "DefaultSceneRoot"
+    RelativeScale3D = (X=128.000000,Y=128.000000,Z=9.600000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    OverrideMaterials(0) <- MID_M_DebugSDFCaptureDomain_0
+[MID_M_DebugSDFCaptureDomain_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Tools/DistanceField/Materials/M_DebugSDFCaptureDomain.M_DebugSDFCaptureDomain'"
+    VectorParameterValues(0) = (ParameterInfo=(Name="SDFPosition"),ParameterValue=(R=800.000000,G=-2220.000000,B=-270.000000,A=1.000000),ExpressionGUID=946DBDD84870CEACABFA59A9E9D059C6)
+    VectorParameterValues(1) = (ParameterInfo=(Name="SDFSize"),ParameterValue=(R=12800.000000,G=12800.000000,B=960.000000,A=600.000000),ExpressionGUID=2C719A184B554F23B21A02BBF78D9C9A)
+    VectorParameterValues(2) = (ParameterInfo=(Name="SDFTiles"),ParameterValue=(R=4.000000,G=4.000000,B=16.000000,A=0.000000),ExpressionGUID=91DDB0D0417D35D14F1A18BA2B448DEE)
+    BasePropertyOverrides = (TwoSided=True,BlendMode=BLEND_Masked,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 29EDEC7048A867476F8044AEB0166841
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_M_DebugSDFCaptureDomain_0EditorOnlyData
+[MID_M_DebugSDFCaptureDomain_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_RenderSDFShape_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Tools/DistanceField/Materials/MI_RenderSDFShape.MI_RenderSDFShape'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="SDFInverse"),ExpressionGUID=62ECB9674370D87554586A825983B188)
+    VectorParameterValues(0) = (ParameterInfo=(Name="SDFPosition"),ParameterValue=(R=800.000000,G=-2220.000000,B=-270.000000,A=1.000000),ExpressionGUID=946DBDD84870CEACABFA59A9E9D059C6)
+    VectorParameterValues(1) = (ParameterInfo=(Name="SDFSize"),ParameterValue=(R=12800.000000,G=12800.000000,B=960.000000,A=600.000000),ExpressionGUID=2C719A184B554F23B21A02BBF78D9C9A)
+    VectorParameterValues(2) = (ParameterInfo=(Name="SDFTiles"),ParameterValue=(R=4.000000,G=4.000000,B=16.000000,A=0.000000),ExpressionGUID=91DDB0D0417D35D14F1A18BA2B448DEE)
+    VectorParameterValues(3) = (ParameterInfo=(Name="ShapeLocationRadius"),ParameterValue=(R=937.000000,G=-1760.000000,B=-345.000000,A=500.000000),ExpressionGUID=99A4AC5243DC41202AAFAEBC2D77F1DE)
+    VectorParameterValues(4) = (ParameterInfo=(Name="ShapeSize"),ParameterValue=(R=500.000000,G=500.000000,B=500.000000,A=1.000000),ExpressionGUID=E25CEFBB46B57F06FCAC1E8D7A707999)
+    VectorParameterValues(5) = (ParameterInfo=(Name="ShapeForward"),ParameterValue=(R=1.000000,G=-0.000000,B=0.000000,A=1.000000),ExpressionGUID=35ECB0124B885E308F6ABA9CBE664895)
+    VectorParameterValues(6) = (ParameterInfo=(Name="ShapeUp"),ParameterValue=(R=-0.000000,G=0.000000,B=1.000000,A=1.000000),ExpressionGUID=31DF94F44C56B2F0B20533B7B980F5B6)
+    BasePropertyOverrides = (ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.500000,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 14CC16C14F71750629287881A7B22C6B
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    TextureParameterValues(1) <- TextureRenderTarget2D_1
+    EditorOnlyData <- MID_MI_RenderSDFShape_0EditorOnlyData
+[MID_MI_RenderSDFShape_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_MI_RenderSDFHeightnap_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Tools/DistanceField/Materials/MI_RenderSDFHeightnap.MI_RenderSDFHeightnap'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="SDFInverse"),ExpressionGUID=62ECB9674370D87554586A825983B188)
+    VectorParameterValues(0) = (ParameterInfo=(Name="SDFPosition"),ParameterValue=(R=800.000000,G=-2220.000000,B=-270.000000,A=1.000000),ExpressionGUID=946DBDD84870CEACABFA59A9E9D059C6)
+    VectorParameterValues(1) = (ParameterInfo=(Name="SDFSize"),ParameterValue=(R=12800.000000,G=12800.000000,B=960.000000,A=600.000000),ExpressionGUID=2C719A184B554F23B21A02BBF78D9C9A)
+    VectorParameterValues(2) = (ParameterInfo=(Name="SDFTiles"),ParameterValue=(R=4.000000,G=4.000000,B=16.000000,A=0.000000),ExpressionGUID=91DDB0D0417D35D14F1A18BA2B448DEE)
+    BasePropertyOverrides = (ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.500000,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 6705B57C41FB185DA2B7CA8975A938E7
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_MI_RenderSDFHeightnap_0EditorOnlyData
+[MID_MI_RenderSDFHeightnap_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_M_RenderSDFTile_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Tools/DistanceField/Materials/M_RenderSDFTile.M_RenderSDFTile'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="SDFInverse"),ExpressionGUID=E1DB83CD459F75A64D5FF1A02FD01AD6)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="FrameIndex"),ParameterValue=15.000000,ExpressionGUID=111EE6CD4560D51455FC9C9B339B194D)
+    VectorParameterValues(0) = (ParameterInfo=(Name="SDFPosition"),ParameterValue=(R=800.000000,G=-2220.000000,B=-270.000000,A=1.000000),ExpressionGUID=946DBDD84870CEACABFA59A9E9D059C6)
+    VectorParameterValues(1) = (ParameterInfo=(Name="SDFSize"),ParameterValue=(R=12800.000000,G=12800.000000,B=960.000000,A=600.000000),ExpressionGUID=2C719A184B554F23B21A02BBF78D9C9A)
+    VectorParameterValues(2) = (ParameterInfo=(Name="SDFTiles"),ParameterValue=(R=4.000000,G=4.000000,B=16.000000,A=0.000000),ExpressionGUID=91DDB0D0417D35D14F1A18BA2B448DEE)
+    VectorParameterValues(3) = (ParameterInfo=(Name="SDFPositionSource"),ParameterValue=(R=800.000000,G=-2220.000000,B=210.000000,A=1.000000),ExpressionGUID=946DBDD84870CEACABFA59A9E9D059C6)
+    VectorParameterValues(4) = (ParameterInfo=(Name="SDFSizeSource"),ParameterValue=(R=12800.000000,G=12800.000000,B=1.000000,A=600.000000),ExpressionGUID=2C719A184B554F23B21A02BBF78D9C9A)
+    VectorParameterValues(5) = (ParameterInfo=(Name="SDFTilesSource"),ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=0.000000),ExpressionGUID=91DDB0D0417D35D14F1A18BA2B448DEE)
+    BasePropertyOverrides = (ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.000100,UsageFlags=4194304)
+    ReferencedTextureGuids(1) = 00000000000000000000000000000000
+    LightingGuid = F42D7D3743E68C808CE7D79DBB35C129
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    TextureParameterValues(1) <- TextureRenderTarget2D_0
+    TextureParameterValues(2) <- TextureRenderTarget2D_1
+    EditorOnlyData <- MID_M_RenderSDFTile_0EditorOnlyData
+[MID_M_RenderSDFTile_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_M_InverseCopySDF_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Tools/DistanceField/Materials/M_InverseCopySDF.M_InverseCopySDF'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="SDFInverse"))
+    VectorParameterValues(0) = (ParameterInfo=(Name="SDFPosition"),ParameterValue=(R=800.000000,G=-2220.000000,B=-270.000000,A=1.000000))
+    VectorParameterValues(1) = (ParameterInfo=(Name="SDFSize"),ParameterValue=(R=12800.000000,G=12800.000000,B=960.000000,A=600.000000))
+    VectorParameterValues(2) = (ParameterInfo=(Name="SDFTiles"),ParameterValue=(R=4.000000,G=4.000000,B=16.000000,A=0.000000))
+    BasePropertyOverrides = (ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 46E2C7344F51C296EA3834AB7C022B73
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_M_InverseCopySDF_0EditorOnlyData
+[MID_M_InverseCopySDF_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[TextureRenderTarget2D_0@PersistentLevel.BP_FluxScenePainter_2] TextureRenderTarget2D
+    SizeX = 16
+    SizeY = 16
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    RenderTargetFormat = RTF_R8
+    Source = (BlockDataOffsets=(0))
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+[AssetImportData@PersistentLevel.BP_FluxScenePainter_2.TextureRenderTarget2D_0] AssetImportData
+[Box] BoxComponent
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "DefaultSceneRoot"
+    RelativeScale3D = (X=5600.000000,Y=5600.000000,Z=1.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DefaultSceneRoot@PersistentLevel.BP_FluxScenePainter_2] SceneComponent
+    RelativeLocation = (X=-150.000000,Y=-6193.000000,Z=-123.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Preview@PersistentLevel.BP_FluxScenePainter_2] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Meshes/SM_FluxPlane1x1.SM_FluxPlane1x1'"
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Box"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    OverrideMaterials(0) <- MID_M_ScenePainterPreview_0
+[FluxScenePainterComponent] BP_FluxWorldPainterComponent_C
+    CanvasSize = (X=16.000000,Y=16.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[MID_MI_SceneBrush_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.MaterialInstanceConstant'/Game/FluidFlux/Tools/ScenePainter/Materials/MI_SceneBrush.MI_SceneBrush'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="Hardness"),ParameterValue=2.000000,ExpressionGUID=3376A596447A1FE6016BADB4B9C37FE7)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="Radius"),ParameterValue=1.000000,ExpressionGUID=76AC3D754CD5BE4D78B58D990632A6F8)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="Offset"),ParameterValue=-4.296875)
+    VectorParameterValues(0) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-2950.000000,G=-8993.000000,B=5600.000000,A=5600.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(1) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.062500,G=0.062500,B=16.000000,A=16.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(2) = (ParameterInfo=(Name="BrushColor"),ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=0.000000),ExpressionGUID=9919863642B5CCF31E67A1A01BD61B3F)
+    VectorParameterValues(3) = (ParameterInfo=(Name="LocationSize"),ParameterValue=(R=241.076172,G=-6831.336914,B=4200.000000,A=4200.000000),ExpressionGUID=25F4B8E84696B318C2F9C190AABC3500)
+    VectorParameterValues(4) = (ParameterInfo=(Name="Rotation"),ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=054030754F4737531BCE4CAA483340CE)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    LightingGuid = D34958BB4E18EBA4FA93F7B894BDBDF3
+    EditorOnlyData <- MID_MI_SceneBrush_0EditorOnlyData
+[MID_MI_SceneBrush_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_M_ScenePainterPreview_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Tools/ScenePainter/Materials/M_ScenePainterPreview.M_ScenePainterPreview'"
+    VectorParameterValues(0) = (ParameterInfo=(Name="WorldToPainterUV"),ParameterValue=(R=-2950.000000,G=-8993.000000,B=5600.000000,A=5600.000000),ExpressionGUID=329B18504EC7339490E0F380351F92B7)
+    BasePropertyOverrides = (TwoSided=True,BlendMode=BLEND_Masked,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.010000,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 5FB1550F413AB6A178CE6882A174C69D
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_M_ScenePainterPreview_0EditorOnlyData
+[MID_M_ScenePainterPreview_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[FluxHeightMapComponent] BP_FluxHeightMapComponent_C
+    DomainTexture = (Resolution_10_AB36971A457C61279EBD409A5DF5D54A=(X=512,Y=512),FullPrecision_9_F4838443467C59FD48A5EABBE66F7496=False)
+    AreaWorldHeight = 1700.000000
+    CaptureLimitTileSize = 200000
+    CaptureComponent = "CaptureHeightMap"
+    AreaWorldSize = (X=10240.000000,Y=10240.000000)
+    AreaLocation = (X=-1399.999023,Y=-2930.132812,Z=520.014648)
+    AreaSize = (X=10240.000000,Y=10240.000000,Z=1700.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    GroundHeightMap <- TextureRenderTarget2D_0
+    HeightmapPreviewInstance <- MID_M_HeightMapPreview_0
+    HeightmapUpdateInstance <- MID_M_HeightmapUpdate_0
+    HeightmapUpdateTexture <- TextureRenderTarget2D_263
+[TextureRenderTarget2D_0@PersistentLevel.BP_FluxSimulation.FluxHeightMapComponent] TextureRenderTarget2D
+[AssetImportData@PersistentLevel.BP_FluxSimulation.FluxHeightMapComponent.TextureRenderTarget2D_0] AssetImportData
+[TextureRenderTarget2D_263] TextureRenderTarget2D
+    SizeX = 512
+    SizeY = 512
+    ClearColor = (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    RenderTargetFormat = RTF_R16f
+    Source = (BlockDataOffsets=(0))
+    OodleTextureSdkVersion = "2.9.13"
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+[AssetImportData@PersistentLevel.BP_FluxSimulation.FluxHeightMapComponent.TextureRenderTarget2D_263] AssetImportData
+[MID_M_HeightMapPreview_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Tools/Heightmap/Materials/M_HeightMapPreview.M_HeightMapPreview'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=520.014648,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="PixelSize"),ParameterValue=20.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(1) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    BasePropertyOverrides = (BlendMode=BLEND_Translucent,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 520ABAB143A297EDB4A2D4BAA908EDB0
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_M_HeightMapPreview_0EditorOnlyData
+[MID_M_HeightMapPreview_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_M_HeightmapUpdate_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Tools/Heightmap/Materials/M_HeightmapUpdate.M_HeightmapUpdate'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="ApplyInteriorCap"),ExpressionGUID=1065189948DF0D5F1BD696A6F9D20D5E)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="EdgeBlend"),ParameterValue=100000.000000,ExpressionGUID=B7EBF19C4388F98F113511B29E860EA5)
+    VectorParameterValues(0) = (ParameterInfo=(Name="HeightmapFragmentTransform"),ParameterValue=(R=1.000000,G=1.000000,B=0.000000,A=0.000000),ExpressionGUID=697A3DF64446DBFA8DF95381AFD96136)
+    VectorParameterValues(1) = (ParameterInfo=(Name="CaptureResolution"),ParameterValue=(R=512.000000,G=512.000000,B=1700.000000,A=0.000000),ExpressionGUID=30206B38488400D94A8837ACD2A5D8DD)
+    BasePropertyOverrides = (ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 78F48DCC44BB4E336C6096A59931907B
+    TextureParameterValues(0) <- TextureRenderTarget2D_263
+    EditorOnlyData <- MID_M_HeightmapUpdate_0EditorOnlyData
+[MID_M_HeightmapUpdate_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[TextureRenderTarget2D_0@PersistentLevel.BP_FluxSimulation] TextureRenderTarget2D
+    SizeX = 512
+    SizeY = 512
+    ClearColor = (R=100000.000000,G=0.000000,B=0.000000,A=1.000000)
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    RenderTargetFormat = RTF_R16f
+    Source = (BlockDataOffsets=(0))
+    OodleTextureSdkVersion = "2.9.13"
+    Filter = TF_Bilinear
+    SRGB = False
+    SizeX = 512
+    SizeY = 512
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    RenderTargetFormat = RTF_RGBA32f
+    Source = (BlockDataOffsets=(0))
+    OodleTextureSdkVersion = "2.9.13"
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetImportData <- AssetImportData
+[AssetImportData@PersistentLevel.BP_FluxSimulation.TextureRenderTarget2D_0] AssetImportData
+[TextureRenderTarget2D_1@PersistentLevel.BP_FluxSimulation] TextureRenderTarget2D
+    SizeX = 512
+    SizeY = 512
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    RenderTargetFormat = RTF_RGBA32f
+    Source = (BlockDataOffsets=(0))
+    OodleTextureSdkVersion = "2.9.13"
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+[AssetImportData@PersistentLevel.BP_FluxSimulation.TextureRenderTarget2D_1] AssetImportData
+[TextureRenderTarget2D_2] TextureRenderTarget2D
+    SizeX = 512
+    SizeY = 512
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    RenderTargetFormat = RTF_RG16f
+    Source = (BlockDataOffsets=(0))
+    OodleTextureSdkVersion = "2.9.13"
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+[AssetImportData@PersistentLevel.BP_FluxSimulation.TextureRenderTarget2D_2] AssetImportData
+[TextureRenderTarget2D_3] TextureRenderTarget2D
+    SizeX = 512
+    SizeY = 512
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    RenderTargetFormat = RTF_RG16f
+    Source = (BlockDataOffsets=(0))
+    OodleTextureSdkVersion = "2.9.13"
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+[AssetImportData@PersistentLevel.BP_FluxSimulation.TextureRenderTarget2D_3] AssetImportData
+[VolumeCollision@PersistentLevel.BP_FluxSimulation] BoxComponent
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=-850.000000)
+    RelativeScale3D = (X=5120.000000,Y=5120.000000,Z=850.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Scene@PersistentLevel.BP_FluxSimulation] SceneComponent
+    RelativeLocation = (X=-1399.999023,Y=-2930.132812,Z=520.014648)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[CaptureHeightMap] SceneCaptureComponent2D
+    OrthoWidth = 10240.000000
+    ShowFlagSettings(17) = (Enabled=True)
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    TextureTarget <- TextureRenderTarget2D_263
+[MaterialBillboard@PersistentLevel.BP_FluxSimulation] MaterialBillboardComponent
+    AttachParent = "Scene"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DebugCage] StaticMeshComponent
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    RelativeLocation = (X=0.010000,Y=0.010000,Z=-850.000000)
+    RelativeScale3D = (X=102.399998,Y=102.399998,Z=17.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DebugGround] StaticMeshComponent
+    StaticMesh = "/Script/Engine.StaticMesh'/Game/FluidFlux/Surface/Meshes/SM_FluxPlane1024x1024.SM_FluxPlane1024x1024'"
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "Scene"
+    RelativeLocation = (X=10.000000,Y=10.000000,Z=-850.000000)
+    RelativeScale3D = (X=102.400000,Y=102.400000,Z=1700.000000)
+    bHiddenInGame = True
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    OverrideMaterials(0) <- MID_M_HeightMapPreview_0
+[NODE_AddChildActorComponent-0] ChildActorComponent
+    ChildActor = "/Game/FluidFlux/Editor/Blueprints/EUA_FluxTickableEditor.EUA_FluxTickableEditor_C'NODE_AddChildActorComponent-0_EUA_ParentEditorTick_C_CAT_0'"
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = UserConstructionScript
+[MID_M_HeightWetUpdate_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Simulation/Materials/M_HeightWetUpdate.M_HeightWetUpdate'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="DeltaTime"),ParameterValue=0.170000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-754.985352,ExpressionGUID=9B2928C34C3F72BEA5279891C7D27F0D)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="SurfaceSmoothing"),ParameterValue=0.500000,ExpressionGUID=964383EC429EBD8AE45C20AA3212F2FF)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=520.014648,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="ModififersVelocityScale"),ParameterValue=1.000000)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="DryingSpeed"),ExpressionGUID=16BE65314B3ACA92BA8872B3C15BADAF)
+    VectorParameterValues(0) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(1) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    BasePropertyOverrides = (ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(2) = 00000000000000000000000000000000
+    LightingGuid = 1A7CF8DF4201C8C3D183F59B8C966FF0
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    TextureParameterValues(1) <- TextureRenderTarget2D_1
+    TextureParameterValues(2) <- TextureRenderTarget2D_3
+    EditorOnlyData <- MID_M_HeightWetUpdate_0EditorOnlyData
+[MID_M_HeightWetUpdate_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_M_ShallowIntegrateHeight_Substrate_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Simulation/Materials/M_ShallowIntegrateHeight_Substrate.M_ShallowIntegrateHeight_Substrate'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="DeltaTime"),ParameterValue=0.170000,ExpressionGUID=6F5FEACD4BE5F960C8E887B5A0533D55)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-754.985352)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="FoamFadeSpeed"),ParameterValue=0.000400,ExpressionGUID=E95B989D436E4DDA57B094B1D8809886)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="FoamShallowGenerate"),ParameterValue=0.100000,ExpressionGUID=B436FA794AF9E618FBBA39ACB1365121)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="FoamShallowDepth"),ParameterValue=400.000000,ExpressionGUID=2C992B474EBB6492D5F56389B1F0A2BE)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="FoamWaveGenerate"),ParameterValue=0.500000,ExpressionGUID=CDB108AD41D4A4EBDC1D64A418DED0B9)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="EvaporationHeight"),ParameterValue=0.020000,ExpressionGUID=B43FEB3848AD6A600DA07F963191300E)
+    ScalarParameterValues(7) = (ParameterInfo=(Name="FluidTransportMax"),ParameterValue=140.000000,ExpressionGUID=BEC4D6AA41FBF577B7F2B2AC10AD7DCE)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=520.014648,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(9) = (ParameterInfo=(Name="ModififersVelocityScale"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(1) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.000000,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 53B5B9034CB62BCC4294A4ACB7CCDD55
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    TextureParameterValues(1) <- TextureRenderTarget2D_1
+    EditorOnlyData <- MID_M_ShallowIntegrateHeight_Substrate_0EditorOnlyData
+[MID_M_ShallowIntegrateHeight_Substrate_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[q] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Simulation/Materials/M_ShallowIntegrateVelocity_Substrate.M_ShallowIntegrateVelocity_Substrate'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="DeltaTime"),ParameterValue=0.170000,ExpressionGUID=74FEF6524438C5A6614EBD9F8886D86E)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-754.985352)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="Gravity"),ParameterValue=9.807000,ExpressionGUID=6A814D924AA9C65D8F6C33AAF10A6AC1)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="VelocityClamp"),ParameterValue=10.000000,ExpressionGUID=57E8FC28423FF4BF77EF959488F4BD23)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="ScaleZ"),ParameterValue=920.000000,ExpressionGUID=A651D0AA41B82DB831C36CAC8ED6CFCD)
+    ScalarParameterValues(5) = (ParameterInfo=(Name="MaxHeight"),ParameterValue=1700.000000)
+    ScalarParameterValues(6) = (ParameterInfo=(Name="Friction"),ParameterValue=0.000400,ExpressionGUID=10BAFC704B09DD73814EFCAE65C976B3)
+    ScalarParameterValues(7) = (ParameterInfo=(Name="Damping"),ParameterValue=0.020000,ExpressionGUID=D55C612044B9E66B3CA321ACDEF42E6E)
+    ScalarParameterValues(8) = (ParameterInfo=(Name="AccelerationClamp"),ParameterValue=10.000000,ExpressionGUID=E9367F794045EE4ACDD674AEB3A2F72B)
+    ScalarParameterValues(9) = (ParameterInfo=(Name="OvershootingBlend"),ParameterValue=0.300000,ExpressionGUID=6E0CE9844C897B3F54C99C9CF73D5050)
+    ScalarParameterValues(10) = (ParameterInfo=(Name="OvershootingLimit"),ParameterValue=40.000000,ExpressionGUID=DFAD4F4E46A6C7282A6ED7ACA6750231)
+    ScalarParameterValues(11) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=520.014648,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(12) = (ParameterInfo=(Name="ModififersVelocityScale"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(1) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.000000,UsageFlags=4194304)
+    ReferencedTextureGuids(1) = 00000000000000000000000000000000
+    LightingGuid = FCA871A3415A2547541EF99E76E1139C
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    TextureParameterValues(1) <- TextureRenderTarget2D_0
+    EditorOnlyData <- qEditorOnlyData
+[qEditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_M_HeightWetClear_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Simulation/Materials/M_HeightWetClear.M_HeightWetClear'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="DeltaTime"),ParameterValue=0.170000)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-754.985352,ExpressionGUID=0172B1A44AD652EBDAA85EAE724F1947)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=520.014648,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="ModififersVelocityScale"),ParameterValue=1.000000)
+    VectorParameterValues(0) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    VectorParameterValues(1) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    BasePropertyOverrides = (ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = 7CF09D434524F3F536A4C0A7213BD69C
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    TextureParameterValues(1) <- TextureRenderTarget2D_1
+    EditorOnlyData <- MID_M_HeightWetClear_0EditorOnlyData
+[MID_M_HeightWetClear_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_M_LoadHeightmap_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="StateWetHeightOffset"),ExpressionGUID=429C79374778B76AD9BF599F9AC27080)
+    VectorParameterValues(0) = (ParameterInfo=(Name="WorldToStateUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(1) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    BasePropertyOverrides = (ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = E0430C0340B4ED6BDA8A9DA0AB80F601
+    LightingGuid = 16A5528F4550CCABF0022D84697BC7ED
+    EditorOnlyData <- MID_M_LoadHeightmap_0EditorOnlyData
+[MID_M_LoadHeightmap_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[MID_M_LoadVelocityWaterFoam_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Editor/Materials/M_LoadVelocityWaterFoam.M_LoadVelocityWaterFoam'"
+    ScalarParameterValues(0) = (ParameterInfo=(Name="CaptureHeight"),ParameterValue=520.014648,ExpressionGUID=0427DF304F022BAAED438B9A890486E3)
+    ScalarParameterValues(1) = (ParameterInfo=(Name="CaptureHeightDifference"),ExpressionGUID=B1DF660E4046E81161676B95D9D7D6D5)
+    ScalarParameterValues(2) = (ParameterInfo=(Name="VelocityScale"),ParameterValue=5.000000,ExpressionGUID=429C79374778B76AD9BF599F9AC27080)
+    ScalarParameterValues(3) = (ParameterInfo=(Name="HeightScale"),ParameterValue=256.000000)
+    ScalarParameterValues(4) = (ParameterInfo=(Name="StateWetHeightOffset"),ParameterValue=-754.985352,ExpressionGUID=0A7211854DA93AA2132803BFA5BF7092)
+    VectorParameterValues(0) = (ParameterInfo=(Name="WorldToSimulationUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(1) = (ParameterInfo=(Name="WorldToStateUV"),ParameterValue=(R=-6519.999023,G=-8050.132812,B=10240.000000,A=10240.000000),ExpressionGUID=08A52CE24B09C9A878F2C4A37570967F)
+    VectorParameterValues(2) = (ParameterInfo=(Name="SimulationPixelSize"),ParameterValue=(R=0.001953,G=0.001953,B=512.000000,A=512.000000),ExpressionGUID=5B9F53D043942DCABA3C2A81064D42BE)
+    BasePropertyOverrides = (BlendMode=BLEND_AlphaComposite,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = E0430C0340B4ED6BDA8A9DA0AB80F601
+    ReferencedTextureGuids(2) = EEBC0FC84835EF5CD7C55E8324924E34
+    LightingGuid = 047B39FF4E92B17298F7B7AB13B5D252
+    TextureParameterValues(2) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_M_LoadVelocityWaterFoam_0EditorOnlyData
+[MID_M_LoadVelocityWaterFoam_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[PDA_FluxSimulationState_C_0] PDA_FluxSimulationState_C
+    Resolution = (X=512,Y=512)
+    AreaLocation = (X=-1399.999023,Y=-2930.132812,Z=520.014648)
+    AreaSize = (X=10240.000000,Y=10240.000000,Z=1700.000000)
+    CaptureOffset = -754.985352
+    IterationDeltaTime = 0.170000
+    IterationsPerSecond = 140
+    GroundMap <- TextureRenderTarget2D_0
+    VelocityDepthFoamMap <- TextureRenderTarget2D_0
+    HeightWetMap <- TextureRenderTarget2D_2
+[TextureRenderTarget2D_0@PersistentLevel.BP_SDFOutline3_C_0] TextureRenderTarget2D
+    SizeX = 128
+    SizeY = 128
+    ClearColor = (R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    RenderTargetFormat = RTF_R8
+    Source = (BlockDataOffsets=(0))
+    OodleTextureSdkVersion = "2.9.13"
+    Filter = TF_Bilinear
+    SRGB = False
+    AssetImportData <- AssetImportData
+[AssetImportData@PersistentLevel.BP_SDFOutline3_C_0.TextureRenderTarget2D_0] AssetImportData
+[Bounds@PersistentLevel.BP_SDFOutline3_C_0] BoxComponent
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "DefaultSceneRoot"
+    RelativeScale3D = (X=12800.000000,Y=12800.000000,Z=1.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[DefaultSceneRoot@PersistentLevel.BP_SDFOutline3_C_0] SceneComponent
+    RelativeLocation = (X=800.000000,Y=-2220.000000,Z=210.000000)
+    RelativeScale3D = (X=1.000000,Y=1.000000,Z=0.750000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+[Debug@PersistentLevel.BP_SDFOutline3_C_0] StaticMeshComponent
+    BodyInstance = (MaxAngularVelocity=3599.999756)
+    AttachParent = "DefaultSceneRoot"
+    RelativeScale3D = (X=128.000000,Y=128.000000,Z=0.010000)
+    bVisible = False
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    OverrideMaterials(0) <- MID_M_DebugSDFOutline_0
+[MID_M_DebugSDFOutline_0] MaterialInstanceDynamic
+    Parent = "/Script/Engine.Material'/Game/FluidFlux/Tools/DistanceField/Materials/M_DebugSDFOutline.M_DebugSDFOutline'"
+    VectorParameterValues(0) = (ParameterInfo=(Name="SDFPosition"),ParameterValue=(R=800.000000,G=-2220.000000,B=210.000000,A=1.000000),ExpressionGUID=946DBDD84870CEACABFA59A9E9D059C6)
+    VectorParameterValues(1) = (ParameterInfo=(Name="SDFSize"),ParameterValue=(R=12800.000000,G=12800.000000,B=1.000000,A=600.000000),ExpressionGUID=2C719A184B554F23B21A02BBF78D9C9A)
+    VectorParameterValues(2) = (ParameterInfo=(Name="SDFTiles"),ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=0.000000),ExpressionGUID=91DDB0D0417D35D14F1A18BA2B448DEE)
+    BasePropertyOverrides = (TwoSided=True,BlendMode=BLEND_Masked,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.000000,UsageFlags=4194304)
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    LightingGuid = C96C488F4BDA6891B7BBB99C73124890
+    TextureParameterValues(0) <- TextureRenderTarget2D_0
+    EditorOnlyData <- MID_M_DebugSDFOutline_0EditorOnlyData
+[MID_M_DebugSDFOutline_0EditorOnlyData] MaterialInstanceEditorOnlyData
+[SceneCaptureComponent2D] SceneCaptureComponent2D
+    OrthoWidth = 12800.000000
+    ShowOnlyActors(0) = "/Game/FluidFlux/Surface/Glass/BP_FluxGlassSplineActor.BP_FluxGlassSplineActor_C'BP_VolumetricSplineActor_C_1'"
+    AttachParent = "DefaultSceneRoot"
+    RelativeLocation = (X=0.000000,Y=0.000000,Z=1.000000)
+    UCSSerializationIndex = 0
+    bNetAddressable = True
+    CreationMethod = SimpleConstructionScript
+    TextureTarget <- TextureRenderTarget2D_0
+[PDA_FluxSignedDistanceField_C_0@PersistentLevel.BP_SDFOutline3_C_0] PDA_FluxSignedDistanceField_C
+    Size = (X=12800.000000,Y=12800.000000,Z=1.000000)
+    Position = (X=800.000000,Y=-2220.000000,Z=210.000000)
+    DistanceRange = 600.000000
+    Tiles = (X=1,Y=1)
+    SignedDistanceField <- TextureRenderTarget2D_0
+[RootComponent0] SceneComponent
+    RelativeLocation = (X=-22350.000000,Y=-22460.000000,Z=-30.000000)
+    RelativeScale3D = (X=100.000000,Y=100.000000,Z=100.000000)
+[Texture2D_0] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 1F9ED16444E5BE301F0E7283ECFABE30
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_0] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_0] LandscapeTextureHash
+[Texture2D_1] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 7AC3F3A04B180219510DB4BA5C22D829
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_1] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_1] LandscapeTextureHash
+[Texture2D_10] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = B27FC63241D1D280CB790199A34C2811
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_10] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_10] LandscapeTextureHash
+[Texture2D_11] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = B6AE925B413708B7347948BDE0DB87EA
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_11] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_11] LandscapeTextureHash
+[Texture2D_12] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = EEE7FB5F45FC01D0AA0FEBA70C5B14A4
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_12] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_12] LandscapeTextureHash
+[Texture2D_13] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = E6F050A2479BD18DD18ED6A654E0D927
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_13] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_13] LandscapeTextureHash
+[Texture2D_15] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = DACF60F64B3FFA51CA96F39E8563248D
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_15] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_15] LandscapeTextureHash
+[Texture2D_17] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 41C8ED73417B343193C8CBB38BECD854
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_17] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_17] LandscapeTextureHash
+[Texture2D_18] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 09B1ABC548515DE091123E8F1496C5A1
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_18] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_18] LandscapeTextureHash
+[Texture2D_19] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 6EA3CF524CB1B33A98C9BAA7FC11196A
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_19] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_19] LandscapeTextureHash
+[Texture2D_2] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 631DB26C4BC608216092A083CE5C832E
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_2] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_2] LandscapeTextureHash
+[Texture2D_21] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 8DF19BF0473861A7D236A2B774085682
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_21] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_21] LandscapeTextureHash
+[Texture2D_23] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 40CBE9794053105D8F88DE8B6327BB28
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_23] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_23] LandscapeTextureHash
+[Texture2D_24] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 82DD1C6945CD62E8FD85DEBC670FEB9A
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_24] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_24] LandscapeTextureHash
+[Texture2D_25] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = C7F7773E461C592555A9F3912CDA34EC
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_25] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_25] LandscapeTextureHash
+[Texture2D_27] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = DF4805A947EB4B58353A0F88809B9CA2
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_27] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_27] LandscapeTextureHash
+[Texture2D_29] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 0AA6359B49A35668F3E70C83D4C5920A
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_29] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_29] LandscapeTextureHash
+[Texture2D_3] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = F57022AE4E713C8478BB618FCD2189E8
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_3] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_3] LandscapeTextureHash
+[Texture2D_30] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 917A826F4CA303BF0B74258584F5E815
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_30] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_30] LandscapeTextureHash
+[Texture2D_31] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 8D793F4B46F821F0029F15A9F5DE0818
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_31] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_31] LandscapeTextureHash
+[Texture2D_33] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = B079DAA543BA48DFFE45F8A872A70811
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_33] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_33] LandscapeTextureHash
+[Texture2D_35] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 1FB866044DEC7223D5C746B4B112C670
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_35] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_35] LandscapeTextureHash
+[Texture2D_36] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 909F2E2B4BF4FD5BD9F9438D2718E163
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_36] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_36] LandscapeTextureHash
+[Texture2D_37] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 5D1175304D48FB87176DE4B405266D9C
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_37] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_37] LandscapeTextureHash
+[Texture2D_38] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 83D5F4FC476B209D35C06CB349E295B6
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Heightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_38] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_38] LandscapeTextureHash
+[Texture2D_4] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 30957B2449D970B6E0C30F93783DDB2C
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_4] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_4] LandscapeTextureHash
+[Texture2D_5] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 549977E74F80C957D17E83B596B52CB9
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_5] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_5] LandscapeTextureHash
+[Texture2D_6] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 00680F564DEEE6B0472D0AAA191EE599
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_6] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_6] LandscapeTextureHash
+[Texture2D_7] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 79ADB6904FBF0F0C9DE8758FC9DBD636
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_7] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_7] LandscapeTextureHash
+[Texture2D_8] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = D1C4A43A4E3441E973B87FB93958132D
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_8] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_8] LandscapeTextureHash
+[Texture2D_9] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = C9C464EB46639EA116E5E19CC26BAB22
+    CompressionNone = True
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Texture2D_9] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Texture2D_9] LandscapeTextureHash
+[Weightmap_0] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = BE004B2645D87A83E1229FACF706CA34
+    CompressionNone = True
+    OodleTextureSdkVersion = "2.9.8"
+    CompressionQuality = TCQ_Highest
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Weightmap_0] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Weightmap_0] LandscapeTextureHash
+[Weightmap_1] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = A914C82C45F69100F364DEA3848E460A
+    CompressionNone = True
+    OodleTextureSdkVersion = "2.9.10"
+    CompressionQuality = TCQ_Highest
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Weightmap_1] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Weightmap_1] LandscapeTextureHash
+[Weightmap_2] Texture2D
+    AddressX = TA_Clamp
+    AddressY = TA_Clamp
+    ImportedSize = (X=64,Y=64)
+    LightingGuid = 108815E442E05E134A348BB482ECD52A
+    CompressionNone = True
+    OodleTextureSdkVersion = "2.9.10"
+    CompressionQuality = TCQ_Highest
+    MipGenSettings = TMGS_LeaveExistingMips
+    LODGroup = TEXTUREGROUP_Terrain_Weightmap
+    SRGB = False
+    AssetImportData <- AssetImportData
+    AssetUserData(0) <- LandscapeTextureHash_0
+[AssetImportData@PersistentLevel.Landscape_0.Weightmap_2] AssetImportData
+[LandscapeTextureHash_0@PersistentLevel.Landscape_0.Weightmap_2] LandscapeTextureHash
+[LandscapeComponent_14] LandscapeComponent
+    SectionBaseX = 126
+    SectionBaseY = 126
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-18.500000),Max=(X=63.000000,Y=63.000000,Z=2.859375),IsValid=True)
+    MipToMipMaxDeltas(0) = 2.265625
+    MipToMipMaxDeltas(1) = 8.210938
+    MipToMipMaxDeltas(2) = 10.919922
+    MipToMipMaxDeltas(3) = 9.693359
+    MipToMipMaxDeltas(4) = 11.000000
+    MipToMipMaxDeltas(5) = 3.546875
+    MipToMipMaxDeltas(6) = 10.599609
+    MipToMipMaxDeltas(7) = 9.146484
+    MipToMipMaxDeltas(8) = 10.453125
+    MipToMipMaxDeltas(9) = 5.828125
+    MipToMipMaxDeltas(10) = 8.093750
+    MipToMipMaxDeltas(11) = 9.851562
+    MipToMipMaxDeltas(12) = 2.830078
+    MipToMipMaxDeltas(13) = 9.398438
+    MipToMipMaxDeltas(14) = 6.601562
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Grass_LayerInfo.Grass_LayerInfo'",WeightmapTextureChannel=3)
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'")
+    WeightmapLayerAllocations(2) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=1)
+    MapBuildDataId = ABD4146A434FC13C548305B49EB5E26F
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Grass_LayerInfo.Grass_LayerInfo'",WeightmapTextureChannel=3)
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'")
+    MobileWeightmapLayerAllocations(2) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=1)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 4
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=126.000000,Y=126.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_12
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_50
+    LayersData <- Heightmap_0
+    LayersData <- Weightmap_3
+    HeightmapTexture <- Texture2D_13
+    WeightmapTextures(0) <- Texture2D_11
+[LandscapeComponent_15] LandscapeComponent
+    SectionBaseX = 189
+    SectionBaseY = 126
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-15.343750),Max=(X=63.000000,Y=63.000000,Z=2.335938),IsValid=True)
+    MipToMipMaxDeltas(0) = 1.136719
+    MipToMipMaxDeltas(1) = 3.990234
+    MipToMipMaxDeltas(2) = 6.255859
+    MipToMipMaxDeltas(3) = 8.132812
+    MipToMipMaxDeltas(4) = 9.501953
+    MipToMipMaxDeltas(5) = 1.746094
+    MipToMipMaxDeltas(6) = 5.998047
+    MipToMipMaxDeltas(7) = 7.875000
+    MipToMipMaxDeltas(8) = 9.244141
+    MipToMipMaxDeltas(9) = 2.130859
+    MipToMipMaxDeltas(10) = 6.820312
+    MipToMipMaxDeltas(11) = 8.189453
+    MipToMipMaxDeltas(12) = 3.189453
+    MipToMipMaxDeltas(13) = 7.740234
+    MipToMipMaxDeltas(14) = 5.093750
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Grass_LayerInfo.Grass_LayerInfo'",WeightmapTextureChannel=1)
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=2)
+    WeightmapLayerAllocations(2) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    MapBuildDataId = 21B13ADC46194DFAC22FB9A55A89C4BA
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Grass_LayerInfo.Grass_LayerInfo'",WeightmapTextureChannel=1)
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=2)
+    MobileWeightmapLayerAllocations(2) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 5
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=189.000000,Y=126.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_7
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_51
+    LayersData <- Heightmap_1
+    LayersData <- Weightmap_4
+    HeightmapTexture <- Texture2D_15
+    WeightmapTextures(0) <- Texture2D_12
+[LandscapeComponent_16] LandscapeComponent
+    SectionBaseX = 252
+    SectionBaseY = 126
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-12.210938),Max=(X=63.000000,Y=63.000000,Z=-2.148438),IsValid=True)
+    MipToMipMaxDeltas(0) = 2.636719
+    MipToMipMaxDeltas(1) = 4.556641
+    MipToMipMaxDeltas(2) = 6.453125
+    MipToMipMaxDeltas(3) = 5.884766
+    MipToMipMaxDeltas(4) = 6.509766
+    MipToMipMaxDeltas(5) = 2.718750
+    MipToMipMaxDeltas(6) = 6.453125
+    MipToMipMaxDeltas(7) = 5.884766
+    MipToMipMaxDeltas(8) = 6.509766
+    MipToMipMaxDeltas(9) = 2.789062
+    MipToMipMaxDeltas(10) = 5.822266
+    MipToMipMaxDeltas(11) = 6.447266
+    MipToMipMaxDeltas(12) = 3.296875
+    MipToMipMaxDeltas(13) = 6.283203
+    MipToMipMaxDeltas(14) = 4.056641
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=1)
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    MapBuildDataId = 64C4517F46DBF818FE8DF888A4B35F2A
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=1)
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 6
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=252.000000,Y=126.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_22
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_52
+    LayersData <- Heightmap_2
+    LayersData <- Weightmap_5
+    HeightmapTexture <- Texture2D_17
+    WeightmapTextures(0) <- Texture2D_5
+[LandscapeComponent_17] LandscapeComponent
+    SectionBaseX = 315
+    SectionBaseY = 126
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-22.726562),Max=(X=63.000000,Y=63.000000,Z=-3.742188),IsValid=True)
+    MipToMipMaxDeltas(0) = 1.031250
+    MipToMipMaxDeltas(1) = 7.052734
+    MipToMipMaxDeltas(2) = 6.542969
+    MipToMipMaxDeltas(3) = 8.382812
+    MipToMipMaxDeltas(4) = 12.726562
+    MipToMipMaxDeltas(5) = 2.003906
+    MipToMipMaxDeltas(6) = 5.363281
+    MipToMipMaxDeltas(7) = 8.367188
+    MipToMipMaxDeltas(8) = 12.710938
+    MipToMipMaxDeltas(9) = 2.677734
+    MipToMipMaxDeltas(10) = 8.000000
+    MipToMipMaxDeltas(11) = 12.343750
+    MipToMipMaxDeltas(12) = 2.378906
+    MipToMipMaxDeltas(13) = 11.656250
+    MipToMipMaxDeltas(14) = 5.242188
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=1)
+    MapBuildDataId = 5C069A4E49FC10BF56FF95977349353E
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=1)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 7
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=315.000000,Y=126.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_26
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_53
+    LayersData <- Heightmap_3
+    LayersData <- Weightmap_6
+    HeightmapTexture <- Texture2D_18
+    WeightmapTextures(0) <- Weightmap_1
+[LandscapeComponent_20] LandscapeComponent
+    SectionBaseX = 126
+    SectionBaseY = 189
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-14.835938),Max=(X=63.000000,Y=63.000000,Z=2.679688),IsValid=True)
+    MipToMipMaxDeltas(0) = 1.449219
+    MipToMipMaxDeltas(1) = 5.783203
+    MipToMipMaxDeltas(2) = 5.650391
+    MipToMipMaxDeltas(3) = 7.714844
+    MipToMipMaxDeltas(4) = 8.884766
+    MipToMipMaxDeltas(5) = 2.324219
+    MipToMipMaxDeltas(6) = 5.431641
+    MipToMipMaxDeltas(7) = 7.707031
+    MipToMipMaxDeltas(8) = 8.876953
+    MipToMipMaxDeltas(9) = 3.050781
+    MipToMipMaxDeltas(10) = 7.683594
+    MipToMipMaxDeltas(11) = 8.751953
+    MipToMipMaxDeltas(12) = 3.576172
+    MipToMipMaxDeltas(13) = 8.306641
+    MipToMipMaxDeltas(14) = 4.867188
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Grass_LayerInfo.Grass_LayerInfo'",WeightmapTextureChannel=1)
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'")
+    WeightmapLayerAllocations(2) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=2)
+    MapBuildDataId = C8B7E36A462C900A609706BD7C222183
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Grass_LayerInfo.Grass_LayerInfo'",WeightmapTextureChannel=1)
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'")
+    MobileWeightmapLayerAllocations(2) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=2)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 9
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=126.000000,Y=189.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_28
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_56
+    LayersData <- Heightmap_4
+    LayersData <- Weightmap_7
+    HeightmapTexture <- Texture2D_19
+    WeightmapTextures(0) <- Texture2D_4
+[LandscapeComponent_21] LandscapeComponent
+    SectionBaseX = 189
+    SectionBaseY = 189
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-21.500000),Max=(X=63.000000,Y=63.000000,Z=2.093750),IsValid=True)
+    MipToMipMaxDeltas(0) = 2.333984
+    MipToMipMaxDeltas(1) = 6.144531
+    MipToMipMaxDeltas(2) = 8.738281
+    MipToMipMaxDeltas(3) = 12.246094
+    MipToMipMaxDeltas(4) = 16.261719
+    MipToMipMaxDeltas(5) = 2.855469
+    MipToMipMaxDeltas(6) = 7.636719
+    MipToMipMaxDeltas(7) = 11.855469
+    MipToMipMaxDeltas(8) = 16.222656
+    MipToMipMaxDeltas(9) = 4.029297
+    MipToMipMaxDeltas(10) = 11.496094
+    MipToMipMaxDeltas(11) = 16.175781
+    MipToMipMaxDeltas(12) = 5.718750
+    MipToMipMaxDeltas(13) = 15.871094
+    MipToMipMaxDeltas(14) = 5.785156
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Grass_LayerInfo.Grass_LayerInfo'",WeightmapTextureChannel=1)
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=2)
+    WeightmapLayerAllocations(2) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    MapBuildDataId = 059A5FC247768F19AD2E97BA9E5A05FA
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Grass_LayerInfo.Grass_LayerInfo'",WeightmapTextureChannel=1)
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=2)
+    MobileWeightmapLayerAllocations(2) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 10
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=189.000000,Y=189.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_29
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_57
+    LayersData <- Heightmap_5
+    LayersData <- Weightmap_8
+    HeightmapTexture <- Texture2D_21
+    WeightmapTextures(0) <- Texture2D_6
+[LandscapeComponent_22] LandscapeComponent
+    SectionBaseX = 252
+    SectionBaseY = 189
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-23.359375),Max=(X=63.000000,Y=63.000000,Z=-3.718750),IsValid=True)
+    MipToMipMaxDeltas(0) = 1.701172
+    MipToMipMaxDeltas(1) = 5.890625
+    MipToMipMaxDeltas(2) = 7.326172
+    MipToMipMaxDeltas(3) = 9.189453
+    MipToMipMaxDeltas(4) = 13.353516
+    MipToMipMaxDeltas(5) = 3.257812
+    MipToMipMaxDeltas(6) = 7.287109
+    MipToMipMaxDeltas(7) = 8.710938
+    MipToMipMaxDeltas(8) = 13.306641
+    MipToMipMaxDeltas(9) = 4.625000
+    MipToMipMaxDeltas(10) = 8.515625
+    MipToMipMaxDeltas(11) = 13.205078
+    MipToMipMaxDeltas(12) = 3.130859
+    MipToMipMaxDeltas(13) = 12.845703
+    MipToMipMaxDeltas(14) = 6.085938
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=2)
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    MapBuildDataId = 746E2F0D48FFE73539F7FDAB75E61677
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=2)
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 11
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=252.000000,Y=189.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_41
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_58
+    LayersData <- Heightmap_6
+    LayersData <- Weightmap_9
+    HeightmapTexture <- Texture2D_23
+    WeightmapTextures(0) <- Texture2D_7
+[LandscapeComponent_23] LandscapeComponent
+    SectionBaseX = 315
+    SectionBaseY = 189
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-16.789062),Max=(X=63.000000,Y=63.000000,Z=-5.226562),IsValid=True)
+    MipToMipMaxDeltas(0) = 0.599609
+    MipToMipMaxDeltas(1) = 3.435547
+    MipToMipMaxDeltas(2) = 4.720703
+    MipToMipMaxDeltas(3) = 5.101562
+    MipToMipMaxDeltas(4) = 6.201172
+    MipToMipMaxDeltas(5) = 1.000000
+    MipToMipMaxDeltas(6) = 4.408203
+    MipToMipMaxDeltas(7) = 5.101562
+    MipToMipMaxDeltas(8) = 6.201172
+    MipToMipMaxDeltas(9) = 1.705078
+    MipToMipMaxDeltas(10) = 5.101562
+    MipToMipMaxDeltas(11) = 6.201172
+    MipToMipMaxDeltas(12) = 3.087891
+    MipToMipMaxDeltas(13) = 6.201172
+    MipToMipMaxDeltas(14) = 5.101562
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=2)
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=3)
+    MapBuildDataId = C1E48C6B49F473F88BBF2295821077C6
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=2)
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=3)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 12
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=315.000000,Y=189.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_43
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_59
+    LayersData <- Heightmap_7
+    LayersData <- Weightmap_10
+    HeightmapTexture <- Texture2D_24
+    WeightmapTextures(0) <- Weightmap_0
+[LandscapeComponent_26] LandscapeComponent
+    SectionBaseX = 126
+    SectionBaseY = 252
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-14.953125),Max=(X=63.000000,Y=63.000000,Z=-1.265625),IsValid=True)
+    MipToMipMaxDeltas(0) = 1.910156
+    MipToMipMaxDeltas(1) = 4.167969
+    MipToMipMaxDeltas(2) = 5.490234
+    MipToMipMaxDeltas(3) = 8.156250
+    MipToMipMaxDeltas(4) = 10.185547
+    MipToMipMaxDeltas(5) = 2.634766
+    MipToMipMaxDeltas(6) = 5.349609
+    MipToMipMaxDeltas(7) = 8.070312
+    MipToMipMaxDeltas(8) = 10.169922
+    MipToMipMaxDeltas(9) = 2.781250
+    MipToMipMaxDeltas(10) = 7.296875
+    MipToMipMaxDeltas(11) = 10.123047
+    MipToMipMaxDeltas(12) = 2.300781
+    MipToMipMaxDeltas(13) = 9.998047
+    MipToMipMaxDeltas(14) = 4.507812
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'")
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    MapBuildDataId = 75BE061348500563C8912D8454FF45D1
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'")
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 13
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=126.000000,Y=252.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_44
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_62
+    LayersData <- Heightmap_8
+    LayersData <- Weightmap_11
+    HeightmapTexture <- Texture2D_25
+    WeightmapTextures(0) <- Texture2D_9
+[LandscapeComponent_27] LandscapeComponent
+    SectionBaseX = 189
+    SectionBaseY = 252
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-28.312500),Max=(X=63.000000,Y=63.000000,Z=-4.375000),IsValid=True)
+    MipToMipMaxDeltas(0) = 1.527344
+    MipToMipMaxDeltas(1) = 6.158203
+    MipToMipMaxDeltas(2) = 7.806641
+    MipToMipMaxDeltas(3) = 8.490234
+    MipToMipMaxDeltas(4) = 17.242188
+    MipToMipMaxDeltas(5) = 2.960938
+    MipToMipMaxDeltas(6) = 7.314453
+    MipToMipMaxDeltas(7) = 8.294922
+    MipToMipMaxDeltas(8) = 17.046875
+    MipToMipMaxDeltas(9) = 4.373047
+    MipToMipMaxDeltas(10) = 8.216797
+    MipToMipMaxDeltas(11) = 16.968750
+    MipToMipMaxDeltas(12) = 7.314453
+    MipToMipMaxDeltas(13) = 16.671875
+    MipToMipMaxDeltas(14) = 6.880859
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=1)
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=2)
+    MapBuildDataId = FB2C92C740B28B0D2BBBF18181FE5229
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=1)
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=2)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 14
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=189.000000,Y=252.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_45
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_63
+    LayersData <- Heightmap_9
+    LayersData <- Weightmap_12
+    HeightmapTexture <- Texture2D_27
+    WeightmapTextures(0) <- Texture2D_9
+[LandscapeComponent_28] LandscapeComponent
+    SectionBaseX = 252
+    SectionBaseY = 252
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-29.140625),Max=(X=63.000000,Y=63.000000,Z=-8.875000),IsValid=True)
+    MipToMipMaxDeltas(0) = 1.460938
+    MipToMipMaxDeltas(1) = 7.800781
+    MipToMipMaxDeltas(2) = 8.871094
+    MipToMipMaxDeltas(3) = 14.583984
+    MipToMipMaxDeltas(4) = 16.351562
+    MipToMipMaxDeltas(5) = 2.794922
+    MipToMipMaxDeltas(6) = 8.753906
+    MipToMipMaxDeltas(7) = 14.044922
+    MipToMipMaxDeltas(8) = 16.250000
+    MipToMipMaxDeltas(9) = 3.166016
+    MipToMipMaxDeltas(10) = 12.748047
+    MipToMipMaxDeltas(11) = 15.906250
+    MipToMipMaxDeltas(12) = 6.269531
+    MipToMipMaxDeltas(13) = 15.140625
+    MipToMipMaxDeltas(14) = 7.126953
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'")
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=1)
+    MapBuildDataId = 785ADB774A4D292C85E48BAC60CB47EF
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'")
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=1)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 15
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=252.000000,Y=252.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_46
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_64
+    LayersData <- Heightmap_10
+    LayersData <- Weightmap_13
+    HeightmapTexture <- Texture2D_29
+    WeightmapTextures(0) <- Texture2D_8
+[LandscapeComponent_29] LandscapeComponent
+    SectionBaseX = 315
+    SectionBaseY = 252
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-17.929688),Max=(X=63.000000,Y=63.000000,Z=-3.062500),IsValid=True)
+    MipToMipMaxDeltas(0) = 1.144531
+    MipToMipMaxDeltas(1) = 4.035156
+    MipToMipMaxDeltas(2) = 5.431641
+    MipToMipMaxDeltas(3) = 7.380859
+    MipToMipMaxDeltas(4) = 9.146484
+    MipToMipMaxDeltas(5) = 1.824219
+    MipToMipMaxDeltas(6) = 5.009766
+    MipToMipMaxDeltas(7) = 7.208984
+    MipToMipMaxDeltas(8) = 9.107422
+    MipToMipMaxDeltas(9) = 2.074219
+    MipToMipMaxDeltas(10) = 6.521484
+    MipToMipMaxDeltas(11) = 9.068359
+    MipToMipMaxDeltas(12) = 3.021484
+    MipToMipMaxDeltas(13) = 8.732422
+    MipToMipMaxDeltas(14) = 4.451172
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    MapBuildDataId = 262CA86E464371FE54596D8B36FE35F9
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 16
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=315.000000,Y=252.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_47
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_65
+    LayersData <- Heightmap_11
+    LayersData <- Weightmap_14
+    HeightmapTexture <- Texture2D_30
+    WeightmapTextures(0) <- Texture2D_7
+[LandscapeComponent_32] LandscapeComponent
+    SectionBaseX = 126
+    SectionBaseY = 315
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-15.210938),Max=(X=63.000000,Y=63.000000,Z=-0.039062),IsValid=True)
+    MipToMipMaxDeltas(0) = 1.996094
+    MipToMipMaxDeltas(1) = 5.626953
+    MipToMipMaxDeltas(2) = 7.224609
+    MipToMipMaxDeltas(3) = 8.029297
+    MipToMipMaxDeltas(4) = 9.550781
+    MipToMipMaxDeltas(5) = 1.759766
+    MipToMipMaxDeltas(6) = 6.865234
+    MipToMipMaxDeltas(7) = 7.951172
+    MipToMipMaxDeltas(8) = 9.550781
+    MipToMipMaxDeltas(9) = 2.845703
+    MipToMipMaxDeltas(10) = 7.646484
+    MipToMipMaxDeltas(11) = 9.519531
+    MipToMipMaxDeltas(12) = 3.931641
+    MipToMipMaxDeltas(13) = 9.417969
+    MipToMipMaxDeltas(14) = 5.271484
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=2)
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=3)
+    MapBuildDataId = 81E032E2439B20616E07799CCD837398
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=2)
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'",WeightmapTextureChannel=3)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 18
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=126.000000,Y=315.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_1
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_68
+    LayersData <- Heightmap_12
+    LayersData <- Weightmap_15
+    HeightmapTexture <- Texture2D_31
+    WeightmapTextures(0) <- Weightmap_1
+[LandscapeComponent_33] LandscapeComponent
+    SectionBaseX = 189
+    SectionBaseY = 315
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-14.984375),Max=(X=63.000000,Y=63.000000,Z=-6.007812),IsValid=True)
+    MipToMipMaxDeltas(0) = 0.681641
+    MipToMipMaxDeltas(1) = 2.861328
+    MipToMipMaxDeltas(2) = 3.783203
+    MipToMipMaxDeltas(3) = 4.300781
+    MipToMipMaxDeltas(4) = 5.228516
+    MipToMipMaxDeltas(5) = 0.841797
+    MipToMipMaxDeltas(6) = 3.666016
+    MipToMipMaxDeltas(7) = 3.933594
+    MipToMipMaxDeltas(8) = 5.228516
+    MipToMipMaxDeltas(9) = 1.734375
+    MipToMipMaxDeltas(10) = 3.597656
+    MipToMipMaxDeltas(11) = 5.228516
+    MipToMipMaxDeltas(12) = 2.082031
+    MipToMipMaxDeltas(13) = 5.228516
+    MipToMipMaxDeltas(14) = 2.746094
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'")
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=1)
+    MapBuildDataId = 3A434FAE44E7CABC2FA7E5AA6D87DA66
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Rocks_LayerInfo.Rocks_LayerInfo'")
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=1)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 19
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=189.000000,Y=315.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_50
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_69
+    LayersData <- Heightmap_13
+    LayersData <- Weightmap_16
+    HeightmapTexture <- Texture2D_33
+    WeightmapTextures(0) <- Texture2D_10
+[LandscapeComponent_34] LandscapeComponent
+    SectionBaseX = 252
+    SectionBaseY = 315
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-16.789062),Max=(X=63.000000,Y=63.000000,Z=-6.679688),IsValid=True)
+    MipToMipMaxDeltas(0) = 0.716797
+    MipToMipMaxDeltas(1) = 3.294922
+    MipToMipMaxDeltas(2) = 4.007812
+    MipToMipMaxDeltas(3) = 5.173828
+    MipToMipMaxDeltas(4) = 5.248047
+    MipToMipMaxDeltas(5) = 1.460938
+    MipToMipMaxDeltas(6) = 3.750000
+    MipToMipMaxDeltas(7) = 5.064453
+    MipToMipMaxDeltas(8) = 5.021484
+    MipToMipMaxDeltas(9) = 1.873047
+    MipToMipMaxDeltas(10) = 4.962891
+    MipToMipMaxDeltas(11) = 4.966797
+    MipToMipMaxDeltas(12) = 2.599609
+    MipToMipMaxDeltas(13) = 4.748047
+    MipToMipMaxDeltas(14) = 3.433594
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=2)
+    MapBuildDataId = 49508ADD4EF7FB16F1DD32BE74CCF7AE
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=2)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 20
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=252.000000,Y=315.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_51
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_70
+    LayersData <- Heightmap_14
+    LayersData <- Weightmap_17
+    HeightmapTexture <- Texture2D_35
+    WeightmapTextures(0) <- Texture2D_8
+[LandscapeComponent_35] LandscapeComponent
+    SectionBaseX = 315
+    SectionBaseY = 315
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-17.046875),Max=(X=63.000000,Y=63.000000,Z=-4.851562),IsValid=True)
+    MipToMipMaxDeltas(0) = 2.525391
+    MipToMipMaxDeltas(1) = 5.609375
+    MipToMipMaxDeltas(2) = 6.876953
+    MipToMipMaxDeltas(3) = 6.914062
+    MipToMipMaxDeltas(4) = 7.197266
+    MipToMipMaxDeltas(5) = 4.570312
+    MipToMipMaxDeltas(6) = 6.845703
+    MipToMipMaxDeltas(7) = 6.882812
+    MipToMipMaxDeltas(8) = 7.189453
+    MipToMipMaxDeltas(9) = 5.058594
+    MipToMipMaxDeltas(10) = 6.734375
+    MipToMipMaxDeltas(11) = 6.525391
+    MipToMipMaxDeltas(12) = 5.533203
+    MipToMipMaxDeltas(13) = 6.517578
+    MipToMipMaxDeltas(14) = 4.603516
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    MapBuildDataId = 3A5218EF4434B6993FA372AD66A7C12D
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 21
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=315.000000,Y=315.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_52
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_71
+    LayersData <- Heightmap_15
+    LayersData <- Weightmap_18
+    HeightmapTexture <- Texture2D_36
+    WeightmapTextures(0) <- Texture2D_8
+[LandscapeComponent_0] LandscapeComponent
+    SectionBaseX = 126
+    SectionBaseY = 378
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-22.992188),Max=(X=63.000000,Y=63.000000,Z=3.187500),IsValid=True)
+    MipToMipMaxDeltas(0) = 1.662109
+    MipToMipMaxDeltas(1) = 6.833984
+    MipToMipMaxDeltas(2) = 12.857422
+    MipToMipMaxDeltas(3) = 20.697266
+    MipToMipMaxDeltas(4) = 14.496094
+    MipToMipMaxDeltas(5) = 2.466797
+    MipToMipMaxDeltas(6) = 12.279297
+    MipToMipMaxDeltas(7) = 20.119141
+    MipToMipMaxDeltas(8) = 14.363281
+    MipToMipMaxDeltas(9) = 3.892578
+    MipToMipMaxDeltas(10) = 19.064453
+    MipToMipMaxDeltas(11) = 14.003906
+    MipToMipMaxDeltas(12) = 8.013672
+    MipToMipMaxDeltas(13) = 13.699219
+    MipToMipMaxDeltas(14) = 11.781250
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    WeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Grass_LayerInfo.Grass_LayerInfo'",WeightmapTextureChannel=1)
+    MapBuildDataId = FC0FAB9A4DA52EAE9A3DC68F5480FB85
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'")
+    MobileWeightmapLayerAllocations(1) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Grass_LayerInfo.Grass_LayerInfo'",WeightmapTextureChannel=1)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 2
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=126.000000,Y=378.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_6
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_0
+    LayersData <- Heightmap_16
+    LayersData <- Weightmap_19
+    HeightmapTexture <- Texture2D_0
+    WeightmapTextures(0) <- Weightmap_0
+[LandscapeComponent_1] LandscapeComponent
+    SectionBaseX = 189
+    SectionBaseY = 378
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-22.992188),Max=(X=63.000000,Y=63.000000,Z=-5.937500),IsValid=True)
+    MipToMipMaxDeltas(0) = 1.263672
+    MipToMipMaxDeltas(1) = 4.683594
+    MipToMipMaxDeltas(2) = 8.011719
+    MipToMipMaxDeltas(3) = 9.357422
+    MipToMipMaxDeltas(4) = 10.273438
+    MipToMipMaxDeltas(5) = 2.113281
+    MipToMipMaxDeltas(6) = 7.386719
+    MipToMipMaxDeltas(7) = 9.310547
+    MipToMipMaxDeltas(8) = 10.203125
+    MipToMipMaxDeltas(9) = 3.339844
+    MipToMipMaxDeltas(10) = 9.240234
+    MipToMipMaxDeltas(11) = 10.203125
+    MipToMipMaxDeltas(12) = 3.990234
+    MipToMipMaxDeltas(13) = 10.203125
+    MipToMipMaxDeltas(14) = 6.826172
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    MapBuildDataId = 5B10372A4CB0D0D9FB35928672A7D101
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 3
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=189.000000,Y=378.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_10
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_1
+    LayersData <- Heightmap_17
+    LayersData <- Weightmap_20
+    HeightmapTexture <- Texture2D_1
+    WeightmapTextures(0) <- Texture2D_10
+[LandscapeComponent_2] LandscapeComponent
+    SectionBaseX = 252
+    SectionBaseY = 378
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-23.078125),Max=(X=63.000000,Y=63.000000,Z=-12.546875),IsValid=True)
+    MipToMipMaxDeltas(0) = 2.160156
+    MipToMipMaxDeltas(1) = 6.259766
+    MipToMipMaxDeltas(2) = 7.929688
+    MipToMipMaxDeltas(3) = 9.570312
+    MipToMipMaxDeltas(4) = 5.306641
+    MipToMipMaxDeltas(5) = 3.705078
+    MipToMipMaxDeltas(6) = 7.859375
+    MipToMipMaxDeltas(7) = 9.500000
+    MipToMipMaxDeltas(8) = 5.291016
+    MipToMipMaxDeltas(9) = 4.400391
+    MipToMipMaxDeltas(10) = 9.382812
+    MipToMipMaxDeltas(11) = 5.259766
+    MipToMipMaxDeltas(12) = 4.208984
+    MipToMipMaxDeltas(13) = 5.087891
+    MipToMipMaxDeltas(14) = 3.912109
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    MapBuildDataId = 5CE22D2C45B45651FFE861AABDFFB199
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 8
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=252.000000,Y=378.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_27
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_2
+    LayersData <- Heightmap_18
+    LayersData <- Weightmap_21
+    HeightmapTexture <- Texture2D_2
+    WeightmapTextures(0) <- Texture2D_5
+[LandscapeComponent_3] LandscapeComponent
+    SectionBaseX = 315
+    SectionBaseY = 378
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0
+    LODIndexToMaterialIndex(3) = 0
+    LODIndexToMaterialIndex(4) = 0
+    LODIndexToMaterialIndex(5) = 0
+    WeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.007812,W=0.007812)
+    WeightmapSubsectionOffset = 1.000000
+    HeightmapScaleBias = (X=0.015625,Y=0.015625,Z=0.000000,W=0.000000)
+    CachedLocalBox = (Min=(X=0.000000,Y=0.000000,Z=-22.804688),Max=(X=63.000000,Y=63.000000,Z=-4.375000),IsValid=True)
+    MipToMipMaxDeltas(0) = 2.193359
+    MipToMipMaxDeltas(1) = 9.259766
+    MipToMipMaxDeltas(2) = 10.185547
+    MipToMipMaxDeltas(3) = 8.248047
+    MipToMipMaxDeltas(4) = 9.257812
+    MipToMipMaxDeltas(5) = 4.058594
+    MipToMipMaxDeltas(6) = 8.552734
+    MipToMipMaxDeltas(7) = 8.076172
+    MipToMipMaxDeltas(8) = 9.257812
+    MipToMipMaxDeltas(9) = 4.185547
+    MipToMipMaxDeltas(10) = 7.423828
+    MipToMipMaxDeltas(11) = 9.242188
+    MipToMipMaxDeltas(12) = 5.136719
+    MipToMipMaxDeltas(13) = 9.171875
+    MipToMipMaxDeltas(14) = 6.962891
+    WeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    MapBuildDataId = ABE49A454BD626D3A296AA905B7AB1EA
+    PhysicalMaterialHash = 1037353353
+    MobileWeightmapLayerAllocations(0) = (LayerInfo="/Script/Landscape.LandscapeLayerInfoObject'/Game/FluidFlux/Demo/Environment/Landscape/Layers/Sand_LayerInfo.Sand_LayerInfo'",WeightmapTextureChannel=3)
+    CastShadow = True
+    bCastFarShadow = True
+    VisibilityId = 17
+    AttachParent = "RootComponent0"
+    RelativeLocation = (X=315.000000,Y=378.000000,Z=0.000000)
+    MaterialInstances(0) <- LandscapeMaterialInstanceConstant_48
+    CollisionComponentRef <- LandscapeHeightfieldCollisionComponent_3
+    LayersData <- Heightmap_19
+    LayersData <- Weightmap_22
+    HeightmapTexture <- Texture2D_3
+    WeightmapTextures(0) <- Texture2D_12
+[LandscapeComponent_5] LandscapeComponent
+    SectionBaseX = 63
+    SectionBaseY = 378
+    ComponentSizeQuads = 63
+    SubsectionSizeQuads = 63
+    NumSubsections = 1
+    LODIndexToMaterialIndex(1) = 0
+    LODIndexToMaterialIndex(2) = 0

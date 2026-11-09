@@ -1,0 +1,130 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Tools/MF_Turbulence
+# класс: MaterialFunction; происхождение: проект; узлов: 21; связей: 40; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:42
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Turbulence] MaterialFunction
+    StateId = 9EE57A1A4AA5075D503BF1BDA7A3F57C
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_TurbulenceEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_TurbulenceEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionSine_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionMultiply_5
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.450000
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.030000
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 0.300000
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "UV"
+    Id = 9BEB844B472F5637F9DB4DA67A04C09F
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Repeats"
+    Id = C0FDD6D449FCFAD342DD8185B64EBB1F
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_1
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Scale"
+    Id = FC0A6B4D4056F5D04C95029BC95BF01F
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Speed"
+    Id = BED86B67411992D7F0839B9B38E98B2A
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_3
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "UV"
+    bLastPreviewed = True
+    Id = 74FFE4CC468F1DDDC0160D8B7B18BA17
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_3
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Offset"
+    bLastPreviewed = True
+    Id = D07DC16648A6D944E2973EA73BBA291E
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_5
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Fluid/MF_Time.MF_Time'"
+    FunctionOutputs(0) = (ExpressionOutputId=D518ED86409053561A1E83BC4F7918B3,Output=(OutputName="Time"))
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    Outputs(0) = (OutputName="Time")
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/Swizzle.Swizzle'"
+    FunctionInputs(0) = (ExpressionInputId=A69F37C24DE1C142F4640887315D5546,Input=(InputName="XYZ"))
+    FunctionOutputs(0) = (ExpressionOutputId=0C61802A4200305BC12289AE0E4C0A23,Output=(OutputName="YXZ"))
+    FunctionOutputs(1) = (ExpressionOutputId=E29D70BA4C6563818D2F7D8D54BA6015,Output=(OutputName="YX"))
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    Outputs(0) = (OutputName="YXZ")
+    Outputs(1) = (OutputName="YX")
+    FunctionInputs(1) <- MaterialExpressionSine_1
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionFunctionInput_3
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionSine_1] MaterialExpressionSine
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+    Input <- MaterialExpressionAdd_2
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_Turbulence'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

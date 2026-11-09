@@ -1,0 +1,2041 @@
+﻿# /Game/FluidFlux/Editor/Blueprints/BPU_ExportData
+# класс: EditorUtilityBlueprint; происхождение: проект; узлов: 507; связей: 759; HLSL: 0; причина: папка /Game/FluidFlux; тело:30
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BPU_ExportData] EditorUtilityBlueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Blutility.ActorActionUtility'"
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Helpers"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:EventGraph",SavedViewOffset=(X=-603.195923,Y=-462.880646),SavedZoomAmount=0.500000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:SaveTexture",SavedViewOffset=(X=-444.316315,Y=-204.497482),SavedZoomAmount=0.675000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:ValidateResolution",SavedViewOffset=(X=1144.356689,Y=1452.588013),SavedZoomAmount=0.750000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:GetFirstSelectedActor",SavedViewOffset=(X=-384.281921,Y=-155.352982),SavedZoomAmount=1.000000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:MoveToSameFolder",SavedViewOffset=(X=1811.739502,Y=114.495743),SavedZoomAmount=0.875000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:PrepareHeightmapBake",SavedViewOffset=(X=165.453476,Y=-817.029175),SavedZoomAmount=0.675000)
+    LastEditedDocuments(6) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:GetWorld",SavedViewOffset=(X=-528.010315,Y=-287.415619),SavedZoomAmount=1.000000)
+    LastEditedDocuments(7) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:BeginExporting",SavedViewOffset=(X=-222.508850,Y=-221.415619),SavedZoomAmount=1.000000)
+    LastEditedDocuments(8) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:BuildName",SavedViewOffset=(X=205.464142,Y=-534.377136),SavedZoomAmount=0.750000)
+    LastEditedDocuments(9) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:DeleteStateReferences",SavedViewOffset=(X=-280.783264,Y=-419.847076),SavedZoomAmount=0.675000)
+    LastEditedDocuments(10) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:BakeHeightmapToRT",SavedViewOffset=(X=625.107788,Y=577.292603),SavedZoomAmount=0.875000)
+    LastEditedDocuments(11) = (EditedObjectPath="/Game/FluidFlux/Editor/Blueprints/BPU_ExportData.BPU_ExportData:BakeToTexture",SavedViewOffset=(X=1713.655396,Y=788.248291),SavedZoomAmount=0.875000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BPU_ExportData_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 1EB3FBD64E75107315122BB713AFAAF1
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- BakeToTexture
+    FunctionGraphs(1) <- BakeHeightmapToRT
+    FunctionGraphs(2) <- MoveToSameFolder
+    FunctionGraphs(3) <- ValidateResolution
+    FunctionGraphs(4) <- DeleteStateReferences
+    FunctionGraphs(5) <- GetFirstSelectedActor
+    FunctionGraphs(6) <- SaveTexture
+    FunctionGraphs(7) <- PrepareHeightmapBake
+    FunctionGraphs(8) <- GetWorld
+    FunctionGraphs(9) <- BeginExporting
+    FunctionGraphs(10) <- BuildName
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 66069EF4416C783CA83E779AF9325615
+[BakeToTexture] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = C53ADF8842E2EA60C680CA91CB1A88BA
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_CallFunction_2
+    Nodes(3) <- K2Node_CallFunction_4
+    Nodes(4) <- K2Node_VariableSet_6
+    Nodes(5) <- K2Node_VariableGet_29
+    Nodes(6) <- K2Node_CallFunction_18
+    Nodes(7) <- K2Node_VariableGet_8
+    Nodes(8) <- K2Node_VariableGet_4
+    Nodes(9) <- K2Node_ExecutionSequence_0
+    Nodes(10) <- EdGraphNode_Comment_0
+    Nodes(11) <- K2Node_VariableGet_0
+    Nodes(12) <- K2Node_VariableGet_5
+    Nodes(13) <- K2Node_VariableGet_10
+    Nodes(14) <- K2Node_CallFunction_7
+    Nodes(15) <- K2Node_CallFunction_5
+    Nodes(16) <- K2Node_CallFunction_6
+    Nodes(17) <- K2Node_VariableGet_6
+    Nodes(18) <- K2Node_VariableGet_2
+    Nodes(19) <- K2Node_VariableGet_11
+    Nodes(20) <- K2Node_VariableGet_7
+    Nodes(21) <- K2Node_VariableGet_13
+    Nodes(22) <- K2Node_VariableGet_9
+[K2Node_FunctionEntry_0@BakeToTexture] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@BakeToTexture] K2Node_FunctionResult
+[K2Node_CallFunction_2@BakeToTexture] K2Node_CallFunction
+[K2Node_CallFunction_4@BakeToTexture] K2Node_CallFunction
+[K2Node_VariableSet_6@BakeToTexture] K2Node_VariableSet
+[K2Node_VariableGet_29@BakeToTexture] K2Node_VariableGet
+[K2Node_CallFunction_18@BakeToTexture] K2Node_CallFunction
+[K2Node_VariableGet_8@BakeToTexture] K2Node_VariableGet
+[K2Node_VariableGet_4@BakeToTexture] K2Node_VariableGet
+[K2Node_ExecutionSequence_0@BakeToTexture] K2Node_ExecutionSequence
+[EdGraphNode_Comment_0@BakeToTexture] EdGraphNode_Comment
+[K2Node_VariableGet_0@BakeToTexture] K2Node_VariableGet
+[K2Node_VariableGet_5@BakeToTexture] K2Node_VariableGet
+[K2Node_VariableGet_10@BakeToTexture] K2Node_VariableGet
+[K2Node_CallFunction_7@BakeToTexture] K2Node_CallFunction
+[K2Node_CallFunction_5@BakeToTexture] K2Node_CallFunction
+[K2Node_CallFunction_6@BakeToTexture] K2Node_CallFunction
+[K2Node_VariableGet_6@BakeToTexture] K2Node_VariableGet
+[K2Node_VariableGet_2@BakeToTexture] K2Node_VariableGet
+[K2Node_VariableGet_11@BakeToTexture] K2Node_VariableGet
+[K2Node_VariableGet_7@BakeToTexture] K2Node_VariableGet
+[K2Node_VariableGet_13@BakeToTexture] K2Node_VariableGet
+[K2Node_VariableGet_9@BakeToTexture] K2Node_VariableGet
+[BakeHeightmapToRT] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 3A72AA744382319D26D1738AA1459E9B
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_CallFunction_4
+    Nodes(3) <- K2Node_VariableSet_6
+    Nodes(4) <- K2Node_CallFunction_18
+    Nodes(5) <- K2Node_VariableGet_8
+    Nodes(6) <- EdGraphNode_Comment_0
+    Nodes(7) <- K2Node_VariableGet_16
+    Nodes(8) <- K2Node_VariableGet_5
+    Nodes(9) <- K2Node_CallFunction_7
+    Nodes(10) <- K2Node_CallFunction_5
+    Nodes(11) <- K2Node_VariableGet_11
+    Nodes(12) <- K2Node_VariableGet_14
+    Nodes(13) <- K2Node_VariableGet_9
+    Nodes(14) <- K2Node_VariableGet_1
+    Nodes(15) <- K2Node_CallFunction_10
+    Nodes(16) <- K2Node_VariableSet_2
+    Nodes(17) <- K2Node_VariableGet_15
+    Nodes(18) <- K2Node_BreakStruct_1
+    Nodes(19) <- K2Node_VariableGet_17
+    Nodes(20) <- K2Node_VariableGet_18
+    Nodes(21) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BakeHeightmapToRT] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@BakeHeightmapToRT] K2Node_FunctionResult
+[K2Node_CallFunction_4@BakeHeightmapToRT] K2Node_CallFunction
+[K2Node_VariableSet_6@BakeHeightmapToRT] K2Node_VariableSet
+[K2Node_CallFunction_18@BakeHeightmapToRT] K2Node_CallFunction
+[K2Node_VariableGet_8@BakeHeightmapToRT] K2Node_VariableGet
+[EdGraphNode_Comment_0@BakeHeightmapToRT] EdGraphNode_Comment
+[K2Node_VariableGet_16@BakeHeightmapToRT] K2Node_VariableGet
+[K2Node_VariableGet_5@BakeHeightmapToRT] K2Node_VariableGet
+[K2Node_CallFunction_7@BakeHeightmapToRT] K2Node_CallFunction
+[K2Node_CallFunction_5@BakeHeightmapToRT] K2Node_CallFunction
+[K2Node_VariableGet_11@BakeHeightmapToRT] K2Node_VariableGet
+[K2Node_VariableGet_14@BakeHeightmapToRT] K2Node_VariableGet
+[K2Node_VariableGet_9@BakeHeightmapToRT] K2Node_VariableGet
+[K2Node_VariableGet_1@BakeHeightmapToRT] K2Node_VariableGet
+[K2Node_CallFunction_10@BakeHeightmapToRT] K2Node_CallFunction
+[K2Node_VariableSet_2@BakeHeightmapToRT] K2Node_VariableSet
+[K2Node_VariableGet_15@BakeHeightmapToRT] K2Node_VariableGet
+[K2Node_BreakStruct_1@BakeHeightmapToRT] K2Node_BreakStruct
+[K2Node_VariableGet_17@BakeHeightmapToRT] K2Node_VariableGet
+[K2Node_VariableGet_18@BakeHeightmapToRT] K2Node_VariableGet
+[K2Node_CallFunction_0@BakeHeightmapToRT] K2Node_CallFunction
+[MoveToSameFolder] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 6B71A0F24B88DAB3EDF4A3B863EC9442
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_CallFunction_10
+    Nodes(3) <- K2Node_CallFunction_18
+    Nodes(4) <- K2Node_CallFunction_2
+    Nodes(5) <- K2Node_CommutativeAssociativeBinaryOperator_5
+    Nodes(6) <- K2Node_CallFunction_19
+    Nodes(7) <- K2Node_CommutativeAssociativeBinaryOperator_4
+    Nodes(8) <- K2Node_CallFunction_5
+    Nodes(9) <- K2Node_IfThenElse_0
+    Nodes(10) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(11) <- K2Node_VariableGet_0
+    Nodes(12) <- K2Node_VariableGet_8
+    Nodes(13) <- K2Node_VariableGet_9
+    Nodes(14) <- K2Node_VariableSet_1
+    Nodes(15) <- K2Node_VariableGet_3
+    Nodes(16) <- K2Node_CallFunction_6
+    Nodes(17) <- K2Node_VariableGet_4
+    Nodes(18) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(19) <- K2Node_VariableGet_1
+    Nodes(20) <- K2Node_CallFunction_4
+    Nodes(21) <- K2Node_VariableGet_7
+    Nodes(22) <- K2Node_CallFunction_8
+    Nodes(23) <- K2Node_VariableGet_5
+    Nodes(24) <- K2Node_VariableGet_10
+    Nodes(25) <- K2Node_IfThenElse_1
+    Nodes(26) <- K2Node_CallFunction_11
+    Nodes(27) <- K2Node_CallFunction_13
+    Nodes(28) <- K2Node_CallFunction_12
+[K2Node_FunctionEntry_0@MoveToSameFolder] K2Node_FunctionEntry
+[K2Node_CallFunction_7@MoveToSameFolder] K2Node_CallFunction
+[K2Node_CallFunction_10@MoveToSameFolder] K2Node_CallFunction
+[K2Node_CallFunction_18@MoveToSameFolder] K2Node_CallFunction
+[K2Node_CallFunction_2@MoveToSameFolder] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_5@MoveToSameFolder] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_19@MoveToSameFolder] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_4@MoveToSameFolder] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_5@MoveToSameFolder] K2Node_CallFunction
+[K2Node_IfThenElse_0@MoveToSameFolder] K2Node_IfThenElse
+[K2Node_CommutativeAssociativeBinaryOperator_1@MoveToSameFolder] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_0@MoveToSameFolder] K2Node_VariableGet
+[K2Node_VariableGet_8@MoveToSameFolder] K2Node_VariableGet
+[K2Node_VariableGet_9@MoveToSameFolder] K2Node_VariableGet
+[K2Node_VariableSet_1@MoveToSameFolder] K2Node_VariableSet
+[K2Node_VariableGet_3@MoveToSameFolder] K2Node_VariableGet
+[K2Node_CallFunction_6@MoveToSameFolder] K2Node_CallFunction
+[K2Node_VariableGet_4@MoveToSameFolder] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_2@MoveToSameFolder] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_1@MoveToSameFolder] K2Node_VariableGet
+[K2Node_CallFunction_4@MoveToSameFolder] K2Node_CallFunction
+[K2Node_VariableGet_7@MoveToSameFolder] K2Node_VariableGet
+[K2Node_CallFunction_8@MoveToSameFolder] K2Node_CallFunction
+[K2Node_VariableGet_5@MoveToSameFolder] K2Node_VariableGet
+[K2Node_VariableGet_10@MoveToSameFolder] K2Node_VariableGet
+[K2Node_IfThenElse_1@MoveToSameFolder] K2Node_IfThenElse
+[K2Node_CallFunction_11@MoveToSameFolder] K2Node_CallFunction
+[K2Node_CallFunction_13@MoveToSameFolder] K2Node_CallFunction
+[K2Node_CallFunction_12@MoveToSameFolder] K2Node_CallFunction
+[ValidateResolution] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 697B8C3A4C49CD6D0886199B6A589F3E
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_47
+    Nodes(2) <- K2Node_CallFunction_38
+    Nodes(3) <- K2Node_CallFunction_45
+    Nodes(4) <- K2Node_CallFunction_41
+    Nodes(5) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(6) <- K2Node_CallFunction_44
+    Nodes(7) <- K2Node_CallFunction_19
+    Nodes(8) <- K2Node_CommutativeAssociativeBinaryOperator_5
+    Nodes(9) <- K2Node_CallFunction_39
+    Nodes(10) <- EdGraphNode_Comment_3
+    Nodes(11) <- K2Node_CallFunction_0
+    Nodes(12) <- K2Node_Self_2
+    Nodes(13) <- K2Node_IfThenElse_2
+    Nodes(14) <- K2Node_VariableGet_2
+    Nodes(15) <- K2Node_FunctionResult_2
+    Nodes(16) <- K2Node_FunctionResult_1
+[K2Node_FunctionEntry_0@ValidateResolution] K2Node_FunctionEntry
+[K2Node_FunctionResult_2@ValidateResolution] K2Node_FunctionResult
+[K2Node_CallFunction_47@ValidateResolution] K2Node_CallFunction
+[K2Node_CallFunction_38@ValidateResolution] K2Node_CallFunction
+[K2Node_CallFunction_45@ValidateResolution] K2Node_CallFunction
+[K2Node_CallFunction_41@ValidateResolution] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_0@ValidateResolution] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_44@ValidateResolution] K2Node_CallFunction
+[K2Node_CallFunction_19@ValidateResolution] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_5@ValidateResolution] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_39@ValidateResolution] K2Node_CallFunction
+[EdGraphNode_Comment_3@ValidateResolution] EdGraphNode_Comment
+[K2Node_CallFunction_0@ValidateResolution] K2Node_CallFunction
+[K2Node_Self_2@ValidateResolution] K2Node_Self
+[K2Node_IfThenElse_2@ValidateResolution] K2Node_IfThenElse
+[K2Node_VariableGet_2@ValidateResolution] K2Node_VariableGet
+[K2Node_FunctionResult_1@ValidateResolution] K2Node_FunctionResult
+[K2Node_BreakStruct_0@ValidateResolution] K2Node_BreakStruct
+[DeleteStateReferences] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = C5512D424EB52E01F10321BE19B336F8
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_1
+    Nodes(2) <- K2Node_CallFunction_12
+    Nodes(3) <- K2Node_CallFunction_3
+    Nodes(4) <- K2Node_CallFunction_11
+    Nodes(5) <- K2Node_CallFunction_17
+    Nodes(6) <- K2Node_ExecutionSequence_0
+    Nodes(7) <- K2Node_CallFunction_6
+    Nodes(8) <- K2Node_IfThenElse_1
+    Nodes(9) <- K2Node_CallFunction_0
+    Nodes(10) <- K2Node_CallFunction_2
+    Nodes(11) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(12) <- K2Node_MacroInstance_0
+    Nodes(13) <- K2Node_VariableGet_6
+    Nodes(14) <- K2Node_VariableGet_11
+    Nodes(15) <- K2Node_Message_0
+    Nodes(16) <- K2Node_CallFunction_7
+    Nodes(17) <- K2Node_CallArrayFunction_1
+    Nodes(18) <- K2Node_MacroInstance_3
+    Nodes(19) <- K2Node_VariableGet_10
+    Nodes(20) <- K2Node_VariableGet_9
+    Nodes(21) <- K2Node_CallArrayFunction_0
+    Nodes(22) <- K2Node_VariableGet_12
+    Nodes(23) <- K2Node_Message_1
+    Nodes(24) <- K2Node_VariableGet_1
+    Nodes(25) <- K2Node_VariableGet_13
+    Nodes(26) <- K2Node_CallFunction_8
+    Nodes(27) <- K2Node_IfThenElse_0
+    Nodes(28) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(29) <- K2Node_CallFunction_4
+    Nodes(30) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(31) <- K2Node_CallFunction_5
+    Nodes(32) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(33) <- K2Node_MacroInstance_1
+[K2Node_FunctionEntry_0@DeleteStateReferences] K2Node_FunctionEntry
+[K2Node_CallFunction_1@DeleteStateReferences] K2Node_CallFunction
+[K2Node_CallFunction_12@DeleteStateReferences] K2Node_CallFunction
+[K2Node_CallFunction_3@DeleteStateReferences] K2Node_CallFunction
+[K2Node_CallFunction_11@DeleteStateReferences] K2Node_CallFunction
+[K2Node_CallFunction_17@DeleteStateReferences] K2Node_CallFunction
+[K2Node_ExecutionSequence_0@DeleteStateReferences] K2Node_ExecutionSequence
+[K2Node_CallFunction_6@DeleteStateReferences] K2Node_CallFunction
+[K2Node_IfThenElse_1@DeleteStateReferences] K2Node_IfThenElse
+[K2Node_CallFunction_0@DeleteStateReferences] K2Node_CallFunction
+[K2Node_CallFunction_2@DeleteStateReferences] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_0@DeleteStateReferences] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_MacroInstance_0@DeleteStateReferences] K2Node_MacroInstance
+[K2Node_VariableGet_6@DeleteStateReferences] K2Node_VariableGet
+[K2Node_VariableGet_11@DeleteStateReferences] K2Node_VariableGet
+[K2Node_Message_0@DeleteStateReferences] K2Node_Message
+[K2Node_CallFunction_7@DeleteStateReferences] K2Node_CallFunction
+[K2Node_CallArrayFunction_1@DeleteStateReferences] K2Node_CallArrayFunction
+[K2Node_MacroInstance_3@DeleteStateReferences] K2Node_MacroInstance
+[K2Node_VariableGet_10@DeleteStateReferences] K2Node_VariableGet
+[K2Node_VariableGet_9@DeleteStateReferences] K2Node_VariableGet
+[K2Node_CallArrayFunction_0@DeleteStateReferences] K2Node_CallArrayFunction
+[K2Node_VariableGet_12@DeleteStateReferences] K2Node_VariableGet
+[K2Node_Message_1@DeleteStateReferences] K2Node_Message
+[K2Node_VariableGet_1@DeleteStateReferences] K2Node_VariableGet
+[K2Node_VariableGet_13@DeleteStateReferences] K2Node_VariableGet
+[K2Node_CallFunction_8@DeleteStateReferences] K2Node_CallFunction
+[K2Node_IfThenElse_0@DeleteStateReferences] K2Node_IfThenElse
+[K2Node_CommutativeAssociativeBinaryOperator_2@DeleteStateReferences] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_4@DeleteStateReferences] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_1@DeleteStateReferences] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_5@DeleteStateReferences] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_3@DeleteStateReferences] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_MacroInstance_1@DeleteStateReferences] K2Node_MacroInstance
+[GetFirstSelectedActor] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A688BE3148E368EE8706508159555354
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallArrayFunction_0
+    Nodes(2) <- K2Node_CallFunction_40
+    Nodes(3) <- K2Node_IfThenElse_1
+    Nodes(4) <- K2Node_GetArrayItem_0
+    Nodes(5) <- K2Node_Knot_10
+    Nodes(6) <- EdGraphNode_Comment_4
+    Nodes(7) <- K2Node_FunctionResult_0
+    Nodes(8) <- K2Node_CallFunction_0
+    Nodes(9) <- K2Node_GetEditorSubsystem_0
+    Nodes(10) <- K2Node_FunctionResult_1
+[K2Node_FunctionEntry_0@GetFirstSelectedActor] K2Node_FunctionEntry
+[K2Node_CallArrayFunction_0@GetFirstSelectedActor] K2Node_CallArrayFunction
+[K2Node_CallFunction_40@GetFirstSelectedActor] K2Node_CallFunction
+[K2Node_IfThenElse_1@GetFirstSelectedActor] K2Node_IfThenElse
+[K2Node_GetArrayItem_0@GetFirstSelectedActor] K2Node_GetArrayItem
+[K2Node_Knot_10@GetFirstSelectedActor] K2Node_Knot
+[EdGraphNode_Comment_4@GetFirstSelectedActor] EdGraphNode_Comment
+[K2Node_FunctionResult_0@GetFirstSelectedActor] K2Node_FunctionResult
+[K2Node_CallFunction_0@GetFirstSelectedActor] K2Node_CallFunction
+[K2Node_GetEditorSubsystem_0@GetFirstSelectedActor] K2Node_GetEditorSubsystem
+[K2Node_FunctionResult_1@GetFirstSelectedActor] K2Node_FunctionResult
+[SaveTexture] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E83B8A4C4D04B31624A7C9ABE8B98352
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_2
+    Nodes(2) <- K2Node_CallFunction_3
+    Nodes(3) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(4) <- K2Node_CallFunction_4
+    Nodes(5) <- K2Node_Self_0
+    Nodes(6) <- K2Node_DynamicCast_0
+    Nodes(7) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@SaveTexture] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@SaveTexture] K2Node_FunctionResult
+[K2Node_CallFunction_2@SaveTexture] K2Node_CallFunction
+[K2Node_CallFunction_3@SaveTexture] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_0@SaveTexture] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_4@SaveTexture] K2Node_CallFunction
+[K2Node_Self_0@SaveTexture] K2Node_Self
+[K2Node_DynamicCast_0@SaveTexture] K2Node_DynamicCast
+[PrepareHeightmapBake] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 02CFB919400853B010EBE4B963EEE2A3
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallMaterialParameterCollectionFunction_3
+    Nodes(2) <- K2Node_CallFunction_5
+    Nodes(3) <- K2Node_CallFunction_3
+    Nodes(4) <- K2Node_VariableSet_0
+    Nodes(5) <- K2Node_VariableGet_4
+    Nodes(6) <- K2Node_VariableGet_5
+    Nodes(7) <- K2Node_FunctionResult_0
+    Nodes(8) <- K2Node_VariableGet_0
+    Nodes(9) <- K2Node_VariableGet_2
+[K2Node_FunctionEntry_0@PrepareHeightmapBake] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@PrepareHeightmapBake] K2Node_FunctionResult
+[K2Node_CallMaterialParameterCollectionFunction_3@PrepareHeightmapBake] K2Node_CallMaterialParameterCollectionFunction
+[K2Node_CallFunction_5@PrepareHeightmapBake] K2Node_CallFunction
+[K2Node_CallFunction_3@PrepareHeightmapBake] K2Node_CallFunction
+[K2Node_VariableSet_0@PrepareHeightmapBake] K2Node_VariableSet
+[K2Node_VariableGet_4@PrepareHeightmapBake] K2Node_VariableGet
+[K2Node_VariableGet_5@PrepareHeightmapBake] K2Node_VariableGet
+[K2Node_VariableGet_0@PrepareHeightmapBake] K2Node_VariableGet
+[K2Node_VariableGet_2@PrepareHeightmapBake] K2Node_VariableGet
+[GetWorld] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 542C77AD4710604A6FB7CBAFDE3B6E94
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_GetEditorSubsystem_0
+    Nodes(2) <- K2Node_CallFunction_10
+    Nodes(3) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetWorld] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetWorld] K2Node_FunctionResult
+[K2Node_GetEditorSubsystem_0@GetWorld] K2Node_GetEditorSubsystem
+[K2Node_CallFunction_10@GetWorld] K2Node_CallFunction
+[BeginExporting] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = C2F492FA4F739379E3C78F99AA1D6E57
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_29
+    Nodes(2) <- K2Node_CallFunction_10
+    Nodes(3) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(4) <- K2Node_CallFunction_6
+[K2Node_FunctionEntry_0@BeginExporting] K2Node_FunctionEntry
+[K2Node_CallFunction_29@BeginExporting] K2Node_CallFunction
+[K2Node_CallFunction_10@BeginExporting] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_6@BeginExporting] K2Node_CallFunction
+[BuildName] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 16166DEE499291AAA950EE91B83E76B6
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_14
+    Nodes(2) <- K2Node_CallFunction_13
+    Nodes(3) <- K2Node_CallFunction_4
+    Nodes(4) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(5) <- K2Node_FunctionResult_1
+    Nodes(6) <- K2Node_VariableGet_0
+    Nodes(7) <- K2Node_VariableGet_1
+    Nodes(8) <- K2Node_Knot_0
+[K2Node_FunctionResult_1@BuildName] K2Node_FunctionResult
+[K2Node_FunctionEntry_0@BuildName] K2Node_FunctionEntry
+[K2Node_CallFunction_14@BuildName] K2Node_CallFunction
+[K2Node_CallFunction_13@BuildName] K2Node_CallFunction
+[K2Node_CallFunction_4@BuildName] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_3@BuildName] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_0@BuildName] K2Node_VariableGet
+[K2Node_VariableGet_1@BuildName] K2Node_VariableGet
+[K2Node_Knot_0@BuildName] K2Node_Knot
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[EdGraph_0] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 64422BCD430703FF5CAEA8B79A32AA65
+    Nodes(0) <- K2Node_Tunnel_90
+    Nodes(1) <- K2Node_Tunnel_91
+    Nodes(2) <- K2Node_IfThenElse_15
+    Nodes(3) <- K2Node_CallFunction_4347
+[K2Node_Tunnel_90@EdGraph_0] K2Node_Tunnel
+[K2Node_Tunnel_91@EdGraph_0] K2Node_Tunnel
+[K2Node_IfThenElse_15@EdGraph_0] K2Node_IfThenElse
+[K2Node_CallFunction_4347@EdGraph_0] K2Node_CallFunction
+[EdGraph_1] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 99DBFD5540A796041F72A5A9DA655026
+    Nodes(0) <- K2Node_Tunnel_0
+    Nodes(1) <- K2Node_Tunnel_1
+    Nodes(2) <- EdGraphNode_Comment_652
+    Nodes(3) <- EdGraphNode_Comment_440
+    Nodes(4) <- EdGraphNode_Comment_438
+    Nodes(5) <- EdGraphNode_Comment_436
+    Nodes(6) <- EdGraphNode_Comment_26
+    Nodes(7) <- K2Node_TemporaryVariable_4
+    Nodes(8) <- K2Node_AssignmentStatement_23
+    Nodes(9) <- K2Node_CallFunction_563
+    Nodes(10) <- K2Node_AssignmentStatement_7
+    Nodes(11) <- K2Node_IfThenElse_7
+    Nodes(12) <- K2Node_ExecutionSequence_8
+    Nodes(13) <- K2Node_CallArrayFunction_836
+    Nodes(14) <- K2Node_CallFunction_36741
+    Nodes(15) <- K2Node_TemporaryVariable_31
+    Nodes(16) <- EdGraphNode_Comment_434
+    Nodes(17) <- K2Node_AssignmentStatement_24
+    Nodes(18) <- K2Node_AssignmentStatement_25
+    Nodes(19) <- K2Node_GetArrayItem_0
+[K2Node_Tunnel_0@EdGraph_1] K2Node_Tunnel
+[K2Node_Tunnel_1@EdGraph_1] K2Node_Tunnel
+[EdGraphNode_Comment_652@EdGraph_1] EdGraphNode_Comment
+[EdGraphNode_Comment_440@EdGraph_1] EdGraphNode_Comment
+[EdGraphNode_Comment_438@EdGraph_1] EdGraphNode_Comment
+[EdGraphNode_Comment_436@EdGraph_1] EdGraphNode_Comment
+[EdGraphNode_Comment_26@EdGraph_1] EdGraphNode_Comment
+[K2Node_TemporaryVariable_4@EdGraph_1] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_23@EdGraph_1] K2Node_AssignmentStatement
+[K2Node_CallFunction_563@EdGraph_1] K2Node_CallFunction
+[K2Node_AssignmentStatement_7@EdGraph_1] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@EdGraph_1] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@EdGraph_1] K2Node_ExecutionSequence
+[K2Node_CallArrayFunction_836@EdGraph_1] K2Node_CallArrayFunction
+[K2Node_CallFunction_36741@EdGraph_1] K2Node_CallFunction
+[K2Node_TemporaryVariable_31@EdGraph_1] K2Node_TemporaryVariable
+[EdGraphNode_Comment_434@EdGraph_1] EdGraphNode_Comment
+[K2Node_AssignmentStatement_24@EdGraph_1] K2Node_AssignmentStatement
+[K2Node_AssignmentStatement_25@EdGraph_1] K2Node_AssignmentStatement
+[K2Node_GetArrayItem_0@EdGraph_1] K2Node_GetArrayItem
+[EdGraph_2] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 99DBFD5540A796041F72A5A9DA655026
+    Nodes(0) <- K2Node_Tunnel_0
+    Nodes(1) <- K2Node_Tunnel_1
+    Nodes(2) <- EdGraphNode_Comment_652
+    Nodes(3) <- EdGraphNode_Comment_440
+    Nodes(4) <- EdGraphNode_Comment_438
+    Nodes(5) <- EdGraphNode_Comment_436
+    Nodes(6) <- EdGraphNode_Comment_26
+    Nodes(7) <- K2Node_TemporaryVariable_4
+    Nodes(8) <- K2Node_AssignmentStatement_23
+    Nodes(9) <- K2Node_CallFunction_563
+    Nodes(10) <- K2Node_AssignmentStatement_7
+    Nodes(11) <- K2Node_IfThenElse_7
+    Nodes(12) <- K2Node_ExecutionSequence_8
+    Nodes(13) <- K2Node_CallArrayFunction_836
+    Nodes(14) <- K2Node_CallFunction_36741
+    Nodes(15) <- K2Node_TemporaryVariable_31
+    Nodes(16) <- EdGraphNode_Comment_434
+    Nodes(17) <- K2Node_AssignmentStatement_24
+    Nodes(18) <- K2Node_AssignmentStatement_25
+    Nodes(19) <- K2Node_GetArrayItem_0
+[K2Node_Tunnel_0@EdGraph_2] K2Node_Tunnel
+[K2Node_Tunnel_1@EdGraph_2] K2Node_Tunnel
+[EdGraphNode_Comment_652@EdGraph_2] EdGraphNode_Comment
+[EdGraphNode_Comment_440@EdGraph_2] EdGraphNode_Comment
+[EdGraphNode_Comment_438@EdGraph_2] EdGraphNode_Comment
+[EdGraphNode_Comment_436@EdGraph_2] EdGraphNode_Comment
+[EdGraphNode_Comment_26@EdGraph_2] EdGraphNode_Comment
+[K2Node_TemporaryVariable_4@EdGraph_2] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_23@EdGraph_2] K2Node_AssignmentStatement
+[K2Node_CallFunction_563@EdGraph_2] K2Node_CallFunction
+[K2Node_AssignmentStatement_7@EdGraph_2] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@EdGraph_2] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@EdGraph_2] K2Node_ExecutionSequence
+[K2Node_CallArrayFunction_836@EdGraph_2] K2Node_CallArrayFunction
+[K2Node_CallFunction_36741@EdGraph_2] K2Node_CallFunction
+[K2Node_TemporaryVariable_31@EdGraph_2] K2Node_TemporaryVariable
+[EdGraphNode_Comment_434@EdGraph_2] EdGraphNode_Comment
+[K2Node_AssignmentStatement_24@EdGraph_2] K2Node_AssignmentStatement
+[K2Node_AssignmentStatement_25@EdGraph_2] K2Node_AssignmentStatement
+[K2Node_GetArrayItem_0@EdGraph_2] K2Node_GetArrayItem
+[ExecuteUbergraph_BPU_ExportData] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 14A5B2AD45BE63A3A59A8AAA9113E44C
+[BakeToTexture_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = C53ADF8842E2EA60C680CA91CB1A88BA
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_CallFunction_2
+    Nodes(3) <- K2Node_CallFunction_4
+    Nodes(4) <- K2Node_VariableSet_6
+    Nodes(5) <- K2Node_VariableGet_29
+    Nodes(6) <- K2Node_CallFunction_18
+    Nodes(7) <- K2Node_VariableGet_8
+    Nodes(8) <- K2Node_VariableGet_4
+    Nodes(9) <- K2Node_ExecutionSequence_0
+    Nodes(10) <- K2Node_VariableGet_9
+    Nodes(11) <- K2Node_VariableGet_0
+    Nodes(12) <- K2Node_VariableGet_5
+    Nodes(13) <- K2Node_VariableGet_10
+    Nodes(14) <- K2Node_CallFunction_7
+    Nodes(15) <- K2Node_CallFunction_5
+    Nodes(16) <- K2Node_CallFunction_6
+    Nodes(17) <- K2Node_VariableGet_6
+    Nodes(18) <- K2Node_VariableGet_2
+    Nodes(19) <- K2Node_VariableGet_11
+    Nodes(20) <- K2Node_VariableGet_7
+    Nodes(21) <- K2Node_VariableGet_13
+[K2Node_FunctionEntry_0@BakeToTexture_MERGED] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@BakeToTexture_MERGED] K2Node_FunctionResult
+[K2Node_CallFunction_2@BakeToTexture_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_4@BakeToTexture_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_6@BakeToTexture_MERGED] K2Node_VariableSet
+[K2Node_VariableGet_29@BakeToTexture_MERGED] K2Node_VariableGet (переменная: ConvertedOutput)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_CallFunction_18@BakeToTexture_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_8@BakeToTexture_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_4@BakeToTexture_MERGED] K2Node_VariableGet
+[K2Node_ExecutionSequence_0@BakeToTexture_MERGED] K2Node_ExecutionSequence
+[EdGraphNode_Comment_0@BakeToTexture_MERGED] EdGraphNode_Comment
+[K2Node_VariableGet_0@BakeToTexture_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_5@BakeToTexture_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_10@BakeToTexture_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_7@BakeToTexture_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_5@BakeToTexture_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_6@BakeToTexture_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_6@BakeToTexture_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_2@BakeToTexture_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_11@BakeToTexture_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_7@BakeToTexture_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_13@BakeToTexture_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_9@BakeToTexture_MERGED] K2Node_VariableGet
+[BakeHeightmapToRT_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 3A72AA744382319D26D1738AA1459E9B
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_CallFunction_4
+    Nodes(3) <- K2Node_VariableSet_6
+    Nodes(4) <- K2Node_CallFunction_18
+    Nodes(5) <- K2Node_VariableGet_8
+    Nodes(6) <- K2Node_CallFunction_0
+    Nodes(7) <- K2Node_VariableGet_16
+    Nodes(8) <- K2Node_VariableGet_5
+    Nodes(9) <- K2Node_CallFunction_7
+    Nodes(10) <- K2Node_CallFunction_5
+    Nodes(11) <- K2Node_VariableGet_11
+    Nodes(12) <- K2Node_VariableGet_14
+    Nodes(13) <- K2Node_VariableGet_9
+    Nodes(14) <- K2Node_VariableGet_1
+    Nodes(15) <- K2Node_CallFunction_10
+    Nodes(16) <- K2Node_VariableSet_2
+    Nodes(17) <- K2Node_VariableGet_15
+    Nodes(18) <- K2Node_BreakStruct_1
+    Nodes(19) <- K2Node_VariableGet_17
+    Nodes(20) <- K2Node_VariableGet_18
+[K2Node_FunctionEntry_0@BakeHeightmapToRT_MERGED] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@BakeHeightmapToRT_MERGED] K2Node_FunctionResult
+[K2Node_CallFunction_4@BakeHeightmapToRT_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_6@BakeHeightmapToRT_MERGED] K2Node_VariableSet (переменная: ConvertedOutput)
+    ErrorType = 1
+    ErrorType = 1
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_CallFunction_18@BakeHeightmapToRT_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_8@BakeHeightmapToRT_MERGED] K2Node_VariableGet
+[EdGraphNode_Comment_0@BakeHeightmapToRT_MERGED] EdGraphNode_Comment
+[K2Node_VariableGet_16@BakeHeightmapToRT_MERGED] K2Node_VariableGet (переменная: Context)
+[K2Node_VariableGet_5@BakeHeightmapToRT_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_7@BakeHeightmapToRT_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_5@BakeHeightmapToRT_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_11@BakeHeightmapToRT_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_14@BakeHeightmapToRT_MERGED] K2Node_VariableGet (переменная: LodScale)
+[K2Node_VariableGet_9@BakeHeightmapToRT_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_1@BakeHeightmapToRT_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_10@BakeHeightmapToRT_MERGED] K2Node_CallFunction
+[K2Node_VariableSet_2@BakeHeightmapToRT_MERGED] K2Node_VariableSet (переменная: Bake)
+[K2Node_VariableGet_15@BakeHeightmapToRT_MERGED] K2Node_VariableGet (переменная: Bake)
+[K2Node_BreakStruct_1@BakeHeightmapToRT_MERGED] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="X",PropertyFriendlyName="X",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Y",PropertyFriendlyName="Y",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.IntPoint'"
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="X",PropertyFriendlyName="X",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Y",PropertyFriendlyName="Y",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.IntPoint'"
+[K2Node_VariableGet_17@BakeHeightmapToRT_MERGED] K2Node_VariableGet (переменная: Context)
+[K2Node_VariableGet_18@BakeHeightmapToRT_MERGED] K2Node_VariableGet (переменная: Source)
+[K2Node_CallFunction_0@BakeHeightmapToRT_MERGED] K2Node_CallFunction
+[MoveToSameFolder_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 6B71A0F24B88DAB3EDF4A3B863EC9442
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_CallFunction_10
+    Nodes(3) <- K2Node_CallFunction_18
+    Nodes(4) <- K2Node_CallFunction_2
+    Nodes(5) <- K2Node_CommutativeAssociativeBinaryOperator_15
+    Nodes(6) <- K2Node_CallFunction_19
+    Nodes(7) <- K2Node_CommutativeAssociativeBinaryOperator_14
+    Nodes(8) <- K2Node_CallFunction_5
+    Nodes(9) <- K2Node_IfThenElse_0
+    Nodes(10) <- K2Node_CommutativeAssociativeBinaryOperator_13
+    Nodes(11) <- K2Node_VariableGet_0
+    Nodes(12) <- K2Node_VariableGet_8
+    Nodes(13) <- K2Node_VariableGet_9
+    Nodes(14) <- K2Node_VariableSet_1
+    Nodes(15) <- K2Node_VariableGet_3
+    Nodes(16) <- K2Node_CallFunction_6
+    Nodes(17) <- K2Node_VariableGet_4
+    Nodes(18) <- K2Node_CommutativeAssociativeBinaryOperator_12
+    Nodes(19) <- K2Node_VariableGet_1
+    Nodes(20) <- K2Node_CallFunction_4
+    Nodes(21) <- K2Node_VariableGet_7
+    Nodes(22) <- K2Node_CallFunction_8
+    Nodes(23) <- K2Node_VariableGet_5
+    Nodes(24) <- K2Node_VariableGet_10
+    Nodes(25) <- K2Node_IfThenElse_1
+    Nodes(26) <- K2Node_CallFunction_11
+    Nodes(27) <- K2Node_CallFunction_13
+    Nodes(28) <- K2Node_CallFunction_12
+    Nodes(29) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(30) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(31) <- K2Node_CommutativeAssociativeBinaryOperator_6
+    Nodes(32) <- K2Node_CommutativeAssociativeBinaryOperator_7
+    Nodes(33) <- K2Node_CommutativeAssociativeBinaryOperator_8
+    Nodes(34) <- K2Node_CommutativeAssociativeBinaryOperator_9
+    Nodes(35) <- K2Node_CommutativeAssociativeBinaryOperator_10
+    Nodes(36) <- K2Node_CommutativeAssociativeBinaryOperator_11
+[K2Node_FunctionEntry_0@MoveToSameFolder_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_7@MoveToSameFolder_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_10@MoveToSameFolder_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_18@MoveToSameFolder_MERGED] K2Node_CallFunction (вызов: Replace @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    вход SearchCase = IgnoreCase
+    вход SearchCase = IgnoreCase
+[K2Node_CallFunction_2@MoveToSameFolder_MERGED] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_5@MoveToSameFolder_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_19@MoveToSameFolder_MERGED] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_4@MoveToSameFolder_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_5@MoveToSameFolder_MERGED] K2Node_CallFunction
+[K2Node_IfThenElse_0@MoveToSameFolder_MERGED] K2Node_IfThenElse
+[K2Node_CommutativeAssociativeBinaryOperator_1@MoveToSameFolder_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_0@MoveToSameFolder_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_8@MoveToSameFolder_MERGED] K2Node_VariableGet (переменная: AssetToMove)
+    ErrorType = 1
+    ErrorType = 1
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_VariableGet_9@MoveToSameFolder_MERGED] K2Node_VariableGet
+[K2Node_VariableSet_1@MoveToSameFolder_MERGED] K2Node_VariableSet (переменная: NewName)
+[K2Node_VariableGet_3@MoveToSameFolder_MERGED] K2Node_VariableGet (переменная: NewName)
+[K2Node_CallFunction_6@MoveToSameFolder_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_4@MoveToSameFolder_MERGED] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_2@MoveToSameFolder_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_1@MoveToSameFolder_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_4@MoveToSameFolder_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_7@MoveToSameFolder_MERGED] K2Node_VariableGet (переменная: AssetToMove)
+[K2Node_CallFunction_8@MoveToSameFolder_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_5@MoveToSameFolder_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_10@MoveToSameFolder_MERGED] K2Node_VariableGet
+[K2Node_IfThenElse_1@MoveToSameFolder_MERGED] K2Node_IfThenElse
+[K2Node_CallFunction_11@MoveToSameFolder_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_13@MoveToSameFolder_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_12@MoveToSameFolder_MERGED] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_0@MoveToSameFolder_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_3@MoveToSameFolder_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_6@MoveToSameFolder_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_7@MoveToSameFolder_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_8] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход A = File:[
+[K2Node_CommutativeAssociativeBinaryOperator_9] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = ] Moved and renamed to:[
+[K2Node_CommutativeAssociativeBinaryOperator_10] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CommutativeAssociativeBinaryOperator_11] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = ]
+[K2Node_CommutativeAssociativeBinaryOperator_12] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход A = Something went wrong during moving textures to the same folder as State. Probably other asset with the same name already exist. 
+File: [
+[K2Node_CommutativeAssociativeBinaryOperator_13] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = ] 
+Can\'t be moved and renamed to: 
+[
+[K2Node_CommutativeAssociativeBinaryOperator_14] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CommutativeAssociativeBinaryOperator_15] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = ]
+[ValidateResolution_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 697B8C3A4C49CD6D0886199B6A589F3E
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_47
+    Nodes(2) <- K2Node_CallFunction_38
+    Nodes(3) <- K2Node_CallFunction_45
+    Nodes(4) <- K2Node_CallFunction_41
+    Nodes(5) <- K2Node_BreakStruct_0
+    Nodes(6) <- K2Node_CallFunction_44
+    Nodes(7) <- K2Node_CallFunction_19
+    Nodes(8) <- K2Node_CommutativeAssociativeBinaryOperator_7
+    Nodes(9) <- K2Node_CallFunction_39
+    Nodes(10) <- K2Node_FunctionResult_1
+    Nodes(11) <- K2Node_CallFunction_0
+    Nodes(12) <- K2Node_Self_2
+    Nodes(13) <- K2Node_IfThenElse_2
+    Nodes(14) <- K2Node_VariableGet_2
+    Nodes(15) <- K2Node_FunctionResult_2
+    Nodes(16) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(17) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(18) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(19) <- K2Node_CommutativeAssociativeBinaryOperator_4
+    Nodes(20) <- K2Node_CommutativeAssociativeBinaryOperator_6
+[K2Node_FunctionEntry_0@ValidateResolution_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_47@ValidateResolution_MERGED] K2Node_CallFunction (вызов: ShowMessage @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    ErrorType = 1
+    вход MessageType = Ok
+    вход DefaultValue = Ok
+    вход MessageCategory = Warning
+    вход MessageType = Ok
+    вход DefaultValue = Ok
+    вход MessageCategory = Warning
+[K2Node_CallFunction_38@ValidateResolution_MERGED] K2Node_CallFunction (вызов: MakeLiteralText @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_45@ValidateResolution_MERGED] K2Node_CallFunction (вызов: MakeLiteralText @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_41@ValidateResolution_MERGED] K2Node_CallFunction (вызов: Conv_TextToString @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_0@ValidateResolution_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_44@ValidateResolution_MERGED] K2Node_CallFunction (вызов: Conv_IntToString @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_19@ValidateResolution_MERGED] K2Node_CallFunction (вызов: Conv_IntToString @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_5@ValidateResolution_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    NumAdditionalInputs = 1
+    bDefaultsToPureFunc = True
+    NumAdditionalInputs = 1
+    bDefaultsToPureFunc = True
+    NumAdditionalInputs = 1
+    bDefaultsToPureFunc = True
+    NumAdditionalInputs = 1
+    bDefaultsToPureFunc = True
+    вход B = .
+    вход B =  x 
+    вход B = .
+    вход B =  x 
+[K2Node_CallFunction_39@ValidateResolution_MERGED] K2Node_CallFunction (вызов: Conv_StringToText @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[EdGraphNode_Comment_3@ValidateResolution_MERGED] EdGraphNode_Comment
+[K2Node_CallFunction_0@ValidateResolution_MERGED] K2Node_CallFunction
+[K2Node_Self_2@ValidateResolution_MERGED] K2Node_Self
+[K2Node_IfThenElse_2@ValidateResolution_MERGED] K2Node_IfThenElse
+[K2Node_VariableGet_2@ValidateResolution_MERGED] K2Node_VariableGet
+[K2Node_FunctionResult_2@ValidateResolution_MERGED] K2Node_FunctionResult (вызов: ValidateResolution)
+    bIsEditable = True
+    bIsEditable = True
+    вход CanExport = true
+    вход CanExport = true
+    вход CanExport = true
+    вход CanExport = true
+[K2Node_FunctionResult_1@ValidateResolution_MERGED] K2Node_FunctionResult
+[K2Node_CommutativeAssociativeBinaryOperator_1@ValidateResolution_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_2@ValidateResolution_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_3@ValidateResolution_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_4@ValidateResolution_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_6@ValidateResolution_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = .
+    вход B =  x 
+[K2Node_CommutativeAssociativeBinaryOperator_7@ValidateResolution_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_BreakStruct_0@ValidateResolution_MERGED] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="X",PropertyFriendlyName="X",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Y",PropertyFriendlyName="Y",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.IntPoint'"
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="X",PropertyFriendlyName="X",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Y",PropertyFriendlyName="Y",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.IntPoint'"
+    bIsIntermediateNode = True
+[DeleteStateReferences_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = C5512D424EB52E01F10321BE19B336F8
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_1
+    Nodes(2) <- K2Node_CallFunction_12
+    Nodes(3) <- K2Node_CallFunction_3
+    Nodes(4) <- K2Node_CallFunction_11
+    Nodes(5) <- K2Node_CallFunction_17
+    Nodes(6) <- K2Node_ExecutionSequence_0
+    Nodes(7) <- K2Node_CallFunction_6
+    Nodes(8) <- K2Node_IfThenElse_1
+    Nodes(9) <- K2Node_CallFunction_0
+    Nodes(10) <- K2Node_CallFunction_2
+    Nodes(11) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(12) <- K2Node_TunnelBoundary_11
+    Nodes(13) <- K2Node_VariableGet_6
+    Nodes(14) <- K2Node_VariableGet_11
+    Nodes(15) <- K2Node_CallArrayFunction_5
+    Nodes(16) <- K2Node_CallFunction_7
+    Nodes(17) <- K2Node_CallArrayFunction_1
+    Nodes(18) <- K2Node_TunnelBoundary_10
+    Nodes(19) <- K2Node_VariableGet_10
+    Nodes(20) <- K2Node_VariableGet_9
+    Nodes(21) <- K2Node_CallArrayFunction_0
+    Nodes(22) <- K2Node_VariableGet_12
+    Nodes(23) <- K2Node_CallArrayFunction_4
+    Nodes(24) <- K2Node_VariableGet_1
+    Nodes(25) <- K2Node_VariableGet_13
+    Nodes(26) <- K2Node_CallFunction_8
+    Nodes(27) <- K2Node_IfThenElse_0
+    Nodes(28) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(29) <- K2Node_CallFunction_4
+    Nodes(30) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(31) <- K2Node_CallFunction_5
+    Nodes(32) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(33) <- K2Node_TunnelBoundary_9
+    Nodes(34) <- K2Node_CallFunction_13
+    Nodes(35) <- K2Node_AssignmentStatement_25
+    Nodes(36) <- K2Node_AssignmentStatement_24
+    Nodes(37) <- K2Node_TunnelBoundary_5
+    Nodes(38) <- K2Node_TemporaryVariable_31
+    Nodes(39) <- K2Node_CallFunction_36741
+    Nodes(40) <- K2Node_CallArrayFunction_836
+    Nodes(41) <- K2Node_ExecutionSequence_8
+    Nodes(42) <- K2Node_IfThenElse_7
+    Nodes(43) <- K2Node_AssignmentStatement_7
+    Nodes(44) <- K2Node_CallFunction_563
+    Nodes(45) <- K2Node_AssignmentStatement_23
+    Nodes(46) <- K2Node_TemporaryVariable_4
+    Nodes(47) <- K2Node_TunnelBoundary_4
+    Nodes(48) <- K2Node_TunnelBoundary_3
+    Nodes(49) <- K2Node_TunnelBoundary_2
+    Nodes(50) <- K2Node_TunnelBoundary_1
+    Nodes(51) <- K2Node_TunnelBoundary_0
+    Nodes(52) <- K2Node_TunnelBoundary_8
+    Nodes(53) <- K2Node_CallFunction_14
+    Nodes(54) <- K2Node_DynamicCast_0
+    Nodes(55) <- K2Node_AssignmentStatement_0
+    Nodes(56) <- K2Node_AssignmentStatement_1
+    Nodes(57) <- K2Node_DynamicCast_1
+    Nodes(58) <- K2Node_TemporaryVariable_0
+    Nodes(59) <- K2Node_CallFunction_9
+    Nodes(60) <- K2Node_CallArrayFunction_2
+    Nodes(61) <- K2Node_ExecutionSequence_1
+    Nodes(62) <- K2Node_IfThenElse_2
+    Nodes(63) <- K2Node_AssignmentStatement_2
+    Nodes(64) <- K2Node_CallFunction_10
+    Nodes(65) <- K2Node_AssignmentStatement_3
+    Nodes(66) <- K2Node_TemporaryVariable_1
+    Nodes(67) <- K2Node_TunnelBoundary_6
+    Nodes(68) <- K2Node_IfThenElse_15
+    Nodes(69) <- K2Node_CallFunction_4347
+    Nodes(70) <- K2Node_CallArrayFunction_3
+    Nodes(71) <- K2Node_TunnelBoundary_7
+[K2Node_FunctionEntry_0@DeleteStateReferences_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_1@DeleteStateReferences_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_12@DeleteStateReferences_MERGED] K2Node_CallFunction (вызов: GetPathName @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход InString = Moving texture asset after expoting:
+    вход InString = Moving texture asset after expoting:
+[K2Node_CallFunction_3@DeleteStateReferences_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_11@DeleteStateReferences_MERGED] K2Node_CallFunction (вызов: SaveAsset @ /Script/CoreUObject.Class)
+    вход MessageType = Ok
+    вход DefaultValue = Ok
+    вход MessageCategory = Warning
+    вход bOnlyIfIsDirty = false
+    вход MessageType = Ok
+    вход DefaultValue = Ok
+    вход MessageCategory = Warning
+    вход bOnlyIfIsDirty = false
+[K2Node_CallFunction_17@DeleteStateReferences_MERGED] K2Node_CallFunction (вызов: DeleteAsset @ /Script/CoreUObject.Class)
+[K2Node_ExecutionSequence_0@DeleteStateReferences_MERGED] K2Node_ExecutionSequence
+[K2Node_CallFunction_6@DeleteStateReferences_MERGED] K2Node_CallFunction
+[K2Node_IfThenElse_1@DeleteStateReferences_MERGED] K2Node_IfThenElse
+[K2Node_CallFunction_0@DeleteStateReferences_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_2@DeleteStateReferences_MERGED] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_0@DeleteStateReferences_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_MacroInstance_0@DeleteStateReferences_MERGED] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="string",ContainerType=Array)
+    ResolvedWildcardType = (PinCategory="string",ContainerType=Array)
+    OutputSourceNode <- K2Node_Tunnel_1
+    InputSinkNode <- K2Node_Tunnel_0
+[K2Node_VariableGet_6@DeleteStateReferences_MERGED] K2Node_VariableGet (переменная: StateAsset)
+[K2Node_VariableGet_11@DeleteStateReferences_MERGED] K2Node_VariableGet (переменная: StateAsset)
+[K2Node_Message_0@DeleteStateReferences_MERGED] K2Node_Message (вызов: GetExternalReferences @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_CallFunction_7@DeleteStateReferences_MERGED] K2Node_CallFunction (вызов: GetPathName @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallArrayFunction_1@DeleteStateReferences_MERGED] K2Node_CallArrayFunction
+[K2Node_MacroInstance_3@DeleteStateReferences_MERGED] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.Texture'",ContainerType=Array)
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.Texture'",ContainerType=Array)
+    OutputSourceNode <- K2Node_Tunnel_2
+    InputSinkNode <- K2Node_Tunnel_3
+[K2Node_VariableGet_10@DeleteStateReferences_MERGED] K2Node_VariableGet (переменная: FilesToRemove)
+[K2Node_VariableGet_9@DeleteStateReferences_MERGED] K2Node_VariableGet (переменная: FilesToRemove)
+[K2Node_CallArrayFunction_0@DeleteStateReferences_MERGED] K2Node_CallArrayFunction
+[K2Node_VariableGet_12@DeleteStateReferences_MERGED] K2Node_VariableGet (переменная: StateAsset)
+[K2Node_Message_1@DeleteStateReferences_MERGED] K2Node_Message (вызов: ClearExternalReferences @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_VariableGet_1@DeleteStateReferences_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_13@DeleteStateReferences_MERGED] K2Node_VariableGet (переменная: FilesToRemove)
+[K2Node_CallFunction_8@DeleteStateReferences_MERGED] K2Node_CallFunction (вызов: PrintString @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+[K2Node_IfThenElse_0@DeleteStateReferences_MERGED] K2Node_IfThenElse
+[K2Node_CommutativeAssociativeBinaryOperator_2@DeleteStateReferences_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_4@DeleteStateReferences_MERGED] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_1@DeleteStateReferences_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_5@DeleteStateReferences_MERGED] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_3@DeleteStateReferences_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_MacroInstance_1@DeleteStateReferences_MERGED] K2Node_MacroInstance
+    OutputSourceNode <- K2Node_Tunnel_91
+    InputSinkNode <- K2Node_Tunnel_90
+[K2Node_Tunnel_0@DeleteStateReferences_MERGED] K2Node_Tunnel
+    bCanHaveOutputs = True
+    MetaData = (Category=NSLOCTEXT("", "232A9B204596DDDD456B83B012FD6E54", "Utilities| Array"),Keywords=NSLOCTEXT("", "1BF42FC9447506B860B501BB1E63AA31", "Foreach"))
+    bCanHaveOutputs = True
+    MetaData = (Category=NSLOCTEXT("", "232A9B204596DDDD456B83B012FD6E54", "Utilities| Array"),Keywords=NSLOCTEXT("", "1BF42FC9447506B860B501BB1E63AA31", "Foreach"))
+    bCanHaveOutputs = True
+    MetaData = (Category=NSLOCTEXT("", "232A9B204596DDDD456B83B012FD6E54", "Utilities| Array"),Keywords=NSLOCTEXT("", "1BF42FC9447506B860B501BB1E63AA31", "Foreach"))
+    OutputSourceNode <- K2Node_MacroInstance_0
+[K2Node_Tunnel_1@DeleteStateReferences_MERGED] K2Node_Tunnel
+    bCanHaveInputs = True
+    bCanHaveInputs = True
+    bCanHaveInputs = True
+    InputSinkNode <- K2Node_MacroInstance_0
+[EdGraphNode_Comment_652@DeleteStateReferences_MERGED] EdGraphNode_Comment
+    NodeWidth = 2256
+    NodeHeight = 48
+    NodeComment = "Warning: Do not add, remove, or reorder elements in the input array during the execution of the loop body!"
+    NodeWidth = 2256
+    NodeHeight = 48
+    NodeComment = "Warning: Do not add, remove, or reorder elements in the input array during the execution of the loop body!"
+    NodeWidth = 2256
+    NodeHeight = 48
+    NodeComment = "Warning: Do not add, remove, or reorder elements in the input array during the execution of the loop body!"
+[EdGraphNode_Comment_440@DeleteStateReferences_MERGED] EdGraphNode_Comment
+    NodeHeight = 240
+    NodeComment = "Increment Loop Counter"
+    NodeHeight = 240
+    NodeComment = "Increment Loop Counter"
+    NodeHeight = 240
+    NodeComment = "Increment Loop Counter"
+[EdGraphNode_Comment_438@DeleteStateReferences_MERGED] EdGraphNode_Comment
+    NodeWidth = 448
+    NodeHeight = 320
+    NodeComment = "Execute Loop Body"
+    NodeWidth = 448
+    NodeHeight = 320
+    NodeComment = "Execute Loop Body"
+    NodeWidth = 448
+    NodeHeight = 320
+    NodeComment = "Execute Loop Body"
+[EdGraphNode_Comment_436@DeleteStateReferences_MERGED] EdGraphNode_Comment
+    NodeWidth = 704
+    NodeHeight = 208
+    NodeComment = "Test Loop Condition"
+    NodeWidth = 704
+    NodeHeight = 208
+    NodeComment = "Test Loop Condition"
+    NodeWidth = 704
+    NodeHeight = 208
+    NodeComment = "Test Loop Condition"
+[EdGraphNode_Comment_26@DeleteStateReferences_MERGED] EdGraphNode_Comment
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Loop Counter"
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Loop Counter"
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Loop Counter"
+[K2Node_TemporaryVariable_4@DeleteStateReferences_MERGED] K2Node_TemporaryVariable
+    VariableType = (PinCategory="int")
+    NodeComment = "Loop Counter"
+    VariableType = (PinCategory="int")
+    NodeComment = "Loop Counter"
+    VariableType = (PinCategory="int")
+    NodeComment = "Loop Counter"
+[K2Node_AssignmentStatement_23@DeleteStateReferences_MERGED] K2Node_AssignmentStatement
+[K2Node_CallFunction_563@DeleteStateReferences_MERGED] K2Node_CallFunction (вызов: Add_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 1
+    вход B = 1
+    вход B = 1
+[K2Node_AssignmentStatement_7@DeleteStateReferences_MERGED] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@DeleteStateReferences_MERGED] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@DeleteStateReferences_MERGED] K2Node_ExecutionSequence
+[K2Node_CallArrayFunction_836@DeleteStateReferences_MERGED] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_36741@DeleteStateReferences_MERGED] K2Node_CallFunction (вызов: Less_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_TemporaryVariable_31@DeleteStateReferences_MERGED] K2Node_TemporaryVariable
+    VariableType = (PinCategory="int")
+    NodeComment = "Array Index"
+    VariableType = (PinCategory="int")
+    NodeComment = "Array Index"
+    VariableType = (PinCategory="int")
+    NodeComment = "Array Index"
+[EdGraphNode_Comment_434@DeleteStateReferences_MERGED] EdGraphNode_Comment
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Array Index"
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Array Index"
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Array Index"
+[K2Node_AssignmentStatement_24@DeleteStateReferences_MERGED] K2Node_AssignmentStatement
+[K2Node_AssignmentStatement_25@DeleteStateReferences_MERGED] K2Node_AssignmentStatement
+[K2Node_GetArrayItem_0@DeleteStateReferences_MERGED] K2Node_GetArrayItem
+[K2Node_Tunnel_3] K2Node_Tunnel
+    bCanHaveOutputs = True
+    MetaData = (Category=NSLOCTEXT("", "232A9B204596DDDD456B83B012FD6E54", "Utilities| Array"),Keywords=NSLOCTEXT("", "1BF42FC9447506B860B501BB1E63AA31", "Foreach"))
+    OutputSourceNode <- K2Node_MacroInstance_3
+[K2Node_Tunnel_2] K2Node_Tunnel
+    bCanHaveInputs = True
+    InputSinkNode <- K2Node_MacroInstance_3
+[EdGraphNode_Comment_5] EdGraphNode_Comment
+    NodeWidth = 2256
+    NodeHeight = 48
+    NodeComment = "Warning: Do not add, remove, or reorder elements in the input array during the execution of the loop body!"
+[EdGraphNode_Comment_4@DeleteStateReferences_MERGED] EdGraphNode_Comment
+[EdGraphNode_Comment_3@DeleteStateReferences_MERGED] EdGraphNode_Comment
+    CommentColor = (R=0.701042,G=0.000000,B=0.000000,A=1.000000)
+    NodeWidth = 1648
+    NodeHeight = 480
+    NodeComment = "Resolution is invalid"
+    CommentColor = (R=0.701042,G=0.000000,B=0.000000,A=1.000000)
+    NodeWidth = 1648
+    NodeHeight = 480
+    NodeComment = "Resolution is invalid"
+    NodeWidth = 448
+    NodeHeight = 320
+    NodeComment = "Execute Loop Body"
+[EdGraphNode_Comment_2] EdGraphNode_Comment
+    NodeWidth = 704
+    NodeHeight = 208
+    NodeComment = "Test Loop Condition"
+[EdGraphNode_Comment_1] EdGraphNode_Comment
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Loop Counter"
+[K2Node_TemporaryVariable_1] K2Node_TemporaryVariable
+    VariableType = (PinCategory="int")
+    NodeComment = "Loop Counter"
+[K2Node_AssignmentStatement_3] K2Node_AssignmentStatement
+[K2Node_CallFunction_10@DeleteStateReferences_MERGED] K2Node_CallFunction
+[K2Node_AssignmentStatement_2] K2Node_AssignmentStatement
+[K2Node_IfThenElse_2@DeleteStateReferences_MERGED] K2Node_IfThenElse
+[K2Node_ExecutionSequence_1] K2Node_ExecutionSequence
+[K2Node_CallArrayFunction_2] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_9] K2Node_CallFunction (вызов: Less_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_TemporaryVariable_0] K2Node_TemporaryVariable
+    VariableType = (PinCategory="int")
+    NodeComment = "Array Index"
+[EdGraphNode_Comment_0@DeleteStateReferences_MERGED] EdGraphNode_Comment
+    CommentColor = (R=0.292708,G=0.146336,B=0.043594,A=1.000000)
+    NodeWidth = 2832
+    NodeHeight = 1248
+    NodeComment = "Create render target that will be used to render in lower quality"
+    CommentColor = (R=0.292708,G=0.146336,B=0.043594,A=1.000000)
+    NodeWidth = 2960
+    NodeHeight = 464
+    NodeComment = "Create render target that will be used to render in lower quality"
+    CommentColor = (R=0.292708,G=0.146336,B=0.043594,A=1.000000)
+    NodeWidth = 2832
+    NodeHeight = 1248
+    NodeComment = "Create render target that will be used to render in lower quality"
+    CommentColor = (R=0.292708,G=0.146336,B=0.043594,A=1.000000)
+    NodeWidth = 2960
+    NodeHeight = 464
+    NodeComment = "Create render target that will be used to render in lower quality"
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Array Index"
+[K2Node_AssignmentStatement_1] K2Node_AssignmentStatement
+[K2Node_AssignmentStatement_0] K2Node_AssignmentStatement
+[K2Node_GetArrayItem_1] K2Node_GetArrayItem
+    bReturnByRefDesired = False
+    вход Dimension 1 = 0
+[K2Node_Tunnel_90@DeleteStateReferences_MERGED] K2Node_Tunnel
+    bCanHaveOutputs = True
+    MetaData = (ToolTip=NSLOCTEXT("", "C2A2C43144F43B04AD0E6EBF3956A75A", "Determines if an object is valid"),Category=NSLOCTEXT("", "A824D3BC4E8FDA956A0FB29E0E653805", "Utilities"))
+    bCanHaveOutputs = True
+    MetaData = (ToolTip=NSLOCTEXT("", "C2A2C43144F43B04AD0E6EBF3956A75A", "Determines if an object is valid"),Category=NSLOCTEXT("", "A824D3BC4E8FDA956A0FB29E0E653805", "Utilities"))
+    OutputSourceNode <- K2Node_MacroInstance_1
+[K2Node_Tunnel_91@DeleteStateReferences_MERGED] K2Node_Tunnel
+    bCanHaveInputs = True
+    bCanHaveInputs = True
+    InputSinkNode <- K2Node_MacroInstance_1
+[K2Node_IfThenElse_15@DeleteStateReferences_MERGED] K2Node_IfThenElse
+[K2Node_CallFunction_4347@DeleteStateReferences_MERGED] K2Node_CallFunction (вызов: IsValid @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_TunnelBoundary_0] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_1] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_2] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_3] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_4] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_5] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_6] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_7] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_8] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_9] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_10] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_11] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_DynamicCast_0@DeleteStateReferences_MERGED] K2Node_DynamicCast
+[K2Node_CallFunction_13@DeleteStateReferences_MERGED] K2Node_CallFunction
+[K2Node_CallArrayFunction_3] K2Node_CallArrayFunction (вызов: Array_Clear @ /Script/CoreUObject.Class)
+    bIsIntermediateNode = True
+[K2Node_DynamicCast_1] K2Node_DynamicCast
+    TargetType = "/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Editor/Blueprints/BPI_FluxExportData.BPI_FluxExportData_C'"
+    PureState = Impure
+    bIsIntermediateNode = True
+[K2Node_CallFunction_14@DeleteStateReferences_MERGED] K2Node_CallFunction
+[K2Node_CallArrayFunction_4] K2Node_CallArrayFunction (вызов: Array_Get @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[K2Node_CallArrayFunction_5] K2Node_CallArrayFunction (вызов: Array_Get @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[GetFirstSelectedActor_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A688BE3148E368EE8706508159555354
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallArrayFunction_0
+    Nodes(2) <- K2Node_CallFunction_40
+    Nodes(3) <- K2Node_IfThenElse_1
+    Nodes(4) <- K2Node_CallFunction_1
+    Nodes(5) <- K2Node_CallArrayFunction_1
+    Nodes(6) <- K2Node_FunctionResult_1
+    Nodes(7) <- K2Node_FunctionResult_0
+    Nodes(8) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@GetFirstSelectedActor_MERGED] K2Node_FunctionEntry
+[K2Node_CallArrayFunction_0@GetFirstSelectedActor_MERGED] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_40@GetFirstSelectedActor_MERGED] K2Node_CallFunction (вызов: Greater_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0
+    вход B = 0
+[K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED] K2Node_IfThenElse
+[K2Node_GetArrayItem_0@GetFirstSelectedActor_MERGED] K2Node_GetArrayItem
+    bReturnByRefDesired = False
+    bReturnByRefDesired = False
+    bReturnByRefDesired = False
+    bReturnByRefDesired = False
+    bReturnByRefDesired = False
+    вход Dimension 1 = 0
+    вход Dimension 1 = 0
+    вход Dimension 1 = 0
+[K2Node_Knot_10@GetFirstSelectedActor_MERGED] K2Node_Knot
+[EdGraphNode_Comment_4@GetFirstSelectedActor_MERGED] EdGraphNode_Comment
+    CommentColor = (R=0.155325,G=0.336945,B=1.000000,A=1.000000)
+    NodeWidth = 1472
+    NodeHeight = 304
+    NodeComment = "Get selected simulation"
+    NodeHeight = 240
+    NodeComment = "Increment Loop Counter"
+    CommentColor = (R=0.155325,G=0.336945,B=1.000000,A=1.000000)
+    NodeWidth = 1472
+    NodeHeight = 304
+    NodeComment = "Get selected simulation"
+[K2Node_FunctionResult_0@GetFirstSelectedActor_MERGED] K2Node_FunctionResult
+[K2Node_CallFunction_0@GetFirstSelectedActor_MERGED] K2Node_CallFunction
+[K2Node_GetEditorSubsystem_0@GetFirstSelectedActor_MERGED] K2Node_GetEditorSubsystem
+[K2Node_FunctionResult_1@GetFirstSelectedActor_MERGED] K2Node_FunctionResult
+[K2Node_CallArrayFunction_1@GetFirstSelectedActor_MERGED] K2Node_CallArrayFunction (вызов: Array_Get @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход Index = 0
+[K2Node_CallFunction_1@GetFirstSelectedActor_MERGED] K2Node_CallFunction (вызов: GetEditorSubsystem @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[SaveTexture_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E83B8A4C4D04B31624A7C9ABE8B98352
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_2
+    Nodes(2) <- K2Node_CallFunction_3
+    Nodes(3) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(4) <- K2Node_CallFunction_4
+    Nodes(5) <- K2Node_Self_0
+    Nodes(6) <- K2Node_DynamicCast_0
+    Nodes(7) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@SaveTexture_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_2@SaveTexture_MERGED] K2Node_CallFunction (вызов: RenderTargetCreateStaticTexture2DEditorOnly @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    вход MipSettings = TMGS_NoMipmaps
+    вход MipSettings = TMGS_NoMipmaps
+    вход MipSettings = TMGS_NoMipmaps
+    вход MipSettings = TMGS_NoMipmaps
+[K2Node_CallFunction_3@SaveTexture_MERGED] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_0@SaveTexture_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_4@SaveTexture_MERGED] K2Node_CallFunction
+[K2Node_Self_0@SaveTexture_MERGED] K2Node_Self
+[K2Node_DynamicCast_0@SaveTexture_MERGED] K2Node_DynamicCast
+    TargetType = "/Script/CoreUObject.Class'/Script/Engine.TextureRenderTarget2D'"
+    PureState = Impure
+    TargetType = "/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Editor/Blueprints/BPI_FluxExportData.BPI_FluxExportData_C'"
+    PureState = Impure
+    bIsIntermediateNode = True
+    TargetType = "/Script/CoreUObject.Class'/Script/Engine.TextureRenderTarget2D'"
+    PureState = Impure
+[K2Node_FunctionResult_0@SaveTexture_MERGED] K2Node_FunctionResult
+[PrepareHeightmapBake_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 02CFB919400853B010EBE4B963EEE2A3
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallMaterialParameterCollectionFunction_3
+    Nodes(2) <- K2Node_CallFunction_5
+    Nodes(3) <- K2Node_CallFunction_3
+    Nodes(4) <- K2Node_VariableSet_0
+    Nodes(5) <- K2Node_VariableGet_4
+    Nodes(6) <- K2Node_VariableGet_5
+    Nodes(7) <- K2Node_FunctionResult_0
+    Nodes(8) <- K2Node_VariableGet_0
+    Nodes(9) <- K2Node_VariableGet_2
+[K2Node_FunctionEntry_0@PrepareHeightmapBake_MERGED] K2Node_FunctionEntry
+[K2Node_CallMaterialParameterCollectionFunction_3@PrepareHeightmapBake_MERGED] K2Node_CallMaterialParameterCollectionFunction (вызов: CreateDynamicMaterialInstance @ /Script/CoreUObject.Class)
+    вход OptionalName = None
+    вход CreationFlags = None
+    вход OptionalName = None
+    вход CreationFlags = None
+[K2Node_CallFunction_5@PrepareHeightmapBake_MERGED] K2Node_CallFunction (вызов: SetTextureParameterValue @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход ParameterName = SourceMap
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход ParameterName = SourceMap
+[K2Node_CallFunction_3@PrepareHeightmapBake_MERGED] K2Node_CallFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход ParameterName = SourceOffset
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход ParameterName = SourceOffset
+[K2Node_VariableSet_0@PrepareHeightmapBake_MERGED] K2Node_VariableSet (переменная: BakeMaterial)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_VariableGet_4@PrepareHeightmapBake_MERGED] K2Node_VariableGet (переменная: BakeMaterial)
+    ErrorType = 1
+    ErrorType = 1
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_VariableGet_5@PrepareHeightmapBake_MERGED] K2Node_VariableGet (переменная: BakeMaterial)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_FunctionResult_0@PrepareHeightmapBake_MERGED] K2Node_FunctionResult
+[K2Node_VariableGet_0@PrepareHeightmapBake_MERGED] K2Node_VariableGet
+[K2Node_VariableGet_2@PrepareHeightmapBake_MERGED] K2Node_VariableGet (переменная: MaterialOffset)
+[GetWorld_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 542C77AD4710604A6FB7CBAFDE3B6E94
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+    Nodes(2) <- K2Node_CallFunction_10
+    Nodes(3) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetWorld_MERGED] K2Node_FunctionEntry
+[K2Node_GetEditorSubsystem_0@GetWorld_MERGED] K2Node_GetEditorSubsystem
+    CustomClass = "/Script/CoreUObject.Class'/Script/UnrealEd.EditorActorSubsystem'"
+    CustomClass = "/Script/CoreUObject.Class'/Script/UnrealEd.UnrealEditorSubsystem'"
+    CustomClass = "/Script/CoreUObject.Class'/Script/UnrealEd.EditorActorSubsystem'"
+    CustomClass = "/Script/CoreUObject.Class'/Script/UnrealEd.UnrealEditorSubsystem'"
+[K2Node_CallFunction_10@GetWorld_MERGED] K2Node_CallFunction
+[K2Node_FunctionResult_0@GetWorld_MERGED] K2Node_FunctionResult (вызов: GetWorld)
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+[K2Node_CallFunction_0@GetWorld_MERGED] K2Node_CallFunction (вызов: GetEditorSubsystem @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+[BeginExporting_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = C2F492FA4F739379E3C78F99AA1D6E57
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_29
+    Nodes(2) <- K2Node_CallFunction_10
+    Nodes(3) <- K2Node_CommutativeAssociativeBinaryOperator_4
+    Nodes(4) <- K2Node_CallFunction_6
+    Nodes(5) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(6) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(7) <- K2Node_CommutativeAssociativeBinaryOperator_3
+[K2Node_FunctionEntry_0@BeginExporting_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_29@BeginExporting_MERGED] K2Node_CallFunction (вызов: PrintString @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    EnabledState = DevelopmentOnly
+    AdvancedPinDisplay = Hidden
+    EnabledState = DevelopmentOnly
+    вход bPrintToScreen = true
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход bPrintToScreen = true
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+[K2Node_CallFunction_10@BeginExporting_MERGED] K2Node_CallFunction (вызов: GetDisplayName @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход MaterialOffset = 0.0
+    вход MaterialOffset = 0.0
+    вход B = 1
+[K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    NumAdditionalInputs = 3
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    NumAdditionalInputs = 3
+    bDefaultsToPureFunc = True
+    NumAdditionalInputs = 3
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    NumAdditionalInputs = 3
+    bDefaultsToPureFunc = True
+    вход A = File:[
+    вход C = ] Moved and renamed to:[
+    вход E = ]
+    вход A = Can\'t remove Asset:
+    вход A = Exporting (
+    вход C = ) -> (
+    вход E = )
+    вход A = File:[
+    вход C = ] Moved and renamed to:[
+    вход E = ]
+    вход B = (
+    вход A = Can\'t remove Asset:
+    вход A = Exporting (
+    вход C = ) -> (
+    вход E = )
+[K2Node_CallFunction_6@BeginExporting_MERGED] K2Node_CallFunction (вызов: GetDisplayName @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Filter = TF_Bilinear
+    вход sRGB = false
+    вход Address X = TA_Clamp
+    вход Address Y = TA_Clamp
+    вход Filter = TF_Bilinear
+    вход sRGB = false
+    вход Address X = TA_Clamp
+    вход Address Y = TA_Clamp
+[K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    NumAdditionalInputs = 3
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    NumAdditionalInputs = 3
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = (
+    вход D = )
+    вход E =  is not valid
+    вход A = Cleaning:
+    вход A = Converting RT to texture:
+    вход B = .
+    вход B = (
+    вход D = )
+    вход E =  is not valid
+    вход A = Cleaning:
+    вход A = Converting RT to texture:
+    вход A = Exporting (
+[K2Node_CommutativeAssociativeBinaryOperator_2@BeginExporting_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    NumAdditionalInputs = 3
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    NumAdditionalInputs = 3
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход A = Something went wrong during moving textures to the same folder as State. Probably other asset with the same name already exist. 
+File: [
+    вход C = ] 
+Can\'t be moved and renamed to: 
+[
+    вход E = ]
+    вход A = Removed Asset:
+    вход A = Something went wrong during moving textures to the same folder as State. Probably other asset with the same name already exist. 
+File: [
+    вход C = ] 
+Can\'t be moved and renamed to: 
+[
+    вход E = ]
+    вход A = Removed Asset:
+    вход B = ) -> (
+[K2Node_CommutativeAssociativeBinaryOperator_3@BeginExporting_MERGED] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CommutativeAssociativeBinaryOperator_4@BeginExporting_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    NumAdditionalInputs = 1
+    bDefaultsToPureFunc = True
+    NumAdditionalInputs = 1
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход B = .
+    вход B = .
+    вход B =  is not valid
+    вход B = )
+[BuildName_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 16166DEE499291AAA950EE91B83E76B6
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_14
+    Nodes(2) <- K2Node_CallFunction_13
+    Nodes(3) <- K2Node_CallFunction_4
+    Nodes(4) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(5) <- K2Node_FunctionResult_1
+    Nodes(6) <- K2Node_VariableGet_0
+    Nodes(7) <- K2Node_VariableGet_1
+[K2Node_FunctionEntry_0@BuildName_MERGED] K2Node_FunctionEntry (вызов: BuildName)
+    MetaData = (ToolTip=NSLOCTEXT("", "077ACE4A4B093F1363EDDEA68B533D14", "Generate texture from current simulation state."),Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "077ACE4A4B093F1363EDDEA68B533D14", "Generate texture from current simulation state."),Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "89C56D334CF3A29E9F34E38522D5261A", "MOve asset from one loaction to another and removes old one"),Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    LocalVariables(0) = (VarName="NewName",VarGuid=7237BE9F4E9D974053E48C8112852729,VarType=(PinCategory="string"),FriendlyName="New Name",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    ExtraFlags = 1543634944
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "AC675A844F4AD3D494CA308D64687E9B", "Helpers"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ErrorType = 1
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (bCallInEditor=True)
+    ExtraFlags = 469893120
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 1543634944
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "077ACE4A4B093F1363EDDEA68B533D14", "Generate texture from current simulation state."),Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "077ACE4A4B093F1363EDDEA68B533D14", "Generate texture from current simulation state."),Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "89C56D334CF3A29E9F34E38522D5261A", "MOve asset from one loaction to another and removes old one"),Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    LocalVariables(0) = (VarName="NewName",VarGuid=7237BE9F4E9D974053E48C8112852729,VarType=(PinCategory="string"),FriendlyName="New Name",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "BCC547F7401B5BF5571EEF834859A2BD", "Helpers"))
+    ExtraFlags = 1543634944
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "AC675A844F4AD3D494CA308D64687E9B", "Helpers"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ErrorType = 1
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (bCallInEditor=True)
+    ExtraFlags = 469893120
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 1543634944
+    bIsEditable = True
+[K2Node_CallFunction_14@BuildName_MERGED] K2Node_CallFunction (вызов: Split @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    вход InStr = .
+    вход SearchCase = IgnoreCase
+    вход SearchDir = FromStart
+    вход InStr = .
+    вход SearchCase = IgnoreCase
+    вход SearchDir = FromStart
+[K2Node_CallFunction_13@BuildName_MERGED] K2Node_CallFunction (вызов: Replace @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    вход SearchCase = IgnoreCase
+    вход SearchCase = IgnoreCase
+[K2Node_CallFunction_4@BuildName_MERGED] K2Node_CallFunction (вызов: GetPathName @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Shown
+    EnabledState = DevelopmentOnly
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    вход ClearColor = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    вход bAutoGenerateMipMaps = false
+    вход bSupportUAVs = false
+    вход ClearColor = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    вход bAutoGenerateMipMaps = false
+    вход bSupportUAVs = false
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход Filter = TF_Bilinear
+    вход sRGB = false
+    вход Address X = TA_Clamp
+    вход Address Y = TA_Clamp
+    вход Mip Gen Settings = TMGS_NoMipmaps
+    вход ClearColor = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    вход bAutoGenerateMipMaps = false
+    вход bSupportUAVs = false
+    вход ClearColor = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    вход bAutoGenerateMipMaps = false
+    вход bSupportUAVs = false
+    вход bPrintToScreen = false
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход Filter = TF_Bilinear
+    вход sRGB = false
+    вход Address X = TA_Clamp
+    вход Address Y = TA_Clamp
+    вход Mip Gen Settings = TMGS_NoMipmaps
+[K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    вход A = Removing: 
+    вход B = )
+    вход A = Removing: 
+[K2Node_FunctionResult_1@BuildName_MERGED] K2Node_FunctionResult (вызов: BuildName)
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    вход CanExport = false
+    вход CanExport = false
+    вход CanExport = false
+    вход CanExport = false
+[K2Node_VariableGet_0@BuildName_MERGED] K2Node_VariableGet (переменная: RemovePrefix)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_VariableGet_1@BuildName_MERGED] K2Node_VariableGet (переменная: Prefix)
+[K2Node_Knot_0@BuildName_MERGED] K2Node_Knot
+
+## СВЯЗИ
+[K2Node_AssignmentStatement_23@DeleteStateReferences_MERGED].then -> [K2Node_AssignmentStatement_24@DeleteStateReferences_MERGED].execute
+[K2Node_AssignmentStatement_24@DeleteStateReferences_MERGED].then -> [K2Node_IfThenElse_7@DeleteStateReferences_MERGED].execute
+[K2Node_AssignmentStatement_25@DeleteStateReferences_MERGED].then -> [K2Node_ExecutionSequence_8@DeleteStateReferences_MERGED].execute
+[K2Node_AssignmentStatement_7@DeleteStateReferences_MERGED].then -> [K2Node_IfThenElse_7@DeleteStateReferences_MERGED].execute
+[K2Node_BreakStruct_0@ValidateResolution_MERGED].X -> [K2Node_CallFunction_44@ValidateResolution_MERGED].InInt
+[K2Node_BreakStruct_0@ValidateResolution_MERGED].Y -> [K2Node_CallFunction_19@ValidateResolution_MERGED].InInt
+[K2Node_BreakStruct_1@BakeHeightmapToRT_MERGED].X -> [K2Node_CallFunction_7@DeleteStateReferences_MERGED].A
+[K2Node_BreakStruct_1@BakeHeightmapToRT_MERGED].Y -> [K2Node_CallFunction_7@DeleteStateReferences_MERGED].A
+[K2Node_CallArrayFunction_0@GetFirstSelectedActor_MERGED].ReturnValue -> [K2Node_CallFunction_40@GetFirstSelectedActor_MERGED].A
+[K2Node_CallArrayFunction_0@GetFirstSelectedActor_MERGED].then -> [K2Node_DynamicCast_0@SaveTexture_MERGED].execute#2
+[K2Node_CallArrayFunction_0@GetFirstSelectedActor_MERGED].then -> [K2Node_Message_0@DeleteStateReferences_MERGED].execute
+[K2Node_CallArrayFunction_1@GetFirstSelectedActor_MERGED].Item -> [K2Node_FunctionResult_0@GetWorld_MERGED].NewParam
+[K2Node_CallArrayFunction_1@GetFirstSelectedActor_MERGED].then -> [K2Node_CallFunction_8@DeleteStateReferences_MERGED].execute#2
+[K2Node_CallArrayFunction_3].then -> [K2Node_TunnelBoundary_6].Exec
+[K2Node_CallArrayFunction_4].Item -> [K2Node_CallFunction_17@DeleteStateReferences_MERGED].AssetPathToDelete
+[K2Node_CallArrayFunction_4].Item -> [K2Node_CallFunction_6@BeginExporting_MERGED].A
+[K2Node_CallArrayFunction_4].Item -> [K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED].B#2
+[K2Node_CallArrayFunction_5].Item -> [K2Node_CallFunction_4347@DeleteStateReferences_MERGED].Object
+[K2Node_CallArrayFunction_5].Item -> [K2Node_CallFunction_7@DeleteStateReferences_MERGED].Object
+[K2Node_CallArrayFunction_836@DeleteStateReferences_MERGED].ReturnValue -> [K2Node_CallFunction_36741@DeleteStateReferences_MERGED].B
+[K2Node_CallFunction_0@GetWorld_MERGED].Result -> [K2Node_IfThenElse_2@DeleteStateReferences_MERGED].Condition
+[K2Node_CallFunction_0@GetWorld_MERGED].ReturnValue -> [K2Node_CallArrayFunction_0@GetFirstSelectedActor_MERGED].TargetArray#2
+[K2Node_CallFunction_0@GetWorld_MERGED].ReturnValue -> [K2Node_CallArrayFunction_1@GetFirstSelectedActor_MERGED].TargetArray#2
+[K2Node_CallFunction_0@GetWorld_MERGED].ReturnValue -> [K2Node_GetArrayItem_0@GetFirstSelectedActor_MERGED].Array
+[K2Node_CallFunction_0@GetWorld_MERGED].ReturnValue#2 -> [K2Node_CallFunction_10@BeginExporting_MERGED].self
+[K2Node_CallFunction_0@GetWorld_MERGED].Size -> [K2Node_BreakStruct_1@BakeHeightmapToRT_MERGED].IntPoint
+[K2Node_CallFunction_0@GetWorld_MERGED].then -> [K2Node_ExecutionSequence_0@DeleteStateReferences_MERGED].execute#2
+[K2Node_CallFunction_0@GetWorld_MERGED].then#2 -> [K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].execute#3
+[K2Node_CallFunction_10@BeginExporting_MERGED].Baker -> [K2Node_VariableSet_2@BakeHeightmapToRT_MERGED].Bake
+[K2Node_CallFunction_10@BeginExporting_MERGED].ReturnValue -> [K2Node_IfThenElse_0@DeleteStateReferences_MERGED].Condition
+[K2Node_CallFunction_10@BeginExporting_MERGED].ReturnValue#2 -> [K2Node_FunctionResult_0@GetWorld_MERGED].ReturnValue#2
+[K2Node_CallFunction_10@BeginExporting_MERGED].ReturnValue#3 -> [K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED].D#2
+[K2Node_CallFunction_10@BeginExporting_MERGED].ReturnValue#3 -> [K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].B#5
+[K2Node_CallFunction_10@BeginExporting_MERGED].then -> [K2Node_VariableSet_2@BakeHeightmapToRT_MERGED].execute
+[K2Node_CallFunction_10@BeginExporting_MERGED].then#2 -> [K2Node_IfThenElse_0@DeleteStateReferences_MERGED].execute
+[K2Node_CallFunction_10@BeginExporting_MERGED].then#3 -> [K2Node_FunctionResult_0@GetWorld_MERGED].execute#5
+[K2Node_CallFunction_11@DeleteStateReferences_MERGED].then -> [K2Node_CallFunction_3@PrepareHeightmapBake_MERGED].execute
+[K2Node_CallFunction_12@DeleteStateReferences_MERGED].ReturnValue -> [K2Node_CallFunction_11@DeleteStateReferences_MERGED].Message
+[K2Node_CallFunction_12@DeleteStateReferences_MERGED].ReturnValue -> [K2Node_CallFunction_11@DeleteStateReferences_MERGED].Title
+[K2Node_CallFunction_12@DeleteStateReferences_MERGED].ReturnValue#2 -> [K2Node_CallFunction_11@DeleteStateReferences_MERGED].AssetToSave
+[K2Node_CallFunction_13@BuildName_MERGED].Objects -> [K2Node_CallArrayFunction_3].TargetArray
+[K2Node_CallFunction_13@BuildName_MERGED].Objects -> [K2Node_CallArrayFunction_5].TargetArray
+[K2Node_CallFunction_13@BuildName_MERGED].Objects -> [K2Node_CallArrayFunction_836@DeleteStateReferences_MERGED].TargetArray
+[K2Node_CallFunction_13@BuildName_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].A#2
+[K2Node_CallFunction_13@BuildName_MERGED].then -> [K2Node_TunnelBoundary_6].Exec
+[K2Node_CallFunction_14@BuildName_MERGED].LeftS -> [K2Node_CallFunction_13@BuildName_MERGED].SourceString
+[K2Node_CallFunction_14@BuildName_MERGED].then -> [K2Node_CallFunction_11@DeleteStateReferences_MERGED].execute#2
+[K2Node_CallFunction_17@DeleteStateReferences_MERGED].ReturnValue -> [K2Node_IfThenElse_0@DeleteStateReferences_MERGED].Condition#2
+[K2Node_CallFunction_17@DeleteStateReferences_MERGED].then -> [K2Node_IfThenElse_0@DeleteStateReferences_MERGED].execute#2
+[K2Node_CallFunction_18@MoveToSameFolder_MERGED].ReturnValue -> [K2Node_VariableSet_1@MoveToSameFolder_MERGED].NewName
+[K2Node_CallFunction_18@MoveToSameFolder_MERGED].then -> [K2Node_FunctionResult_0@GetWorld_MERGED].execute
+[K2Node_CallFunction_19@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED].A#4
+[K2Node_CallFunction_19@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_12].B
+[K2Node_CallFunction_19@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED].B
+[K2Node_CallFunction_19@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].B#3
+[K2Node_CallFunction_19@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_5@ValidateResolution_MERGED].A
+[K2Node_CallFunction_19@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_5@ValidateResolution_MERGED].C
+[K2Node_CallFunction_19@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_6@ValidateResolution_MERGED].A
+[K2Node_CallFunction_19@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_7@ValidateResolution_MERGED].B
+[K2Node_CallFunction_19@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_8].B
+[K2Node_CallFunction_19@ValidateResolution_MERGED].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_5@ValidateResolution_MERGED].C#2
+[K2Node_CallFunction_19@ValidateResolution_MERGED].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_7@ValidateResolution_MERGED].B#2
+[K2Node_CallFunction_1@GetFirstSelectedActor_MERGED].ReturnValue#2 -> [K2Node_CallFunction_0@GetWorld_MERGED].self
+[K2Node_CallFunction_1@GetFirstSelectedActor_MERGED].then -> [K2Node_DynamicCast_1].execute
+[K2Node_CallFunction_1@GetFirstSelectedActor_MERGED].then -> [K2Node_Message_1@DeleteStateReferences_MERGED].execute
+[K2Node_CallFunction_2@SaveTexture_MERGED].ReturnValue -> [K2Node_CallFunction_4@BuildName_MERGED].RenderTargetObject
+[K2Node_CallFunction_2@SaveTexture_MERGED].ReturnValue -> [K2Node_FunctionResult_0@GetWorld_MERGED].ReturnValue
+[K2Node_CallFunction_2@SaveTexture_MERGED].ReturnValue -> [K2Node_FunctionResult_0@GetWorld_MERGED].Texture
+[K2Node_CallFunction_2@SaveTexture_MERGED].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED].B#2
+[K2Node_CallFunction_2@SaveTexture_MERGED].then -> [K2Node_CallFunction_4@BuildName_MERGED].execute#2
+[K2Node_CallFunction_2@SaveTexture_MERGED].then -> [K2Node_FunctionResult_0@GetWorld_MERGED].execute
+[K2Node_CallFunction_36741@DeleteStateReferences_MERGED].ReturnValue -> [K2Node_IfThenElse_7@DeleteStateReferences_MERGED].Condition
+[K2Node_CallFunction_38@ValidateResolution_MERGED].ReturnValue -> [K2Node_CallFunction_47@ValidateResolution_MERGED].Message
+[K2Node_CallFunction_39@ValidateResolution_MERGED].ReturnValue -> [K2Node_CallFunction_47@ValidateResolution_MERGED].Title
+[K2Node_CallFunction_3@PrepareHeightmapBake_MERGED].then -> [K2Node_CallFunction_2@SaveTexture_MERGED].execute
+[K2Node_CallFunction_3@PrepareHeightmapBake_MERGED].then#2 -> [K2Node_FunctionResult_0@GetWorld_MERGED].execute#4
+[K2Node_CallFunction_40@GetFirstSelectedActor_MERGED].ReturnValue -> [K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].Condition#3
+[K2Node_CallFunction_41@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED].A
+[K2Node_CallFunction_41@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED].A#4
+[K2Node_CallFunction_4347@DeleteStateReferences_MERGED].ReturnValue -> [K2Node_IfThenElse_15@DeleteStateReferences_MERGED].Condition
+[K2Node_CallFunction_44@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_5@ValidateResolution_MERGED].A#2
+[K2Node_CallFunction_44@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_6@ValidateResolution_MERGED].A#2
+[K2Node_CallFunction_45@ValidateResolution_MERGED].ReturnValue -> [K2Node_CallFunction_41@ValidateResolution_MERGED].InText
+[K2Node_CallFunction_47@ValidateResolution_MERGED].then -> [K2Node_FunctionResult_2@ValidateResolution_MERGED].execute
+[K2Node_CallFunction_4@BuildName_MERGED].ReturnValue -> [K2Node_VariableSet_6@BakeHeightmapToRT_MERGED].ConvertedOutput
+[K2Node_CallFunction_4@BuildName_MERGED].ReturnValue#2 -> [K2Node_CallFunction_14@BuildName_MERGED].SourceString
+[K2Node_CallFunction_4@BuildName_MERGED].then -> [K2Node_VariableSet_6@BakeHeightmapToRT_MERGED].execute
+[K2Node_CallFunction_4@BuildName_MERGED].then#2 -> [K2Node_FunctionResult_0@GetWorld_MERGED].execute#3
+[K2Node_CallFunction_563@DeleteStateReferences_MERGED].ReturnValue -> [K2Node_AssignmentStatement_7@DeleteStateReferences_MERGED].Value
+[K2Node_CallFunction_5@PrepareHeightmapBake_MERGED].then -> [K2Node_CallFunction_3@PrepareHeightmapBake_MERGED].execute#3
+[K2Node_CallFunction_6@BeginExporting_MERGED].ReturnValue -> [K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].Condition#2
+[K2Node_CallFunction_6@BeginExporting_MERGED].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED].B#5
+[K2Node_CallFunction_6@BeginExporting_MERGED].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED].B#3
+[K2Node_CallFunction_6@BeginExporting_MERGED].then -> [K2Node_CallFunction_18@MoveToSameFolder_MERGED].execute
+[K2Node_CallFunction_7@DeleteStateReferences_MERGED].ReturnValue -> [K2Node_CallFunction_4@BuildName_MERGED].Height
+[K2Node_CallFunction_7@DeleteStateReferences_MERGED].ReturnValue -> [K2Node_CallFunction_4@BuildName_MERGED].Width
+[K2Node_CallFunction_7@DeleteStateReferences_MERGED].ReturnValue#2 -> [K2Node_CallFunction_18@MoveToSameFolder_MERGED].SourceString
+[K2Node_CallFunction_7@DeleteStateReferences_MERGED].ReturnValue#3 -> [K2Node_CallArrayFunction_1@GetFirstSelectedActor_MERGED].NewItem
+[K2Node_CallFunction_7@DeleteStateReferences_MERGED].ReturnValue#3 -> [K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].B
+[K2Node_CallFunction_7@DeleteStateReferences_MERGED].then -> [K2Node_VariableSet_1@MoveToSameFolder_MERGED].execute
+[K2Node_CallFunction_8@DeleteStateReferences_MERGED].ReturnValue -> [K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].Condition
+[K2Node_CallFunction_8@DeleteStateReferences_MERGED].then -> [K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].execute
+[K2Node_CallMaterialParameterCollectionFunction_3@PrepareHeightmapBake_MERGED].ReturnValue -> [K2Node_VariableSet_0@PrepareHeightmapBake_MERGED].BakeMaterial
+[K2Node_CallMaterialParameterCollectionFunction_3@PrepareHeightmapBake_MERGED].then -> [K2Node_VariableSet_0@PrepareHeightmapBake_MERGED].execute
+[K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED].ReturnValue -> [K2Node_CallFunction_39@ValidateResolution_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED].ReturnValue#2 -> [K2Node_CallFunction_0@GetWorld_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED].ReturnValue#3 -> [K2Node_CallFunction_3@PrepareHeightmapBake_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED].ReturnValue#4 -> [K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].A#3
+[K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED].ReturnValue#5 -> [K2Node_CommutativeAssociativeBinaryOperator_2@BeginExporting_MERGED].A#2
+[K2Node_CommutativeAssociativeBinaryOperator_10].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_11].A
+[K2Node_CommutativeAssociativeBinaryOperator_11].ReturnValue -> [K2Node_CallFunction_5@PrepareHeightmapBake_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_12].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_13].A
+[K2Node_CommutativeAssociativeBinaryOperator_13].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_14].A
+[K2Node_CommutativeAssociativeBinaryOperator_14].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_15].A
+[K2Node_CommutativeAssociativeBinaryOperator_15].ReturnValue -> [K2Node_CallFunction_12@DeleteStateReferences_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED].ReturnValue -> [K2Node_CallFunction_12@DeleteStateReferences_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED].ReturnValue -> [K2Node_CallFunction_5@PrepareHeightmapBake_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED].ReturnValue#2 -> [K2Node_CallFunction_8@DeleteStateReferences_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED].ReturnValue#3 -> [K2Node_CallFunction_29@BeginExporting_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED].ReturnValue#4 -> [K2Node_CommutativeAssociativeBinaryOperator_2@BeginExporting_MERGED].A
+[K2Node_CommutativeAssociativeBinaryOperator_2@BeginExporting_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].A#4
+[K2Node_CommutativeAssociativeBinaryOperator_2@BeginExporting_MERGED].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].A#5
+[K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].ReturnValue -> [K2Node_CallFunction_8@DeleteStateReferences_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].ReturnValue#2 -> [K2Node_FunctionResult_1@BuildName_MERGED].ReturnValue
+[K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].ReturnValue#3 -> [K2Node_CallFunction_18@MoveToSameFolder_MERGED].To
+[K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].ReturnValue#4 -> [K2Node_CommutativeAssociativeBinaryOperator_4@BeginExporting_MERGED].A
+[K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].ReturnValue#5 -> [K2Node_CommutativeAssociativeBinaryOperator_4@BeginExporting_MERGED].A#2
+[K2Node_CommutativeAssociativeBinaryOperator_4@BeginExporting_MERGED].ReturnValue -> [K2Node_CallFunction_39@ValidateResolution_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_4@BeginExporting_MERGED].ReturnValue#2 -> [K2Node_CallFunction_29@BeginExporting_MERGED].InString
+[K2Node_CommutativeAssociativeBinaryOperator_5@ValidateResolution_MERGED].ReturnValue -> [K2Node_CallFunction_18@MoveToSameFolder_MERGED].From
+[K2Node_CommutativeAssociativeBinaryOperator_5@ValidateResolution_MERGED].ReturnValue -> [K2Node_CallFunction_18@MoveToSameFolder_MERGED].To
+[K2Node_CommutativeAssociativeBinaryOperator_5@ValidateResolution_MERGED].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED].C
+[K2Node_CommutativeAssociativeBinaryOperator_6@ValidateResolution_MERGED].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_7@ValidateResolution_MERGED].A
+[K2Node_CommutativeAssociativeBinaryOperator_6@ValidateResolution_MERGED].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_7@ValidateResolution_MERGED].A#2
+[K2Node_CommutativeAssociativeBinaryOperator_7@ValidateResolution_MERGED].ReturnValue -> [K2Node_CallFunction_18@MoveToSameFolder_MERGED].From
+[K2Node_CommutativeAssociativeBinaryOperator_7@ValidateResolution_MERGED].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_2@BeginExporting_MERGED].B
+[K2Node_CommutativeAssociativeBinaryOperator_8].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_9].A
+[K2Node_CommutativeAssociativeBinaryOperator_9].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_10].A
+[K2Node_DynamicCast_0@SaveTexture_MERGED].AsBPI Flux Export Data -> [K2Node_CallFunction_13@BuildName_MERGED].self
+[K2Node_DynamicCast_0@SaveTexture_MERGED].AsTexture Render Target 2D -> [K2Node_CallFunction_2@SaveTexture_MERGED].RenderTarget
+[K2Node_DynamicCast_0@SaveTexture_MERGED].CastFailed -> [K2Node_CallArrayFunction_3].execute
+[K2Node_DynamicCast_0@SaveTexture_MERGED].then -> [K2Node_CallFunction_3@PrepareHeightmapBake_MERGED].execute#2
+[K2Node_DynamicCast_0@SaveTexture_MERGED].then#2 -> [K2Node_CallFunction_13@BuildName_MERGED].execute
+[K2Node_DynamicCast_1].AsBPI Flux Export Data -> [K2Node_CallFunction_14@BuildName_MERGED].self
+[K2Node_DynamicCast_1].CastFailed -> [K2Node_CallFunction_11@DeleteStateReferences_MERGED].execute#2
+[K2Node_DynamicCast_1].then -> [K2Node_CallFunction_14@BuildName_MERGED].execute
+[K2Node_ExecutionSequence_0@DeleteStateReferences_MERGED].then_0 -> [K2Node_CallFunction_4@BuildName_MERGED].execute
+[K2Node_ExecutionSequence_0@DeleteStateReferences_MERGED].then_0#2 -> [K2Node_CallArrayFunction_0@GetFirstSelectedActor_MERGED].execute
+[K2Node_ExecutionSequence_0@DeleteStateReferences_MERGED].then_1 -> [K2Node_CallFunction_2@SaveTexture_MERGED].execute
+[K2Node_ExecutionSequence_0@DeleteStateReferences_MERGED].then_1#2 -> [K2Node_CallFunction_1@GetFirstSelectedActor_MERGED].execute
+[K2Node_ExecutionSequence_0@DeleteStateReferences_MERGED].then_2 -> [K2Node_MacroInstance_0@DeleteStateReferences_MERGED].Exec
+[K2Node_ExecutionSequence_0@DeleteStateReferences_MERGED].then_2 -> [K2Node_TunnelBoundary_2].Exec
+[K2Node_ExecutionSequence_8@DeleteStateReferences_MERGED].then_0 -> [K2Node_TunnelBoundary_0].LoopBody
+[K2Node_ExecutionSequence_8@DeleteStateReferences_MERGED].then_0 -> [K2Node_TunnelBoundary_4].LoopBody
+[K2Node_ExecutionSequence_8@DeleteStateReferences_MERGED].then_0 -> [K2Node_Tunnel_1@DeleteStateReferences_MERGED].LoopBody
+[K2Node_ExecutionSequence_8@DeleteStateReferences_MERGED].then_1 -> [K2Node_AssignmentStatement_7@DeleteStateReferences_MERGED].execute
+[K2Node_FunctionEntry_0@BuildName_MERGED].CompressionSettings -> [K2Node_CallFunction_2@SaveTexture_MERGED].CompressionSettings
+[K2Node_FunctionEntry_0@BuildName_MERGED].Context -> [K2Node_CallFunction_10@BeginExporting_MERGED].WorldContext
+[K2Node_FunctionEntry_0@BuildName_MERGED].ExportedActor -> [K2Node_CallFunction_6@BeginExporting_MERGED].Object
+[K2Node_FunctionEntry_0@BuildName_MERGED].Format -> [K2Node_CallFunction_4@BuildName_MERGED].Format
+[K2Node_FunctionEntry_0@BuildName_MERGED].Height -> [K2Node_CallFunction_7@DeleteStateReferences_MERGED].A
+[K2Node_FunctionEntry_0@BuildName_MERGED].Material -> [K2Node_CallMaterialParameterCollectionFunction_3@PrepareHeightmapBake_MERGED].Parent
+[K2Node_FunctionEntry_0@BuildName_MERGED].Object -> [K2Node_CallFunction_4@BuildName_MERGED].Object
+[K2Node_FunctionEntry_0@BuildName_MERGED].Positfix -> [K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].B#2
+[K2Node_FunctionEntry_0@BuildName_MERGED].Positfix -> [K2Node_Knot_0@BuildName_MERGED].InputPin
+[K2Node_FunctionEntry_0@BuildName_MERGED].Postfix -> [K2Node_CallFunction_2@SaveTexture_MERGED].Name
+[K2Node_FunctionEntry_0@BuildName_MERGED].Postfix -> [K2Node_CommutativeAssociativeBinaryOperator_0@BeginExporting_MERGED].B#3
+[K2Node_FunctionEntry_0@BuildName_MERGED].RenderTarget -> [K2Node_DynamicCast_0@SaveTexture_MERGED].Object
+[K2Node_FunctionEntry_0@BuildName_MERGED].Source -> [K2Node_CallFunction_10@BeginExporting_MERGED].Source
+[K2Node_FunctionEntry_0@BuildName_MERGED].Source#2 -> [K2Node_CallFunction_5@PrepareHeightmapBake_MERGED].Value
+[K2Node_FunctionEntry_0@BuildName_MERGED].StateAsset -> [K2Node_CallFunction_2@SaveTexture_MERGED].Object
+[K2Node_FunctionEntry_0@BuildName_MERGED].TargetAsset -> [K2Node_CallFunction_10@BeginExporting_MERGED].Object
+[K2Node_FunctionEntry_0@BuildName_MERGED].TargetDestination -> [K2Node_CallFunction_7@DeleteStateReferences_MERGED].LoadedAsset
+[K2Node_FunctionEntry_0@BuildName_MERGED].Value -> [K2Node_CallFunction_0@GetWorld_MERGED].Value
+[K2Node_FunctionEntry_0@BuildName_MERGED].Width -> [K2Node_CallFunction_7@DeleteStateReferences_MERGED].A
+[K2Node_FunctionEntry_0@BuildName_MERGED].WorldContext -> [K2Node_CallMaterialParameterCollectionFunction_3@PrepareHeightmapBake_MERGED].WorldContextObject
+[K2Node_FunctionEntry_0@BuildName_MERGED].then -> [K2Node_CallFunction_10@BeginExporting_MERGED].execute
+[K2Node_FunctionEntry_0@BuildName_MERGED].then -> [K2Node_ExecutionSequence_0@DeleteStateReferences_MERGED].execute
+[K2Node_FunctionEntry_0@BuildName_MERGED].then#10 -> [K2Node_FunctionResult_1@BuildName_MERGED].execute
+[K2Node_FunctionEntry_0@BuildName_MERGED].then#2 -> [K2Node_CallFunction_7@DeleteStateReferences_MERGED].execute
+[K2Node_FunctionEntry_0@BuildName_MERGED].then#3 -> [K2Node_IfThenElse_2@DeleteStateReferences_MERGED].execute
+[K2Node_FunctionEntry_0@BuildName_MERGED].then#4 -> [K2Node_CallFunction_0@GetWorld_MERGED].execute
+[K2Node_FunctionEntry_0@BuildName_MERGED].then#5 -> [K2Node_CallFunction_0@GetWorld_MERGED].execute#2
+[K2Node_FunctionEntry_0@BuildName_MERGED].then#6 -> [K2Node_DynamicCast_0@SaveTexture_MERGED].execute
+[K2Node_FunctionEntry_0@BuildName_MERGED].then#7 -> [K2Node_CallMaterialParameterCollectionFunction_3@PrepareHeightmapBake_MERGED].execute
+[K2Node_FunctionEntry_0@BuildName_MERGED].then#8 -> [K2Node_CallFunction_10@BeginExporting_MERGED].execute#3
+[K2Node_FunctionEntry_0@BuildName_MERGED].then#9 -> [K2Node_CallFunction_29@BeginExporting_MERGED].execute
+[K2Node_GetArrayItem_0@GetFirstSelectedActor_MERGED].Output -> [K2Node_Knot_10@GetFirstSelectedActor_MERGED].InputPin
+[K2Node_GetArrayItem_0@GetFirstSelectedActor_MERGED].Output#2 -> [K2Node_Tunnel_1@DeleteStateReferences_MERGED].Array Element
+[K2Node_GetEditorSubsystem_0@GetWorld_MERGED].ReturnValue -> [K2Node_CallFunction_0@GetWorld_MERGED].self
+[K2Node_GetEditorSubsystem_0@GetWorld_MERGED].ReturnValue#2 -> [K2Node_CallFunction_10@BeginExporting_MERGED].self
+[K2Node_IfThenElse_0@DeleteStateReferences_MERGED].else -> [K2Node_CallFunction_11@DeleteStateReferences_MERGED].execute
+[K2Node_IfThenElse_0@DeleteStateReferences_MERGED].else#2 -> [K2Node_CallFunction_8@DeleteStateReferences_MERGED].execute#2
+[K2Node_IfThenElse_0@DeleteStateReferences_MERGED].then -> [K2Node_CallFunction_5@PrepareHeightmapBake_MERGED].execute
+[K2Node_IfThenElse_0@DeleteStateReferences_MERGED].then#2 -> [K2Node_CallFunction_8@DeleteStateReferences_MERGED].execute#2
+[K2Node_IfThenElse_15@DeleteStateReferences_MERGED].else -> [K2Node_TunnelBoundary_9].Is Not Valid
+[K2Node_IfThenElse_15@DeleteStateReferences_MERGED].else -> [K2Node_Tunnel_91@DeleteStateReferences_MERGED].Is Not Valid
+[K2Node_IfThenElse_15@DeleteStateReferences_MERGED].then -> [K2Node_TunnelBoundary_8].Is Valid
+[K2Node_IfThenElse_15@DeleteStateReferences_MERGED].then -> [K2Node_Tunnel_91@DeleteStateReferences_MERGED].Is Valid
+[K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].else -> [K2Node_CallFunction_10@BeginExporting_MERGED].execute#2
+[K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].else#2 -> [K2Node_FunctionResult_0@GetWorld_MERGED].execute#2
+[K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].then -> [K2Node_CallFunction_11@DeleteStateReferences_MERGED].execute
+[K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].then#2 -> [K2Node_CallFunction_17@DeleteStateReferences_MERGED].execute
+[K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].then#3 -> [K2Node_FunctionResult_0@GetWorld_MERGED].execute#2
+[K2Node_IfThenElse_2@DeleteStateReferences_MERGED].else -> [K2Node_CallFunction_47@ValidateResolution_MERGED].execute
+[K2Node_IfThenElse_2@DeleteStateReferences_MERGED].then -> [K2Node_FunctionResult_2@ValidateResolution_MERGED].execute
+[K2Node_IfThenElse_7@DeleteStateReferences_MERGED].else -> [K2Node_TunnelBoundary_1].Completed
+[K2Node_IfThenElse_7@DeleteStateReferences_MERGED].else -> [K2Node_TunnelBoundary_5].Completed
+[K2Node_IfThenElse_7@DeleteStateReferences_MERGED].else -> [K2Node_Tunnel_1@DeleteStateReferences_MERGED].Completed
+[K2Node_IfThenElse_7@DeleteStateReferences_MERGED].then -> [K2Node_AssignmentStatement_25@DeleteStateReferences_MERGED].execute
+[K2Node_Knot_0@BuildName_MERGED].OutputPin -> [K2Node_CommutativeAssociativeBinaryOperator_3@BuildName_MERGED].B#2
+[K2Node_Knot_10@GetFirstSelectedActor_MERGED].OutputPin -> [K2Node_FunctionResult_0@GetWorld_MERGED].NewParam
+[K2Node_MacroInstance_0@DeleteStateReferences_MERGED].Array Element -> [K2Node_CallFunction_17@DeleteStateReferences_MERGED].AssetPathToDelete
+[K2Node_MacroInstance_0@DeleteStateReferences_MERGED].Array Element -> [K2Node_CallFunction_6@BeginExporting_MERGED].A
+[K2Node_MacroInstance_0@DeleteStateReferences_MERGED].Array Element -> [K2Node_CommutativeAssociativeBinaryOperator_1@BeginExporting_MERGED].B#2
+[K2Node_MacroInstance_0@DeleteStateReferences_MERGED].LoopBody -> [K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].execute#2
+[K2Node_MacroInstance_1@DeleteStateReferences_MERGED].Is Valid -> [K2Node_CallArrayFunction_1@GetFirstSelectedActor_MERGED].execute
+[K2Node_MacroInstance_3@DeleteStateReferences_MERGED].Array Element -> [K2Node_CallFunction_7@DeleteStateReferences_MERGED].Object
+[K2Node_MacroInstance_3@DeleteStateReferences_MERGED].Array Element -> [K2Node_MacroInstance_1@DeleteStateReferences_MERGED].InputObject
+[K2Node_MacroInstance_3@DeleteStateReferences_MERGED].LoopBody -> [K2Node_MacroInstance_1@DeleteStateReferences_MERGED].exec
+[K2Node_Message_0@DeleteStateReferences_MERGED].Objects -> [K2Node_MacroInstance_3@DeleteStateReferences_MERGED].Array
+[K2Node_Message_0@DeleteStateReferences_MERGED].then -> [K2Node_MacroInstance_3@DeleteStateReferences_MERGED].Exec
+[K2Node_Message_1@DeleteStateReferences_MERGED].then -> [K2Node_CallFunction_11@DeleteStateReferences_MERGED].execute#2
+[K2Node_Self_0@SaveTexture_MERGED].self -> [K2Node_CallFunction_4@BuildName_MERGED].__WorldContext
+[K2Node_Self_2@ValidateResolution_MERGED].self -> [K2Node_CallFunction_0@GetWorld_MERGED].__WorldContext#2
+[K2Node_TemporaryVariable_31@DeleteStateReferences_MERGED].Variable -> [K2Node_AssignmentStatement_24@DeleteStateReferences_MERGED].Variable
+[K2Node_TemporaryVariable_31@DeleteStateReferences_MERGED].Variable -> [K2Node_AssignmentStatement_25@DeleteStateReferences_MERGED].Variable
+[K2Node_TemporaryVariable_31@DeleteStateReferences_MERGED].Variable -> [K2Node_CallArrayFunction_4].Index
+[K2Node_TemporaryVariable_31@DeleteStateReferences_MERGED].Variable -> [K2Node_CallArrayFunction_5].Index
+[K2Node_TemporaryVariable_31@DeleteStateReferences_MERGED].Variable -> [K2Node_GetArrayItem_1].Dimension 1
+[K2Node_TemporaryVariable_31@DeleteStateReferences_MERGED].Variable -> [K2Node_Tunnel_1@DeleteStateReferences_MERGED].Array Index
+[K2Node_TemporaryVariable_4@DeleteStateReferences_MERGED].Variable -> [K2Node_AssignmentStatement_23@DeleteStateReferences_MERGED].Variable
+[K2Node_TemporaryVariable_4@DeleteStateReferences_MERGED].Variable -> [K2Node_AssignmentStatement_25@DeleteStateReferences_MERGED].Value
+[K2Node_TemporaryVariable_4@DeleteStateReferences_MERGED].Variable -> [K2Node_AssignmentStatement_7@DeleteStateReferences_MERGED].Variable
+[K2Node_TemporaryVariable_4@DeleteStateReferences_MERGED].Variable -> [K2Node_CallFunction_36741@DeleteStateReferences_MERGED].A
+[K2Node_TemporaryVariable_4@DeleteStateReferences_MERGED].Variable -> [K2Node_CallFunction_563@DeleteStateReferences_MERGED].A
+[K2Node_TunnelBoundary_0].LoopBody2 -> [K2Node_IfThenElse_1@GetFirstSelectedActor_MERGED].execute#2
+[K2Node_TunnelBoundary_10].exec2 -> [K2Node_TunnelBoundary_11].exec
+[K2Node_TunnelBoundary_11].exec2 -> [K2Node_IfThenElse_15@DeleteStateReferences_MERGED].execute
+[K2Node_TunnelBoundary_2].Exec2 -> [K2Node_TunnelBoundary_3].Exec
+[K2Node_TunnelBoundary_3].Exec2 -> [K2Node_AssignmentStatement_23@DeleteStateReferences_MERGED].execute
+[K2Node_TunnelBoundary_4].LoopBody2 -> [K2Node_TunnelBoundary_10].exec
+[K2Node_TunnelBoundary_6].Exec2 -> [K2Node_TunnelBoundary_7].Exec
+[K2Node_TunnelBoundary_7].Exec2 -> [K2Node_AssignmentStatement_23@DeleteStateReferences_MERGED].execute
+[K2Node_TunnelBoundary_8].Is Valid2 -> [K2Node_CallArrayFunction_1@GetFirstSelectedActor_MERGED].execute
+[K2Node_Tunnel_0@DeleteStateReferences_MERGED].Array -> [K2Node_CallArrayFunction_836@DeleteStateReferences_MERGED].TargetArray
+[K2Node_Tunnel_0@DeleteStateReferences_MERGED].Array -> [K2Node_GetArrayItem_0@GetFirstSelectedActor_MERGED].Array#2
+[K2Node_Tunnel_0@DeleteStateReferences_MERGED].Exec -> [K2Node_AssignmentStatement_23@DeleteStateReferences_MERGED].execute
+[K2Node_Tunnel_90@DeleteStateReferences_MERGED].InputObject -> [K2Node_CallFunction_4347@DeleteStateReferences_MERGED].Object
+[K2Node_Tunnel_90@DeleteStateReferences_MERGED].exec -> [K2Node_IfThenElse_15@DeleteStateReferences_MERGED].execute
+[K2Node_VariableGet_0@BuildName_MERGED].BakeMaterial -> [K2Node_FunctionResult_0@GetWorld_MERGED].Baker
+[K2Node_VariableGet_0@BuildName_MERGED].RemovePrefix -> [K2Node_CallFunction_13@BuildName_MERGED].From
+[K2Node_VariableGet_0@BuildName_MERGED].TargetDestination -> [K2Node_CallFunction_19@ValidateResolution_MERGED].Object
+[K2Node_VariableGet_10@DeleteStateReferences_MERGED].BakeMaterial -> [K2Node_CallFunction_18@MoveToSameFolder_MERGED].Material
+[K2Node_VariableGet_10@DeleteStateReferences_MERGED].FilesToRemove -> [K2Node_CallArrayFunction_0@GetFirstSelectedActor_MERGED].TargetArray
+[K2Node_VariableGet_10@DeleteStateReferences_MERGED].FilesToRemove -> [K2Node_CallArrayFunction_1@GetFirstSelectedActor_MERGED].TargetArray
+[K2Node_VariableGet_10@DeleteStateReferences_MERGED].NewName -> [K2Node_CallFunction_8@DeleteStateReferences_MERGED].AssetPath
+[K2Node_VariableGet_13@DeleteStateReferences_MERGED].Compression -> [K2Node_CallFunction_2@SaveTexture_MERGED].CompressionSettings
+[K2Node_VariableGet_13@DeleteStateReferences_MERGED].FilesToRemove -> [K2Node_CallArrayFunction_4].TargetArray
+[K2Node_VariableGet_13@DeleteStateReferences_MERGED].FilesToRemove -> [K2Node_CallArrayFunction_836@DeleteStateReferences_MERGED].TargetArray

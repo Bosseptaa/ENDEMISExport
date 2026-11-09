@@ -1,0 +1,1270 @@
+﻿# /Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyComponent
+# класс: Blueprint; происхождение: проект; узлов: 299; связей: 558; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:2584
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxBuoyancyComponent] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.ActorComponent'"
+    HideCategories(0) = "Cooking"
+    HideCategories(1) = "Asset User Data"
+    HideCategories(2) = "Collision"
+    HideCategories(3) = "Tags"
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = "Event Graph"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Default"
+    CategorySorting(3) = "Components"
+    CategorySorting(4) = "Buoyancy"
+    CategorySorting(5) = "Debug"
+    CategorySorting(6) = "Sphere"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyComponent.BP_FluxBuoyancyComponent:GetSphereCapVolume",SavedViewOffset=(X=-1424.767578,Y=-350.620361),SavedZoomAmount=0.875000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyComponent.BP_FluxBuoyancyComponent:GetOwnerMesh",SavedViewOffset=(X=-118.954506,Y=263.970734),SavedZoomAmount=1.000000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyComponent.BP_FluxBuoyancyComponent:DebugPontoons",SavedViewOffset=(X=305.111816,Y=-237.495468),SavedZoomAmount=1.000000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyComponent.BP_FluxBuoyancyComponent:MapResistance",SavedViewOffset=(X=1984.520752,Y=993.579834),SavedZoomAmount=0.750000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyComponent.BP_FluxBuoyancyComponent:GetSpherePushArea",SavedViewOffset=(X=-388.066315,Y=-166.646622),SavedZoomAmount=1.000000)
+    LastEditedDocuments(6) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyComponent.BP_FluxBuoyancyComponent:EventGraph",SavedViewOffset=(X=-96.140732,Y=-453.462372),SavedZoomAmount=0.500000)
+    LastEditedDocuments(7) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyComponent.BP_FluxBuoyancyComponent:GetPontoonsLocations",SavedViewOffset=(X=-978.145142,Y=-804.175903),SavedZoomAmount=0.675000)
+    LastEditedDocuments(8) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyComponent.BP_FluxBuoyancyComponent:UpdateBuoyancy",SavedViewOffset=(X=4063.187988,Y=931.240906),SavedZoomAmount=0.875000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxBuoyancyComponent_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = B3D2AE9241F620DCC2082DB774AECBB0
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- GetSphereUnderPlaneVolume
+    FunctionGraphs(1) <- GetSphereCapVolume
+    FunctionGraphs(2) <- GetSphereVolume
+    FunctionGraphs(3) <- GetOwnerMesh
+    FunctionGraphs(4) <- DebugPontoons
+    FunctionGraphs(5) <- GetSpherePushArea
+    FunctionGraphs(6) <- GetPontoonsLocations
+    FunctionGraphs(7) <- UpdateBuoyancy
+    FunctionGraphs(8) <- MapResistance
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 840293C54A44A1CE83C49EA3CB8A2024
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_Event_3
+    Nodes(2) <- K2Node_CallFunction_20
+    Nodes(3) <- K2Node_CallFunction_2
+    Nodes(4) <- K2Node_VariableSet_1
+    Nodes(5) <- EdGraphNode_Comment_1
+    Nodes(6) <- EdGraphNode_Comment_2
+    Nodes(7) <- K2Node_CallFunction_4
+    Nodes(8) <- K2Node_IfThenElse_1
+    Nodes(9) <- K2Node_CallFunction_0
+    Nodes(10) <- K2Node_CallFunction_1
+    Nodes(11) <- K2Node_VariableSet_0
+    Nodes(12) <- K2Node_MacroInstance_0
+    Nodes(13) <- K2Node_CallFunction_6
+    Nodes(14) <- K2Node_CallFunction_8
+    Nodes(15) <- K2Node_VariableGet_0
+    Nodes(16) <- K2Node_IfThenElse_0
+[K2Node_Event_0] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    bCommentBubblePinned = True
+[K2Node_Event_3] K2Node_Event (событие: ReceiveTick @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[K2Node_CallFunction_20] K2Node_CallFunction (вызов: UpdateBuoyancy)
+[K2Node_CallFunction_2@EventGraph] K2Node_CallFunction
+[K2Node_VariableSet_1@EventGraph] K2Node_VariableSet
+[EdGraphNode_Comment_1@EventGraph] EdGraphNode_Comment
+[EdGraphNode_Comment_2@EventGraph] EdGraphNode_Comment
+[K2Node_CallFunction_4@EventGraph] K2Node_CallFunction
+[K2Node_IfThenElse_1@EventGraph] K2Node_IfThenElse
+[K2Node_CallFunction_0@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_1@EventGraph] K2Node_CallFunction
+[K2Node_VariableSet_0@EventGraph] K2Node_VariableSet
+[K2Node_MacroInstance_0@EventGraph] K2Node_MacroInstance
+[K2Node_CallFunction_6@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_8@EventGraph] K2Node_CallFunction
+[K2Node_VariableGet_0@EventGraph] K2Node_VariableGet
+[K2Node_IfThenElse_0@EventGraph] K2Node_IfThenElse
+[GetSphereCapVolume] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A940374F4D090A93BC78F8AD296427B2
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_5
+    Nodes(2) <- K2Node_CommutativeAssociativeBinaryOperator_8
+    Nodes(3) <- K2Node_CallFunction_1
+    Nodes(4) <- K2Node_CommutativeAssociativeBinaryOperator_5
+    Nodes(5) <- K2Node_CallFunction_2
+    Nodes(6) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(7) <- K2Node_FunctionResult_1
+    Nodes(8) <- K2Node_VariableGet_5
+    Nodes(9) <- K2Node_VariableGet_3
+    Nodes(10) <- K2Node_VariableGet_2
+    Nodes(11) <- EdGraphNode_Comment_0
+[K2Node_FunctionEntry_0@GetSphereCapVolume] K2Node_FunctionEntry
+[K2Node_CallFunction_5@GetSphereCapVolume] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_8] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_1@GetSphereCapVolume] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_5@GetSphereCapVolume] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_2@GetSphereCapVolume] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_1@GetSphereCapVolume] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_FunctionResult_1@GetSphereCapVolume] K2Node_FunctionResult
+[K2Node_VariableGet_5@GetSphereCapVolume] K2Node_VariableGet
+[K2Node_VariableGet_3@GetSphereCapVolume] K2Node_VariableGet
+[K2Node_VariableGet_2@GetSphereCapVolume] K2Node_VariableGet
+[EdGraphNode_Comment_0@GetSphereCapVolume] EdGraphNode_Comment
+[GetOwnerMesh] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 4E96623744D0E75C8A78E8A103EE909C
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_4
+    Nodes(2) <- K2Node_CallFunction_1
+    Nodes(3) <- K2Node_VariableSet_0
+    Nodes(4) <- K2Node_FunctionResult_1
+    Nodes(5) <- K2Node_CallFunction_0
+    Nodes(6) <- K2Node_CallFunction_3
+    Nodes(7) <- K2Node_VariableGet_0
+    Nodes(8) <- K2Node_ExecutionSequence_0
+    Nodes(9) <- K2Node_VariableGet_3
+    Nodes(10) <- K2Node_VariableSet_2
+    Nodes(11) <- K2Node_VariableGet_2
+    Nodes(12) <- K2Node_CallFunction_2
+    Nodes(13) <- K2Node_CallFunction_5
+    Nodes(14) <- K2Node_VariableSet_1
+    Nodes(15) <- K2Node_CallArrayFunction_0
+    Nodes(16) <- K2Node_CallFunction_6
+    Nodes(17) <- K2Node_IfThenElse_1
+    Nodes(18) <- K2Node_VariableSet_3
+    Nodes(19) <- K2Node_GetArrayItem_1
+    Nodes(20) <- K2Node_VariableGet_1
+[K2Node_FunctionEntry_0@GetOwnerMesh] K2Node_FunctionEntry
+[K2Node_CallFunction_4@GetOwnerMesh] K2Node_CallFunction
+[K2Node_CallFunction_1@GetOwnerMesh] K2Node_CallFunction
+[K2Node_VariableSet_0@GetOwnerMesh] K2Node_VariableSet
+[K2Node_FunctionResult_1@GetOwnerMesh] K2Node_FunctionResult
+[K2Node_CallFunction_0@GetOwnerMesh] K2Node_CallFunction
+[K2Node_CallFunction_3@GetOwnerMesh] K2Node_CallFunction
+[K2Node_VariableGet_0@GetOwnerMesh] K2Node_VariableGet
+[K2Node_ExecutionSequence_0] K2Node_ExecutionSequence
+[K2Node_VariableGet_3@GetOwnerMesh] K2Node_VariableGet
+[K2Node_VariableSet_2@GetOwnerMesh] K2Node_VariableSet
+[K2Node_VariableGet_2@GetOwnerMesh] K2Node_VariableGet
+[K2Node_CallFunction_2@GetOwnerMesh] K2Node_CallFunction
+[K2Node_CallFunction_5@GetOwnerMesh] K2Node_CallFunction
+[K2Node_VariableSet_1@GetOwnerMesh] K2Node_VariableSet
+[K2Node_CallArrayFunction_0] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_6@GetOwnerMesh] K2Node_CallFunction
+[K2Node_IfThenElse_1@GetOwnerMesh] K2Node_IfThenElse
+[K2Node_VariableSet_3@GetOwnerMesh] K2Node_VariableSet
+[K2Node_GetArrayItem_1] K2Node_GetArrayItem
+    bReturnByRefDesired = False
+    вход Dimension 1 = 0
+[K2Node_VariableGet_1@GetOwnerMesh] K2Node_VariableGet
+[DebugPontoons] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = ED789FE444FEF5CC511B41B96DBF7EDC
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_92
+    Nodes(2) <- K2Node_CallFunction_93
+    Nodes(3) <- K2Node_VariableSet_0
+    Nodes(4) <- K2Node_VariableSet_5
+    Nodes(5) <- K2Node_VariableGet_8
+    Nodes(6) <- K2Node_VariableSet_7
+    Nodes(7) <- K2Node_CallFunction_3
+    Nodes(8) <- K2Node_CallFunction_2
+    Nodes(9) <- K2Node_VariableGet_0
+    Nodes(10) <- K2Node_BreakStruct_2
+    Nodes(11) <- K2Node_VariableGet_1
+    Nodes(12) <- K2Node_VariableGet_3
+    Nodes(13) <- K2Node_MacroInstance_0
+[K2Node_FunctionEntry_0@DebugPontoons] K2Node_FunctionEntry
+[K2Node_CallFunction_92] K2Node_CallFunction (вызов: K2_GetComponentToWorld @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_93@DebugPontoons] K2Node_CallFunction
+[K2Node_VariableSet_0@DebugPontoons] K2Node_VariableSet
+[K2Node_VariableSet_5@DebugPontoons] K2Node_VariableSet
+[K2Node_VariableGet_8@DebugPontoons] K2Node_VariableGet
+[K2Node_VariableSet_7@DebugPontoons] K2Node_VariableSet
+[K2Node_CallFunction_3@DebugPontoons] K2Node_CallFunction
+[K2Node_CallFunction_2@DebugPontoons] K2Node_CallFunction
+[K2Node_VariableGet_0@DebugPontoons] K2Node_VariableGet
+[K2Node_BreakStruct_2] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Hidden
+[K2Node_VariableGet_1@DebugPontoons] K2Node_VariableGet
+[K2Node_VariableGet_3@DebugPontoons] K2Node_VariableGet
+[K2Node_MacroInstance_0@DebugPontoons] K2Node_MacroInstance
+[UpdateBuoyancy] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = BB65710E4993A2133A33A4BD5583B662
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_8
+    Nodes(2) <- K2Node_CallFunction_11
+    Nodes(3) <- K2Node_CallFunction_18
+    Nodes(4) <- K2Node_VariableGet_66
+    Nodes(5) <- K2Node_VariableGet_33
+    Nodes(6) <- K2Node_CallFunction_14
+    Nodes(7) <- K2Node_VariableSet_1
+    Nodes(8) <- K2Node_VariableGet_5
+    Nodes(9) <- K2Node_VariableSet_4
+    Nodes(10) <- K2Node_VariableSet_5
+    Nodes(11) <- K2Node_VariableGet_8
+    Nodes(12) <- K2Node_VariableSet_6
+    Nodes(13) <- K2Node_VariableGet_26
+    Nodes(14) <- K2Node_VariableSet_7
+    Nodes(15) <- K2Node_CallFunction_2
+    Nodes(16) <- K2Node_IfThenElse_1
+    Nodes(17) <- EdGraphNode_Comment_2
+    Nodes(18) <- K2Node_VariableGet_69
+    Nodes(19) <- K2Node_CallFunction_5
+    Nodes(20) <- K2Node_VariableGet_4
+    Nodes(21) <- K2Node_CallFunction_7
+    Nodes(22) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(23) <- K2Node_IfThenElse_3
+    Nodes(24) <- K2Node_VariableGet_101
+    Nodes(25) <- K2Node_CallFunction_12
+    Nodes(26) <- K2Node_CallFunction_13
+    Nodes(27) <- K2Node_CallFunction_93
+    Nodes(28) <- K2Node_VariableSet_0
+    Nodes(29) <- K2Node_CallFunction_28
+    Nodes(30) <- K2Node_IfThenElse_2
+    Nodes(31) <- K2Node_CallFunction_6
+    Nodes(32) <- K2Node_VariableGet_12
+    Nodes(33) <- K2Node_IfThenElse_5
+    Nodes(34) <- K2Node_VariableGet_10
+    Nodes(35) <- K2Node_VariableGet_15
+    Nodes(36) <- K2Node_CallFunction_4
+    Nodes(37) <- K2Node_VariableGet_1
+    Nodes(38) <- EdGraphNode_Comment_3
+    Nodes(39) <- K2Node_Knot_0
+    Nodes(40) <- K2Node_CallFunction_54
+    Nodes(41) <- K2Node_CallFunction_55
+    Nodes(42) <- K2Node_Knot_1
+    Nodes(43) <- K2Node_CallFunction_56
+    Nodes(44) <- K2Node_IfThenElse_4
+    Nodes(45) <- K2Node_VariableGet_39
+    Nodes(46) <- K2Node_VariableGet_0
+    Nodes(47) <- K2Node_VariableGet_13
+    Nodes(48) <- EdGraphNode_Comment_1
+    Nodes(49) <- K2Node_VariableGet_3
+    Nodes(50) <- K2Node_VariableGet_45
+    Nodes(51) <- K2Node_VariableGet_20
+    Nodes(52) <- K2Node_PromotableOperator_2
+    Nodes(53) <- K2Node_VariableGet_44
+    Nodes(54) <- K2Node_CallFunction_3
+    Nodes(55) <- K2Node_CallFunction_30
+    Nodes(56) <- K2Node_VariableGet_2
+    Nodes(57) <- K2Node_IfThenElse_0
+    Nodes(58) <- K2Node_VariableGet_24
+    Nodes(59) <- EdGraphNode_Comment_0
+    Nodes(60) <- K2Node_VariableGet_32
+    Nodes(61) <- K2Node_VariableGet_37
+    Nodes(62) <- K2Node_PromotableOperator_6
+    Nodes(63) <- K2Node_VariableGet_67
+    Nodes(64) <- K2Node_CallFunction_15
+    Nodes(65) <- K2Node_VariableGet_14
+    Nodes(66) <- K2Node_VariableGet_25
+    Nodes(67) <- K2Node_PromotableOperator_4
+    Nodes(68) <- K2Node_PromotableOperator_5
+    Nodes(69) <- K2Node_VariableGet_11
+    Nodes(70) <- K2Node_VariableGet_31
+    Nodes(71) <- K2Node_VariableGet_43
+    Nodes(72) <- K2Node_PromotableOperator_12
+    Nodes(73) <- K2Node_PromotableOperator_14
+    Nodes(74) <- K2Node_PromotableOperator_15
+    Nodes(75) <- K2Node_PromotableOperator_9
+    Nodes(76) <- K2Node_PromotableOperator_19
+    Nodes(77) <- K2Node_VariableGet_19
+    Nodes(78) <- K2Node_VariableGet_46
+    Nodes(79) <- K2Node_PromotableOperator_11
+    Nodes(80) <- K2Node_VariableSet_2
+    Nodes(81) <- K2Node_PromotableOperator_18
+    Nodes(82) <- K2Node_VariableGet_22
+    Nodes(83) <- K2Node_CallFunction_25
+    Nodes(84) <- K2Node_CallFunction_42
+    Nodes(85) <- K2Node_VariableGet_42
+    Nodes(86) <- K2Node_VariableGet_35
+    Nodes(87) <- K2Node_VariableGet_53
+    Nodes(88) <- K2Node_BreakStruct_18
+    Nodes(89) <- K2Node_VariableGet_51
+    Nodes(90) <- K2Node_BreakStruct_16
+    Nodes(91) <- K2Node_Knot_2
+    Nodes(92) <- K2Node_VariableGet_23
+    Nodes(93) <- K2Node_BreakStruct_1
+    Nodes(94) <- K2Node_VariableGet_54
+    Nodes(95) <- K2Node_BreakStruct_19
+    Nodes(96) <- K2Node_VariableGet_68
+    Nodes(97) <- K2Node_BreakStruct_129
+    Nodes(98) <- K2Node_VariableGet_56
+    Nodes(99) <- K2Node_BreakStruct_21
+    Nodes(100) <- K2Node_VariableGet_57
+    Nodes(101) <- K2Node_BreakStruct_22
+    Nodes(102) <- K2Node_VariableGet_58
+    Nodes(103) <- K2Node_BreakStruct_23
+    Nodes(104) <- K2Node_VariableGet_59
+    Nodes(105) <- K2Node_BreakStruct_24
+    Nodes(106) <- K2Node_VariableGet_41
+    Nodes(107) <- K2Node_BreakStruct_14
+    Nodes(108) <- K2Node_VariableSet_8
+    Nodes(109) <- K2Node_VariableGet_64
+    Nodes(110) <- EdGraphNode_Comment_4
+    Nodes(111) <- K2Node_VariableGet_16
+    Nodes(112) <- K2Node_VariableSet_3
+    Nodes(113) <- EdGraphNode_Comment_5
+    Nodes(114) <- K2Node_PromotableOperator_0
+    Nodes(115) <- K2Node_PromotableOperator_7
+    Nodes(116) <- K2Node_VariableGet_61
+    Nodes(117) <- K2Node_VariableGet_63
+    Nodes(118) <- K2Node_PromotableOperator_3
+    Nodes(119) <- K2Node_VariableGet_71
+    Nodes(120) <- K2Node_VariableGet_18
+    Nodes(121) <- K2Node_VariableGet_6
+    Nodes(122) <- K2Node_PromotableOperator_17
+    Nodes(123) <- K2Node_PromotableOperator_20
+    Nodes(124) <- K2Node_CallFunction_1
+    Nodes(125) <- K2Node_CallFunction_10
+    Nodes(126) <- K2Node_VariableGet_38
+    Nodes(127) <- K2Node_CallFunction_9
+    Nodes(128) <- K2Node_VariableGet_52
+    Nodes(129) <- K2Node_BreakStruct_17
+    Nodes(130) <- K2Node_VariableGet_29
+    Nodes(131) <- K2Node_VariableSet_10
+    Nodes(132) <- K2Node_VariableGet_28
+    Nodes(133) <- K2Node_VariableGet_27
+    Nodes(134) <- K2Node_CallFunction_16
+    Nodes(135) <- K2Node_VariableGet_34
+    Nodes(136) <- K2Node_PromotableOperator_28
+    Nodes(137) <- K2Node_MacroInstance_0
+    Nodes(138) <- K2Node_PromotableOperator_1
+    Nodes(139) <- K2Node_VariableGet_40
+[K2Node_FunctionEntry_0@UpdateBuoyancy] K2Node_FunctionEntry
+[K2Node_CallFunction_8@UpdateBuoyancy] K2Node_CallFunction
+[K2Node_CallFunction_11@UpdateBuoyancy] K2Node_CallFunction
+[K2Node_CallFunction_18@UpdateBuoyancy] K2Node_CallFunction
+[K2Node_VariableGet_66] K2Node_VariableGet (переменная: CachedMesh)
+[K2Node_VariableGet_33] K2Node_VariableGet (переменная: CachedMesh)
+[K2Node_CallFunction_14@UpdateBuoyancy] K2Node_CallFunction
+[K2Node_VariableSet_1@UpdateBuoyancy] K2Node_VariableSet (переменная: Location)
+[K2Node_VariableGet_5@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableSet_4] K2Node_VariableSet (переменная: VolumeInFluid)
+[K2Node_VariableSet_5@UpdateBuoyancy] K2Node_VariableSet (переменная: Transform)
+    ErrorType = 1
+[K2Node_VariableGet_8@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableSet_6] K2Node_VariableSet (переменная: DepthInFluid)
+[K2Node_VariableGet_26@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableSet_7@UpdateBuoyancy] K2Node_VariableSet (переменная: Data)
+    ErrorType = 1
+[K2Node_CallFunction_2@UpdateBuoyancy] K2Node_CallFunction
+[K2Node_IfThenElse_1@UpdateBuoyancy] K2Node_IfThenElse
+[EdGraphNode_Comment_2@UpdateBuoyancy] EdGraphNode_Comment
+    CommentColor = (R=1.000000,G=0.710722,B=0.516017,A=1.000000)
+    NodeWidth = 800
+    NodeHeight = 256
+    NodeComment = "Update Buoyancy frame"
+    CommentColor = (R=0.171875,G=0.016728,B=0.000000,A=1.000000)
+    NodeWidth = 7968
+    NodeHeight = 592
+    NodeComment = "This code can be inefficient for more than few buoyant actors on the scene. It was implemented in blueprints only for presentation purposes. It should be moved to c++ or nativized."
+[K2Node_VariableGet_69] K2Node_VariableGet (переменная: CachedMesh)
+[K2Node_CallFunction_5@UpdateBuoyancy] K2Node_CallFunction (вызов: GetPhysicsLinearVelocityAtPoint @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+[K2Node_VariableGet_4@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_CallFunction_7@UpdateBuoyancy] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_1@UpdateBuoyancy] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_IfThenElse_3@UpdateBuoyancy] K2Node_IfThenElse
+[K2Node_VariableGet_101] K2Node_VariableGet (переменная: CachedMesh)
+[K2Node_CallFunction_12] K2Node_CallFunction (вызов: GetSocketTransform @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход TransformSpace = RTS_World
+[K2Node_CallFunction_13@UpdateBuoyancy] K2Node_CallFunction
+[K2Node_CallFunction_93@UpdateBuoyancy] K2Node_CallFunction (вызов: TransformLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableSet_0@UpdateBuoyancy] K2Node_VariableSet (переменная: Location)
+    ErrorType = 1
+[K2Node_CallFunction_28] K2Node_CallFunction (вызов: IsSimulatingPhysics @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход BoneName = None
+[K2Node_IfThenElse_2@UpdateBuoyancy] K2Node_IfThenElse
+[K2Node_CallFunction_6@UpdateBuoyancy] K2Node_CallFunction
+[K2Node_VariableGet_12@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_IfThenElse_5] K2Node_IfThenElse
+[K2Node_VariableGet_10@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableGet_15@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_CallFunction_4@UpdateBuoyancy] K2Node_CallFunction (вызов: GetSphereUnderPlaneVolume)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_1@UpdateBuoyancy] K2Node_VariableGet
+[EdGraphNode_Comment_3] EdGraphNode_Comment
+    CommentColor = (R=0.011704,G=0.080208,B=0.042584,A=1.000000)
+    NodeWidth = 2000
+    NodeHeight = 784
+    NodeComment = "Debug spheres"
+[K2Node_Knot_0@UpdateBuoyancy] K2Node_Knot
+[K2Node_CallFunction_54] K2Node_CallFunction (вызов: GetReadbackIndexedPosition @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_CallFunction_55] K2Node_CallFunction (вызов: BreakVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_Knot_1] K2Node_Knot
+[K2Node_CallFunction_56] K2Node_CallFunction (вызов: IsActive)
+    bDefaultsToPureFunc = True
+[K2Node_IfThenElse_4@UpdateBuoyancy] K2Node_IfThenElse
+[K2Node_VariableGet_39] K2Node_VariableGet (переменная: FluxData)
+    CurrentVariation = ValidatedObject
+    ErrorType = 1
+[K2Node_VariableGet_0@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableGet_13@UpdateBuoyancy] K2Node_VariableGet
+[EdGraphNode_Comment_1@UpdateBuoyancy] EdGraphNode_Comment
+    CommentColor = (R=0.704386,G=0.601822,B=1.000000,A=1.000000)
+    NodeWidth = 2080
+    NodeHeight = 384
+    NodeComment = "Spawn evet listener"
+    CommentColor = (R=0.301042,G=0.060475,B=0.073058,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1200
+    NodeHeight = 352
+    bCommentBubblePinned = False
+    NodeComment = "Location calculation"
+[K2Node_VariableGet_3@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableGet_45] K2Node_VariableGet (переменная: DataAsset)
+[K2Node_VariableGet_20@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_PromotableOperator_2] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_44] K2Node_VariableGet (переменная: CachedMesh)
+[K2Node_CallFunction_3@UpdateBuoyancy] K2Node_CallFunction
+[K2Node_CallFunction_30] K2Node_CallFunction (вызов: DrawDebugSphere @ /Script/CoreUObject.Class)
+    EnabledState = DevelopmentOnly
+    вход Segments = 10
+    вход LineColor = (R=0.192708,G=0.192708,B=0.192708,A=1.000000)
+    вход Duration = 0.000000
+    вход Thickness = 0.000000
+    вход DepthPriority = World
+[K2Node_VariableGet_2@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_IfThenElse_0@UpdateBuoyancy] K2Node_IfThenElse
+[K2Node_VariableGet_24] K2Node_VariableGet (переменная: Location)
+[EdGraphNode_Comment_0@UpdateBuoyancy] EdGraphNode_Comment
+    NodeWidth = 731
+    NodeHeight = 352
+    NodeComment = "Cap volume"
+    CommentColor = (R=0.011704,G=0.080208,B=0.042584,A=1.000000)
+    NodeWidth = 736
+    NodeHeight = 512
+    NodeComment = "Debug spheres"
+[K2Node_VariableGet_32] K2Node_VariableGet (переменная: DataAsset)
+[K2Node_VariableGet_37] K2Node_VariableGet (переменная: Drag @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_PromotableOperator_6@UpdateBuoyancy] K2Node_PromotableOperator
+[K2Node_VariableGet_67] K2Node_VariableGet (переменная: Location)
+[K2Node_CallFunction_15@UpdateBuoyancy] K2Node_CallFunction
+[K2Node_VariableGet_14@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableGet_25] K2Node_VariableGet (переменная: Location)
+[K2Node_PromotableOperator_4@UpdateBuoyancy] K2Node_PromotableOperator
+[K2Node_PromotableOperator_5] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_11@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableGet_31] K2Node_VariableGet (переменная: DataAsset)
+[K2Node_VariableGet_43] K2Node_VariableGet (переменная: Mass @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_PromotableOperator_12@UpdateBuoyancy] K2Node_PromotableOperator
+[K2Node_PromotableOperator_14] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_15] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_9@UpdateBuoyancy] K2Node_PromotableOperator
+[K2Node_PromotableOperator_19] K2Node_PromotableOperator (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_19@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableGet_46] K2Node_VariableGet (переменная: Gravity @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_PromotableOperator_11] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 2.000000
+[K2Node_VariableSet_2@UpdateBuoyancy] K2Node_VariableSet (переменная: RelativeVelocity)
+[K2Node_PromotableOperator_18] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_22] K2Node_VariableGet (переменная: CachedMesh)
+[K2Node_CallFunction_25] K2Node_CallFunction (вызов: K2_GetComponentRotation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_42] K2Node_CallFunction (вызов: MapResistance)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_42] K2Node_VariableGet (переменная: DataAsset)
+[K2Node_VariableGet_35] K2Node_VariableGet (переменная: DragAxes @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_53] K2Node_VariableGet (переменная: Data)
+[K2Node_BreakStruct_18] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Hidden
+[K2Node_VariableGet_51] K2Node_VariableGet (переменная: Data)
+[K2Node_BreakStruct_16] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Shown
+[K2Node_Knot_2] K2Node_Knot
+[K2Node_VariableGet_23] K2Node_VariableGet (переменная: Data)
+[K2Node_BreakStruct_1] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Shown
+[K2Node_VariableGet_54] K2Node_VariableGet (переменная: Data)
+[K2Node_BreakStruct_19] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Hidden
+[K2Node_VariableGet_68] K2Node_VariableGet (переменная: Data)
+[K2Node_BreakStruct_129] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Hidden
+[K2Node_VariableGet_56] K2Node_VariableGet (переменная: Data)
+[K2Node_BreakStruct_21] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Hidden
+[K2Node_VariableGet_57] K2Node_VariableGet (переменная: Data)
+[K2Node_BreakStruct_22] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Shown
+[K2Node_VariableGet_58] K2Node_VariableGet (переменная: Data)
+[K2Node_BreakStruct_23] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Hidden
+[K2Node_VariableGet_59] K2Node_VariableGet (переменная: Data)
+[K2Node_BreakStruct_24] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Hidden
+[K2Node_VariableGet_41] K2Node_VariableGet (переменная: Data)
+[K2Node_BreakStruct_14] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Hidden
+[K2Node_VariableSet_8] K2Node_VariableSet (переменная: ForceZ)
+[K2Node_VariableGet_64] K2Node_VariableGet (переменная: ForceZ)
+[EdGraphNode_Comment_4] EdGraphNode_Comment
+    CommentColor = (R=1.000000,G=0.392589,B=0.234188,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1984
+    NodeHeight = 480
+    bCommentBubblePinned = False
+    NodeComment = "Calculate force on Z axis"
+[K2Node_VariableGet_16@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableSet_3@UpdateBuoyancy] K2Node_VariableSet (переменная: ForceDrag)
+[EdGraphNode_Comment_5] EdGraphNode_Comment
+    CommentColor = (R=0.637647,G=1.000000,B=0.504316,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 2000
+    NodeHeight = 512
+    bCommentBubblePinned = False
+    NodeComment = "Calculate drag force"
+[K2Node_PromotableOperator_0] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = -1.000000
+[K2Node_PromotableOperator_7] K2Node_PromotableOperator (вызов: Add_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_61] K2Node_VariableGet (переменная: ForceZ)
+[K2Node_VariableGet_63] K2Node_VariableGet (переменная: ForceDrag)
+[K2Node_PromotableOperator_3@UpdateBuoyancy] K2Node_PromotableOperator
+[K2Node_VariableGet_71] K2Node_VariableGet (переменная: ForceDrag)
+[K2Node_VariableGet_18@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableGet_6@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_PromotableOperator_17] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_20] K2Node_PromotableOperator (вызов: Subtract_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_1@UpdateBuoyancy] K2Node_CallFunction (вызов: DrawDebugString @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    EnabledState = DevelopmentOnly
+    вход ComponentClass = /Script/Engine.ActorComponent
+    вход B = 3.000000
+    вход ComponentClass = /Script/Engine.ActorComponent
+    вход TestBaseActor = None
+    вход TextColor = (R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+    вход Duration = 0.000000
+[K2Node_CallFunction_10] K2Node_CallFunction (вызов: Conv_DoubleToString @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_38] K2Node_VariableGet (переменная: Location)
+[K2Node_CallFunction_9] K2Node_CallFunction (вызов: GetSpherePushArea)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_52] K2Node_VariableGet (переменная: Data)
+[K2Node_BreakStruct_17] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Shown
+[K2Node_VariableGet_29] K2Node_VariableGet (переменная: DepthInFluid)
+[K2Node_VariableSet_10] K2Node_VariableSet (переменная: AreaInFluid)
+[K2Node_VariableGet_28@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_VariableGet_27@UpdateBuoyancy] K2Node_VariableGet
+[K2Node_CallFunction_16@UpdateBuoyancy] K2Node_CallFunction
+[K2Node_VariableGet_34] K2Node_VariableGet (переменная: VolumeInFluid)
+[K2Node_PromotableOperator_28] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = -1.000000
+[K2Node_MacroInstance_0@UpdateBuoyancy] K2Node_MacroInstance
+[K2Node_PromotableOperator_1] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход A = 0.001000
+[K2Node_VariableGet_40] K2Node_VariableGet (переменная: DebugArrowScale)
+[GetPontoonsLocations] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 8900A6BF4E407A7D5A84009C0FF33874
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_VariableGet_5
+    Nodes(3) <- K2Node_VariableGet_3
+    Nodes(4) <- K2Node_VariableGet_2
+    Nodes(5) <- K2Node_CallArrayFunction_2
+    Nodes(6) <- K2Node_CallArrayFunction_3
+    Nodes(7) <- K2Node_CallArrayFunction_4
+    Nodes(8) <- K2Node_VariableGet_1
+    Nodes(9) <- K2Node_VariableGet_6
+    Nodes(10) <- K2Node_Knot_0
+    Nodes(11) <- K2Node_MacroInstance_0
+    Nodes(12) <- K2Node_BreakStruct_3
+[K2Node_FunctionResult_0@GetPontoonsLocations] K2Node_FunctionResult
+[K2Node_FunctionEntry_0@GetPontoonsLocations] K2Node_FunctionEntry
+[K2Node_VariableGet_5@GetPontoonsLocations] K2Node_VariableGet (переменная: LLocations)
+[K2Node_VariableGet_3@GetPontoonsLocations] K2Node_VariableGet (переменная: LLocations)
+    CurrentVariation = ValidatedObject
+    SelfContextInfo = NotSelfContext
+    CurrentVariation = ValidatedObject
+[K2Node_VariableGet_2@GetPontoonsLocations] K2Node_VariableGet (переменная: LLocations)
+    CurrentVariation = ValidatedObject
+    ErrorType = 1
+[K2Node_CallArrayFunction_2] K2Node_CallArrayFunction (вызов: Array_Resize @ /Script/CoreUObject.Class)
+[K2Node_CallArrayFunction_3] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallArrayFunction_4] K2Node_CallArrayFunction (вызов: Array_Set @ /Script/CoreUObject.Class)
+    вход bSizeToFit = false
+[K2Node_VariableGet_1@GetPontoonsLocations] K2Node_VariableGet
+[K2Node_VariableGet_6@GetPontoonsLocations] K2Node_VariableGet
+[K2Node_Knot_0@GetPontoonsLocations] K2Node_Knot
+[K2Node_MacroInstance_0@GetPontoonsLocations] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="struct",PinSubCategoryObject="/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'",ContainerType=Array)
+    ResolvedWildcardType = (PinCategory="struct",PinSubCategoryObject="/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'",ContainerType=Array)
+    ResolvedWildcardType = (PinCategory="struct",PinSubCategoryObject="/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'",ContainerType=Array)
+[K2Node_BreakStruct_3] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(3) = (PropertyName="DensityWeight_26_DA0067D846C1B0A9208205B4244B4023",PropertyFriendlyName="DensityWeight",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(4) = (PropertyName="DragWeight_27_B3C0312C459844F8F64271A01A21F4D7",PropertyFriendlyName="DragWeight",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxBuoyancyPontoon.BS_FluxBuoyancyPontoon'"
+    AdvancedPinDisplay = Shown
+[MapResistance] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D8E42EB141AF8EFFFE738EAF9BFF27E6
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_1
+    Nodes(2) <- K2Node_CallFunction_2
+    Nodes(3) <- K2Node_PromotableOperator_3
+    Nodes(4) <- K2Node_VariableGet_4
+    Nodes(5) <- K2Node_VariableGet_0
+    Nodes(6) <- K2Node_VariableGet_1
+    Nodes(7) <- K2Node_CallFunction_3
+    Nodes(8) <- K2Node_VariableGet_7
+    Nodes(9) <- K2Node_PromotableOperator_4
+    Nodes(10) <- K2Node_IfThenElse_0
+    Nodes(11) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@MapResistance] K2Node_FunctionEntry
+[K2Node_FunctionResult_1@MapResistance] K2Node_FunctionResult
+[K2Node_CallFunction_2@MapResistance] K2Node_CallFunction (вызов: GreaterGreater_VectorRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.0
+[K2Node_PromotableOperator_3@MapResistance] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_4@MapResistance] K2Node_VariableGet (переменная: Resistance)
+[K2Node_VariableGet_0@MapResistance] K2Node_VariableGet (переменная: Rotation)
+[K2Node_VariableGet_1@MapResistance] K2Node_VariableGet (переменная: Rotation)
+    CurrentVariation = ValidatedObject
+    CurrentVariation = ValidatedObject
+    CurrentVariation = ValidatedObject
+[K2Node_CallFunction_3@MapResistance] K2Node_CallFunction (вызов: LessLess_VectorRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    EnabledState = DevelopmentOnly
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+    вход Segments = 12
+    вход LineColor = (R=0.000000,G=0.032155,B=1.000000,A=1.000000)
+    вход Duration = 12.000000
+    вход Thickness = 1.000000
+    вход DepthPriority = World
+[K2Node_VariableGet_7] K2Node_VariableGet (переменная: Velocity)
+[K2Node_PromotableOperator_4@MapResistance] K2Node_PromotableOperator (вызов: EqualEqual_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "EqualEqual"
+    bDefaultsToPureFunc = True
+    вход B = 1.000000,1.000000,1.000000
+    вход ErrorTolerance = 0.010000
+[K2Node_IfThenElse_0@MapResistance] K2Node_IfThenElse
+[K2Node_FunctionResult_0@MapResistance] K2Node_FunctionResult
+[GetSpherePushArea] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 2D8AA775460BDD7100B696A5A3D0F3E5
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_26
+    Nodes(2) <- K2Node_PromotableOperator_6
+    Nodes(3) <- K2Node_VariableGet_28
+    Nodes(4) <- K2Node_IfThenElse_7
+    Nodes(5) <- K2Node_FunctionResult_6
+    Nodes(6) <- K2Node_VariableGet_11
+    Nodes(7) <- K2Node_VariableGet_13
+    Nodes(8) <- K2Node_PromotableOperator_9
+    Nodes(9) <- K2Node_CommutativeAssociativeBinaryOperator_5
+    Nodes(10) <- K2Node_VariableGet_27
+    Nodes(11) <- K2Node_PromotableOperator_12
+    Nodes(12) <- K2Node_FunctionResult_4
+    Nodes(13) <- K2Node_PromotableOperator_13
+[K2Node_FunctionEntry_0@GetSpherePushArea] K2Node_FunctionEntry
+[K2Node_VariableGet_26@GetSpherePushArea] K2Node_VariableGet (переменная: Distance)
+[K2Node_PromotableOperator_6@GetSpherePushArea] K2Node_PromotableOperator (вызов: Greater_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Greater"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_28@GetSpherePushArea] K2Node_VariableGet (переменная: Radius)
+[K2Node_IfThenElse_7] K2Node_IfThenElse
+[K2Node_FunctionResult_6] K2Node_FunctionResult (вызов: GetSpherePushArea)
+    bIsEditable = True
+    вход Arera = 0.0
+    вход Arera = 0.0
+[K2Node_VariableGet_11@GetSpherePushArea] K2Node_VariableGet
+[K2Node_VariableGet_13@GetSpherePushArea] K2Node_VariableGet
+[K2Node_PromotableOperator_9@GetSpherePushArea] K2Node_PromotableOperator (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    вход B = -0.001000
+[K2Node_CommutativeAssociativeBinaryOperator_5@GetSpherePushArea] K2Node_CommutativeAssociativeBinaryOperator (вызов: FMin @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_27@GetSpherePushArea] K2Node_VariableGet (переменная: Radius)
+[K2Node_PromotableOperator_12@GetSpherePushArea] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_FunctionResult_4@GetSpherePushArea] K2Node_FunctionResult
+[K2Node_PromotableOperator_13] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 2.000000
+[GetSphereUnderPlaneVolume] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 8C0133684EE24CDC0E7613B7F45314F3
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_4
+    Nodes(2) <- K2Node_CallFunction_11
+    Nodes(3) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(4) <- K2Node_IfThenElse_2
+    Nodes(5) <- K2Node_CallFunction_13
+    Nodes(6) <- K2Node_VariableGet_14
+    Nodes(7) <- K2Node_VariableGet_13
+    Nodes(8) <- K2Node_VariableGet_11
+    Nodes(9) <- K2Node_IfThenElse_4
+    Nodes(10) <- K2Node_CallFunction_16
+    Nodes(11) <- K2Node_VariableGet_16
+    Nodes(12) <- K2Node_IfThenElse_3
+    Nodes(13) <- K2Node_CallFunction_7
+    Nodes(14) <- K2Node_VariableGet_9
+    Nodes(15) <- K2Node_VariableGet_10
+    Nodes(16) <- K2Node_FunctionResult_1
+    Nodes(17) <- K2Node_FunctionResult_5
+    Nodes(18) <- K2Node_CallFunction_8
+    Nodes(19) <- K2Node_VariableGet_19
+    Nodes(20) <- K2Node_CallFunction_14
+    Nodes(21) <- K2Node_CallFunction_18
+    Nodes(22) <- K2Node_VariableGet_17
+    Nodes(23) <- K2Node_VariableGet_18
+    Nodes(24) <- K2Node_FunctionResult_0
+    Nodes(25) <- K2Node_CallFunction_15
+    Nodes(26) <- K2Node_VariableGet_20
+    Nodes(27) <- K2Node_VariableGet_12
+    Nodes(28) <- K2Node_CommutativeAssociativeBinaryOperator_7
+    Nodes(29) <- K2Node_VariableGet_15
+    Nodes(30) <- K2Node_VariableGet_8
+    Nodes(31) <- K2Node_CallFunction_19
+[K2Node_FunctionEntry_0@GetSphereUnderPlaneVolume] K2Node_FunctionEntry
+[K2Node_FunctionResult_4@GetSphereUnderPlaneVolume] K2Node_FunctionResult (вызов: GetSphereUnderPlaneVolume)
+    bIsEditable = True
+    bIsEditable = True
+    вход Arera = 0.0
+    вход v = 0.0
+[K2Node_CallFunction_11@GetSphereUnderPlaneVolume] K2Node_CallFunction (вызов: Less_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_2] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = -1.000000
+[K2Node_IfThenElse_2@GetSphereUnderPlaneVolume] K2Node_IfThenElse
+[K2Node_CallFunction_13@GetSphereUnderPlaneVolume] K2Node_CallFunction (вызов: GetSphereVolume)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = None
+[K2Node_VariableGet_14@GetSphereUnderPlaneVolume] K2Node_VariableGet (переменная: Radius)
+[K2Node_VariableGet_13@GetSphereUnderPlaneVolume] K2Node_VariableGet (переменная: Radius)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_11@GetSphereUnderPlaneVolume] K2Node_VariableGet (переменная: Distance)
+[K2Node_IfThenElse_4@GetSphereUnderPlaneVolume] K2Node_IfThenElse
+[K2Node_CallFunction_16@GetSphereUnderPlaneVolume] K2Node_CallFunction (вызов: Less_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Exp = 0.666667
+    вход B = 0.0
+[K2Node_VariableGet_16@GetSphereUnderPlaneVolume] K2Node_VariableGet (переменная: Distance)
+[K2Node_IfThenElse_3@GetSphereUnderPlaneVolume] K2Node_IfThenElse
+[K2Node_CallFunction_7@GetSphereUnderPlaneVolume] K2Node_CallFunction (вызов: Less_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход X = 0.0
+    вход Y = 0.0
+[K2Node_VariableGet_9] K2Node_VariableGet (переменная: Distance)
+[K2Node_VariableGet_10@GetSphereUnderPlaneVolume] K2Node_VariableGet (переменная: Radius)
+[K2Node_FunctionResult_1@GetSphereUnderPlaneVolume] K2Node_FunctionResult
+[K2Node_FunctionResult_5] K2Node_FunctionResult (вызов: GetSphereUnderPlaneVolume)
+    bIsEditable = True
+    вход v = 0.0
+[K2Node_CallFunction_8@GetSphereUnderPlaneVolume] K2Node_CallFunction (вызов: GetSphereVolume)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_19@GetSphereUnderPlaneVolume] K2Node_VariableGet (переменная: Radius)
+[K2Node_CallFunction_14@GetSphereUnderPlaneVolume] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_18@GetSphereUnderPlaneVolume] K2Node_CallFunction (вызов: GetSphereCapVolume)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_17] K2Node_VariableGet (переменная: Radius)
+[K2Node_VariableGet_18@GetSphereUnderPlaneVolume] K2Node_VariableGet (переменная: Distance)
+[K2Node_FunctionResult_0@GetSphereUnderPlaneVolume] K2Node_FunctionResult (вызов: GetSphereUnderPlaneVolume)
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    вход ReturnValue = 0, 0, 0
+    вход v = 0.0
+[K2Node_CallFunction_15@GetSphereUnderPlaneVolume] K2Node_CallFunction (вызов: GetSphereCapVolume)
+    EnabledState = DevelopmentOnly
+    bDefaultsToPureFunc = True
+    вход LineColor = (R=1.000000,G=0.411601,B=0.000000,A=1.000000)
+    вход Duration = 0.000000
+    вход Thickness = 2.000000
+    вход DepthPriority = World
+[K2Node_VariableGet_20@GetSphereUnderPlaneVolume] K2Node_VariableGet (переменная: Radius)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_12@GetSphereUnderPlaneVolume] K2Node_VariableGet (переменная: Distance)
+    ErrorType = 1
+[K2Node_CommutativeAssociativeBinaryOperator_7] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_15@GetSphereUnderPlaneVolume] K2Node_VariableGet (переменная: Radius)
+    ErrorType = 1
+[K2Node_VariableGet_8@GetSphereUnderPlaneVolume] K2Node_VariableGet (переменная: Radius)
+    ErrorType = 1
+[K2Node_CallFunction_19] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[GetSphereVolume] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 326D239F4BA3D201FF3256B029522FD8
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_1
+    Nodes(2) <- K2Node_VariableGet_6
+    Nodes(3) <- K2Node_CallFunction_6
+    Nodes(4) <- K2Node_CommutativeAssociativeBinaryOperator_12
+[K2Node_FunctionEntry_0@GetSphereVolume] K2Node_FunctionEntry
+[K2Node_FunctionResult_1@GetSphereVolume] K2Node_FunctionResult (вызов: GetSphereVolume)
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    bIsEditable = True
+    вход v = 0.0
+    вход ReturnValue = 0, 0, 0
+    вход v = 0.0
+    вход v = 0.0
+    вход v = 0.0
+[K2Node_VariableGet_6@GetSphereVolume] K2Node_VariableGet (переменная: r)
+    SelfContextInfo = NotSelfContext
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_6@GetSphereVolume] K2Node_CallFunction (вызов: MultiplyMultiply_FloatFloat @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    EnabledState = DevelopmentOnly
+    bDefaultsToPureFunc = True
+    вход B = 0
+    вход Segments = 10
+    вход LineColor = (R=0.000000,G=0.534375,B=0.512154,A=1.000000)
+    вход Duration = 0.000000
+    вход Thickness = 0.000000
+    вход DepthPriority = World
+    вход Exp = 3.000000
+[K2Node_CommutativeAssociativeBinaryOperator_12] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 4.188790
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ReceiveTick] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = F15451B24694ECA8046AF098731A3EE4
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveTick] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@ReceiveTick] K2Node_CallFunction
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 4B1E5D3B418561A35F5ED69717EE8EDE
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry (вызов: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    MetaData = (Category=NSLOCTEXT("", "939003F74FCA25278CDDD89BBBB428D1", "Sphere"),bCallInEditor=True)
+    ExtraFlags = 470024192
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("KismetSchema", "Default", "Default"))
+    ExtraFlags = 1543766016
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("UObjectCategory", "Debug", "Debug"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201588736
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("KismetSchema", "Default", "Default"))
+    ExtraFlags = 1543634944
+    bIsEditable = True
+    ExtraFlags = 469893120
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "EA3E12F746C96FAEB1783AAD36D46DE3", "Sphere"))
+    ExtraFlags = 470024192
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "A608A50640C09BE08FA738B9D6C373C4", "Sphere"),bCallInEditor=True)
+    ExtraFlags = 470024192
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "A37DA7D140D6C7B3CF404CA56FA4FE6A", "Sphere"),bCallInEditor=True)
+    ExtraFlags = 470024192
+    bIsEditable = True
+    CustomGeneratedFunctionName = "ReceiveTick"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveBeginPlay"
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_FluxBuoyancyComponent)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_BreakStruct_1].Radius_2_B9CA715C4E9171970BC76AA4844A7620 -> [K2Node_CallFunction_4@UpdateBuoyancy].Radius
+[K2Node_BreakStruct_1].Radius_2_B9CA715C4E9171970BC76AA4844A7620 -> [K2Node_CallFunction_9].Radius
+[K2Node_BreakStruct_16].Offset_5_1AB63E754521965989EFD491B0127D25 -> [K2Node_Knot_2].InputPin
+[K2Node_BreakStruct_18].Socket_15_B99CACE040AE14C6E5416E96E163584C -> [K2Node_CallFunction_12].InSocketName
+[K2Node_BreakStruct_18].Socket_15_B99CACE040AE14C6E5416E96E163584C -> [K2Node_CallFunction_13@GetSphereUnderPlaneVolume].A
+[K2Node_BreakStruct_18].Socket_15_B99CACE040AE14C6E5416E96E163584C -> [K2Node_CallFunction_5@UpdateBuoyancy].BoneName
+[K2Node_BreakStruct_18].Socket_15_B99CACE040AE14C6E5416E96E163584C -> [K2Node_CallFunction_8@GetSphereUnderPlaneVolume].BoneName
+[K2Node_BreakStruct_2].Offset_5_1AB63E754521965989EFD491B0127D25 -> [K2Node_CallFunction_93@UpdateBuoyancy].Location
+[K2Node_BreakStruct_2].Radius_2_B9CA715C4E9171970BC76AA4844A7620 -> [K2Node_CallFunction_3@MapResistance].Radius
+[K2Node_BreakStruct_21].Radius_2_B9CA715C4E9171970BC76AA4844A7620 -> [K2Node_CallFunction_30].Radius
+[K2Node_BreakStruct_22].DensityWeight_26_DA0067D846C1B0A9208205B4244B4023 -> [K2Node_PromotableOperator_19].A
+[K2Node_BreakStruct_23].DragWeight_27_B3C0312C459844F8F64271A01A21F4D7 -> [K2Node_PromotableOperator_6@GetSpherePushArea].A
+[K2Node_BreakStruct_24].Radius_2_B9CA715C4E9171970BC76AA4844A7620 -> [K2Node_CallFunction_30].Radius
+[K2Node_BreakStruct_24].Radius_2_B9CA715C4E9171970BC76AA4844A7620 -> [K2Node_PromotableOperator_11].A
+[K2Node_BreakStruct_3].Offset_5_1AB63E754521965989EFD491B0127D25 -> [K2Node_CallArrayFunction_4].Item
+[K2Node_CallArrayFunction_0].ReturnValue -> [K2Node_CallFunction_6@GetSphereVolume].A
+[K2Node_CallArrayFunction_2].then -> [K2Node_MacroInstance_0@GetPontoonsLocations].Exec
+[K2Node_CallArrayFunction_3].ReturnValue -> [K2Node_CallArrayFunction_2].Size
+[K2Node_CallFunction_0@ReceiveBeginPlay].ReturnValue -> [K2Node_CallFunction_1@UpdateBuoyancy].self
+[K2Node_CallFunction_10].ReturnValue -> [K2Node_CallFunction_1@UpdateBuoyancy].Text
+[K2Node_CallFunction_11@GetSphereUnderPlaneVolume].ReturnValue -> [K2Node_IfThenElse_2@GetSphereUnderPlaneVolume].Condition#2
+[K2Node_CallFunction_11@GetSphereUnderPlaneVolume].ReturnValue -> [K2Node_IfThenElse_4@GetSphereUnderPlaneVolume].Condition#2
+[K2Node_CallFunction_12].ReturnValue -> [K2Node_CallFunction_93@UpdateBuoyancy].T
+[K2Node_CallFunction_13@GetSphereUnderPlaneVolume].ReturnValue -> [K2Node_IfThenElse_3@GetSphereUnderPlaneVolume].Condition
+[K2Node_CallFunction_13@GetSphereUnderPlaneVolume].v -> [K2Node_CallFunction_14@GetSphereUnderPlaneVolume].A#2
+[K2Node_CallFunction_13@GetSphereUnderPlaneVolume].v -> [K2Node_FunctionResult_4@GetSphereUnderPlaneVolume].v
+[K2Node_CallFunction_14@GetSphereUnderPlaneVolume].ReturnValue -> [K2Node_VariableSet_6].DepthInFluid
+[K2Node_CallFunction_14@GetSphereUnderPlaneVolume].ReturnValue#2 -> [K2Node_FunctionResult_4@GetSphereUnderPlaneVolume].v
+[K2Node_CallFunction_15@GetSphereUnderPlaneVolume].then -> [K2Node_CallFunction_1@UpdateBuoyancy].execute
+[K2Node_CallFunction_16@GetSphereUnderPlaneVolume].ReturnValue -> [K2Node_VariableSet_10].AreaInFluid
+[K2Node_CallFunction_18@GetSphereUnderPlaneVolume].v -> [K2Node_CallFunction_14@GetSphereUnderPlaneVolume].B#2
+[K2Node_CallFunction_18@GetSphereUnderPlaneVolume].v -> [K2Node_FunctionResult_4@GetSphereUnderPlaneVolume].v
+[K2Node_CallFunction_19].ReturnValue -> [K2Node_CallFunction_18@GetSphereUnderPlaneVolume].h
+[K2Node_CallFunction_1@UpdateBuoyancy].ReturnValue -> [K2Node_VariableSet_0@UpdateBuoyancy].FluxData
+[K2Node_CallFunction_1@UpdateBuoyancy].ReturnValue#2 -> [K2Node_CallFunction_2@MapResistance].B
+[K2Node_CallFunction_1@UpdateBuoyancy].ReturnValue#3 -> [K2Node_VariableSet_0@UpdateBuoyancy].LocalMesh
+[K2Node_CallFunction_25].ReturnValue -> [K2Node_CallFunction_42].Rotation
+[K2Node_CallFunction_28].ReturnValue -> [K2Node_IfThenElse_2@GetSphereUnderPlaneVolume].Condition
+[K2Node_CallFunction_2@MapResistance].Output_Get -> [K2Node_CallFunction_92].self
+[K2Node_CallFunction_2@MapResistance].Output_Get -> [K2Node_VariableSet_1@UpdateBuoyancy].CachedMesh
+[K2Node_CallFunction_2@MapResistance].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_8].B
+[K2Node_CallFunction_2@MapResistance].ReturnValue#2 -> [K2Node_IfThenElse_1@UpdateBuoyancy].Condition#3
+[K2Node_CallFunction_2@MapResistance].ReturnValue#3 -> [K2Node_FunctionResult_0@GetSphereUnderPlaneVolume].ReturnValue
+[K2Node_CallFunction_3@MapResistance].ReturnValue -> [K2Node_VariableSet_0@UpdateBuoyancy].LocalMesh
+[K2Node_CallFunction_3@MapResistance].ReturnValue#2 -> [K2Node_PromotableOperator_15].B
+[K2Node_CallFunction_3@MapResistance].ReturnValue#3 -> [K2Node_PromotableOperator_3@MapResistance].A
+[K2Node_CallFunction_42].ReturnValue -> [K2Node_PromotableOperator_18].A
+[K2Node_CallFunction_4@UpdateBuoyancy].ReturnValue -> [K2Node_IfThenElse_1@UpdateBuoyancy].Condition
+[K2Node_CallFunction_4@UpdateBuoyancy].ReturnValue#2 -> [K2Node_CallFunction_1@UpdateBuoyancy].self#2
+[K2Node_CallFunction_4@UpdateBuoyancy].ReturnValue#2 -> [K2Node_CallFunction_3@MapResistance].self
+[K2Node_CallFunction_4@UpdateBuoyancy].ReturnValue#2 -> [K2Node_CallFunction_5@UpdateBuoyancy].self
+[K2Node_CallFunction_4@UpdateBuoyancy].v -> [K2Node_VariableSet_4].VolumeInFluid
+[K2Node_CallFunction_54].Location -> [K2Node_CallFunction_55].InVec
+[K2Node_CallFunction_54].Velocity -> [K2Node_Knot_1].InputPin
+[K2Node_CallFunction_54].then -> [K2Node_VariableSet_6].execute
+[K2Node_CallFunction_55].Z -> [K2Node_CallFunction_14@GetSphereUnderPlaneVolume].B
+[K2Node_CallFunction_56].ReturnValue -> [K2Node_IfThenElse_4@GetSphereUnderPlaneVolume].Condition
+[K2Node_CallFunction_5@UpdateBuoyancy].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_8].A
+[K2Node_CallFunction_5@UpdateBuoyancy].ReturnValue#2 -> [K2Node_VariableSet_1@UpdateBuoyancy].LocalList
+[K2Node_CallFunction_5@UpdateBuoyancy].ReturnValue#3 -> [K2Node_PromotableOperator_20].A
+[K2Node_CallFunction_5@UpdateBuoyancy].then -> [K2Node_VariableSet_2@UpdateBuoyancy].execute
+[K2Node_CallFunction_6@GetSphereVolume].ReturnValue -> [K2Node_IfThenElse_1@UpdateBuoyancy].Condition#2
+[K2Node_CallFunction_6@GetSphereVolume].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_12].A
+[K2Node_CallFunction_6@GetSphereVolume].then -> [K2Node_CallFunction_15@GetSphereUnderPlaneVolume].execute
+[K2Node_CallFunction_7@GetSphereUnderPlaneVolume].ReturnValue -> [K2Node_VariableSet_8].ForceZ
+[K2Node_CallFunction_8@GetSphereUnderPlaneVolume].Locations -> [K2Node_CallFunction_6@GetSphereVolume].Points
+[K2Node_CallFunction_8@GetSphereUnderPlaneVolume].then -> [K2Node_IfThenElse_5].execute
+[K2Node_CallFunction_92].ReturnValue -> [K2Node_VariableSet_5@UpdateBuoyancy].Transform
+[K2Node_CallFunction_93@UpdateBuoyancy].ReturnValue -> [K2Node_VariableSet_1@UpdateBuoyancy].Location
+[K2Node_CommutativeAssociativeBinaryOperator_12].ReturnValue -> [K2Node_FunctionResult_4@GetSphereUnderPlaneVolume].v
+[K2Node_CommutativeAssociativeBinaryOperator_1@UpdateBuoyancy].ReturnValue -> [K2Node_PromotableOperator_28].A
+[K2Node_CommutativeAssociativeBinaryOperator_2].ReturnValue -> [K2Node_CallFunction_11@GetSphereUnderPlaneVolume].B
+[K2Node_CommutativeAssociativeBinaryOperator_5@GetSpherePushArea].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_8].B
+[K2Node_CommutativeAssociativeBinaryOperator_5@GetSpherePushArea].ReturnValue#2 -> [K2Node_PromotableOperator_12@GetSpherePushArea].A#2
+[K2Node_CommutativeAssociativeBinaryOperator_7].ReturnValue -> [K2Node_CallFunction_18@GetSphereUnderPlaneVolume].h
+[K2Node_CommutativeAssociativeBinaryOperator_8].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_8].A
+[K2Node_CommutativeAssociativeBinaryOperator_8].ReturnValue -> [K2Node_FunctionResult_4@GetSphereUnderPlaneVolume].v
+[K2Node_Event_0].then -> [K2Node_VariableSet_1@UpdateBuoyancy].execute
+[K2Node_Event_3].DeltaSeconds -> [K2Node_CallFunction_20].DeltaTime
+[K2Node_Event_3].then -> [K2Node_IfThenElse_1@UpdateBuoyancy].execute
+[K2Node_ExecutionSequence_0].then_0 -> [K2Node_VariableSet_1@UpdateBuoyancy].execute#2
+[K2Node_ExecutionSequence_0].then_1 -> [K2Node_VariableGet_3@GetPontoonsLocations].execute
+[K2Node_ExecutionSequence_0].then_2 -> [K2Node_VariableGet_3@GetPontoonsLocations].execute
+[K2Node_ExecutionSequence_0].then_3 -> [K2Node_FunctionResult_1@GetSphereVolume].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].DeltaSeconds -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_Event_DeltaSeconds
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].Resistance -> [K2Node_PromotableOperator_4@MapResistance].A#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].Velocity -> [K2Node_FunctionResult_0@GetSphereUnderPlaneVolume].ReturnValue
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then -> [K2Node_FunctionResult_6].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then -> [K2Node_IfThenElse_2@GetSphereUnderPlaneVolume].execute#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#2 -> [K2Node_ExecutionSequence_0].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#3 -> [K2Node_VariableGet_1@MapResistance].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#4 -> [K2Node_VariableGet_3@GetPontoonsLocations].execute#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#5 -> [K2Node_VariableGet_1@MapResistance].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#6 -> [K2Node_IfThenElse_0@MapResistance].execute#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#7 -> [K2Node_IfThenElse_7].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#8 -> [K2Node_SetVariableOnPersistentFrame_0].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#9 -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute#2
+[K2Node_GetArrayItem_1].Output -> [K2Node_VariableSet_3@UpdateBuoyancy].LocalMesh
+[K2Node_IfThenElse_0@MapResistance].else -> [K2Node_FunctionResult_0@GetSphereUnderPlaneVolume].execute#2
+[K2Node_IfThenElse_0@MapResistance].then -> [K2Node_CallFunction_6@GetSphereVolume].execute
+[K2Node_IfThenElse_0@MapResistance].then#2 -> [K2Node_FunctionResult_0@GetSphereUnderPlaneVolume].execute#2
+[K2Node_IfThenElse_1@UpdateBuoyancy].else -> [K2Node_IfThenElse_5].execute
+[K2Node_IfThenElse_1@UpdateBuoyancy].then -> [K2Node_CallFunction_20].execute
+[K2Node_IfThenElse_1@UpdateBuoyancy].then#2 -> [K2Node_VariableSet_3@UpdateBuoyancy].execute
+[K2Node_IfThenElse_1@UpdateBuoyancy].then#3 -> [K2Node_VariableSet_10].execute
+[K2Node_IfThenElse_2@GetSphereUnderPlaneVolume].else -> [K2Node_IfThenElse_4@GetSphereUnderPlaneVolume].execute#2
+[K2Node_IfThenElse_2@GetSphereUnderPlaneVolume].then -> [K2Node_VariableSet_5@UpdateBuoyancy].execute
+[K2Node_IfThenElse_2@GetSphereUnderPlaneVolume].then#2 -> [K2Node_FunctionResult_6].execute
+[K2Node_IfThenElse_3@GetSphereUnderPlaneVolume].else -> [K2Node_VariableSet_1@UpdateBuoyancy].execute#3
+[K2Node_IfThenElse_3@GetSphereUnderPlaneVolume].then -> [K2Node_VariableSet_1@UpdateBuoyancy].execute#3
+[K2Node_IfThenElse_4@GetSphereUnderPlaneVolume].else -> [K2Node_FunctionResult_6].execute
+[K2Node_IfThenElse_4@GetSphereUnderPlaneVolume].else -> [K2Node_IfThenElse_4@GetSphereUnderPlaneVolume].execute#2
+[K2Node_IfThenElse_4@GetSphereUnderPlaneVolume].then -> [K2Node_VariableGet_1@MapResistance].execute#2
+[K2Node_IfThenElse_4@GetSphereUnderPlaneVolume].then#2 -> [K2Node_FunctionResult_6].execute
+[K2Node_IfThenElse_5].then -> [K2Node_CallFunction_30].execute
+[K2Node_IfThenElse_7].else -> [K2Node_FunctionResult_6].execute
+[K2Node_IfThenElse_7].then -> [K2Node_FunctionResult_6].execute
+[K2Node_Knot_0@GetPontoonsLocations].OutputPin -> [K2Node_CallFunction_54].execute
+[K2Node_Knot_0@GetPontoonsLocations].OutputPin#2 -> [K2Node_MacroInstance_0@GetPontoonsLocations].Array
+[K2Node_Knot_1].OutputPin -> [K2Node_PromotableOperator_17].A
+[K2Node_Knot_2].OutputPin -> [K2Node_CallFunction_93@UpdateBuoyancy].Location
+[K2Node_MacroInstance_0@GetPontoonsLocations].Array Element -> [K2Node_BreakStruct_3].BS_FluxBuoyancyPontoon
+[K2Node_MacroInstance_0@GetPontoonsLocations].Array Element -> [K2Node_VariableSet_7@UpdateBuoyancy].Data
+[K2Node_MacroInstance_0@GetPontoonsLocations].Array Element#2 -> [K2Node_VariableSet_7@UpdateBuoyancy].Data
+[K2Node_MacroInstance_0@GetPontoonsLocations].Array Index -> [K2Node_CallFunction_54].Index
+[K2Node_MacroInstance_0@GetPontoonsLocations].Array Index#2 -> [K2Node_CallArrayFunction_4].Index
+[K2Node_MacroInstance_0@GetPontoonsLocations].Completed -> [K2Node_FunctionResult_0@GetSphereUnderPlaneVolume].execute
+[K2Node_MacroInstance_0@GetPontoonsLocations].Is Valid -> [K2Node_IfThenElse_0@MapResistance].execute
+[K2Node_MacroInstance_0@GetPontoonsLocations].LoopBody -> [K2Node_CallArrayFunction_4].execute
+[K2Node_MacroInstance_0@GetPontoonsLocations].LoopBody -> [K2Node_VariableSet_7@UpdateBuoyancy].execute
+[K2Node_MacroInstance_0@GetPontoonsLocations].LoopBody#2 -> [K2Node_VariableSet_7@UpdateBuoyancy].execute
+[K2Node_PromotableOperator_0].ReturnValue -> [K2Node_CallFunction_7@GetSphereUnderPlaneVolume].Z
+[K2Node_PromotableOperator_1].ReturnValue -> [K2Node_PromotableOperator_5].B
+[K2Node_PromotableOperator_11].ReturnValue -> [K2Node_CallFunction_15@GetSphereUnderPlaneVolume].ArrowSize
+[K2Node_PromotableOperator_12@GetSpherePushArea].ReturnValue -> [K2Node_PromotableOperator_15].A
+[K2Node_PromotableOperator_12@GetSpherePushArea].ReturnValue#2 -> [K2Node_FunctionResult_6].Arera
+[K2Node_PromotableOperator_13].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_5@GetSpherePushArea].B#2
+[K2Node_PromotableOperator_13].ReturnValue -> [K2Node_PromotableOperator_12@GetSpherePushArea].B#2
+[K2Node_PromotableOperator_14].ReturnValue -> [K2Node_PromotableOperator_9@GetSpherePushArea].A
+[K2Node_PromotableOperator_15].ReturnValue -> [K2Node_PromotableOperator_2].A
+[K2Node_PromotableOperator_17].ReturnValue -> [K2Node_PromotableOperator_20].B
+[K2Node_PromotableOperator_18].ReturnValue -> [K2Node_VariableSet_3@UpdateBuoyancy].ForceDrag
+[K2Node_PromotableOperator_19].ReturnValue -> [K2Node_PromotableOperator_14].A
+[K2Node_PromotableOperator_2].ReturnValue -> [K2Node_PromotableOperator_0].A
+[K2Node_PromotableOperator_20].ReturnValue -> [K2Node_VariableSet_2@UpdateBuoyancy].RelativeVelocity
+[K2Node_PromotableOperator_28].ReturnValue -> [K2Node_PromotableOperator_18].B
+[K2Node_PromotableOperator_3@MapResistance].ReturnValue -> [K2Node_CallFunction_2@MapResistance].A#3
+[K2Node_PromotableOperator_4@MapResistance].ReturnValue -> [K2Node_CallFunction_15@GetSphereUnderPlaneVolume].LineEnd
+[K2Node_PromotableOperator_4@MapResistance].ReturnValue#2 -> [K2Node_IfThenElse_0@MapResistance].Condition#2
+[K2Node_PromotableOperator_5].ReturnValue -> [K2Node_PromotableOperator_4@MapResistance].A
+[K2Node_PromotableOperator_6@GetSpherePushArea].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_1@UpdateBuoyancy].B
+[K2Node_PromotableOperator_6@GetSpherePushArea].ReturnValue#2 -> [K2Node_IfThenElse_7].Condition
+[K2Node_PromotableOperator_7].ReturnValue -> [K2Node_CallFunction_8@GetSphereUnderPlaneVolume].Force
+[K2Node_PromotableOperator_7].ReturnValue -> [K2Node_PromotableOperator_5].A
+[K2Node_PromotableOperator_9@GetSpherePushArea].ReturnValue -> [K2Node_PromotableOperator_12@GetSpherePushArea].A
+[K2Node_PromotableOperator_9@GetSpherePushArea].ReturnValue#2 -> [K2Node_CommutativeAssociativeBinaryOperator_5@GetSpherePushArea].A#2
+[K2Node_SetVariableOnPersistentFrame_0].then -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute
+[K2Node_VariableGet_0@MapResistance].DataAsset -> [K2Node_VariableGet_13@GetSphereUnderPlaneVolume].self
+[K2Node_VariableGet_0@MapResistance].DataAsset -> [K2Node_VariableGet_6@GetSphereVolume].self
+[K2Node_VariableGet_0@MapResistance].LocalMesh -> [K2Node_FunctionResult_1@GetSphereVolume].Output_Get
+[K2Node_VariableGet_0@MapResistance].Rotation -> [K2Node_CallFunction_2@MapResistance].B#3
+[K2Node_VariableGet_0@MapResistance].Rotation -> [K2Node_CallFunction_3@MapResistance].B
+[K2Node_VariableGet_0@MapResistance].UsePontoonsInFluxData -> [K2Node_IfThenElse_0@MapResistance].Condition
+[K2Node_VariableGet_11@GetSphereUnderPlaneVolume].VolumeInFluid -> [K2Node_PromotableOperator_14].B
+[K2Node_VariableGet_13@GetSphereUnderPlaneVolume].Pontoons -> [K2Node_MacroInstance_0@GetPontoonsLocations].Array#2
+[K2Node_VariableGet_16@GetSphereUnderPlaneVolume].RelativeVelocity -> [K2Node_CallFunction_42].Velocity
+[K2Node_VariableGet_1@MapResistance].DataAsset -> [K2Node_VariableGet_3@GetPontoonsLocations].self
+[K2Node_VariableGet_1@MapResistance].DataAsset -> [K2Node_VariableGet_6@GetSphereVolume].self#2
+[K2Node_VariableGet_1@MapResistance].OwnerComponentTag -> [K2Node_CallFunction_5@UpdateBuoyancy].Tag
+[K2Node_VariableGet_1@MapResistance].then -> [K2Node_CallArrayFunction_2].execute
+[K2Node_VariableGet_1@MapResistance].then -> [K2Node_VariableSet_5@UpdateBuoyancy].execute
+[K2Node_VariableGet_1@MapResistance].then#2 -> [K2Node_IfThenElse_2@GetSphereUnderPlaneVolume].execute
+[K2Node_VariableGet_20@GetSphereUnderPlaneVolume].Density -> [K2Node_PromotableOperator_19].B
+[K2Node_VariableGet_24].Location -> [K2Node_CallFunction_15@GetSphereUnderPlaneVolume].LineStart
+[K2Node_VariableGet_24].Location -> [K2Node_CallFunction_1@UpdateBuoyancy].TextLocation
+[K2Node_VariableGet_24].Location -> [K2Node_CallFunction_30].Center
+[K2Node_VariableGet_24].Location -> [K2Node_CallFunction_5@UpdateBuoyancy].Point
+[K2Node_VariableGet_24].Location -> [K2Node_CallFunction_8@GetSphereUnderPlaneVolume].Location
+[K2Node_VariableGet_24].Location -> [K2Node_PromotableOperator_4@MapResistance].B
+[K2Node_VariableGet_26@GetSpherePushArea].Distance -> [K2Node_CallFunction_11@GetSphereUnderPlaneVolume].A
+[K2Node_VariableGet_26@GetSpherePushArea].Distance -> [K2Node_CallFunction_19].B
+[K2Node_VariableGet_26@GetSpherePushArea].Distance -> [K2Node_CommutativeAssociativeBinaryOperator_7].A
+[K2Node_VariableGet_26@GetSpherePushArea].Distance -> [K2Node_PromotableOperator_6@GetSpherePushArea].A#2
+[K2Node_VariableGet_26@GetSpherePushArea].Distance -> [K2Node_PromotableOperator_9@GetSpherePushArea].B#2
+[K2Node_VariableGet_28@GetSpherePushArea].AreaInFluid -> [K2Node_CallFunction_10].InDouble
+[K2Node_VariableGet_28@GetSpherePushArea].AreaInFluid -> [K2Node_CommutativeAssociativeBinaryOperator_1@UpdateBuoyancy].A
+[K2Node_VariableGet_28@GetSpherePushArea].Radius -> [K2Node_CallFunction_11@GetSphereUnderPlaneVolume].B
+[K2Node_VariableGet_28@GetSpherePushArea].Radius -> [K2Node_CallFunction_13@GetSphereUnderPlaneVolume].r
+[K2Node_VariableGet_28@GetSpherePushArea].Radius -> [K2Node_CallFunction_18@GetSphereUnderPlaneVolume].r
+[K2Node_VariableGet_28@GetSpherePushArea].Radius -> [K2Node_CallFunction_19].A
+[K2Node_VariableGet_28@GetSpherePushArea].Radius -> [K2Node_CommutativeAssociativeBinaryOperator_2].A
+[K2Node_VariableGet_28@GetSpherePushArea].Radius -> [K2Node_CommutativeAssociativeBinaryOperator_7].B
+[K2Node_VariableGet_28@GetSpherePushArea].Radius -> [K2Node_PromotableOperator_13].A
+[K2Node_VariableGet_28@GetSpherePushArea].Radius -> [K2Node_PromotableOperator_6@GetSpherePushArea].B#2
+[K2Node_VariableGet_28@GetSpherePushArea].Radius -> [K2Node_PromotableOperator_9@GetSpherePushArea].A#2
+[K2Node_VariableGet_29].DepthInFluid -> [K2Node_CallFunction_4@UpdateBuoyancy].Distance
+[K2Node_VariableGet_29].DepthInFluid -> [K2Node_CallFunction_9].Distance
+[K2Node_VariableGet_2@GetPontoonsLocations].DrawDebug -> [K2Node_IfThenElse_5].Condition
+[K2Node_VariableGet_32].DataAsset -> [K2Node_VariableGet_35].self
+[K2Node_VariableGet_32].DataAsset -> [K2Node_VariableGet_37].self
+[K2Node_VariableGet_32].DataAsset -> [K2Node_VariableGet_43].self
+[K2Node_VariableGet_34].VolumeInFluid -> [K2Node_CallFunction_16@GetSphereUnderPlaneVolume].Base
+[K2Node_VariableGet_35].DragAxes -> [K2Node_CallFunction_42].Resistance
+[K2Node_VariableGet_37].Drag -> [K2Node_PromotableOperator_6@GetSpherePushArea].B
+[K2Node_VariableGet_39].FluxData -> [K2Node_CallFunction_54].self
+[K2Node_VariableGet_39].FluxData -> [K2Node_CallFunction_56].self
+[K2Node_VariableGet_39].then -> [K2Node_IfThenElse_4@GetSphereUnderPlaneVolume].execute
+[K2Node_VariableGet_3@GetPontoonsLocations].LLocations -> [K2Node_CallArrayFunction_2].TargetArray
+[K2Node_VariableGet_3@GetPontoonsLocations].LLocations -> [K2Node_CallArrayFunction_4].TargetArray
+[K2Node_VariableGet_3@GetPontoonsLocations].Pontoons -> [K2Node_MacroInstance_0@GetPontoonsLocations].Array
+[K2Node_VariableGet_3@GetPontoonsLocations].else -> [K2Node_VariableSet_0@UpdateBuoyancy].execute#2
+[K2Node_VariableGet_3@GetPontoonsLocations].r -> [K2Node_CallFunction_2@MapResistance].A
+[K2Node_VariableGet_3@GetPontoonsLocations].then -> [K2Node_VariableGet_39].execute
+[K2Node_VariableGet_40].DebugArrowScale -> [K2Node_PromotableOperator_1].B
+[K2Node_VariableGet_43].Mass -> [K2Node_PromotableOperator_12@GetSpherePushArea].B
+[K2Node_VariableGet_45].DataAsset -> [K2Node_VariableGet_20@GetSphereUnderPlaneVolume].self
+[K2Node_VariableGet_45].DataAsset -> [K2Node_VariableGet_46].self
+[K2Node_VariableGet_46].Gravity -> [K2Node_PromotableOperator_2].B
+[K2Node_VariableGet_4@MapResistance].Resistance -> [K2Node_PromotableOperator_3@MapResistance].B
+[K2Node_VariableGet_53].Data -> [K2Node_BreakStruct_2].BS_FluxBuoyancyPontoon
+[K2Node_VariableGet_5@GetPontoonsLocations].LLocations -> [K2Node_FunctionResult_0@GetSphereUnderPlaneVolume].Locations
+[K2Node_VariableGet_5@GetPontoonsLocations].Location_Z -> [K2Node_CallFunction_14@GetSphereUnderPlaneVolume].A
+[K2Node_VariableGet_5@GetPontoonsLocations].h -> [K2Node_CallFunction_1@UpdateBuoyancy].A
+[K2Node_VariableGet_5@GetPontoonsLocations].h -> [K2Node_CommutativeAssociativeBinaryOperator_5@GetSpherePushArea].A
+[K2Node_VariableGet_5@GetPontoonsLocations].h -> [K2Node_CommutativeAssociativeBinaryOperator_5@GetSpherePushArea].B
+[K2Node_VariableGet_63].ForceDrag -> [K2Node_PromotableOperator_7].A
+[K2Node_VariableGet_64].ForceZ -> [K2Node_PromotableOperator_7].B
+[K2Node_VariableGet_66].CachedMesh -> [K2Node_CallFunction_12].self
+[K2Node_VariableGet_66].CachedMesh -> [K2Node_CallFunction_25].self
+[K2Node_VariableGet_66].CachedMesh -> [K2Node_CallFunction_28].self
+[K2Node_VariableGet_66].CachedMesh -> [K2Node_CallFunction_3@MapResistance].self#2
+[K2Node_VariableGet_66].CachedMesh -> [K2Node_CallFunction_5@UpdateBuoyancy].self#2
+[K2Node_VariableGet_66].CachedMesh -> [K2Node_CallFunction_8@GetSphereUnderPlaneVolume].self
+[K2Node_VariableGet_66].CachedMesh -> [K2Node_CallFunction_92].self
+[K2Node_VariableGet_6@GetSphereVolume].Current -> [K2Node_PromotableOperator_17].B
+[K2Node_VariableGet_6@GetSphereVolume].Pontoons -> [K2Node_CallArrayFunction_3].TargetArray
+[K2Node_VariableGet_6@GetSphereVolume].Pontoons -> [K2Node_Knot_0@GetPontoonsLocations].InputPin#2
+[K2Node_VariableGet_6@GetSphereVolume].r -> [K2Node_CallFunction_6@GetSphereVolume].Base
+[K2Node_VariableGet_7].Velocity -> [K2Node_CallFunction_3@MapResistance].A
+[K2Node_VariableGet_71].ForceDrag -> [K2Node_PromotableOperator_7].A
+[K2Node_VariableGet_8@GetSphereUnderPlaneVolume].Transform -> [K2Node_CallFunction_93@UpdateBuoyancy].T
+[K2Node_VariableSet_0@UpdateBuoyancy].Output_Get -> [K2Node_CallFunction_6@GetSphereVolume].self
+[K2Node_VariableSet_0@UpdateBuoyancy].Output_Get -> [K2Node_MacroInstance_0@GetPontoonsLocations].InputObject
+[K2Node_VariableSet_0@UpdateBuoyancy].then -> [K2Node_MacroInstance_0@GetPontoonsLocations].exec
+[K2Node_VariableSet_10].then -> [K2Node_CallFunction_5@UpdateBuoyancy].execute
+[K2Node_VariableSet_1@UpdateBuoyancy].Output_Get -> [K2Node_CallArrayFunction_0].TargetArray
+[K2Node_VariableSet_1@UpdateBuoyancy].Output_Get -> [K2Node_GetArrayItem_1].Array
+[K2Node_VariableSet_1@UpdateBuoyancy].Output_Get#2 -> [K2Node_CallFunction_3@MapResistance].Center
+[K2Node_VariableSet_1@UpdateBuoyancy].then -> [K2Node_VariableSet_0@UpdateBuoyancy].execute
+[K2Node_VariableSet_1@UpdateBuoyancy].then#2 -> [K2Node_IfThenElse_1@UpdateBuoyancy].execute#2
+[K2Node_VariableSet_1@UpdateBuoyancy].then#3 -> [K2Node_CallFunction_3@MapResistance].execute
+[K2Node_VariableSet_1@UpdateBuoyancy].then#3 -> [K2Node_Knot_0@GetPontoonsLocations].InputPin
+[K2Node_VariableSet_2@UpdateBuoyancy].then -> [K2Node_VariableSet_8].execute
+[K2Node_VariableSet_3@UpdateBuoyancy].then -> [K2Node_CallFunction_8@GetSphereUnderPlaneVolume].execute
+[K2Node_VariableSet_4].Output_Get -> [K2Node_CallFunction_2@MapResistance].A#2
+[K2Node_VariableSet_4].then -> [K2Node_IfThenElse_1@UpdateBuoyancy].execute#3
+[K2Node_VariableSet_5@UpdateBuoyancy].then -> [K2Node_MacroInstance_0@GetPontoonsLocations].Exec
+[K2Node_VariableSet_5@UpdateBuoyancy].then -> [K2Node_MacroInstance_0@GetPontoonsLocations].Exec#2
+[K2Node_VariableSet_6].then -> [K2Node_VariableSet_4].execute
+[K2Node_VariableSet_7@UpdateBuoyancy].then -> [K2Node_IfThenElse_3@GetSphereUnderPlaneVolume].execute
+[K2Node_VariableSet_7@UpdateBuoyancy].then -> [K2Node_VariableSet_1@UpdateBuoyancy].execute#3
+[K2Node_VariableSet_8].then -> [K2Node_VariableSet_3@UpdateBuoyancy].execute#2

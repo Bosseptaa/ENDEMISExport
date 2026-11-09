@@ -1,0 +1,123 @@
+﻿# /Game/FluidFlux/Simulation/Materials/M_HeightWetClear
+# класс: Material; происхождение: проект; узлов: 15; связей: 27; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:48
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_HeightWetClear] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    EditorX = 400
+    EditorY = 16
+    bCanMaskedBeAssumedOpaque = True
+    bCastRayTracedShadows = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = A8EF49E8A274BDA950F7A9A6A707ACF3
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="DefaultTexture",TextureReference="/Engine/EngineResources/DefaultTexture.DefaultTexture")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ParameterOverviewExpansion = (("-12Global", True),("-12Global FluxData", True))
+    LightingGuid = 2D2B9BA744A59C1619345082F72E9579
+    EditorOnlyData <- M_HeightWetClearEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_HeightWetClearEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_24
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_1
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_5
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionVectorParameter_0
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    R = 4.000000
+    G = 4.000000
+[MaterialExpressionConstant2Vector_1] MaterialExpressionConstant2Vector
+    R = 1.500000
+    G = 1.500000
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxOutline.MF_FluxOutline'"
+    FunctionInputs(0) = (ExpressionInputId=C3FA71F045C8EEC7E93CF98F3E1E4598,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(2) = (ExpressionInputId=2642EE244AD43B2E9D0695AD893527CC,Input=(OutputIndex=-1,InputName="FullPrecision"))
+    FunctionInputs(3) = (ExpressionInputId=0E376CB04E06109B2ACE07BDFBADF03D,Input=(OutputIndex=-1,InputName="Average"))
+    FunctionOutputs(0) = (ExpressionOutputId=669F86D84983A3D5B690CD9EFF7C036C,Output=(OutputName="HeightAvg"))
+    FunctionOutputs(1) = (ExpressionOutputId=BDAE6A5C42612F42A86E53B53D5FBDCA,Output=(OutputName="Slope"))
+    FunctionOutputs(2) = (ExpressionOutputId=7AEAC2034F8AB4B68D418FBB58BFA28D,Output=(OutputName="WaterHeight"))
+    FunctionOutputs(3) = (ExpressionOutputId=716C3BF344F19C2EF7A4FBBCFB49FA4B,Output=(OutputName="BorderWater"))
+    FunctionOutputs(4) = (ExpressionOutputId=73DB759C4F7EAF0C94B52EA0A340B3B1,Output=(OutputName="BorderHeight"))
+    FunctionOutputs(5) = (ExpressionOutputId=FF32C4454B806B87CC42018481C44C53,Output=(OutputName="WaterMax"))
+    FunctionOutputs(6) = (ExpressionOutputId=38CC7FBA44367388E07B669ADA5FC7A4,Output=(OutputName="WaterMin"))
+    FunctionOutputs(7) = (ExpressionOutputId=464C0D3C4416D132EB96F4BA68031742,Output=(OutputName="GroundMin"))
+    FunctionOutputs(8) = (ExpressionOutputId=9D94EE634BB8561FD73E07AF0A664283,Output=(OutputName="GroundMax"))
+    Outputs(0) = (OutputName="HeightAvg")
+    Outputs(1) = (OutputName="Slope")
+    Outputs(2) = (OutputName="WaterHeight")
+    Outputs(3) = (OutputName="BorderWater")
+    Outputs(4) = (OutputName="BorderHeight")
+    Outputs(5) = (OutputName="WaterMax")
+    Outputs(6) = (OutputName="WaterMin")
+    Outputs(7) = (OutputName="GroundMin")
+    Outputs(8) = (OutputName="GroundMax")
+    FunctionInputs(1) <- MaterialExpressionConstant2Vector_1
+[MaterialExpressionMaterialFunctionCall_24] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxOutline.MF_FluxOutline'"
+    FunctionInputs(0) = (ExpressionInputId=C3FA71F045C8EEC7E93CF98F3E1E4598,Input=(OutputIndex=-1,InputName="TexCoord"))
+    FunctionInputs(2) = (ExpressionInputId=2642EE244AD43B2E9D0695AD893527CC,Input=(OutputIndex=-1,InputName="FullPrecision"))
+    FunctionInputs(3) = (ExpressionInputId=0E376CB04E06109B2ACE07BDFBADF03D,Input=(OutputIndex=-1,InputName="Average"))
+    FunctionOutputs(0) = (ExpressionOutputId=669F86D84983A3D5B690CD9EFF7C036C,Output=(OutputName="HeightAvg"))
+    FunctionOutputs(1) = (ExpressionOutputId=BDAE6A5C42612F42A86E53B53D5FBDCA,Output=(OutputName="Slope"))
+    FunctionOutputs(2) = (ExpressionOutputId=7AEAC2034F8AB4B68D418FBB58BFA28D,Output=(OutputName="WaterHeight"))
+    FunctionOutputs(3) = (ExpressionOutputId=716C3BF344F19C2EF7A4FBBCFB49FA4B,Output=(OutputName="BorderWater"))
+    FunctionOutputs(4) = (ExpressionOutputId=73DB759C4F7EAF0C94B52EA0A340B3B1,Output=(OutputName="BorderHeight"))
+    FunctionOutputs(5) = (ExpressionOutputId=FF32C4454B806B87CC42018481C44C53,Output=(OutputName="WaterMax"))
+    FunctionOutputs(6) = (ExpressionOutputId=38CC7FBA44367388E07B669ADA5FC7A4,Output=(OutputName="WaterMin"))
+    FunctionOutputs(7) = (ExpressionOutputId=464C0D3C4416D132EB96F4BA68031742,Output=(OutputName="GroundMin"))
+    FunctionOutputs(8) = (ExpressionOutputId=9D94EE634BB8561FD73E07AF0A664283,Output=(OutputName="GroundMax"))
+    Outputs(0) = (OutputName="HeightAvg")
+    Outputs(1) = (OutputName="Slope")
+    Outputs(2) = (OutputName="WaterHeight")
+    Outputs(3) = (OutputName="BorderWater")
+    Outputs(4) = (OutputName="BorderHeight")
+    Outputs(5) = (OutputName="WaterMax")
+    Outputs(6) = (OutputName="WaterMin")
+    Outputs(7) = (OutputName="GroundMin")
+    Outputs(8) = (OutputName="GroundMax")
+    FunctionInputs(1) <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionMax_0] MaterialExpressionMax
+    A <- MaterialExpressionAdd_0
+    B <- MaterialExpressionSubtract_1
+[MaterialExpressionMin_0] MaterialExpressionMin
+    A <- MaterialExpressionMaterialFunctionCall_24
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionScalarParameter_5] MaterialExpressionScalarParameter
+    ParameterName = "StateWetHeightOffset"
+    ExpressionGUID = 0172B1A44AD652EBDAA85EAE724F1947
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    ConstB = 100.000000
+    A <- MaterialExpressionMin_0
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    A <- MaterialExpressionMax_0
+    B <- MaterialExpressionScalarParameter_5
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=-1000.000000,G=-1000.000000,B=0.000000,A=1.000000)
+    ParameterName = "Value"
+    ExpressionGUID = D0770E07493D980C40A7DD9FC18656C8
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

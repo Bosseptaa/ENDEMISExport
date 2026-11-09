@@ -1,0 +1,67 @@
+﻿# /Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyActor
+# класс: Blueprint; происхождение: проект; узлов: 13; связей: 19; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:90
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxBuoyancyActor] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxBuoyancyActor_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyActor.BP_FluxBuoyancyActor:UserConstructionScript",SavedViewOffset=(X=-287.364014,Y=-569.962891),SavedZoomAmount=0.675000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyActor.BP_FluxBuoyancyActor:GetInteractions",SavedViewOffset=(X=-184.616974,Y=-331.998962),SavedZoomAmount=1.000000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyActor.BP_FluxBuoyancyActor:EventGraph",SavedViewOffset=(X=-8447.676758,Y=-8573.097656),SavedZoomAmount=0.875000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxBuoyancyActor_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 2CF0D2EA42275C8095D66B849EC2D095
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    ImplementedInterfaces(0) <- GetInteractions
+    ImplementedInterfaces(0) <- GetShape
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = D5B1773847BB6C7C5C8925B702A523E0
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[GetInteractions] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 9B3B282847A6345FFAABEAA01DFBD573
+    InterfaceGuid = 2C5F2F284ED0681AF2CD12AA73F8B1D0
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_VariableGet_0
+    Nodes(3) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@GetInteractions] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetInteractions] K2Node_FunctionResult
+[K2Node_VariableGet_0] K2Node_VariableGet (переменная: BP_FluxInteractionComponent)
+[K2Node_CallFunction_0] K2Node_CallFunction (вызов: CalculateInteractionData @ /Script/Engine.BlueprintGeneratedClass)
+[GetShape] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 601CCFAC4DEC53145CEDBCACDD3619C6
+    InterfaceGuid = 3A06096544620F95A19E06AC2624342C
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetShape] K2Node_FunctionEntry (вызов: GetShape @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_FunctionResult_0@GetShape] K2Node_FunctionResult (вызов: GetShape @ /Script/Engine.BlueprintGeneratedClass)
+    вход Location = 0, 0, 0
+    вход Radius = 0.0
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 1558C186417080190D6C87AD25BA0816
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+
+## СВЯЗИ
+[K2Node_CallFunction_0].Interactions -> [K2Node_FunctionResult_0@GetShape].Interactions
+[K2Node_CallFunction_0].then -> [K2Node_FunctionResult_0@GetShape].execute
+[K2Node_FunctionEntry_0@GetShape].Iteration -> [K2Node_CallFunction_0].Iteration
+[K2Node_FunctionEntry_0@GetShape].Ratio -> [K2Node_CallFunction_0].TimeRatio
+[K2Node_FunctionEntry_0@GetShape].then -> [K2Node_CallFunction_0].execute
+[K2Node_FunctionEntry_0@GetShape].then#2 -> [K2Node_FunctionResult_0@GetShape].execute#2
+[K2Node_VariableGet_0].BP_FluxInteractionComponent -> [K2Node_CallFunction_0].self

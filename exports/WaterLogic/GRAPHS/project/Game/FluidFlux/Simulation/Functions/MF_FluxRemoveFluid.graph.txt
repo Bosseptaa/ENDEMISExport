@@ -1,0 +1,87 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_FluxRemoveFluid
+# класс: MaterialFunction; происхождение: проект; узлов: 16; связей: 27; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:32
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxRemoveFluid] MaterialFunction
+    StateId = E7C6FD574E0949316247C3A57EC930DB
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FluxRemoveFluidEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxRemoveFluidEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionIf_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionConstant_7
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+[MaterialExpressionConstant_7] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Slope"
+    Id = 547C1CF748E0375FBAB67F996D1CF753
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_5
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "W0"
+    Id = 0F91DDDE4F064D9F81539B856E8FB650
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_6
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "W1"
+    Id = 70E05F794D79028C4A28C5B3AF945D33
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_7
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Scale"
+    bLastPreviewed = True
+    Id = 17C00913466A3EECC78B81B24A0EE9D3
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_1
+[MaterialExpressionIf_0] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionConstant_0
+    AGreaterThanB <- MaterialExpressionFunctionInput_1
+    ALessThanB <- MaterialExpressionFunctionInput_2
+[MaterialExpressionIf_1] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+    A <- MaterialExpressionIf_0
+    B <- MaterialExpressionScalarParameter_0
+    AGreaterThanB <- MaterialExpressionConstant_2
+    ALessThanB <- MaterialExpressionConstant_3
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.000001
+    ParameterName = "MinWater"
+    ExpressionGUID = FE032D304E33DA1AB795579C726BA0EA
+    Function = "/Script/Engine.MaterialFunction'MF_FluxRemoveFluid'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

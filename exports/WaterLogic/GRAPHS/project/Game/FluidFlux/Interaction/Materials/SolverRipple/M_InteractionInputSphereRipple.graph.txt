@@ -1,0 +1,114 @@
+﻿# /Game/FluidFlux/Interaction/Materials/SolverRipple/M_InteractionInputSphereRipple
+# класс: Material; происхождение: проект; узлов: 23; связей: 44; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:204
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_InteractionInputSphereRipple] Material
+    BlendMode = BLEND_Translucent
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    EditorX = 128
+    EditorY = -132
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 49B7031D400063AB08BA87A4AEC3AFE9
+    ParameterOverviewExpansion = (("-12Global", True),("-12Global FluxData", True))
+    LightingGuid = 23F633A34775A3429C55FE84ED1AD403
+    EditorOnlyData <- M_InteractionInputSphereRippleEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_InteractionInputSphereRippleEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionConstant_4
+    Opacity <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMax_1
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionOneMinus_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionDistance_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_7
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_4
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionViewProperty_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionVectorParameter_0
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionDistance_0] MaterialExpressionDistance
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionComponentMask_0
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    A <- MaterialExpressionDistance_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_FluxInteractionUVToWorld.MF_FluxInteractionUVToWorld'"
+    FunctionOutputs(0) = (ExpressionOutputId=09EF4B34414D028671411F8E2CF51AE3,Output=(OutputName="World"))
+    FunctionOutputs(1) = (ExpressionOutputId=551C49EC423E491AAA708DBF1F9B7304,Output=(OutputName="Offset"))
+    Outputs(0) = (OutputName="World")
+    Outputs(1) = (OutputName="Offset")
+    FunctionInputs(0) <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_TextureBorderFalloff.MF_TextureBorderFalloff'"
+    FunctionOutputs(0) = (ExpressionOutputId=CD9685564E6B5F048B4BDBA4AB7ED696,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMultiply_12
+    FunctionInputs(1) <- MaterialExpressionTextureCoordinate_4
+    FunctionInputs(2) <- MaterialExpressionScalarParameter_7
+[MaterialExpressionMax_1] MaterialExpressionMax
+    ConstB = 0.000000
+    A <- MaterialExpressionMultiply_3
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionMaterialFunctionCall_4
+    B <- MaterialExpressionMax_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstA = 100.000000
+    A <- MaterialExpressionScalarParameter_1
+    B <- MaterialExpressionOneMinus_1
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionViewProperty_5
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    A <- MaterialExpressionSaturate_0
+    B <- MaterialExpressionReroute_0
+[MaterialExpressionOneMinus_1] MaterialExpressionOneMinus
+    Input <- MaterialExpressionDivide_0
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Input <- MaterialExpressionVectorParameter_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionMultiply_1
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "Hardness"
+    ExpressionGUID = 6AAFC1FB4FB817D2FD13309C797BC94A
+[MaterialExpressionScalarParameter_7] MaterialExpressionScalarParameter
+    DefaultValue = 20.000000
+    SliderMin = 1.000000
+    SliderMax = 100.000000
+    ParameterName = "BorderFalloff"
+    ExpressionGUID = 0693A2364685E056DCA4E184439380FE
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureCoordinate_4] MaterialExpressionTextureCoordinate
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.500000,G=0.500000,B=0.010000,A=113.000000)
+    ParameterName = "ForcePositionRadiusStrength"
+    ExpressionGUID = 3448E88E444ECD8379F648884BA6BA3C
+[MaterialExpressionViewProperty_5] MaterialExpressionViewProperty
+    Property = MEVP_ViewSize
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

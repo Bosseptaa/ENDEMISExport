@@ -1,0 +1,351 @@
+﻿# /Game/FluidFlux/Surface/Underwater/Functions/MF_TextureSampleImproved2D
+# класс: MaterialFunction; происхождение: проект; узлов: 53; связей: 137; HLSL: 2; причина: папка /Game/FluidFlux; имя/путь, тело:213, HLSL:2
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_TextureSampleImproved2D] MaterialFunction
+    StateId = AC274A054ED643EE3BB4B7A7572963A1
+    CombinedInputTypes = 287
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_3
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_4
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_5
+    DependentFunctionExpressionCandidates(4) <- MaterialExpressionMaterialFunctionCall_6
+    DependentFunctionExpressionCandidates(5) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_TextureSampleImproved2DEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_TextureSampleImproved2DEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionTextureSample_2
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionFrac_0
+    ExpressionCollection <- MaterialExpressionTextureSample_3
+    ExpressionCollection <- MaterialExpressionTextureSample_4
+    ExpressionCollection <- MaterialExpressionTextureSample_5
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_2
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionDivide_3
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionTextureProperty_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionTextureSample_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionStaticSwitch_0
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionCustom_1
+    ExpressionCollection <- MaterialExpressionTextureObject_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_4
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_5
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionStaticSwitch_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionTextureObject_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Desc = "TopUp"
+    A <- MaterialExpressionMultiply_12
+    B <- MaterialExpressionDivide_3
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: CustomSample
+    OutputType = CMOT_Float4
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Inputs(0) uv <- MaterialExpressionTextureCoordinate_0
+    Inputs(1) Tex <- MaterialExpressionTextureObject_1
+    Inputs(2) Lod <- MaterialExpressionConstant_3
+    Code: HLSL, 18 строк (см. HLSL/)
+[MaterialExpressionCustom_1] MaterialExpressionCustom
+    OutputType = CMOT_Float4
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Inputs(0) coords <- MaterialExpressionTextureCoordinate_0
+    Inputs(1) Tex <- MaterialExpressionTextureObject_1
+    Code: HLSL, 2 строк (см. HLSL/)
+[MaterialExpressionDivide_3] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionFrac_0] MaterialExpressionFrac
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Input <- MaterialExpressionMultiply_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Precise"
+    Id = 02FB012C424FD696396BB88785CDB499
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "UVs"
+    Id = 4F1463BD477CBBE405504A88051BD24E
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Tex"
+    Id = 219082FF4263C991AABFC3BA7693F696
+    InputType = FunctionInput_Texture2D
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureObject_0
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Scale"
+    Id = 0C70E65A4F619A9B77E9708B05A6396B
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "Mipmap"
+    Id = 9C8A9F4A4A314C30FBB52E8B3603C9CC
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "SampleRGBA"
+    bLastPreviewed = True
+    Id = 4650078740E7E8C5839CB38796265565
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitch_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "SampleR"
+    bLastPreviewed = True
+    Id = 67F4F1BE48CE40DA1EF29A9BE043C32A
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitch_1
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionTextureSample_2
+    B <- MaterialExpressionTextureSample_3
+    Alpha <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionTextureSample_2
+    B <- MaterialExpressionTextureSample_3
+    Alpha <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionLinearInterpolate_2] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionTextureSample_4
+    B <- MaterialExpressionTextureSample_5
+    Alpha <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionLinearInterpolate_3] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionLinearInterpolate_1
+    B <- MaterialExpressionLinearInterpolate_2
+    Alpha <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionLinearInterpolate_4] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionTextureSample_4
+    B <- MaterialExpressionTextureSample_5
+    Alpha <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionLinearInterpolate_5] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionLinearInterpolate_4
+    Alpha <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Underwater/Functions/MF_SamplingWeights.MF_SamplingWeights'"
+    FunctionInputs(0) = (ExpressionInputId=D246DB35496A43AC7D5B29A88D8E28AF,Input=(OutputIndex=-1,InputName="UVs"))
+    FunctionInputs(1) = (ExpressionInputId=84D789A54815232BA1EBE5A6E369F6A9,Input=(OutputIndex=-1,InputName="Tex"))
+    FunctionInputs(2) = (ExpressionInputId=5337ECBB4277D980FA7C739F584A5F05,Input=(OutputIndex=-1,InputName="Scale"))
+    FunctionOutputs(0) = (ExpressionOutputId=65A579BE4796681FAA10C5B01A75BA71,Output=(OutputName="UV_LT"))
+    FunctionOutputs(1) = (ExpressionOutputId=64FC6BAF49774AA7AE04059FEE925472,Output=(OutputName="UV_RB"))
+    FunctionOutputs(2) = (ExpressionOutputId=DD7546C04F83E2A1E02BF7AF8E8F3875,Output=(OutputName="UV_LB"))
+    FunctionOutputs(3) = (ExpressionOutputId=026620F44E4216F3B4C7F9A65ADA85F9,Output=(OutputName="UV_RT"))
+    FunctionOutputs(4) = (ExpressionOutputId=FE47F2F64A92A34C76CCBC9EA8050911,Output=(OutputName="Cubic"))
+    FunctionOutputs(5) = (ExpressionOutputId=46D7A7F342530D598C14338197AC8E35,Output=(OutputName="UV_Round"))
+    FunctionOutputs(6) = (ExpressionOutputId=1DDD23FB46B3CBD5BA2CC09C4622353B,Output=(OutputName="Lerp"))
+    FunctionOutputs(7) = (ExpressionOutputId=CF8CFABE4CFFCB4BDDB129B88ABEAAD0,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Outputs(0) = (OutputName="UV_LT")
+    Outputs(1) = (OutputName="UV_RB")
+    Outputs(2) = (OutputName="UV_LB")
+    Outputs(3) = (OutputName="UV_RT")
+    Outputs(4) = (OutputName="Cubic")
+    Outputs(5) = (OutputName="UV_Round")
+    Outputs(6) = (OutputName="Lerp")
+    Outputs(7) = (OutputName="Result")
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionMultiply_4
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionAdd_1
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionMultiply_12
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.MakeFloat2'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_4
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.MakeFloat2'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_3
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 256.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionTextureProperty_0
+    B <- MaterialExpressionFunctionInput_3
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Desc = "LeftBottom"
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionDivide_3
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionReroute_2
+    B <- MaterialExpressionReroute_2
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionReroute_2
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Input <- MaterialExpressionFunctionInput_2
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Input <- MaterialExpressionFunctionInput_2
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Input <- MaterialExpressionFrac_0
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+[MaterialExpressionStaticSwitch_0] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionLinearInterpolate_3
+    B <- MaterialExpressionTextureSample_1
+    Value <- MaterialExpressionFunctionInput_0
+[MaterialExpressionStaticSwitch_1] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionLinearInterpolate_5
+    B <- MaterialExpressionTextureSample_1
+    Value <- MaterialExpressionFunctionInput_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstA = 3.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionFrac_0
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+[MaterialExpressionTextureObject_0] MaterialExpressionTextureObject
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    bCollapsed = True
+[MaterialExpressionTextureObject_1] MaterialExpressionTextureObject
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    bCollapsed = True
+[MaterialExpressionTextureProperty_0] MaterialExpressionTextureProperty
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    TextureObject <- MaterialExpressionFunctionInput_2
+[MaterialExpressionTextureSample_1] MaterialExpressionTextureSample
+    MipValueMode = TMVM_MipLevel
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Coordinates <- MaterialExpressionFunctionInput_1
+    TextureObject <- MaterialExpressionReroute_0
+    MipValue <- MaterialExpressionFunctionInput_4
+[MaterialExpressionTextureSample_2] MaterialExpressionTextureSample
+    MipValueMode = TMVM_MipLevel
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Coordinates <- MaterialExpressionMultiply_12
+    TextureObject <- MaterialExpressionReroute_1
+    MipValue <- MaterialExpressionFunctionInput_4
+[MaterialExpressionTextureSample_3] MaterialExpressionTextureSample
+    MipValueMode = TMVM_MipLevel
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Coordinates <- MaterialExpressionMaterialFunctionCall_6
+    TextureObject <- MaterialExpressionReroute_1
+    MipValue <- MaterialExpressionFunctionInput_4
+[MaterialExpressionTextureSample_4] MaterialExpressionTextureSample
+    MipValueMode = TMVM_MipLevel
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Coordinates <- MaterialExpressionMaterialFunctionCall_5
+    TextureObject <- MaterialExpressionReroute_1
+    MipValue <- MaterialExpressionFunctionInput_4
+[MaterialExpressionTextureSample_5] MaterialExpressionTextureSample
+    MipValueMode = TMVM_MipLevel
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    Function = "/Script/Engine.MaterialFunction'MF_TextureSampleImproved2D'"
+    Coordinates <- MaterialExpressionAdd_1
+    TextureObject <- MaterialExpressionReroute_1
+    MipValue <- MaterialExpressionFunctionInput_4
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

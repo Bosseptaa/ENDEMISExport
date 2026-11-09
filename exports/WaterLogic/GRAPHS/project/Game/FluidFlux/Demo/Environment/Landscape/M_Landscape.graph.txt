@@ -1,0 +1,212 @@
+﻿# /Game/FluidFlux/Demo/Environment/Landscape/M_Landscape
+# класс: Material; происхождение: проект; узлов: 37; связей: 77; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_Landscape] Material
+    bUsedWithStaticLighting = True
+    EditorX = 2768
+    EditorY = 768
+    bUseMaterialAttributes = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = FA4635654BE3075DB347C790BE6A25EC
+    ReferencedTextureGuids(0) = D27D5B554B095E9319420D8B0A7D2A69
+    ReferencedTextureGuids(1) = C14F1E7C4C2B85734269EBB200534586
+    ReferencedTextureGuids(2) = 283F40684830E4029581FBB1DAC66001
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=0.031250,UVChannelIndex=0,TextureName="T_Sand_D",TextureReference="/Game/FluidFlux/Demo/Environment/Landscape/Sand/T_Sand_D.T_Sand_D")
+    TextureStreamingData(1) = (SamplingScale=0.031250,UVChannelIndex=0,TextureName="T_Sand_NAC",TextureReference="/Game/FluidFlux/Demo/Environment/Landscape/Sand/T_Sand_NAC.T_Sand_NAC")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Sand/T_Sand_D.T_Sand_D'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Sand/T_Detail_N_01.T_Detail_N_01'"
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Sand/T_Sand_NAC.T_Sand_NAC'"
+    ReferencedDefaultTextures(3) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Grass/T_GroundGrass_D.T_GroundGrass_D'"
+    ReferencedDefaultTextures(4) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Grass/T_GroundGrass_N.T_GroundGrass_N'"
+    ReferencedDefaultTextures(5) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Rocks/T_CliffRockTile_03_D.T_CliffRockTile_03_D'"
+    ReferencedDefaultTextures(6) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Rocks/T_CliffRock_03_N.T_CliffRock_03_N'"
+    ReferencedDefaultTextures(7) = "/Script/Engine.Texture2D'/Engine/EngineMaterials/WeightMapPlaceholderTexture.WeightMapPlaceholderTexture'"
+    ReferencedDefaultTextures(8) = "/Script/Engine.Texture2DArray'/Engine/EngineMaterials/WeightMapArrayPlaceholderTexture.WeightMapArrayPlaceholderTexture'"
+    ParameterOverviewExpansion = (("-12Global GroundCobble", True),("-12Global", True),("-12Global Rocks", True),("-12Global Sand", True),("-12Global Wet", True))
+    LightingGuid = 8D98BD4F405F004B894AC280EFC98EBF
+    EditorOnlyData <- M_LandscapeEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_LandscapeEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="Rocks")
+    MaterialAttributes <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionSetMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionLandscapeLayerBlend_5
+    ExpressionCollection <- MaterialExpressionLandscapeLayerSample_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_7
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_8
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_9
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_10
+    ExpressionCollection <- MaterialExpressionLandscapeLayerSwitch_1
+    ExpressionCollection <- MaterialExpressionLandscapeLayerSwitch_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_12
+    ExpressionCollection <- MaterialExpressionLandscapeLayerSample_5
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionOneMinus_1
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionLandscapeLayerSample_0
+    ExpressionCollection <- MaterialExpressionGetMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionComment_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    A <- MaterialExpressionMultiply_10
+    B <- MaterialExpressionMultiply_8
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    A <- MaterialExpressionLandscapeLayerSample_5
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 754
+    SizeY = 206
+    Text = "Flat capture does not work on UE5.4+"
+    CommentColor = (R=0.072027,G=0.587361,B=1.000000,A=1.000000)
+[MaterialExpressionGetMaterialAttributes_0] MaterialExpressionGetMaterialAttributes
+    AttributeGetTypes(0) = F905F895D5814314916D24348C40CE9E
+    Outputs(1) = (OutputName="Смещение позиции в мире")
+[MaterialExpressionLandscapeLayerBlend_5] MaterialExpressionLandscapeLayerBlend
+    Layers(0) <- MaterialExpressionMaterialFunctionCall_0
+    Layers(1) <- MaterialExpressionMaterialFunctionCall_4
+    Layers(2) <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionLandscapeLayerSample_0] MaterialExpressionLandscapeLayerSample
+    ParameterName = "Sand"
+[MaterialExpressionLandscapeLayerSample_3] MaterialExpressionLandscapeLayerSample
+    ParameterName = "Rocks"
+[MaterialExpressionLandscapeLayerSample_5] MaterialExpressionLandscapeLayerSample
+    ParameterName = "Grass"
+[MaterialExpressionLandscapeLayerSwitch_1] MaterialExpressionLandscapeLayerSwitch
+    ParameterName = "Rocks"
+    bCollapsed = True
+    LayerUsed <- MaterialExpressionMaterialFunctionCall_10
+    LayerNotUsed <- MaterialExpressionMaterialFunctionCall_7
+[MaterialExpressionLandscapeLayerSwitch_2] MaterialExpressionLandscapeLayerSwitch
+    ParameterName = "Grass"
+    bCollapsed = True
+    LayerUsed <- MaterialExpressionMaterialFunctionCall_12
+    LayerNotUsed <- MaterialExpressionLandscapeLayerSwitch_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Landscape/Sand/MF_Sand.MF_Sand'"
+    FunctionInputs(0) = (ExpressionInputId=A08C6DA94BD776EAFDDEEC9477DDFA29,Input=(OutputIndex=-1,InputName="Details"))
+    FunctionInputs(1) = (ExpressionInputId=D29D72A543C3E36DE6A8898865F0C9EB,Input=(OutputIndex=-1,InputName="Wet"))
+    FunctionOutputs(0) = (ExpressionOutputId=A3C0A795499E05D549497DAC10DA9DF5,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Landscape/Functions/MF_FluxWetCoastline.MF_FluxWetCoastline'"
+    FunctionOutputs(0) = (ExpressionOutputId=3837764F4A878EF3023AF2BF160288D9,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_2
+    FunctionInputs(1) <- MaterialExpressionLandscapeLayerSwitch_2
+[MaterialExpressionMaterialFunctionCall_10] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/MaterialLayerFunctions/MatLayerBlend_Standard.MatLayerBlend_Standard'"
+    FunctionOutputs(0) = (ExpressionOutputId=B7A48B68455CD8D9A45B3AAF57C5E97C,Output=(OutputName="Blended Material"))
+    Outputs(0) = (OutputName="Blended Material")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_7
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_8
+    FunctionInputs(2) <- MaterialExpressionSaturate_1
+[MaterialExpressionMaterialFunctionCall_12] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/MaterialLayerFunctions/MatLayerBlend_Standard.MatLayerBlend_Standard'"
+    FunctionOutputs(0) = (ExpressionOutputId=B7A48B68455CD8D9A45B3AAF57C5E97C,Output=(OutputName="Blended Material"))
+    Outputs(0) = (OutputName="Blended Material")
+    FunctionInputs(0) <- MaterialExpressionLandscapeLayerSwitch_1
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_9
+    FunctionInputs(2) <- MaterialExpressionSaturate_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Landscape/Functions/MF_FluxSampleWet.MF_FluxSampleWet'"
+    FunctionOutputs(0) = (ExpressionOutputId=C94B09D342C20D1C2C78A2AAFAEC9B98,Output=(OutputName="Wet"))
+    Outputs(0) = (OutputName="Wet")
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Landscape/Grass/MF_Grass.MF_Grass'"
+    FunctionOutputs(0) = (ExpressionOutputId=D7312E3F4A38030408308C88D54E20E2,Output=(OutputName="Height"))
+    FunctionOutputs(1) = (ExpressionOutputId=CF42BAE74453748C3C05D793BB9A7D40,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Height")
+    Outputs(1) = (OutputName="Result")
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Landscape/Rocks/MF_Rocks.MF_Rocks'"
+    FunctionOutputs(0) = (ExpressionOutputId=CF42BAE74453748C3C05D793BB9A7D40,Output=(OutputName="Layer"))
+    FunctionOutputs(1) = (ExpressionOutputId=BFA49F814B94BB333C9EE68444E1A53A,Output=(OutputName="Height"))
+    Outputs(0) = (OutputName="Layer")
+    Outputs(1) = (OutputName="Height")
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Landscape/Functions/MF_FluxSampleWet.MF_FluxSampleWet'"
+    FunctionOutputs(0) = (ExpressionOutputId=C94B09D342C20D1C2C78A2AAFAEC9B98,Output=(OutputName="Wet"))
+    Outputs(0) = (OutputName="Wet")
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxFlatGround.MF_FluxFlatGround'"
+    FunctionOutputs(0) = (ExpressionOutputId=5BE3445047A87E06C9445EA215427437,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionGetMaterialAttributes_0
+[MaterialExpressionMaterialFunctionCall_7] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Landscape/Sand/MF_Sand.MF_Sand'"
+    FunctionOutputs(0) = (ExpressionOutputId=A3C0A795499E05D549497DAC10DA9DF5,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionLandscapeLayerSample_0
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionMaterialFunctionCall_8] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Landscape/Rocks/MF_Rocks.MF_Rocks'"
+    FunctionOutputs(0) = (ExpressionOutputId=CF42BAE74453748C3C05D793BB9A7D40,Output=(OutputName="Layer"))
+    FunctionOutputs(1) = (ExpressionOutputId=BFA49F814B94BB333C9EE68444E1A53A,Output=(OutputName="Height"))
+    Outputs(0) = (OutputName="Layer")
+    Outputs(1) = (OutputName="Height")
+[MaterialExpressionMaterialFunctionCall_9] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Landscape/Grass/MF_Grass.MF_Grass'"
+    FunctionOutputs(0) = (ExpressionOutputId=D7312E3F4A38030408308C88D54E20E2,Output=(OutputName="Height"))
+    FunctionOutputs(1) = (ExpressionOutputId=CF42BAE74453748C3C05D793BB9A7D40,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Height")
+    Outputs(1) = (OutputName="Result")
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 25.000000
+    A <- MaterialExpressionLandscapeLayerSample_3
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    A <- MaterialExpressionLandscapeLayerSample_3
+    B <- MaterialExpressionLandscapeLayerSample_3
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionLandscapeLayerSample_5
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 5.000000
+    A <- MaterialExpressionMaterialFunctionCall_9
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    ConstB = 115.000000
+    A <- MaterialExpressionMaterialFunctionCall_8
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_4
+    B <- MaterialExpressionMultiply_4
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    A <- MaterialExpressionOneMinus_1
+    B <- MaterialExpressionMultiply_5
+[MaterialExpressionOneMinus_1] MaterialExpressionOneMinus
+    Input <- MaterialExpressionLandscapeLayerSample_3
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionAdd_1
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 15.000000
+    ParameterName = "RocksBlendHardness"
+    ExpressionGUID = 82A88E6547C5D957B0B7EEBF508E1AC9
+    Group = "Rocks"
+[MaterialExpressionSetMaterialAttributes_0] MaterialExpressionSetMaterialAttributes
+    AttributeSetTypes(0) = F905F895D5814314916D24348C40CE9E
+    Inputs(0) <- MaterialExpressionGetMaterialAttributes_0
+    Inputs(1) World Position Offset <- MaterialExpressionMaterialFunctionCall_6
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

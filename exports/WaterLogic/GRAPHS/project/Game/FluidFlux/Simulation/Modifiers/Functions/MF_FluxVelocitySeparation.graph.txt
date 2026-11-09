@@ -1,0 +1,100 @@
+﻿# /Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxVelocitySeparation
+# класс: MaterialFunction; происхождение: проект; узлов: 16; связей: 30; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:40
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxVelocitySeparation] MaterialFunction
+    StateId = 5D2482434373C6AB2388F5B8C44F3C99
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_11
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_14
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_15
+    EditorOnlyData <- MF_FluxVelocitySeparationEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxVelocitySeparationEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_11
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_5
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_14
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_7
+    ExpressionCollection <- MaterialExpressionSubtract_6
+    ExpressionCollection <- MaterialExpressionConstant2Vector_4
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_15
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    R = -0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+[MaterialExpressionConstant2Vector_4] MaterialExpressionConstant2Vector
+    G = -0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "LeftPosition"
+    bLastPreviewed = True
+    Id = 84EEC7E54D858270193896AC448A21F5
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_11
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "BottomPosition"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = 2B010CFA44DA83FA541E80A439C1104C
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionMaterialFunctionCall_11] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSimulationUVToWorld.MF_FluxSimulationUVToWorld'"
+    FunctionOutputs(0) = (ExpressionOutputId=95D094FA430297A593B0A089DBD5B4E3,Output=(OutputName="WorldPosition"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+    Outputs(0) = (OutputName="WorldPosition")
+    FunctionInputs(0) <- MaterialExpressionSubtract_1
+[MaterialExpressionMaterialFunctionCall_14] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSimulationUVToWorld.MF_FluxSimulationUVToWorld'"
+    FunctionOutputs(0) = (ExpressionOutputId=95D094FA430297A593B0A089DBD5B4E3,Output=(OutputName="WorldPosition"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+    Outputs(0) = (OutputName="WorldPosition")
+    FunctionInputs(0) <- MaterialExpressionSubtract_6
+[MaterialExpressionMaterialFunctionCall_15] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSimulationUV.MF_FluxSimulationUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=AB54F8A04BF80648975AFEAEF6AA4B89,Output=(OutputName="Location"))
+    FunctionOutputs(1) = (ExpressionOutputId=C95318454157AA05A02E1CB27B1B2D7E,Output=(OutputName="ScaleInv"))
+    FunctionOutputs(2) = (ExpressionOutputId=E7854F864B404DDBFDE83C8D5C660588,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=CC73E6C2412A717020F206AE8D6F4D7F,Output=(OutputName="Height"))
+    FunctionOutputs(4) = (ExpressionOutputId=D453923D4F896744C8CAB5BC03EE1446,Output=(OutputName="Resolution"))
+    FunctionOutputs(5) = (ExpressionOutputId=4ADE6B714BD48DB8764BF28BC453AAE2,Output=(OutputName="TexelSize"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+    Outputs(0) = (OutputName="Location")
+    Outputs(1) = (OutputName="ScaleInv")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Height")
+    Outputs(4) = (OutputName="Resolution")
+    Outputs(5) = (OutputName="TexelSize")
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+    A <- MaterialExpressionConstant2Vector_0
+    B <- MaterialExpressionMaterialFunctionCall_15
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+    A <- MaterialExpressionConstant2Vector_4
+    B <- MaterialExpressionMaterialFunctionCall_15
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+    A <- MaterialExpressionTextureCoordinate_5
+    B <- MaterialExpressionMultiply_5
+[MaterialExpressionSubtract_6] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+    A <- MaterialExpressionTextureCoordinate_7
+    B <- MaterialExpressionMultiply_6
+[MaterialExpressionTextureCoordinate_5] MaterialExpressionTextureCoordinate
+    CoordinateIndex = 1
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+[MaterialExpressionTextureCoordinate_7] MaterialExpressionTextureCoordinate
+    CoordinateIndex = 1
+    Function = "/Script/Engine.MaterialFunction'MF_FluxVelocitySeparation'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

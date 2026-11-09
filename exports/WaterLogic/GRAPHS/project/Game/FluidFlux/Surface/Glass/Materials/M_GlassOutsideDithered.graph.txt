@@ -1,0 +1,199 @@
+﻿# /Game/FluidFlux/Surface/Glass/Materials/M_GlassOutsideDithered
+# класс: Material; происхождение: проект; узлов: 42; связей: 81; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:85
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_GlassOutsideDithered] Material
+    BlendMode = BLEND_Masked
+    MaterialDecalResponse = MDR_None
+    OpacityMaskClipValue = 0.500000
+    TranslucencyPass = MTP_BeforeDOF
+    TranslucencyLightingMode = TLM_VolumetricPerVertexNonDirectional
+    bUsedWithSplineMeshes = True
+    EditorX = 2144
+    EditorY = -80
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = C0D4103244F0C02F026EB09C10BA4B8D
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 95880C5F44954A65EEF848B6F2826F43
+    EditorOnlyData <- M_GlassOutsideDitheredEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_GlassOutsideDitheredEditorOnlyData] MaterialEditorOnlyData
+    Normal = (Constant=(X=0.000000,Y=0.000000,Z=0.000000),Mask=1,MaskR=1,MaskG=1,MaskB=1)
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    ParameterGroupData(4) = (GroupName="None")
+    ParameterGroupData(5) = (GroupName="None")
+    BaseColor <- MaterialExpressionMultiply_1
+    Metallic <- MaterialExpressionScalarParameter_0
+    Specular <- MaterialExpressionMultiply_3
+    Roughness <- MaterialExpressionConstant_3
+    OpacityMask <- MaterialExpressionShadowReplace_0
+    WorldPositionOffset <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionShadowReplace_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_0
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionSkyAtmosphereLightDirection_0
+    ExpressionCollection <- MaterialExpressionDotProduct_1
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_7
+    ExpressionCollection <- MaterialExpressionScalarParameter_8
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_0
+    ExpressionCollection <- MaterialExpressionAbs_1
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_1
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionStaticBool_2
+    ExpressionCollection <- MaterialExpressionDotProduct_2
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_1
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_2
+    ExpressionCollection <- MaterialExpressionOneMinus_1
+    ExpressionCollection <- MaterialExpressionAbs_2
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionConstant_0
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Input <- MaterialExpressionDotProduct_1
+[MaterialExpressionAbs_1] MaterialExpressionAbs
+    Input <- MaterialExpressionDotProduct_0
+[MaterialExpressionAbs_2] MaterialExpressionAbs
+    Input <- MaterialExpressionDotProduct_2
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.200000
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionCameraVectorWS_0] MaterialExpressionCameraVectorWS
+[MaterialExpressionCameraVectorWS_1] MaterialExpressionCameraVectorWS
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.500000
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 0.050000
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    A <- MaterialExpressionCameraVectorWS_0
+    B <- MaterialExpressionVertexNormalWS_1
+[MaterialExpressionDotProduct_1] MaterialExpressionDotProduct
+    A <- MaterialExpressionVertexNormalWS_0
+    B <- MaterialExpressionSkyAtmosphereLightDirection_0
+[MaterialExpressionDotProduct_2] MaterialExpressionDotProduct
+    A <- MaterialExpressionCameraVectorWS_1
+    B <- MaterialExpressionVertexNormalWS_2
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionScalarParameter_3
+    B <- MaterialExpressionScalarParameter_8
+    Alpha <- MaterialExpressionAbs_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_BayerDither.MF_BayerDither'"
+    FunctionInputs(1) = (ExpressionInputId=B5C5C5E14263D39178E9A2A209EC41A9,Input=(OutputIndex=-1,InputName="Position"))
+    FunctionInputs(2) = (ExpressionInputId=F8AAA4184EB1F781B302F6B438A5CE29,Input=(OutputIndex=-1,InputName="Precise"))
+    FunctionOutputs(0) = (ExpressionOutputId=0FFEAFE947BBBFB9E2A8669ADEB2AD66,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_2
+    FunctionInputs(3) <- MaterialExpressionAdd_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxPhantom.MF_FluxPhantom'"
+    FunctionInputs(0) = (ExpressionInputId=C0539CA24323537369B8729D42344871,Input=(OutputIndex=-1,InputName="IsPhantom"))
+    FunctionInputs(1) = (ExpressionInputId=5510FBC7464B9923A9C0CCAB247C52B7,Input=(InputName="IsDistanceField"))
+    FunctionInputs(2) = (ExpressionInputId=6E44A5544354F5A85BE5D99028941E2B,Input=(InputName="WorldPositionOffset"))
+    FunctionOutputs(0) = (ExpressionOutputId=952F33E84669F008FED6A69447C48B78,Output=(OutputName="VisibleInWorldOnly"))
+    FunctionOutputs(1) = (ExpressionOutputId=F7C65AF84365C80134A16B8BCAA6DCDD,Output=(OutputName="VisibleInCaptureOnly"))
+    FunctionOutputs(2) = (ExpressionOutputId=90AD37CA48E557769A7A6DB4F898F298,Output=(OutputName="IsRenderingCapture"))
+    Outputs(0) = (OutputName="VisibleInWorldOnly")
+    Outputs(1) = (OutputName="VisibleInCaptureOnly")
+    Outputs(2) = (OutputName="IsRenderingCapture")
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_CheckerDither.MF_CheckerDither'"
+    FunctionOutputs(0) = (ExpressionOutputId=49EC16034751E26AFD14CCB498A4013B,Output=(OutputName="TwoSided"))
+    FunctionOutputs(1) = (ExpressionOutputId=3D2C165F4A3443B7055E5D8978A589E0,Output=(OutputName="BackSide"))
+    FunctionOutputs(2) = (ExpressionOutputId=4D512265436E6E5E52875EA7837A6029,Output=(OutputName="FrontSide"))
+    Outputs(0) = (OutputName="TwoSided")
+    Outputs(1) = (OutputName="BackSide")
+    Outputs(2) = (OutputName="FrontSide")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_1
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_BayerDither.MF_BayerDither'"
+    FunctionInputs(1) = (ExpressionInputId=B5C5C5E14263D39178E9A2A209EC41A9,Input=(InputName="Position"))
+    FunctionInputs(2) = (ExpressionInputId=F8AAA4184EB1F781B302F6B438A5CE29,Input=(OutputIndex=-1,InputName="Precise"))
+    FunctionOutputs(0) = (ExpressionOutputId=0FFEAFE947BBBFB9E2A8669ADEB2AD66,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_0
+    FunctionInputs(3) <- MaterialExpressionStaticSwitchParameter_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 0.600000
+    A <- MaterialExpressionMultiply_2
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    A <- MaterialExpressionOneMinus_0
+    B <- MaterialExpressionOneMinus_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    A <- MaterialExpressionOneMinus_1
+    B <- MaterialExpressionOneMinus_1
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    A <- MaterialExpressionSaturate_0
+    B <- MaterialExpressionSaturate_0
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionAbs_1
+[MaterialExpressionOneMinus_1] MaterialExpressionOneMinus
+    Input <- MaterialExpressionAbs_2
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "Metalic"
+    ExpressionGUID = 336ACE264E9EADA9A7A3E3B4517922D1
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = 0.750000
+    ParameterName = "ShadowMin"
+    ExpressionGUID = 8205033A4020E2D11ACAA3927607B763
+[MaterialExpressionScalarParameter_7] MaterialExpressionScalarParameter
+    DefaultValue = 0.700000
+    ParameterName = "Shadow"
+    ExpressionGUID = 613746984C3CA12F1BED0EA00AA6A052
+[MaterialExpressionScalarParameter_8] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "ShadowMax"
+    ExpressionGUID = CF3C9AD44EC1C41E3D2F2A8D2657C847
+[MaterialExpressionShadowReplace_0] MaterialExpressionShadowReplace
+    Default <- MaterialExpressionMaterialFunctionCall_3
+    Shadow <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionSkyAtmosphereLightDirection_0] MaterialExpressionSkyAtmosphereLightDirection
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+[MaterialExpressionStaticBool_2] MaterialExpressionStaticBool
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UseDirectionBlend"
+    ExpressionGUID = 90B88D344731D7764974F2930C8D9132
+    A <- MaterialExpressionMultiply_6
+    B <- MaterialExpressionScalarParameter_7
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.100000,G=0.110000,B=0.140000,A=0.100000)
+    ParameterName = "Color"
+    ExpressionGUID = 958EC65244942D66D82EB8904200E7AC
+[MaterialExpressionVertexNormalWS_0] MaterialExpressionVertexNormalWS
+[MaterialExpressionVertexNormalWS_1] MaterialExpressionVertexNormalWS
+[MaterialExpressionVertexNormalWS_2] MaterialExpressionVertexNormalWS
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

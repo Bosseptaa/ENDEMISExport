@@ -1,0 +1,46 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Materials/M_JumpFloodIteration
+# класс: Material; происхождение: проект; узлов: 7; связей: 10; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_JumpFloodIteration] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    EditorY = -4
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 0813807FA6E457E57352A2A877114D91
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 5C540E3E43A58F60A78E8592AF217763
+    EditorOnlyData <- M_JumpFloodIterationEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_JumpFloodIterationEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionScreenPosition_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Materials/MF_JumpFlood.MF_JumpFlood'"
+    FunctionOutputs(0) = (ExpressionOutputId=C08C87CD404DED7D91D147BFDB160E23,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionTextureObjectParameter_1
+    FunctionInputs(1) <- MaterialExpressionScreenPosition_1
+    FunctionInputs(2) <- MaterialExpressionScalarParameter_1
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 4.000000
+    ParameterName = "StepLength"
+    ExpressionGUID = 535D5FAB4182C7DCB66B62B5145FD12C
+[MaterialExpressionScreenPosition_1] MaterialExpressionScreenPosition
+[MaterialExpressionTextureObjectParameter_1] MaterialExpressionTextureObjectParameter
+    ParameterName = "SeedTexture"
+    ExpressionGUID = 8C14BCD445EFDB76DF1850854C281AB4
+    bCollapsed = True
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

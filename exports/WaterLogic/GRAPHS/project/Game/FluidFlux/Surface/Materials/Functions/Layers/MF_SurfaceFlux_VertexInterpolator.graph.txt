@@ -1,0 +1,185 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFlux_VertexInterpolator
+# класс: MaterialFunction; происхождение: проект; узлов: 33; связей: 75; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:313
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SurfaceFlux_VertexInterpolator] MaterialFunction
+    bExposeToLibrary = True
+    LibraryCategoriesText(0) = NSLOCTEXT("", "09C66F33451FD2B78BF4C48610FDC027", "ImaginaryBlend")
+    StateId = C89230D6470E27D75DDA39AC5FF0D091
+    CombinedInputTypes = 2048
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_6
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_SurfaceFlux_VertexInterpolatorEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SurfaceFlux_VertexInterpolatorEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_1
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_0
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_4
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_6
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_7
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_2
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_3
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_4
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_1
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_5
+    ExpressionCollection <- MaterialExpressionReroute_3
+    ExpressionCollection <- MaterialExpressionReroute_4
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionReroute_5
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_2
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_6
+    ExpressionCollection <- MaterialExpressionReroute_6
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionShaderStageSwitch_3
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionShaderStageSwitch_6
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "SurfaceLayerVS"
+    Id = 5AD7648E4FC2359F7C90CF86D09A493A
+    InputType = FunctionInput_MaterialAttributes
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "SurfaceLayerPS"
+    bLastPreviewed = True
+    Id = BA08A2E04BA053CB99A033B45DCCE791
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_6
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFluxGet.MF_SurfaceFluxGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=2F5590B84443D79C5ED20CBD1986AE0F,Output=(OutputName="Normal"))
+    FunctionOutputs(1) = (ExpressionOutputId=D5D9C81149A5173C450574ACF1892A83,Output=(OutputName="Offset"))
+    FunctionOutputs(2) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Foam"))
+    FunctionOutputs(3) = (ExpressionOutputId=FC1998D248C1B4F3F737EBAF2BB809E2,Output=(OutputName="Mask"))
+    FunctionOutputs(4) = (ExpressionOutputId=C01B4B1441F01BFD0BB092845D3E4E62,Output=(OutputName="Velocity"))
+    FunctionOutputs(5) = (ExpressionOutputId=4AAF74BF4772E0CDE6587E828A6B55A1,Output=(OutputName="Divergence"))
+    FunctionOutputs(6) = (ExpressionOutputId=77C243024B2239B4AC21598697A703B8,Output=(OutputName="Color"))
+    FunctionOutputs(7) = (ExpressionOutputId=BD109C08454FEDC8A7EB33808510A655,Output=(OutputName="OffsetCorrection"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Outputs(0) = (OutputName="Normal")
+    Outputs(1) = (OutputName="Offset")
+    Outputs(2) = (OutputName="Foam")
+    Outputs(3) = (OutputName="Mask")
+    Outputs(4) = (OutputName="Velocity")
+    Outputs(5) = (OutputName="Divergence")
+    Outputs(6) = (OutputName="Color")
+    Outputs(7) = (OutputName="OffsetCorrection")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFluxSet.MF_SurfaceFluxSet'"
+    FunctionInputs(0) = (ExpressionInputId=DE39419B4858193E18F07EBD315C8BD4,Input=(OutputIndex=-1,InputName="Layer"))
+    FunctionInputs(8) = (ExpressionInputId=28C47DB54D9D1912E024EDA2802E2BB3,Input=(OutputIndex=-1,InputName="OffsetCorrection"))
+    FunctionOutputs(0) = (ExpressionOutputId=086ABEDC497396021AA5BABAAC85B487,Output=(OutputName="Layer"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Outputs(0) = (OutputName="Layer")
+    FunctionInputs(1) <- MaterialExpressionShaderStageSwitch_1
+    FunctionInputs(2) <- MaterialExpressionShaderStageSwitch_0
+    FunctionInputs(3) <- MaterialExpressionShaderStageSwitch_5
+    FunctionInputs(4) <- MaterialExpressionShaderStageSwitch_4
+    FunctionInputs(5) <- MaterialExpressionComponentMask_0
+    FunctionInputs(6) <- MaterialExpressionComponentMask_1
+    FunctionInputs(7) <- MaterialExpressionReroute_5
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionReroute_3] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionReroute_4] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionReroute_5] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionShaderStageSwitch_2
+[MaterialExpressionReroute_6] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionComponentMask_2
+[MaterialExpressionShaderStageSwitch_0] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    PixelShader <- MaterialExpressionSubtract_0
+    VertexShader <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionShaderStageSwitch_1] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    PixelShader <- MaterialExpressionVertexInterpolator_6
+    VertexShader <- MaterialExpressionReroute_2
+[MaterialExpressionShaderStageSwitch_2] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    PixelShader <- MaterialExpressionVertexInterpolator_7
+    VertexShader <- MaterialExpressionReroute_0
+[MaterialExpressionShaderStageSwitch_3] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    PixelShader <- MaterialExpressionVertexInterpolator_4
+    VertexShader <- MaterialExpressionReroute_4
+[MaterialExpressionShaderStageSwitch_4] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    PixelShader <- MaterialExpressionVertexInterpolator_0
+    VertexShader <- MaterialExpressionReroute_1
+[MaterialExpressionShaderStageSwitch_5] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    PixelShader <- MaterialExpressionVertexInterpolator_1
+    VertexShader <- MaterialExpressionReroute_3
+[MaterialExpressionShaderStageSwitch_6] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    PixelShader <- MaterialExpressionVertexInterpolator_2
+    VertexShader <- MaterialExpressionReroute_6
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    A <- MaterialExpressionWorldPosition_0
+    B <- MaterialExpressionWorldPosition_1
+[MaterialExpressionVertexInterpolator_0] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionReroute_1
+[MaterialExpressionVertexInterpolator_1] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionReroute_3
+[MaterialExpressionVertexInterpolator_2] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionReroute_6
+[MaterialExpressionVertexInterpolator_4] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionReroute_4
+[MaterialExpressionVertexInterpolator_6] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionReroute_2
+[MaterialExpressionVertexInterpolator_7] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+    Input <- MaterialExpressionReroute_0
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    WorldPositionShaderOffset = WPT_ExcludeAllShaderOffsets
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_VertexInterpolator'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

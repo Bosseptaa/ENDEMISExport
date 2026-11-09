@@ -1,0 +1,358 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFHeightmapSample
+# класс: MaterialFunction; происхождение: проект; узлов: 60; связей: 130; HLSL: 1; причина: папка /Game/FluidFlux; тело:13, HLSL:1
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SDFHeightmapSample] MaterialFunction
+    StateId = CE6374974AF40E724B2847994985F29D
+    CombinedInputTypes = 4
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_1
+    EditorOnlyData <- MF_SDFHeightmapSampleEditorOnlyData
+[MF_SDFHeightmapSampleEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_2
+    ExpressionCollection <- MaterialExpressionVectorParameter_3
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionDotProduct_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionDotProduct_2
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_5
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_0
+    ExpressionCollection <- MaterialExpressionNamedRerouteDeclaration_0
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_1
+    ExpressionCollection <- MaterialExpressionCustom_5
+    ExpressionCollection <- MaterialExpressionVectorParameter_4
+    ExpressionCollection <- MaterialExpressionVectorParameter_7
+    ExpressionCollection <- MaterialExpressionVectorParameter_11
+    ExpressionCollection <- MaterialExpressionVectorParameter_13
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionTextureProperty_0
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_2
+    ExpressionCollection <- MaterialExpressionVectorParameter_5
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_6
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionAbs_1
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_8
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMax_1
+    ExpressionCollection <- MaterialExpressionMax_2
+    ExpressionCollection <- MaterialExpressionNamedRerouteUsage_4
+    ExpressionCollection <- MaterialExpressionIf_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionVectorParameter_9
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionIf_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionDDX_0
+    ExpressionCollection <- MaterialExpressionDDY_0
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionDotProduct_3
+[MaterialExpressionAbs_1] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Input <- MaterialExpressionSubtract_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionDivide_0
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionNamedRerouteUsage_3
+    B <- MaterialExpressionDivide_1
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionDDY_0
+    B <- MaterialExpressionDDX_0
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Input <- MaterialExpressionVectorParameter_5
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionCustom_5] MaterialExpressionCustom
+    описание: DisatnceToSurface
+    OutputType = CMOT_Float1
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    bCollapsed = True
+    Inputs(0) Tex <- MaterialExpressionTextureObjectParameter_0
+    Inputs(1) TextureSize <- MaterialExpressionTextureProperty_0
+    Inputs(2) UV <- MaterialExpressionNamedRerouteUsage_2
+    Inputs(3) Front <- MaterialExpressionVectorParameter_13
+    Inputs(4) Up <- MaterialExpressionVectorParameter_11
+    Inputs(5) Right <- MaterialExpressionVectorParameter_7
+    Inputs(6) Position <- MaterialExpressionVectorParameter_4
+    Inputs(7) WorldPosition <- MaterialExpressionFunctionInput_0
+    Inputs(8) Size <- MaterialExpressionVectorParameter_6
+    Inputs(9) SampleDepth <- MaterialExpressionSubtract_3
+    Code: HLSL, 35 строк (см. HLSL/)
+[MaterialExpressionDDX_0] MaterialExpressionDDX
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Value <- MaterialExpressionTextureSampleParameter2D_0
+[MaterialExpressionDDY_0] MaterialExpressionDDY
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Value <- MaterialExpressionTextureSampleParameter2D_0
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstB = 500.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionComponentMask_0
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionNamedRerouteUsage_4
+    B <- MaterialExpressionVectorParameter_8
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionVectorParameter_2
+[MaterialExpressionDotProduct_1] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionVectorParameter_1
+[MaterialExpressionDotProduct_2] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionReroute_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionDotProduct_3] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionAppendVector_1
+    B <- MaterialExpressionAppendVector_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = B3D683E84EB5BBF2103F75B1942A86E9
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    bCollapsed = True
+    Preview <- MaterialExpressionWorldPosition_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Distance"
+    bLastPreviewed = True
+    Id = 708295E34353B792CF1B398969D23468
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionIf_2
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Mask"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = D8B20A024F07D724667626A14B980640
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_0
+[MaterialExpressionIf_0] MaterialExpressionIf
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionMax_2
+    AGreaterThanB <- MaterialExpressionConstant_0
+    ALessThanB <- MaterialExpressionConstant_1
+[MaterialExpressionIf_1] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionTextureSampleParameter2D_0
+    B <- MaterialExpressionVectorParameter_9
+    AGreaterThanB <- MaterialExpressionConstant_2
+    ALessThanB <- MaterialExpressionConstant_3
+[MaterialExpressionIf_2] MaterialExpressionIf
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionFunctionOutput_1
+    AGreaterThanB <- MaterialExpressionCustom_5
+    ALessThanB <- MaterialExpressionMultiply_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.MakeFloat2'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionDotProduct_0
+    FunctionInputs(1) <- MaterialExpressionDotProduct_1
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFData.MF_SDFData'"
+    FunctionOutputs(0) = (ExpressionOutputId=6F5E0EB4448F770782266A8988172AD7,Output=(OutputName="Tiles"))
+    FunctionOutputs(1) = (ExpressionOutputId=0390D16C4D284B24166BC49BF95BBB21,Output=(OutputName="Range"))
+    FunctionOutputs(2) = (ExpressionOutputId=8DA658C7473DFCB681BF998FD4A42D29,Output=(OutputName="Position"))
+    FunctionOutputs(3) = (ExpressionOutputId=F0B8A022418205E347BDF4BA4286EE9F,Output=(OutputName="Size"))
+    FunctionOutputs(4) = (ExpressionOutputId=153A2CE742276E00F08456BC91616A72,Output=(OutputName="Resolution"))
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Outputs(0) = (OutputName="Tiles")
+    Outputs(1) = (OutputName="Range")
+    Outputs(2) = (OutputName="Position")
+    Outputs(3) = (OutputName="Size")
+    Outputs(4) = (OutputName="Resolution")
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    FunctionOutputs(2) = (ExpressionOutputId=17CE6E2C4E70841B48F3D1B73828AA03,Output=(OutputName="B"))
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    Outputs(2) = (OutputName="B")
+    FunctionInputs(0) <- MaterialExpressionAbs_1
+[MaterialExpressionMax_1] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMax_2] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionMax_1
+    B <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMin_0] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    B <- MaterialExpressionIf_1
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionNamedRerouteDeclaration_0] MaterialExpressionNamedRerouteDeclaration
+    Name = "ProjectionDistance"
+    NodeColor = (R=0.125000,G=1.000000,B=0.000000,A=1.000000)
+    VariableGuid = A6D37A714F9F6B73BDC39CAC2F0D4D1D
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Input <- MaterialExpressionDotProduct_2
+[MaterialExpressionNamedRerouteDeclaration_5] MaterialExpressionNamedRerouteDeclaration
+    Name = "ProjectionUV"
+    NodeColor = (R=0.125000,G=1.000000,B=0.000000,A=1.000000)
+    VariableGuid = E503A3BD456019B878CF649503D15BD7
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionNamedRerouteUsage_0] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = E503A3BD456019B878CF649503D15BD7
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_5
+[MaterialExpressionNamedRerouteUsage_1] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = A6D37A714F9F6B73BDC39CAC2F0D4D1D
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_0
+[MaterialExpressionNamedRerouteUsage_2] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = E503A3BD456019B878CF649503D15BD7
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_5
+[MaterialExpressionNamedRerouteUsage_3] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = E503A3BD456019B878CF649503D15BD7
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_5
+[MaterialExpressionNamedRerouteUsage_4] MaterialExpressionNamedRerouteUsage
+    DeclarationGuid = A6D37A714F9F6B73BDC39CAC2F0D4D1D
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Declaration <- MaterialExpressionNamedRerouteDeclaration_0
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Input <- MaterialExpressionSubtract_1
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionAppendVector_0
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionVectorParameter_3
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    A <- MaterialExpressionNamedRerouteUsage_1
+    B <- MaterialExpressionTextureSampleParameter2D_0
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "Depthmap"
+    ExpressionGUID = 849424AE485889E0A2719692F898A423
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    bCollapsed = True
+[MaterialExpressionTextureProperty_0] MaterialExpressionTextureProperty
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionTextureSampleParameter2D_0] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "DepthMap"
+    ExpressionGUID = 086519694F2712B1865D8BA35075AA9E
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineResources/Black.Black'"
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+    Coordinates <- MaterialExpressionNamedRerouteUsage_0
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "Front"
+    ExpressionGUID = 14F423F04533A0A36A1DA586C048CB06
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionVectorParameter_1] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=1.000000,A=1.000000)
+    ParameterName = "Up"
+    ExpressionGUID = 3F71CE534A2963FF0EA0EFB7F138E334
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionVectorParameter_11] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=1.000000,A=1.000000)
+    ParameterName = "Up"
+    ExpressionGUID = 52C01B1F45258C0381F30C9F72F22A4D
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionVectorParameter_13] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "Front"
+    ExpressionGUID = 1EF3D7704BA8FCA810E4B998CC2A0F86
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionVectorParameter_2] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=1.000000,B=0.000000,A=1.000000)
+    ParameterName = "Right"
+    ExpressionGUID = A0EADD814B592378BC8B85B9156712F3
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionVectorParameter_3] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "Position"
+    ExpressionGUID = 650207764873E984EE5BF3AAE2AC995D
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionVectorParameter_4] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+    ParameterName = "Position"
+    ExpressionGUID = 329A38A24ECD284F0B1B4793432ED6A1
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionVectorParameter_5] MaterialExpressionVectorParameter
+    DefaultValue = (R=500.000000,G=500.000000,B=0.000000,A=1.000000)
+    ParameterName = "Size"
+    ExpressionGUID = ACDBABDF47F90200F7851184CC05257A
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionVectorParameter_6] MaterialExpressionVectorParameter
+    DefaultValue = (R=500.000000,G=500.000000,B=0.000000,A=1.000000)
+    ParameterName = "Size"
+    ExpressionGUID = C51C1BA0494486EA6FB54893030B4673
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionVectorParameter_7] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=1.000000,B=0.000000,A=1.000000)
+    ParameterName = "Right"
+    ExpressionGUID = 6A501F534D055AFB7703C3A9D98AA652
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionVectorParameter_8] MaterialExpressionVectorParameter
+    DefaultValue = (R=500.000000,G=500.000000,B=0.000000,A=1.000000)
+    ParameterName = "Size"
+    ExpressionGUID = 2CCE2CB649074C58732621B197F16A95
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionVectorParameter_9] MaterialExpressionVectorParameter
+    DefaultValue = (R=500.000000,G=500.000000,B=0.000000,A=1.000000)
+    ParameterName = "Size"
+    ExpressionGUID = E2D0134B4D1CBBB6020B15B3CA74AC1C
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_SDFHeightmapSample'"
+
+## СВЯЗИ

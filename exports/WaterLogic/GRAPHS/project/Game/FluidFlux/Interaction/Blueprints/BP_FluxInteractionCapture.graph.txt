@@ -1,0 +1,467 @@
+﻿# /Game/FluidFlux/Interaction/Blueprints/BP_FluxInteractionCapture
+# класс: Blueprint; происхождение: проект; узлов: 113; связей: 210; HLSL: 0; причина: папка /Game/FluidFlux; тело:107
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxInteractionCapture] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    HideCategories(0) = "Input"
+    HideCategories(1) = "Rendering"
+    HideCategories(2) = "HLOD"
+    HideCategories(3) = "Replication"
+    HideCategories(4) = "LOD"
+    HideCategories(5) = "Cooking"
+    HideCategories(6) = "Collision"
+    HideCategories(7) = "Actor"
+    HideCategories(8) = "Networking"
+    HideCategories(9) = "Physics"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxInteractionCapture_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = ""
+    CategorySorting(1) = "Event Graph"
+    CategorySorting(2) = "Area"
+    CategorySorting(3) = "Materials"
+    CategorySorting(4) = "Debug"
+    CategorySorting(5) = "Components"
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Interaction/Blueprints/BP_FluxInteractionCapture.BP_FluxInteractionCapture:InitializeArea",SavedViewOffset=(X=3841.735840,Y=-229.084137),SavedZoomAmount=1.000000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Interaction/Blueprints/BP_FluxInteractionCapture.BP_FluxInteractionCapture:PreviewDebugArea",SavedViewOffset=(X=2536.996826,Y=-185.765259),SavedZoomAmount=1.000000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Interaction/Blueprints/BP_FluxInteractionCapture.BP_FluxInteractionCapture:EventGraph",SavedViewOffset=(X=-275.817657,Y=-334.789215),SavedZoomAmount=1.000000)
+    ComponentTemplateNameIndex = (("BP_FluxSolverComponent_C", 1),("BP_FluxSolverFluid_C", 1),("BP_FluxSolverRippleComponent_C", 1),("ChildActorComponent", 1))
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxInteractionCapture_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = BBFD6A0B45E63FE186B3AE9ACC022D02
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- PreviewDebugArea
+    FunctionGraphs(2) <- InitializeArea
+    ImplementedInterfaces(0) <- GetSimulationState
+    ImplementedInterfaces(0) <- GetCoastlineState
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[PreviewDebugArea] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 99EA8CCA482D51C9EAF798B797DA2DD1
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_Self_0
+    Nodes(2) <- K2Node_VariableGet_8
+    Nodes(3) <- K2Node_CallFunction_8
+    Nodes(4) <- K2Node_VariableGet_4
+    Nodes(5) <- K2Node_IfThenElse_0
+    Nodes(6) <- K2Node_CallFunction_0
+    Nodes(7) <- K2Node_VariableGet_2
+    Nodes(8) <- K2Node_VariableGet_5
+    Nodes(9) <- K2Node_VariableGet_10
+    Nodes(10) <- K2Node_CallFunction_1
+    Nodes(11) <- K2Node_VariableGet_7
+    Nodes(12) <- K2Node_CallFunction_3
+    Nodes(13) <- K2Node_DynamicCast_0
+    Nodes(14) <- K2Node_CallFunction_14
+    Nodes(15) <- K2Node_VariableGet_0
+    Nodes(16) <- K2Node_MacroInstance_0
+    Nodes(17) <- K2Node_VariableGet_6
+    Nodes(18) <- K2Node_CallFunction_4
+    Nodes(19) <- K2Node_VariableGet_11
+    Nodes(20) <- K2Node_VariableGet_12
+[K2Node_FunctionEntry_0@PreviewDebugArea] K2Node_FunctionEntry
+[K2Node_Self_0] K2Node_Self
+[K2Node_VariableGet_8@PreviewDebugArea] K2Node_VariableGet
+[K2Node_CallFunction_8@PreviewDebugArea] K2Node_CallFunction
+[K2Node_VariableGet_4@PreviewDebugArea] K2Node_VariableGet
+[K2Node_IfThenElse_0] K2Node_IfThenElse
+[K2Node_CallFunction_0@PreviewDebugArea] K2Node_CallFunction
+[K2Node_VariableGet_2@PreviewDebugArea] K2Node_VariableGet
+[K2Node_VariableGet_5@PreviewDebugArea] K2Node_VariableGet
+[K2Node_VariableGet_10@PreviewDebugArea] K2Node_VariableGet
+[K2Node_CallFunction_1] K2Node_CallFunction (вызов: SetStaticMesh @ /Script/CoreUObject.Class)
+[K2Node_VariableGet_7@PreviewDebugArea] K2Node_VariableGet
+[K2Node_CallFunction_3@PreviewDebugArea] K2Node_CallFunction
+[K2Node_DynamicCast_0] K2Node_DynamicCast
+    TargetType = "/Script/CoreUObject.Class'/Script/Engine.StaticMesh'"
+    PureState = Impure
+[K2Node_CallFunction_14] K2Node_CallFunction (вызов: InitializeArea)
+[K2Node_VariableGet_0@PreviewDebugArea] K2Node_VariableGet
+[K2Node_MacroInstance_0] K2Node_MacroInstance
+[K2Node_VariableGet_6@PreviewDebugArea] K2Node_VariableGet
+[K2Node_CallFunction_4@PreviewDebugArea] K2Node_CallFunction
+[K2Node_VariableGet_11@PreviewDebugArea] K2Node_VariableGet
+[K2Node_VariableGet_12@PreviewDebugArea] K2Node_VariableGet
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 8881130347CC85FFB7C7EE9E8888C0E4
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_1
+    Nodes(2) <- K2Node_CallFunction_3
+    Nodes(3) <- K2Node_VariableGet_4
+    Nodes(4) <- K2Node_VariableSet_1
+    Nodes(5) <- K2Node_VariableGet_11
+    Nodes(6) <- K2Node_ExecutionSequence_0
+    Nodes(7) <- K2Node_VariableGet_7
+    Nodes(8) <- K2Node_VariableSet_0
+    Nodes(9) <- K2Node_VariableGet_2
+    Nodes(10) <- K2Node_VariableGet_3
+    Nodes(11) <- K2Node_CallFunction_6
+    Nodes(12) <- K2Node_VariableGet_13
+    Nodes(13) <- K2Node_VariableSet_3
+    Nodes(14) <- K2Node_VariableGet_12
+    Nodes(15) <- K2Node_VariableGet_0
+    Nodes(16) <- K2Node_VariableSet_4
+    Nodes(17) <- K2Node_VariableGet_14
+    Nodes(18) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(19) <- K2Node_CallFunction_9
+    Nodes(20) <- K2Node_CallFunction_10
+    Nodes(21) <- K2Node_VariableGet_5
+    Nodes(22) <- K2Node_VariableSet_2
+    Nodes(23) <- K2Node_VariableGet_8
+    Nodes(24) <- K2Node_VariableGet_9
+    Nodes(25) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(26) <- K2Node_VariableGet_6
+    Nodes(27) <- K2Node_VariableSet_5
+    Nodes(28) <- K2Node_VariableGet_10
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_VariableGet_1] K2Node_VariableGet (переменная: AreaSize)
+[K2Node_CallFunction_3@UserConstructionScript] K2Node_CallFunction
+[K2Node_VariableGet_4@UserConstructionScript] K2Node_VariableGet (переменная: Scene)
+[K2Node_VariableSet_1] K2Node_VariableSet (переменная: Solver)
+[K2Node_VariableGet_11@UserConstructionScript] K2Node_VariableGet (переменная: Ripple)
+[K2Node_ExecutionSequence_0] K2Node_ExecutionSequence
+[K2Node_VariableGet_7@UserConstructionScript] K2Node_VariableGet
+[K2Node_VariableSet_0] K2Node_VariableSet (переменная: AreaSize)
+[K2Node_VariableGet_2@UserConstructionScript] K2Node_VariableGet
+[K2Node_VariableGet_3] K2Node_VariableGet (переменная: WorldPixelSize)
+    ErrorType = 1
+[K2Node_CallFunction_6] K2Node_CallFunction (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 100.000000
+[K2Node_VariableGet_13@UserConstructionScript] K2Node_VariableGet
+[K2Node_VariableSet_3] K2Node_VariableSet (переменная: WorldPixelSize @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_12@UserConstructionScript] K2Node_VariableGet (переменная: WorldPixelSize)
+    SelfContextInfo = NotSelfContext
+    ErrorType = 1
+[K2Node_VariableGet_0@UserConstructionScript] K2Node_VariableGet
+[K2Node_VariableSet_4] K2Node_VariableSet (переменная: SimulationResolution @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_14@UserConstructionScript] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_0@UserConstructionScript] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_9@UserConstructionScript] K2Node_CallFunction
+[K2Node_CallFunction_10@UserConstructionScript] K2Node_CallFunction
+[K2Node_VariableGet_5@UserConstructionScript] K2Node_VariableGet (переменная: Ripple)
+[K2Node_VariableSet_2] K2Node_VariableSet (переменная: WorldAreaSize @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_8@UserConstructionScript] K2Node_VariableGet
+[K2Node_VariableGet_9] K2Node_VariableGet (переменная: WorldPixelSize)
+    ErrorType = 1
+[K2Node_CommutativeAssociativeBinaryOperator_1] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_6@UserConstructionScript] K2Node_VariableGet
+[K2Node_VariableSet_5] K2Node_VariableSet (переменная: Debug @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_10@UserConstructionScript] K2Node_VariableGet
+[GetSimulationState] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 593FA9C344D9A07EC7267295A2CF9B6D
+    InterfaceGuid = 3AC6347E4662646A7D6E4792E8B556BB
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionResult_0@GetSimulationState] K2Node_FunctionResult
+[K2Node_FunctionEntry_0@GetSimulationState] K2Node_FunctionEntry
+[InitializeArea] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 7F49C687416D15E57B36F3A32D6B5E21
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_4
+    Nodes(2) <- K2Node_VariableGet_0
+    Nodes(3) <- K2Node_CallFunction_9
+    Nodes(4) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(5) <- K2Node_VariableGet_10
+    Nodes(6) <- K2Node_CallFunction_13
+    Nodes(7) <- K2Node_CallFunction_0
+    Nodes(8) <- K2Node_CallFunction_3
+    Nodes(9) <- K2Node_VariableGet_8
+    Nodes(10) <- K2Node_CallFunction_7
+    Nodes(11) <- K2Node_Knot_0
+[K2Node_FunctionEntry_0@InitializeArea] K2Node_FunctionEntry
+[K2Node_CallFunction_4@InitializeArea] K2Node_CallFunction (вызов: SetInteractionsArea)
+    вход ElementIndex = 0
+[K2Node_VariableGet_0@InitializeArea] K2Node_VariableGet
+[K2Node_CallFunction_9@InitializeArea] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_0@InitializeArea] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 0.500000
+[K2Node_VariableGet_10@InitializeArea] K2Node_VariableGet
+[K2Node_CallFunction_13@InitializeArea] K2Node_CallFunction
+[K2Node_CallFunction_0@InitializeArea] K2Node_CallFunction
+[K2Node_CallFunction_3@InitializeArea] K2Node_CallFunction (вызов: Subtract_VectorFloat @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход NewScale3D = 0, 0, 0
+[K2Node_VariableGet_8@InitializeArea] K2Node_VariableGet (переменная: AreaResolution)
+[K2Node_CallFunction_7] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_Knot_0] K2Node_Knot
+[GetCoastlineState] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = B7FB6B114F0E3C3D0CF9C28A9E60DFB8
+    InterfaceGuid = FDA00DEA48E45D0F4B09FB85340CE800
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionResult_0@GetCoastlineState] K2Node_FunctionResult (вызов: GetCoastlineState @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_FunctionEntry_0@GetCoastlineState] K2Node_FunctionEntry
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = FB5254D843D2162D97CEEBA69420E146
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_ComponentBoundEvent_1
+    Nodes(2) <- K2Node_ComponentBoundEvent_2
+    Nodes(3) <- EdGraphNode_Comment_0
+    Nodes(4) <- K2Node_Event_2
+    Nodes(5) <- K2Node_CallFunction_5
+    Nodes(6) <- K2Node_Event_3
+    Nodes(7) <- K2Node_CallFunction_162
+    Nodes(8) <- K2Node_CallFunction_15
+    Nodes(9) <- K2Node_VariableGet_10
+    Nodes(10) <- EdGraphNode_Comment_1
+    Nodes(11) <- K2Node_CallFunction_10
+    Nodes(12) <- K2Node_CallFunction_8
+    Nodes(13) <- K2Node_CallFunction_13
+    Nodes(14) <- K2Node_VariableGet_0
+    Nodes(15) <- K2Node_VariableGet_2
+    Nodes(16) <- K2Node_VariableGet_13
+    Nodes(17) <- K2Node_VariableGet_14
+    Nodes(18) <- K2Node_VariableGet_6
+    Nodes(19) <- K2Node_VariableGet_7
+[K2Node_Event_0] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    bCommentBubblePinned = True
+[K2Node_ComponentBoundEvent_1] K2Node_ComponentBoundEvent (событие: ComponentBeginOverlapSignature__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnComponentBeginOverlap"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/Engine.PrimitiveComponent'"
+    ComponentPropertyName = "Area"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature"
+[K2Node_ComponentBoundEvent_2] K2Node_ComponentBoundEvent (событие: ComponentEndOverlapSignature__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnComponentEndOverlap"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/Engine.PrimitiveComponent'"
+    ComponentPropertyName = "Area"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature"
+[EdGraphNode_Comment_0] EdGraphNode_Comment
+    CommentColor = (R=0.086464,G=0.263399,B=0.284375,A=0.300000)
+    NodeWidth = 784
+    NodeHeight = 560
+    NodeComment = "Actors that supports interface will be added as interaction"
+[K2Node_Event_2] K2Node_Event (событие: SetInteractionsArea @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_CallFunction_5] K2Node_CallFunction (вызов: SetVectorParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = WorldToInteractionUV
+[K2Node_Event_3] K2Node_Event (событие: SetInteractionsTexture @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_CallFunction_162] K2Node_CallFunction (вызов: SetTextureParameterValue @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    вход ParameterName = InteractionNormalHeight
+[K2Node_CallFunction_15] K2Node_CallFunction (вызов: SetMaterial @ /Script/CoreUObject.Class)
+    вход ElementIndex = 0
+[K2Node_VariableGet_10@EventGraph] K2Node_VariableGet (переменная: Preview)
+[EdGraphNode_Comment_1] EdGraphNode_Comment
+    CommentColor = (R=1.000000,G=0.477124,B=0.431312,A=0.500000)
+    NodeWidth = 1312
+    NodeHeight = 528
+    NodeComment = "Render debug preview"
+[K2Node_CallFunction_10@EventGraph] K2Node_CallFunction (вызов: PreviewDebugArea)
+[K2Node_CallFunction_8@EventGraph] K2Node_CallFunction (вызов: AddOverlapping @ /Script/Engine.BlueprintGeneratedClass)
+    вход bPropagateToChildren = false
+[K2Node_CallFunction_13@EventGraph] K2Node_CallFunction (вызов: RemoveOverlapping @ /Script/Engine.BlueprintGeneratedClass)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_0@EventGraph] K2Node_VariableGet (переменная: Solver)
+[K2Node_VariableGet_2@EventGraph] K2Node_VariableGet (переменная: Solver)
+[K2Node_VariableGet_13@EventGraph] K2Node_VariableGet (переменная: Ripple)
+[K2Node_VariableGet_14@EventGraph] K2Node_VariableGet (переменная: DebugInstance @ /Script/Engine.BlueprintGeneratedClass)
+    CurrentVariation = ValidatedObject
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_6@EventGraph] K2Node_VariableGet (переменная: Ripple)
+[K2Node_VariableGet_7@EventGraph] K2Node_VariableGet (переменная: DebugInstance @ /Script/Engine.BlueprintGeneratedClass)
+    CurrentVariation = ValidatedObject
+    SelfContextInfo = NotSelfContext
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[SetInteractionsTexture] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 700920294DEDEFDE960DED99D428220F
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@SetInteractionsTexture] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@SetInteractionsTexture] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@SetInteractionsTexture] K2Node_CallFunction
+[SetInteractionsArea] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = DB2BBCFF4953BC27C7DCDCB58B5A655C
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@SetInteractionsArea] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@SetInteractionsArea] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@SetInteractionsArea] K2Node_CallFunction
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = EFDFAE8D4A3440DE07235299C4DD8A23
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction
+[BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E2294005464CA06671AD3EA1E622454E
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature] K2Node_CallFunction
+[BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A85D1229411548ED0F80AF8AB3F0AFB4
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature] K2Node_FunctionEntry (вызов: ComponentBeginOverlapSignature__DelegateSignature @ /Script/CoreUObject.Package)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "SetInteractionsTexture"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "SetInteractionsArea"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveBeginPlay"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature"
+    bIsIntermediateNode = True
+[K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_FluxInteractionCapture)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].ReturnValue -> [K2Node_CallFunction_3@InitializeArea].A
+[K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then -> [K2Node_CallFunction_14].execute
+[K2Node_CallFunction_1].then -> [K2Node_CallFunction_4@InitializeArea].execute
+[K2Node_CallFunction_13@EventGraph].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_0@InitializeArea].A
+[K2Node_CallFunction_13@EventGraph].ReturnValue -> [K2Node_Knot_0].InputPin
+[K2Node_CallFunction_15].then -> [K2Node_CallFunction_162].execute
+[K2Node_CallFunction_3@InitializeArea].ReturnValue -> [K2Node_DynamicCast_0].Object
+[K2Node_CallFunction_3@InitializeArea].ReturnValue_X -> [K2Node_CallFunction_4@InitializeArea].Area_R
+[K2Node_CallFunction_3@InitializeArea].ReturnValue_Y -> [K2Node_CallFunction_4@InitializeArea].Area_G
+[K2Node_CallFunction_3@InitializeArea].then -> [K2Node_DynamicCast_0].execute
+[K2Node_CallFunction_4@InitializeArea].then -> [K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].execute
+[K2Node_CallFunction_6].ReturnValue -> [K2Node_CallFunction_3@InitializeArea].NewScale3D_X
+[K2Node_CallFunction_6].ReturnValue -> [K2Node_CallFunction_3@InitializeArea].NewScale3D_Y
+[K2Node_CallFunction_7].ReturnValue -> [K2Node_CallFunction_4@InitializeArea].Area_A
+[K2Node_CallFunction_8@EventGraph].then -> [K2Node_IfThenElse_0].execute
+[K2Node_CallFunction_9@InitializeArea].ReturnValue -> [K2Node_VariableSet_0].AreaSize
+[K2Node_CallFunction_9@InitializeArea].ReturnValue#2 -> [K2Node_CallFunction_13@EventGraph].B
+[K2Node_CommutativeAssociativeBinaryOperator_0@InitializeArea].ReturnValue -> [K2Node_CallFunction_3@InitializeArea].B
+[K2Node_CommutativeAssociativeBinaryOperator_1].ReturnValue -> [K2Node_CallFunction_9@InitializeArea].InInt
+[K2Node_CommutativeAssociativeBinaryOperator_1].ReturnValue -> [K2Node_VariableSet_2].WorldAreaSize
+[K2Node_ComponentBoundEvent_1].OtherActor -> [K2Node_CallFunction_8@EventGraph].OverlapingActor
+[K2Node_ComponentBoundEvent_1].then -> [K2Node_CallFunction_8@EventGraph].execute#2
+[K2Node_ComponentBoundEvent_2].OtherActor -> [K2Node_CallFunction_13@EventGraph].OverlapingActor
+[K2Node_ComponentBoundEvent_2].then -> [K2Node_CallFunction_13@EventGraph].execute
+[K2Node_DynamicCast_0].AsStatic Mesh -> [K2Node_CallFunction_1].NewMesh
+[K2Node_DynamicCast_0].then -> [K2Node_CallFunction_1].execute
+[K2Node_Event_0].then -> [K2Node_CallFunction_10@EventGraph].execute
+[K2Node_Event_2].Area -> [K2Node_CallFunction_5].Value
+[K2Node_Event_2].then -> [K2Node_VariableGet_14@EventGraph].execute
+[K2Node_Event_3].Texture -> [K2Node_CallFunction_162].Value
+[K2Node_Event_3].then -> [K2Node_VariableGet_7@EventGraph].execute
+[K2Node_ExecutionSequence_0].then_0 -> [K2Node_VariableSet_1].execute
+[K2Node_ExecutionSequence_0].then_1 -> [K2Node_VariableSet_3].execute
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].Area -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_Event_Area
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].OtherActor -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_ComponentBoundEvent_OtherActor
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].OtherActor#2 -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_ComponentBoundEvent_OtherActor_1
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].OtherBodyIndex -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_ComponentBoundEvent_OtherBodyIndex
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].OtherBodyIndex#2 -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_ComponentBoundEvent_OtherBodyIndex_1
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].OtherComp -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_ComponentBoundEvent_OtherComp
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].OtherComp#2 -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_ComponentBoundEvent_OtherComp_1
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].OverlappedComponent -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_ComponentBoundEvent_OverlappedComponent
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].OverlappedComponent#2 -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_ComponentBoundEvent_OverlappedComponent_1
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].SweepResult -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_ComponentBoundEvent_SweepResult
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].Texture -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_Event_Texture
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].bFromSweep -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].K2Node_ComponentBoundEvent_bFromSweep
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then -> [K2Node_MacroInstance_0].exec
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#10 -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].execute#4
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#2 -> [K2Node_VariableSet_0].execute
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#3 -> [K2Node_FunctionResult_0@GetCoastlineState].execute
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#4 -> [K2Node_CallFunction_4@InitializeArea].execute#2
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#5 -> [K2Node_FunctionResult_0@GetCoastlineState].execute#2
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#6 -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].execute
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#7 -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].execute#2
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#8 -> [K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].execute#4
+[K2Node_FunctionEntry_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#9 -> [K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].execute#3
+[K2Node_IfThenElse_0].then -> [K2Node_CallFunction_3@InitializeArea].execute
+[K2Node_Knot_0].OutputPin -> [K2Node_CallFunction_4@InitializeArea].Area_B
+[K2Node_MacroInstance_0].Is Valid -> [K2Node_CallFunction_8@EventGraph].execute
+[K2Node_Self_0].self -> [K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].OverlapingActor
+[K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then -> [K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].execute#2
+[K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#2 -> [K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].execute#3
+[K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#3 -> [K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].execute#5
+[K2Node_SetVariableOnPersistentFrame_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].then#4 -> [K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].execute#6
+[K2Node_VariableGet_0@EventGraph].Solver -> [K2Node_CallFunction_0@BndEvt__WaterSurface_BP_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature].self
+[K2Node_VariableGet_0@EventGraph].Solver -> [K2Node_CallFunction_13@EventGraph].self
+[K2Node_VariableGet_0@EventGraph].Solver -> [K2Node_CallFunction_8@EventGraph].self#2
+[K2Node_VariableGet_1].AreaSize -> [K2Node_CallFunction_6].A
+[K2Node_VariableGet_10@EventGraph].DrawDebug -> [K2Node_VariableSet_5].Debug
+[K2Node_VariableGet_10@EventGraph].Preview -> [K2Node_CallFunction_1].self
+[K2Node_VariableGet_10@EventGraph].Preview -> [K2Node_CallFunction_4@InitializeArea].self
+[K2Node_VariableGet_10@EventGraph].Preview#2 -> [K2Node_CallFunction_15].self
+[K2Node_VariableGet_10@EventGraph].WorldPixelSize -> [K2Node_CallFunction_13@EventGraph].A
+[K2Node_VariableGet_11@UserConstructionScript].Ripple -> [K2Node_VariableGet_12@UserConstructionScript].self
+[K2Node_VariableGet_11@UserConstructionScript].Ripple#2 -> [K2Node_VariableSet_1].Solver
+[K2Node_VariableGet_11@UserConstructionScript].Ripple#2 -> [K2Node_VariableSet_2].self
+[K2Node_VariableGet_11@UserConstructionScript].Ripple#2 -> [K2Node_VariableSet_3].self
+[K2Node_VariableGet_11@UserConstructionScript].Ripple#2 -> [K2Node_VariableSet_4].self
+[K2Node_VariableGet_12@UserConstructionScript].DebugInstance -> [K2Node_CallFunction_15].Material
+[K2Node_VariableGet_12@UserConstructionScript].DebugInstance -> [K2Node_CallFunction_162].self
+[K2Node_VariableGet_12@UserConstructionScript].DebugInstance -> [K2Node_CallFunction_4@InitializeArea].Material
+[K2Node_VariableGet_12@UserConstructionScript].DebugInstance -> [K2Node_CallFunction_5].self
+[K2Node_VariableGet_12@UserConstructionScript].WorldPixelSize -> [K2Node_VariableSet_3].WorldPixelSize
+[K2Node_VariableGet_14@EventGraph].AreaResolution -> [K2Node_VariableSet_4].SimulationResolution
+[K2Node_VariableGet_14@EventGraph].then -> [K2Node_CallFunction_5].execute
+[K2Node_VariableGet_3].WorldPixelSize -> [K2Node_CommutativeAssociativeBinaryOperator_1].B
+[K2Node_VariableGet_4@UserConstructionScript].DrawDebug -> [K2Node_CallFunction_8@EventGraph].bNewVisibility
+[K2Node_VariableGet_4@UserConstructionScript].DrawDebug -> [K2Node_IfThenElse_0].Condition
+[K2Node_VariableGet_4@UserConstructionScript].Scene -> [K2Node_CallFunction_3@InitializeArea].self
+[K2Node_VariableGet_6@EventGraph].Ripple -> [K2Node_VariableSet_5].self
+[K2Node_VariableGet_7@EventGraph].AreaHeight -> [K2Node_CallFunction_3@InitializeArea].NewScale3D_Z
+[K2Node_VariableGet_7@EventGraph].DebugMesh -> [K2Node_CallFunction_3@InitializeArea].Asset
+[K2Node_VariableGet_7@EventGraph].then -> [K2Node_CallFunction_15].execute
+[K2Node_VariableGet_8@InitializeArea].AreaResolution -> [K2Node_CommutativeAssociativeBinaryOperator_1].A
+[K2Node_VariableGet_8@InitializeArea].AreaResolution#2 -> [K2Node_CallFunction_7].InInt
+[K2Node_VariableGet_8@InitializeArea].AreaResolution#2 -> [K2Node_CallFunction_9@InitializeArea].InInt#2
+[K2Node_VariableGet_8@InitializeArea].Preview -> [K2Node_CallFunction_8@EventGraph].self
+[K2Node_VariableGet_8@InitializeArea].Preview -> [K2Node_MacroInstance_0].InputObject
+[K2Node_VariableSet_0].then -> [K2Node_ExecutionSequence_0].execute
+[K2Node_VariableSet_1].then -> [K2Node_CallFunction_3@InitializeArea].execute#2
+[K2Node_VariableSet_2].then -> [K2Node_VariableSet_5].execute
+[K2Node_VariableSet_3].then -> [K2Node_VariableSet_4].execute
+[K2Node_VariableSet_4].then -> [K2Node_VariableSet_2].execute
+[K2Node_VariableSet_5].then -> [K2Node_CallFunction_10@EventGraph].execute

@@ -1,0 +1,78 @@
+﻿// Источник: /Game/FluidFlux/Tools/DistanceField/Materials/M_JumpFloodInitialize (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: uv, inTexture, TexInvR
+// Выход: CMOT_Float2
+// Описание: Old
+
+struct Functions
+{
+  float Sig(float c)
+  {
+      return (c > 0.0) ? 1.0 : 0.0;
+  }
+
+ float interp(float SC, float SL)
+ { 
+	if (SC >= 0.0 && SL < 0.0)
+	{
+		return (SC / (SC - SL));
+	} else
+	if (SC < 0.0 && SL > 0.0)
+	{
+		return -(SC / (SC - SL));
+	} else
+	{
+		return 0.0;
+	}
+ }
+};
+
+ 
+float SC = Texture2DSample(inTexture, inTextureSampler, uv * TexInvR).x;
+float SL = Texture2DSample(inTexture, inTextureSampler, (uv+float2(-1,0)) * TexInvR).x;
+float SR = Texture2DSample(inTexture, inTextureSampler, (uv+float2(1,0)) * TexInvR).x;
+float ST = Texture2DSample(inTexture, inTextureSampler, (uv+float2(0,1)) * TexInvR).x;
+float SB = Texture2DSample(inTexture, inTextureSampler, (uv+float2(0,-1)) * TexInvR).x;
+
+Functions f;
+
+float test = 1.0;
+if (SC > 0.0)
+{
+	if (SL < 0.0 || SR < 0.0 || ST < 0.0 || SB < 0.0)
+		test = 0.0;
+} else
+{
+	if (SL > 0.0 || SR > 0.0  || ST > 0.0  || SB > 0.0)
+		test = 0.0;
+}
+
+if(test < 0.5)
+{
+	float2 offset = float2(0.0, 0.0);
+	
+	offset.x -= f.interp(SC, SL);	
+ 	offset.x += f.interp(SC, SR);
+	offset.y -= f.interp(SC, SB);	
+ 	offset.y += f.interp(SC, ST);
+	
+	if	(SC > 0.0)
+	{
+		return -float2(uv + offset);	
+	}
+	else
+	{
+		return float2(uv - offset);
+	}
+	
+}	 else
+{
+	if(SC > 0.0)
+	{
+		return -float2(65535, 65535);
+	}
+	else
+	{
+ 		return float2(65535,65535);
+	}
+} 

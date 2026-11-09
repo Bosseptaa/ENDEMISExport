@@ -1,0 +1,144 @@
+﻿# /Game/FluidFlux/Demo/Mannequin/Materials/M_UE4Man_Body
+# класс: Material; происхождение: проект; узлов: 20; связей: 40; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_UE4Man_Body] Material
+    BlendMode = BLEND_Masked
+    bUsedWithSkeletalMesh = True
+    bUsedWithMeshDeformer = True
+    EditorX = 992
+    EditorY = 1440
+    bUseMaterialAttributes = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = C798D54BA68CD44B752687967F01BB86
+    ReferencedTextureGuids(0) = B2D88D4B4E5D33014FE5D293BF37A3D5
+    ReferencedTextureGuids(1) = 2F000AE9487E3F62DCE9328F4F73A009
+    ReferencedTextureGuids(2) = 0DD0D4A04F9A3880C49936AA3E47712B
+    ReferencedTextureGuids(3) = 698FAEBC42729AC5B134A0814B28AF2F
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_Mannequin_M",TextureReference="/Game/FluidFlux/Demo/Mannequin/Textures/T_Mannequin_M.T_Mannequin_M")
+    TextureStreamingData(1) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_Mannequin_N",TextureReference="/Game/FluidFlux/Demo/Mannequin/Textures/T_Mannequin_N.T_Mannequin_N")
+    TextureStreamingData(2) = (SamplingScale=8.000000,UVChannelIndex=0,TextureName="T_ML_Aluminum_01_BC",TextureReference="/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/T_ML_Aluminum_01_BC.T_ML_Aluminum_01_BC")
+    TextureStreamingData(3) = (SamplingScale=50.000000,UVChannelIndex=0,TextureName="T_ML_Rubber_Blue_01_BC",TextureReference="/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/T_ML_Rubber_Blue_01_BC.T_ML_Rubber_Blue_01_BC")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/T_ML_Rubber_Blue_01_BC.T_ML_Rubber_Blue_01_BC'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.T_ML_Rubber_Blue_01_N'"
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/T_ML_Aluminum_01_BC.T_ML_Aluminum_01_BC'"
+    ReferencedDefaultTextures(3) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/T_ML_Aluminum_01_N.T_ML_Aluminum_01_N'"
+    ReferencedDefaultTextures(4) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Mannequin/Textures/T_Mannequin_M.T_Mannequin_M'"
+    ReferencedDefaultTextures(5) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Mannequin/Textures/T_Mannequin_N.T_Mannequin_N'"
+    ReferencedDefaultTextures(6) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Mannequin/Textures/T_Logo_BC.T_Logo_BC'"
+    LightingGuid = E40031A547DE54C2AABBCD851ED71985
+    EditorOnlyData <- M_UE4Man_BodyEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_2
+[M_UE4Man_BodyEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    MaterialAttributes <- MaterialExpressionMaterialFunctionCall_10
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_10
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_8
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_9
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_13
+    ExpressionCollection <- MaterialExpressionTextureSample_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_7
+    ExpressionCollection <- MaterialExpressionVectorParameter_3
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_0
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionBreakMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMakeMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionComment_41
+    ExpressionCollection <- MaterialExpressionComment_38
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    B = (OutputIndex=3)
+    A <- MaterialExpressionBreakMaterialAttributes_0
+[MaterialExpressionBreakMaterialAttributes_0] MaterialExpressionBreakMaterialAttributes
+    MaterialAttributes <- MaterialExpressionMaterialFunctionCall_10
+[MaterialExpressionComment_38] MaterialExpressionComment
+    SizeX = 336
+    SizeY = 304
+    Text = "Material Masks packed into RGBA"
+[MaterialExpressionComment_41] MaterialExpressionComment
+    SizeX = 240
+    SizeY = 256
+    Text = "BakedNormalMap"
+[MaterialExpressionMakeMaterialAttributes_0] MaterialExpressionMakeMaterialAttributes
+    Roughness = (OutputIndex=1)
+    Normal = (OutputIndex=2)
+    BaseColor <- MaterialExpressionAdd_0
+    Metallic <- MaterialExpressionBreakMaterialAttributes_0
+    Specular <- MaterialExpressionBreakMaterialAttributes_0
+[MaterialExpressionMaterialFunctionCall_10] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/MaterialLayerFunctions/MatLayerBlend_NormalBlend.MatLayerBlend_NormalBlend'"
+    FunctionInputs(0) = (ExpressionInputId=4A443650447167CD06ACBB9A9BC19FB1,Input=(OutputIndex=-1,InputName="NormalMask"))
+    FunctionOutputs(0) = (ExpressionOutputId=2B75887C4FC1F11625A6F7A1F0176058,Output=(OutputName="Blended Material"))
+    Outputs(0) = (OutputName="Blended Material")
+    FunctionInputs(1) <- MaterialExpressionStaticSwitchParameter_0
+    FunctionInputs(2) <- MaterialExpressionTextureSampleParameter2D_0
+[MaterialExpressionMaterialFunctionCall_13] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/ML_Plastic_Shiny_Beige.ML_Plastic_Shiny_Beige'"
+    FunctionOutputs(0) = (ExpressionOutputId=9CE3E8334E850358E85C4D8B983C5493,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionVectorParameter_3
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/MaterialLayerFunctions/MatLayerBlend_Simple.MatLayerBlend_Simple'"
+    FunctionOutputs(0) = (ExpressionOutputId=ECFE303F499D1D38BBFE47A33281F97A,Output=(OutputName="Blended Material"))
+    Outputs(0) = (OutputName="Blended Material")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_13
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_13
+    FunctionInputs(2) <- MaterialExpressionTextureSample_4
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/ML_Plastic_Shiny_Beige_LOGO.ML_Plastic_Shiny_Beige_LOGO'"
+    FunctionOutputs(0) = (ExpressionOutputId=9CE3E8334E850358E85C4D8B983C5493,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionVectorParameter_3
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/MaterialLayerFunctions/MatLayerBlend_Simple.MatLayerBlend_Simple'"
+    FunctionOutputs(0) = (ExpressionOutputId=ECFE303F499D1D38BBFE47A33281F97A,Output=(OutputName="Blended Material"))
+    Outputs(0) = (OutputName="Blended Material")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_2
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_9
+    FunctionInputs(2) <- MaterialExpressionTextureSample_4
+[MaterialExpressionMaterialFunctionCall_7] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/MaterialLayerFunctions/MatLayerBlend_Simple.MatLayerBlend_Simple'"
+    FunctionOutputs(0) = (ExpressionOutputId=ECFE303F499D1D38BBFE47A33281F97A,Output=(OutputName="Blended Material"))
+    Outputs(0) = (OutputName="Blended Material")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_6
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_8
+    FunctionInputs(2) <- MaterialExpressionTextureSample_4
+[MaterialExpressionMaterialFunctionCall_8] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4.ML_GlossyBlack_Latex_UE4'"
+    FunctionInputs(0) = (ExpressionInputId=C53D54FC436A60C6AB1BBB890E2C1E1E,Input=(OutputIndex=-1,InputName="Tint"))
+    FunctionInputs(1) = (ExpressionInputId=043CD40542C548815A9DE1A1DD7AA65E,Input=(OutputIndex=-1,InputName="Tiling"))
+    FunctionOutputs(0) = (ExpressionOutputId=9CE3E8334E850358E85C4D8B983C5493,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+[MaterialExpressionMaterialFunctionCall_9] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/ML_SoftMetal_UE4.ML_SoftMetal_UE4'"
+    FunctionInputs(0) = (ExpressionInputId=5E69605741068188FF56ED9EABA348C2,Input=(OutputIndex=-1,InputName="Tint"))
+    FunctionInputs(1) = (ExpressionInputId=ED8D11EB4B201740D41A3AA9C0B0C55D,Input=(OutputIndex=-1,InputName="Tiling"))
+    FunctionOutputs(0) = (ExpressionOutputId=9CE3E8334E850358E85C4D8B983C5493,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    ParameterName = "PlasticOverride"
+    ExpressionGUID = 3D562F7549EADF69F95509915A4BDF25
+    A <- MaterialExpressionMaterialFunctionCall_3
+    B <- MaterialExpressionMaterialFunctionCall_7
+[MaterialExpressionTextureSample_4] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Mannequin/Textures/T_Mannequin_M.T_Mannequin_M'"
+    SamplerType = SAMPLERTYPE_LinearColor
+[MaterialExpressionTextureSampleParameter2D_0] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "NormalMap"
+    ExpressionGUID = 347A778B4FE646AE0492CDA239ED79BA
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Mannequin/Textures/T_Mannequin_N.T_Mannequin_N'"
+    SamplerType = SAMPLERTYPE_Normal
+[MaterialExpressionVectorParameter_3] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.450980,G=0.403922,B=0.360784,A=0.000000)
+    ParameterName = "BodyColor"
+    ExpressionGUID = 154012E5462B7CF9A1AA3C860AD69E31
+[SceneThumbnailInfoWithPrimitive_2] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

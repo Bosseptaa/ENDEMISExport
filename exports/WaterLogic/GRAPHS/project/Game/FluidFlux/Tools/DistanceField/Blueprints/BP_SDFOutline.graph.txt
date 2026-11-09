@@ -1,0 +1,597 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFOutline
+# класс: Blueprint; происхождение: проект; узлов: 141; связей: 259; HLSL: 0; причина: папка /Game/FluidFlux; тело:9
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_SDFOutline] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    HideCategories(0) = "Input"
+    HideCategories(1) = "Rendering"
+    HideCategories(2) = "Actor"
+    HideCategories(3) = "HLOD"
+    HideCategories(4) = "Replication"
+    HideCategories(5) = "LOD"
+    HideCategories(6) = "Collision"
+    HideCategories(7) = "Actor"
+    HideCategories(8) = "Loading"
+    HideCategories(9) = "Networking"
+    HideCategories(10) = "Physics"
+    HideCategories(11) = "Deprecated"
+    HideCategories(12) = "Level Streaming"
+    HideCategories(13) = "Level Instance"
+    HideCategories(14) = "Cooking"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_SDFOutline_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    CategorySorting(3) = "Materials"
+    CategorySorting(4) = "Initialize"
+    CategorySorting(5) = "Capture"
+    CategorySorting(6) = "Debug"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFOutline.BP_SDFOutline:InitializeAll",SavedViewOffset=(X=341.339172,Y=-429.086884),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFOutline.BP_SDFOutline:EventGraph",SavedViewOffset=(X=-855.807495,Y=-536.573303),SavedZoomAmount=0.500000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFOutline.BP_SDFOutline:InitializeDebug",SavedViewOffset=(X=-1044.057129,Y=-293.966888),SavedZoomAmount=1.000000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFOutline.BP_SDFOutline:InitializeRenderTargets",SavedViewOffset=(X=-1864.640991,Y=-1785.605957),SavedZoomAmount=1.000000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFOutline.BP_SDFOutline:Repaint",SavedViewOffset=(X=-2158.738281,Y=-420.875580),SavedZoomAmount=0.750000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFOutline.BP_SDFOutline:InitializeSceneCapture",SavedViewOffset=(X=-1378.367554,Y=-1529.656006),SavedZoomAmount=0.500000)
+    LastEditedDocuments(6) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFOutline.BP_SDFOutline:InitializeDataAsset",SavedViewOffset=(X=-4541.051270,Y=-1274.218262),SavedZoomAmount=0.500000)
+    LastEditedDocuments(7) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFOutline.BP_SDFOutline:GenerateDistanceFields",SavedViewOffset=(X=-237.614349,Y=-271.919312),SavedZoomAmount=0.875000)
+    LastEditedDocuments(8) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFOutline.BP_SDFOutline:UserConstructionScript",SavedViewOffset=(X=-4158.754883,Y=-333.840240),SavedZoomAmount=1.000000)
+    ComponentTemplateNameIndex = (("StaticMeshComponent", 1))
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_SDFOutline_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 4B7232DF459FD50620D6D4B855A8B5EA
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- Repaint
+    FunctionGraphs(2) <- InitializeAll
+    FunctionGraphs(3) <- InitializeRenderTargets
+    FunctionGraphs(4) <- InitializeSceneCapture
+    FunctionGraphs(5) <- InitializeDebug
+    FunctionGraphs(6) <- InitializeDataAsset
+    FunctionGraphs(7) <- GenerateDistanceFields
+    ImplementedInterfaces(0) <- GetSourceType
+    ImplementedInterfaces(0) <- GetShapes
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[InitializeDebug] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = FDED508147BEF09A59629A935303BC1F
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_1
+    Nodes(2) <- K2Node_VariableSet_0
+    Nodes(3) <- K2Node_VariableGet_2
+    Nodes(4) <- K2Node_PromotableOperator_0
+    Nodes(5) <- K2Node_VariableGet_8
+    Nodes(6) <- K2Node_CallFunction_4
+    Nodes(7) <- K2Node_VariableGet_10
+    Nodes(8) <- K2Node_MakeArray_0
+    Nodes(9) <- K2Node_CallFunction_5
+    Nodes(10) <- K2Node_VariableGet_3
+    Nodes(11) <- K2Node_CallFunction_1
+    Nodes(12) <- K2Node_VariableGet_5
+    Nodes(13) <- K2Node_VariableGet_4
+    Nodes(14) <- K2Node_CallFunction_2
+[K2Node_FunctionEntry_0@InitializeDebug] K2Node_FunctionEntry
+[K2Node_VariableGet_1@InitializeDebug] K2Node_VariableGet
+[K2Node_VariableSet_0@InitializeDebug] K2Node_VariableSet
+[K2Node_VariableGet_2@InitializeDebug] K2Node_VariableGet
+[K2Node_PromotableOperator_0] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 0.010000
+[K2Node_VariableGet_8] K2Node_VariableGet (переменная: DistanceFieldAsset)
+[K2Node_CallFunction_4@InitializeDebug] K2Node_CallFunction
+[K2Node_VariableGet_10@InitializeDebug] K2Node_VariableGet
+[K2Node_MakeArray_0@InitializeDebug] K2Node_MakeArray
+[K2Node_CallFunction_5@InitializeDebug] K2Node_CallFunction
+[K2Node_VariableGet_3@InitializeDebug] K2Node_VariableGet
+[K2Node_CallFunction_1@InitializeDebug] K2Node_CallFunction
+[K2Node_VariableGet_5@InitializeDebug] K2Node_VariableGet
+[K2Node_VariableGet_4@InitializeDebug] K2Node_VariableGet
+[K2Node_CallFunction_2@InitializeDebug] K2Node_CallFunction
+[GetSourceType] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = C1FF03F345CB98C5A3C370AC507B6484
+    InterfaceGuid = EA59C4064309A1ABC531A58A307FB476
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionResult_0@GetSourceType] K2Node_FunctionResult
+[K2Node_FunctionEntry_0@GetSourceType] K2Node_FunctionEntry
+[GetShapes] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = ECBD384E44E081D445FAEE9FC7ED996D
+    InterfaceGuid = 92F59D3644B5AFCF3ED9098D4B91EBA2
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetShapes] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetShapes] K2Node_FunctionResult (вызов: GetShapes @ /Script/Engine.BlueprintGeneratedClass)
+    вход Type = NewEnumerator3
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 9E79FD454C9EAD747889D792B96523AA
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_CallFunction_1
+    Nodes(2) <- K2Node_Event_1
+    Nodes(3) <- K2Node_Event_2
+    Nodes(4) <- K2Node_CallFunction_3
+    Nodes(5) <- K2Node_CallFunction_4
+    Nodes(6) <- K2Node_CallFunction_6
+    Nodes(7) <- K2Node_CallFunction_7
+    Nodes(8) <- K2Node_VariableGet_1
+    Nodes(9) <- K2Node_CallFunction_5
+    Nodes(10) <- K2Node_MakeArray_0
+[K2Node_Event_0] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    bCommentBubblePinned = True
+[K2Node_CallFunction_1@EventGraph] K2Node_CallFunction
+[K2Node_Event_1] K2Node_Event (событие: PrepareMaterial @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_Event_2] K2Node_Event (событие: Capture @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_CallFunction_3@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_4@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_6@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_7] K2Node_CallFunction (вызов: Repaint)
+[K2Node_VariableGet_1@EventGraph] K2Node_VariableGet
+[K2Node_CallFunction_5@EventGraph] K2Node_CallFunction
+[K2Node_MakeArray_0@EventGraph] K2Node_MakeArray
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 984213E344B914D97441A38F46C82042
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_1
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_CallFunction_1@UserConstructionScript] K2Node_CallFunction
+[K2Node_CallFunction_0@UserConstructionScript] K2Node_CallFunction
+[Repaint] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D5AF38E24BD231A15F617C80F09DD8D7
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallMaterialParameterCollectionFunction_4
+    Nodes(2) <- K2Node_CallMaterialParameterCollectionFunction_0
+    Nodes(3) <- K2Node_ExecutionSequence_0
+    Nodes(4) <- K2Node_CallMaterialParameterCollectionFunction_5
+    Nodes(5) <- K2Node_CallMaterialParameterCollectionFunction_1
+    Nodes(6) <- K2Node_VariableGet_2
+    Nodes(7) <- K2Node_CallFunction_21
+    Nodes(8) <- K2Node_CallMaterialParameterCollectionFunction_2
+    Nodes(9) <- K2Node_CallFunction_19
+    Nodes(10) <- K2Node_CallMaterialParameterCollectionFunction_6
+    Nodes(11) <- K2Node_VariableGet_0
+    Nodes(12) <- K2Node_VariableGet_3
+    Nodes(13) <- K2Node_Message_0
+    Nodes(14) <- K2Node_MacroInstance_1
+    Nodes(15) <- K2Node_MacroInstance_2
+[K2Node_FunctionEntry_0@Repaint] K2Node_FunctionEntry
+[K2Node_CallMaterialParameterCollectionFunction_4] K2Node_CallMaterialParameterCollectionFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = CaptureHeightmap
+    вход ParameterValue = 1.000000
+[K2Node_CallMaterialParameterCollectionFunction_0] K2Node_CallMaterialParameterCollectionFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = CaptureHeightmap
+    вход ParameterValue = 0.0
+[K2Node_ExecutionSequence_0@Repaint] K2Node_ExecutionSequence
+[K2Node_CallMaterialParameterCollectionFunction_5] K2Node_CallMaterialParameterCollectionFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = CaptureDistanceField
+    вход ParameterValue = 1.000000
+[K2Node_CallMaterialParameterCollectionFunction_1] K2Node_CallMaterialParameterCollectionFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = CaptureDistanceField
+    вход ParameterValue = 0.0
+[K2Node_VariableGet_2@Repaint] K2Node_VariableGet
+[K2Node_CallFunction_21] K2Node_CallFunction (вызов: CaptureScene @ /Script/CoreUObject.Class)
+[K2Node_CallMaterialParameterCollectionFunction_2] K2Node_CallMaterialParameterCollectionFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = GenerateZ
+[K2Node_CallFunction_19@Repaint] K2Node_CallFunction
+[K2Node_CallMaterialParameterCollectionFunction_6] K2Node_CallMaterialParameterCollectionFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = DistanceRange
+[K2Node_VariableGet_0@Repaint] K2Node_VariableGet
+[K2Node_VariableGet_3@Repaint] K2Node_VariableGet
+[K2Node_Message_0@Repaint] K2Node_Message
+[K2Node_MacroInstance_1] K2Node_MacroInstance
+[K2Node_MacroInstance_2] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.Actor'",ContainerType=Array)
+[InitializeAll] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1F72C9D84B00312A026FC09B0AB7D22D
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_4
+    Nodes(2) <- K2Node_ExecutionSequence_0
+    Nodes(3) <- K2Node_CallFunction_17
+    Nodes(4) <- K2Node_CallFunction_0
+    Nodes(5) <- K2Node_CallFunction_6
+    Nodes(6) <- K2Node_CallFunction_1
+[K2Node_FunctionEntry_0@InitializeAll] K2Node_FunctionEntry
+[K2Node_CallFunction_4@InitializeAll] K2Node_CallFunction
+[K2Node_ExecutionSequence_0@InitializeAll] K2Node_ExecutionSequence
+[K2Node_CallFunction_17] K2Node_CallFunction (вызов: InitializeRenderTargets)
+[K2Node_CallFunction_0@InitializeAll] K2Node_CallFunction
+[K2Node_CallFunction_6@InitializeAll] K2Node_CallFunction (вызов: InitializeDebug)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_1@InitializeAll] K2Node_CallFunction
+[InitializeRenderTargets] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = C08B89EC4A988924678D1A8C560F7409
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_16
+    Nodes(2) <- K2Node_VariableGet_24
+    Nodes(3) <- K2Node_VariableGet_25
+    Nodes(4) <- K2Node_VariableSet_9
+    Nodes(5) <- K2Node_VariableSet_10
+    Nodes(6) <- K2Node_Select_0
+    Nodes(7) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@InitializeRenderTargets] K2Node_FunctionEntry
+[K2Node_CallFunction_16] K2Node_CallFunction (вызов: RecreateRenderTarget @ /Script/Engine.BlueprintGeneratedClass)
+    ErrorType = 1
+    вход ClearColor = (R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+    вход Lod = 0
+    вход GenerateMipmaps = false
+    вход Clear = true
+    вход AllowResize = true
+[K2Node_VariableGet_24] K2Node_VariableGet (переменная: CaptureResolution)
+    ErrorType = 1
+[K2Node_VariableGet_25] K2Node_VariableGet (переменная: SignedDistanceField)
+[K2Node_VariableSet_9] K2Node_VariableSet (переменная: SRGB @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+    вход SRGB = false
+[K2Node_VariableSet_10] K2Node_VariableSet (переменная: SignedDistanceField)
+[K2Node_Select_0] K2Node_Select
+    IndexPinType = (PinCategory="bool",PinSubCategory="")
+    вход Option 0 = RTF_R8
+    вход Option 1 = RTF_R16f
+[K2Node_VariableGet_0@InitializeRenderTargets] K2Node_VariableGet
+[InitializeSceneCapture] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 5F44BC70443CC0A31B7E93997694A7EF
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_3
+    Nodes(2) <- K2Node_VariableSet_0
+    Nodes(3) <- K2Node_VariableGet_4
+    Nodes(4) <- K2Node_VariableGet_5
+    Nodes(5) <- K2Node_CallFunction_3
+    Nodes(6) <- K2Node_VariableGet_1
+    Nodes(7) <- K2Node_CallFunction_5
+    Nodes(8) <- K2Node_VariableGet_9
+    Nodes(9) <- K2Node_VariableSet_1
+    Nodes(10) <- K2Node_VariableGet_10
+    Nodes(11) <- K2Node_VariableGet_13
+    Nodes(12) <- K2Node_VariableSet_2
+    Nodes(13) <- K2Node_VariableGet_22
+    Nodes(14) <- K2Node_VariableGet_0
+    Nodes(15) <- K2Node_CallFunction_39
+    Nodes(16) <- K2Node_VariableGet_2
+    Nodes(17) <- K2Node_ExecutionSequence_0
+    Nodes(18) <- K2Node_VariableGet_27
+    Nodes(19) <- K2Node_VariableSet_3
+    Nodes(20) <- K2Node_CallFunction_2
+    Nodes(21) <- K2Node_VariableGet_6
+    Nodes(22) <- K2Node_VariableGet_7
+    Nodes(23) <- K2Node_CallFunction_4
+    Nodes(24) <- K2Node_PromotableOperator_2
+    Nodes(25) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InitializeSceneCapture] K2Node_FunctionEntry
+[K2Node_VariableGet_3@InitializeSceneCapture] K2Node_VariableGet
+[K2Node_VariableSet_0@InitializeSceneCapture] K2Node_VariableSet
+[K2Node_VariableGet_4@InitializeSceneCapture] K2Node_VariableGet
+[K2Node_VariableGet_5@InitializeSceneCapture] K2Node_VariableGet
+[K2Node_CallFunction_3@InitializeSceneCapture] K2Node_CallFunction (вызов: K2_SetRelativeLocation @ /Script/CoreUObject.Class)
+    вход bSweep = false
+    вход bTeleport = false
+    вход bSweep = false
+    вход bTeleport = false
+[K2Node_VariableGet_1@InitializeSceneCapture] K2Node_VariableGet (переменная: AreaSize)
+[K2Node_CallFunction_5@InitializeSceneCapture] K2Node_CallFunction (вызов: MakeVector_NetQuantize @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход ElementIndex = 0
+    вход SourceMaterial = None
+    вход OptionalName = None
+    вход ID = Source
+    вход Inverse = false
+    вход X = 0.0
+    вход Y = 0.0
+[K2Node_VariableGet_9@InitializeSceneCapture] K2Node_VariableGet
+[K2Node_VariableSet_1] K2Node_VariableSet (переменная: ShowOnlyActors @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_10@InitializeSceneCapture] K2Node_VariableGet (переменная: CapturedActors)
+    ErrorType = 1
+[K2Node_VariableGet_13@InitializeSceneCapture] K2Node_VariableGet
+[K2Node_VariableSet_2] K2Node_VariableSet (переменная: TextureTarget @ /Script/CoreUObject.Class)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_22] K2Node_VariableGet (переменная: SignedDistanceField)
+[K2Node_VariableGet_0@InitializeSceneCapture] K2Node_VariableGet
+[K2Node_CallFunction_39] K2Node_CallFunction (вызов: SetRelativeScale3D @ /Script/CoreUObject.Class)
+[K2Node_VariableGet_2@InitializeSceneCapture] K2Node_VariableGet
+[K2Node_ExecutionSequence_0@InitializeSceneCapture] K2Node_ExecutionSequence
+[K2Node_VariableGet_27] K2Node_VariableGet (переменная: Bounds)
+    CurrentVariation = ValidatedObject
+[K2Node_VariableSet_3] K2Node_VariableSet (переменная: AreaSize)
+[K2Node_CallFunction_2@InitializeSceneCapture] K2Node_CallFunction
+[K2Node_VariableGet_6@InitializeSceneCapture] K2Node_VariableGet
+[K2Node_VariableGet_7] K2Node_VariableGet (переменная: WorldTexelSize)
+[K2Node_CallFunction_4@InitializeSceneCapture] K2Node_CallFunction (вызов: Conv_IntPointToVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Inverse = false
+[K2Node_PromotableOperator_2@InitializeSceneCapture] K2Node_PromotableOperator
+[K2Node_CallFunction_0@InitializeSceneCapture] K2Node_CallFunction
+[InitializeDataAsset] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A609D50342EEC49D981582BFB9107DB3
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_GenericCreateObject_0
+    Nodes(2) <- K2Node_Self_0
+    Nodes(3) <- K2Node_VariableGet_0
+    Nodes(4) <- K2Node_FunctionResult_1
+    Nodes(5) <- K2Node_VariableSet_0
+    Nodes(6) <- K2Node_VariableGet_35
+    Nodes(7) <- K2Node_CallFunction_19
+    Nodes(8) <- K2Node_VariableGet_13
+    Nodes(9) <- K2Node_ExecutionSequence_0
+    Nodes(10) <- K2Node_VariableGet_2
+    Nodes(11) <- K2Node_CallFunction_0
+    Nodes(12) <- K2Node_VariableGet_3
+    Nodes(13) <- K2Node_VariableGet_9
+    Nodes(14) <- K2Node_VariableGet_6
+    Nodes(15) <- K2Node_CallFunction_2
+    Nodes(16) <- K2Node_PromotableOperator_2
+    Nodes(17) <- K2Node_VariableGet_4
+    Nodes(18) <- K2Node_VariableGet_5
+    Nodes(19) <- K2Node_MakeStruct_0
+[K2Node_FunctionEntry_0@InitializeDataAsset] K2Node_FunctionEntry
+[K2Node_GenericCreateObject_0] K2Node_GenericCreateObject
+    ErrorType = 1
+[K2Node_Self_0@InitializeDataAsset] K2Node_Self
+[K2Node_VariableGet_0@InitializeDataAsset] K2Node_VariableGet (переменная: DistanceFieldAsset)
+    CurrentVariation = ValidatedObject
+[K2Node_FunctionResult_1] K2Node_FunctionResult (вызов: InitializeDataAsset)
+    bIsEditable = True
+[K2Node_VariableSet_0@InitializeDataAsset] K2Node_VariableSet (переменная: DistanceFieldAsset)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_35] K2Node_VariableGet (переменная: DistanceFieldAsset)
+[K2Node_CallFunction_19@InitializeDataAsset] K2Node_CallFunction (вызов: SetData @ /Script/Engine.BlueprintGeneratedClass)
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+[K2Node_VariableGet_13@InitializeDataAsset] K2Node_VariableGet (переменная: DistanceFieldAsset)
+    CurrentVariation = ValidatedObject
+[K2Node_ExecutionSequence_0@InitializeDataAsset] K2Node_ExecutionSequence
+[K2Node_VariableGet_2@InitializeDataAsset] K2Node_VariableGet (переменная: Bounds)
+[K2Node_CallFunction_0@InitializeDataAsset] K2Node_CallFunction
+[K2Node_VariableGet_3@InitializeDataAsset] K2Node_VariableGet (переменная: DistanceRange)
+    CurrentVariation = ValidatedObject
+[K2Node_VariableGet_9@InitializeDataAsset] K2Node_VariableGet (переменная: DistanceRange)
+[K2Node_VariableGet_6@InitializeDataAsset] K2Node_VariableGet (переменная: Inverse)
+    ErrorType = 1
+[K2Node_CallFunction_2@InitializeDataAsset] K2Node_CallFunction (вызов: SelectFloat @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход bPropagateToChildren = false
+    вход Z = 1.000000
+[K2Node_PromotableOperator_2@InitializeDataAsset] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = -1.000000
+[K2Node_VariableGet_4@InitializeDataAsset] K2Node_VariableGet (переменная: AreaSize)
+[K2Node_VariableGet_5@InitializeDataAsset] K2Node_VariableGet (переменная: SignedDistanceField)
+[K2Node_MakeStruct_0] K2Node_MakeStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="X",PropertyFriendlyName="X",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Y",PropertyFriendlyName="Y",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.IntPoint'"
+    вход X = 1
+    вход Y = 1
+[GenerateDistanceFields] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D145A4DD42BC911C9B7546A57CF08A50
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_33
+    Nodes(2) <- K2Node_Message_0
+    Nodes(3) <- K2Node_Self_0
+    Nodes(4) <- K2Node_IfThenElse_0
+    Nodes(5) <- K2Node_Self_1
+    Nodes(6) <- K2Node_CallFunction_1
+[K2Node_FunctionEntry_0@GenerateDistanceFields] K2Node_FunctionEntry
+[K2Node_CallFunction_33] K2Node_CallFunction (вызов: GetAllActorsWithInterface @ /Script/CoreUObject.Class)
+[K2Node_Message_0@GenerateDistanceFields] K2Node_Message (вызов: OnCapturedShapeChanged @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_Self_0@GenerateDistanceFields] K2Node_Self
+[K2Node_IfThenElse_0] K2Node_IfThenElse
+[K2Node_Self_1] K2Node_Self
+[K2Node_CallFunction_1@GenerateDistanceFields] K2Node_CallFunction (вызов: DoesImplementInterface @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[Capture] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = F129A02D42634FA4F6B5A199DED14870
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@Capture] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@Capture] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@Capture] K2Node_CallFunction
+[PrepareMaterial] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 5D99397844B0C34BC9B079B3D7F20E93
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@PrepareMaterial] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@PrepareMaterial] K2Node_CallFunction
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 6C5B5CE6493A22885755E6971776D1EA
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry (вызов: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    MetaData = (Category=INVTEXT("Initialize"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 1073741824
+    MetaData = (Category=NSLOCTEXT("UObjectCategory", "Capture", "Capture"),bCallInEditor=True)
+    LocalVariables(0) = (VarName="X",VarGuid=372A079C4A7047F78BBE55986BDBB79E,VarType=(PinCategory="int"),FriendlyName="X",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5)
+    LocalVariables(1) = (VarName="Y",VarGuid=B9D3CDD24CCB4A819E432B99C6BD14FD,VarType=(PinCategory="int"),FriendlyName="Y",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5)
+    LocalVariables(3) = (VarName="FrameIndex",VarGuid=087BEBAD4E998D0A1B88609F7AC44B73,VarType=(PinCategory="int"),FriendlyName="Frame Index",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=INVTEXT("Initialize"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "9E513829444755DB87E497BF89DA8BC9", "Initialize"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "2C7FF2384167CBB08E4FFBBC52B1C018", "Initialize"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "87C57EE44004DE9B26D4D9BA82136EAF", "Initialize"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("KismetSchema", "Default", "Default"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "Capture"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "PrepareMaterial"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveBeginPlay"
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_SDFOutline)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    вход NewRotation = 0, 0, 0
+    вход bTeleportPhysics = false
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_CallFunction_0@ReceiveBeginPlay].ReturnValue#2 -> [K2Node_CallFunction_19@InitializeDataAsset].Position
+[K2Node_CallFunction_0@ReceiveBeginPlay].then -> [K2Node_VariableSet_0@InitializeDataAsset].execute#2
+[K2Node_CallFunction_16].NewTexture -> [K2Node_VariableSet_10].SignedDistanceField
+[K2Node_CallFunction_16].NewTexture -> [K2Node_VariableSet_9].self
+[K2Node_CallFunction_16].then -> [K2Node_VariableSet_10].execute
+[K2Node_CallFunction_19@InitializeDataAsset].ReturnValue_Z -> [K2Node_CallMaterialParameterCollectionFunction_2].ParameterValue
+[K2Node_CallFunction_1@GenerateDistanceFields].ReturnValue -> [K2Node_IfThenElse_0].Condition
+[K2Node_CallFunction_1@GenerateDistanceFields].then -> [K2Node_CallFunction_2@InitializeDataAsset].execute
+[K2Node_CallFunction_2@InitializeDataAsset].ReturnValue -> [K2Node_VariableSet_3].AreaSize
+[K2Node_CallFunction_2@InitializeDataAsset].ReturnValue#2 -> [K2Node_CallFunction_19@InitializeDataAsset].DistanceRange
+[K2Node_CallFunction_2@InitializeDataAsset].then -> [K2Node_CallFunction_5@InitializeSceneCapture].execute
+[K2Node_CallFunction_33].OutActors -> [K2Node_Message_0@GenerateDistanceFields].self#2
+[K2Node_CallFunction_33].then -> [K2Node_Message_0@GenerateDistanceFields].execute#2
+[K2Node_CallFunction_3@InitializeSceneCapture].then -> [K2Node_CallFunction_7].execute
+[K2Node_CallFunction_3@InitializeSceneCapture].then#2 -> [K2Node_VariableSet_1].execute
+[K2Node_CallFunction_4@InitializeSceneCapture].ReturnValue#2 -> [K2Node_PromotableOperator_2@InitializeDataAsset].A
+[K2Node_CallFunction_4@InitializeSceneCapture].ReturnValue_X -> [K2Node_CallFunction_6@InitializeAll].X
+[K2Node_CallFunction_4@InitializeSceneCapture].ReturnValue_Y -> [K2Node_CallFunction_6@InitializeAll].Y
+[K2Node_CallFunction_5@InitializeSceneCapture].ReturnValue -> [K2Node_VariableSet_0@InitializeDataAsset].Materialinstance
+[K2Node_CallFunction_5@InitializeSceneCapture].ReturnValue#2 -> [K2Node_CallFunction_3@InitializeSceneCapture].NewLocation#2
+[K2Node_CallFunction_5@InitializeSceneCapture].then -> [K2Node_VariableSet_0@InitializeDataAsset].execute
+[K2Node_CallFunction_6@InitializeAll].ReturnValue -> [K2Node_CallFunction_3@InitializeSceneCapture].NewLocation
+[K2Node_CallMaterialParameterCollectionFunction_2].then -> [K2Node_CallFunction_21].execute
+[K2Node_CallMaterialParameterCollectionFunction_2].then -> [K2Node_CallMaterialParameterCollectionFunction_2].execute
+[K2Node_CallMaterialParameterCollectionFunction_4].then -> [K2Node_CallMaterialParameterCollectionFunction_4].execute
+[K2Node_Event_0].then -> [K2Node_CallFunction_1@GenerateDistanceFields].execute#2
+[K2Node_Event_1].Material -> [K2Node_MakeArray_0@EventGraph].[0]#2
+[K2Node_Event_1].then -> [K2Node_CallFunction_5@InitializeSceneCapture].execute#2
+[K2Node_Event_2].ZPosition -> [K2Node_CallFunction_6@InitializeAll].Z
+[K2Node_Event_2].then -> [K2Node_CallFunction_3@InitializeSceneCapture].execute
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_0 -> [K2Node_CallMaterialParameterCollectionFunction_4].execute
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_0#2 -> [K2Node_CallFunction_17].execute
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_0#3 -> [K2Node_VariableGet_27].execute
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_0#4 -> [K2Node_VariableGet_0@InitializeDataAsset].execute
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_1 -> [K2Node_MacroInstance_2].Exec
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_1#2 -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_1#3 -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute#2
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_1#4 -> [K2Node_VariableGet_13@InitializeDataAsset].execute
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_2 -> [K2Node_CallMaterialParameterCollectionFunction_2].execute
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_2#2 -> [K2Node_CallFunction_1@GenerateDistanceFields].execute#3
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_2#3 -> [K2Node_FunctionResult_1].execute
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_3 -> [K2Node_CallMaterialParameterCollectionFunction_4].execute
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_3#2 -> [K2Node_CallFunction_6@InitializeAll].execute
+[K2Node_ExecutionSequence_0@InitializeDataAsset].then_4 -> [K2Node_CallFunction_4@InitializeSceneCapture].execute#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].Material -> [K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].K2Node_Event_Material
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].ZPosition -> [K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].K2Node_Event_ZPosition
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then -> [K2Node_VariableGet_3@InitializeDataAsset].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#10 -> [K2Node_IfThenElse_0].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#11 -> [K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#12 -> [K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].execute#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#13 -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute#5
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#2 -> [K2Node_FunctionResult_0@GetShapes].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#3 -> [K2Node_FunctionResult_0@GetShapes].execute#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#4 -> [K2Node_CallFunction_1@GenerateDistanceFields].execute#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#5 -> [K2Node_ExecutionSequence_0@InitializeDataAsset].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#6 -> [K2Node_ExecutionSequence_0@InitializeDataAsset].execute#2
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#7 -> [K2Node_CallFunction_16].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#8 -> [K2Node_VariableSet_3].execute
+[K2Node_FunctionEntry_0@ReceiveBeginPlay].then#9 -> [K2Node_ExecutionSequence_0@InitializeDataAsset].execute#4
+[K2Node_GenericCreateObject_0].ReturnValue -> [K2Node_VariableSet_0@InitializeDataAsset].DistanceFieldAsset
+[K2Node_GenericCreateObject_0].then -> [K2Node_VariableSet_0@InitializeDataAsset].execute#3
+[K2Node_IfThenElse_0].then -> [K2Node_CallFunction_33].execute
+[K2Node_MacroInstance_1].Is Valid -> [K2Node_Message_0@GenerateDistanceFields].execute
+[K2Node_MacroInstance_2].Array Element -> [K2Node_MacroInstance_1].InputObject
+[K2Node_MacroInstance_2].Array Element -> [K2Node_Message_0@GenerateDistanceFields].self
+[K2Node_MacroInstance_2].LoopBody -> [K2Node_MacroInstance_1].exec
+[K2Node_MakeArray_0@EventGraph].Array -> [K2Node_CallFunction_4@InitializeSceneCapture].MaterialInstances
+[K2Node_MakeArray_0@EventGraph].Array#2 -> [K2Node_CallFunction_5@InitializeSceneCapture].MaterialInstances
+[K2Node_MakeStruct_0].IntPoint -> [K2Node_CallFunction_19@InitializeDataAsset].Tiles
+[K2Node_PromotableOperator_0].ReturnValue -> [K2Node_CallFunction_1@GenerateDistanceFields].NewScale3D
+[K2Node_PromotableOperator_2@InitializeDataAsset].ReturnValue -> [K2Node_CallFunction_2@InitializeDataAsset].A
+[K2Node_PromotableOperator_2@InitializeDataAsset].ReturnValue_X -> [K2Node_CallFunction_2@InitializeDataAsset].X
+[K2Node_PromotableOperator_2@InitializeDataAsset].ReturnValue_Y -> [K2Node_CallFunction_2@InitializeDataAsset].Y
+[K2Node_Select_0].ReturnValue -> [K2Node_CallFunction_16].Format
+[K2Node_Self_0@GenerateDistanceFields].self -> [K2Node_GenericCreateObject_0].self
+[K2Node_Self_0@GenerateDistanceFields].self#2 -> [K2Node_Message_0@GenerateDistanceFields].Source
+[K2Node_Self_1].self -> [K2Node_CallFunction_1@GenerateDistanceFields].TestObject
+[K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].then -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute#3
+[K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].then#2 -> [K2Node_CallFunction_0@ReceiveBeginPlay].execute#4
+[K2Node_VariableGet_0@InitializeDataAsset].Bounds -> [K2Node_CallFunction_39].self
+[K2Node_VariableGet_0@InitializeDataAsset].DistanceRange -> [K2Node_CallMaterialParameterCollectionFunction_2].ParameterValue
+[K2Node_VariableGet_0@InitializeDataAsset].HighPrecission -> [K2Node_Select_0].Index
+[K2Node_VariableGet_0@InitializeDataAsset].else -> [K2Node_GenericCreateObject_0].execute
+[K2Node_VariableGet_10@InitializeSceneCapture].CapturedActors -> [K2Node_VariableSet_1].ShowOnlyActors
+[K2Node_VariableGet_10@InitializeSceneCapture].Materialinstance -> [K2Node_MakeArray_0@EventGraph].[0]
+[K2Node_VariableGet_13@InitializeDataAsset].SceneCaptureComponent2D -> [K2Node_VariableSet_2].self
+[K2Node_VariableGet_13@InitializeDataAsset].then -> [K2Node_CallFunction_19@InitializeDataAsset].execute
+[K2Node_VariableGet_1@InitializeSceneCapture].AreaSize -> [K2Node_CallFunction_39].NewScale3D
+[K2Node_VariableGet_1@InitializeSceneCapture].AreaSize -> [K2Node_PromotableOperator_0].A
+[K2Node_VariableGet_1@InitializeSceneCapture].AreaSize_Z -> [K2Node_CallFunction_5@InitializeSceneCapture].Z
+[K2Node_VariableGet_1@InitializeSceneCapture].DistanceFieldAsset -> [K2Node_CallFunction_5@InitializeSceneCapture].self#2
+[K2Node_VariableGet_1@InitializeSceneCapture].ShowDebug -> [K2Node_CallFunction_2@InitializeDataAsset].bNewVisibility
+[K2Node_VariableGet_22].SignedDistanceField -> [K2Node_VariableSet_2].TextureTarget
+[K2Node_VariableGet_24].CaptureResolution_X -> [K2Node_CallFunction_16].Width
+[K2Node_VariableGet_24].CaptureResolution_Y -> [K2Node_CallFunction_16].Height
+[K2Node_VariableGet_25].SignedDistanceField -> [K2Node_CallFunction_16].CurrentTexture
+[K2Node_VariableGet_27].then -> [K2Node_CallFunction_39].execute
+[K2Node_VariableGet_2@InitializeDataAsset].Bounds -> [K2Node_CallFunction_0@ReceiveBeginPlay].self
+[K2Node_VariableGet_2@InitializeDataAsset].SceneCaptureComponent2D -> [K2Node_CallFunction_21].self
+[K2Node_VariableGet_35].DistanceFieldAsset -> [K2Node_CallFunction_19@InitializeDataAsset].self
+[K2Node_VariableGet_3@InitializeDataAsset].CapturedActors -> [K2Node_MacroInstance_2].Array
+[K2Node_VariableGet_3@InitializeDataAsset].Debug -> [K2Node_CallFunction_1@GenerateDistanceFields].self
+[K2Node_VariableGet_3@InitializeDataAsset].DistanceRange -> [K2Node_PromotableOperator_2@InitializeDataAsset].A#2
+[K2Node_VariableGet_3@InitializeDataAsset].SceneCaptureComponent2D -> [K2Node_VariableSet_0@InitializeDataAsset].self
+[K2Node_VariableGet_3@InitializeDataAsset].then -> [K2Node_CallFunction_1@GenerateDistanceFields].execute
+[K2Node_VariableGet_4@InitializeDataAsset].AreaSize#2 -> [K2Node_CallFunction_19@InitializeDataAsset].Size
+[K2Node_VariableGet_4@InitializeDataAsset].AreaSize_X -> [K2Node_VariableSet_0@InitializeDataAsset].OrthoWidth
+[K2Node_VariableGet_4@InitializeDataAsset].Debug -> [K2Node_CallFunction_2@InitializeDataAsset].self
+[K2Node_VariableGet_4@InitializeDataAsset].Debug -> [K2Node_CallFunction_5@InitializeSceneCapture].self
+[K2Node_VariableGet_5@InitializeDataAsset].SceneCaptureComponent2D -> [K2Node_CallFunction_3@InitializeSceneCapture].self
+[K2Node_VariableGet_5@InitializeDataAsset].SignedDistanceField -> [K2Node_CallFunction_19@InitializeDataAsset].Texture
+[K2Node_VariableGet_6@InitializeDataAsset].CaptureResolution -> [K2Node_CallFunction_4@InitializeSceneCapture].InIntPoint
+[K2Node_VariableGet_6@InitializeDataAsset].Inverse -> [K2Node_CallFunction_2@InitializeDataAsset].bPickA
+[K2Node_VariableGet_7].WorldTexelSize -> [K2Node_PromotableOperator_2@InitializeDataAsset].B
+[K2Node_VariableGet_8].DistanceFieldAsset -> [K2Node_CallFunction_4@InitializeSceneCapture].self
+[K2Node_VariableGet_9@InitializeDataAsset].DistanceRange -> [K2Node_CallFunction_2@InitializeDataAsset].B
+[K2Node_VariableGet_9@InitializeDataAsset].SceneCaptureComponent2D -> [K2Node_VariableSet_1].self
+[K2Node_VariableSet_0@InitializeDataAsset].then -> [K2Node_CallFunction_4@InitializeSceneCapture].execute
+[K2Node_VariableSet_0@InitializeDataAsset].then#2 -> [K2Node_CallFunction_3@InitializeSceneCapture].execute#2
+[K2Node_VariableSet_1].then -> [K2Node_VariableSet_2].execute
+[K2Node_VariableSet_10].then -> [K2Node_VariableSet_9].execute
+[K2Node_VariableSet_3].then -> [K2Node_ExecutionSequence_0@InitializeDataAsset].execute#3

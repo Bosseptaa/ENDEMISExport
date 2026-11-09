@@ -1,0 +1,200 @@
+﻿# /Game/FluidFlux/Tools/WaveProfile/Blueprints/PDA_FluxWaveProfile
+# класс: Blueprint; происхождение: проект; узлов: 47; связей: 83; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:490
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[PDA_FluxWaveProfile] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.PrimaryDataAsset'"
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = "Baked"
+    CategorySorting(1) = "Setters"
+    CategorySorting(2) = "Apply"
+    CategorySorting(3) = "Event Graph"
+    CategorySorting(4) = "Default"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Tools/WaveProfile/Blueprints/PDA_FluxWaveProfile.PDA_FluxWaveProfile:EventGraph",SavedViewOffset=(X=-624.758728,Y=-91.605774),SavedZoomAmount=1.000000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Tools/WaveProfile/Blueprints/PDA_FluxWaveProfile.PDA_FluxWaveProfile:GetExternalReferences",SavedViewOffset=(X=-648.422913,Y=-385.305786),SavedZoomAmount=1.000000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Tools/WaveProfile/Blueprints/PDA_FluxWaveProfile.PDA_FluxWaveProfile:CopyPropertiesToObject",SavedViewOffset=(X=-362.422913,Y=-346.305786),SavedZoomAmount=1.000000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Tools/WaveProfile/Blueprints/PDA_FluxWaveProfile.PDA_FluxWaveProfile:SetWaveProfileData",SavedViewOffset=(X=-92.935677,Y=-612.711731),SavedZoomAmount=0.675000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'PDA_FluxWaveProfile_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = EF84EBB04CE3A58A128B55BB386BFEB8
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- SetWaveProfileData
+    FunctionGraphs(1) <- ApplyWaveProfileMaterialData
+    FunctionGraphs(2) <- ApplyWaveProfileNiagaraData
+    ImplementedInterfaces(0) <- CopyPropertiesToObject
+    ImplementedInterfaces(0) <- GetExternalReferences
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[ApplyWaveProfileMaterialData] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = F025EA34429D8C81A40E88848C35288F
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_21
+    Nodes(2) <- K2Node_CallFunction_11
+    Nodes(3) <- K2Node_CallFunction_1
+    Nodes(4) <- K2Node_VariableGet_2
+    Nodes(5) <- K2Node_VariableGet_12
+    Nodes(6) <- K2Node_VariableGet_13
+    Nodes(7) <- K2Node_VariableGet_3
+    Nodes(8) <- K2Node_VariableGet_4
+    Nodes(9) <- K2Node_VariableGet_1
+[K2Node_FunctionEntry_0@ApplyWaveProfileMaterialData] K2Node_FunctionEntry
+[K2Node_CallFunction_21] K2Node_CallFunction (вызов: SetTextureParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = FluxWaveProfileMap
+[K2Node_CallFunction_11] K2Node_CallFunction (вызов: SetTextureParameterValue @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    вход ParameterName = FluxWaveProfileInvMap
+[K2Node_CallFunction_1] K2Node_CallFunction (вызов: SetVectorParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = FluxWaveProfileDecode
+[K2Node_VariableGet_2@ApplyWaveProfileMaterialData] K2Node_VariableGet
+[K2Node_VariableGet_12] K2Node_VariableGet (переменная: WaveProfileForwardMap)
+[K2Node_VariableGet_13] K2Node_VariableGet (переменная: WaveProfileInverseMap)
+[K2Node_VariableGet_3@ApplyWaveProfileMaterialData] K2Node_VariableGet
+[K2Node_VariableGet_4] K2Node_VariableGet (переменная: Materials)
+[K2Node_VariableGet_1@ApplyWaveProfileMaterialData] K2Node_VariableGet
+[CopyPropertiesToObject] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 36F6FDBD4EACA382549376A5CCD2741F
+    InterfaceGuid = 62EAD92F4394A85E4083FDB0A6EA2C85
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@CopyPropertiesToObject] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@CopyPropertiesToObject] K2Node_FunctionResult
+[K2Node_CallFunction_0@CopyPropertiesToObject] K2Node_CallFunction
+[GetExternalReferences] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = C0FD8E9A4CA847EC19A44D840293956B
+    InterfaceGuid = DB5612C74FD2055E36F3CBAA8B14F5D4
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_MakeArray_0
+    Nodes(3) <- K2Node_VariableGet_0
+    Nodes(4) <- K2Node_VariableGet_1
+[K2Node_FunctionEntry_0@GetExternalReferences] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetExternalReferences] K2Node_FunctionResult (вызов: GetExternalReferences @ /Script/Engine.BlueprintGeneratedClass)
+    вход Done = false
+[K2Node_MakeArray_0] K2Node_MakeArray
+    NumInputs = 2
+[K2Node_VariableGet_0@GetExternalReferences] K2Node_VariableGet
+[K2Node_VariableGet_1@GetExternalReferences] K2Node_VariableGet
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 834E1C994B4B324B64F2E88B8F6E516B
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_VariableSet_0
+    Nodes(2) <- K2Node_VariableSet_1
+[K2Node_Event_0] K2Node_Event (событие: ClearExternalReferences @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_VariableSet_0@EventGraph] K2Node_VariableSet
+[K2Node_VariableSet_1@EventGraph] K2Node_VariableSet
+[SetWaveProfileData] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 3FD042CC44438F9A7EDBF1A90435F48D
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_1
+    Nodes(2) <- K2Node_VariableSet_3
+    Nodes(3) <- K2Node_VariableSet_4
+    Nodes(4) <- K2Node_VariableSet_0
+    Nodes(5) <- K2Node_VariableSet_5
+    Nodes(6) <- K2Node_VariableSet_2
+[K2Node_FunctionEntry_0@SetWaveProfileData] K2Node_FunctionEntry
+[K2Node_VariableSet_1@SetWaveProfileData] K2Node_VariableSet (переменная: WaveProfileForwardMap)
+[K2Node_VariableSet_3] K2Node_VariableSet (переменная: WaveProfileInverseMap)
+[K2Node_VariableSet_4] K2Node_VariableSet (переменная: WaveProfileDecode)
+[K2Node_VariableSet_0@SetWaveProfileData] K2Node_VariableSet (переменная: Frames)
+[K2Node_VariableSet_5] K2Node_VariableSet (переменная: WaveHeight)
+[K2Node_VariableSet_2] K2Node_VariableSet (переменная: WaveHeight)
+[ApplyWaveProfileNiagaraData] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = B2676C9949973CB221A1CFAD8A2F9D61
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+    Nodes(2) <- K2Node_VariableGet_7
+    Nodes(3) <- K2Node_VariableGet_1
+    Nodes(4) <- K2Node_VariableGet_0
+    Nodes(5) <- K2Node_CallFunction_2
+    Nodes(6) <- K2Node_VariableGet_2
+    Nodes(7) <- K2Node_VariableGet_3
+[K2Node_FunctionEntry_0@ApplyWaveProfileNiagaraData] K2Node_FunctionEntry
+[K2Node_CallFunction_0@ApplyWaveProfileNiagaraData] K2Node_CallFunction
+[K2Node_VariableGet_7] K2Node_VariableGet (переменная: WaveProfileForwardMap)
+[K2Node_VariableGet_1@ApplyWaveProfileNiagaraData] K2Node_VariableGet (переменная: NiagaraSystem)
+[K2Node_VariableGet_0@ApplyWaveProfileNiagaraData] K2Node_VariableGet (переменная: NiagaraSystem)
+[K2Node_CallFunction_2] K2Node_CallFunction (вызов: SetVariableVec4 @ /Script/CoreUObject.Class)
+    вход InVariableName = FluxWaveProfileDecode
+[K2Node_VariableGet_2@ApplyWaveProfileNiagaraData] K2Node_VariableGet (переменная: WaveProfileDecode)
+[K2Node_VariableGet_3@ApplyWaveProfileNiagaraData] K2Node_VariableGet (переменная: WaveProfileInverseMap)
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ClearExternalReferences] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 0245C2494955B5E6AEB86CBD0FDFDCD8
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ClearExternalReferences] K2Node_FunctionEntry (вызов: ClearExternalReferences @ /Script/Engine.BlueprintGeneratedClass)
+    MetaData = (Category=NSLOCTEXT("", "36685B7846CBE92F97C33C9B2549A8FA", "Apply"))
+    ExtraFlags = 1275199488
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "2384709F4350CAFC24E90C8C24708967", "Set simulation textures"),Category=NSLOCTEXT("", "8F095DDE4CE4D8F5C13834B45208DF59", "Setters"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "36685B7846CBE92F97C33C9B2549A8FA", "Apply"))
+    ExtraFlags = 1275199488
+    bIsEditable = True
+    CustomGeneratedFunctionName = "ClearExternalReferences"
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@ClearExternalReferences] K2Node_CallFunction (вызов: ExecuteUbergraph_PDA_FluxWaveProfile)
+    AdvancedPinDisplay = Hidden
+    EnabledState = DevelopmentOnly
+    bIsIntermediateNode = True
+    вход InString = Not implemented
+    вход bPrintToScreen = true
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход OverrideName = FluxWaveProfileMap
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_CallFunction_0@ClearExternalReferences].then -> [K2Node_FunctionResult_0@GetExternalReferences].execute
+[K2Node_CallFunction_0@ClearExternalReferences].then#2 -> [K2Node_CallFunction_2].execute
+[K2Node_CallFunction_21].then -> [K2Node_CallFunction_1].execute
+[K2Node_CallFunction_21].then -> [K2Node_CallFunction_21].execute
+[K2Node_Event_0].then -> [K2Node_VariableSet_0@SetWaveProfileData].execute
+[K2Node_FunctionEntry_0@ClearExternalReferences].Frames -> [K2Node_VariableSet_0@SetWaveProfileData].Frames
+[K2Node_FunctionEntry_0@ClearExternalReferences].WaveHeight -> [K2Node_VariableSet_5].WaveHeight
+[K2Node_FunctionEntry_0@ClearExternalReferences].WaveProfileDecode -> [K2Node_VariableSet_4].WaveProfileDecode
+[K2Node_FunctionEntry_0@ClearExternalReferences].WaveProfilesForward -> [K2Node_VariableSet_1@SetWaveProfileData].WaveProfileForwardMap
+[K2Node_FunctionEntry_0@ClearExternalReferences].WaveProfilesInverse -> [K2Node_VariableSet_3].WaveProfileInverseMap
+[K2Node_FunctionEntry_0@ClearExternalReferences].WaveWidth -> [K2Node_VariableSet_5].WaveHeight
+[K2Node_FunctionEntry_0@ClearExternalReferences].then -> [K2Node_CallFunction_0@ClearExternalReferences].execute#2
+[K2Node_FunctionEntry_0@ClearExternalReferences].then -> [K2Node_CallFunction_21].execute
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#2 -> [K2Node_CallFunction_0@ClearExternalReferences].execute
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#3 -> [K2Node_FunctionResult_0@GetExternalReferences].execute#2
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#4 -> [K2Node_VariableSet_1@SetWaveProfileData].execute#2
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#5 -> [K2Node_CallFunction_0@ClearExternalReferences].execute#3
+[K2Node_MakeArray_0].Array -> [K2Node_FunctionResult_0@GetExternalReferences].Objects
+[K2Node_VariableGet_0@ApplyWaveProfileNiagaraData].WaveProfileForwardMap -> [K2Node_MakeArray_0].[0]
+[K2Node_VariableGet_12].WaveProfileForwardMap -> [K2Node_CallFunction_21].Value
+[K2Node_VariableGet_13].WaveProfileInverseMap -> [K2Node_CallFunction_21].Value
+[K2Node_VariableGet_1@ApplyWaveProfileNiagaraData].NiagaraSystem -> [K2Node_CallFunction_0@ClearExternalReferences].NiagaraSystem
+[K2Node_VariableGet_1@ApplyWaveProfileNiagaraData].NiagaraSystem -> [K2Node_CallFunction_2].self
+[K2Node_VariableGet_1@ApplyWaveProfileNiagaraData].WaveProfileInverseMap -> [K2Node_MakeArray_0].[1]
+[K2Node_VariableGet_2@ApplyWaveProfileNiagaraData].WaveProfileDecode -> [K2Node_CallFunction_1].Value
+[K2Node_VariableGet_2@ApplyWaveProfileNiagaraData].WaveProfileDecode_A -> [K2Node_CallFunction_2].InValue_W
+[K2Node_VariableGet_2@ApplyWaveProfileNiagaraData].WaveProfileDecode_B -> [K2Node_CallFunction_2].InValue_Z
+[K2Node_VariableGet_2@ApplyWaveProfileNiagaraData].WaveProfileDecode_G -> [K2Node_CallFunction_2].InValue_Y
+[K2Node_VariableGet_2@ApplyWaveProfileNiagaraData].WaveProfileDecode_R -> [K2Node_CallFunction_2].InValue_X
+[K2Node_VariableGet_3@ApplyWaveProfileNiagaraData].WaveProfileInverseMap -> [K2Node_CallFunction_0@ClearExternalReferences].Texture
+[K2Node_VariableGet_4].Materials -> [K2Node_CallFunction_1].self
+[K2Node_VariableGet_4].Materials -> [K2Node_CallFunction_21].self
+[K2Node_VariableSet_0@SetWaveProfileData].then -> [K2Node_VariableSet_1@SetWaveProfileData].execute
+[K2Node_VariableSet_0@SetWaveProfileData].then#2 -> [K2Node_VariableSet_5].execute
+[K2Node_VariableSet_1@SetWaveProfileData].then -> [K2Node_VariableSet_3].execute
+[K2Node_VariableSet_3].then -> [K2Node_VariableSet_4].execute
+[K2Node_VariableSet_4].then -> [K2Node_VariableSet_0@SetWaveProfileData].execute#2
+[K2Node_VariableSet_5].then -> [K2Node_VariableSet_5].execute

@@ -1,0 +1,234 @@
+﻿# /Game/FluidFlux/Tools/Mapping/MF_TwoplanarSideBlend
+# класс: MaterialFunction; происхождение: проект; узлов: 41; связей: 90; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_TwoplanarSideBlend] MaterialFunction
+    StateId = 0226091A4F0380E486C684A4F7A54B73
+    CombinedInputTypes = 31
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_TwoplanarSideBlendEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_TwoplanarSideBlendEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_0
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionInverseLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_2
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionTextureSample_3
+    ExpressionCollection <- MaterialExpressionComponentMask_6
+    ExpressionCollection <- MaterialExpressionTextureSample_4
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionSign_0
+    ExpressionCollection <- MaterialExpressionAppendVector_4
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionAppendVector_5
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionTextureObject_0
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    Input <- MaterialExpressionComponentMask_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionMultiply_2
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionAppendVector_4] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_3
+    B <- MaterialExpressionConstant_4
+[MaterialExpressionAppendVector_5] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionMultiply_8
+    B <- MaterialExpressionConstant_5
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    Input <- MaterialExpressionNormalize_0
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    G = True
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionComponentMask_6] MaterialExpressionComponentMask
+    R = True
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.001000
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    R = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionInverseLinearInterpolate_0
+    B <- MaterialExpressionAdd_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Texture"
+    Id = 7AB63E3B4DB63C5E529FCA9DC2736958
+    InputType = FunctionInput_Texture2D
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureObject_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "WordUV"
+    Id = E5ECC01042176C103D5D33AC087CA031
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMultiply_1
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "WorldNormal"
+    Id = DD6C18E64E3C2F595C3053B7E2BAE6E8
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    bCollapsed = True
+    Preview <- MaterialExpressionPixelNormalWS_0
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Smoothness"
+    Id = A4FB4D0447A637F2B4F6D3933531286D
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Sample"
+    bLastPreviewed = True
+    Id = B71057B6405EF9349887DE8E83750077
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_3
+[MaterialExpressionInverseLinearInterpolate_0] MaterialExpressionInverseLinearInterpolate
+    ConstB = 0.000000
+    bClampResult = True
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionFunctionInput_3
+    Value <- MaterialExpressionSubtract_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionAbs_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionInverseLinearInterpolate_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionDivide_1
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionSign_0
+[MaterialExpressionMax_0] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionWorldPosition_2
+    B <- MaterialExpressionConstant_2
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionTextureSample_3
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionTextureSample_4
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionAppendVector_4
+    B <- MaterialExpressionComponentMask_6
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionAppendVector_5
+    B <- MaterialExpressionComponentMask_5
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    VectorInput <- MaterialExpressionFunctionInput_2
+[MaterialExpressionPixelNormalWS_0] MaterialExpressionPixelNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+[MaterialExpressionSign_0] MaterialExpressionSign
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    Input <- MaterialExpressionComponentMask_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    A <- MaterialExpressionMax_0
+    B <- MaterialExpressionAbs_0
+[MaterialExpressionTextureObject_0] MaterialExpressionTextureObject
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    bCollapsed = True
+[MaterialExpressionTextureSample_3] MaterialExpressionTextureSample
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    Coordinates <- MaterialExpressionMultiply_7
+    TextureObject <- MaterialExpressionFunctionInput_0
+[MaterialExpressionTextureSample_4] MaterialExpressionTextureSample
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+    Coordinates <- MaterialExpressionMultiply_6
+    TextureObject <- MaterialExpressionFunctionInput_0
+[MaterialExpressionWorldPosition_2] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_TwoplanarSideBlend'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

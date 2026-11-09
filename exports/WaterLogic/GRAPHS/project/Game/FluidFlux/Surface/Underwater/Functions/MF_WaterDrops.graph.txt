@@ -1,0 +1,279 @@
+﻿# /Game/FluidFlux/Surface/Underwater/Functions/MF_WaterDrops
+# класс: MaterialFunction; происхождение: проект; узлов: 49; связей: 100; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:540
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_WaterDrops] MaterialFunction
+    StateId = EB44864F42056CEDDB8BEDAB8DCF3A29
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_2
+    EditorOnlyData <- MF_WaterDropsEditorOnlyData
+[MF_WaterDropsEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_2
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionAdd_7
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionConstant2Vector_1
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionScalarParameter_6
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionAdd_5
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionTime_2
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_7
+    ExpressionCollection <- MaterialExpressionScalarParameter_8
+    ExpressionCollection <- MaterialExpressionTextureSample_3
+    ExpressionCollection <- MaterialExpressionTextureSample_4
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionMultiply_13
+    ExpressionCollection <- MaterialExpressionAdd_6
+    ExpressionCollection <- MaterialExpressionMultiply_14
+    ExpressionCollection <- MaterialExpressionComponentMask_4
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_4
+    ExpressionCollection <- MaterialExpressionSaturate_4
+    ExpressionCollection <- MaterialExpressionMultiply_16
+    ExpressionCollection <- MaterialExpressionAdd_8
+    ExpressionCollection <- MaterialExpressionMultiply_18
+    ExpressionCollection <- MaterialExpressionMultiply_19
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionFunctionInput_1
+[MaterialExpressionAdd_5] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionMultiply_6
+    B <- MaterialExpressionMultiply_8
+[MaterialExpressionAdd_6] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionMultiply_10
+    B <- MaterialExpressionMultiply_13
+[MaterialExpressionAdd_7] MaterialExpressionAdd
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionAdd_8] MaterialExpressionAdd
+    ConstB = 2.500000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionMultiply_16
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionConstant2Vector_0
+    B <- MaterialExpressionScalarParameter_7
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionConstant2Vector_1
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionComponentMask_4] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    Input <- MaterialExpressionVertexNormalWS_4
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+[MaterialExpressionConstant2Vector_1] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WetnessHeight"
+    Id = 45FBB57B4DAABE9BF4DA46862E488894
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "SurfaceDistance"
+    Id = F2751C144F38E184C3262C8343254D03
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "NormalChange"
+    SortPriority = -2
+    bLastPreviewed = True
+    Id = 1737EACB4048273B3EC9068B771498EB
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    bCollapsed = True
+    A <- MaterialExpressionAppendVector_1
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "RefractionnChange"
+    bLastPreviewed = True
+    Id = 3095D48348265C15D2DEF2831B1AC89D
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_2
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/Mapping/MF_BiplanarTopUV.MF_BiplanarTopUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=0AA227204053027E2048B9B17DE29614,Output=(OutputName="UV"))
+    FunctionOutputs(1) = (ExpressionOutputId=649CE2F0495FE39D081744A2796D5B7E,Output=(OutputName="DDX"))
+    FunctionOutputs(2) = (ExpressionOutputId=3D0001EB40F41F2A9E83C6886CB97AB4,Output=(OutputName="DDY"))
+    FunctionOutputs(3) = (ExpressionOutputId=EB29B043463698B29765C5921B334900,Output=(OutputName="UV_1"))
+    FunctionOutputs(4) = (ExpressionOutputId=549B9AE749D9689D04D75E99A19D8FB9,Output=(OutputName="UV_2"))
+    FunctionOutputs(5) = (ExpressionOutputId=81777A0240E1A3FEB1D45595024F7F42,Output=(OutputName="Weights"))
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    Outputs(0) = (OutputName="UV")
+    Outputs(1) = (OutputName="DDX")
+    Outputs(2) = (OutputName="DDY")
+    Outputs(3) = (OutputName="UV_1")
+    Outputs(4) = (OutputName="UV_2")
+    Outputs(5) = (OutputName="Weights")
+    FunctionInputs(0) <- MaterialExpressionMultiply_14
+    FunctionInputs(1) <- MaterialExpressionScalarParameter_6
+    FunctionInputs(2) <- MaterialExpressionConstant_1
+    FunctionInputs(3) <- MaterialExpressionAdd_5
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.200000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionSubtract_1
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionTextureSample_3
+    B <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMultiply_13] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionTextureSample_4
+[MaterialExpressionMultiply_14] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionVertexNormalWS_1
+[MaterialExpressionMultiply_16] MaterialExpressionMultiply
+    ConstB = -3.000000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionComponentMask_4
+[MaterialExpressionMultiply_18] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionAdd_6
+    B <- MaterialExpressionMultiply_7
+[MaterialExpressionMultiply_19] MaterialExpressionMultiply
+    ConstB = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionAdd_3
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = -2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionMultiply_4
+    B <- MaterialExpressionMultiply_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionMultiply_4
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionSaturate_0
+    B <- MaterialExpressionMultiply_18
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    ConstB = 0.002000
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionWorldPosition_1
+    B <- MaterialExpressionScalarParameter_8
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionSaturate_4
+    B <- MaterialExpressionSaturate_1
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionAppendVector_0
+    B <- MaterialExpressionTime_2
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    Input <- MaterialExpressionMultiply_19
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    Input <- MaterialExpressionAdd_7
+[MaterialExpressionSaturate_4] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    Input <- MaterialExpressionAdd_8
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 3.000000
+    ParameterName = "WetRefraction"
+    ExpressionGUID = 1A2B09914F4918AB275AA7AA636BD5AA
+    Group = "Wet"
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+[MaterialExpressionScalarParameter_6] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "WetZScale"
+    ExpressionGUID = 8A77B93049365E265A9C8B930BE3F0B6
+    Group = "Wet"
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+[MaterialExpressionScalarParameter_7] MaterialExpressionScalarParameter
+    DefaultValue = 0.020000
+    ParameterName = "WetFallingSpeed"
+    ExpressionGUID = 0F8796E9488063F92EC69EAB1092C72C
+    Group = "Wet"
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+[MaterialExpressionScalarParameter_8] MaterialExpressionScalarParameter
+    DefaultValue = 0.002000
+    ParameterName = "WetUCScale"
+    ExpressionGUID = F469B18247A76A338B6E48A10AA4CCD1
+    Group = "Wet"
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionWorldPosition_2
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "WetDropMap"
+    ExpressionGUID = 259998114BA5DAFD7B3E6BB16BEA6D84
+    Group = "Wet"
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Surface/Glass/Textures/T_DirtyGlass_01.T_DirtyGlass_01'"
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    bCollapsed = True
+[MaterialExpressionTextureSample_3] MaterialExpressionTextureSample
+    CoordinatesDX = (OutputIndex=1)
+    CoordinatesDY = (OutputIndex=2)
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    Coordinates <- MaterialExpressionMaterialFunctionCall_1
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionTextureSample_4] MaterialExpressionTextureSample
+    CoordinatesDX = (OutputIndex=1)
+    CoordinatesDY = (OutputIndex=2)
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+    Coordinates <- MaterialExpressionMaterialFunctionCall_1
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionTime_2] MaterialExpressionTime
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+[MaterialExpressionVertexNormalWS_1] MaterialExpressionVertexNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+[MaterialExpressionVertexNormalWS_4] MaterialExpressionVertexNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+[MaterialExpressionWorldPosition_2] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_WaterDrops'"
+
+## СВЯЗИ

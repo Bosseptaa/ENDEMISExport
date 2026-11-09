@@ -1,0 +1,81 @@
+﻿# /Game/FluidFlux/Surface/Templates/Waterfall/Audio/CS_WaterfallAmbient
+# класс: SoundCue; происхождение: проект; узлов: 15; связей: 38; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:204
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[CS_WaterfallAmbient] SoundCue
+    bOverrideConcurrency = True
+    Duration = 10000.000000
+    MaxDistance = 2097152.000000
+    FirstNode <- SoundNodeParamCrossFade_0
+    AllNodes(0) <- SoundNodeWavePlayer_1
+    AllNodes(1) <- SoundNodeWavePlayer_0
+    AllNodes(2) <- SoundNodeParamCrossFade_0
+    AllNodes(3) <- SoundNodeWavePlayer_2
+    AllNodes(4) <- SoundNodeParamCrossFade_1
+    AllNodes(5) <- SoundNodeWavePlayer_3
+    SoundCueGraph <- SoundCueGraph_6
+[SoundCueGraph_6] SoundCueGraph
+    Schema = "/Script/CoreUObject.Class'/Script/AudioEditor.SoundCueGraphSchema'"
+    bAllowDeletion = False
+    GraphGuid = 87A5B9FE42E12CAE6B0D58A0E251E309
+    Nodes(0) <- SoundCueGraphNode_Root_6
+    Nodes(1) <- SoundCueGraphNode_7
+    Nodes(2) <- SoundCueGraphNode_0
+    Nodes(3) <- SoundCueGraphNode_8
+    Nodes(4) <- SoundCueGraphNode_1
+    Nodes(5) <- SoundCueGraphNode_2
+    Nodes(6) <- SoundCueGraphNode_3
+[SoundCueGraphNode_0] SoundCueGraphNode
+    SoundNode <- SoundNodeWavePlayer_0
+[SoundCueGraphNode_1] SoundCueGraphNode
+    SoundNode <- SoundNodeWavePlayer_2
+[SoundCueGraphNode_2] SoundCueGraphNode
+    SoundNode <- SoundNodeParamCrossFade_1
+[SoundCueGraphNode_3] SoundCueGraphNode
+    SoundNode <- SoundNodeWavePlayer_3
+[SoundCueGraphNode_7] SoundCueGraphNode
+    SoundNode <- SoundNodeWavePlayer_1
+[SoundCueGraphNode_8] SoundCueGraphNode
+    SoundNode <- SoundNodeParamCrossFade_0
+[SoundCueGraphNode_Root_6] SoundCueGraphNode_Root
+[SoundNodeParamCrossFade_0] SoundNodeParamCrossFade
+    ParamName = "SurfaceDistance"
+    CrossFadeInput(0) = (FadeInDistanceStart=-50000.000000,FadeInDistanceEnd=-50000.000000,FadeOutDistanceStart=-8.000000,FadeOutDistanceEnd=8.000000)
+    CrossFadeInput(1) = (FadeInDistanceStart=-8.000000,FadeInDistanceEnd=8.000000,FadeOutDistanceStart=50000.000000,FadeOutDistanceEnd=50000.000000)
+    ChildNodes(0) <- SoundNodeWavePlayer_0
+    ChildNodes(1) <- SoundNodeParamCrossFade_1
+    GraphNode <- SoundCueGraphNode_8
+[SoundNodeParamCrossFade_1] SoundNodeParamCrossFade
+    ParamName = "Velocity"
+    CrossFadeInput(0) = (FadeInDistanceStart=-0.500000,FadeInDistanceEnd=0.300000,FadeOutDistanceStart=0.500000,FadeOutDistanceEnd=2.000000)
+    CrossFadeInput(1) = (FadeInDistanceStart=0.300000,FadeInDistanceEnd=0.700000,FadeOutDistanceStart=1.300000,FadeOutDistanceEnd=3.000000,Volume=0.700000)
+    CrossFadeInput(2) = (FadeInDistanceStart=0.700000,FadeInDistanceEnd=2.000000,FadeOutDistanceStart=12.000000,FadeOutDistanceEnd=20.000000,Volume=0.400000)
+    ChildNodes(0) <- SoundNodeWavePlayer_2
+    ChildNodes(1) <- SoundNodeWavePlayer_1
+    ChildNodes(2) <- SoundNodeWavePlayer_3
+    GraphNode <- SoundCueGraphNode_2
+[SoundNodeWavePlayer_0] SoundNodeWavePlayer
+    SoundWaveAssetPtr = "/Game/1_Water/Audio/SW_WaterAmbientUnder.SW_WaterAmbientUnder"
+    bLooping = True
+    GraphNode <- SoundCueGraphNode_0
+[SoundNodeWavePlayer_1] SoundNodeWavePlayer
+    SoundWaveAssetPtr = "/Game/1_Water/Audio/SW_WaterfallAmbient.SW_WaterfallAmbient"
+    bLooping = True
+    GraphNode <- SoundCueGraphNode_7
+[SoundNodeWavePlayer_2] SoundNodeWavePlayer
+    SoundWaveAssetPtr = "/Game/1_Water/Audio/SW_RiverAmbient.SW_RiverAmbient"
+    bLooping = True
+    GraphNode <- SoundCueGraphNode_1
+[SoundNodeWavePlayer_3] SoundNodeWavePlayer
+    SoundWaveAssetPtr = "/Game/FluidFlux/Surface/Templates/Waterfall/Audio/VS_WaterfallNoise.VS_WaterfallNoise"
+    bLooping = True
+    GraphNode <- SoundCueGraphNode_3
+
+## СВЯЗИ
+[SoundCueGraphNode_0].Output -> [SoundCueGraphNode_8].Input
+[SoundCueGraphNode_1].Output -> [SoundCueGraphNode_2].Input
+[SoundCueGraphNode_2].Output -> [SoundCueGraphNode_8].Input2
+[SoundCueGraphNode_3].Output -> [SoundCueGraphNode_2].Input3
+[SoundCueGraphNode_7].Output -> [SoundCueGraphNode_2].Input2
+[SoundCueGraphNode_8].Output -> [SoundCueGraphNode_Root_6].?

@@ -1,0 +1,145 @@
+﻿# /Game/FluidFlux/Tools/Heightmap/Functions/MF_Grid
+# класс: MaterialFunction; происхождение: проект; узлов: 30; связей: 71; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Grid] MaterialFunction
+    StateId = D2387CDE478F4CB7B3882AB6706F26B7
+    CombinedInputTypes = 4
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_GridEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_GridEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionDDX_0
+    ExpressionCollection <- MaterialExpressionDDY_1
+    ExpressionCollection <- MaterialExpressionFloor_0
+    ExpressionCollection <- MaterialExpressionFloor_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionFloor_3
+    ExpressionCollection <- MaterialExpressionFloor_4
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionDotProduct_1
+    ExpressionCollection <- MaterialExpressionDotProduct_5
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionFeatureLevelSwitch_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionFeatureLevelSwitch_1
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionReroute_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionReroute_0
+    B <- MaterialExpressionFeatureLevelSwitch_1
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionReroute_0
+    B <- MaterialExpressionFeatureLevelSwitch_0
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionReroute_0
+    B <- MaterialExpressionFeatureLevelSwitch_0
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionDotProduct_0
+    B <- MaterialExpressionDotProduct_1
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionAdd_3
+    B <- MaterialExpressionDotProduct_5
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+[MaterialExpressionDDX_0] MaterialExpressionDDX
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    Value <- MaterialExpressionReroute_0
+[MaterialExpressionDDY_1] MaterialExpressionDDY
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    Value <- MaterialExpressionReroute_0
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionSubtract_0
+[MaterialExpressionDotProduct_1] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionSubtract_1
+[MaterialExpressionDotProduct_5] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionSubtract_2
+    B <- MaterialExpressionSubtract_2
+[MaterialExpressionFeatureLevelSwitch_0] MaterialExpressionFeatureLevelSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    Default <- MaterialExpressionDDY_1
+    Inputs(0) <- MaterialExpressionConstant_0
+    Inputs(2) <- MaterialExpressionDDY_1
+[MaterialExpressionFeatureLevelSwitch_1] MaterialExpressionFeatureLevelSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    Default <- MaterialExpressionDDX_0
+    Inputs(0) <- MaterialExpressionConstant_1
+    Inputs(1) <- MaterialExpressionConstant_1
+    Inputs(2) <- MaterialExpressionDDX_0
+[MaterialExpressionFloor_0] MaterialExpressionFloor
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    Input <- MaterialExpressionReroute_0
+[MaterialExpressionFloor_1] MaterialExpressionFloor
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionFloor_3] MaterialExpressionFloor
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    Input <- MaterialExpressionAdd_1
+[MaterialExpressionFloor_4] MaterialExpressionFloor
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    Input <- MaterialExpressionAdd_2
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Position"
+    Id = D1A1ED42405792597433489834510B15
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 9383F09B4782A267E6F3C5B17A1E3FAA
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_0
+[MaterialExpressionIf_0] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionAdd_4
+    B <- MaterialExpressionConstant_2
+    AGreaterThanB <- MaterialExpressionConstant_3
+    AEqualsB <- MaterialExpressionConstant_2
+    ALessThanB <- MaterialExpressionConstant_3
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionFloor_0
+    B <- MaterialExpressionFloor_1
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionFloor_0
+    B <- MaterialExpressionFloor_3
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_Grid'"
+    A <- MaterialExpressionFloor_0
+    B <- MaterialExpressionFloor_4
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

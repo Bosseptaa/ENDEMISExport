@@ -1,0 +1,86 @@
+﻿# /Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4
+# класс: MaterialFunction; происхождение: проект; узлов: 14; связей: 24; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[ML_GlossyBlack_Latex_UE4] MaterialFunction
+    StateId = 1EE84D294020BD42BDBCC49191F5CDA2
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 256
+    EditorOnlyData <- ML_GlossyBlack_Latex_UE4EditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[ML_GlossyBlack_Latex_UE4EditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMakeMaterialAttributes_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_1
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionTextureSample_1
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_6
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionComment_0
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 798
+    SizeY = 499
+    Text = "Color"
+    CommentColor = (R=0.849667,G=1.000000,B=0.990444,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'ML_GlossyBlack_Latex_UE4'"
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Tiling"
+    Id = 043CD40542C548815A9DE1A1DD7AA65E
+    InputType = FunctionInput_Scalar
+    PreviewValue = (X=50.000000,Y=0.000000,Z=0.000000,W=1.000000)
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'ML_GlossyBlack_Latex_UE4'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_6] MaterialExpressionFunctionInput
+    InputName = "Tint"
+    Id = C53D54FC436A60C6AB1BBB890E2C1E1E
+    PreviewValue = (X=0.225000,Y=0.225000,Z=0.225000,W=1.500000)
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'ML_GlossyBlack_Latex_UE4'"
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = 9CE3E8334E850358E85C4D8B983C5493
+    Function = "/Script/Engine.MaterialFunction'ML_GlossyBlack_Latex_UE4'"
+    A <- MaterialExpressionMakeMaterialAttributes_1
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    ConstA = 0.550000
+    ConstB = 0.750000
+    Function = "/Script/Engine.MaterialFunction'ML_GlossyBlack_Latex_UE4'"
+    Alpha <- MaterialExpressionTextureSample_0
+[MaterialExpressionMakeMaterialAttributes_1] MaterialExpressionMakeMaterialAttributes
+    AmbientOcclusion = (Mask=1,MaskR=1,MaskG=1,MaskB=1)
+    Refraction = (Mask=1,MaskR=1,MaskG=1)
+    Function = "/Script/Engine.MaterialFunction'ML_GlossyBlack_Latex_UE4'"
+    BaseColor <- MaterialExpressionMultiply_3
+    Roughness <- MaterialExpressionLinearInterpolate_1
+    Normal <- MaterialExpressionTextureSample_1
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'ML_GlossyBlack_Latex_UE4'"
+    A <- MaterialExpressionFunctionInput_3
+    B <- MaterialExpressionTextureCoordinate_1
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'ML_GlossyBlack_Latex_UE4'"
+    A <- MaterialExpressionTextureSample_0
+    B <- MaterialExpressionFunctionInput_6
+[MaterialExpressionTextureCoordinate_1] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'ML_GlossyBlack_Latex_UE4'"
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    SamplerSource = SSM_Wrap_WorldGroupSettings
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/T_ML_Rubber_Blue_01_BC.T_ML_Rubber_Blue_01_BC'"
+    Function = "/Script/Engine.MaterialFunction'ML_GlossyBlack_Latex_UE4'"
+    bCollapsed = True
+    Coordinates <- MaterialExpressionMultiply_2
+[MaterialExpressionTextureSample_1] MaterialExpressionTextureSample
+    SamplerSource = SSM_Wrap_WorldGroupSettings
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Mannequin/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.T_ML_Rubber_Blue_01_N'"
+    SamplerType = SAMPLERTYPE_Normal
+    Function = "/Script/Engine.MaterialFunction'ML_GlossyBlack_Latex_UE4'"
+    Coordinates <- MaterialExpressionMultiply_2
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

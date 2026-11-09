@@ -1,0 +1,617 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFShape
+# класс: Blueprint; происхождение: проект; узлов: 151; связей: 208; HLSL: 0; причина: папка /Game/FluidFlux; тело:84
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_SDFShape] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    HideCategories(0) = "Input"
+    HideCategories(1) = "Rendering"
+    HideCategories(2) = "Actor"
+    HideCategories(3) = "HLOD"
+    HideCategories(4) = "Replication"
+    HideCategories(5) = "LOD"
+    HideCategories(6) = "Collision"
+    HideCategories(7) = "Actor"
+    HideCategories(8) = "Loading"
+    HideCategories(9) = "Networking"
+    HideCategories(10) = "Physics"
+    HideCategories(11) = "Deprecated"
+    HideCategories(12) = "Level Streaming"
+    HideCategories(13) = "Level Instance"
+    HideCategories(14) = "Cooking"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_SDFShape_C:SimpleConstructionScript_0'"
+    ComponentTemplates(0) = "/Script/Engine.SphereComponent'BP_SDFShape_C:NODE_AddSphereComponent-0'"
+    ComponentTemplates(1) = "/Script/Engine.BoxComponent'BP_SDFShape_C:NODE_AddBoxComponent-0'"
+    NewVariables(2) = (VarName="Inverse",VarGuid=E8996611405CB1D3C308F68FC615A216,VarType=(PinCategory="bool"),FriendlyName="Inverse",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5)
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFShape.BP_SDFShape:RefreshSurfaceData",SavedViewOffset=(X=16.245405,Y=-369.160004),SavedZoomAmount=0.875000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFShape.BP_SDFShape:GetSourceType",SavedViewOffset=(X=-335.257629,Y=-235.170776),SavedZoomAmount=1.000000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFShape.BP_SDFShape:GetShapes",SavedViewOffset=(X=-752.939819,Y=-145.518265),SavedZoomAmount=0.875000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFShape.BP_SDFShape:EventGraph",SavedViewOffset=(X=-561.057190,Y=-1232.871216),SavedZoomAmount=0.500000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFShape.BP_SDFShape:UserConstructionScript",SavedViewOffset=(X=349.603455,Y=-134.057068),SavedZoomAmount=1.000000)
+    ComponentTemplateNameIndex = (("SphereComponent", 1),("BoxComponent", 1),("StaticMeshComponent", 1))
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_SDFShape_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 1566635B4CC4272FB4C1A8A76D3C1249
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- RefreshSurfaceData
+    ImplementedInterfaces(0) <- GetSourceType
+    ImplementedInterfaces(0) <- GetShapes
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 47BFDA6C4C9B56A11DD788BD22CF91D6
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_1
+    Nodes(2) <- K2Node_AddComponent_0
+    Nodes(3) <- K2Node_CallFunction_0
+    Nodes(4) <- K2Node_VariableGet_0
+    Nodes(5) <- K2Node_CallFunction_2
+    Nodes(6) <- K2Node_VariableGet_1
+    Nodes(7) <- K2Node_IfThenElse_0
+    Nodes(8) <- K2Node_AddComponent_1
+    Nodes(9) <- K2Node_CallFunction_6
+    Nodes(10) <- K2Node_VariableGet_2
+    Nodes(11) <- K2Node_PromotableOperator_1
+    Nodes(12) <- K2Node_VariableGet_3
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_CallFunction_1@UserConstructionScript] K2Node_CallFunction
+[K2Node_AddComponent_0@UserConstructionScript] K2Node_AddComponent
+[K2Node_CallFunction_0@UserConstructionScript] K2Node_CallFunction
+[K2Node_VariableGet_0@UserConstructionScript] K2Node_VariableGet
+[K2Node_CallFunction_2@UserConstructionScript] K2Node_CallFunction
+[K2Node_VariableGet_1@UserConstructionScript] K2Node_VariableGet
+[K2Node_IfThenElse_0@UserConstructionScript] K2Node_IfThenElse
+[K2Node_AddComponent_1@UserConstructionScript] K2Node_AddComponent
+[K2Node_CallFunction_6@UserConstructionScript] K2Node_CallFunction
+[K2Node_VariableGet_2@UserConstructionScript] K2Node_VariableGet
+[K2Node_PromotableOperator_1@UserConstructionScript] K2Node_PromotableOperator
+[K2Node_VariableGet_3@UserConstructionScript] K2Node_VariableGet
+[K2Node_CallFunction_3@UserConstructionScript] K2Node_CallFunction
+[GetSourceType] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 31717028422AF5784D2B3C99B44BF87E
+    InterfaceGuid = EA59C4064309A1ABC531A58A307FB476
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionResult_0@GetSourceType] K2Node_FunctionResult
+[K2Node_FunctionEntry_0@GetSourceType] K2Node_FunctionEntry
+[GetShapes] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = A6D6936E46477F023A4B2AB72B16AB7A
+    InterfaceGuid = 92F59D3644B5AFCF3ED9098D4B91EBA2
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_VariableGet_4
+    Nodes(3) <- K2Node_VariableGet_3
+    Nodes(4) <- K2Node_CallFunction_3
+    Nodes(5) <- K2Node_MakeArray_1
+    Nodes(6) <- K2Node_MakeStruct_1
+    Nodes(7) <- K2Node_CallFunction_4
+    Nodes(8) <- K2Node_CallFunction_1
+    Nodes(9) <- K2Node_MakeStruct_0
+    Nodes(10) <- K2Node_CallFunction_2
+    Nodes(11) <- K2Node_CallFunction_5
+    Nodes(12) <- K2Node_PromotableOperator_0
+    Nodes(13) <- K2Node_CallFunction_7
+    Nodes(14) <- K2Node_PromotableOperator_1
+    Nodes(15) <- K2Node_MakeArray_0
+    Nodes(16) <- K2Node_VariableGet_0
+[K2Node_FunctionResult_0@GetShapes] K2Node_FunctionResult
+[K2Node_FunctionEntry_0@GetShapes] K2Node_FunctionEntry
+[K2Node_VariableGet_4@GetShapes] K2Node_VariableGet
+[K2Node_VariableGet_3@GetShapes] K2Node_VariableGet
+[K2Node_CallFunction_3@GetShapes] K2Node_CallFunction
+[K2Node_MakeArray_1@GetShapes] K2Node_MakeArray
+[K2Node_MakeStruct_1@GetShapes] K2Node_MakeStruct
+[K2Node_CallFunction_4@GetShapes] K2Node_CallFunction
+[K2Node_CallFunction_1@GetShapes] K2Node_CallFunction
+[K2Node_MakeStruct_0@GetShapes] K2Node_MakeStruct
+[K2Node_CallFunction_2@GetShapes] K2Node_CallFunction
+[K2Node_CallFunction_5@GetShapes] K2Node_CallFunction
+[K2Node_PromotableOperator_0@GetShapes] K2Node_PromotableOperator
+[K2Node_CallFunction_7@GetShapes] K2Node_CallFunction
+[K2Node_PromotableOperator_1@GetShapes] K2Node_PromotableOperator
+[K2Node_MakeArray_0@GetShapes] K2Node_MakeArray
+[K2Node_VariableGet_0@GetShapes] K2Node_VariableGet
+[K2Node_CallFunction_0@GetShapes] K2Node_CallFunction
+[K2Node_CallFunction_6@GetShapes] K2Node_CallFunction
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = DAA376D2428A41659ED3D09008103EAF
+[RefreshSurfaceData] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 807DA1EA4D531FA5D97F02B6B6E1F54C
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_1
+    Nodes(2) <- K2Node_MacroInstance_1
+    Nodes(3) <- K2Node_CallFunction_2
+[K2Node_FunctionEntry_0@RefreshSurfaceData] K2Node_FunctionEntry
+[K2Node_CallFunction_1@RefreshSurfaceData] K2Node_CallFunction
+[K2Node_MacroInstance_1@RefreshSurfaceData] K2Node_MacroInstance
+[K2Node_CallFunction_2@RefreshSurfaceData] K2Node_CallFunction
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[EdGraph_0] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 99DBFD5540A796041F72A5A9DA655026
+    Nodes(0) <- K2Node_Tunnel_0
+    Nodes(1) <- K2Node_Tunnel_1
+    Nodes(2) <- EdGraphNode_Comment_652
+    Nodes(3) <- EdGraphNode_Comment_440
+    Nodes(4) <- EdGraphNode_Comment_438
+    Nodes(5) <- EdGraphNode_Comment_436
+    Nodes(6) <- EdGraphNode_Comment_26
+    Nodes(7) <- K2Node_TemporaryVariable_4
+    Nodes(8) <- K2Node_AssignmentStatement_23
+    Nodes(9) <- K2Node_CallFunction_563
+    Nodes(10) <- K2Node_AssignmentStatement_7
+    Nodes(11) <- K2Node_IfThenElse_7
+    Nodes(12) <- K2Node_ExecutionSequence_8
+    Nodes(13) <- K2Node_CallArrayFunction_836
+    Nodes(14) <- K2Node_CallFunction_36741
+    Nodes(15) <- K2Node_TemporaryVariable_31
+    Nodes(16) <- EdGraphNode_Comment_434
+    Nodes(17) <- K2Node_AssignmentStatement_24
+    Nodes(18) <- K2Node_AssignmentStatement_25
+    Nodes(19) <- K2Node_GetArrayItem_0
+[K2Node_Tunnel_0@EdGraph_0] K2Node_Tunnel
+[K2Node_Tunnel_1@EdGraph_0] K2Node_Tunnel
+[EdGraphNode_Comment_652@EdGraph_0] EdGraphNode_Comment
+[EdGraphNode_Comment_440@EdGraph_0] EdGraphNode_Comment
+[EdGraphNode_Comment_438@EdGraph_0] EdGraphNode_Comment
+[EdGraphNode_Comment_436@EdGraph_0] EdGraphNode_Comment
+[EdGraphNode_Comment_26@EdGraph_0] EdGraphNode_Comment
+[K2Node_TemporaryVariable_4@EdGraph_0] K2Node_TemporaryVariable
+[K2Node_AssignmentStatement_23@EdGraph_0] K2Node_AssignmentStatement
+[K2Node_CallFunction_563@EdGraph_0] K2Node_CallFunction
+[K2Node_AssignmentStatement_7@EdGraph_0] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@EdGraph_0] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@EdGraph_0] K2Node_ExecutionSequence
+[K2Node_CallArrayFunction_836@EdGraph_0] K2Node_CallArrayFunction
+[K2Node_CallFunction_36741@EdGraph_0] K2Node_CallFunction
+[K2Node_TemporaryVariable_31@EdGraph_0] K2Node_TemporaryVariable
+[EdGraphNode_Comment_434@EdGraph_0] EdGraphNode_Comment
+[K2Node_AssignmentStatement_24@EdGraph_0] K2Node_AssignmentStatement
+[K2Node_AssignmentStatement_25@EdGraph_0] K2Node_AssignmentStatement
+[K2Node_GetArrayItem_0@EdGraph_0] K2Node_GetArrayItem
+[ExecuteUbergraph_BP_SDFShape] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 20C406214756E4CF4492EF907F4E4976
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_Event_1
+    Nodes(2) <- K2Node_FunctionEntry_0
+[K2Node_Event_0] K2Node_Event (событие: Capture @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+    bIsIntermediateNode = True
+[K2Node_Event_1] K2Node_Event (событие: PrepareMaterial @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+    bIsIntermediateNode = True
+[K2Node_FunctionEntry_0@ExecuteUbergraph_BP_SDFShape] K2Node_FunctionEntry
+[Capture] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D3E9CEE643657ED1F9D673B6F56F6932
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@Capture] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@Capture] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@Capture] K2Node_CallFunction
+[PrepareMaterial] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 070D199F4BA8565ACEA9B7A3C3346927
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@PrepareMaterial] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@PrepareMaterial] K2Node_CallFunction
+[UserConstructionScript_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 47BFDA6C4C9B56A11DD788BD22CF91D6
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_1
+    Nodes(2) <- K2Node_AddComponent_0
+    Nodes(3) <- K2Node_CallFunction_0
+    Nodes(4) <- K2Node_VariableGet_0
+    Nodes(5) <- K2Node_CallFunction_2
+    Nodes(6) <- K2Node_VariableGet_1
+    Nodes(7) <- K2Node_IfThenElse_0
+    Nodes(8) <- K2Node_AddComponent_1
+    Nodes(9) <- K2Node_CallFunction_6
+    Nodes(10) <- K2Node_VariableGet_2
+    Nodes(11) <- K2Node_CallFunction_4
+    Nodes(12) <- K2Node_VariableGet_3
+    Nodes(13) <- K2Node_TemporaryVariable_0
+    Nodes(14) <- K2Node_PureAssignmentStatement_0
+    Nodes(15) <- K2Node_TemporaryVariable_1
+    Nodes(16) <- K2Node_PureAssignmentStatement_1
+    Nodes(17) <- K2Node_CallFunction_3
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_1@UserConstructionScript_MERGED] K2Node_CallFunction
+[K2Node_AddComponent_0@UserConstructionScript_MERGED] K2Node_AddComponent (вызов: AddComponent)
+    TemplateType = "/Script/CoreUObject.Class'/Script/Engine.SphereComponent'"
+    TemplateType = "/Script/CoreUObject.Class'/Script/Engine.SphereComponent'"
+    вход TemplateName = NODE_AddSphereComponent-0
+    вход bManualAttachment = false
+    вход bDeferredFinish = false
+    вход TemplateName = NODE_AddSphereComponent-0
+    вход bManualAttachment = false
+    вход bDeferredFinish = false
+[K2Node_CallFunction_0@UserConstructionScript_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_0@UserConstructionScript_MERGED] K2Node_VariableGet
+[K2Node_CallFunction_2@UserConstructionScript_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_1@UserConstructionScript_MERGED] K2Node_VariableGet (переменная: Round)
+[K2Node_IfThenElse_0@UserConstructionScript_MERGED] K2Node_IfThenElse
+[K2Node_AddComponent_1@UserConstructionScript_MERGED] K2Node_AddComponent (вызов: AddComponent)
+    TemplateType = "/Script/CoreUObject.Class'/Script/Engine.BoxComponent'"
+    TemplateType = "/Script/CoreUObject.Class'/Script/Engine.BoxComponent'"
+    вход TemplateName = NODE_AddBoxComponent-0
+    вход bManualAttachment = false
+    вход bDeferredFinish = false
+    вход TemplateName = NODE_AddBoxComponent-0
+    вход bManualAttachment = false
+    вход bDeferredFinish = false
+[K2Node_CallFunction_6@UserConstructionScript_MERGED] K2Node_CallFunction (вызов: SetBoxExtent @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход bUpdateOverlaps = true
+    вход bUpdateOverlaps = true
+[K2Node_VariableGet_2@UserConstructionScript_MERGED] K2Node_VariableGet (переменная: Size)
+[K2Node_PromotableOperator_1@UserConstructionScript_MERGED] K2Node_PromotableOperator
+[K2Node_VariableGet_3@UserConstructionScript_MERGED] K2Node_VariableGet
+[K2Node_TemporaryVariable_0] K2Node_TemporaryVariable
+    VariableType = (PinCategory="struct",PinSubCategoryObject="/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.Transform'",bIsConst=True)
+    bIsIntermediateNode = True
+[K2Node_PureAssignmentStatement_0] K2Node_PureAssignmentStatement
+    bIsIntermediateNode = True
+    вход Value = 0.000000,0.000000,0.000000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000
+[K2Node_TemporaryVariable_1] K2Node_TemporaryVariable
+    VariableType = (PinCategory="struct",PinSubCategoryObject="/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.Transform'",bIsConst=True)
+    bIsIntermediateNode = True
+[K2Node_PureAssignmentStatement_1] K2Node_PureAssignmentStatement
+    bIsIntermediateNode = True
+    вход Value = 0.000000,0.000000,0.000000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000
+[K2Node_CallFunction_3@UserConstructionScript_MERGED] K2Node_CallFunction
+[K2Node_CallFunction_4@UserConstructionScript_MERGED] K2Node_CallFunction
+[RefreshSurfaceData_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 807DA1EA4D531FA5D97F02B6B6E1F54C
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_1
+    Nodes(2) <- K2Node_TunnelBoundary_3
+    Nodes(3) <- K2Node_CallFunction_2
+    Nodes(4) <- K2Node_TunnelBoundary_2
+    Nodes(5) <- K2Node_AssignmentStatement_25
+    Nodes(6) <- K2Node_AssignmentStatement_24
+    Nodes(7) <- K2Node_TunnelBoundary_1
+    Nodes(8) <- K2Node_TemporaryVariable_31
+    Nodes(9) <- K2Node_CallFunction_36741
+    Nodes(10) <- K2Node_CallArrayFunction_836
+    Nodes(11) <- K2Node_ExecutionSequence_8
+    Nodes(12) <- K2Node_IfThenElse_7
+    Nodes(13) <- K2Node_AssignmentStatement_7
+    Nodes(14) <- K2Node_CallFunction_563
+    Nodes(15) <- K2Node_AssignmentStatement_23
+    Nodes(16) <- K2Node_TemporaryVariable_4
+    Nodes(17) <- K2Node_TunnelBoundary_0
+    Nodes(18) <- K2Node_CallArrayFunction_0
+[K2Node_FunctionEntry_0@RefreshSurfaceData_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_1@RefreshSurfaceData_MERGED] K2Node_CallFunction
+[K2Node_MacroInstance_1@RefreshSurfaceData_MERGED] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFVolumeDomain.BP_SDFVolumeDomain_C'",ContainerType=Array)
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Tools/DistanceField/Blueprints/BP_SDFVolumeDomain.BP_SDFVolumeDomain_C'",ContainerType=Array)
+    OutputSourceNode <- K2Node_Tunnel_1
+    InputSinkNode <- K2Node_Tunnel_0
+[K2Node_CallFunction_2@RefreshSurfaceData_MERGED] K2Node_CallFunction
+[K2Node_Tunnel_0@RefreshSurfaceData_MERGED] K2Node_Tunnel
+    bCanHaveOutputs = True
+    MetaData = (Category=NSLOCTEXT("", "232A9B204596DDDD456B83B012FD6E54", "Utilities| Array"),Keywords=NSLOCTEXT("", "1BF42FC9447506B860B501BB1E63AA31", "Foreach"))
+    bCanHaveOutputs = True
+    MetaData = (Category=NSLOCTEXT("", "232A9B204596DDDD456B83B012FD6E54", "Utilities| Array"),Keywords=NSLOCTEXT("", "1BF42FC9447506B860B501BB1E63AA31", "Foreach"))
+    OutputSourceNode <- K2Node_MacroInstance_1
+[K2Node_Tunnel_1@RefreshSurfaceData_MERGED] K2Node_Tunnel
+    bCanHaveInputs = True
+    bCanHaveInputs = True
+    InputSinkNode <- K2Node_MacroInstance_1
+[EdGraphNode_Comment_652@RefreshSurfaceData_MERGED] EdGraphNode_Comment
+    NodeWidth = 2256
+    NodeHeight = 48
+    NodeComment = "Warning: Do not add, remove, or reorder elements in the input array during the execution of the loop body!"
+    NodeWidth = 2256
+    NodeHeight = 48
+    NodeComment = "Warning: Do not add, remove, or reorder elements in the input array during the execution of the loop body!"
+[EdGraphNode_Comment_440@RefreshSurfaceData_MERGED] EdGraphNode_Comment
+    NodeHeight = 240
+    NodeComment = "Increment Loop Counter"
+    NodeHeight = 240
+    NodeComment = "Increment Loop Counter"
+[EdGraphNode_Comment_438@RefreshSurfaceData_MERGED] EdGraphNode_Comment
+    NodeWidth = 448
+    NodeHeight = 320
+    NodeComment = "Execute Loop Body"
+    NodeWidth = 448
+    NodeHeight = 320
+    NodeComment = "Execute Loop Body"
+[EdGraphNode_Comment_436@RefreshSurfaceData_MERGED] EdGraphNode_Comment
+    NodeWidth = 704
+    NodeHeight = 208
+    NodeComment = "Test Loop Condition"
+    NodeWidth = 704
+    NodeHeight = 208
+    NodeComment = "Test Loop Condition"
+[EdGraphNode_Comment_26@RefreshSurfaceData_MERGED] EdGraphNode_Comment
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Loop Counter"
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Loop Counter"
+[K2Node_TemporaryVariable_4@RefreshSurfaceData_MERGED] K2Node_TemporaryVariable
+    VariableType = (PinCategory="int")
+    NodeComment = "Loop Counter"
+    VariableType = (PinCategory="int")
+    NodeComment = "Loop Counter"
+[K2Node_AssignmentStatement_23@RefreshSurfaceData_MERGED] K2Node_AssignmentStatement
+[K2Node_CallFunction_563@RefreshSurfaceData_MERGED] K2Node_CallFunction (вызов: Add_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 1
+    вход B = 1
+[K2Node_AssignmentStatement_7@RefreshSurfaceData_MERGED] K2Node_AssignmentStatement
+[K2Node_IfThenElse_7@RefreshSurfaceData_MERGED] K2Node_IfThenElse
+[K2Node_ExecutionSequence_8@RefreshSurfaceData_MERGED] K2Node_ExecutionSequence
+[K2Node_CallArrayFunction_836@RefreshSurfaceData_MERGED] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_36741@RefreshSurfaceData_MERGED] K2Node_CallFunction (вызов: Less_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_TemporaryVariable_31@RefreshSurfaceData_MERGED] K2Node_TemporaryVariable
+    VariableType = (PinCategory="int")
+    NodeComment = "Array Index"
+    VariableType = (PinCategory="int")
+    NodeComment = "Array Index"
+[EdGraphNode_Comment_434@RefreshSurfaceData_MERGED] EdGraphNode_Comment
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Array Index"
+    NodeWidth = 240
+    NodeHeight = 224
+    NodeComment = "Init Array Index"
+[K2Node_AssignmentStatement_24@RefreshSurfaceData_MERGED] K2Node_AssignmentStatement
+[K2Node_AssignmentStatement_25@RefreshSurfaceData_MERGED] K2Node_AssignmentStatement
+[K2Node_GetArrayItem_0@RefreshSurfaceData_MERGED] K2Node_GetArrayItem
+    bReturnByRefDesired = False
+    bReturnByRefDesired = False
+    вход Dimension 1 = 0
+[K2Node_TunnelBoundary_0] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_1] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_2] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_TunnelBoundary_3] K2Node_TunnelBoundary
+    bIsIntermediateNode = True
+[K2Node_CallArrayFunction_0] K2Node_CallArrayFunction (вызов: Array_Get @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+[GetSourceType_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 31717028422AF5784D2B3C99B44BF87E
+    InterfaceGuid = EA59C4064309A1ABC531A58A307FB476
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetSourceType_MERGED] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetSourceType_MERGED] K2Node_FunctionResult
+[GetShapes_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = A6D6936E46477F023A4B2AB72B16AB7A
+    InterfaceGuid = 92F59D3644B5AFCF3ED9098D4B91EBA2
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_VariableGet_4
+    Nodes(3) <- K2Node_VariableGet_3
+    Nodes(4) <- K2Node_CallFunction_3
+    Nodes(5) <- K2Node_MakeArray_1
+    Nodes(6) <- K2Node_MakeStruct_1
+    Nodes(7) <- K2Node_CallFunction_4
+    Nodes(8) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@GetShapes_MERGED] K2Node_FunctionEntry (вызов: GetShapes @ /Script/Engine.BlueprintGeneratedClass)
+    ExtraFlags = 1073741824
+    MetaData = (Category=NSLOCTEXT("KismetSchema", "Default", "Default"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "ExecuteUbergraph_BP_SDFShape"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "Capture"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "PrepareMaterial"
+    bIsIntermediateNode = True
+    MetaData = (Category=NSLOCTEXT("KismetSchema", "Default", "Default"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 1073741824
+[K2Node_FunctionResult_0@GetShapes_MERGED] K2Node_FunctionResult (вызов: GetShapes @ /Script/Engine.BlueprintGeneratedClass)
+    вход Type = NewEnumerator0
+    вход Type = NewEnumerator0
+[K2Node_VariableGet_4@GetShapes_MERGED] K2Node_VariableGet (переменная: Round)
+[K2Node_VariableGet_3@GetShapes_MERGED] K2Node_VariableGet (переменная: Size)
+[K2Node_CallFunction_3@GetShapes_MERGED] K2Node_CallFunction (вызов: K2_GetActorLocation)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    вход InVec = 0, 0, 0
+[K2Node_MakeArray_1@GetShapes_MERGED] K2Node_MakeArray
+[K2Node_MakeStruct_1@GetShapes_MERGED] K2Node_MakeStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="Transform_2_3C5173B943C650ED7788728694A03263",PropertyFriendlyName="Transform",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Radius_7_46B358544B40D1660466C3BCF9FBB9C6",PropertyFriendlyName="Radius",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Tools/DistanceField/Blueprints/BS_SDFShape.BS_SDFShape'"
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="Transform_2_3C5173B943C650ED7788728694A03263",PropertyFriendlyName="Transform",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Radius_7_46B358544B40D1660466C3BCF9FBB9C6",PropertyFriendlyName="Radius",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Tools/DistanceField/Blueprints/BS_SDFShape.BS_SDFShape'"
+    вход Transform_2_3C5173B943C650ED7788728694A03263 = 0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000
+[K2Node_CallFunction_4@GetShapes_MERGED] K2Node_CallFunction (вызов: K2_GetActorRotation)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_1@GetShapes_MERGED] K2Node_CallFunction (вызов: K2_GetActorLocation)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_MakeStruct_0@GetShapes_MERGED] K2Node_MakeStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="Transform_2_3C5173B943C650ED7788728694A03263",PropertyFriendlyName="Transform",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Radius_7_46B358544B40D1660466C3BCF9FBB9C6",PropertyFriendlyName="Radius",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Tools/DistanceField/Blueprints/BS_SDFShape.BS_SDFShape'"
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="Transform_2_3C5173B943C650ED7788728694A03263",PropertyFriendlyName="Transform",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Radius_7_46B358544B40D1660466C3BCF9FBB9C6",PropertyFriendlyName="Radius",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Tools/DistanceField/Blueprints/BS_SDFShape.BS_SDFShape'"
+    вход Transform_2_3C5173B943C650ED7788728694A03263 = 0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000
+    вход Transform_2_3C5173B943C650ED7788728694A03263 = 0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000
+    вход Transform_2_3C5173B943C650ED7788728694A03263_Location = 0, 0, 0
+    вход Transform_2_3C5173B943C650ED7788728694A03263_Rotation = 0, 0, 0
+    вход Transform_2_3C5173B943C650ED7788728694A03263_Scale = 1.000000,1.000000,1.000000
+    вход Radius_7_46B358544B40D1660466C3BCF9FBB9C6 = 0.000000
+[K2Node_CallFunction_2@GetShapes_MERGED] K2Node_CallFunction (вызов: K2_GetActorRotation)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход NewScale3D = 1.000000,1.000000,1.000000
+    вход NewScale3D = 1.000000,1.000000,1.000000
+[K2Node_CallFunction_5@GetShapes_MERGED] K2Node_CallFunction (вызов: GetActorScale3D)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_0@GetShapes_MERGED] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_7@GetShapes_MERGED] K2Node_CallFunction (вызов: BreakVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход InVec = 0, 0, 0
+[K2Node_PromotableOperator_1@GetShapes_MERGED] K2Node_PromotableOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "NotEqual"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "NotEqual"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+[K2Node_MakeArray_0@GetShapes_MERGED] K2Node_MakeArray
+[K2Node_VariableGet_0@GetShapes_MERGED] K2Node_VariableGet (переменная: Round)
+[K2Node_CallFunction_0@GetShapes_MERGED] K2Node_CallFunction (вызов: MakeTransform @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход bUpdateOverlaps = true
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход bUpdateOverlaps = true
+
+## СВЯЗИ
+[K2Node_AddComponent_0@UserConstructionScript_MERGED].ReturnValue -> [K2Node_CallFunction_0@GetShapes_MERGED].self
+[K2Node_AddComponent_0@UserConstructionScript_MERGED].then -> [K2Node_CallFunction_0@GetShapes_MERGED].execute
+[K2Node_AddComponent_1@UserConstructionScript_MERGED].ReturnValue -> [K2Node_CallFunction_6@UserConstructionScript_MERGED].self
+[K2Node_AddComponent_1@UserConstructionScript_MERGED].then -> [K2Node_CallFunction_6@UserConstructionScript_MERGED].execute
+[K2Node_AssignmentStatement_23@RefreshSurfaceData_MERGED].then -> [K2Node_AssignmentStatement_24@RefreshSurfaceData_MERGED].execute
+[K2Node_AssignmentStatement_24@RefreshSurfaceData_MERGED].then -> [K2Node_IfThenElse_7@RefreshSurfaceData_MERGED].execute
+[K2Node_AssignmentStatement_25@RefreshSurfaceData_MERGED].then -> [K2Node_ExecutionSequence_8@RefreshSurfaceData_MERGED].execute
+[K2Node_AssignmentStatement_7@RefreshSurfaceData_MERGED].then -> [K2Node_IfThenElse_7@RefreshSurfaceData_MERGED].execute
+[K2Node_CallArrayFunction_0].Item -> [K2Node_CallFunction_2@GetShapes_MERGED].self
+[K2Node_CallArrayFunction_836@RefreshSurfaceData_MERGED].ReturnValue -> [K2Node_CallFunction_36741@RefreshSurfaceData_MERGED].B
+[K2Node_CallFunction_0@GetShapes_MERGED].ReturnValue -> [K2Node_MakeStruct_1@GetShapes_MERGED].Transform_2_3C5173B943C650ED7788728694A03263
+[K2Node_CallFunction_1@GetShapes_MERGED].OutActors -> [K2Node_CallArrayFunction_0].TargetArray
+[K2Node_CallFunction_1@GetShapes_MERGED].OutActors -> [K2Node_CallArrayFunction_836@RefreshSurfaceData_MERGED].TargetArray
+[K2Node_CallFunction_1@GetShapes_MERGED].OutActors -> [K2Node_MacroInstance_1@RefreshSurfaceData_MERGED].Array
+[K2Node_CallFunction_1@GetShapes_MERGED].then -> [K2Node_IfThenElse_0@UserConstructionScript_MERGED].execute
+[K2Node_CallFunction_1@GetShapes_MERGED].then#2 -> [K2Node_MacroInstance_1@RefreshSurfaceData_MERGED].Exec
+[K2Node_CallFunction_1@GetShapes_MERGED].then#2 -> [K2Node_TunnelBoundary_2].Exec
+[K2Node_CallFunction_2@GetShapes_MERGED].then -> [K2Node_CallFunction_1@GetShapes_MERGED].execute
+[K2Node_CallFunction_36741@RefreshSurfaceData_MERGED].ReturnValue -> [K2Node_IfThenElse_7@RefreshSurfaceData_MERGED].Condition
+[K2Node_CallFunction_3@GetShapes_MERGED].ReturnValue -> [K2Node_CallFunction_0@GetShapes_MERGED].Location
+[K2Node_CallFunction_3@GetShapes_MERGED].ReturnValue -> [K2Node_MakeStruct_1@GetShapes_MERGED].Transform_2_3C5173B943C650ED7788728694A03263_Location
+[K2Node_CallFunction_3@GetShapes_MERGED].ReturnValue#2 -> [K2Node_IfThenElse_0@UserConstructionScript_MERGED].Condition
+[K2Node_CallFunction_4@GetShapes_MERGED].ReturnValue -> [K2Node_CallFunction_0@GetShapes_MERGED].Rotation
+[K2Node_CallFunction_4@GetShapes_MERGED].ReturnValue -> [K2Node_MakeStruct_1@GetShapes_MERGED].Transform_2_3C5173B943C650ED7788728694A03263_Rotation
+[K2Node_CallFunction_4@GetShapes_MERGED].X -> [K2Node_CallFunction_3@GetShapes_MERGED].B
+[K2Node_CallFunction_563@RefreshSurfaceData_MERGED].ReturnValue -> [K2Node_AssignmentStatement_7@RefreshSurfaceData_MERGED].Value
+[K2Node_CallFunction_5@GetShapes_MERGED].ReturnValue -> [K2Node_PromotableOperator_0@GetShapes_MERGED].A
+[K2Node_CallFunction_7@GetShapes_MERGED].X -> [K2Node_PromotableOperator_1@GetShapes_MERGED].A#2
+[K2Node_ExecutionSequence_8@RefreshSurfaceData_MERGED].then_0 -> [K2Node_TunnelBoundary_0].LoopBody
+[K2Node_ExecutionSequence_8@RefreshSurfaceData_MERGED].then_0 -> [K2Node_Tunnel_1@RefreshSurfaceData_MERGED].LoopBody
+[K2Node_ExecutionSequence_8@RefreshSurfaceData_MERGED].then_1 -> [K2Node_AssignmentStatement_7@RefreshSurfaceData_MERGED].execute
+[K2Node_FunctionEntry_0@GetShapes_MERGED].Material -> [K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].K2Node_Event_Material
+[K2Node_FunctionEntry_0@GetShapes_MERGED].ZPosition -> [K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].K2Node_Event_ZPosition
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then -> [K2Node_CallFunction_2@GetShapes_MERGED].execute
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#2 -> [K2Node_FunctionResult_0@GetShapes_MERGED].execute
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#3 -> [K2Node_FunctionResult_0@GetShapes_MERGED].execute#2
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#4 -> [K2Node_CallFunction_1@GetShapes_MERGED].execute#2
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#5 -> [K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].execute
+[K2Node_FunctionEntry_0@GetShapes_MERGED].then#6 -> [K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].execute#2
+[K2Node_GetArrayItem_0@RefreshSurfaceData_MERGED].Output -> [K2Node_Tunnel_1@RefreshSurfaceData_MERGED].Array Element
+[K2Node_IfThenElse_0@UserConstructionScript_MERGED].else -> [K2Node_AddComponent_0@UserConstructionScript_MERGED].execute
+[K2Node_IfThenElse_0@UserConstructionScript_MERGED].then -> [K2Node_AddComponent_1@UserConstructionScript_MERGED].execute
+[K2Node_IfThenElse_7@RefreshSurfaceData_MERGED].else -> [K2Node_TunnelBoundary_1].Completed
+[K2Node_IfThenElse_7@RefreshSurfaceData_MERGED].else -> [K2Node_Tunnel_1@RefreshSurfaceData_MERGED].Completed
+[K2Node_IfThenElse_7@RefreshSurfaceData_MERGED].then -> [K2Node_AssignmentStatement_25@RefreshSurfaceData_MERGED].execute
+[K2Node_MacroInstance_1@RefreshSurfaceData_MERGED].Array Element -> [K2Node_CallFunction_2@GetShapes_MERGED].self
+[K2Node_MacroInstance_1@RefreshSurfaceData_MERGED].LoopBody -> [K2Node_CallFunction_2@GetShapes_MERGED].execute#2
+[K2Node_MakeArray_1@GetShapes_MERGED].Array -> [K2Node_FunctionResult_0@GetShapes_MERGED].Shapes
+[K2Node_MakeStruct_1@GetShapes_MERGED].BS_SDFShape -> [K2Node_MakeArray_1@GetShapes_MERGED].[0]
+[K2Node_PromotableOperator_0@GetShapes_MERGED].ReturnValue -> [K2Node_CallFunction_7@GetShapes_MERGED].InVec
+[K2Node_PromotableOperator_0@GetShapes_MERGED].ReturnValue -> [K2Node_MakeStruct_1@GetShapes_MERGED].Transform_2_3C5173B943C650ED7788728694A03263_Scale
+[K2Node_PromotableOperator_1@GetShapes_MERGED].ReturnValue -> [K2Node_IfThenElse_0@UserConstructionScript_MERGED].Condition
+[K2Node_PromotableOperator_1@GetShapes_MERGED].ReturnValue#2 -> [K2Node_MakeStruct_1@GetShapes_MERGED].Radius_7_46B358544B40D1660466C3BCF9FBB9C6
+[K2Node_PureAssignmentStatement_0].ReturnValue -> [K2Node_AddComponent_0@UserConstructionScript_MERGED].RelativeTransform
+[K2Node_PureAssignmentStatement_1].ReturnValue -> [K2Node_AddComponent_1@UserConstructionScript_MERGED].RelativeTransform
+[K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].then -> [K2Node_CallFunction_0@GetShapes_MERGED].execute#2
+[K2Node_SetVariableOnPersistentFrame_0@PrepareMaterial].then#2 -> [K2Node_CallFunction_0@GetShapes_MERGED].execute#3
+[K2Node_TemporaryVariable_0].Variable -> [K2Node_PureAssignmentStatement_0].Variable
+[K2Node_TemporaryVariable_1].Variable -> [K2Node_PureAssignmentStatement_1].Variable
+[K2Node_TemporaryVariable_31@RefreshSurfaceData_MERGED].Variable -> [K2Node_AssignmentStatement_24@RefreshSurfaceData_MERGED].Variable
+[K2Node_TemporaryVariable_31@RefreshSurfaceData_MERGED].Variable -> [K2Node_AssignmentStatement_25@RefreshSurfaceData_MERGED].Variable
+[K2Node_TemporaryVariable_31@RefreshSurfaceData_MERGED].Variable -> [K2Node_CallArrayFunction_0].Index
+[K2Node_TemporaryVariable_31@RefreshSurfaceData_MERGED].Variable -> [K2Node_GetArrayItem_0@RefreshSurfaceData_MERGED].Dimension 1
+[K2Node_TemporaryVariable_31@RefreshSurfaceData_MERGED].Variable -> [K2Node_Tunnel_1@RefreshSurfaceData_MERGED].Array Index
+[K2Node_TemporaryVariable_4@RefreshSurfaceData_MERGED].Variable -> [K2Node_AssignmentStatement_23@RefreshSurfaceData_MERGED].Variable
+[K2Node_TemporaryVariable_4@RefreshSurfaceData_MERGED].Variable -> [K2Node_AssignmentStatement_25@RefreshSurfaceData_MERGED].Value
+[K2Node_TemporaryVariable_4@RefreshSurfaceData_MERGED].Variable -> [K2Node_AssignmentStatement_7@RefreshSurfaceData_MERGED].Variable
+[K2Node_TemporaryVariable_4@RefreshSurfaceData_MERGED].Variable -> [K2Node_CallFunction_36741@RefreshSurfaceData_MERGED].A
+[K2Node_TemporaryVariable_4@RefreshSurfaceData_MERGED].Variable -> [K2Node_CallFunction_563@RefreshSurfaceData_MERGED].A
+[K2Node_TunnelBoundary_0].LoopBody2 -> [K2Node_CallFunction_2@GetShapes_MERGED].execute#2
+[K2Node_TunnelBoundary_2].Exec2 -> [K2Node_TunnelBoundary_3].Exec
+[K2Node_TunnelBoundary_3].Exec2 -> [K2Node_AssignmentStatement_23@RefreshSurfaceData_MERGED].execute
+[K2Node_Tunnel_0@RefreshSurfaceData_MERGED].Array -> [K2Node_CallArrayFunction_836@RefreshSurfaceData_MERGED].TargetArray
+[K2Node_Tunnel_0@RefreshSurfaceData_MERGED].Array -> [K2Node_GetArrayItem_0@RefreshSurfaceData_MERGED].Array
+[K2Node_Tunnel_0@RefreshSurfaceData_MERGED].Exec -> [K2Node_AssignmentStatement_23@RefreshSurfaceData_MERGED].execute
+[K2Node_VariableGet_0@GetShapes_MERGED].Round -> [K2Node_CallFunction_0@GetShapes_MERGED].InSphereRadius
+[K2Node_VariableGet_1@UserConstructionScript_MERGED].Round -> [K2Node_CallFunction_3@GetShapes_MERGED].A
+[K2Node_VariableGet_1@UserConstructionScript_MERGED].Round -> [K2Node_PromotableOperator_1@GetShapes_MERGED].A
+[K2Node_VariableGet_2@UserConstructionScript_MERGED].Size -> [K2Node_CallFunction_4@GetShapes_MERGED].InVec
+[K2Node_VariableGet_2@UserConstructionScript_MERGED].Size -> [K2Node_CallFunction_6@UserConstructionScript_MERGED].InBoxExtent
+[K2Node_VariableGet_3@GetShapes_MERGED].Size -> [K2Node_CallFunction_0@GetShapes_MERGED].Scale
+[K2Node_VariableGet_3@GetShapes_MERGED].Size -> [K2Node_MakeStruct_1@GetShapes_MERGED].Transform_2_3C5173B943C650ED7788728694A03263_Scale
+[K2Node_VariableGet_3@GetShapes_MERGED].Size_X -> [K2Node_PromotableOperator_1@GetShapes_MERGED].B
+[K2Node_VariableGet_4@GetShapes_MERGED].Round -> [K2Node_MakeStruct_1@GetShapes_MERGED].Radius_7_46B358544B40D1660466C3BCF9FBB9C6
+[K2Node_VariableGet_4@GetShapes_MERGED].Round -> [K2Node_PromotableOperator_0@GetShapes_MERGED].B

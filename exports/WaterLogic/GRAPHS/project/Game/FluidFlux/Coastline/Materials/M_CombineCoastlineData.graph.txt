@@ -1,0 +1,232 @@
+﻿# /Game/FluidFlux/Coastline/Materials/M_CombineCoastlineData
+# класс: Material; происхождение: проект; узлов: 48; связей: 93; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_CombineCoastlineData] Material
+    BlendMode = BLEND_AlphaComposite
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    bTangentSpaceNormal = False
+    EditorX = 224
+    EditorY = 912
+    bCastRayTracedShadows = False
+    bUseTranslucencyVertexFog = False
+    BlendableOutputAlpha = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = C1BDC6C1401C147AD90A4E895C155D59
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="DefaultTexture",TextureReference="/Engine/EngineResources/DefaultTexture.DefaultTexture")
+    ReferencedDefaultTextures(0) = None
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ParameterOverviewExpansion = (("-12Global", True),("-12Global FluxData", True))
+    LightingGuid = BC1F4B5D423BD9C91AD9BCB9FD027EA7
+    EditorOnlyData <- M_CombineCoastlineDataEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_CombineCoastlineDataEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    ParameterGroupData(4) = (GroupName="None")
+    ParameterGroupData(5) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionAppendVector_1
+    Opacity <- MaterialExpressionOneMinus_0
+    OpacityMask <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionTextureSample_1
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_5
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionTextureProperty_4
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionTextureProperty_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionSine_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_1
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_2
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_3
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_4
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_2
+    ExpressionCollection <- MaterialExpressionTextureSample_2
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_1
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionMultiply_9
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.500000
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    ConstB = 0.500000
+    A <- MaterialExpressionMultiply_5
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    ConstB = -0.010000
+    A <- MaterialExpressionMultiply_9
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    A <- MaterialExpressionComponentMask_1
+    B <- MaterialExpressionComponentMask_1
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionAdd_0
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionTextureProperty_0
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    Input <- MaterialExpressionTextureCoordinate_1
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 30.000000
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    R = 1.000000
+    G = 1.000000
+[MaterialExpressionConstant2Vector_1] MaterialExpressionConstant2Vector
+    R = 9.000000
+    G = 9.000000
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    ConstA = 1.000000
+    ConstB = 0.500000
+    Alpha <- MaterialExpressionTextureSample_1
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_NormalMap.MF_NormalMap'"
+    FunctionInputs(6) = (ExpressionInputId=E61E30D6405AA58CD5149AA5063F51E3,Input=(OutputIndex=-1,InputName="ChannelG"))
+    FunctionInputs(7) = (ExpressionInputId=C8E1C00F472104963E4031B04327C079,Input=(OutputIndex=-1,InputName="ChannelB"))
+    FunctionOutputs(0) = (ExpressionOutputId=8844D5BA424A212E6BEEE289BE4BD630,Output=(OutputName="Height"))
+    FunctionOutputs(1) = (ExpressionOutputId=81B4D4824CFD06FACBCE9DB19BF2E230,Output=(OutputName="Normal"))
+    FunctionOutputs(2) = (ExpressionOutputId=09F7A8CE4821019FF9F6E2B0FC27C212,Output=(OutputName="Blur"))
+    FunctionOutputs(3) = (ExpressionOutputId=A666A5FF4B8EF04CB0EC16A99861F2CE,Output=(OutputName="Slope"))
+    Outputs(0) = (OutputName="Height")
+    Outputs(1) = (OutputName="Normal")
+    Outputs(2) = (OutputName="Blur")
+    Outputs(3) = (OutputName="Slope")
+    FunctionInputs(0) <- MaterialExpressionTextureObjectParameter_1
+    FunctionInputs(1) <- MaterialExpressionConstant_1
+    FunctionInputs(2) <- MaterialExpressionMultiply_2
+    FunctionInputs(3) <- MaterialExpressionTextureCoordinate_5
+    FunctionInputs(4) <- MaterialExpressionStaticBool_1
+    FunctionInputs(5) <- MaterialExpressionStaticBool_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_RectBlend.MF_RectBlend'"
+    FunctionOutputs(0) = (ExpressionOutputId=6F6243284996842313F22AA478138A2A,Output=(OutputName="Inside"))
+    FunctionOutputs(1) = (ExpressionOutputId=F5B663E34FCB2F6305CA6295342536C2,Output=(OutputName="Blend"))
+    Outputs(0) = (OutputName="Inside")
+    Outputs(1) = (OutputName="Blend")
+    FunctionInputs(0) <- MaterialExpressionTextureCoordinate_0
+    FunctionInputs(1) <- MaterialExpressionMultiply_10
+[MaterialExpressionMax_0] MaterialExpressionMax
+    ConstB = 0.050000
+    A <- MaterialExpressionMultiply_8
+    B <- MaterialExpressionConstant_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 0.500000
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.000000
+    A <- MaterialExpressionNormalize_0
+    B <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    ConstB = 0.100000
+    A <- MaterialExpressionAppendVector_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    A <- MaterialExpressionMax_0
+    B <- MaterialExpressionTextureProperty_4
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    ConstB = 0.500000
+    A <- MaterialExpressionSine_0
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    ConstB = 3.000000
+    A <- MaterialExpressionComponentMask_2
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    A <- MaterialExpressionConstant2Vector_1
+    B <- MaterialExpressionAdd_2
+[MaterialExpressionMultiply_9] MaterialExpressionMultiply
+    ConstB = -1.000000
+    A <- MaterialExpressionTextureSample_2
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionComponentMask_0
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionTextureSample_0
+[MaterialExpressionSine_0] MaterialExpressionSine
+    Input <- MaterialExpressionMultiply_6
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureCoordinate_1] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureCoordinate_2] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureCoordinate_5] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "DistanceMap"
+    ExpressionGUID = C0D4FF5B46D39EFAAC6012A3B5AB6C53
+    bCollapsed = True
+[MaterialExpressionTextureObjectParameter_1] MaterialExpressionTextureObjectParameter
+    ParameterName = "DistanceMap"
+    ExpressionGUID = 34B1ADB549D6A135FE179A99BEB0594F
+    bCollapsed = True
+[MaterialExpressionTextureObjectParameter_2] MaterialExpressionTextureObjectParameter
+    ParameterName = "CoastEraseMap"
+    ExpressionGUID = 82A570804B8E168C2EB78199F8D9C4B3
+    bCollapsed = True
+[MaterialExpressionTextureObjectParameter_3] MaterialExpressionTextureObjectParameter
+    ParameterName = "WaveScaleMap"
+    ExpressionGUID = 7B48371943A70AEDBBA1E983EFA8C64F
+    bCollapsed = True
+[MaterialExpressionTextureObjectParameter_4] MaterialExpressionTextureObjectParameter
+    ParameterName = "DistanceMap"
+    ExpressionGUID = D6DCBBE7465D0F06723D318A904A4C23
+    bCollapsed = True
+[MaterialExpressionTextureObjectParameter_5] MaterialExpressionTextureObjectParameter
+    ParameterName = "DistanceMap"
+    ExpressionGUID = 6A8B24C8444FA826E2856480AD96B1E6
+    bCollapsed = True
+[MaterialExpressionTextureProperty_0] MaterialExpressionTextureProperty
+    TextureObject <- MaterialExpressionTextureObjectParameter_0
+[MaterialExpressionTextureProperty_4] MaterialExpressionTextureProperty
+    Property = TMTM_TexelSize
+    TextureObject <- MaterialExpressionTextureObjectParameter_5
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    TextureObject <- MaterialExpressionTextureObjectParameter_3
+[MaterialExpressionTextureSample_1] MaterialExpressionTextureSample
+    TextureObject <- MaterialExpressionTextureObjectParameter_2
+[MaterialExpressionTextureSample_2] MaterialExpressionTextureSample
+    Coordinates <- MaterialExpressionTextureCoordinate_2
+    TextureObject <- MaterialExpressionTextureObjectParameter_4
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

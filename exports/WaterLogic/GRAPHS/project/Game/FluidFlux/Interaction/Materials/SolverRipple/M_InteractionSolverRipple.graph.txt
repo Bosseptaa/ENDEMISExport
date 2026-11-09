@@ -1,0 +1,249 @@
+﻿# /Game/FluidFlux/Interaction/Materials/SolverRipple/M_InteractionSolverRipple
+# класс: Material; происхождение: проект; узлов: 41; связей: 81; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:372
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_InteractionSolverRipple] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    EditorX = -16
+    EditorY = -59
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = DF0AFE4D41126B459F83F9B73BB701A5
+    ReferencedTextureGuids(0) = B047E04B48C3D0EF7EAAEEA74BF7182A
+    ReferencedTextureGuids(1) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+    ReferencedDefaultTextures(3) = "/Script/Engine.TextureRenderTarget2D'/Game/1_Water/Textures/RT_DefaultWhite16.RT_DefaultWhite16'"
+    ReferencedDefaultTextures(4) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_SmoothNoise.T_SmoothNoise'"
+    ParameterOverviewExpansion = (("-12Global", True),("-12Global FluxData", True),("-12Global FluxInteraction", True),("-12Global FluxWorld", True),("-12Global Coastline", True))
+    LightingGuid = 4A6A03954D402294AC490390FEAE7A53
+    EditorOnlyData <- M_InteractionSolverRippleEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_InteractionSolverRippleEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    ParameterGroupData(4) = (GroupName="None")
+    ParameterGroupData(5) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_15
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_7
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionConstant2Vector_4
+    ExpressionCollection <- MaterialExpressionConstant2Vector_3
+    ExpressionCollection <- MaterialExpressionConstant2Vector_2
+    ExpressionCollection <- MaterialExpressionConstant2Vector_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_1
+    ExpressionCollection <- MaterialExpressionVectorParameter_1
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionAdd_8
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_7
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_8
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_9
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_10
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_7
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionViewProperty_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    A <- MaterialExpressionMultiply_6
+    B <- MaterialExpressionMultiply_5
+[MaterialExpressionAdd_8] MaterialExpressionAdd
+    A <- MaterialExpressionTextureCoordinate_1
+    B <- MaterialExpressionAppendVector_1
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    A <- MaterialExpressionVectorParameter_1
+    B <- MaterialExpressionVectorParameter_1
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+[MaterialExpressionConstant2Vector_1] MaterialExpressionConstant2Vector
+    R = -1.000000
+[MaterialExpressionConstant2Vector_2] MaterialExpressionConstant2Vector
+    R = 1.000000
+[MaterialExpressionConstant2Vector_3] MaterialExpressionConstant2Vector
+    G = -1.000000
+[MaterialExpressionConstant2Vector_4] MaterialExpressionConstant2Vector
+    G = 1.000000
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionConstant_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_PreviousState.MF_PreviousState'"
+    FunctionOutputs(0) = (ExpressionOutputId=752380A84A97E3D8B595EAB99010A2A0,Output=(OutputName="Height"))
+    FunctionOutputs(1) = (ExpressionOutputId=E7CBBC51408EE625A810BDABB617849A,Output=(OutputName="Velocity"))
+    FunctionOutputs(2) = (ExpressionOutputId=01DFF2B54687ED7DC913B39EE6B5B4BF,Output=(OutputName="Pressure"))
+    FunctionOutputs(3) = (ExpressionOutputId=BB50FDC44CD3A8D0464AAFAFF4C26D75,Output=(OutputName="Temperature"))
+    FunctionOutputs(4) = (ExpressionOutputId=A0C466C349967EB7CF12478CFAC9009C,Output=(OutputName="State"))
+    Outputs(0) = (OutputName="Height")
+    Outputs(1) = (OutputName="Velocity")
+    Outputs(2) = (OutputName="Pressure")
+    Outputs(3) = (OutputName="Temperature")
+    Outputs(4) = (OutputName="State")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_FluxInteractionMask.MF_FluxInteractionMask'"
+    FunctionOutputs(0) = (ExpressionOutputId=EAD549AE410C42868346C597A33035CF,Output=(OutputName="Mask"))
+    Outputs(0) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_6
+[MaterialExpressionMaterialFunctionCall_10] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_PreviousState.MF_PreviousState'"
+    FunctionOutputs(0) = (ExpressionOutputId=752380A84A97E3D8B595EAB99010A2A0,Output=(OutputName="Height"))
+    FunctionOutputs(1) = (ExpressionOutputId=E7CBBC51408EE625A810BDABB617849A,Output=(OutputName="Velocity"))
+    FunctionOutputs(2) = (ExpressionOutputId=01DFF2B54687ED7DC913B39EE6B5B4BF,Output=(OutputName="Pressure"))
+    FunctionOutputs(3) = (ExpressionOutputId=BB50FDC44CD3A8D0464AAFAFF4C26D75,Output=(OutputName="Temperature"))
+    FunctionOutputs(4) = (ExpressionOutputId=A0C466C349967EB7CF12478CFAC9009C,Output=(OutputName="State"))
+    Outputs(0) = (OutputName="Height")
+    Outputs(1) = (OutputName="Velocity")
+    Outputs(2) = (OutputName="Pressure")
+    Outputs(3) = (OutputName="Temperature")
+    Outputs(4) = (OutputName="State")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_4
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.MakeFloat4'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_7
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_8
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_9
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_10
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_TextureBorderFalloff.MF_TextureBorderFalloff'"
+    FunctionOutputs(0) = (ExpressionOutputId=CD9685564E6B5F048B4BDBA4AB7ED696,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMultiply_12
+    FunctionInputs(1) <- MaterialExpressionTextureCoordinate_0
+    FunctionInputs(2) <- MaterialExpressionScalarParameter_7
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_FluxInteractionUVToWorld.MF_FluxInteractionUVToWorld'"
+    FunctionOutputs(0) = (ExpressionOutputId=09EF4B34414D028671411F8E2CF51AE3,Output=(OutputName="World"))
+    FunctionOutputs(1) = (ExpressionOutputId=551C49EC423E491AAA708DBF1F9B7304,Output=(OutputName="Offset"))
+    Outputs(0) = (OutputName="World")
+    Outputs(1) = (OutputName="Offset")
+    FunctionInputs(0) <- MaterialExpressionTextureCoordinate_5
+[MaterialExpressionMaterialFunctionCall_7] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_PreviousState.MF_PreviousState'"
+    FunctionOutputs(0) = (ExpressionOutputId=752380A84A97E3D8B595EAB99010A2A0,Output=(OutputName="Height"))
+    FunctionOutputs(1) = (ExpressionOutputId=E7CBBC51408EE625A810BDABB617849A,Output=(OutputName="Velocity"))
+    FunctionOutputs(2) = (ExpressionOutputId=01DFF2B54687ED7DC913B39EE6B5B4BF,Output=(OutputName="Pressure"))
+    FunctionOutputs(3) = (ExpressionOutputId=BB50FDC44CD3A8D0464AAFAFF4C26D75,Output=(OutputName="Temperature"))
+    FunctionOutputs(4) = (ExpressionOutputId=A0C466C349967EB7CF12478CFAC9009C,Output=(OutputName="State"))
+    Outputs(0) = (OutputName="Height")
+    Outputs(1) = (OutputName="Velocity")
+    Outputs(2) = (OutputName="Pressure")
+    Outputs(3) = (OutputName="Temperature")
+    Outputs(4) = (OutputName="State")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_1
+[MaterialExpressionMaterialFunctionCall_8] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_PreviousState.MF_PreviousState'"
+    FunctionOutputs(0) = (ExpressionOutputId=752380A84A97E3D8B595EAB99010A2A0,Output=(OutputName="Height"))
+    FunctionOutputs(1) = (ExpressionOutputId=E7CBBC51408EE625A810BDABB617849A,Output=(OutputName="Velocity"))
+    FunctionOutputs(2) = (ExpressionOutputId=01DFF2B54687ED7DC913B39EE6B5B4BF,Output=(OutputName="Pressure"))
+    FunctionOutputs(3) = (ExpressionOutputId=BB50FDC44CD3A8D0464AAFAFF4C26D75,Output=(OutputName="Temperature"))
+    FunctionOutputs(4) = (ExpressionOutputId=A0C466C349967EB7CF12478CFAC9009C,Output=(OutputName="State"))
+    Outputs(0) = (OutputName="Height")
+    Outputs(1) = (OutputName="Velocity")
+    Outputs(2) = (OutputName="Pressure")
+    Outputs(3) = (OutputName="Temperature")
+    Outputs(4) = (OutputName="State")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_2
+[MaterialExpressionMaterialFunctionCall_9] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_PreviousState.MF_PreviousState'"
+    FunctionOutputs(0) = (ExpressionOutputId=752380A84A97E3D8B595EAB99010A2A0,Output=(OutputName="Height"))
+    FunctionOutputs(1) = (ExpressionOutputId=E7CBBC51408EE625A810BDABB617849A,Output=(OutputName="Velocity"))
+    FunctionOutputs(2) = (ExpressionOutputId=01DFF2B54687ED7DC913B39EE6B5B4BF,Output=(OutputName="Pressure"))
+    FunctionOutputs(3) = (ExpressionOutputId=BB50FDC44CD3A8D0464AAFAFF4C26D75,Output=(OutputName="Temperature"))
+    FunctionOutputs(4) = (ExpressionOutputId=A0C466C349967EB7CF12478CFAC9009C,Output=(OutputName="State"))
+    Outputs(0) = (OutputName="Height")
+    Outputs(1) = (OutputName="Velocity")
+    Outputs(2) = (OutputName="Pressure")
+    Outputs(3) = (OutputName="Temperature")
+    Outputs(4) = (OutputName="State")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_3
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_15
+    B <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionScalarParameter_4
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionViewProperty_4
+[MaterialExpressionMultiply_15] MaterialExpressionMultiply
+    ConstA = 1.000000
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    ConstB = 0.500000
+    A <- MaterialExpressionStaticSwitchParameter_0
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    A <- MaterialExpressionSubtract_2
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    ConstB = 4.000000
+    A <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "WaveTravelSpeed"
+    ExpressionGUID = F59041B44D3417421869D6B20B2C9D94
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    DefaultValue = 0.990000
+    ParameterName = "WaveDamping"
+    ExpressionGUID = 3AC8A43744555C5E433E91A0DDE48386
+[MaterialExpressionScalarParameter_7] MaterialExpressionScalarParameter
+    DefaultValue = 2.000000
+    SliderMin = 1.000000
+    SliderMax = 100.000000
+    ParameterName = "BorderFalloff"
+    ExpressionGUID = 8E5E2C26425649975CE8F284597D9B53
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UseTravelSpeed"
+    ExpressionGUID = B5B867B347AE87A33A910EAC6907B983
+    A <- MaterialExpressionAdd_0
+    B <- MaterialExpressionDotProduct_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    A <- MaterialExpressionMultiply_4
+    B <- MaterialExpressionTextureSampleParameter2D_7
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    A <- MaterialExpressionDotProduct_0
+    B <- MaterialExpressionMultiply_6
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureCoordinate_1] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureCoordinate_5] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureSampleParameter2D_7] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "PreviousHeight2"
+    ExpressionGUID = 73638FB846087DCE31C10A857AC568F2
+    Coordinates <- MaterialExpressionAdd_8
+[MaterialExpressionVectorParameter_1] MaterialExpressionVectorParameter
+    ParameterName = "WorldOffset"
+    ExpressionGUID = 26AA93EC4D00283FF069F6B6D1951867
+[MaterialExpressionViewProperty_4] MaterialExpressionViewProperty
+    Property = MEVP_ViewSize
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

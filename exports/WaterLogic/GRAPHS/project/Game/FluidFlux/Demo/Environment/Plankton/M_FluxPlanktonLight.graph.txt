@@ -1,0 +1,155 @@
+﻿# /Game/FluidFlux/Demo/Environment/Plankton/M_FluxPlanktonLight
+# класс: Material; происхождение: проект; узлов: 32; связей: 64; HLSL: 0; причина: папка /Game/FluidFlux; тело:12
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_FluxPlanktonLight] Material
+    BlendMode = BLEND_Additive
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    TranslucencyPass = MTP_BeforeDOF
+    bUsedWithNiagaraSprites = True
+    EditorX = 1408
+    EditorY = -32
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 02B11BA248140476A62AA48611F825B8
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = C684454A46C7B9810CF4F3A0F3843CB6
+    EditorOnlyData <- M_FluxPlanktonLightEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_FluxPlanktonLightEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionSaturate_0
+    Opacity <- MaterialExpressionSaturate_2
+    WorldPositionOffset <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionSaturate_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionSphereMask_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionDepthFade_0
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_2
+    ExpressionCollection <- MaterialExpressionPower_0
+    ExpressionCollection <- MaterialExpressionMultiply_13
+    ExpressionCollection <- MaterialExpressionSaturate_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionMultiply_7
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = -0.013000
+    A <- MaterialExpressionOneMinus_0
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.500000
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 4000.000000
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+    R = 2000.000000
+[MaterialExpressionConstant3Vector_2] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=3.000000,B=9.000000,A=0.000000)
+[MaterialExpressionDepthFade_0] MaterialExpressionDepthFade
+    OpacityDefault = 2.000000
+    FadeDistanceDefault = 50.000000
+    bCollapsed = True
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstA = 0.016000
+    B <- MaterialExpressionMax_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionConstant3Vector_2
+    B <- MaterialExpressionVectorParameter_0
+    Alpha <- MaterialExpressionPower_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Plankton/MF_NightVisibility.MF_NightVisibility'"
+    FunctionInputs(0) = (ExpressionInputId=742C34F04C635029E41A18A63F6CE21D,Input=(OutputIndex=-1,InputName="Normal"))
+    FunctionInputs(1) = (ExpressionInputId=588326CE476421263980D19F1F2105F7,Input=(OutputIndex=-1,InputName="Treshold"))
+    FunctionOutputs(0) = (ExpressionOutputId=156186AF4C4496689B7F579ED7F94B8B,Output=(OutputName="Scale"))
+    FunctionOutputs(1) = (ExpressionOutputId=A7F4E53B45911877B3BFCE81EA61DCDD,Output=(OutputName="Flag"))
+    Outputs(0) = (OutputName="Scale")
+    Outputs(1) = (OutputName="Flag")
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Plankton/MF_PlanktonWPO.MF_PlanktonWPO'"
+    FunctionOutputs(0) = (ExpressionOutputId=2CAAAFBF41BC001BC0EBE28F7F62B716,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMultiply_7
+    FunctionInputs(1) <- MaterialExpressionScalarParameter_3
+    FunctionInputs(2) <- MaterialExpressionConstant_6
+    FunctionInputs(3) <- MaterialExpressionConstant_3
+[MaterialExpressionMax_0] MaterialExpressionMax
+    ConstB = 0.000400
+    A <- MaterialExpressionAdd_0
+[MaterialExpressionMin_0] MaterialExpressionMin
+    ConstB = 3.000000
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    A <- MaterialExpressionDivide_0
+    B <- MaterialExpressionSaturate_4
+[MaterialExpressionMultiply_13] MaterialExpressionMultiply
+    ConstB = 1.500000
+    A <- MaterialExpressionSphereMask_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstA = 0.100000
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionMin_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionDepthFade_0
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    ConstB = -0.800000
+    A <- MaterialExpressionScalarParameter_3
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionSphereMask_0
+[MaterialExpressionPower_0] MaterialExpressionPower
+    ConstExponent = 3.000000
+    Base <- MaterialExpressionSphereMask_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionMultiply_2
+[MaterialExpressionSaturate_2] MaterialExpressionSaturate
+    Input <- MaterialExpressionMultiply_4
+[MaterialExpressionSaturate_4] MaterialExpressionSaturate
+    Input <- MaterialExpressionMultiply_13
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.500000
+    ParameterName = "Radius"
+    ExpressionGUID = 581CBC834BD23C6C52B6EB852681C440
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    ParameterName = "Hardness"
+    ExpressionGUID = F67A79E4403DD21FACC544A3E0D162F3
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = 17.000000
+    ParameterName = "Scale"
+    ExpressionGUID = 2572F5AE4AEB31AD5AFB67B41F575AE6
+[MaterialExpressionSphereMask_0] MaterialExpressionSphereMask
+    A <- MaterialExpressionTextureCoordinate_0
+    B <- MaterialExpressionConstant_1
+    Radius <- MaterialExpressionScalarParameter_0
+    Hardness <- MaterialExpressionScalarParameter_1
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.200000,G=6.000000,B=4.000000,A=0.005000)
+    ParameterName = "Color"
+    ExpressionGUID = AE515D3D4DE41C5A43D82F9F7813A944
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

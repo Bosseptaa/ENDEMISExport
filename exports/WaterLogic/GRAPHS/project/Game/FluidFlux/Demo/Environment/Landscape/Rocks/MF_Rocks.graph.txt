@@ -1,0 +1,182 @@
+﻿# /Game/FluidFlux/Demo/Environment/Landscape/Rocks/MF_Rocks
+# класс: MaterialFunction; происхождение: проект; узлов: 30; связей: 63; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_Rocks] MaterialFunction
+    StateId = BCCE74614D6AE5978C8B9897D1BEF2D1
+    CombinedOutputTypes = 2063
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_9
+    EditorOnlyData <- MF_RocksEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_RocksEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMakeMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionTextureSample_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_3
+    ExpressionCollection <- MaterialExpressionMultiply_9
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMultiply_32
+    ExpressionCollection <- MaterialExpressionScalarParameter_12
+    ExpressionCollection <- MaterialExpressionAppendVector_4
+    ExpressionCollection <- MaterialExpressionAppendVector_5
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionAdd_7
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionTextureSample_2
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_9
+    ExpressionCollection <- MaterialExpressionScalarParameter_5
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_6
+    ExpressionCollection <- MaterialExpressionConstant_7
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+[MaterialExpressionAdd_7] MaterialExpressionAdd
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    A <- MaterialExpressionTextureSample_1
+    B <- MaterialExpressionMultiply_32
+[MaterialExpressionAppendVector_4] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    A <- MaterialExpressionScalarParameter_12
+    B <- MaterialExpressionScalarParameter_12
+[MaterialExpressionAppendVector_5] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    A <- MaterialExpressionAppendVector_4
+    B <- MaterialExpressionConstant_5
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    Input <- MaterialExpressionWorldPosition_0
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.005000
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+[MaterialExpressionConstant_7] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Layer"
+    bLastPreviewed = True
+    Id = CF42BAE74453748C3C05D793BB9A7D40
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    bCollapsed = True
+    A <- MaterialExpressionMakeMaterialAttributes_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Height"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = BFA49F814B94BB333C9EE68444E1A53A
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    bCollapsed = True
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionMakeMaterialAttributes_0] MaterialExpressionMakeMaterialAttributes
+    Metallic = (OutputIndex=3,Mask=1,MaskB=1)
+    OpacityMask = (OutputIndex=1,Mask=1,MaskR=1)
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    BaseColor <- MaterialExpressionTextureSample_0
+    Specular <- MaterialExpressionMultiply_0
+    Roughness <- MaterialExpressionSubtract_0
+    Normal <- MaterialExpressionNormalize_0
+[MaterialExpressionMaterialFunctionCall_9] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/Mapping/MF_BiplanarTopUV.MF_BiplanarTopUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=0AA227204053027E2048B9B17DE29614,Output=(OutputName="UV"))
+    FunctionOutputs(1) = (ExpressionOutputId=649CE2F0495FE39D081744A2796D5B7E,Output=(OutputName="DDX"))
+    FunctionOutputs(2) = (ExpressionOutputId=3D0001EB40F41F2A9E83C6886CB97AB4,Output=(OutputName="DDY"))
+    FunctionOutputs(3) = (ExpressionOutputId=EB29B043463698B29765C5921B334900,Output=(OutputName="UV_1"))
+    FunctionOutputs(4) = (ExpressionOutputId=549B9AE749D9689D04D75E99A19D8FB9,Output=(OutputName="UV_2"))
+    FunctionOutputs(5) = (ExpressionOutputId=81777A0240E1A3FEB1D45595024F7F42,Output=(OutputName="Weights"))
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    Outputs(0) = (OutputName="UV")
+    Outputs(1) = (OutputName="DDX")
+    Outputs(2) = (OutputName="DDY")
+    Outputs(3) = (OutputName="UV_1")
+    Outputs(4) = (OutputName="UV_2")
+    Outputs(5) = (OutputName="Weights")
+    FunctionInputs(0) <- MaterialExpressionVertexNormalWS_6
+    FunctionInputs(1) <- MaterialExpressionScalarParameter_5
+    FunctionInputs(2) <- MaterialExpressionConstant_7
+    FunctionInputs(3) <- MaterialExpressionMultiply_9
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 0.200000
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionConstant_1
+[MaterialExpressionMultiply_32] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    A <- MaterialExpressionTextureSample_2
+    B <- MaterialExpressionAppendVector_5
+[MaterialExpressionMultiply_9] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    A <- MaterialExpressionWorldPosition_3
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    VectorInput <- MaterialExpressionAdd_7
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.000850
+    ParameterName = "RocksTileSize"
+    ExpressionGUID = E4B2351448A3A03B1E40CF8C04ACC4BA
+    Group = "Rocks"
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.500000
+    ParameterName = "RocksRoughness"
+    ExpressionGUID = 1F6A1BC7402319C6FF24BB8EEF1FEE7C
+    Group = "Rocks"
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+[MaterialExpressionScalarParameter_12] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "RocksDetailNormal"
+    ExpressionGUID = 5CC8B2F34EA67B2299C77BB1E7C05E40
+    Group = "Rocks"
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+[MaterialExpressionScalarParameter_5] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "ZScale"
+    ExpressionGUID = ECC1819B450E9667733819B5916AE40E
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstA = 0.400000
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    A <- MaterialExpressionScalarParameter_1
+    B <- MaterialExpressionTextureSample_0
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    MipValueMode = TMVM_Derivative
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Rocks/T_CliffRockTile_03_D.T_CliffRockTile_03_D'"
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    Coordinates <- MaterialExpressionMaterialFunctionCall_9
+    CoordinatesDX <- MaterialExpressionMaterialFunctionCall_9
+    CoordinatesDY <- MaterialExpressionMaterialFunctionCall_9
+[MaterialExpressionTextureSample_1] MaterialExpressionTextureSample
+    MipValueMode = TMVM_Derivative
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Rocks/T_CliffRock_03_N.T_CliffRock_03_N'"
+    SamplerType = SAMPLERTYPE_Normal
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    Coordinates <- MaterialExpressionMaterialFunctionCall_9
+    CoordinatesDX <- MaterialExpressionMaterialFunctionCall_9
+    CoordinatesDY <- MaterialExpressionMaterialFunctionCall_9
+[MaterialExpressionTextureSample_2] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Rocks/T_CliffRock_03_N.T_CliffRock_03_N'"
+    SamplerType = SAMPLERTYPE_Normal
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+    Coordinates <- MaterialExpressionMultiply_1
+[MaterialExpressionVertexNormalWS_6] MaterialExpressionVertexNormalWS
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+[MaterialExpressionWorldPosition_3] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_Rocks'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

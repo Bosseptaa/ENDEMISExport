@@ -1,0 +1,80 @@
+﻿# /Game/FluidFlux/Waves/Blueprints/BPI_FluxWaveRenderer
+# класс: Blueprint; происхождение: проект; узлов: 17; связей: 17; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:154
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BPI_FluxWaveRenderer] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/CoreUObject.Interface'"
+    BlueprintType = BPTYPE_Interface
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = ""
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BPI_FluxWaveRenderer_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 602DB3D347BC722AED82BE81A6A43885
+    FunctionGraphs(0) <- SetWaveTextureAndArea
+    FunctionGraphs(1) <- SetWaveTexture
+    FunctionGraphs(2) <- SetWaveProfile
+    FunctionGraphs(3) <- SetSurfaceHeight
+    FunctionGraphs(4) <- GetSurfaceHeight
+    FunctionGraphs(5) <- SetNiagaraParameters
+    FunctionGraphs(6) <- SetMaterialParameters
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[SetWaveTextureAndArea] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 2141B50B4F4CE0E2358593B3C15561AA
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@SetWaveTextureAndArea] K2Node_FunctionEntry
+[SetWaveTexture] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = CE36C2A445BAEBC3F24453BF6834CDB9
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@SetWaveTexture] K2Node_FunctionEntry
+[SetWaveProfile] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 581BA49E493E37E77408098983D713A6
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@SetWaveProfile] K2Node_FunctionEntry
+[SetSurfaceHeight] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = FA1E49014836E873D9163F9288AD8FCE
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@SetSurfaceHeight] K2Node_FunctionEntry
+[GetSurfaceHeight] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 2F0CDC6F43E9F7F558769186ABE46C40
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetSurfaceHeight] K2Node_FunctionEntry
+[K2Node_FunctionResult_0] K2Node_FunctionResult (вызов: GetSurfaceHeight)
+    bIsEditable = True
+    вход Height = 0.0
+    вход Height = 0.0
+[SetNiagaraParameters] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = FD9C6C21472C50548A0F3699E923816F
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@SetNiagaraParameters] K2Node_FunctionEntry
+[SetMaterialParameters] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 2B12A86A4C9A406A21333BBED4815431
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@SetMaterialParameters] K2Node_FunctionEntry (вызов: SetMaterialParameters)
+    MetaData = (ToolTip=NSLOCTEXT("", "AC0D0BE94628A409F58E02A761FE053F", "Update interaction area texture."))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 1275199488
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+
+## СВЯЗИ
+[K2Node_FunctionEntry_0@SetMaterialParameters].then -> [K2Node_FunctionResult_0].execute

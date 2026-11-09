@@ -1,0 +1,253 @@
+﻿# /Game/FluidFlux/Tools/ScenePainter/Blueprints/BP_FluxWorldBrush
+# класс: Blueprint; происхождение: проект; узлов: 57; связей: 109; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxWorldBrush] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    HideCategories(0) = "Replication"
+    HideCategories(1) = "Rendering"
+    HideCategories(2) = "Collision"
+    HideCategories(3) = "Input"
+    HideCategories(4) = "Actor"
+    HideCategories(5) = "LOD"
+    HideCategories(6) = "Cooking"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxWorldBrush_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Replication"
+    CategorySorting(3) = "Rendering"
+    CategorySorting(4) = "Actor"
+    CategorySorting(5) = "Collision"
+    CategorySorting(6) = "LOD"
+    CategorySorting(7) = "Utilities"
+    CategorySorting(8) = "Game"
+    CategorySorting(9) = "Input"
+    CategorySorting(10) = "Shape"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Tools/ScenePainter/Blueprints/BP_FluxWorldBrush.BP_FluxWorldBrush:EventGraph",SavedViewOffset=(X=-401.606567,Y=-381.699493),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Tools/ScenePainter/Blueprints/BP_FluxWorldBrush.BP_FluxWorldBrush:Draw",SavedViewOffset=(X=107.686333,Y=-276.705017),SavedZoomAmount=0.675000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Tools/ScenePainter/Blueprints/BP_FluxWorldBrush.BP_FluxWorldBrush:UserConstructionScript",SavedViewOffset=(X=1283.987061,Y=170.267715),SavedZoomAmount=1.000000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxWorldBrush_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 86D9A2D94B2CA5183415EE9102458E65
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- Draw
+    FunctionGraphs(2) <- Repaint
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 2AB802394C9EC62FE5178B8D26466024
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_MacroInstance_0
+    Nodes(2) <- K2Node_VariableGet_17
+    Nodes(3) <- K2Node_CallFunction_6
+    Nodes(4) <- K2Node_VariableGet_4
+    Nodes(5) <- K2Node_PromotableOperator_0
+    Nodes(6) <- K2Node_CallFunction_7
+    Nodes(7) <- K2Node_PromotableOperator_1
+    Nodes(8) <- K2Node_VariableGet_10
+    Nodes(9) <- K2Node_CallFunction_8
+    Nodes(10) <- K2Node_VariableGet_5
+    Nodes(11) <- K2Node_VariableGet_12
+    Nodes(12) <- K2Node_VariableGet_13
+    Nodes(13) <- K2Node_VariableGet_15
+    Nodes(14) <- K2Node_CallFunction_9
+    Nodes(15) <- K2Node_VariableGet_14
+    Nodes(16) <- K2Node_CallFunction_10
+    Nodes(17) <- K2Node_VariableGet_16
+    Nodes(18) <- K2Node_ExecutionSequence_0
+    Nodes(19) <- K2Node_CallFunction_13
+    Nodes(20) <- K2Node_VariableGet_20
+    Nodes(21) <- K2Node_CallFunction_15
+    Nodes(22) <- K2Node_Select_0
+    Nodes(23) <- K2Node_VariableGet_19
+    Nodes(24) <- K2Node_CallFunction_14
+    Nodes(25) <- K2Node_PromotableOperator_4
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_MacroInstance_0] K2Node_MacroInstance
+[K2Node_VariableGet_17] K2Node_VariableGet (переменная: SM_DebugSmall)
+[K2Node_CallFunction_6@UserConstructionScript] K2Node_CallFunction
+[K2Node_VariableGet_4@UserConstructionScript] K2Node_VariableGet
+[K2Node_PromotableOperator_0] K2Node_PromotableOperator (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    вход A = 1.000000
+[K2Node_CallFunction_7] K2Node_CallFunction (вызов: Conv_DoubleToVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_1] K2Node_PromotableOperator (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    вход A = 1.000000
+[K2Node_VariableGet_10] K2Node_VariableGet (переменная: SM_DebugBig)
+[K2Node_CallFunction_8] K2Node_CallFunction (вызов: SetCustomPrimitiveDataFloat @ /Script/CoreUObject.Class)
+    вход DataIndex = 5
+[K2Node_VariableGet_5@UserConstructionScript] K2Node_VariableGet
+[K2Node_VariableGet_12@UserConstructionScript] K2Node_VariableGet
+[K2Node_VariableGet_13] K2Node_VariableGet (переменная: SM_DebugBig)
+[K2Node_VariableGet_15] K2Node_VariableGet (переменная: DefaultSceneRoot)
+[K2Node_CallFunction_9] K2Node_CallFunction (вызов: K2_SetWorldRotation @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    вход NewRotation = 0, 0, 0
+    вход NewRotation_Roll = 0.0
+    вход NewRotation_Pitch = 0.0
+    вход bSweep = false
+    вход bTeleport = false
+[K2Node_VariableGet_14@UserConstructionScript] K2Node_VariableGet
+[K2Node_CallFunction_10] K2Node_CallFunction (вызов: K2_GetComponentRotation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_16] K2Node_VariableGet (переменная: Canvas)
+[K2Node_ExecutionSequence_0] K2Node_ExecutionSequence
+[K2Node_CallFunction_13] K2Node_CallFunction (вызов: Repaint)
+[K2Node_VariableGet_20] K2Node_VariableGet (переменная: SM_DebugSmall)
+[K2Node_CallFunction_15@UserConstructionScript] K2Node_CallFunction
+[K2Node_Select_0] K2Node_Select
+    NumOptionPins = 3
+    IndexPinType = (PinCategory="byte",PinSubCategory="",PinSubCategoryObject="/Script/Engine.UserDefinedEnum'/Game/FluidFlux/Tools/ScenePainter/Blueprints/BE_WorldBrushType.BE_WorldBrushType'")
+    Enum = "/Script/Engine.UserDefinedEnum'/Game/FluidFlux/Tools/ScenePainter/Blueprints/BE_WorldBrushType.BE_WorldBrushType'"
+    EnumEntries(0) = "NewEnumerator1"
+    EnumEntries(1) = "NewEnumerator0"
+    EnumEntries(2) = "NewEnumerator2"
+    вход NewEnumerator1 = 0.300000,0.100000,0.000000
+    вход NewEnumerator0 = 0.000000,0.300000,0.100000
+    вход NewEnumerator2 = 0.200000,0.000000,0.000000
+[K2Node_VariableGet_19] K2Node_VariableGet (переменная: SM_DebugBig)
+[K2Node_CallFunction_14] K2Node_CallFunction (вызов: SetCustomPrimitiveDataVector3 @ /Script/CoreUObject.Class)
+    вход DataIndex = 0
+[K2Node_PromotableOperator_4] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 2.000000
+[Draw] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 316041954B2E1B25132C34B1C1EC28E7
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_4
+    Nodes(2) <- K2Node_CallFunction_25
+    Nodes(3) <- K2Node_CallFunction_2
+    Nodes(4) <- K2Node_CallFunction_0
+    Nodes(5) <- K2Node_IfThenElse_0
+    Nodes(6) <- K2Node_VariableGet_9
+    Nodes(7) <- K2Node_VariableGet_0
+    Nodes(8) <- K2Node_VariableGet_1
+    Nodes(9) <- K2Node_VariableGet_11
+    Nodes(10) <- K2Node_VariableGet_4
+    Nodes(11) <- K2Node_VariableGet_12
+    Nodes(12) <- K2Node_VariableGet_14
+    Nodes(13) <- K2Node_VariableGet_2
+    Nodes(14) <- K2Node_CallFunction_3
+    Nodes(15) <- K2Node_CallFunction_5
+    Nodes(16) <- K2Node_VariableGet_3
+    Nodes(17) <- K2Node_CallFunction_6
+    Nodes(18) <- K2Node_CallFunction_15
+    Nodes(19) <- K2Node_VariableGet_5
+    Nodes(20) <- K2Node_VariableGet_6
+[K2Node_FunctionEntry_0@Draw] K2Node_FunctionEntry
+[K2Node_CallFunction_4] K2Node_CallFunction (вызов: DrawRect @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_CallFunction_25] K2Node_CallFunction (вызов: GetTransform)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_2] K2Node_CallFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = Hardness
+[K2Node_CallFunction_0] K2Node_CallFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = Radius
+[K2Node_IfThenElse_0] K2Node_IfThenElse
+[K2Node_VariableGet_9] K2Node_VariableGet (переменная: ShapeHardness)
+[K2Node_VariableGet_0] K2Node_VariableGet (переменная: ShapeRoundness)
+[K2Node_VariableGet_1] K2Node_VariableGet (переменная: Material)
+[K2Node_VariableGet_11] K2Node_VariableGet (переменная: Material)
+[K2Node_VariableGet_4@Draw] K2Node_VariableGet (переменная: Canvas)
+[K2Node_VariableGet_12@Draw] K2Node_VariableGet (переменная: Material)
+[K2Node_VariableGet_14@Draw] K2Node_VariableGet (переменная: Material)
+[K2Node_VariableGet_2] K2Node_VariableGet (переменная: TargetValue)
+[K2Node_CallFunction_3@Draw] K2Node_CallFunction
+[K2Node_CallFunction_5] K2Node_CallFunction (вызов: MakeColor @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_3] K2Node_VariableGet (переменная: BlendAdditive)
+[K2Node_CallFunction_6@Draw] K2Node_CallFunction (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход A = 1.000000
+[K2Node_CallFunction_15@Draw] K2Node_CallFunction (вызов: EqualEqual_ByteByte @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход DataIndex = 0
+[K2Node_VariableGet_5@Draw] K2Node_VariableGet (переменная: Painter)
+[K2Node_VariableGet_6] K2Node_VariableGet (переменная: CanvasType @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[Repaint] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 6EEE75EA4D38809D0A4CD3A6E434B88B
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_3
+    Nodes(2) <- K2Node_MacroInstance_1
+    Nodes(3) <- K2Node_Message_0
+[K2Node_FunctionEntry_0@Repaint] K2Node_FunctionEntry (вызов: Repaint)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+[K2Node_CallFunction_3@Repaint] K2Node_CallFunction (вызов: GetAllActorsWithInterface @ /Script/CoreUObject.Class)
+    вход ParameterName = BrushColor
+[K2Node_MacroInstance_1] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.Actor'",ContainerType=Array)
+[K2Node_Message_0] K2Node_Message (вызов: RenderScenePainter @ /Script/Engine.BlueprintGeneratedClass)
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 66322A14456881BB207B5185DFAAF6D9
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+
+## СВЯЗИ
+[K2Node_CallFunction_10].ReturnValue_Yaw -> [K2Node_CallFunction_9].NewRotation_Yaw
+[K2Node_CallFunction_15@Draw].ReturnValue -> [K2Node_IfThenElse_0].Condition
+[K2Node_CallFunction_15@Draw].then -> [K2Node_CallFunction_14].execute
+[K2Node_CallFunction_2].then -> [K2Node_CallFunction_2].execute
+[K2Node_CallFunction_2].then -> [K2Node_CallFunction_3@Repaint].execute
+[K2Node_CallFunction_25].ReturnValue -> [K2Node_CallFunction_4].Transform
+[K2Node_CallFunction_3@Repaint].OutActors -> [K2Node_MacroInstance_1].Array
+[K2Node_CallFunction_3@Repaint].then -> [K2Node_CallFunction_4].execute
+[K2Node_CallFunction_3@Repaint].then#2 -> [K2Node_MacroInstance_1].Exec
+[K2Node_CallFunction_5].ReturnValue -> [K2Node_CallFunction_3@Repaint].Value
+[K2Node_CallFunction_6@Draw].ReturnValue -> [K2Node_CallFunction_5].A
+[K2Node_CallFunction_6@Draw].then -> [K2Node_CallFunction_8].execute
+[K2Node_CallFunction_7].ReturnValue -> [K2Node_CallFunction_6@Draw].NewScale3D
+[K2Node_CallFunction_8].then -> [K2Node_CallFunction_14].execute
+[K2Node_CallFunction_9].then -> [K2Node_ExecutionSequence_0].execute
+[K2Node_ExecutionSequence_0].then_0 -> [K2Node_CallFunction_13].execute
+[K2Node_ExecutionSequence_0].then_1 -> [K2Node_MacroInstance_0].exec
+[K2Node_FunctionEntry_0@Repaint].Painter -> [K2Node_VariableGet_6].self
+[K2Node_FunctionEntry_0@Repaint].then -> [K2Node_CallFunction_9].execute
+[K2Node_FunctionEntry_0@Repaint].then#2 -> [K2Node_IfThenElse_0].execute
+[K2Node_FunctionEntry_0@Repaint].then#3 -> [K2Node_CallFunction_3@Repaint].execute#2
+[K2Node_IfThenElse_0].then -> [K2Node_CallFunction_2].execute
+[K2Node_MacroInstance_0].Is Valid -> [K2Node_CallFunction_6@Draw].execute
+[K2Node_MacroInstance_1].Array Element -> [K2Node_Message_0].self
+[K2Node_MacroInstance_1].LoopBody -> [K2Node_Message_0].execute
+[K2Node_PromotableOperator_0].ReturnValue -> [K2Node_PromotableOperator_1].B
+[K2Node_PromotableOperator_1].ReturnValue -> [K2Node_CallFunction_7].InDouble
+[K2Node_PromotableOperator_4].ReturnValue -> [K2Node_CallFunction_14].Value
+[K2Node_Select_0].ReturnValue -> [K2Node_CallFunction_14].Value
+[K2Node_Select_0].ReturnValue -> [K2Node_PromotableOperator_4].A
+[K2Node_VariableGet_0].ShapeRoundness -> [K2Node_CallFunction_2].Value
+[K2Node_VariableGet_1].Material -> [K2Node_CallFunction_2].self
+[K2Node_VariableGet_1].Material -> [K2Node_CallFunction_3@Repaint].self
+[K2Node_VariableGet_1].Material -> [K2Node_CallFunction_4].MaterialInstance
+[K2Node_VariableGet_10].SM_DebugBig -> [K2Node_CallFunction_8].self
+[K2Node_VariableGet_12@Draw].SM_DebugSmall -> [K2Node_CallFunction_8].self
+[K2Node_VariableGet_13].SM_DebugBig -> [K2Node_MacroInstance_0].InputObject
+[K2Node_VariableGet_15].DefaultSceneRoot -> [K2Node_CallFunction_10].self
+[K2Node_VariableGet_15].DefaultSceneRoot -> [K2Node_CallFunction_9].self
+[K2Node_VariableGet_16].Canvas -> [K2Node_Select_0].Index
+[K2Node_VariableGet_17].SM_DebugSmall -> [K2Node_CallFunction_14].self
+[K2Node_VariableGet_17].SM_DebugSmall -> [K2Node_CallFunction_6@Draw].self
+[K2Node_VariableGet_19].SM_DebugBig -> [K2Node_CallFunction_14].self
+[K2Node_VariableGet_2].TargetValue -> [K2Node_CallFunction_5].B
+[K2Node_VariableGet_2].TargetValue -> [K2Node_CallFunction_5].G
+[K2Node_VariableGet_2].TargetValue -> [K2Node_CallFunction_5].R
+[K2Node_VariableGet_3].BlendAdditive -> [K2Node_CallFunction_6@Draw].B
+[K2Node_VariableGet_4@Draw].Canvas -> [K2Node_CallFunction_15@Draw].B
+[K2Node_VariableGet_4@Draw].ShapeHardness -> [K2Node_PromotableOperator_0].B
+[K2Node_VariableGet_5@Draw].Painter -> [K2Node_CallFunction_4].self
+[K2Node_VariableGet_5@Draw].ShapeRoundness -> [K2Node_CallFunction_8].Value
+[K2Node_VariableGet_6].CanvasType -> [K2Node_CallFunction_15@Draw].A
+[K2Node_VariableGet_9].ShapeHardness -> [K2Node_CallFunction_2].Value

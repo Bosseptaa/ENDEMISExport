@@ -1,0 +1,897 @@
+﻿# /Game/FluidFlux/Demo/Blueprints/BP_Hud
+# класс: WidgetBlueprint; происхождение: проект; узлов: 184; связей: 328; HLSL: 0; причина: папка /Game/FluidFlux; тело:139
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_Hud] WidgetBlueprint
+    TickPrediction = WillTick
+    TickPredictionReason = "Script"
+    WidgetTree = "WidgetTree"
+    ParentClass = "/Script/CoreUObject.Class'/Script/UMG.UserWidget'"
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = "Event Graph"
+    CategorySorting(1) = "BP Hud"
+    CategorySorting(2) = ""
+    CategorySorting(3) = "Default"
+    ImportedNamespaces = ("ImaginaryBlend")
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_Hud.BP_Hud:NextPreset",SavedViewOffset=(X=-391.696777,Y=-311.259796),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_Hud.BP_Hud:OpenMap",SavedViewOffset=(X=-439.391235,Y=-269.487396),SavedZoomAmount=0.750000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_Hud.BP_Hud:ToggleVisible",SavedViewOffset=(X=-99.411865,Y=-240.220032),SavedZoomAmount=1.000000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_Hud.BP_Hud:FPSTimer",SavedViewOffset=(X=1762.430054,Y=-137.300034),SavedZoomAmount=0.875000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Demo/Blueprints/BP_Hud.BP_Hud:EventGraph",SavedViewOffset=(X=-448.206329,Y=1073.531494),SavedZoomAmount=0.875000)
+    GeneratedClass = "/Script/UMG.WidgetBlueprintGeneratedClass'BP_Hud_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 4C6DAD7B48A8A2AC877212B657392A0C
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- OpenMap
+    FunctionGraphs(1) <- ToggleVisible
+    FunctionGraphs(2) <- FPSTimer
+    FunctionGraphs(3) <- NextPreset
+    GeneratedVariables(5) <- TextBlock
+    GeneratedVariables(6) <- TextBlock
+    GeneratedVariables(7) <- TextBlock
+    GeneratedVariables(8) <- TextBlock
+    GeneratedVariables(13) <- TextBlock
+[WidgetTree] WidgetTree
+    RootWidget <- CanvasPanel_0
+[Border] Border
+    Padding = (Left=2.000000,Right=2.000000)
+    BrushColor = (R=0.000000,G=0.000000,B=0.000000,A=0.350000)
+    Slots(0) <- BorderSlot_0
+    Slot <- HorizontalBoxSlot_7
+[BorderSlot_0@WidgetTree.Border] BorderSlot
+[Border_155] Border
+    VerticalAlignment = VAlign_Top
+    Padding = (Left=2.000000,Right=2.000000,Bottom=4.000000)
+    Background = (TintColor=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000)))
+    BrushColor = (R=1.000000,G=1.000000,B=1.000000,A=0.350000)
+    bExpandedInDesigner = True
+    Slots(0) <- BorderSlot_0
+    Slot <- VerticalBoxSlot_0
+[BorderSlot_0@WidgetTree.Border_155] BorderSlot
+    Padding = (Left=2.000000,Right=2.000000)
+    Padding = (Left=2.000000,Right=2.000000,Bottom=4.000000)
+    VerticalAlignment = VAlign_Top
+    Parent <- Border
+    Content <- VerticalBox
+    Parent <- Border_155
+    Content <- VerticalBox_191
+[Border_227] Border
+    Padding = (Left=2.000000,Right=2.000000)
+    BrushColor = (R=0.000000,G=0.000000,B=0.000000,A=0.350000)
+    bExpandedInDesigner = True
+    Slots(0) <- BorderSlot_1
+    Slot <- HorizontalBoxSlot_6
+[BorderSlot_1] BorderSlot
+    Padding = (Left=2.000000,Right=2.000000)
+    Parent <- Border_227
+    Content <- VerticalBox_0
+[HorizontalBox_125] HorizontalBox
+    bExpandedInDesigner = True
+    Slots(0) <- HorizontalBoxSlot_6
+    Slots(1) <- HorizontalBoxSlot_7
+    Slot <- VerticalBoxSlot_6
+[HorizontalBoxSlot_7] HorizontalBoxSlot
+    Size = (SizeRule=Fill)
+    Padding = (Left=2.000000,Top=2.000000,Right=2.000000,Bottom=2.000000)
+    HorizontalAlignment = HAlign_Left
+    Parent <- HorizontalBox_125
+    Content <- Border
+[HorizontalBoxSlot_6] HorizontalBoxSlot
+    Padding = (Left=2.000000,Top=2.000000,Right=2.000000,Bottom=2.000000)
+    HorizontalAlignment = HAlign_Left
+    Parent <- HorizontalBox_125
+    Content <- Border_227
+[VerticalBox_54] VerticalBox
+    bExpandedInDesigner = True
+    Slots(0) <- VerticalBoxSlot_6
+    Slots(1) <- VerticalBoxSlot_0
+    Slot <- CanvasPanelSlot_6
+[VerticalBoxSlot_0@WidgetTree.VerticalBox_54] VerticalBoxSlot
+[VerticalBoxSlot_6@WidgetTree.VerticalBox_54] VerticalBoxSlot
+[VerticalBox] VerticalBox
+    bExpandedInDesigner = True
+    Slots(0) <- VerticalBoxSlot_18
+    Slots(1) <- VerticalBoxSlot_10
+    Slots(2) <- VerticalBoxSlot_11
+    Slots(3) <- VerticalBoxSlot_12
+    Slots(4) <- VerticalBoxSlot_13
+    Slots(5) <- VerticalBoxSlot_15
+    Slots(6) <- VerticalBoxSlot_14
+    Slots(7) <- VerticalBoxSlot_0
+    Slot <- BorderSlot_0
+[VerticalBoxSlot_12] VerticalBoxSlot
+    Padding = (Left=2.000000,Top=2.000000,Right=2.000000,Bottom=2.000000)
+    Parent <- VerticalBox
+    Content <- Beach
+[VerticalBoxSlot_11@WidgetTree.VerticalBox] VerticalBoxSlot
+[VerticalBoxSlot_0@WidgetTree.VerticalBox] VerticalBoxSlot
+[VerticalBoxSlot_10@WidgetTree.VerticalBox] VerticalBoxSlot
+[VerticalBoxSlot_13] VerticalBoxSlot
+    Padding = (Left=2.000000,Top=2.000000,Right=2.000000,Bottom=2.000000)
+    Parent <- VerticalBox
+    Content <- Section
+[VerticalBoxSlot_14] VerticalBoxSlot
+    Padding = (Left=2.000000,Top=2.000000,Right=2.000000,Bottom=2.000000)
+    Parent <- VerticalBox
+    Content <- Waterfall
+[VerticalBoxSlot_15] VerticalBoxSlot
+    Padding = (Left=2.000000,Top=2.000000,Right=2.000000,Bottom=2.000000)
+    Parent <- VerticalBox
+    Content <- World
+[VerticalBoxSlot_18] VerticalBoxSlot
+    Padding = (Left=4.000000,Top=4.000000,Right=4.000000,Bottom=4.000000)
+    Parent <- VerticalBox
+    Content <- TextFPS
+[VerticalBox_191] VerticalBox
+    bExpandedInDesigner = True
+    Slots(0) <- VerticalBoxSlot_10
+    Slots(1) <- VerticalBoxSlot_4
+    Slots(2) <- VerticalBoxSlot_11
+    Slots(3) <- VerticalBoxSlot_6
+    Slot <- BorderSlot_0
+[VerticalBoxSlot_10@WidgetTree.VerticalBox_191] VerticalBoxSlot
+    Padding = (Left=2.000000,Top=2.000000,Right=2.000000,Bottom=2.000000)
+    Padding = (Left=4.000000,Top=4.000000,Right=4.000000,Bottom=4.000000)
+    Parent <- VerticalBox
+    Content <- River
+    Parent <- VerticalBox_191
+    Content <- TextFPS_2
+[VerticalBoxSlot_4] VerticalBoxSlot
+    Padding = (Left=4.000000)
+    Parent <- VerticalBox_191
+    Content <- WB_Primary
+[VerticalBoxSlot_11@WidgetTree.VerticalBox_191] VerticalBoxSlot
+    Padding = (Left=2.000000,Top=2.000000,Right=2.000000,Bottom=2.000000)
+    Padding = (Left=4.000000)
+    Parent <- VerticalBox
+    Content <- Island
+    Parent <- VerticalBox_191
+    Content <- WB_Shore
+[VerticalBoxSlot_6@WidgetTree.VerticalBox_191] VerticalBoxSlot
+    Padding = (Left=4.000000)
+    Parent <- VerticalBox_54
+    Content <- HorizontalBox_125
+    Parent <- VerticalBox_191
+    Content <- WB_Painter
+[VerticalBox_0] VerticalBox
+    bExpandedInDesigner = True
+    Slots(0) <- VerticalBoxSlot_1
+    Slots(1) <- VerticalBoxSlot_3
+    Slots(2) <- VerticalBoxSlot_0
+    Slots(3) <- VerticalBoxSlot_2
+    Slot <- BorderSlot_1
+[VerticalBoxSlot_3] VerticalBoxSlot
+    Padding = (Left=4.000000,Top=1.000000,Right=4.000000,Bottom=1.000000)
+    Parent <- VerticalBox_0
+    Content <- Distance
+[VerticalBoxSlot_2] VerticalBoxSlot
+    Padding = (Left=4.000000,Top=4.000000,Right=4.000000,Bottom=4.000000)
+    Parent <- VerticalBox_0
+    Content <- TextBlock_5
+[VerticalBoxSlot_1] VerticalBoxSlot
+    Padding = (Left=4.000000,Top=1.000000,Right=4.000000,Bottom=1.000000)
+    Parent <- VerticalBox_0
+    Content <- TextFPS_1
+[VerticalBoxSlot_0@WidgetTree.VerticalBox_0] VerticalBoxSlot
+    Padding = (Left=2.000000,Top=2.000000,Right=2.000000,Bottom=2.000000)
+    VerticalAlignment = VAlign_Top
+    Padding = (Left=2.000000,Top=2.000000,Right=2.000000,Bottom=2.000000)
+    Padding = (Left=4.000000,Top=4.000000,Right=4.000000,Bottom=4.000000)
+    Parent <- VerticalBox_54
+    Content <- Border_155
+    Parent <- VerticalBox
+    Content <- Ocean
+    Parent <- VerticalBox_0
+    Content <- Version
+[Beach] Button
+    DisplayLabel = "Beach"
+    Slots(0) <- ButtonSlot_0
+    Slot <- VerticalBoxSlot_12
+[ButtonSlot_0@WidgetTree.Beach] ButtonSlot
+[Island] Button
+    DisplayLabel = "Island"
+    Slots(0) <- ButtonSlot_0
+    Slot <- VerticalBoxSlot_11
+[ButtonSlot_0@WidgetTree.Island] ButtonSlot
+[Ocean] Button
+    bExpandedInDesigner = True
+    DisplayLabel = "Ocean"
+    Slots(0) <- ButtonSlot_0
+    Slot <- VerticalBoxSlot_0
+[ButtonSlot_0@WidgetTree.Ocean] ButtonSlot
+[River] Button
+    bExpandedInDesigner = True
+    DisplayLabel = "River"
+    Slots(0) <- ButtonSlot_0
+    Slot <- VerticalBoxSlot_10
+[ButtonSlot_0@WidgetTree.River] ButtonSlot
+[Section] Button
+    DisplayLabel = "Section"
+    Slots(0) <- ButtonSlot_0
+    Slot <- VerticalBoxSlot_13
+[ButtonSlot_0@WidgetTree.Section] ButtonSlot
+[Waterfall] Button
+    DisplayLabel = "Waterfall"
+    Slots(0) <- ButtonSlot_0
+    Slot <- VerticalBoxSlot_14
+[ButtonSlot_0@WidgetTree.Waterfall] ButtonSlot
+[World] Button
+    bExpandedInDesigner = True
+    DisplayLabel = "World"
+    Slots(0) <- ButtonSlot_0
+    Slot <- VerticalBoxSlot_15
+[ButtonSlot_0@WidgetTree.World] ButtonSlot
+    HorizontalAlignment = HAlign_Left
+    HorizontalAlignment = HAlign_Left
+    HorizontalAlignment = HAlign_Left
+    HorizontalAlignment = HAlign_Left
+    HorizontalAlignment = HAlign_Left
+    HorizontalAlignment = HAlign_Left
+    HorizontalAlignment = HAlign_Left
+    Parent <- Beach
+    Content <- TextBlock_1
+    Parent <- Island
+    Content <- TextBlock_2
+    Parent <- Ocean
+    Content <- TextBlock_6
+    Parent <- River
+    Content <- TextBlock_138
+    Parent <- Section
+    Content <- TextBlock
+    Parent <- Waterfall
+    Content <- TextBlock_3
+    Parent <- World
+    Content <- TextBlock_4
+[TextBlock_1] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "71F008134C22590CDBD6E0A0AA76F114", "Key3 - Beach Map")
+    ColorAndOpacity = (SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000))
+    Font = (OutlineSettings=(OutlineColor=(R=0.000000,G=0.000000,B=0.000000,A=0.100000)),TypefaceFontName="Regular",Size=9.000000)
+    ShadowColorAndOpacity = (R=0.908333,G=0.908333,B=0.908333,A=0.150000)
+    Slot <- ButtonSlot_0
+[TextBlock_2] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "1EC9E07C405A229C1E5BB4BA68CD575A", "Key2 - Island Map")
+    ColorAndOpacity = (SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000))
+    Font = (OutlineSettings=(OutlineColor=(R=0.000000,G=0.000000,B=0.000000,A=0.100000)),TypefaceFontName="Regular",Size=9.000000)
+    ShadowColorAndOpacity = (R=0.908333,G=0.908333,B=0.908333,A=0.150000)
+    Slot <- ButtonSlot_0
+[TextBlock_6] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "24A1CDB54D50B7073B65308D89CBB07D", "Key7 - Ocean Map")
+    ColorAndOpacity = (SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000))
+    Font = (OutlineSettings=(OutlineColor=(R=0.000000,G=0.000000,B=0.000000,A=0.100000)),TypefaceFontName="Regular",Size=9.000000)
+    ShadowColorAndOpacity = (R=0.908333,G=0.908333,B=0.908333,A=0.150000)
+    bLockedInDesigner = True
+    Slot <- ButtonSlot_0
+[TextBlock_138] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "325159394AE4FD56A28CA0A1306F93DF", "Key1 - River Map")
+    ColorAndOpacity = (SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000))
+    Font = (OutlineSettings=(OutlineColor=(R=0.000000,G=0.000000,B=0.000000,A=0.100000)),TypefaceFontName="Regular",Size=9.000000)
+    ShadowColorAndOpacity = (R=0.908333,G=0.908333,B=0.908333,A=0.150000)
+    Slot <- ButtonSlot_0
+[TextBlock] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "2ACF02684BB88C5132BD60899918B435", "Key4 - Section Map")
+    ColorAndOpacity = (SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000))
+    Font = (OutlineSettings=(OutlineColor=(R=0.000000,G=0.000000,B=0.000000,A=0.100000)),TypefaceFontName="Regular",Size=9.000000)
+    ShadowColorAndOpacity = (R=0.908333,G=0.908333,B=0.908333,A=0.150000)
+    Slot <- ButtonSlot_0
+[TextBlock_3] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "E047294D4059066A8040E8B0DF801BAD", "Key6 - Waterfall Map")
+    ColorAndOpacity = (SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000))
+    Font = (OutlineSettings=(OutlineColor=(R=0.000000,G=0.000000,B=0.000000,A=0.100000)),TypefaceFontName="Regular",Size=9.000000)
+    ShadowColorAndOpacity = (R=0.908333,G=0.908333,B=0.908333,A=0.150000)
+    bLockedInDesigner = True
+    Slot <- ButtonSlot_0
+[TextBlock_4] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "F50F9D7644FCE39FB70A5DB7DDCDF406", "Key5 - World Map")
+    ColorAndOpacity = (SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000))
+    Font = (OutlineSettings=(OutlineColor=(R=0.000000,G=0.000000,B=0.000000,A=0.100000)),TypefaceFontName="Regular",Size=9.000000)
+    ShadowColorAndOpacity = (R=0.908333,G=0.908333,B=0.908333,A=0.150000)
+    Slot <- ButtonSlot_0
+[CanvasPanel_0] CanvasPanel
+    RenderTransform = (Translation=(X=4.800000,Y=7.200000))
+    bExpandedInDesigner = True
+    Visibility = Visible
+    Slots(0) <- CanvasPanelSlot_6
+    Slots(1) <- CanvasPanelSlot_0
+[CanvasPanelSlot_6] CanvasPanelSlot
+    LayoutData = (Offsets=(Left=-334.071472,Top=-353.233643,Right=308.476898,Bottom=323.207581),Anchors=(Minimum=(X=1.000000,Y=1.000000),Maximum=(X=1.000000,Y=1.000000)))
+    Parent <- CanvasPanel_0
+    Content <- VerticalBox_54
+[CanvasPanelSlot_0] CanvasPanelSlot
+    LayoutData = (Offsets=(Left=1136.000000,Top=456.000000))
+    Parent <- CanvasPanel_0
+    Content <- TextBlock_57
+[TextBlock_57] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "A4D7CF7C44D583E4F529D0A510D6B9C8", "ASSETFREAKS.COM")
+    Slot <- CanvasPanelSlot_0
+[Distance] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "3FC2EC9D42BDFE60FA1863AB9173543D", "FPS: 60")
+    Font = (TypefaceFontName="Light",Size=10.000000)
+    ShadowColorAndOpacity = (R=0.000000,G=0.000000,B=0.000000,A=0.550000)
+    bIsVariable = True
+    DisplayLabel = "Distance "
+    Slot <- VerticalBoxSlot_3
+[TextBlock_5] TextBlock
+    Font = (TypefaceFontName="Light",Size=10.000000)
+    ShadowColorAndOpacity = (R=0.000000,G=0.000000,B=0.000000,A=0.550000)
+    Slot <- VerticalBoxSlot_2
+[TextFPS] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "A15A4E6C431C59619E3960BF782A046B", "Maps:")
+    Font = (TypefaceFontName="Light",Size=10.000000)
+    ShadowColorAndOpacity = (R=0.000000,G=0.000000,B=0.000000,A=0.550000)
+    bIsVariable = True
+    DisplayLabel = "TextFPS"
+    Slot <- VerticalBoxSlot_18
+[TextFPS_1] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "3FC2EC9D42BDFE60FA1863AB9173543D", "FPS: 60")
+    Font = (TypefaceFontName="Light",Size=10.000000)
+    ShadowColorAndOpacity = (R=0.000000,G=0.000000,B=0.000000,A=0.550000)
+    bIsVariable = True
+    DisplayLabel = "TextFPS_1"
+    Slot <- VerticalBoxSlot_1
+[TextFPS_2] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "85FD25B94C42563B1CF36E891C25F71D", "Color Presets")
+    Font = (TypefaceFontName="Light",Size=10.000000)
+    ShadowColorAndOpacity = (R=0.000000,G=0.000000,B=0.000000,A=0.550000)
+    bIsVariable = True
+    DisplayLabel = "TextFPS_2"
+    Slot <- VerticalBoxSlot_10
+[Version] TextBlock
+    Text = NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "76F45AED4189B405B5EB528CF190CAC1", "Engine:\r\nPack:")
+    Font = (TypefaceFontName="Light",Size=10.000000)
+    ShadowColorAndOpacity = (R=0.000000,G=0.000000,B=0.000000,A=0.550000)
+    bIsVariable = True
+    DisplayLabel = "Version"
+    Slot <- VerticalBoxSlot_0
+[WB_Shore] WB_ColorPreset_C
+    описание: NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "FFEE8CFD4ABCE8AA870DDC9F675EEAC8", "Shore (Next - O)")
+    List(0) = "/Game/FluidFlux/Surface/Blueprints/PDA_FluxSurfacePreset.PDA_FluxSurfacePreset_C'/Game/FluidFlux/Surface/Templates/Color/CP_ShoreBlue_01.CP_ShoreBlue_01'"
+    List(1) = "/Game/FluidFlux/Surface/Blueprints/PDA_FluxSurfacePreset.PDA_FluxSurfacePreset_C'/Game/FluidFlux/Surface/Templates/Color/CP_ShoreBlue_02.CP_ShoreBlue_02'"
+    List(2) = "/Game/FluidFlux/Surface/Blueprints/PDA_FluxSurfacePreset.PDA_FluxSurfacePreset_C'/Game/FluidFlux/Surface/Templates/Color/CP_ShoreBlue_03.CP_ShoreBlue_03'"
+    List(3) = "/Game/FluidFlux/Surface/Blueprints/PDA_FluxSurfacePreset.PDA_FluxSurfacePreset_C'/Game/FluidFlux/Surface/Templates/Color/CP_ShoreDirt_01.CP_ShoreDirt_01'"
+    List(4) = "/Game/FluidFlux/Surface/Blueprints/PDA_FluxSurfacePreset.PDA_FluxSurfacePreset_C'/Game/FluidFlux/Surface/Templates/Color/CP_ShoreDirt_02.CP_ShoreDirt_02'"
+    List(5) = "/Game/FluidFlux/Surface/Blueprints/PDA_FluxSurfacePreset.PDA_FluxSurfacePreset_C'/Game/FluidFlux/Surface/Templates/Color/CP_ShoreDirt_03.CP_ShoreDirt_03'"
+    List(6) = "/Game/FluidFlux/Surface/Blueprints/PDA_FluxSurfacePreset.PDA_FluxSurfacePreset_C'/Game/FluidFlux/Surface/Templates/Color/CP_ShoreGreen_01.CP_ShoreGreen_01'"
+    List(7) = "/Game/FluidFlux/Surface/Blueprints/PDA_FluxSurfacePreset.PDA_FluxSurfacePreset_C'/Game/FluidFlux/Surface/Templates/Color/CP_ShoreGreen_02.CP_ShoreGreen_02'"
+    List(8) = "/Game/FluidFlux/Surface/Blueprints/PDA_FluxSurfacePreset.PDA_FluxSurfacePreset_C'/Game/FluidFlux/Surface/Templates/Color/CP_ShoreGreen_03.CP_ShoreGreen_03'"
+    List(9) = "/Game/FluidFlux/Surface/Blueprints/PDA_FluxSurfacePreset.PDA_FluxSurfacePreset_C'/Game/FluidFlux/Surface/Templates/Color/CP_ShoreGreen_04.CP_ShoreGreen_04'"
+    List(10) = "/Game/FluidFlux/Surface/Blueprints/PDA_FluxSurfacePreset.PDA_FluxSurfacePreset_C'/Game/FluidFlux/Surface/Templates/Color/CP_ShoreGreen_05.CP_ShoreGreen_05'"
+    Type = 1
+    Priority = 1
+    DisplayLabel = "WB_Shore"
+    Slot <- VerticalBoxSlot_11
+[WB_Primary] WB_ColorPreset_C
+    описание: NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "27A5616046E07664980499B6FDAA1732", "Primary (Next - I)")
+    DisplayLabel = "WB_Primary"
+    Slot <- VerticalBoxSlot_4
+[WB_Painter] WB_ColorPreset_C
+    описание: NSLOCTEXT("[6C2CEF2B4F3CBA07FD92B69E4F93AED0]", "C00C1F2D410B5B8342C7CCBA3938CDD7", "Painter(Next - P)")
+    Type = 2
+    Priority = 2
+    DisplayLabel = "WB_Painter"
+    Slot <- VerticalBoxSlot_6
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = B788D0DB41741CA274A3C5B907960305
+    Nodes(0) <- K2Node_ComponentBoundEvent_0
+    Nodes(1) <- K2Node_CallFunction_3
+    Nodes(2) <- K2Node_ComponentBoundEvent_1
+    Nodes(3) <- K2Node_CallFunction_4
+    Nodes(4) <- K2Node_ComponentBoundEvent_2
+    Nodes(5) <- K2Node_CallFunction_0
+    Nodes(6) <- K2Node_ComponentBoundEvent_3
+    Nodes(7) <- K2Node_CallFunction_6
+    Nodes(8) <- K2Node_CallFunction_9
+    Nodes(9) <- K2Node_ComponentBoundEvent_6
+    Nodes(10) <- K2Node_Event_0
+    Nodes(11) <- K2Node_VariableGet_0
+    Nodes(12) <- K2Node_MacroInstance_0
+    Nodes(13) <- K2Node_Event_1
+    Nodes(14) <- K2Node_CallFunction_10
+    Nodes(15) <- K2Node_VariableGet_1
+    Nodes(16) <- K2Node_CallFunction_2
+    Nodes(17) <- K2Node_CallFunction_5
+    Nodes(18) <- K2Node_CallFunction_7
+    Nodes(19) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(20) <- K2Node_CallFunction_15
+    Nodes(21) <- K2Node_ComponentBoundEvent_4
+    Nodes(22) <- K2Node_CallFunction_1
+    Nodes(23) <- K2Node_CallFunction_8
+    Nodes(24) <- K2Node_ComponentBoundEvent_8
+    Nodes(25) <- K2Node_CallFunction_11
+    Nodes(26) <- K2Node_CallFunction_17
+    Nodes(27) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(28) <- K2Node_CallFunction_13
+    Nodes(29) <- K2Node_CallFunction_18
+[K2Node_ComponentBoundEvent_0] K2Node_ComponentBoundEvent (событие: OnButtonClickedEvent__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnClicked"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/UMG.Button'"
+    ComponentPropertyName = "River"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature"
+[K2Node_CallFunction_3@EventGraph] K2Node_CallFunction
+[K2Node_ComponentBoundEvent_1] K2Node_ComponentBoundEvent (событие: OnButtonPressedEvent__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnPressed"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/UMG.Button'"
+    ComponentPropertyName = "Section"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__World_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature"
+[K2Node_CallFunction_4@EventGraph] K2Node_CallFunction
+[K2Node_ComponentBoundEvent_2] K2Node_ComponentBoundEvent (событие: OnButtonPressedEvent__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnPressed"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/UMG.Button'"
+    ComponentPropertyName = "Beach"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__Snow_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature"
+[K2Node_CallFunction_0@EventGraph] K2Node_CallFunction
+[K2Node_ComponentBoundEvent_3] K2Node_ComponentBoundEvent (событие: OnButtonPressedEvent__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnPressed"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/UMG.Button'"
+    ComponentPropertyName = "Island"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__Desert_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature"
+[K2Node_CallFunction_6@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_9@EventGraph] K2Node_CallFunction
+[K2Node_ComponentBoundEvent_6] K2Node_ComponentBoundEvent (событие: OnButtonClickedEvent__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnClicked"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/UMG.Button'"
+    ComponentPropertyName = "Waterfall"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__BP_Hud_Simple_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature"
+[K2Node_Event_0] K2Node_Event (событие: Tick @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[K2Node_VariableGet_0@EventGraph] K2Node_VariableGet
+[K2Node_MacroInstance_0] K2Node_MacroInstance
+[K2Node_Event_1] K2Node_Event (событие: Construct @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[K2Node_CallFunction_10@EventGraph] K2Node_CallFunction
+[K2Node_VariableGet_1@EventGraph] K2Node_VariableGet
+[K2Node_CallFunction_2@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_5@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_7@EventGraph] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_0@EventGraph] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_15@EventGraph] K2Node_CallFunction
+[K2Node_ComponentBoundEvent_4] K2Node_ComponentBoundEvent (событие: OnButtonClickedEvent__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnClicked"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/UMG.Button'"
+    ComponentPropertyName = "World"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__BP_Hud_World_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature"
+[K2Node_CallFunction_1@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_8@EventGraph] K2Node_CallFunction
+[K2Node_ComponentBoundEvent_8] K2Node_ComponentBoundEvent (событие: OnButtonClickedEvent__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnClicked"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/UMG.Button'"
+    ComponentPropertyName = "Ocean"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__BP_Hud_Ocean_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature"
+[K2Node_CallFunction_11@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_17@EventGraph] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_2@EventGraph] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_CallFunction_13@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_18] K2Node_CallFunction (вызов: Conv_IntToString @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[OpenMap] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/UMGEditor.WidgetGraphSchema'"
+    GraphGuid = 64CD3CF14C785F8BD288F9BEBBD607A0
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_2
+    Nodes(2) <- K2Node_CallFunction_5
+    Nodes(3) <- K2Node_CallFunction_1
+    Nodes(4) <- K2Node_CallFunction_3
+    Nodes(5) <- K2Node_SwitchInteger_0
+    Nodes(6) <- K2Node_CallFunction_4
+    Nodes(7) <- K2Node_CallFunction_6
+    Nodes(8) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@OpenMap] K2Node_FunctionEntry
+[K2Node_CallFunction_2@OpenMap] K2Node_CallFunction
+[K2Node_CallFunction_5@OpenMap] K2Node_CallFunction
+[K2Node_CallFunction_1@OpenMap] K2Node_CallFunction
+[K2Node_CallFunction_3@OpenMap] K2Node_CallFunction
+[K2Node_SwitchInteger_0] K2Node_SwitchInteger
+[K2Node_CallFunction_4@OpenMap] K2Node_CallFunction
+[K2Node_CallFunction_6@OpenMap] K2Node_CallFunction
+[K2Node_CallFunction_0@OpenMap] K2Node_CallFunction
+[ToggleVisible] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/UMGEditor.WidgetGraphSchema'"
+    GraphGuid = 7FA01C4A4956776979EE7787F3282A09
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_Self_1
+    Nodes(2) <- K2Node_CallFunction_2
+    Nodes(3) <- K2Node_CallFunction_0
+    Nodes(4) <- K2Node_Self_0
+    Nodes(5) <- K2Node_CallFunction_3
+    Nodes(6) <- K2Node_IfThenElse_1
+[K2Node_FunctionEntry_0@ToggleVisible] K2Node_FunctionEntry
+[K2Node_Self_1] K2Node_Self
+[K2Node_CallFunction_2@ToggleVisible] K2Node_CallFunction
+[K2Node_CallFunction_0@ToggleVisible] K2Node_CallFunction
+[K2Node_Self_0] K2Node_Self
+[K2Node_CallFunction_3@ToggleVisible] K2Node_CallFunction
+[K2Node_IfThenElse_1] K2Node_IfThenElse
+[FPSTimer] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/UMGEditor.WidgetGraphSchema'"
+    GraphGuid = 15A0803449971758C4E7D4A2F20B40F1
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_3
+    Nodes(2) <- K2Node_CallFunction_1
+    Nodes(3) <- K2Node_VariableSet_0
+    Nodes(4) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(5) <- K2Node_CallFunction_7
+    Nodes(6) <- K2Node_CallFunction_14
+    Nodes(7) <- K2Node_VariableGet_2
+    Nodes(8) <- K2Node_CallFunction_13
+    Nodes(9) <- K2Node_CallFunction_5
+    Nodes(10) <- K2Node_CallFunction_6
+    Nodes(11) <- K2Node_CallFunction_8
+    Nodes(12) <- K2Node_CallFunction_9
+    Nodes(13) <- K2Node_CallFunction_10
+    Nodes(14) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(15) <- K2Node_VariableSet_1
+    Nodes(16) <- K2Node_VariableGet_1
+    Nodes(17) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(18) <- K2Node_VariableGet_0
+    Nodes(19) <- K2Node_VariableGet_4
+    Nodes(20) <- K2Node_CallFunction_2
+    Nodes(21) <- K2Node_CallFunction_3
+    Nodes(22) <- K2Node_CallFunction_11
+    Nodes(23) <- K2Node_CallFunction_12
+    Nodes(24) <- K2Node_CallFunction_4
+    Nodes(25) <- K2Node_VariableGet_5
+    Nodes(26) <- K2Node_CallFunction_15
+    Nodes(27) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(28) <- K2Node_CallFunction_16
+    Nodes(29) <- K2Node_CallFunction_17
+    Nodes(30) <- K2Node_PromotableOperator_0
+    Nodes(31) <- K2Node_PromotableOperator_1
+[K2Node_FunctionEntry_0@FPSTimer] K2Node_FunctionEntry
+[K2Node_VariableGet_3] K2Node_VariableGet (переменная: Frames)
+[K2Node_CallFunction_1@FPSTimer] K2Node_CallFunction (вызов: Conv_IntToString @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    bDefaultsToPureFunc = True
+    вход Integer = 5
+    вход LevelName = FluxBeachMap
+    вход bAbsolute = true
+[K2Node_VariableSet_0] K2Node_VariableSet (переменная: Frames)
+    вход Frames = 0
+[K2Node_CommutativeAssociativeBinaryOperator_3] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    NumAdditionalInputs = 2
+    bDefaultsToPureFunc = True
+    вход B =  FPS 
+    вход D = ms
+[K2Node_CallFunction_7@FPSTimer] K2Node_CallFunction (вызов: Conv_StringToText @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_14] K2Node_CallFunction (вызов: GetGameUserSettings @ /Script/CoreUObject.Class)
+[K2Node_VariableGet_2@FPSTimer] K2Node_VariableGet
+[K2Node_CallFunction_13@FPSTimer] K2Node_CallFunction (вызов: SetText @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_5@FPSTimer] K2Node_CallFunction (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Hidden
+    bDefaultsToPureFunc = True
+    вход LevelName = FluxIslandMap
+    вход bAbsolute = true
+    вход A = 1000.000000
+[K2Node_CallFunction_6@FPSTimer] K2Node_CallFunction (вызов: Conv_IntToDouble @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    bDefaultsToPureFunc = True
+    вход Integer = 2
+    вход LevelName = FluxWaterfallMap
+    вход bAbsolute = true
+[K2Node_CallFunction_8@FPSTimer] K2Node_CallFunction (вызов: Conv_DoubleToString @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Integer = 7
+[K2Node_CallFunction_9@FPSTimer] K2Node_CallFunction (вызов: FindSubstring @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Integer = 6
+    вход Substring = .
+    вход bUseCase = false
+    вход bSearchFromEnd = false
+    вход StartPosition = -1
+[K2Node_CallFunction_10@FPSTimer] K2Node_CallFunction (вызов: LeftChop @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    bDefaultsToPureFunc = True
+    вход FunctionName = FPSTimer
+    вход Time = 1.000000
+    вход bLooping = true
+    вход bMaxOncePerFrame = false
+    вход InitialStartDelay = 0.000000
+    вход InitialStartDelayVariance = 0.000000
+[K2Node_CommutativeAssociativeBinaryOperator_1] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 2
+[K2Node_VariableSet_1] K2Node_VariableSet (переменная: DeltaMs)
+[K2Node_VariableGet_1@FPSTimer] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_2@FPSTimer] K2Node_CommutativeAssociativeBinaryOperator (вызов: FMax @ /Script/CoreUObject.Class)
+    NumAdditionalInputs = 3
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход A = 
+Pack version: 
+    вход C = .
+    вход B = 1.000000
+[K2Node_VariableGet_0@FPSTimer] K2Node_VariableGet
+[K2Node_VariableGet_4] K2Node_VariableGet (переменная: Distance)
+[K2Node_CallFunction_2@FPSTimer] K2Node_CallFunction (вызов: GetPlayerController @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    bDefaultsToPureFunc = True
+    вход LevelName = FluxRiverDynamicMap
+    вход bAbsolute = true
+    вход InVisibility = Visible
+    вход PlayerIndex = 0
+[K2Node_CallFunction_3@FPSTimer] K2Node_CallFunction (вызов: GetPlayerCameraManager @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Integer = 1
+    вход LevelName = FluxSectionMap
+    вход bAbsolute = true
+    вход PlayerIndex = 0
+[K2Node_CallFunction_11@FPSTimer] K2Node_CallFunction (вызов: GetCameraLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_12] K2Node_CallFunction (вызов: VSize @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_4@FPSTimer] K2Node_CallFunction (вызов: SetText @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    вход Integer = 4
+    вход LevelName = FluxCoastlineMap
+    вход bAbsolute = true
+[K2Node_VariableGet_5] K2Node_VariableGet (переменная: Distance)
+[K2Node_CallFunction_15@FPSTimer] K2Node_CallFunction (вызов: Conv_DoubleToText @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Shown
+    вход StartIndex = 0
+    вход Length = 6
+    вход RoundingMode = HalfToEven
+    вход bAlwaysSign = false
+    вход bUseGrouping = true
+    вход MinimumIntegralDigits = 1
+    вход MaximumIntegralDigits = 324
+    вход MinimumFractionalDigits = 4
+    вход MaximumFractionalDigits = 4
+[K2Node_CommutativeAssociativeBinaryOperator_0@FPSTimer] K2Node_CommutativeAssociativeBinaryOperator (вызов: Concat_StrStr @ /Script/CoreUObject.Class)
+    NumAdditionalInputs = 1
+    bDefaultsToPureFunc = True
+    NumAdditionalInputs = 1
+    bDefaultsToPureFunc = True
+    вход A = Engine:
+    вход A = Distance: 
+    вход C = km
+[K2Node_CallFunction_16] K2Node_CallFunction (вызов: Conv_StringToText @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_17@FPSTimer] K2Node_CallFunction (вызов: Conv_TextToString @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_0] K2Node_PromotableOperator (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    вход B = 100.000000
+[K2Node_PromotableOperator_1] K2Node_PromotableOperator (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    вход B = 1000.000000
+[NextPreset] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/UMGEditor.WidgetGraphSchema'"
+    GraphGuid = 0BCBF4F247C013BA7C5357BA0F2D8E14
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_0
+    Nodes(2) <- K2Node_VariableGet_1
+    Nodes(3) <- K2Node_VariableGet_2
+    Nodes(4) <- K2Node_Select_0
+    Nodes(5) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@NextPreset] K2Node_FunctionEntry
+[K2Node_VariableGet_0@NextPreset] K2Node_VariableGet (переменная: WB_Painter)
+[K2Node_VariableGet_1@NextPreset] K2Node_VariableGet (переменная: WB_Primary)
+[K2Node_VariableGet_2@NextPreset] K2Node_VariableGet (переменная: WB_Shore)
+[K2Node_Select_0] K2Node_Select
+    NumOptionPins = 3
+    IndexPinType = (PinCategory="int",PinSubCategory="")
+[K2Node_CallFunction_0@NextPreset] K2Node_CallFunction
+[BndEvt__BP_Hud_Ocean_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 8E01A1904B482AF18537A1AD803C1185
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__BP_Hud_Ocean_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature] K2Node_FunctionEntry
+[K2Node_CallFunction_0@BndEvt__BP_Hud_Ocean_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature] K2Node_CallFunction
+[BndEvt__BP_Hud_World_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E70D8EDF4A5896ECE8082AAB3D3D99FE
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__BP_Hud_World_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature] K2Node_FunctionEntry
+[K2Node_CallFunction_0@BndEvt__BP_Hud_World_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature] K2Node_CallFunction
+[Construct] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 7236401B41F7A2CA02CD48945D1EFEAB
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@Construct] K2Node_FunctionEntry
+[K2Node_CallFunction_0@Construct] K2Node_CallFunction
+[Tick] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 4A07A9CC4F41EE3B9D2990A25C6249BD
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@Tick] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@Tick] K2Node_CallFunction
+[BndEvt__BP_Hud_Simple_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 75524682453FA4C7E2C036B123A31AF7
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__BP_Hud_Simple_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature] K2Node_FunctionEntry
+[K2Node_CallFunction_0@BndEvt__BP_Hud_Simple_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature] K2Node_CallFunction
+[BndEvt__Desert_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 9665DDDC4BF7312207E2E897241AD338
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__Desert_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature] K2Node_FunctionEntry
+[K2Node_CallFunction_0@BndEvt__Desert_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature] K2Node_CallFunction
+[BndEvt__Snow_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = F62482AA42B378FEE3AD5A953052A891
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__Snow_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature] K2Node_FunctionEntry
+[K2Node_CallFunction_0@BndEvt__Snow_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature] K2Node_CallFunction
+[BndEvt__World_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 662F75E84B8B788575F1778A01896592
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__World_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature] K2Node_FunctionEntry
+[K2Node_CallFunction_0@BndEvt__World_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature] K2Node_CallFunction
+[BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 20E01CD546461C4D60434FB386DBAC8D
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature] K2Node_FunctionEntry (вызов: OnButtonClickedEvent__DelegateSignature @ /Script/CoreUObject.Package)
+    ExtraFlags = 1275199488
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    LocalVariables(0) = (VarName="DeltaMs",VarGuid=E12AC4244B0156F0696E3B93954A9A6E,VarType=(PinCategory="string"),FriendlyName="Delta Ms",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "BndEvt__BP_Hud_Ocean_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BndEvt__BP_Hud_World_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "Construct"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "Tick"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BndEvt__BP_Hud_Simple_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BndEvt__Desert_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BndEvt__Snow_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BndEvt__World_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature"
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_Hud)
+    AdvancedPinDisplay = Hidden
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    вход Integer = 3
+    вход LevelName = FluxOceanMap
+    вход bAbsolute = true
+    вход InVisibility = Collapsed
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_CallFunction_10@FPSTimer].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_3].C
+[K2Node_CallFunction_10@FPSTimer].then -> [K2Node_CallFunction_2@FPSTimer].execute
+[K2Node_CallFunction_11@FPSTimer].Major -> [K2Node_CallFunction_13@FPSTimer].InInt
+[K2Node_CallFunction_11@FPSTimer].Minor -> [K2Node_CallFunction_13@FPSTimer].InInt
+[K2Node_CallFunction_11@FPSTimer].Patch -> [K2Node_CallFunction_18].InInt
+[K2Node_CallFunction_11@FPSTimer].ReturnValue -> [K2Node_CallFunction_12].A
+[K2Node_CallFunction_12].ReturnValue -> [K2Node_PromotableOperator_0].A
+[K2Node_CallFunction_13@FPSTimer].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_2@FPSTimer].B
+[K2Node_CallFunction_13@FPSTimer].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_2@FPSTimer].D
+[K2Node_CallFunction_13@FPSTimer].then -> [K2Node_VariableSet_0].execute
+[K2Node_CallFunction_14].then -> [K2Node_VariableSet_1].execute
+[K2Node_CallFunction_15@FPSTimer].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_0@FPSTimer].B
+[K2Node_CallFunction_15@FPSTimer].ReturnValue#2 -> [K2Node_CallFunction_17@FPSTimer].InText
+[K2Node_CallFunction_16].ReturnValue -> [K2Node_CallFunction_13@FPSTimer].InText
+[K2Node_CallFunction_17@FPSTimer].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_3].C
+[K2Node_CallFunction_18].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_2@FPSTimer].E
+[K2Node_CallFunction_1@FPSTimer].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_3].A
+[K2Node_CallFunction_3@FPSTimer].ReturnValue -> [K2Node_IfThenElse_1].Condition
+[K2Node_CallFunction_3@FPSTimer].ReturnValue#2 -> [K2Node_CallFunction_11@FPSTimer].self
+[K2Node_CallFunction_5@FPSTimer].ReturnValue -> [K2Node_CallFunction_15@FPSTimer].SourceString
+[K2Node_CallFunction_5@FPSTimer].ReturnValue#2 -> [K2Node_CallFunction_8@FPSTimer].InDouble
+[K2Node_CallFunction_6@FPSTimer].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_2@FPSTimer].A#2
+[K2Node_CallFunction_7@FPSTimer].ReturnValue -> [K2Node_CallFunction_2@FPSTimer].InText
+[K2Node_CallFunction_7@FPSTimer].ReturnValue#2 -> [K2Node_CallFunction_13@FPSTimer].InText
+[K2Node_CallFunction_8@FPSTimer].ReturnValue -> [K2Node_VariableSet_1].DeltaMs
+[K2Node_CallFunction_9@FPSTimer].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_1].A
+[K2Node_CommutativeAssociativeBinaryOperator_0@FPSTimer].ReturnValue -> [K2Node_CallFunction_7@FPSTimer].InString
+[K2Node_CommutativeAssociativeBinaryOperator_1].ReturnValue -> [K2Node_CallFunction_10@FPSTimer].Count
+[K2Node_CommutativeAssociativeBinaryOperator_2@FPSTimer].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_0@FPSTimer].C
+[K2Node_CommutativeAssociativeBinaryOperator_2@FPSTimer].ReturnValue#2 -> [K2Node_CallFunction_5@FPSTimer].B
+[K2Node_CommutativeAssociativeBinaryOperator_3].ReturnValue -> [K2Node_CallFunction_16].InString
+[K2Node_CommutativeAssociativeBinaryOperator_3].ReturnValue -> [K2Node_CallFunction_7@FPSTimer].InString#2
+[K2Node_ComponentBoundEvent_0].then -> [K2Node_CallFunction_1@FPSTimer].execute
+[K2Node_ComponentBoundEvent_1].then -> [K2Node_CallFunction_1@FPSTimer].execute
+[K2Node_ComponentBoundEvent_2].then -> [K2Node_CallFunction_1@FPSTimer].execute
+[K2Node_ComponentBoundEvent_3].then -> [K2Node_CallFunction_1@FPSTimer].execute
+[K2Node_ComponentBoundEvent_4].then -> [K2Node_CallFunction_1@FPSTimer].execute
+[K2Node_ComponentBoundEvent_6].then -> [K2Node_CallFunction_1@FPSTimer].execute
+[K2Node_ComponentBoundEvent_8].then -> [K2Node_CallFunction_1@FPSTimer].execute
+[K2Node_Event_0].then -> [K2Node_MacroInstance_0]. 
+[K2Node_Event_1].then -> [K2Node_CallFunction_10@FPSTimer].execute
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].InDeltaTime -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_Event_InDeltaTime
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].Integer -> [K2Node_SwitchInteger_0].Selection
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].MyGeometry -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_Event_MyGeometry
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].Type -> [K2Node_Select_0].Index
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then -> [K2Node_SwitchInteger_0].execute
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#10 -> [K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].execute#7
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#11 -> [K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].execute#8
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#12 -> [K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].execute#9
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#13 -> [K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].execute#10
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#2 -> [K2Node_IfThenElse_1].execute
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#3 -> [K2Node_CallFunction_14].execute
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#4 -> [K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].execute
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#5 -> [K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].execute#2
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#6 -> [K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].execute#3
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#7 -> [K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].execute#4
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#8 -> [K2Node_SetVariableOnPersistentFrame_0].execute
+[K2Node_FunctionEntry_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].then#9 -> [K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].execute#6
+[K2Node_IfThenElse_1].else -> [K2Node_CallFunction_2@FPSTimer].execute#2
+[K2Node_IfThenElse_1].then -> [K2Node_CallFunction_2@FPSTimer].execute#2
+[K2Node_PromotableOperator_0].ReturnValue -> [K2Node_PromotableOperator_1].A
+[K2Node_PromotableOperator_1].ReturnValue -> [K2Node_CallFunction_15@FPSTimer].Value
+[K2Node_Select_0].ReturnValue -> [K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].self
+[K2Node_Self_1].self -> [K2Node_CallFunction_2@FPSTimer].self#2
+[K2Node_Self_1].self -> [K2Node_CallFunction_3@FPSTimer].self
+[K2Node_SetVariableOnPersistentFrame_0].then -> [K2Node_CallFunction_0@BndEvt__Button_81_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature].execute#5
+[K2Node_SwitchInteger_0].1 -> [K2Node_CallFunction_1@FPSTimer].execute#2
+[K2Node_SwitchInteger_0].2 -> [K2Node_CallFunction_1@FPSTimer].execute#2
+[K2Node_SwitchInteger_0].3 -> [K2Node_CallFunction_1@FPSTimer].execute#2
+[K2Node_SwitchInteger_0].4 -> [K2Node_CallFunction_1@FPSTimer].execute#2
+[K2Node_SwitchInteger_0].5 -> [K2Node_CallFunction_1@FPSTimer].execute#2
+[K2Node_SwitchInteger_0].6 -> [K2Node_CallFunction_1@FPSTimer].execute#2
+[K2Node_SwitchInteger_0].7 -> [K2Node_CallFunction_1@FPSTimer].execute#2
+[K2Node_VariableGet_0@NextPreset].Frames -> [K2Node_MacroInstance_0].Value
+[K2Node_VariableGet_0@NextPreset].WB_Painter -> [K2Node_Select_0].Option 2
+[K2Node_VariableGet_1@NextPreset].DeltaMs -> [K2Node_CallFunction_10@FPSTimer].SourceString
+[K2Node_VariableGet_1@NextPreset].DeltaMs -> [K2Node_CallFunction_9@FPSTimer].SearchIn
+[K2Node_VariableGet_1@NextPreset].Version -> [K2Node_CallFunction_2@FPSTimer].self
+[K2Node_VariableGet_1@NextPreset].WB_Primary -> [K2Node_Select_0].Option 0
+[K2Node_VariableGet_2@NextPreset].TextFPS_1 -> [K2Node_CallFunction_13@FPSTimer].self
+[K2Node_VariableGet_2@NextPreset].WB_Shore -> [K2Node_Select_0].Option 1
+[K2Node_VariableGet_3].Frames -> [K2Node_CallFunction_1@FPSTimer].InInt
+[K2Node_VariableGet_3].Frames -> [K2Node_CallFunction_6@FPSTimer].InInt
+[K2Node_VariableGet_5].Distance -> [K2Node_CallFunction_13@FPSTimer].self
+[K2Node_VariableSet_0].then -> [K2Node_CallFunction_13@FPSTimer].execute
+[K2Node_VariableSet_1].then -> [K2Node_CallFunction_13@FPSTimer].execute

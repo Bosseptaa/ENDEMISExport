@@ -1,0 +1,61 @@
+﻿# /Game/FluidFlux/Interaction/Splash/Materials/M_SplashDrop
+# класс: Material; происхождение: проект; узлов: 10; связей: 18; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:100
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_SplashDrop] Material
+    BlendMode = BLEND_Translucent
+    TwoSided = True
+    TranslucencyPass = MTP_BeforeDOF
+    bUsedWithNiagaraSprites = True
+    bUsesDistortion = True
+    EditorX = -48
+    EditorY = -16
+    bCanMaskedBeAssumedOpaque = True
+    RefractionMethod = RM_IndexOfRefraction
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 35FA47B14EA9D9C6B32EE88053973DAD
+    ReferencedTextureGuids(0) = ECE4864C4289496979B8B1AAE7E42905
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_SplashDrop",TextureReference="/Game/1_Water/Textures/T_SplashDrop.T_SplashDrop")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_SplashDrop.T_SplashDrop'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = EB0E108548DA3DE545CEAF88F8609D98
+    EditorOnlyData <- M_SplashDropEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_SplashDropEditorOnlyData] MaterialEditorOnlyData
+    BaseColor <- MaterialExpressionConstant3Vector_0
+    Normal <- MaterialExpressionSubtract_0
+    Opacity <- MaterialExpressionMultiply_5
+    Refraction <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionTextureSample_5
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionTextureSample_4
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionSubtract_0
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=1.000000,B=1.000000,A=0.000000)
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    ConstA = 1.000000
+    ConstB = 0.300000
+    Alpha <- MaterialExpressionTextureSample_4
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionMultiply_6
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    A <- MaterialExpressionTextureSample_4
+    B <- MaterialExpressionTextureSample_4
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.500000
+    A <- MaterialExpressionTextureSample_5
+[MaterialExpressionTextureSample_4] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_SplashDrop.T_SplashDrop'"
+    SamplerType = SAMPLERTYPE_LinearColor
+[MaterialExpressionTextureSample_5] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_SplashDrop.T_SplashDrop'"
+    SamplerType = SAMPLERTYPE_LinearColor
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

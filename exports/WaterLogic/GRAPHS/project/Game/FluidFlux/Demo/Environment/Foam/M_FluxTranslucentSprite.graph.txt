@@ -1,0 +1,187 @@
+﻿# /Game/FluidFlux/Demo/Environment/Foam/M_FluxTranslucentSprite
+# класс: Material; происхождение: проект; узлов: 41; связей: 81; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:94
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_FluxTranslucentSprite] Material
+    BlendMode = BLEND_Translucent
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.010000
+    TwoSided = True
+    TranslucencyLightingMode = TLM_SurfacePerPixelLighting
+    bUsedWithNiagaraSprites = True
+    EditorX = 704
+    EditorY = -48
+    bUseTranslucencyVertexFog = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 5D8E88ED46CAD79020C50B98E3276D67
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq.Good64x64TilingNoiseHighFreq'"
+    LightingGuid = 81A28C9E471EEA7258E5468B0E038D95
+    EditorOnlyData <- M_FluxTranslucentSpriteEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+[MaterialExpressionTwoSidedSign_0] MaterialExpressionTwoSidedSign
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    A <- MaterialExpressionCameraPositionWS_0
+    B <- MaterialExpressionWorldPosition_0
+[MaterialExpressionSphereMask_0] MaterialExpressionSphereMask
+    A <- MaterialExpressionTextureCoordinate_0
+    B <- MaterialExpressionConstant_0
+    Radius <- MaterialExpressionScalarParameter_0
+    Hardness <- MaterialExpressionScalarParameter_1
+[MaterialExpressionSceneTexture_6] MaterialExpressionSceneTexture
+    SceneTextureId = PPI_WorldNormal
+    bFiltered = True
+[MaterialExpressionSceneTexture_0] MaterialExpressionSceneTexture
+    SceneTextureId = PPI_WorldNormal
+    bFiltered = True
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    ParameterName = "Hardness"
+    ExpressionGUID = 0163D31E49EAA6BFFF41FE8A0EBB3098
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.500000
+    ParameterName = "Radius"
+    ExpressionGUID = C24EEAA24985CBF407F5A6A876C5D3E2
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionTwoSidedSign_0
+[MaterialExpressionPixelNormalWS_0] MaterialExpressionPixelNormalWS
+[MaterialExpressionParticleColor_0] MaterialExpressionParticleColor
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionSubtract_0
+[MaterialExpressionMultiply_9] MaterialExpressionMultiply
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionMultiply_5
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    ConstB = 0.100000
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    A <- MaterialExpressionDivide_0
+    B <- MaterialExpressionParticleColor_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 10.000000
+    A <- MaterialExpressionNormalize_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 0.500000
+    A <- MaterialExpressionMultiply_1
+    B <- MaterialExpressionDepthFade_0
+[MaterialExpressionMultiply_11] MaterialExpressionMultiply
+    A <- MaterialExpressionConstant4Vector_0
+    B <- MaterialExpressionConstant4Vector_0
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    A <- MaterialExpressionConstant4Vector_1
+    B <- MaterialExpressionConstant4Vector_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    A <- MaterialExpressionParticleColor_0
+    B <- MaterialExpressionSphereMask_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Plankton/MF_NightVisibility.MF_NightVisibility'"
+    FunctionOutputs(0) = (ExpressionOutputId=156186AF4C4496689B7F579ED7F94B8B,Output=(OutputName="Scale"))
+    FunctionOutputs(1) = (ExpressionOutputId=A7F4E53B45911877B3BFCE81EA61DCDD,Output=(OutputName="Flag"))
+    Outputs(0) = (OutputName="Scale")
+    Outputs(1) = (OutputName="Flag")
+    FunctionInputs(0) <- MaterialExpressionPixelNormalWS_0
+    FunctionInputs(1) <- MaterialExpressionConstant_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.DitherTemporalAA'"
+    FunctionInputs(0) = (ExpressionInputId=982BCAE7401F814CDC0AE2955DEE46F3,Input=(InputName="Alpha Threshold"))
+    FunctionInputs(1) = (ExpressionInputId=E8A932AF4299B0D6C16EDB8B1E912796,Input=(InputName="Random"))
+    FunctionOutputs(0) = (ExpressionOutputId=9BC32B084665F3D2D59A90AA45CA8A9F,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionConstant3Vector_0
+    B <- MaterialExpressionComponentMask_2
+    Alpha <- MaterialExpressionSaturate_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    ConstA = 0.500000
+    ConstB = 0.100000
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionComponentMask_1
+    Alpha <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionEyeAdaptation_0] MaterialExpressionEyeAdaptation
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionEyeAdaptation_0
+[MaterialExpressionDepthFade_0] MaterialExpressionDepthFade
+    OpacityDefault = 0.500000
+    FadeDistanceDefault = 20.000000
+    bCollapsed = True
+[MaterialExpressionConstant4Vector_1] MaterialExpressionConstant4Vector
+    Constant = (R=0.600000,G=0.700000,B=1.000000,A=0.120000)
+[MaterialExpressionConstant4Vector_0] MaterialExpressionConstant4Vector
+    Constant = (R=1.000000,G=1.000000,B=1.000000,A=0.550000)
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=1.000000,A=0.000000)
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.500000
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 0.500000
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    G = True
+    B = True
+    Input <- MaterialExpressionSceneTexture_0
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    G = True
+    B = True
+    Input <- MaterialExpressionMultiply_10
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    B = True
+    Input <- MaterialExpressionMultiply_11
+[MaterialExpressionCameraPositionWS_0] MaterialExpressionCameraPositionWS
+[M_FluxTranslucentSpriteEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    BaseColor <- MaterialExpressionConstant_2
+    Normal <- MaterialExpressionLinearInterpolate_1
+    EmissiveColor <- MaterialExpressionMultiply_4
+    Opacity <- MaterialExpressionMultiply_2
+    OpacityMask <- MaterialExpressionMultiply_9
+    WorldPositionOffset <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionMultiply_9
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionSceneTexture_0
+    ExpressionCollection <- MaterialExpressionParticleColor_0
+    ExpressionCollection <- MaterialExpressionSphereMask_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionDepthFade_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionSceneTexture_6
+    ExpressionCollection <- MaterialExpressionEyeAdaptation_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionMultiply_11
+    ExpressionCollection <- MaterialExpressionConstant4Vector_0
+    ExpressionCollection <- MaterialExpressionConstant4Vector_1
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionTwoSidedSign_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_0
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+
+## СВЯЗИ

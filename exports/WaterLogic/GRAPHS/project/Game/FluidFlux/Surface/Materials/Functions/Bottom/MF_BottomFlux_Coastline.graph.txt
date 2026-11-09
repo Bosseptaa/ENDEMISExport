@@ -1,0 +1,264 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Bottom/MF_BottomFlux_Coastline
+# класс: MaterialFunction; происхождение: проект; узлов: 36; связей: 95; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:88
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_BottomFlux_Coastline] MaterialFunction
+    StateId = 034C21B542D96A30750B1593A9DE7BFD
+    CombinedInputTypes = 4
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_14
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_19
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_10
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_12
+    DependentFunctionExpressionCandidates(4) <- MaterialExpressionMaterialFunctionCall_13
+    DependentFunctionExpressionCandidates(5) <- MaterialExpressionMaterialFunctionCall_21
+    DependentFunctionExpressionCandidates(6) <- MaterialExpressionMaterialFunctionCall_3
+    DependentFunctionExpressionCandidates(7) <- MaterialExpressionMaterialFunctionCall_4
+    DependentFunctionExpressionCandidates(8) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(9) <- MaterialExpressionMaterialFunctionCall_1
+    EditorOnlyData <- MF_BottomFlux_CoastlineEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_BottomFlux_CoastlineEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_14
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_19
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionStaticBool_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionStaticBool_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_10
+    ExpressionCollection <- MaterialExpressionStaticBool_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_12
+    ExpressionCollection <- MaterialExpressionReroute_22
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_13
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_21
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionReroute_3
+    ExpressionCollection <- MaterialExpressionReroute_7
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionReroute_24
+    ExpressionCollection <- MaterialExpressionReroute_26
+    ExpressionCollection <- MaterialExpressionReroute_27
+    ExpressionCollection <- MaterialExpressionReroute_28
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Input <- MaterialExpressionReroute_27
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = 6F0623984D37E4AE7970AF8D82DD4D1F
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    bCollapsed = True
+    Preview <- MaterialExpressionWorldPosition_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Blend"
+    SortPriority = 1245
+    bLastPreviewed = True
+    Id = 862A1FBD41C4ED33B3628994ED361752
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Bottom"
+    SortPriority = 22
+    Id = 5ECBF92140A28020797AC8BF8D01CD34
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_4
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Intensity"
+    SortPriority = 123
+    bLastPreviewed = True
+    Id = 807F0CBD40860FEE7A73E3BC5A38240F
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "Distance"
+    SortPriority = 122
+    bLastPreviewed = True
+    Id = 7FB2616C4D4885E4BBE760BC8DE08F39
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionIf_0] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    A <- MaterialExpressionMaterialFunctionCall_12
+    B <- MaterialExpressionConstant_0
+    AGreaterThanB <- MaterialExpressionMaterialFunctionCall_1
+    ALessThanB <- MaterialExpressionConstant_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_SlopeNormal.MF_SlopeNormal'"
+    FunctionOutputs(0) = (ExpressionOutputId=F13FB5DB4FB506E373609181C91104D3,Output=(OutputName="RelativeZ"))
+    FunctionOutputs(1) = (ExpressionOutputId=E23E8EE94B1EA93DDC6C819D30C62C46,Output=(OutputName="Normal"))
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Outputs(0) = (OutputName="RelativeZ")
+    Outputs(1) = (OutputName="Normal")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_13
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_13
+    FunctionInputs(2) <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFlux_CoastlineBlend.MF_SurfaceFlux_CoastlineBlend'"
+    FunctionOutputs(0) = (ExpressionOutputId=287B80A240C3135023690EBC8873A76B,Output=(OutputName="Blend"))
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Outputs(0) = (OutputName="Blend")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_10
+[MaterialExpressionMaterialFunctionCall_10] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineSample.MF_CoastlineSample'"
+    FunctionOutputs(0) = (ExpressionOutputId=94959DB3460B356F9AE744B5728E38DA,Output=(OutputName="Coastline"))
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Outputs(0) = (OutputName="Coastline")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_5
+    FunctionInputs(1) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMaterialFunctionCall_12] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineDataGet.MF_CoastlineDataGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=907637C844D6BC8298C5ACADA0E3B2C3,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=23481DEA4452179C8D2797B33CE20435,Output=(OutputName="Direction"))
+    FunctionOutputs(2) = (ExpressionOutputId=A84715A749104AD14C38248BBFD455E2,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=6346C58A410496BE2C7A25BD8D50DEAA,Output=(OutputName="Mask"))
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Direction")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_10
+[MaterialExpressionMaterialFunctionCall_13] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Bottom/MF_Bottom_CoastlineSlopeBack.MF_Bottom_CoastlineSlopeBack'"
+    FunctionOutputs(0) = (ExpressionOutputId=77EA27BB4953A526DB483997791B331E,Output=(OutputName="StartWorldPosition"))
+    FunctionOutputs(1) = (ExpressionOutputId=338554174F5910E51E897F9BD5F2F131,Output=(OutputName="StartCoastline"))
+    FunctionOutputs(2) = (ExpressionOutputId=AF66BBF74E9CC3B4E34C4C89075FD77F,Output=(OutputName="GroundRelativeZ"))
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Outputs(0) = (OutputName="StartWorldPosition")
+    Outputs(1) = (OutputName="StartCoastline")
+    Outputs(2) = (OutputName="GroundRelativeZ")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_10
+    FunctionInputs(2) <- MaterialExpressionMultiply_0
+[MaterialExpressionMaterialFunctionCall_14] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineWater.MF_CoastlineWater'"
+    FunctionInputs(2) = (ExpressionInputId=943DA41B421E6ED2C16FF2A9D7539B77,Input=(OutputIndex=-1,InputName="WorldOffset"))
+    FunctionInputs(4) = (ExpressionInputId=BA55D7FE4513FF97EB90EC93EA6606F0,Input=(InputName="TimeOffset"))
+    FunctionOutputs(0) = (ExpressionOutputId=119C2CFF4AE52569FE82C9A3BFDE1DB9,Output=(OutputName="Coastline"))
+    FunctionOutputs(1) = (ExpressionOutputId=4E7D5D8B45A3F8D26B0EDF98C06A4028,Output=(OutputName="ForwardUpward"))
+    FunctionOutputs(2) = (ExpressionOutputId=E010660540340D1E9EE2AEA903BEC6A6,Output=(OutputName="Foam"))
+    FunctionOutputs(3) = (ExpressionOutputId=F938377A4163FA1E91A361BC73C50DBC,Output=(OutputName="WPO"))
+    FunctionOutputs(4) = (ExpressionOutputId=55A930694BF9C0FC0E589CB39001B724,Output=(OutputName="WPO_World"))
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Outputs(0) = (OutputName="Coastline")
+    Outputs(1) = (OutputName="ForwardUpward")
+    Outputs(2) = (OutputName="Foam")
+    Outputs(3) = (OutputName="WPO")
+    Outputs(4) = (OutputName="WPO_World")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_3
+    FunctionInputs(1) <- MaterialExpressionStaticBool_4
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_13
+    FunctionInputs(5) <- MaterialExpressionMaterialFunctionCall_0
+    FunctionInputs(6) <- MaterialExpressionMaterialFunctionCall_13
+[MaterialExpressionMaterialFunctionCall_19] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_EdgeCorrection.MF_EdgeCorrection'"
+    FunctionOutputs(0) = (ExpressionOutputId=255AA83E48A680DABE884C9F6FB04920,Output=(OutputName="PositionWorldZ"))
+    FunctionOutputs(1) = (ExpressionOutputId=0B3AB3484262922375DB23B8BA5C4975,Output=(OutputName="Offset"))
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Outputs(0) = (OutputName="PositionWorldZ")
+    Outputs(1) = (OutputName="Offset")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_14
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_13
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionMaterialFunctionCall_21] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Bottom/MF_Bottom_CoastlineInverse.MF_Bottom_CoastlineInverse'"
+    FunctionOutputs(0) = (ExpressionOutputId=E669ED464AC2F8954DA80BB20DDE2DAE,Output=(OutputName="Inverse0"))
+    FunctionOutputs(1) = (ExpressionOutputId=537FC52A474A2D92523181ADE7670085,Output=(OutputName="Inverse1"))
+    FunctionOutputs(2) = (ExpressionOutputId=23FC9EC44B7C513ED2F33AB8901758FC,Output=(OutputName="Inverse2"))
+    FunctionOutputs(3) = (ExpressionOutputId=63A9B81A47D0432068C8BEAA470FAF52,Output=(OutputName="MinInverse"))
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Outputs(0) = (OutputName="Inverse0")
+    Outputs(1) = (OutputName="Inverse1")
+    Outputs(2) = (OutputName="Inverse2")
+    Outputs(3) = (OutputName="MinInverse")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_10
+    FunctionInputs(1) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Bottom/MF_Bottom_CoastlineFoamVelocity.MF_Bottom_CoastlineFoamVelocity'"
+    FunctionOutputs(0) = (ExpressionOutputId=A3B0B75041696D12D169E38F33AB20A8,Output=(OutputName="Bottom"))
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Outputs(0) = (OutputName="Bottom")
+    FunctionInputs(0) <- MaterialExpressionSubtract_3
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_14
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_14
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_14
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Bottom/MF_BottomFlux_CoastlineWet.MF_BottomFlux_CoastlineWet'"
+    FunctionOutputs(0) = (ExpressionOutputId=5ECBF92140A28020797AC8BF8D01CD34,Output=(OutputName="Bottom"))
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Outputs(0) = (OutputName="Bottom")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_10
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_14
+    FunctionInputs(2) <- MaterialExpressionReroute_22
+    FunctionInputs(3) <- MaterialExpressionReroute_3
+    FunctionInputs(4) <- MaterialExpressionReroute_24
+    FunctionInputs(5) <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    A <- MaterialExpressionMaterialFunctionCall_21
+[MaterialExpressionReroute_22] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Input <- MaterialExpressionReroute_7
+[MaterialExpressionReroute_24] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Input <- MaterialExpressionReroute_26
+[MaterialExpressionReroute_26] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Input <- MaterialExpressionMaterialFunctionCall_21
+[MaterialExpressionReroute_27] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Input <- MaterialExpressionReroute_28
+[MaterialExpressionReroute_28] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionReroute_3] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Input <- MaterialExpressionReroute_27
+[MaterialExpressionReroute_7] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    Input <- MaterialExpressionMaterialFunctionCall_13
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 200.000000
+    ParameterName = "WaveGroundPrediction"
+    ExpressionGUID = C5738D0545026AE5758580AF6E8935D4
+    Group = "WaveProfile"
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+[MaterialExpressionStaticBool_3] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+[MaterialExpressionStaticBool_4] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+[MaterialExpressionStaticBool_5] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+    A <- MaterialExpressionMaterialFunctionCall_19
+    B <- MaterialExpressionComponentMask_5
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_BottomFlux_Coastline'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

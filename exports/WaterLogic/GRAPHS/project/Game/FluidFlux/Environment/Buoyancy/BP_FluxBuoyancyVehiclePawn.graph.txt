@@ -1,0 +1,1879 @@
+﻿# /Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyVehiclePawn
+# класс: Blueprint; происхождение: проект; узлов: 444; связей: 816; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:3438
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxBuoyancyVehiclePawn] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Pawn'"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxBuoyancyVehiclePawn_C:SimpleConstructionScript_0'"
+    NewVariables(10) = (VarName="RepCurrentSample",VarGuid=ACFD6EB24B3BB911B1BE75B8BE4BB2E8,VarType=(PinCategory="int"),FriendlyName="Rep Current Sample",Category=INVTEXT("Replication"),PropertyFlags=65541)
+    NewVariables(12) = (VarName="RepSamplesCount",VarGuid=168CA3354F7F37099C526CBB9BB254A0,VarType=(PinCategory="int"),FriendlyName="Rep Samples Count",Category=INVTEXT("Replication"),PropertyFlags=5)
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    CategorySorting(3) = "Driver"
+    CategorySorting(4) = "Camera"
+    CategorySorting(5) = "Replication"
+    CategorySorting(6) = "Input"
+    CategorySorting(7) = "Update"
+    ImportedNamespaces = ("ImaginaryBlend")
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyVehiclePawn.BP_FluxBuoyancyVehiclePawn:SetDriverInput",SavedViewOffset=(X=-407.339600,Y=-1027.145752),SavedZoomAmount=0.675000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyVehiclePawn.BP_FluxBuoyancyVehiclePawn:GetSamplePacket",SavedViewOffset=(X=-583.330688,Y=-444.668549),SavedZoomAmount=0.375000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyVehiclePawn.BP_FluxBuoyancyVehiclePawn:UpdateMovement",SavedViewOffset=(X=-5175.921875,Y=-8582.905273),SavedZoomAmount=0.875000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyVehiclePawn.BP_FluxBuoyancyVehiclePawn:AttachDriver",SavedViewOffset=(X=698.621643,Y=-336.166382),SavedZoomAmount=0.675000)
+    LastEditedDocuments(7) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyVehiclePawn.BP_FluxBuoyancyVehiclePawn:SetDriverInVehicle",SavedViewOffset=(X=727.132385,Y=-140.643494),SavedZoomAmount=0.675000)
+    LastEditedDocuments(8) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyVehiclePawn.BP_FluxBuoyancyVehiclePawn:EventGraph",SavedViewOffset=(X=155.717621,Y=-919.649963),SavedZoomAmount=0.675000)
+    LastEditedDocuments(9) = (EditedObjectPath="/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyVehiclePawn.BP_FluxBuoyancyVehiclePawn:EventGraph",SavedViewOffset=(X=135.222107,Y=-773.651794),SavedZoomAmount=0.875000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxBuoyancyVehiclePawn_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = EBB1A5144E0CD6F8B114A8BAD5479F55
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- SetDriverInVehicle
+    FunctionGraphs(2) <- AttachDriver
+    FunctionGraphs(3) <- SetDriverInput
+    FunctionGraphs(4) <- OnRep_Replication
+    FunctionGraphs(5) <- GetSamplePacket
+    FunctionGraphs(6) <- ReplicatePhysics
+    FunctionGraphs(7) <- InputCameraRotation
+    FunctionGraphs(8) <- InputMove
+    FunctionGraphs(9) <- ReplicateSteering
+    FunctionGraphs(10) <- InputJump
+    FunctionGraphs(11) <- ApplyJump
+    FunctionGraphs(12) <- UpdateCamera
+    FunctionGraphs(13) <- UpdateSteering
+    FunctionGraphs(14) <- UpdateMovement
+    FunctionGraphs(15) <- InitReplication
+    ImplementedInterfaces(0) <- GetInteractions
+    ImplementedInterfaces(0) <- GetShape
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[SetDriverInVehicle] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 25ABFA1E4FAF1C520F26DD9C0E281EA4
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_9
+    Nodes(2) <- K2Node_CallFunction_12
+    Nodes(3) <- K2Node_Self_4
+    Nodes(4) <- K2Node_VariableSet_1
+    Nodes(5) <- K2Node_CallFunction_1
+    Nodes(6) <- K2Node_CallFunction_13
+    Nodes(7) <- K2Node_VariableGet_27
+    Nodes(8) <- K2Node_VariableGet_2
+    Nodes(9) <- K2Node_MacroInstance_0
+    Nodes(10) <- K2Node_Knot_0
+    Nodes(11) <- K2Node_VariableGet_4
+    Nodes(12) <- K2Node_CallFunction_22
+    Nodes(13) <- K2Node_VariableSet_2
+    Nodes(14) <- K2Node_VariableGet_3
+    Nodes(15) <- K2Node_CallFunction_21
+[K2Node_FunctionEntry_0@SetDriverInVehicle] K2Node_FunctionEntry
+[K2Node_CallFunction_9@SetDriverInVehicle] K2Node_CallFunction
+[K2Node_CallFunction_12@SetDriverInVehicle] K2Node_CallFunction
+[K2Node_Self_4] K2Node_Self
+[K2Node_VariableSet_1@SetDriverInVehicle] K2Node_VariableSet
+[K2Node_CallFunction_1@SetDriverInVehicle] K2Node_CallFunction
+[K2Node_CallFunction_13@SetDriverInVehicle] K2Node_CallFunction
+[K2Node_VariableGet_27@SetDriverInVehicle] K2Node_VariableGet
+[K2Node_VariableGet_2@SetDriverInVehicle] K2Node_VariableGet
+[K2Node_MacroInstance_0@SetDriverInVehicle] K2Node_MacroInstance
+[K2Node_Knot_0@SetDriverInVehicle] K2Node_Knot
+[K2Node_VariableGet_4@SetDriverInVehicle] K2Node_VariableGet
+[K2Node_CallFunction_22@SetDriverInVehicle] K2Node_CallFunction
+[K2Node_VariableSet_2@SetDriverInVehicle] K2Node_VariableSet
+[K2Node_VariableGet_3@SetDriverInVehicle] K2Node_VariableGet
+[K2Node_CallFunction_21@SetDriverInVehicle] K2Node_CallFunction
+[AttachDriver] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 4AD83D2C41686CED55A331A59829BD85
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_17
+    Nodes(2) <- K2Node_Self_1
+    Nodes(3) <- K2Node_CallFunction_1
+    Nodes(4) <- K2Node_CallFunction_14
+    Nodes(5) <- K2Node_CallFunction_18
+    Nodes(6) <- K2Node_VariableGet_7
+    Nodes(7) <- K2Node_VariableGet_11
+    Nodes(8) <- K2Node_IfThenElse_0
+    Nodes(9) <- K2Node_VariableGet_8
+    Nodes(10) <- K2Node_VariableGet_3
+    Nodes(11) <- K2Node_VariableGet_1
+    Nodes(12) <- K2Node_CallFunction_2
+    Nodes(13) <- K2Node_CallFunction_3
+    Nodes(14) <- K2Node_VariableGet_9
+    Nodes(15) <- K2Node_VariableGet_10
+    Nodes(16) <- K2Node_CallFunction_6
+    Nodes(17) <- K2Node_VariableGet_13
+    Nodes(18) <- K2Node_CallFunction_13
+    Nodes(19) <- K2Node_PromotableOperator_1
+    Nodes(20) <- K2Node_CallFunction_21
+    Nodes(21) <- K2Node_CallFunction_32
+    Nodes(22) <- K2Node_CallFunction_28
+[K2Node_FunctionEntry_0@AttachDriver] K2Node_FunctionEntry
+[K2Node_CallFunction_17@AttachDriver] K2Node_CallFunction
+[K2Node_Self_1] K2Node_Self
+[K2Node_CallFunction_1@AttachDriver] K2Node_CallFunction
+[K2Node_CallFunction_14@AttachDriver] K2Node_CallFunction
+[K2Node_CallFunction_18@AttachDriver] K2Node_CallFunction
+[K2Node_VariableGet_7@AttachDriver] K2Node_VariableGet
+[K2Node_VariableGet_11@AttachDriver] K2Node_VariableGet
+[K2Node_IfThenElse_0@AttachDriver] K2Node_IfThenElse
+[K2Node_VariableGet_8@AttachDriver] K2Node_VariableGet
+[K2Node_VariableGet_3@AttachDriver] K2Node_VariableGet
+[K2Node_VariableGet_1@AttachDriver] K2Node_VariableGet
+[K2Node_CallFunction_2@AttachDriver] K2Node_CallFunction
+[K2Node_CallFunction_3@AttachDriver] K2Node_CallFunction
+[K2Node_VariableGet_9@AttachDriver] K2Node_VariableGet
+[K2Node_VariableGet_10@AttachDriver] K2Node_VariableGet
+[K2Node_CallFunction_6@AttachDriver] K2Node_CallFunction
+[K2Node_VariableGet_13@AttachDriver] K2Node_VariableGet
+[K2Node_CallFunction_13@AttachDriver] K2Node_CallFunction
+[K2Node_PromotableOperator_1@AttachDriver] K2Node_PromotableOperator
+[K2Node_CallFunction_21@AttachDriver] K2Node_CallFunction
+[K2Node_CallFunction_32] K2Node_CallFunction (вызов: InitReplication)
+    вход Possesed = true
+[K2Node_CallFunction_28] K2Node_CallFunction (вызов: InitReplication)
+    вход Possesed = false
+[SetDriverInput] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = FF15106A4E4D2E432E5817AEA53889C1
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_DynamicCast_0
+    Nodes(2) <- K2Node_CallFunction_61
+    Nodes(3) <- K2Node_GetSubsystemFromPC_0
+    Nodes(4) <- K2Node_MacroInstance_3
+    Nodes(5) <- K2Node_Knot_0
+    Nodes(6) <- K2Node_GetSubsystemFromPC_1
+    Nodes(7) <- K2Node_MacroInstance_1
+    Nodes(8) <- K2Node_CallFunction_17
+    Nodes(9) <- K2Node_Knot_4
+    Nodes(10) <- K2Node_IfThenElse_1
+    Nodes(11) <- K2Node_VariableGet_2
+    Nodes(12) <- K2Node_VariableGet_0
+    Nodes(13) <- K2Node_VariableGet_9
+[K2Node_FunctionEntry_0@SetDriverInput] K2Node_FunctionEntry
+[K2Node_DynamicCast_0] K2Node_DynamicCast
+    TargetType = "/Script/CoreUObject.Class'/Script/Engine.PlayerController'"
+    PureState = Impure
+    ErrorType = 4
+[K2Node_CallFunction_61] K2Node_CallFunction (вызов: AddMappingContext @ /Script/CoreUObject.Class)
+    вход Priority = 0
+    вход Options = (bIgnoreAllPressedKeysUntilRelease=True,bForceImmediately=False,bNotifyUserSettings=False)
+[K2Node_GetSubsystemFromPC_0] K2Node_GetSubsystemFromPC
+    CustomClass = "/Script/CoreUObject.Class'/Script/EnhancedInput.EnhancedInputLocalPlayerSubsystem'"
+[K2Node_MacroInstance_3] K2Node_MacroInstance
+[K2Node_Knot_0@SetDriverInput] K2Node_Knot
+[K2Node_GetSubsystemFromPC_1] K2Node_GetSubsystemFromPC
+    CustomClass = "/Script/CoreUObject.Class'/Script/EnhancedInput.EnhancedInputLocalPlayerSubsystem'"
+[K2Node_MacroInstance_1@SetDriverInput] K2Node_MacroInstance
+[K2Node_CallFunction_17@SetDriverInput] K2Node_CallFunction
+[K2Node_Knot_4] K2Node_Knot
+[K2Node_IfThenElse_1@SetDriverInput] K2Node_IfThenElse
+[K2Node_VariableGet_2@SetDriverInput] K2Node_VariableGet
+[K2Node_VariableGet_0@SetDriverInput] K2Node_VariableGet
+[K2Node_VariableGet_9@SetDriverInput] K2Node_VariableGet
+[InputCameraRotation] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D5253C7A44448A7DBD2DCBA0D608913F
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_26
+    Nodes(2) <- K2Node_CallFunction_40
+    Nodes(3) <- K2Node_CallFunction_46
+    Nodes(4) <- K2Node_VariableSet_2
+    Nodes(5) <- K2Node_PromotableOperator_4
+    Nodes(6) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@InputCameraRotation] K2Node_FunctionEntry
+[K2Node_CallFunction_26@InputCameraRotation] K2Node_CallFunction
+[K2Node_CallFunction_40] K2Node_CallFunction (вызов: AddControllerYawInput)
+    ErrorType = 1
+[K2Node_CallFunction_46] K2Node_CallFunction (вызов: GetTimeSeconds @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableSet_2@InputCameraRotation] K2Node_VariableSet
+[K2Node_PromotableOperator_4@InputCameraRotation] K2Node_PromotableOperator
+[K2Node_VariableGet_0@InputCameraRotation] K2Node_VariableGet
+[InitReplication] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = FE7427614ECEEE537C2DC3B2D6809D90
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_5
+    Nodes(2) <- K2Node_MacroInstance_0
+    Nodes(3) <- K2Node_CallArrayFunction_0
+    Nodes(4) <- K2Node_VariableGet_4
+    Nodes(5) <- K2Node_VariableSet_1
+    Nodes(6) <- K2Node_VariableGet_6
+    Nodes(7) <- K2Node_CallFunction_2
+    Nodes(8) <- K2Node_CallFunction_3
+    Nodes(9) <- K2Node_CallFunction_4
+    Nodes(10) <- K2Node_CallFunction_13
+    Nodes(11) <- K2Node_CallFunction_0
+    Nodes(12) <- K2Node_IfThenElse_0
+    Nodes(13) <- K2Node_CallFunction_5
+    Nodes(14) <- K2Node_CallFunction_60
+[K2Node_FunctionEntry_0@InitReplication] K2Node_FunctionEntry
+[K2Node_VariableGet_5@InitReplication] K2Node_VariableGet
+[K2Node_MacroInstance_0@InitReplication] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="struct",PinSubCategoryObject="/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxPhysicsPacket.BS_FluxPhysicsPacket'",ContainerType=Array)
+[K2Node_CallArrayFunction_0@InitReplication] K2Node_CallArrayFunction
+[K2Node_VariableGet_4@InitReplication] K2Node_VariableGet
+[K2Node_VariableSet_1@InitReplication] K2Node_VariableSet
+[K2Node_VariableGet_6@InitReplication] K2Node_VariableGet
+[K2Node_CallFunction_2@InitReplication] K2Node_CallFunction
+[K2Node_CallFunction_3@InitReplication] K2Node_CallFunction
+[K2Node_CallFunction_4@InitReplication] K2Node_CallFunction
+[K2Node_CallFunction_13@InitReplication] K2Node_CallFunction
+[K2Node_CallFunction_0@InitReplication] K2Node_CallFunction
+[K2Node_IfThenElse_0@InitReplication] K2Node_IfThenElse
+[K2Node_CallFunction_5] K2Node_CallFunction (вызов: SetActorTickEnabled)
+    вход bEnabled = true
+[K2Node_CallFunction_60] K2Node_CallFunction (вызов: SetActorTickEnabled)
+    вход bEnabled = false
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 1558C186417080190D6C87AD25BA0816
+    Nodes(0) <- K2Node_CustomEvent_6
+    Nodes(1) <- K2Node_ComponentBoundEvent_2
+    Nodes(2) <- K2Node_ComponentBoundEvent_3
+    Nodes(3) <- EdGraphNode_Comment_3
+    Nodes(4) <- K2Node_Event_4
+    Nodes(5) <- K2Node_CallFunction_15
+    Nodes(6) <- K2Node_AssignDelegate_0
+    Nodes(7) <- K2Node_RemoveDelegate_0
+    Nodes(8) <- K2Node_CustomEvent_3
+    Nodes(9) <- K2Node_CallFunction_7
+    Nodes(10) <- K2Node_Event_2
+    Nodes(11) <- EdGraphNode_Comment_0
+    Nodes(12) <- K2Node_CallFunction_11
+    Nodes(13) <- K2Node_CustomEvent_7
+    Nodes(14) <- K2Node_CallFunction_6
+    Nodes(15) <- K2Node_CallFunction_27
+    Nodes(16) <- K2Node_CallFunction_9
+    Nodes(17) <- K2Node_CallFunction_12
+    Nodes(18) <- K2Node_CallFunction_26
+    Nodes(19) <- K2Node_CallFunction_17
+    Nodes(20) <- K2Node_CallFunction_19
+    Nodes(21) <- K2Node_CallFunction_25
+    Nodes(22) <- K2Node_IfThenElse_1
+    Nodes(23) <- K2Node_CallFunction_23
+    Nodes(24) <- K2Node_CallFunction_21
+    Nodes(25) <- K2Node_IfThenElse_0
+    Nodes(26) <- K2Node_CallFunction_20
+    Nodes(27) <- K2Node_Event_1
+    Nodes(28) <- EdGraphNode_Comment_5
+    Nodes(29) <- K2Node_CustomEvent_0
+    Nodes(30) <- K2Node_VariableSet_3
+    Nodes(31) <- K2Node_VariableSet_4
+    Nodes(32) <- K2Node_CustomEvent_1
+    Nodes(33) <- K2Node_CallFunction_22
+    Nodes(34) <- K2Node_CustomEvent_2
+    Nodes(35) <- K2Node_CallFunction_18
+    Nodes(36) <- K2Node_CallFunction_1
+    Nodes(37) <- K2Node_IfThenElse_2
+    Nodes(38) <- K2Node_CallFunction_24
+    Nodes(39) <- EdGraphNode_Comment_1
+    Nodes(40) <- EdGraphNode_Comment_4
+    Nodes(41) <- K2Node_Event_0
+    Nodes(42) <- EdGraphNode_Comment_2
+    Nodes(43) <- K2Node_CallFunction_14
+    Nodes(44) <- K2Node_VariableSet_0
+    Nodes(45) <- K2Node_CallFunction_16
+    Nodes(46) <- K2Node_VariableSet_2
+    Nodes(47) <- K2Node_VariableSet_5
+    Nodes(48) <- K2Node_CallFunction_29
+    Nodes(49) <- K2Node_VariableGet_5
+    Nodes(50) <- K2Node_IfThenElse_5
+    Nodes(51) <- K2Node_CallFunction_13
+    Nodes(52) <- K2Node_CallFunction_0
+[K2Node_CustomEvent_6] K2Node_CustomEvent
+    CustomFunctionName = "InputUseVehicle"
+    FunctionFlags = 203555008
+    ErrorType = 1
+[K2Node_ComponentBoundEvent_2] K2Node_ComponentBoundEvent (событие: ComponentBeginOverlapSignature__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnComponentBeginOverlap"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/Engine.PrimitiveComponent'"
+    ComponentPropertyName = "DetectCharacter"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature"
+[K2Node_ComponentBoundEvent_3] K2Node_ComponentBoundEvent (событие: ComponentEndOverlapSignature__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnComponentEndOverlap"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/Engine.PrimitiveComponent'"
+    ComponentPropertyName = "DetectCharacter"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature"
+[EdGraphNode_Comment_3] EdGraphNode_Comment
+    CommentColor = (R=0.046875,G=0.024756,B=0.024756,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1952
+    NodeHeight = 1456
+    bCommentBubblePinned = False
+    NodeComment = "Posses the input"
+[K2Node_Event_4] K2Node_Event (событие: ReceivePossessed @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[K2Node_CallFunction_15@EventGraph] K2Node_CallFunction
+[K2Node_AssignDelegate_0] K2Node_AssignDelegate
+[K2Node_RemoveDelegate_0] K2Node_RemoveDelegate
+[K2Node_CustomEvent_3] K2Node_CustomEvent
+    CustomFunctionName = "OnUseVehicleEventServer"
+    ErrorType = 1
+[K2Node_CallFunction_7@EventGraph] K2Node_CallFunction
+[K2Node_Event_2] K2Node_Event (событие: ReceiveUnpossessed @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[EdGraphNode_Comment_0@EventGraph] EdGraphNode_Comment
+[K2Node_CallFunction_11@EventGraph] K2Node_CallFunction
+[K2Node_CustomEvent_7] K2Node_CustomEvent
+    CustomFunctionName = "SetDriverOnClient"
+    FunctionFlags = 201474240
+[K2Node_CallFunction_6@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_27] K2Node_CallFunction (вызов: SetDriverInput)
+    вход Enabled = true
+[K2Node_CallFunction_9@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_12@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_26@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_17@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_19@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_25@EventGraph] K2Node_CallFunction
+[K2Node_IfThenElse_1@EventGraph] K2Node_IfThenElse
+[K2Node_CallFunction_23@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_21@EventGraph] K2Node_CallFunction
+[K2Node_IfThenElse_0@EventGraph] K2Node_IfThenElse
+[K2Node_CallFunction_20@EventGraph] K2Node_CallFunction
+[K2Node_Event_1] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[EdGraphNode_Comment_5] EdGraphNode_Comment
+    CommentColor = (R=1.000000,G=0.471045,B=0.154644,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1600
+    NodeHeight = 272
+    bCommentBubblePinned = False
+    NodeComment = "Begin play initialization"
+[K2Node_CustomEvent_0] K2Node_CustomEvent
+    CustomFunctionName = "ReceivedInputSteeringOnServer"
+    FunctionFlags = 203555008
+    ErrorType = 1
+[K2Node_VariableSet_3@EventGraph] K2Node_VariableSet
+[K2Node_VariableSet_4] K2Node_VariableSet (переменная: InputServerSteering)
+    ErrorType = 1
+[K2Node_CustomEvent_1] K2Node_CustomEvent
+    CustomFunctionName = "JumpServer"
+    FunctionFlags = 203555008
+[K2Node_CallFunction_22@EventGraph] K2Node_CallFunction (вызов: ApplyJump)
+    ErrorType = 1
+    вход Attach = true
+[K2Node_CustomEvent_2] K2Node_CustomEvent
+    CustomFunctionName = "JumpMulticast"
+    FunctionFlags = 201474112
+    ErrorType = 1
+[K2Node_CallFunction_18@EventGraph] K2Node_CallFunction (вызов: ApplyJump)
+    ErrorType = 1
+    вход NewTransform_Scale = 1.000000,1.000000,1.000000
+    вход bSweep = false
+    вход bTeleport = true
+[K2Node_CallFunction_1@EventGraph] K2Node_CallFunction
+[K2Node_IfThenElse_2@EventGraph] K2Node_IfThenElse
+[K2Node_CallFunction_24@EventGraph] K2Node_CallFunction
+[EdGraphNode_Comment_1@EventGraph] EdGraphNode_Comment
+[EdGraphNode_Comment_4] EdGraphNode_Comment
+    CommentColor = (R=0.633042,G=1.000000,B=0.545423,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 912
+    NodeHeight = 432
+    bCommentBubblePinned = False
+    NodeComment = "Jump activates by InputJimp function. Its executed on local player first."
+[K2Node_Event_0] K2Node_Event (событие: ReceiveTick @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[EdGraphNode_Comment_2@EventGraph] EdGraphNode_Comment
+[K2Node_CallFunction_14@EventGraph] K2Node_CallFunction
+[K2Node_VariableSet_0@EventGraph] K2Node_VariableSet
+[K2Node_CallFunction_16] K2Node_CallFunction (вызов: InputToByte @ /Script/Engine.BlueprintGeneratedClass)
+    bDefaultsToPureFunc = True
+[K2Node_VariableSet_2@EventGraph] K2Node_VariableSet
+[K2Node_VariableSet_5@EventGraph] K2Node_VariableSet
+[K2Node_CallFunction_29] K2Node_CallFunction (вызов: InitReplication)
+    вход Possesed = true
+[K2Node_VariableGet_5@EventGraph] K2Node_VariableGet
+[K2Node_IfThenElse_5] K2Node_IfThenElse
+[K2Node_CallFunction_13@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_0@EventGraph] K2Node_CallFunction
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = D5B1773847BB6C7C5C8925B702A523E0
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_2
+    Nodes(2) <- K2Node_CallArrayFunction_1
+    Nodes(3) <- K2Node_VariableGet_1
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_VariableGet_2@UserConstructionScript] K2Node_VariableGet
+[K2Node_CallArrayFunction_1] K2Node_CallArrayFunction (вызов: Array_Resize @ /Script/CoreUObject.Class)
+[K2Node_VariableGet_1@UserConstructionScript] K2Node_VariableGet
+[OnRep_Replication] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E77C4F2B4F2DCCEC348DA99F0626E0C8
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_2
+    Nodes(2) <- K2Node_IfThenElse_0
+    Nodes(3) <- K2Node_VariableGet_2
+    Nodes(4) <- K2Node_VariableGet_9
+    Nodes(5) <- K2Node_CallArrayFunction_0
+    Nodes(6) <- K2Node_VariableGet_7
+    Nodes(7) <- K2Node_VariableGet_13
+    Nodes(8) <- K2Node_PromotableOperator_2
+    Nodes(9) <- K2Node_CallFunction_0
+    Nodes(10) <- K2Node_VariableSet_3
+    Nodes(11) <- K2Node_VariableGet_18
+    Nodes(12) <- K2Node_GetArrayItem_2
+    Nodes(13) <- K2Node_VariableGet_19
+    Nodes(14) <- K2Node_VariableGet_0
+    Nodes(15) <- K2Node_IfThenElse_1
+    Nodes(16) <- EdGraphNode_Comment_0
+    Nodes(17) <- K2Node_VariableGet_17
+    Nodes(18) <- K2Node_PromotableOperator_4
+    Nodes(19) <- K2Node_PromotableOperator_10
+    Nodes(20) <- K2Node_CommutativeAssociativeBinaryOperator_3
+    Nodes(21) <- K2Node_VariableGet_3
+    Nodes(22) <- K2Node_VariableSet_1
+    Nodes(23) <- K2Node_VariableGet_14
+    Nodes(24) <- K2Node_CallFunction_1
+    Nodes(25) <- K2Node_VariableSet_0
+    Nodes(26) <- K2Node_VariableGet_5
+    Nodes(27) <- K2Node_PromotableOperator_3
+    Nodes(28) <- K2Node_VariableGet_8
+    Nodes(29) <- K2Node_CallFunction_4
+    Nodes(30) <- K2Node_PromotableOperator_5
+    Nodes(31) <- K2Node_IfThenElse_2
+    Nodes(32) <- K2Node_VariableSet_8
+    Nodes(33) <- K2Node_VariableGet_1
+    Nodes(34) <- K2Node_VariableGet_4
+    Nodes(35) <- K2Node_Knot_0
+    Nodes(36) <- EdGraphNode_Comment_1
+[K2Node_FunctionEntry_0@OnRep_Replication] K2Node_FunctionEntry
+[K2Node_CallFunction_2@OnRep_Replication] K2Node_CallFunction
+[K2Node_IfThenElse_0@OnRep_Replication] K2Node_IfThenElse
+[K2Node_VariableGet_2@OnRep_Replication] K2Node_VariableGet
+[K2Node_VariableGet_9@OnRep_Replication] K2Node_VariableGet
+[K2Node_CallArrayFunction_0@OnRep_Replication] K2Node_CallArrayFunction (вызов: Array_Set @ /Script/CoreUObject.Class)
+    вход bSizeToFit = false
+    вход bSizeToFit = false
+[K2Node_VariableGet_7@OnRep_Replication] K2Node_VariableGet
+[K2Node_VariableGet_13@OnRep_Replication] K2Node_VariableGet
+[K2Node_PromotableOperator_2@OnRep_Replication] K2Node_PromotableOperator
+[K2Node_CallFunction_0@OnRep_Replication] K2Node_CallFunction
+[K2Node_VariableSet_3@OnRep_Replication] K2Node_VariableSet
+[K2Node_VariableGet_18@OnRep_Replication] K2Node_VariableGet
+[K2Node_GetArrayItem_2@OnRep_Replication] K2Node_GetArrayItem
+[K2Node_VariableGet_19] K2Node_VariableGet (переменная: RepCurrentSample)
+[K2Node_VariableGet_0@OnRep_Replication] K2Node_VariableGet
+[K2Node_IfThenElse_1@OnRep_Replication] K2Node_IfThenElse
+[EdGraphNode_Comment_0@OnRep_Replication] EdGraphNode_Comment
+[K2Node_VariableGet_17@OnRep_Replication] K2Node_VariableGet
+[K2Node_PromotableOperator_4@OnRep_Replication] K2Node_PromotableOperator
+[K2Node_PromotableOperator_10@OnRep_Replication] K2Node_PromotableOperator
+[K2Node_CommutativeAssociativeBinaryOperator_3] K2Node_CommutativeAssociativeBinaryOperator (вызов: FMin @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_3@OnRep_Replication] K2Node_VariableGet
+[K2Node_VariableSet_1@OnRep_Replication] K2Node_VariableSet
+[K2Node_VariableGet_14@OnRep_Replication] K2Node_VariableGet
+[K2Node_CallFunction_1@OnRep_Replication] K2Node_CallFunction
+[K2Node_VariableSet_0@OnRep_Replication] K2Node_VariableSet
+[K2Node_VariableGet_5@OnRep_Replication] K2Node_VariableGet
+[K2Node_PromotableOperator_3@OnRep_Replication] K2Node_PromotableOperator
+[K2Node_VariableGet_8@OnRep_Replication] K2Node_VariableGet
+[K2Node_CallFunction_4@OnRep_Replication] K2Node_CallFunction
+[K2Node_PromotableOperator_5@OnRep_Replication] K2Node_PromotableOperator
+[K2Node_IfThenElse_2@OnRep_Replication] K2Node_IfThenElse
+[K2Node_VariableSet_8] K2Node_VariableSet (переменная: ServerTimeOffset)
+[K2Node_VariableGet_1@OnRep_Replication] K2Node_VariableGet
+[K2Node_VariableGet_4@OnRep_Replication] K2Node_VariableGet
+[K2Node_Knot_0@OnRep_Replication] K2Node_Knot
+[EdGraphNode_Comment_1@OnRep_Replication] EdGraphNode_Comment
+[GetSamplePacket] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 69292F944C642021D9E5F1A662710B0F
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_8
+    Nodes(2) <- K2Node_VariableGet_18
+    Nodes(3) <- K2Node_IfThenElse_0
+    Nodes(4) <- K2Node_GetArrayItem_4
+    Nodes(5) <- K2Node_PromotableOperator_1
+    Nodes(6) <- K2Node_FunctionResult_2
+    Nodes(7) <- K2Node_VariableGet_7
+    Nodes(8) <- K2Node_GetArrayItem_1
+    Nodes(9) <- K2Node_MacroInstance_1
+    Nodes(10) <- K2Node_VariableGet_15
+    Nodes(11) <- K2Node_VariableGet_3
+    Nodes(12) <- K2Node_GetArrayItem_3
+    Nodes(13) <- K2Node_PromotableOperator_0
+    Nodes(14) <- K2Node_PromotableOperator_9
+    Nodes(15) <- K2Node_VariableGet_14
+    Nodes(16) <- K2Node_IfThenElse_1
+    Nodes(17) <- K2Node_VariableSet_1
+    Nodes(18) <- K2Node_VariableGet_26
+    Nodes(19) <- K2Node_PromotableOperator_10
+    Nodes(20) <- K2Node_VariableGet_31
+    Nodes(21) <- K2Node_CallFunction_8
+    Nodes(22) <- K2Node_VariableGet_32
+    Nodes(23) <- K2Node_VariableGet_10
+    Nodes(24) <- K2Node_VariableGet_11
+    Nodes(25) <- K2Node_GetArrayItem_6
+    Nodes(26) <- K2Node_VariableGet_12
+    Nodes(27) <- K2Node_PromotableOperator_12
+    Nodes(28) <- K2Node_CallFunction_1
+    Nodes(29) <- K2Node_CallFunction_2
+    Nodes(30) <- K2Node_CallFunction_6
+    Nodes(31) <- K2Node_VariableGet_17
+    Nodes(32) <- K2Node_CallFunction_9
+    Nodes(33) <- K2Node_FunctionResult_1
+    Nodes(34) <- K2Node_VariableGet_5
+    Nodes(35) <- K2Node_VariableGet_6
+    Nodes(36) <- K2Node_GetArrayItem_2
+    Nodes(37) <- K2Node_VariableGet_24
+    Nodes(38) <- K2Node_VariableGet_25
+    Nodes(39) <- K2Node_VariableGet_23
+    Nodes(40) <- K2Node_VariableGet_27
+    Nodes(41) <- K2Node_PromotableOperator_7
+    Nodes(42) <- K2Node_VariableSet_0
+    Nodes(43) <- K2Node_PromotableOperator_8
+    Nodes(44) <- K2Node_VariableGet_28
+    Nodes(45) <- K2Node_CallFunction_7
+    Nodes(46) <- K2Node_VariableGet_29
+    Nodes(47) <- K2Node_CallFunction_11
+    Nodes(48) <- K2Node_CallFunction_12
+    Nodes(49) <- K2Node_BreakStruct_2
+    Nodes(50) <- K2Node_CallFunction_10
+    Nodes(51) <- K2Node_BreakStruct_29
+    Nodes(52) <- K2Node_Knot_0
+    Nodes(53) <- K2Node_Knot_1
+    Nodes(54) <- K2Node_VariableGet_4
+    Nodes(55) <- K2Node_VariableGet_30
+    Nodes(56) <- K2Node_PromotableOperator_2
+    Nodes(57) <- K2Node_PromotableOperator_4
+    Nodes(58) <- K2Node_CallFunction_3
+    Nodes(59) <- K2Node_PromotableOperator_6
+    Nodes(60) <- K2Node_VariableGet_13
+    Nodes(61) <- K2Node_IfThenElse_2
+    Nodes(62) <- K2Node_VariableGet_16
+    Nodes(63) <- K2Node_GetArrayItem_5
+    Nodes(64) <- K2Node_VariableGet_1
+    Nodes(65) <- K2Node_BreakStruct_30
+    Nodes(66) <- K2Node_PromotableOperator_11
+    Nodes(67) <- K2Node_FunctionResult_0
+    Nodes(68) <- K2Node_VariableGet_0
+    Nodes(69) <- K2Node_GetArrayItem_0
+    Nodes(70) <- K2Node_CallFunction_14
+    Nodes(71) <- K2Node_VariableGet_9
+    Nodes(72) <- K2Node_VariableGet_20
+    Nodes(73) <- K2Node_VariableGet_2
+[K2Node_FunctionEntry_0@GetSamplePacket] K2Node_FunctionEntry
+[K2Node_VariableGet_8@GetSamplePacket] K2Node_VariableGet
+[K2Node_VariableGet_18@GetSamplePacket] K2Node_VariableGet (переменная: RepCurrentSample)
+    ErrorType = 3
+[K2Node_IfThenElse_0@GetSamplePacket] K2Node_IfThenElse
+[K2Node_GetArrayItem_4] K2Node_GetArrayItem
+[K2Node_PromotableOperator_1@GetSamplePacket] K2Node_PromotableOperator
+[K2Node_FunctionResult_2] K2Node_FunctionResult (вызов: GetSamplePacket)
+    bIsEditable = True
+    ErrorType = 1
+    вход Position = 0, 0, 0
+    вход SampleId = 0
+[K2Node_VariableGet_7@GetSamplePacket] K2Node_VariableGet
+[K2Node_GetArrayItem_1] K2Node_GetArrayItem
+    ErrorType = 1
+[K2Node_MacroInstance_1@GetSamplePacket] K2Node_MacroInstance
+    вход FirstIndex = 1
+[K2Node_VariableGet_15@GetSamplePacket] K2Node_VariableGet
+[K2Node_VariableGet_3@GetSamplePacket] K2Node_VariableGet
+[K2Node_GetArrayItem_3] K2Node_GetArrayItem
+[K2Node_PromotableOperator_0] K2Node_PromotableOperator (вызов: Greater_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Greater"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_9@GetSamplePacket] K2Node_PromotableOperator
+[K2Node_VariableGet_14@GetSamplePacket] K2Node_VariableGet (переменная: RepSamplesCount)
+[K2Node_IfThenElse_1@GetSamplePacket] K2Node_IfThenElse
+[K2Node_VariableSet_1@GetSamplePacket] K2Node_VariableSet
+[K2Node_VariableGet_26@GetSamplePacket] K2Node_VariableGet
+[K2Node_PromotableOperator_10@GetSamplePacket] K2Node_PromotableOperator (вызов: Add_IntInt @ /Script/CoreUObject.Class)
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_31] K2Node_VariableGet (переменная: RepSamplesCount)
+[K2Node_CallFunction_8@GetSamplePacket] K2Node_CallFunction
+[K2Node_VariableGet_32] K2Node_VariableGet (переменная: RepSamplesCount)
+[K2Node_VariableGet_10@GetSamplePacket] K2Node_VariableGet
+[K2Node_VariableGet_11@GetSamplePacket] K2Node_VariableGet
+[K2Node_GetArrayItem_6] K2Node_GetArrayItem
+    ErrorType = 1
+[K2Node_VariableGet_12] K2Node_VariableGet (переменная: StartSample)
+[K2Node_PromotableOperator_12@GetSamplePacket] K2Node_PromotableOperator
+[K2Node_CallFunction_1@GetSamplePacket] K2Node_CallFunction
+[K2Node_CallFunction_2@GetSamplePacket] K2Node_CallFunction
+[K2Node_CallFunction_6@GetSamplePacket] K2Node_CallFunction
+[K2Node_VariableGet_17@GetSamplePacket] K2Node_VariableGet (переменная: RepSamplesCount)
+[K2Node_CallFunction_9@GetSamplePacket] K2Node_CallFunction
+[K2Node_FunctionResult_1@GetSamplePacket] K2Node_FunctionResult
+[K2Node_VariableGet_5@GetSamplePacket] K2Node_VariableGet
+[K2Node_VariableGet_6@GetSamplePacket] K2Node_VariableGet
+[K2Node_GetArrayItem_2@GetSamplePacket] K2Node_GetArrayItem
+[K2Node_VariableGet_24@GetSamplePacket] K2Node_VariableGet
+[K2Node_VariableGet_25@GetSamplePacket] K2Node_VariableGet
+[K2Node_VariableGet_23@GetSamplePacket] K2Node_VariableGet
+[K2Node_VariableGet_27@GetSamplePacket] K2Node_VariableGet (переменная: RepCurrentSample)
+    CurrentVariation = ValidatedObject
+    ErrorType = 1
+[K2Node_PromotableOperator_7@GetSamplePacket] K2Node_PromotableOperator
+[K2Node_VariableSet_0@GetSamplePacket] K2Node_VariableSet
+[K2Node_PromotableOperator_8@GetSamplePacket] K2Node_PromotableOperator
+[K2Node_VariableGet_28] K2Node_VariableGet (переменная: RepSamplesCount)
+[K2Node_CallFunction_7@GetSamplePacket] K2Node_CallFunction
+[K2Node_VariableGet_29] K2Node_VariableGet (переменная: RepSamplesCount)
+[K2Node_CallFunction_11@GetSamplePacket] K2Node_CallFunction
+[K2Node_CallFunction_12@GetSamplePacket] K2Node_CallFunction
+[K2Node_BreakStruct_2] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="Location_20_EF7234554158FB28C4DC39B5E2144858",PropertyFriendlyName="Location",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Rotation_21_F67400824CED7159DD7382AA422A989F",PropertyFriendlyName="Rotation",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="Time_11_3EB178FA40CC726C2FBE9BB425299297",PropertyFriendlyName="Time",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxPhysicsPacket.BS_FluxPhysicsPacket'"
+[K2Node_CallFunction_10@GetSamplePacket] K2Node_CallFunction
+[K2Node_BreakStruct_29] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="Location_20_EF7234554158FB28C4DC39B5E2144858",PropertyFriendlyName="Location",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Rotation_21_F67400824CED7159DD7382AA422A989F",PropertyFriendlyName="Rotation",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="Time_11_3EB178FA40CC726C2FBE9BB425299297",PropertyFriendlyName="Time",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxPhysicsPacket.BS_FluxPhysicsPacket'"
+[K2Node_Knot_0@GetSamplePacket] K2Node_Knot
+[K2Node_Knot_1] K2Node_Knot
+[K2Node_VariableGet_4@GetSamplePacket] K2Node_VariableGet
+[K2Node_VariableGet_30] K2Node_VariableGet (переменная: RepCurrentSample)
+[K2Node_PromotableOperator_2@GetSamplePacket] K2Node_PromotableOperator
+[K2Node_PromotableOperator_4@GetSamplePacket] K2Node_PromotableOperator
+[K2Node_CallFunction_3@GetSamplePacket] K2Node_CallFunction
+[K2Node_PromotableOperator_6] K2Node_PromotableOperator (вызов: Add_IntInt @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_13@GetSamplePacket] K2Node_VariableGet
+[K2Node_IfThenElse_2@GetSamplePacket] K2Node_IfThenElse
+[K2Node_VariableGet_16] K2Node_VariableGet (переменная: RepSamples)
+[K2Node_GetArrayItem_5] K2Node_GetArrayItem
+    ErrorType = 1
+[K2Node_VariableGet_1@GetSamplePacket] K2Node_VariableGet
+[K2Node_BreakStruct_30] K2Node_BreakStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="Location_20_EF7234554158FB28C4DC39B5E2144858",PropertyFriendlyName="Location",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Rotation_21_F67400824CED7159DD7382AA422A989F",PropertyFriendlyName="Rotation",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="Time_11_3EB178FA40CC726C2FBE9BB425299297",PropertyFriendlyName="Time",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.UserDefinedStruct'/Game/FluidFlux/Environment/Buoyancy/BS_FluxPhysicsPacket.BS_FluxPhysicsPacket'"
+[K2Node_PromotableOperator_11] K2Node_PromotableOperator (вызов: Less_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Less"
+    bDefaultsToPureFunc = True
+[K2Node_FunctionResult_0@GetSamplePacket] K2Node_FunctionResult
+[K2Node_VariableGet_0@GetSamplePacket] K2Node_VariableGet
+[K2Node_GetArrayItem_0] K2Node_GetArrayItem
+    ErrorType = 1
+[K2Node_CallFunction_14@GetSamplePacket] K2Node_CallFunction
+[K2Node_VariableGet_9@GetSamplePacket] K2Node_VariableGet (переменная: RepCurrentSample)
+[K2Node_VariableGet_20] K2Node_VariableGet (переменная: StartSample)
+[K2Node_VariableGet_2@GetSamplePacket] K2Node_VariableGet
+[ReplicatePhysics] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A98041CE4A0D20390102E9BDEC819088
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_0
+    Nodes(2) <- K2Node_CallFunction_2
+    Nodes(3) <- K2Node_CallFunction_13
+    Nodes(4) <- K2Node_IfThenElse_4
+    Nodes(5) <- EdGraphNode_Comment_0
+    Nodes(6) <- K2Node_CallFunction_8
+    Nodes(7) <- K2Node_VariableGet_4
+    Nodes(8) <- K2Node_CallFunction_10
+    Nodes(9) <- K2Node_CallFunction_23
+    Nodes(10) <- K2Node_CallFunction_19
+    Nodes(11) <- K2Node_VariableGet_8
+    Nodes(12) <- K2Node_CallFunction_20
+    Nodes(13) <- K2Node_CallFunction_4
+    Nodes(14) <- K2Node_CallFunction_21
+    Nodes(15) <- K2Node_VariableGet_3
+    Nodes(16) <- K2Node_VariableGet_1
+    Nodes(17) <- K2Node_CallFunction_15
+    Nodes(18) <- K2Node_PromotableOperator_3
+    Nodes(19) <- K2Node_PromotableOperator_4
+    Nodes(20) <- EdGraphNode_Comment_1
+    Nodes(21) <- K2Node_CallFunction_7
+    Nodes(22) <- K2Node_VariableGet_0
+    Nodes(23) <- K2Node_PromotableOperator_12
+    Nodes(24) <- K2Node_CallFunction_17
+    Nodes(25) <- K2Node_CallFunction_9
+    Nodes(26) <- K2Node_PromotableOperator_7
+    Nodes(27) <- K2Node_VariableGet_7
+    Nodes(28) <- K2Node_CallFunction_83
+    Nodes(29) <- K2Node_CallFunction_26
+    Nodes(30) <- K2Node_VariableGet_10
+    Nodes(31) <- K2Node_PromotableOperator_1
+    Nodes(32) <- K2Node_IfThenElse_0
+    Nodes(33) <- EdGraphNode_Comment_2
+[K2Node_FunctionEntry_0@ReplicatePhysics] K2Node_FunctionEntry
+[K2Node_VariableSet_0@ReplicatePhysics] K2Node_VariableSet
+[K2Node_CallFunction_2@ReplicatePhysics] K2Node_CallFunction (вызов: GetTransform)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Time = -1.000000
+    вход OutRangeA = 0.0
+    вход OutRangeB = 1.000000
+[K2Node_CallFunction_13@ReplicatePhysics] K2Node_CallFunction
+[K2Node_IfThenElse_4@ReplicatePhysics] K2Node_IfThenElse
+[EdGraphNode_Comment_0@ReplicatePhysics] EdGraphNode_Comment
+    CommentColor = (R=0.562071,G=1.000000,B=0.504315,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 896
+    NodeHeight = 496
+    bCommentBubblePinned = False
+    NodeComment = "Add and remove imput"
+    CommentColor = (R=0.010866,G=0.046875,B=0.035576,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 560
+    NodeHeight = 336
+    bCommentBubblePinned = False
+    NodeComment = "Make sure that reciving data in right order. Old data is rejected."
+    CommentColor = (R=0.000000,G=0.046875,B=0.021168,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1312
+    NodeHeight = 368
+    bCommentBubblePinned = False
+    NodeComment = "Server to client UDP"
+[K2Node_CallFunction_8@ReplicatePhysics] K2Node_CallFunction
+[K2Node_VariableGet_4@ReplicatePhysics] K2Node_VariableGet
+[K2Node_CallFunction_10@ReplicatePhysics] K2Node_CallFunction
+[K2Node_CallFunction_23@ReplicatePhysics] K2Node_CallFunction
+[K2Node_CallFunction_19@ReplicatePhysics] K2Node_CallFunction
+[K2Node_VariableGet_8@ReplicatePhysics] K2Node_VariableGet
+[K2Node_CallFunction_20@ReplicatePhysics] K2Node_CallFunction
+[K2Node_CallFunction_4@ReplicatePhysics] K2Node_CallFunction
+[K2Node_CallFunction_21@ReplicatePhysics] K2Node_CallFunction
+[K2Node_VariableGet_3@ReplicatePhysics] K2Node_VariableGet
+[K2Node_VariableGet_1@ReplicatePhysics] K2Node_VariableGet
+[K2Node_CallFunction_15@ReplicatePhysics] K2Node_CallFunction
+[K2Node_PromotableOperator_3@ReplicatePhysics] K2Node_PromotableOperator
+[K2Node_PromotableOperator_4@ReplicatePhysics] K2Node_PromotableOperator (вызов: Add_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Greater"
+    bDefaultsToPureFunc = True
+    OperationName = "Greater"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+[EdGraphNode_Comment_1@ReplicatePhysics] EdGraphNode_Comment
+[K2Node_CallFunction_7@ReplicatePhysics] K2Node_CallFunction
+[K2Node_VariableGet_0@ReplicatePhysics] K2Node_VariableGet
+[K2Node_PromotableOperator_12@ReplicatePhysics] K2Node_PromotableOperator
+[K2Node_CallFunction_17@ReplicatePhysics] K2Node_CallFunction (вызов: GetRealTimeSeconds @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    вход LocationRule = SnapToTarget
+    вход RotationRule = SnapToTarget
+    вход ScaleRule = KeepWorld
+    вход bWeldSimulatedBodies = false
+    вход Options = (bIgnoreAllPressedKeysUntilRelease=True,bForceImmediately=False,bNotifyUserSettings=False)
+[K2Node_CallFunction_9@ReplicatePhysics] K2Node_CallFunction (вызов: GetRealTimeSeconds @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+    вход Enabled = false
+[K2Node_PromotableOperator_7@ReplicatePhysics] K2Node_PromotableOperator (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    вход B = 1
+[K2Node_VariableGet_7@ReplicatePhysics] K2Node_VariableGet (переменная: MovementPrediction)
+[K2Node_CallFunction_83] K2Node_CallFunction (вызов: Quat_Rotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_26@ReplicatePhysics] K2Node_CallFunction (вызов: GetActorScale3D)
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_10@ReplicatePhysics] K2Node_VariableGet
+[K2Node_PromotableOperator_1@ReplicatePhysics] K2Node_PromotableOperator
+[K2Node_IfThenElse_0@ReplicatePhysics] K2Node_IfThenElse
+[EdGraphNode_Comment_2@ReplicatePhysics] EdGraphNode_Comment
+[InputMove] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1ED929974D1E1BA2B32ADAA24062D72B
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_0
+    Nodes(2) <- K2Node_CallFunction_55
+    Nodes(3) <- K2Node_PromotableOperator_3
+    Nodes(4) <- K2Node_CallFunction_21
+    Nodes(5) <- K2Node_PromotableOperator_5
+    Nodes(6) <- K2Node_CallFunction_20
+    Nodes(7) <- K2Node_CallFunction_4
+    Nodes(8) <- K2Node_VariableGet_2
+[K2Node_FunctionEntry_0@InputMove] K2Node_FunctionEntry
+[K2Node_VariableSet_0@InputMove] K2Node_VariableSet (переменная: InputLocalSteering)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_CallFunction_55] K2Node_CallFunction (вызов: MakeVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_3@InputMove] K2Node_PromotableOperator
+[K2Node_CallFunction_21@InputMove] K2Node_CallFunction (вызов: FClamp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Attach = false
+    вход Roll = 0.0
+    вход Pitch = 0.0
+    вход Min = -1.000000
+    вход Max = 1.0
+[K2Node_PromotableOperator_5@InputMove] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Greater"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 0.300000
+[K2Node_CallFunction_20@InputMove] K2Node_CallFunction
+[K2Node_CallFunction_4@InputMove] K2Node_CallFunction (вызов: InputToByte @ /Script/Engine.BlueprintGeneratedClass)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_2@InputMove] K2Node_VariableGet
+[ReplicateSteering] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 9BAF24E449350091C06E10AC51108A41
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_3
+    Nodes(2) <- K2Node_CallFunction_10
+    Nodes(3) <- K2Node_EnumEquality_3
+    Nodes(4) <- K2Node_IfThenElse_0
+    Nodes(5) <- K2Node_VariableGet_0
+    Nodes(6) <- K2Node_VariableGet_3
+    Nodes(7) <- K2Node_IfThenElse_1
+    Nodes(8) <- K2Node_VariableSet_1
+    Nodes(9) <- K2Node_VariableGet_2
+    Nodes(10) <- K2Node_VariableSet_2
+    Nodes(11) <- K2Node_VariableGet_4
+    Nodes(12) <- EdGraphNode_Comment_1
+    Nodes(13) <- EdGraphNode_Comment_2
+    Nodes(14) <- K2Node_CallFunction_13
+    Nodes(15) <- K2Node_IfThenElse_3
+    Nodes(16) <- K2Node_IfThenElse_4
+    Nodes(17) <- K2Node_CallFunction_14
+    Nodes(18) <- K2Node_PromotableOperator_2
+    Nodes(19) <- K2Node_VariableGet_13
+    Nodes(20) <- K2Node_IfThenElse_2
+    Nodes(21) <- K2Node_VariableSet_5
+    Nodes(22) <- K2Node_CallFunction_15
+    Nodes(23) <- K2Node_VariableGet_11
+    Nodes(24) <- K2Node_VariableGet_1
+    Nodes(25) <- K2Node_VariableGet_10
+    Nodes(26) <- K2Node_PromotableOperator_1
+    Nodes(27) <- K2Node_ExecutionSequence_0
+    Nodes(28) <- K2Node_FunctionResult_1
+    Nodes(29) <- K2Node_FunctionResult_0
+    Nodes(30) <- K2Node_VariableSet_3
+    Nodes(31) <- K2Node_VariableGet_5
+[K2Node_FunctionEntry_0@ReplicateSteering] K2Node_FunctionEntry
+[K2Node_CallFunction_3@ReplicateSteering] K2Node_CallFunction (вызов: ReceivedInputSteeringOnServer)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_10@ReplicateSteering] K2Node_CallFunction
+[K2Node_EnumEquality_3] K2Node_EnumEquality
+    вход B = ROLE_AutonomousProxy
+[K2Node_IfThenElse_0@ReplicateSteering] K2Node_IfThenElse
+[K2Node_VariableGet_0@ReplicateSteering] K2Node_VariableGet
+[K2Node_VariableGet_3@ReplicateSteering] K2Node_VariableGet
+[K2Node_IfThenElse_1@ReplicateSteering] K2Node_IfThenElse
+[K2Node_VariableSet_1@ReplicateSteering] K2Node_VariableSet
+[K2Node_VariableGet_2@ReplicateSteering] K2Node_VariableGet
+[K2Node_VariableSet_2@ReplicateSteering] K2Node_VariableSet
+[K2Node_VariableGet_4@ReplicateSteering] K2Node_VariableGet (переменная: InputServerSteering)
+    ErrorType = 1
+[EdGraphNode_Comment_1@ReplicateSteering] EdGraphNode_Comment
+    CommentColor = (R=0.046875,G=0.046875,B=0.046875,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 864
+    NodeHeight = 288
+    bCommentBubblePinned = False
+    NodeComment = "Quantized input received on the server is saved as local steering and server that will be consumed during movement. It\'s only executed to the client when input changes."
+    CommentColor = (R=0.113542,G=0.015494,B=0.015494,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1678
+    NodeHeight = 522
+    bCommentBubblePinned = False
+    NodeComment = "Time synchronization - I noticed that minimum time offset is stable and closest but there ay be some better ways to do it. GetServerTime work worse."
+    CommentColor = (R=0.126042,G=0.126042,B=0.126042,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 752
+    NodeHeight = 272
+    bCommentBubblePinned = False
+    NodeComment = "Predict movement on server - not physically correct but gives future location. "
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1232
+    NodeHeight = 288
+    bCommentBubblePinned = False
+    NodeComment = "Clinet: Send input from clieant to server when its different than previously"
+[EdGraphNode_Comment_2@ReplicateSteering] EdGraphNode_Comment
+    CommentColor = (R=0.021875,G=0.021875,B=0.021875,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    CommentDepth = -2
+    NodeWidth = 560
+    NodeHeight = 272
+    bCommentBubblePinned = False
+    NodeComment = "Movement implementation"
+    CommentColor = (R=0.108394,G=0.147591,B=0.363542,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 2072
+    NodeHeight = 587
+    bCommentBubblePinned = False
+    NodeComment = "Use replicated data to correct position on clients"
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 768
+    NodeHeight = 176
+    bCommentBubblePinned = False
+    NodeComment = "Server: Apply server input that was sent from client."
+[K2Node_CallFunction_13@ReplicateSteering] K2Node_CallFunction (вызов: IsServer @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход bInReplicateMovement = false
+    вход bInReplicateMovement = false
+[K2Node_IfThenElse_3] K2Node_IfThenElse
+[K2Node_IfThenElse_4@ReplicateSteering] K2Node_IfThenElse
+[K2Node_CallFunction_14@ReplicateSteering] K2Node_CallFunction (вызов: IsLocallyControlled)
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход LocationRule = KeepWorld
+    вход RotationRule = KeepWorld
+    вход ScaleRule = KeepWorld
+[K2Node_PromotableOperator_2@ReplicateSteering] K2Node_PromotableOperator
+[K2Node_VariableGet_13@ReplicateSteering] K2Node_VariableGet (переменная: InputLocalSteering)
+    ErrorType = 1
+[K2Node_IfThenElse_2@ReplicateSteering] K2Node_IfThenElse
+[K2Node_VariableSet_5@ReplicateSteering] K2Node_VariableSet (переменная: InputLocalSteering)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_CallFunction_15@ReplicateSteering] K2Node_CallFunction (вызов: ByteToInput @ /Script/Engine.BlueprintGeneratedClass)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+[K2Node_VariableGet_11@ReplicateSteering] K2Node_VariableGet (переменная: NoInputCode)
+    ErrorType = 1
+[K2Node_VariableGet_1@ReplicateSteering] K2Node_VariableGet
+[K2Node_VariableGet_10@ReplicateSteering] K2Node_VariableGet (переменная: NoInputCode)
+    ErrorType = 1
+[K2Node_PromotableOperator_1@ReplicateSteering] K2Node_PromotableOperator (вызов: NotEqual_ByteByte @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Greater"
+    bDefaultsToPureFunc = True
+    OperationName = "Greater"
+    bDefaultsToPureFunc = True
+    OperationName = "NotEqual"
+    bDefaultsToPureFunc = True
+[K2Node_ExecutionSequence_0] K2Node_ExecutionSequence
+[K2Node_FunctionResult_1@ReplicateSteering] K2Node_FunctionResult (вызов: ReplicateSteering)
+    bIsEditable = True
+    bIsEditable = True
+    вход SampleId = 100
+    вход Position = 0, 0, 0
+    вход SampleId = 100
+[K2Node_FunctionResult_0@ReplicateSteering] K2Node_FunctionResult
+[K2Node_VariableSet_3@ReplicateSteering] K2Node_VariableSet
+[K2Node_VariableGet_5@ReplicateSteering] K2Node_VariableGet (переменная: Direction)
+    ErrorType = 3
+[InputJump] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 8FE74220406C26F2AC9300B96971C2C3
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_CallFunction_11
+    Nodes(3) <- K2Node_IfThenElse_4
+    Nodes(4) <- K2Node_CallFunction_23
+    Nodes(5) <- K2Node_CallFunction_19
+[K2Node_FunctionEntry_0@InputJump] K2Node_FunctionEntry
+[K2Node_CallFunction_7@InputJump] K2Node_CallFunction (вызов: JumpServer)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+[K2Node_CallFunction_11@InputJump] K2Node_CallFunction
+[K2Node_IfThenElse_4@InputJump] K2Node_IfThenElse
+[K2Node_CallFunction_23@InputJump] K2Node_CallFunction
+[K2Node_CallFunction_19@InputJump] K2Node_CallFunction (вызов: ApplyJump)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[ApplyJump] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 7FD1D55F4EB89FA5E2008C958DD5ACE7
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_11
+[K2Node_FunctionEntry_0@ApplyJump] K2Node_FunctionEntry
+[K2Node_CallFunction_11@ApplyJump] K2Node_CallFunction
+[UpdateCamera] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 2524F94342BBBCCB3BA44CB4D74721CB
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_PromotableOperator_14
+    Nodes(2) <- K2Node_IfThenElse_0
+    Nodes(3) <- K2Node_PromotableOperator_13
+    Nodes(4) <- K2Node_CallFunction_8
+    Nodes(5) <- K2Node_CallFunction_25
+    Nodes(6) <- K2Node_PromotableOperator_9
+    Nodes(7) <- K2Node_CallFunction_24
+    Nodes(8) <- K2Node_VariableSet_3
+    Nodes(9) <- K2Node_VariableGet_8
+    Nodes(10) <- K2Node_VariableGet_6
+    Nodes(11) <- K2Node_VariableGet_15
+    Nodes(12) <- K2Node_PromotableOperator_19
+    Nodes(13) <- K2Node_CallFunction_8427
+    Nodes(14) <- K2Node_CallFunction_36
+    Nodes(15) <- K2Node_CallFunction_35
+    Nodes(16) <- K2Node_PromotableOperator_2
+    Nodes(17) <- K2Node_CallFunction_23
+    Nodes(18) <- K2Node_CallFunction_8428
+    Nodes(19) <- K2Node_VariableGet_3
+    Nodes(20) <- K2Node_PromotableOperator_8
+    Nodes(21) <- K2Node_VariableGet_0
+    Nodes(22) <- K2Node_PromotableOperator_3
+    Nodes(23) <- K2Node_PromotableOperator_12
+    Nodes(24) <- K2Node_VariableGet_21
+    Nodes(25) <- K2Node_PromotableOperator_25
+    Nodes(26) <- K2Node_PromotableOperator_26
+    Nodes(27) <- K2Node_CallFunction_20
+    Nodes(28) <- K2Node_PromotableOperator_30
+    Nodes(29) <- K2Node_VariableGet_22
+    Nodes(30) <- K2Node_VariableSet_1
+    Nodes(31) <- K2Node_VariableGet_24
+    Nodes(32) <- K2Node_VariableGet_23
+    Nodes(33) <- K2Node_VariableSet_2
+    Nodes(34) <- K2Node_VariableGet_26
+    Nodes(35) <- K2Node_VariableGet_25
+[K2Node_FunctionEntry_0@UpdateCamera] K2Node_FunctionEntry
+[K2Node_PromotableOperator_14] K2Node_PromotableOperator (вызов: Greater_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Greater"
+    bDefaultsToPureFunc = True
+[K2Node_IfThenElse_0@UpdateCamera] K2Node_IfThenElse
+[K2Node_PromotableOperator_13] K2Node_PromotableOperator (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_8@UpdateCamera] K2Node_CallFunction (вызов: GetTimeSeconds @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_25@UpdateCamera] K2Node_CallFunction (вызов: FClamp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Min = 0.0
+    вход Max = 1.0
+[K2Node_PromotableOperator_9@UpdateCamera] K2Node_PromotableOperator (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_24@UpdateCamera] K2Node_CallFunction (вызов: GetTimeSeconds @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableSet_3@UpdateCamera] K2Node_VariableSet (переменная: RotationTime)
+    ErrorType = 1
+    ErrorType = 3
+[K2Node_VariableGet_8@UpdateCamera] K2Node_VariableGet (переменная: CameraTargetAdjustTime)
+[K2Node_VariableGet_6@UpdateCamera] K2Node_VariableGet (переменная: CameraTargetAdjustTime)
+    ErrorType = 1
+[K2Node_VariableGet_15@UpdateCamera] K2Node_VariableGet (переменная: CameraAdjustingDuration)
+[K2Node_PromotableOperator_19] K2Node_PromotableOperator (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_8427] K2Node_CallFunction (вызов: AddControllerYawInput)
+    ErrorType = 1
+[K2Node_CallFunction_36] K2Node_CallFunction (вызов: GetControlRotation)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_35] K2Node_CallFunction (вызов: K2_GetComponentRotation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_2@UpdateCamera] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "NotEqual"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 1
+[K2Node_CallFunction_23@UpdateCamera] K2Node_CallFunction (вызов: NormalizedDeltaRotator @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    EnabledState = DevelopmentOnly
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход InString = Can\'t use it\'s already controlled
+    вход bPrintToScreen = true
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+[K2Node_CallFunction_8428] K2Node_CallFunction (вызов: AddControllerPitchInput)
+    ErrorType = 1
+[K2Node_VariableGet_3@UpdateCamera] K2Node_VariableGet (переменная: RotationTime)
+    ErrorType = 1
+[K2Node_PromotableOperator_8@UpdateCamera] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_0@UpdateCamera] K2Node_VariableGet
+[K2Node_PromotableOperator_3@UpdateCamera] K2Node_PromotableOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    вход B = -11.000000
+[K2Node_PromotableOperator_12@UpdateCamera] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 1
+    вход B = -0.500000
+[K2Node_VariableGet_21] K2Node_VariableGet (переменная: Mesh)
+[K2Node_PromotableOperator_25] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_26] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 0.500000
+[K2Node_CallFunction_20@UpdateCamera] K2Node_CallFunction (вызов: NormalizedDeltaRotator @ /Script/CoreUObject.Class)
+    AdvancedPinDisplay = Hidden
+    EnabledState = DevelopmentOnly
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход InString = Can\'t stop using it\'s not controlled.
+    вход bPrintToScreen = true
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход Min = -1.000000
+    вход Max = 1.0
+[K2Node_PromotableOperator_30] K2Node_PromotableOperator (вызов: Multiply_RotatorFloat @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_22] K2Node_VariableGet (переменная: CameraPitchStiffness)
+[K2Node_VariableSet_1@UpdateCamera] K2Node_VariableSet (переменная: MeshRotation)
+    ErrorType = 1
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_VariableGet_24@UpdateCamera] K2Node_VariableGet (переменная: MeshRotation)
+[K2Node_VariableGet_23@UpdateCamera] K2Node_VariableGet (переменная: MeshRotation)
+[K2Node_VariableSet_2@UpdateCamera] K2Node_VariableSet (переменная: ControlRotation)
+    ErrorType = 1
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_VariableGet_26@UpdateCamera] K2Node_VariableGet (переменная: ControlRotation)
+[K2Node_VariableGet_25@UpdateCamera] K2Node_VariableGet (переменная: ControlRotation)
+[UpdateSteering] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = EC75AC894943F910CD86BA92667F32BB
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_11
+[K2Node_FunctionEntry_0@UpdateSteering] K2Node_FunctionEntry
+[K2Node_CallFunction_11@UpdateSteering] K2Node_CallFunction (вызов: PrintString @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    AdvancedPinDisplay = Hidden
+    EnabledState = DevelopmentOnly
+    AdvancedPinDisplay = Hidden
+    EnabledState = DevelopmentOnly
+    вход InString = Implement the jump forces here
+    вход bPrintToScreen = true
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+    вход InString = Implement the motors here
+    вход bPrintToScreen = true
+    вход bPrintToLog = true
+    вход TextColor = (R=0.000000,G=0.660000,B=1.000000,A=1.000000)
+    вход Duration = 2.000000
+    вход Key = None
+[UpdateMovement] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 04F0566E45E0A21579D065A615171E60
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_12
+    Nodes(2) <- K2Node_CallFunction_1
+    Nodes(3) <- K2Node_CallFunction_10
+    Nodes(4) <- K2Node_CallFunction_6
+    Nodes(5) <- K2Node_VariableGet_1
+    Nodes(6) <- K2Node_VariableGet_2
+    Nodes(7) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@UpdateMovement] K2Node_FunctionEntry
+[K2Node_CallFunction_12@UpdateMovement] K2Node_CallFunction (вызов: UpdateCamera)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_1@UpdateMovement] K2Node_CallFunction (вызов: ReplicatePhysics)
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+    вход bSweep = false
+    вход bTeleport = false
+[K2Node_CallFunction_10@UpdateMovement] K2Node_CallFunction (вызов: UpdateSteering)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход bSweep = false
+    вход bTeleport = false
+[K2Node_CallFunction_6@UpdateMovement] K2Node_CallFunction (вызов: ReplicateSteering)
+    AdvancedPinDisplay = Hidden
+    bDefaultsToPureFunc = True
+    вход bSweep = false
+    вход bTeleport = false
+[K2Node_VariableGet_1@UpdateMovement] K2Node_VariableGet (переменная: Delta)
+    ErrorType = 1
+[K2Node_VariableGet_2@UpdateMovement] K2Node_VariableGet (переменная: Delta)
+    ErrorType = 1
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_VariableGet_0@UpdateMovement] K2Node_VariableGet
+[GetInteractions] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 9B3B282847A6345FFAABEAA01DFBD573
+    InterfaceGuid = 2C5F2F284ED0681AF2CD12AA73F8B1D0
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_VariableGet_0
+    Nodes(3) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@GetInteractions] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetInteractions] K2Node_FunctionResult
+[K2Node_VariableGet_0@GetInteractions] K2Node_VariableGet (переменная: BP_FluxInteractionComponent)
+    ErrorType = 1
+    ErrorType = 1
+[K2Node_CallFunction_0@GetInteractions] K2Node_CallFunction
+[GetShape] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 601CCFAC4DEC53145CEDBCACDD3619C6
+    InterfaceGuid = 3A06096544620F95A19E06AC2624342C
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetShape] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetShape] K2Node_FunctionResult (вызов: GetShape @ /Script/Engine.BlueprintGeneratedClass)
+    bIsEditable = True
+    ErrorType = 1
+    bIsEditable = True
+    вход SampleId = -200
+    вход Position = 0, 0, 0
+    вход SampleId = -200
+    вход Location = 0, 0, 0
+    вход Radius = 0.0
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ReceiveTick] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 2A096391413E05331DE49DB772992C42
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveTick] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@ReceiveTick] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@ReceiveTick] K2Node_CallFunction
+[InputUseVehicle] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 390FAC994223A7DA63F20296BB57E644
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InputUseVehicle] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InputUseVehicle] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InputUseVehicle] K2Node_CallFunction
+[BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = EAC1FF0748D6BE6FA8C8539B85E352D6
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature] K2Node_CallFunction
+[JumpMulticast] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D4A27C634AA77F98B1721684D9723029
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@JumpMulticast] K2Node_FunctionEntry
+[K2Node_CallFunction_0@JumpMulticast] K2Node_CallFunction
+[JumpServer] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 523172F1416D3D96E996F38DDFFA2E10
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@JumpServer] K2Node_FunctionEntry
+[K2Node_CallFunction_0@JumpServer] K2Node_CallFunction
+[ReceivedInputSteeringOnServer] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = AAD709DA4528AE85694CC987F8E8FF80
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceivedInputSteeringOnServer] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@ReceivedInputSteeringOnServer] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@ReceivedInputSteeringOnServer] K2Node_CallFunction
+[BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1A65230346B4CC9509C749895D78BA07
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature] K2Node_CallFunction
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = B1E673EE478572DA6B73E28ED5043346
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction
+[SetDriverOnClient] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 6E68A3314A6B67CF062A6D9A0C44746B
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@SetDriverOnClient] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@SetDriverOnClient] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@SetDriverOnClient] K2Node_CallFunction
+[ReceivePossessed] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 9BEC6291486234D37B83768FF3305202
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceivePossessed] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@ReceivePossessed] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@ReceivePossessed] K2Node_CallFunction
+[ReceiveUnpossessed] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 22CD7E014FC4B5765F3B7C9FE93E0912
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveUnpossessed] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@ReceiveUnpossessed] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@ReceiveUnpossessed] K2Node_CallFunction
+[OnUseVehicleEventServer] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 5B2618FD4F933C1A7E69C2A245E80153
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer] K2Node_FunctionEntry (вызов: ReceiveUnpossessed @ /Script/CoreUObject.Class)
+    MetaData = (Category=NSLOCTEXT("", "EA69D6A84308DFB535A016873074E1EC", "Driver"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "67AF527E4B967462D810DA84208B1A07", "Driver"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "AAF44891407BB54CEB803BB4D74A948A", "Driver"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "76279D024FE24F902C4776B43B628C14", "Input"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "52F48E9D40B6548F509709952DDC4EB2", "Replication"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "F97ADDB04DA19FE8F3C5769002BB9EC7", "Replication"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=INVTEXT("Replication"))
+    LocalVariables(0) = (VarName="StartSample",VarGuid=B9B5145740E6AF65E1D3549121DEC55B,VarType=(PinCategory="int"),FriendlyName="Start Sample",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=INVTEXT("Replication"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "FEDBEC2C417DF1BCF3A4D4907D50A16F", "Input"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=INVTEXT("Replication"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "11BDFCE84EFBF5876B9F1BB330F8CFA4", "Input"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=INVTEXT("Update"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "A1E7DC8C45F9E9AF5FA86B870A49E09C", "Update"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "1C9E4FA242A307A618B40EAE67EE2988", "Update"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "413EEF0B498004DB1481F795C094BDBE", "Update"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "ReceiveTick"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InputUseVehicle"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "JumpMulticast"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "JumpServer"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceivedInputSteeringOnServer"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BndEvt__BP_FluxBuoyancyVehiclePawn_DetectCharacter_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveBeginPlay"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "SetDriverOnClient"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceivePossessed"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveUnpossessed"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "OnUseVehicleEventServer"
+    bIsIntermediateNode = True
+[K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@OnUseVehicleEventServer] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_FluxBuoyancyVehiclePawn)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    вход bInReplicateMovement = true
+    вход bInReplicateMovement = true
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_BreakStruct_2].Time_11_3EB178FA40CC726C2FBE9BB425299297 -> [K2Node_CallFunction_2@ReplicatePhysics].InRangeA
+[K2Node_BreakStruct_2].Time_11_3EB178FA40CC726C2FBE9BB425299297 -> [K2Node_CallFunction_2@ReplicatePhysics].InRangeB
+[K2Node_BreakStruct_2].Time_11_3EB178FA40CC726C2FBE9BB425299297 -> [K2Node_PromotableOperator_11].A
+[K2Node_CallFunction_0@OnUseVehicleEventServer].Interactions -> [K2Node_FunctionResult_0@GetShape].Interactions
+[K2Node_CallFunction_0@OnUseVehicleEventServer].ReturnValue -> [K2Node_VariableSet_3@UpdateCamera].RepCurrentSample
+[K2Node_CallFunction_0@OnUseVehicleEventServer].then -> [K2Node_FunctionResult_0@GetShape].execute
+[K2Node_CallFunction_10@UpdateMovement].ReturnValue -> [K2Node_EnumEquality_3].A
+[K2Node_CallFunction_10@UpdateMovement].then -> [K2Node_CallFunction_1@UpdateMovement].execute#2
+[K2Node_CallFunction_11@UpdateSteering].then -> [K2Node_CallFunction_27].execute
+[K2Node_CallFunction_13@ReplicateSteering].ReturnValue#2 -> [K2Node_IfThenElse_4@InputJump].Condition
+[K2Node_CallFunction_13@ReplicateSteering].ReturnValue#3 -> [K2Node_IfThenElse_3].Condition
+[K2Node_CallFunction_13@ReplicateSteering].ReturnValue_Yaw -> [K2Node_PromotableOperator_1@ReplicateSteering].B
+[K2Node_CallFunction_13@ReplicateSteering].then -> [K2Node_CallFunction_22@EventGraph].execute
+[K2Node_CallFunction_13@ReplicateSteering].then -> [K2Node_VariableSet_2@UpdateCamera].execute
+[K2Node_CallFunction_13@ReplicateSteering].then#2 -> [K2Node_CallFunction_5].execute
+[K2Node_CallFunction_14@ReplicateSteering].Position -> [K2Node_CallFunction_1@UpdateMovement].A
+[K2Node_CallFunction_14@ReplicateSteering].Position -> [K2Node_FunctionResult_1@ReplicateSteering].Position
+[K2Node_CallFunction_14@ReplicateSteering].Position -> [K2Node_FunctionResult_2].Position
+[K2Node_CallFunction_14@ReplicateSteering].Position -> [K2Node_Knot_0@GetSamplePacket].InputPin#4
+[K2Node_CallFunction_14@ReplicateSteering].ReturnValue -> [K2Node_IfThenElse_4@InputJump].Condition#2
+[K2Node_CallFunction_14@ReplicateSteering].Rotation -> [K2Node_CallFunction_9@ReplicatePhysics].B
+[K2Node_CallFunction_14@ReplicateSteering].Rotation -> [K2Node_FunctionResult_1@ReplicateSteering].Rotation
+[K2Node_CallFunction_14@ReplicateSteering].Rotation -> [K2Node_FunctionResult_2].Rotation
+[K2Node_CallFunction_14@ReplicateSteering].Rotation -> [K2Node_Knot_1].InputPin
+[K2Node_CallFunction_14@ReplicateSteering].then -> [K2Node_CallFunction_18@EventGraph].execute
+[K2Node_CallFunction_15@ReplicateSteering].ReturnValue -> [K2Node_PromotableOperator_3@UpdateCamera].A#2
+[K2Node_CallFunction_15@ReplicateSteering].Unpack -> [K2Node_VariableSet_3@UpdateCamera].Direction
+[K2Node_CallFunction_16].Packed -> [K2Node_VariableSet_0@InputMove].InputLocalSteering
+[K2Node_CallFunction_16].Packed -> [K2Node_VariableSet_0@InputMove].NoInputCode
+[K2Node_CallFunction_17@ReplicatePhysics].ReturnValue#2 -> [K2Node_CallFunction_7@InputJump].Time
+[K2Node_CallFunction_17@ReplicatePhysics].ReturnValue#2 -> [K2Node_PromotableOperator_12@UpdateCamera].A#2
+[K2Node_CallFunction_17@ReplicatePhysics].then -> [K2Node_CallFunction_1@UpdateMovement].execute
+[K2Node_CallFunction_18@EventGraph].then -> [K2Node_CallFunction_32].execute
+[K2Node_CallFunction_18@EventGraph].then#2 -> [K2Node_CallFunction_23@UpdateCamera].execute#2
+[K2Node_CallFunction_18@EventGraph].then#2 -> [K2Node_CallFunction_24@UpdateCamera].execute
+[K2Node_CallFunction_19@InputJump].ReturnValue -> [K2Node_CallFunction_27].Enabled
+[K2Node_CallFunction_19@InputJump].ReturnValue#2 -> [K2Node_CallFunction_10@UpdateMovement].NewTransform_Location
+[K2Node_CallFunction_1@UpdateMovement].ReturnValue -> [K2Node_IfThenElse_2@ReplicateSteering].Condition
+[K2Node_CallFunction_1@UpdateMovement].ReturnValue#2 -> [K2Node_PromotableOperator_10@GetSamplePacket].A
+[K2Node_CallFunction_1@UpdateMovement].ReturnValue#3 -> [K2Node_FunctionResult_2].Position
+[K2Node_CallFunction_1@UpdateMovement].then -> [K2Node_CallFunction_6@UpdateMovement].execute
+[K2Node_CallFunction_1@UpdateMovement].then#2 -> [K2Node_CallFunction_12@UpdateMovement].execute
+[K2Node_CallFunction_20@UpdateCamera].ReturnValue -> [K2Node_CallFunction_21@InputMove].InRot
+[K2Node_CallFunction_20@UpdateCamera].ReturnValue_Pitch -> [K2Node_PromotableOperator_3@UpdateCamera].A#3
+[K2Node_CallFunction_21@InputMove].ReturnValue -> [K2Node_CallFunction_18@EventGraph].NewTransform_Rotation
+[K2Node_CallFunction_21@InputMove].ReturnValue#2 -> [K2Node_IfThenElse_1@ReplicateSteering].Condition#2
+[K2Node_CallFunction_21@InputMove].ReturnValue#3 -> [K2Node_CallFunction_4@InputMove].B
+[K2Node_CallFunction_21@InputMove].ReturnValue#4 -> [K2Node_CallFunction_55].X
+[K2Node_CallFunction_21@InputMove].ReturnValue#4 -> [K2Node_CallFunction_55].Y
+[K2Node_CallFunction_21@InputMove].then -> [K2Node_VariableSet_1@UpdateCamera].execute
+[K2Node_CallFunction_23@UpdateCamera].ReturnValue -> [K2Node_CallFunction_19@InputJump].B
+[K2Node_CallFunction_23@UpdateCamera].ReturnValue_Yaw -> [K2Node_PromotableOperator_2@UpdateCamera].A#4
+[K2Node_CallFunction_25@UpdateCamera].ReturnValue -> [K2Node_PromotableOperator_25].A
+[K2Node_CallFunction_25@UpdateCamera].ReturnValue -> [K2Node_PromotableOperator_25].B
+[K2Node_CallFunction_26@ReplicatePhysics].ReturnValue -> [K2Node_CallFunction_27].Controller
+[K2Node_CallFunction_26@ReplicatePhysics].ReturnValue#2 -> [K2Node_CallFunction_10@UpdateMovement].NewTransform_Scale
+[K2Node_CallFunction_26@ReplicatePhysics].then -> [K2Node_VariableSet_2@UpdateCamera].execute#2
+[K2Node_CallFunction_27].then -> [K2Node_CallFunction_13@ReplicateSteering].execute#2
+[K2Node_CallFunction_2@ReplicatePhysics].Packet -> [K2Node_VariableSet_1@UpdateCamera].Temp
+[K2Node_CallFunction_2@ReplicatePhysics].ReturnValue -> [K2Node_CallFunction_3@ReplicateSteering].T
+[K2Node_CallFunction_2@ReplicatePhysics].ReturnValue#2 -> [K2Node_IfThenElse_0@UpdateCamera].Condition#3
+[K2Node_CallFunction_2@ReplicatePhysics].ReturnValue#3 -> [K2Node_CallFunction_1@UpdateMovement].Alpha
+[K2Node_CallFunction_2@ReplicatePhysics].ReturnValue#3 -> [K2Node_CallFunction_9@ReplicatePhysics].Alpha
+[K2Node_CallFunction_2@ReplicatePhysics].ReturnValue_Location -> [K2Node_PromotableOperator_4@ReplicatePhysics].B#3
+[K2Node_CallFunction_2@ReplicatePhysics].ReturnValue_Rotation -> [K2Node_CallFunction_7@InputJump].Rotation
+[K2Node_CallFunction_35].ReturnValue -> [K2Node_VariableSet_1@UpdateCamera].MeshRotation
+[K2Node_CallFunction_36].ReturnValue -> [K2Node_VariableSet_2@UpdateCamera].ControlRotation
+[K2Node_CallFunction_3@ReplicateSteering].ReturnValue -> [K2Node_CallFunction_18@EventGraph].NewTransform_Location
+[K2Node_CallFunction_3@ReplicateSteering].ReturnValue#2 -> [K2Node_CallFunction_2@ReplicatePhysics].Position
+[K2Node_CallFunction_40].then -> [K2Node_CallFunction_26@ReplicatePhysics].execute
+[K2Node_CallFunction_46].ReturnValue -> [K2Node_PromotableOperator_13].A
+[K2Node_CallFunction_46].ReturnValue -> [K2Node_PromotableOperator_4@ReplicatePhysics].A
+[K2Node_CallFunction_4@InputMove].ReturnValue -> [K2Node_CallFunction_2@ReplicatePhysics].Rotation
+[K2Node_CallFunction_4@InputMove].ReturnValue#2 -> [K2Node_PromotableOperator_5@InputMove].A
+[K2Node_CallFunction_4@InputMove].ReturnValue#3 -> [K2Node_CallFunction_83].Q
+[K2Node_CallFunction_5].then -> [K2Node_VariableSet_1@UpdateCamera].execute#2
+[K2Node_CallFunction_55].ReturnValue -> [K2Node_CallFunction_4@InputMove].Input
+[K2Node_CallFunction_6@UpdateMovement].Movement -> [K2Node_CallFunction_10@UpdateMovement].Input
+[K2Node_CallFunction_6@UpdateMovement].then -> [K2Node_CallFunction_32].execute
+[K2Node_CallFunction_6@UpdateMovement].then#2 -> [K2Node_CallFunction_10@UpdateMovement].execute#2
+[K2Node_CallFunction_7@InputJump].Packet -> [K2Node_VariableSet_0@InputMove].Replication
+[K2Node_CallFunction_7@InputJump].ReturnValue -> [K2Node_GetArrayItem_4].Dimension 1
+[K2Node_CallFunction_7@InputJump].ReturnValue -> [K2Node_VariableSet_0@InputMove].StartSample
+[K2Node_CallFunction_83].ReturnValue -> [K2Node_CallFunction_10@UpdateMovement].NewTransform_Rotation
+[K2Node_CallFunction_8@UpdateCamera].Position -> [K2Node_CallFunction_19@InputJump].A
+[K2Node_CallFunction_8@UpdateCamera].Rotation -> [K2Node_CallFunction_4@InputMove].A#2
+[K2Node_CallFunction_8@UpdateCamera].then -> [K2Node_CallFunction_10@UpdateMovement].execute
+[K2Node_CallFunction_9@ReplicatePhysics].ReturnValue -> [K2Node_AssignDelegate_0].self
+[K2Node_CallFunction_9@ReplicatePhysics].ReturnValue -> [K2Node_CallFunction_13@ReplicateSteering].self
+[K2Node_CallFunction_9@ReplicatePhysics].ReturnValue -> [K2Node_RemoveDelegate_0].self
+[K2Node_CallFunction_9@ReplicatePhysics].ReturnValue#2 -> [K2Node_FunctionResult_2].Rotation
+[K2Node_CommutativeAssociativeBinaryOperator_3].ReturnValue -> [K2Node_VariableSet_8].ServerTimeOffset
+[K2Node_ComponentBoundEvent_2].OtherActor -> [K2Node_CallFunction_9@ReplicatePhysics].self
+[K2Node_ComponentBoundEvent_2].then -> [K2Node_AssignDelegate_0].execute
+[K2Node_ComponentBoundEvent_3].OtherActor -> [K2Node_CallFunction_9@ReplicatePhysics].self
+[K2Node_ComponentBoundEvent_3].then -> [K2Node_RemoveDelegate_0].execute
+[K2Node_CustomEvent_0].SteeringInput -> [K2Node_VariableSet_3@UpdateCamera].InputLocalSteering
+[K2Node_CustomEvent_0].then -> [K2Node_VariableSet_3@UpdateCamera].execute
+[K2Node_CustomEvent_1].then -> [K2Node_CallFunction_22@EventGraph].execute#2
+[K2Node_CustomEvent_2].then -> [K2Node_IfThenElse_2@ReplicateSteering].execute
+[K2Node_CustomEvent_3].Driver -> [K2Node_CallFunction_6@UpdateMovement].NewDriver
+[K2Node_CustomEvent_3].OutputDelegate -> [K2Node_AssignDelegate_0].Delegate
+[K2Node_CustomEvent_3].OutputDelegate -> [K2Node_RemoveDelegate_0].Delegate
+[K2Node_CustomEvent_3].then -> [K2Node_IfThenElse_1@ReplicateSteering].execute#2
+[K2Node_CustomEvent_6].then -> [K2Node_IfThenElse_1@ReplicateSteering].execute#2
+[K2Node_CustomEvent_7].NewDriver -> [K2Node_CallFunction_11@UpdateSteering].NewDriver
+[K2Node_CustomEvent_7].NewDriver -> [K2Node_CallFunction_19@InputJump].Object
+[K2Node_CustomEvent_7].then -> [K2Node_CallFunction_11@UpdateSteering].execute
+[K2Node_DynamicCast_0].AsPlayer Controller -> [K2Node_GetSubsystemFromPC_0].PlayerController
+[K2Node_DynamicCast_0].then -> [K2Node_IfThenElse_1@ReplicateSteering].execute
+[K2Node_EnumEquality_3].ReturnValue -> [K2Node_IfThenElse_0@UpdateCamera].Condition#6
+[K2Node_Event_0].DeltaSeconds -> [K2Node_CallFunction_14@ReplicateSteering].Delta
+[K2Node_Event_0].then -> [K2Node_CallFunction_14@ReplicateSteering].execute#2
+[K2Node_Event_1].then -> [K2Node_VariableSet_0@InputMove].execute
+[K2Node_Event_2].OldController -> [K2Node_CallFunction_27].Controller
+[K2Node_Event_2].then -> [K2Node_CallFunction_27].execute
+[K2Node_Event_4].NewController -> [K2Node_CallFunction_27].Controller
+[K2Node_Event_4].then -> [K2Node_CallFunction_27].execute
+[K2Node_ExecutionSequence_0].then_0 -> [K2Node_IfThenElse_0@UpdateCamera].execute#6
+[K2Node_ExecutionSequence_0].then_1 -> [K2Node_IfThenElse_2@ReplicateSteering].execute#4
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].Attach -> [K2Node_IfThenElse_0@UpdateCamera].Condition
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].DeltaSeconds -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_Event_DeltaSeconds
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].Driver -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_CustomEvent_Driver
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].Enabled -> [K2Node_IfThenElse_1@ReplicateSteering].Condition
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].Forward -> [K2Node_PromotableOperator_5@InputMove].A#2
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].Iteration -> [K2Node_CallFunction_0@OnUseVehicleEventServer].Iteration
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].NewController -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_Event_NewController
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].NewDriver -> [K2Node_MacroInstance_0@InitReplication].InputObject
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].NewDriver#2 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_CustomEvent_NewDriver
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].OldController -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_Event_OldController
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].OtherActor -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_ComponentBoundEvent_OtherActor
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].OtherActor#2 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_ComponentBoundEvent_OtherActor_1
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].OtherBodyIndex -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_ComponentBoundEvent_OtherBodyIndex
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].OtherBodyIndex#2 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_ComponentBoundEvent_OtherBodyIndex_1
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].OtherComp -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_ComponentBoundEvent_OtherComp
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].OtherComp#2 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_ComponentBoundEvent_OtherComp_1
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].OverlappedComponent -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_ComponentBoundEvent_OverlappedComponent
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].OverlappedComponent#2 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_ComponentBoundEvent_OverlappedComponent_1
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].Pitch -> [K2Node_CallFunction_26@ReplicatePhysics].Val
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].Possesed -> [K2Node_IfThenElse_0@UpdateCamera].Condition#2
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].Ratio -> [K2Node_CallFunction_0@OnUseVehicleEventServer].TimeRatio
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].Side -> [K2Node_PromotableOperator_5@InputMove].A#2
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].SteeringInput -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_CustomEvent_SteeringInput
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].SweepResult -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_ComponentBoundEvent_SweepResult
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].Target -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_CustomEvent_Target
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].Yaw -> [K2Node_CallFunction_40].Val
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].bFromSweep -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].K2Node_ComponentBoundEvent_bFromSweep
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then -> [K2Node_MacroInstance_0@InitReplication].exec
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#10 -> [K2Node_VariableSet_0@InputMove].execute#5
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#11 -> [K2Node_ExecutionSequence_0].execute
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#12 -> [K2Node_IfThenElse_4@InputJump].execute
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#13 -> [K2Node_CallFunction_11@UpdateSteering].execute#2
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#14 -> [K2Node_IfThenElse_0@UpdateCamera].execute#7
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#15 -> [K2Node_CallFunction_11@UpdateSteering].execute#2
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#16 -> [K2Node_CallFunction_6@UpdateMovement].execute#3
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#17 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#18 -> [K2Node_FunctionResult_0@GetShape].execute#2
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#19 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].execute
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#2 -> [K2Node_IfThenElse_0@UpdateCamera].execute
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#20 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].execute#2
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#21 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].execute#3
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#22 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#5
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#23 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#6
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#24 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].execute#4
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#25 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].execute#5
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#26 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#9
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#27 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].execute#6
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#28 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].execute#7
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#29 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].execute#8
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#3 -> [K2Node_DynamicCast_0].execute
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#30 -> [K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].execute#9
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#4 -> [K2Node_CallFunction_40].execute
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#5 -> [K2Node_IfThenElse_0@UpdateCamera].execute#2
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#6 -> [K2Node_CallArrayFunction_1].execute
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#7 -> [K2Node_IfThenElse_0@UpdateCamera].execute#3
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#8 -> [K2Node_IfThenElse_0@UpdateCamera].execute#4
+[K2Node_FunctionEntry_0@OnUseVehicleEventServer].then#9 -> [K2Node_IfThenElse_0@UpdateCamera].execute#5
+[K2Node_GetArrayItem_1].Output -> [K2Node_BreakStruct_2].BS_FluxPhysicsPacket
+[K2Node_GetArrayItem_1].Output -> [K2Node_CallFunction_14@ReplicateSteering].Packet
+[K2Node_GetArrayItem_2@GetSamplePacket].Output_Time_11_3EB178FA40CC726C2FBE9BB425299297 -> [K2Node_PromotableOperator_4@ReplicatePhysics].B#2
+[K2Node_GetArrayItem_4].Output_Time_11_3EB178FA40CC726C2FBE9BB425299297 -> [K2Node_PromotableOperator_0].A
+[K2Node_GetSubsystemFromPC_0].ReturnValue -> [K2Node_Knot_0@GetSamplePacket].InputPin#2
+[K2Node_GetSubsystemFromPC_0].ReturnValue -> [K2Node_Knot_4].InputPin
+[K2Node_GetSubsystemFromPC_0].ReturnValue -> [K2Node_MacroInstance_3].InputObject
+[K2Node_IfThenElse_0@UpdateCamera].else -> [K2Node_CallFunction_14@ReplicateSteering].execute
+[K2Node_IfThenElse_0@UpdateCamera].else#2 -> [K2Node_CallFunction_13@ReplicateSteering].execute#2
+[K2Node_IfThenElse_0@UpdateCamera].else#3 -> [K2Node_VariableSet_0@InputMove].execute#2
+[K2Node_IfThenElse_0@UpdateCamera].else#4 -> [K2Node_VariableSet_0@InputMove].execute#3
+[K2Node_IfThenElse_0@UpdateCamera].else#5 -> [K2Node_IfThenElse_4@InputJump].execute#2
+[K2Node_IfThenElse_0@UpdateCamera].then -> [K2Node_CallFunction_17@ReplicatePhysics].execute
+[K2Node_IfThenElse_0@UpdateCamera].then#2 -> [K2Node_CallFunction_13@ReplicateSteering].execute#2
+[K2Node_IfThenElse_0@UpdateCamera].then#3 -> [K2Node_MacroInstance_1@GetSamplePacket].Execute
+[K2Node_IfThenElse_0@UpdateCamera].then#4 -> [K2Node_IfThenElse_4@InputJump].execute
+[K2Node_IfThenElse_0@UpdateCamera].then#5 -> [K2Node_IfThenElse_3].execute
+[K2Node_IfThenElse_0@UpdateCamera].then#6 -> [K2Node_VariableSet_3@UpdateCamera].execute#4
+[K2Node_IfThenElse_1@ReplicateSteering].else -> [K2Node_MacroInstance_3].exec
+[K2Node_IfThenElse_1@ReplicateSteering].else#2 -> [K2Node_CallFunction_23@UpdateCamera].execute
+[K2Node_IfThenElse_1@ReplicateSteering].else#2 -> [K2Node_CallFunction_6@UpdateMovement].execute#2
+[K2Node_IfThenElse_1@ReplicateSteering].else#3 -> [K2Node_IfThenElse_2@ReplicateSteering].execute#3
+[K2Node_IfThenElse_1@ReplicateSteering].then -> [K2Node_MacroInstance_3].exec
+[K2Node_IfThenElse_1@ReplicateSteering].then#2 -> [K2Node_CallFunction_17@ReplicatePhysics].execute#3
+[K2Node_IfThenElse_1@ReplicateSteering].then#2 -> [K2Node_CallFunction_23@UpdateCamera].execute
+[K2Node_IfThenElse_1@ReplicateSteering].then#3 -> [K2Node_VariableSet_3@UpdateCamera].execute#2
+[K2Node_IfThenElse_1@ReplicateSteering].then#4 -> [K2Node_VariableSet_1@UpdateCamera].execute#3
+[K2Node_IfThenElse_2@ReplicateSteering].else -> [K2Node_CallFunction_22@EventGraph].execute#2
+[K2Node_IfThenElse_2@ReplicateSteering].else#2 -> [K2Node_VariableSet_8].execute
+[K2Node_IfThenElse_2@ReplicateSteering].else#3 -> [K2Node_FunctionResult_2].execute
+[K2Node_IfThenElse_2@ReplicateSteering].else#4 -> [K2Node_FunctionResult_1@ReplicateSteering].execute
+[K2Node_IfThenElse_2@ReplicateSteering].then -> [K2Node_VariableSet_8].execute
+[K2Node_IfThenElse_2@ReplicateSteering].then#2 -> [K2Node_FunctionResult_2].execute
+[K2Node_IfThenElse_2@ReplicateSteering].then#3 -> [K2Node_VariableSet_3@UpdateCamera].execute#3
+[K2Node_IfThenElse_3].else -> [K2Node_IfThenElse_1@ReplicateSteering].execute#5
+[K2Node_IfThenElse_4@InputJump].else -> [K2Node_CallFunction_7@InputJump].execute
+[K2Node_IfThenElse_4@InputJump].else -> [K2Node_CallFunction_8@UpdateCamera].execute
+[K2Node_IfThenElse_4@InputJump].else#2 -> [K2Node_VariableSet_2@UpdateCamera].execute#4
+[K2Node_IfThenElse_4@InputJump].then -> [K2Node_CallFunction_22@EventGraph].execute#2
+[K2Node_IfThenElse_4@InputJump].then -> [K2Node_VariableSet_0@InputMove].execute#4
+[K2Node_IfThenElse_5].then -> [K2Node_CallFunction_32].execute
+[K2Node_Knot_0@GetSamplePacket].OutputPin -> [K2Node_VariableGet_27@GetSamplePacket].execute
+[K2Node_Knot_0@GetSamplePacket].OutputPin#2 -> [K2Node_CallFunction_61].self
+[K2Node_Knot_0@GetSamplePacket].OutputPin#3 -> [K2Node_IfThenElse_1@ReplicateSteering].execute#3
+[K2Node_Knot_0@GetSamplePacket].OutputPin#4 -> [K2Node_CallFunction_1@UpdateMovement].B
+[K2Node_Knot_1].OutputPin -> [K2Node_CallFunction_9@ReplicatePhysics].A
+[K2Node_Knot_4].OutputPin -> [K2Node_CallFunction_17@ReplicatePhysics].self#2
+[K2Node_MacroInstance_0@InitReplication].Array Index -> [K2Node_CallArrayFunction_0@OnRep_Replication].Index
+[K2Node_MacroInstance_0@InitReplication].Is Not Valid -> [K2Node_Knot_0@GetSamplePacket].InputPin
+[K2Node_MacroInstance_0@InitReplication].Is Valid -> [K2Node_CallFunction_13@ReplicateSteering].execute
+[K2Node_MacroInstance_0@InitReplication].LoopBody -> [K2Node_CallArrayFunction_0@OnRep_Replication].execute
+[K2Node_MacroInstance_1@GetSamplePacket].Completed -> [K2Node_FunctionResult_2].execute
+[K2Node_MacroInstance_1@GetSamplePacket].Index -> [K2Node_PromotableOperator_7@ReplicatePhysics].B
+[K2Node_MacroInstance_1@GetSamplePacket].LoopBody -> [K2Node_VariableSet_0@InputMove].execute#3
+[K2Node_MacroInstance_3].Is Valid -> [K2Node_CallFunction_17@ReplicatePhysics].execute#2
+[K2Node_MacroInstance_3].Is Valid -> [K2Node_CallFunction_61].execute
+[K2Node_PromotableOperator_0].ReturnValue -> [K2Node_IfThenElse_0@UpdateCamera].Condition#4
+[K2Node_PromotableOperator_0].ReturnValue -> [K2Node_IfThenElse_1@ReplicateSteering].Condition#4
+[K2Node_PromotableOperator_10@GetSamplePacket].ReturnValue -> [K2Node_VariableSet_0@InputMove].NewTimeOffset
+[K2Node_PromotableOperator_10@GetSamplePacket].ReturnValue#2 -> [K2Node_CallFunction_7@InputJump].A
+[K2Node_PromotableOperator_11].ReturnValue -> [K2Node_IfThenElse_2@ReplicateSteering].Condition#3
+[K2Node_PromotableOperator_12@UpdateCamera].ReturnValue -> [K2Node_CallFunction_7@InputJump].A
+[K2Node_PromotableOperator_12@UpdateCamera].ReturnValue#2 -> [K2Node_PromotableOperator_7@ReplicatePhysics].A#2
+[K2Node_PromotableOperator_12@UpdateCamera].ReturnValue#3 -> [K2Node_PromotableOperator_2@UpdateCamera].B#4
+[K2Node_PromotableOperator_13].ReturnValue -> [K2Node_PromotableOperator_14].A
+[K2Node_PromotableOperator_13].ReturnValue -> [K2Node_PromotableOperator_19].A
+[K2Node_PromotableOperator_14].ReturnValue -> [K2Node_IfThenElse_0@UpdateCamera].Condition#7
+[K2Node_PromotableOperator_19].ReturnValue -> [K2Node_CallFunction_25@UpdateCamera].Value
+[K2Node_PromotableOperator_1@ReplicateSteering].ReturnValue -> [K2Node_CallFunction_21@InputMove].Yaw
+[K2Node_PromotableOperator_1@ReplicateSteering].ReturnValue#2 -> [K2Node_IfThenElse_0@UpdateCamera].Condition#5
+[K2Node_PromotableOperator_1@ReplicateSteering].ReturnValue#3 -> [K2Node_IfThenElse_2@ReplicateSteering].Condition#4
+[K2Node_PromotableOperator_25].ReturnValue -> [K2Node_VariableSet_3@UpdateCamera].RotationTime
+[K2Node_PromotableOperator_26].ReturnValue -> [K2Node_CallFunction_40].Val
+[K2Node_PromotableOperator_2@UpdateCamera].ReturnValue -> [K2Node_CallFunction_0@OnUseVehicleEventServer].A
+[K2Node_PromotableOperator_2@UpdateCamera].ReturnValue#2 -> [K2Node_CallFunction_3@ReplicateSteering].A
+[K2Node_PromotableOperator_2@UpdateCamera].ReturnValue#2 -> [K2Node_PromotableOperator_4@ReplicatePhysics].A#3
+[K2Node_PromotableOperator_2@UpdateCamera].ReturnValue#2 -> [K2Node_PromotableOperator_6].A
+[K2Node_PromotableOperator_2@UpdateCamera].ReturnValue#3 -> [K2Node_IfThenElse_1@ReplicateSteering].Condition#5
+[K2Node_PromotableOperator_2@UpdateCamera].ReturnValue#4 -> [K2Node_CallFunction_26@ReplicatePhysics].Val
+[K2Node_PromotableOperator_2@UpdateCamera].ReturnValue#4 -> [K2Node_PromotableOperator_26].A
+[K2Node_PromotableOperator_30].ReturnValue -> [K2Node_CallFunction_23@UpdateCamera].A
+[K2Node_PromotableOperator_3@UpdateCamera].ReturnValue -> [K2Node_CallFunction_4@InputMove].A
+[K2Node_PromotableOperator_3@UpdateCamera].ReturnValue#2 -> [K2Node_PromotableOperator_4@ReplicatePhysics].A#4
+[K2Node_PromotableOperator_3@UpdateCamera].ReturnValue#3 -> [K2Node_PromotableOperator_2@UpdateCamera].A#4
+[K2Node_PromotableOperator_4@ReplicatePhysics].ReturnValue -> [K2Node_VariableSet_2@UpdateCamera].CameraTargetAdjustTime
+[K2Node_PromotableOperator_4@ReplicatePhysics].ReturnValue#2 -> [K2Node_IfThenElse_1@ReplicateSteering].Condition#3
+[K2Node_PromotableOperator_4@ReplicatePhysics].ReturnValue#3 -> [K2Node_CallFunction_3@ReplicateSteering].bPickA
+[K2Node_PromotableOperator_4@ReplicatePhysics].ReturnValue#4 -> [K2Node_CallFunction_7@InputJump].Position
+[K2Node_PromotableOperator_5@InputMove].ReturnValue -> [K2Node_IfThenElse_2@ReplicateSteering].Condition#2
+[K2Node_PromotableOperator_5@InputMove].ReturnValue#2 -> [K2Node_CallFunction_21@InputMove].Value
+[K2Node_PromotableOperator_6].ReturnValue -> [K2Node_CallFunction_3@ReplicateSteering].B
+[K2Node_PromotableOperator_7@ReplicatePhysics].ReturnValue -> [K2Node_PromotableOperator_10@GetSamplePacket].B#2
+[K2Node_PromotableOperator_7@ReplicatePhysics].ReturnValue#2 -> [K2Node_CallFunction_8@UpdateCamera].SampleTime
+[K2Node_Self_1].self -> [K2Node_CallFunction_17@ReplicatePhysics].ParentActor
+[K2Node_Self_4].self -> [K2Node_CallFunction_12@UpdateMovement].NewVehicle
+[K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].then -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#2
+[K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].then#2 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#3
+[K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].then#3 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#4
+[K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].then#4 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#7
+[K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].then#5 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#8
+[K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].then#6 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#10
+[K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].then#7 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#11
+[K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].then#8 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#12
+[K2Node_SetVariableOnPersistentFrame_0@OnUseVehicleEventServer].then#9 -> [K2Node_CallFunction_0@OnUseVehicleEventServer].execute#13
+[K2Node_VariableGet_0@GetInteractions].BP_FluxInteractionComponent -> [K2Node_CallFunction_0@OnUseVehicleEventServer].self
+[K2Node_VariableGet_0@GetInteractions].CameraTimeToAdjust -> [K2Node_PromotableOperator_4@ReplicatePhysics].B
+[K2Node_VariableGet_0@GetInteractions].RotationTime -> [K2Node_PromotableOperator_12@UpdateCamera].A#3
+[K2Node_VariableGet_0@GetInteractions].ServerTimeOffset -> [K2Node_PromotableOperator_12@UpdateCamera].B#2
+[K2Node_VariableGet_10@ReplicateSteering].NoInputCode -> [K2Node_PromotableOperator_1@ReplicateSteering].B#2
+[K2Node_VariableGet_10@ReplicateSteering].RepSamplesCount -> [K2Node_PromotableOperator_1@ReplicateSteering].A#2
+[K2Node_VariableGet_11@ReplicateSteering].NoInputCode -> [K2Node_VariableSet_5@ReplicateSteering].InputLocalSteering
+[K2Node_VariableGet_12].StartSample -> [K2Node_GetArrayItem_4].Dimension 1
+[K2Node_VariableGet_12].StartSample -> [K2Node_PromotableOperator_12@UpdateCamera].A
+[K2Node_VariableGet_12].StartSample -> [K2Node_PromotableOperator_2@UpdateCamera].B#2
+[K2Node_VariableGet_13@ReplicateSteering].DriverDetachTransform_Location -> [K2Node_CallFunction_3@ReplicateSteering].Location
+[K2Node_VariableGet_13@ReplicateSteering].DriverDetachTransform_Rotation_Yaw -> [K2Node_PromotableOperator_1@ReplicateSteering].A
+[K2Node_VariableGet_13@ReplicateSteering].InputLocalSteering -> [K2Node_CallFunction_15@ReplicateSteering].Packed
+[K2Node_VariableGet_13@ReplicateSteering].InputLocalSteering -> [K2Node_PromotableOperator_2@UpdateCamera].B#3
+[K2Node_VariableGet_13@ReplicateSteering].InputLocalSteering -> [K2Node_VariableSet_1@UpdateCamera].InputServerSteering
+[K2Node_VariableGet_14@GetSamplePacket].RepSamplesCount -> [K2Node_CallFunction_7@InputJump].B
+[K2Node_VariableGet_14@GetSamplePacket].RepSamplesCount -> [K2Node_MacroInstance_1@GetSamplePacket].LastIndex
+[K2Node_VariableGet_14@GetSamplePacket].RepSamplesCount -> [K2Node_PromotableOperator_10@GetSamplePacket].A#2
+[K2Node_VariableGet_14@GetSamplePacket].RepSamplesCount -> [K2Node_PromotableOperator_6].B
+[K2Node_VariableGet_14@GetSamplePacket].Replication_Time_11_3EB178FA40CC726C2FBE9BB425299297 -> [K2Node_PromotableOperator_10@GetSamplePacket].B
+[K2Node_VariableGet_14@GetSamplePacket].Replication_Time_11_3EB178FA40CC726C2FBE9BB425299297 -> [K2Node_PromotableOperator_4@ReplicatePhysics].A#2
+[K2Node_VariableGet_15@UpdateCamera].CameraAdjustingDuration -> [K2Node_PromotableOperator_19].B
+[K2Node_VariableGet_16].RepSamples -> [K2Node_GetArrayItem_4].Array
+[K2Node_VariableGet_17@GetSamplePacket].RepSamplesCount -> [K2Node_CallFunction_0@OnUseVehicleEventServer].B
+[K2Node_VariableGet_18@GetSamplePacket].RepCurrentSample -> [K2Node_FunctionResult_2].SampleId
+[K2Node_VariableGet_18@GetSamplePacket].RepCurrentSample -> [K2Node_GetArrayItem_4].Dimension 1
+[K2Node_VariableGet_18@GetSamplePacket].RepCurrentSample -> [K2Node_PromotableOperator_2@UpdateCamera].A#2
+[K2Node_VariableGet_18@GetSamplePacket].RepCurrentSample -> [K2Node_PromotableOperator_7@ReplicatePhysics].A
+[K2Node_VariableGet_18@GetSamplePacket].RepSamples -> [K2Node_CallArrayFunction_0@OnRep_Replication].TargetArray#2
+[K2Node_VariableGet_18@GetSamplePacket].RepSamples -> [K2Node_GetArrayItem_2@GetSamplePacket].Array
+[K2Node_VariableGet_19].RepCurrentSample -> [K2Node_GetArrayItem_2@GetSamplePacket].Dimension 1
+[K2Node_VariableGet_19].RepCurrentSample -> [K2Node_PromotableOperator_2@UpdateCamera].A
+[K2Node_VariableGet_1@UpdateMovement].Delta -> [K2Node_CallFunction_10@UpdateMovement].Delta
+[K2Node_VariableGet_1@UpdateMovement].Delta -> [K2Node_CallFunction_12@UpdateMovement].Delta
+[K2Node_VariableGet_1@UpdateMovement].Delta -> [K2Node_CallFunction_1@UpdateMovement].Delta
+[K2Node_VariableGet_1@UpdateMovement].DriverAttachSocket -> [K2Node_CallFunction_17@ReplicatePhysics].SocketName
+[K2Node_VariableGet_1@UpdateMovement].InputLocalSteering -> [K2Node_PromotableOperator_1@ReplicateSteering].A#3
+[K2Node_VariableGet_1@UpdateMovement].RepSamplesCount -> [K2Node_CallArrayFunction_1].Size
+[K2Node_VariableGet_21].Mesh -> [K2Node_CallFunction_35].self
+[K2Node_VariableGet_22].CameraPitchStiffness -> [K2Node_PromotableOperator_30].B
+[K2Node_VariableGet_24@UpdateCamera].MeshRotation -> [K2Node_CallFunction_23@UpdateCamera].A
+[K2Node_VariableGet_24@UpdateCamera].MeshRotation -> [K2Node_PromotableOperator_30].A
+[K2Node_VariableGet_24@UpdateCamera].SampleTime -> [K2Node_CallFunction_2@ReplicatePhysics].Value
+[K2Node_VariableGet_24@UpdateCamera].SampleTime -> [K2Node_PromotableOperator_0].B
+[K2Node_VariableGet_26@UpdateCamera].ControlRotation -> [K2Node_CallFunction_23@UpdateCamera].B
+[K2Node_VariableGet_26@UpdateCamera].StartSample -> [K2Node_GetArrayItem_4].Dimension 1
+[K2Node_VariableGet_27@GetSamplePacket].then -> [K2Node_CallFunction_13@ReplicateSteering].execute
+[K2Node_VariableGet_2@UpdateMovement].Driver -> [K2Node_CallFunction_9@ReplicatePhysics].self
+[K2Node_VariableGet_2@UpdateMovement].EnhancedInput -> [K2Node_CallFunction_17@ReplicatePhysics].MappingContext
+[K2Node_VariableGet_2@UpdateMovement].EnhancedInput -> [K2Node_CallFunction_61].MappingContext
+[K2Node_VariableGet_2@UpdateMovement].InputGamepadScale -> [K2Node_PromotableOperator_5@InputMove].B#2
+[K2Node_VariableGet_2@UpdateMovement].RepSamples -> [K2Node_CallArrayFunction_1].TargetArray
+[K2Node_VariableGet_2@UpdateMovement].Replication -> [K2Node_CallArrayFunction_0@OnRep_Replication].Item#2
+[K2Node_VariableGet_3@UpdateCamera].ReplicaitonSoft -> [K2Node_CallFunction_19@InputJump].Alpha
+[K2Node_VariableGet_3@UpdateCamera].ReplicaitonSoft -> [K2Node_CallFunction_4@InputMove].Alpha
+[K2Node_VariableGet_3@UpdateCamera].RotationTime -> [K2Node_PromotableOperator_2@UpdateCamera].B#4
+[K2Node_VariableGet_4@ReplicateSteering].InputServerSteering -> [K2Node_PromotableOperator_2@UpdateCamera].A#3
+[K2Node_VariableGet_4@ReplicateSteering].InputServerSteering -> [K2Node_VariableSet_2@UpdateCamera].InputLocalSteering#2
+[K2Node_VariableGet_4@ReplicateSteering].Mesh -> [K2Node_CallFunction_10@UpdateMovement].self
+[K2Node_VariableGet_4@ReplicateSteering].NewDriver -> [K2Node_CallFunction_9@ReplicatePhysics].self
+[K2Node_VariableGet_4@ReplicateSteering].NewDriver -> [K2Node_VariableSet_2@UpdateCamera].Driver
+[K2Node_VariableGet_4@ReplicateSteering].NewTimeOffset -> [K2Node_CommutativeAssociativeBinaryOperator_3].A
+[K2Node_VariableGet_4@ReplicateSteering].NewTimeOffset -> [K2Node_PromotableOperator_3@UpdateCamera].A
+[K2Node_VariableGet_4@ReplicateSteering].NewTimeOffset -> [K2Node_VariableSet_8].ServerTimeOffset
+[K2Node_VariableGet_4@ReplicateSteering].RepSamples -> [K2Node_CallArrayFunction_0@OnRep_Replication].TargetArray
+[K2Node_VariableGet_4@ReplicateSteering].RepSamples -> [K2Node_MacroInstance_0@InitReplication].Array
+[K2Node_VariableGet_5@ReplicateSteering].Direction -> [K2Node_FunctionResult_1@ReplicateSteering].Movement
+[K2Node_VariableGet_5@ReplicateSteering].ReplicateNotPossessed -> [K2Node_IfThenElse_5].Condition
+[K2Node_VariableGet_6@UpdateCamera].Temp -> [K2Node_CallArrayFunction_0@OnRep_Replication].Item
+[K2Node_VariableGet_7@ReplicatePhysics].Driver -> [K2Node_CallFunction_14@ReplicateSteering].self
+[K2Node_VariableGet_7@ReplicatePhysics].Driver -> [K2Node_CallFunction_17@ReplicatePhysics].self
+[K2Node_VariableGet_7@ReplicatePhysics].Driver -> [K2Node_CallFunction_18@EventGraph].self
+[K2Node_VariableGet_7@ReplicatePhysics].Driver -> [K2Node_CallFunction_1@UpdateMovement].self
+[K2Node_VariableGet_7@ReplicatePhysics].Driver -> [K2Node_CallFunction_6@UpdateMovement].self
+[K2Node_VariableGet_7@ReplicatePhysics].MovementPrediction -> [K2Node_PromotableOperator_3@UpdateCamera].B#2
+[K2Node_VariableGet_7@ReplicatePhysics].RepCurrentSample -> [K2Node_CallArrayFunction_0@OnRep_Replication].Index#2
+[K2Node_VariableGet_8@UpdateCamera].CameraTargetAdjustTime -> [K2Node_PromotableOperator_13].B
+[K2Node_VariableGet_8@UpdateCamera].ReplictationDelay -> [K2Node_PromotableOperator_7@ReplicatePhysics].B#2
+[K2Node_VariableGet_8@UpdateCamera].ServerTimeOffset -> [K2Node_CommutativeAssociativeBinaryOperator_3].B
+[K2Node_VariableGet_8@UpdateCamera].ServerTimeOffset -> [K2Node_PromotableOperator_3@UpdateCamera].B
+[K2Node_VariableGet_9@GetSamplePacket].Controller -> [K2Node_DynamicCast_0].Object
+[K2Node_VariableGet_9@GetSamplePacket].DriverAttachTransform_Location -> [K2Node_CallFunction_1@UpdateMovement].NewRelativeLocation
+[K2Node_VariableGet_9@GetSamplePacket].DriverAttachTransform_Rotation -> [K2Node_CallFunction_6@UpdateMovement].NewRelativeRotation
+[K2Node_VariableSet_0@InputMove].Output_Get -> [K2Node_VariableSet_2@UpdateCamera].InputLocalSteering
+[K2Node_VariableSet_0@InputMove].then -> [K2Node_VariableSet_2@UpdateCamera].execute#3
+[K2Node_VariableSet_0@InputMove].then#2 -> [K2Node_IfThenElse_2@ReplicateSteering].execute#2
+[K2Node_VariableSet_0@InputMove].then#3 -> [K2Node_IfThenElse_1@ReplicateSteering].execute#4
+[K2Node_VariableSet_0@InputMove].then#3 -> [K2Node_IfThenElse_2@ReplicateSteering].execute#3
+[K2Node_VariableSet_1@UpdateCamera].Output_Get -> [K2Node_CallFunction_3@ReplicateSteering].SteeringInput
+[K2Node_VariableSet_1@UpdateCamera].then -> [K2Node_MacroInstance_0@InitReplication].Exec
+[K2Node_VariableSet_1@UpdateCamera].then#2 -> [K2Node_CallFunction_3@ReplicateSteering].execute
+[K2Node_VariableSet_1@UpdateCamera].then#3 -> [K2Node_VariableSet_2@UpdateCamera].execute#5
+[K2Node_VariableSet_2@UpdateCamera].Output_Get#2 -> [K2Node_VariableSet_5@ReplicateSteering].InputServerSteering
+[K2Node_VariableSet_2@UpdateCamera].then -> [K2Node_CallFunction_22@EventGraph].execute
+[K2Node_VariableSet_2@UpdateCamera].then#2 -> [K2Node_VariableSet_5@ReplicateSteering].execute
+[K2Node_VariableSet_2@UpdateCamera].then#3 -> [K2Node_CallFunction_40].execute
+[K2Node_VariableSet_3@UpdateCamera].Output_Get -> [K2Node_VariableSet_4].InputServerSteering
+[K2Node_VariableSet_3@UpdateCamera].then -> [K2Node_VariableSet_4].execute
+[K2Node_VariableSet_3@UpdateCamera].then#2 -> [K2Node_CallArrayFunction_0@OnRep_Replication].execute#2
+[K2Node_VariableSet_3@UpdateCamera].then#3 -> [K2Node_VariableSet_5@ReplicateSteering].execute#2
+[K2Node_VariableSet_3@UpdateCamera].then#4 -> [K2Node_VariableSet_1@UpdateCamera].execute#4
+[K2Node_VariableSet_5@ReplicateSteering].then -> [K2Node_IfThenElse_5].execute
+[K2Node_VariableSet_5@ReplicateSteering].then#2 -> [K2Node_FunctionResult_1@ReplicateSteering].execute
+[K2Node_VariableSet_8].then -> [K2Node_Knot_0@GetSamplePacket].InputPin#3

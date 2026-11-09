@@ -1,0 +1,152 @@
+﻿# /Game/FluidFlux/Coastline/Functions/MF_CoastlineColor
+# класс: MaterialFunction; происхождение: проект; узлов: 27; связей: 47; HLSL: 0; причина: папка /Game/FluidFlux; тело:7
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CoastlineColor] MaterialFunction
+    StateId = 105E668AA21A69AF149EFE6AC47CD90D
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_CoastlineColorEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_CoastlineColorEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionSaturate_3
+    ExpressionCollection <- MaterialExpressionDivide_4
+    ExpressionCollection <- MaterialExpressionMultiply_13
+    ExpressionCollection <- MaterialExpressionOneMinus_8
+    ExpressionCollection <- MaterialExpressionOneMinus_9
+    ExpressionCollection <- MaterialExpressionMax_3
+    ExpressionCollection <- MaterialExpressionSaturate_5
+    ExpressionCollection <- MaterialExpressionMultiply_18
+    ExpressionCollection <- MaterialExpressionScalarParameter_5
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionPower_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_11
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_1
+    ExpressionCollection <- MaterialExpressionSaturate_1
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    B <- MaterialExpressionMin_1
+[MaterialExpressionDivide_4] MaterialExpressionDivide
+    ConstA = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    B <- MaterialExpressionScalarParameter_4
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    Preview = (OutputIndex=3)
+    InputName = "Distance"
+    Id = F0B2464145090A8D0D5CD59F4F11DD76
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    Preview = (OutputIndex=1)
+    InputName = "Depth"
+    Id = DAD63E1B4CEFA266BB3F9BAC18090CC1
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Shoreline"
+    bLastPreviewed = True
+    Id = 9298F82F407DF68723440DA8782326BD
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitchParameter_11
+[MaterialExpressionMax_3] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    A <- MaterialExpressionPower_0
+    B <- MaterialExpressionSaturate_5
+[MaterialExpressionMin_1] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    A <- MaterialExpressionMultiply_2
+    B <- MaterialExpressionScalarParameter_5
+[MaterialExpressionMultiply_13] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    A <- MaterialExpressionFunctionInput_2
+    B <- MaterialExpressionDivide_4
+[MaterialExpressionMultiply_18] MaterialExpressionMultiply
+    ConstB = 0.250000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionDivide_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    A <- MaterialExpressionScalarParameter_3
+[MaterialExpressionOneMinus_8] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    Input <- MaterialExpressionMultiply_13
+[MaterialExpressionOneMinus_9] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    Input <- MaterialExpressionMultiply_18
+[MaterialExpressionPower_0] MaterialExpressionPower
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    Base <- MaterialExpressionSaturate_3
+    Exponent <- MaterialExpressionScalarParameter_1
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    Input <- MaterialExpressionMax_3
+[MaterialExpressionSaturate_3] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    Input <- MaterialExpressionOneMinus_8
+[MaterialExpressionSaturate_5] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    Input <- MaterialExpressionOneMinus_9
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 3.000000
+    ParameterName = "CoastlineScattringPower"
+    ExpressionGUID = D7695A69498F4DB0B95CCB9FAE749A8A
+    Group = "Coastline"
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = 10640.000000
+    ParameterName = "FluxWorldCoastlineDecode"
+    ExpressionGUID = 1CC3E48141EF2F6EC9324F8166667C16
+    Group = "FluxData"
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    DefaultValue = 3000.000000
+    ParameterName = "CoastlineScattringDepth"
+    ExpressionGUID = 5DC8A07D4D3A09AE74C6BD9174E688C4
+    Group = "Coastline"
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+[MaterialExpressionScalarParameter_5] MaterialExpressionScalarParameter
+    DefaultValue = 1000.000000
+    ParameterName = "CoastlineScattringDistance"
+    ExpressionGUID = 32013B5F4B410B6935EA7AA29DD48C82
+    Group = "Coastline"
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseCoastline"
+    ExpressionGUID = 55F913804FAE804B9F8B938BC29FC323
+    Group = "FluxSurfaceLayer"
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    A <- MaterialExpressionSaturate_1
+    B <- MaterialExpressionStaticSwitchParameter_1
+[MaterialExpressionStaticSwitchParameter_1] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseCoastlineData"
+    ExpressionGUID = B2114051487CC23CEFDA68B920E1665B
+    Group = "FluxSurfaceLayer"
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    A <- MaterialExpressionSaturate_1
+    B <- MaterialExpressionConstant_5
+[MaterialExpressionStaticSwitchParameter_11] MaterialExpressionStaticSwitchParameter
+    ParameterName = "UseOcean"
+    ExpressionGUID = 84EDB5CF4B6697C180D891B90A9DD75B
+    Group = "FluxSurfaceLayer"
+    Function = "/Script/Engine.MaterialFunction'MF_CoastlineColor'"
+    A <- MaterialExpressionStaticSwitchParameter_0
+    B <- MaterialExpressionStaticSwitchParameter_1
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

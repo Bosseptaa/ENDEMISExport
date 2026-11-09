@@ -1,0 +1,90 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceDebugBlend
+# класс: MaterialFunction; происхождение: проект; узлов: 18; связей: 37; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:161
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SurfaceDebugBlend] MaterialFunction
+    StateId = 8B66AFC24C28B469A536E2AA2B2C6B1B
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_SurfaceDebugBlendEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SurfaceDebugBlendEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionIf_1
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionMultiply_13
+    ExpressionCollection <- MaterialExpressionFrac_0
+    ExpressionCollection <- MaterialExpressionReroute_4
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+[MaterialExpressionFrac_0] MaterialExpressionFrac
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    Input <- MaterialExpressionMultiply_13
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Blend"
+    Id = 5BC6313C4A033D143D1231B4B57FE470
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = C2E0A6F348C9BF8D04D3B99C4BE195D1
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionIf_0] MaterialExpressionIf
+    ConstB = 0.000100
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    A <- MaterialExpressionReroute_4
+    AGreaterThanB <- MaterialExpressionConstant_4
+    AEqualsB <- MaterialExpressionConstant_5
+    ALessThanB <- MaterialExpressionConstant_5
+[MaterialExpressionIf_1] MaterialExpressionIf
+    ConstB = 0.999900
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    A <- MaterialExpressionReroute_4
+    AGreaterThanB <- MaterialExpressionConstant_6
+    AEqualsB <- MaterialExpressionConstant_6
+    ALessThanB <- MaterialExpressionIf_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    A <- MaterialExpressionFrac_0
+    B <- MaterialExpressionMultiply_12
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    A <- MaterialExpressionMultiply_6
+    B <- MaterialExpressionIf_1
+[MaterialExpressionMultiply_13] MaterialExpressionMultiply
+    ConstB = 16.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    A <- MaterialExpressionReroute_4
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    A <- MaterialExpressionOneMinus_0
+    B <- MaterialExpressionReroute_0
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    Input <- MaterialExpressionReroute_0
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    Input <- MaterialExpressionReroute_4
+[MaterialExpressionReroute_4] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceDebugBlend'"
+    Input <- MaterialExpressionFunctionInput_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,152 @@
+﻿# /Game/FluidFlux/Demo/Tools/CausticsGenerator/Materials/M_CausticsProcessFrame
+# класс: Material; происхождение: проект; узлов: 18; связей: 39; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:168
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_CausticsProcessFrame] Material
+    BlendMode = BLEND_AlphaComposite
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    EditorX = 1008
+    EditorY = 413
+    bCanMaskedBeAssumedOpaque = True
+    bUseTranslucencyVertexFog = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 711DC6ABAD35541412E441A4AB6156A0
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="DefaultTexture",TextureReference="/Engine/EngineResources/DefaultTexture.DefaultTexture")
+    ReferencedDefaultTextures(0) = None
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 50172EBB475FEA0C666EE5ADCE8050F4
+    EditorOnlyData <- M_CausticsProcessFrameEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_CausticsProcessFrameEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    ParameterGroupData(4) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_1
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_9
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_10
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    A <- MaterialExpressionTextureCoordinate_1
+    B <- MaterialExpressionDivide_1
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    R = 1.000000
+    G = 1.000000
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstB = 512.000000
+    A <- MaterialExpressionConstant2Vector_0
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    ConstA = 0.500000
+    ConstB = 512.000000
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_NormalSobel3.MF_NormalSobel3'"
+    FunctionInputs(1) = (ExpressionInputId=904B76DD479EB786701E1CBDD3E2B3E3,Input=(InputName="Intensity"))
+    FunctionInputs(4) = (ExpressionInputId=405196A1477ADE79198B3891AD00E926,Input=(OutputIndex=-1,InputName="ChannerR"))
+    FunctionInputs(5) = (ExpressionInputId=D78C51BB492BE74BDBB58094B992B551,Input=(OutputIndex=-1,InputName="ChannelG"))
+    FunctionInputs(6) = (ExpressionInputId=0B49C539433F6E58DD9182A1B566D7E9,Input=(OutputIndex=-1,InputName="ChannelB"))
+    FunctionOutputs(0) = (ExpressionOutputId=909E8BAC492A4EB2270C42A022F87A6F,Output=(OutputName="Slope"))
+    FunctionOutputs(1) = (ExpressionOutputId=DF42E33C42CC0B6C883311833115ED08,Output=(OutputName="Normal"))
+    FunctionOutputs(2) = (ExpressionOutputId=66309ABA4AF24D46DB00D29BD7D0A303,Output=(OutputName="Blur"))
+    Outputs(0) = (OutputName="Slope")
+    Outputs(1) = (OutputName="Normal")
+    Outputs(2) = (OutputName="Blur")
+    FunctionInputs(0) <- MaterialExpressionTextureObjectParameter_0
+    FunctionInputs(2) <- MaterialExpressionDivide_0
+    FunctionInputs(3) <- MaterialExpressionAdd_0
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_NormalSobel3.MF_NormalSobel3'"
+    FunctionInputs(1) = (ExpressionInputId=904B76DD479EB786701E1CBDD3E2B3E3,Input=(InputName="Intensity"))
+    FunctionInputs(4) = (ExpressionInputId=405196A1477ADE79198B3891AD00E926,Input=(OutputIndex=-1,InputName="ChannerR"))
+    FunctionInputs(5) = (ExpressionInputId=D78C51BB492BE74BDBB58094B992B551,Input=(OutputIndex=-1,InputName="ChannelG"))
+    FunctionInputs(6) = (ExpressionInputId=0B49C539433F6E58DD9182A1B566D7E9,Input=(OutputIndex=-1,InputName="ChannelB"))
+    FunctionOutputs(0) = (ExpressionOutputId=909E8BAC492A4EB2270C42A022F87A6F,Output=(OutputName="Slope"))
+    FunctionOutputs(1) = (ExpressionOutputId=DF42E33C42CC0B6C883311833115ED08,Output=(OutputName="Normal"))
+    FunctionOutputs(2) = (ExpressionOutputId=66309ABA4AF24D46DB00D29BD7D0A303,Output=(OutputName="Blur"))
+    Outputs(0) = (OutputName="Slope")
+    Outputs(1) = (OutputName="Normal")
+    Outputs(2) = (OutputName="Blur")
+    FunctionInputs(0) <- MaterialExpressionTextureObjectParameter_6
+    FunctionInputs(2) <- MaterialExpressionDivide_0
+    FunctionInputs(3) <- MaterialExpressionAdd_0
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_NormalSobel3.MF_NormalSobel3'"
+    FunctionInputs(1) = (ExpressionInputId=904B76DD479EB786701E1CBDD3E2B3E3,Input=(InputName="Intensity"))
+    FunctionInputs(4) = (ExpressionInputId=405196A1477ADE79198B3891AD00E926,Input=(OutputIndex=-1,InputName="ChannerR"))
+    FunctionInputs(5) = (ExpressionInputId=D78C51BB492BE74BDBB58094B992B551,Input=(OutputIndex=-1,InputName="ChannelG"))
+    FunctionInputs(6) = (ExpressionInputId=0B49C539433F6E58DD9182A1B566D7E9,Input=(OutputIndex=-1,InputName="ChannelB"))
+    FunctionOutputs(0) = (ExpressionOutputId=909E8BAC492A4EB2270C42A022F87A6F,Output=(OutputName="Slope"))
+    FunctionOutputs(1) = (ExpressionOutputId=DF42E33C42CC0B6C883311833115ED08,Output=(OutputName="Normal"))
+    FunctionOutputs(2) = (ExpressionOutputId=66309ABA4AF24D46DB00D29BD7D0A303,Output=(OutputName="Blur"))
+    Outputs(0) = (OutputName="Slope")
+    Outputs(1) = (OutputName="Normal")
+    Outputs(2) = (OutputName="Blur")
+    FunctionInputs(0) <- MaterialExpressionTextureObjectParameter_9
+    FunctionInputs(2) <- MaterialExpressionDivide_0
+    FunctionInputs(3) <- MaterialExpressionAdd_0
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_NormalSobel3.MF_NormalSobel3'"
+    FunctionInputs(1) = (ExpressionInputId=904B76DD479EB786701E1CBDD3E2B3E3,Input=(InputName="Intensity"))
+    FunctionInputs(4) = (ExpressionInputId=405196A1477ADE79198B3891AD00E926,Input=(OutputIndex=-1,InputName="ChannerR"))
+    FunctionInputs(5) = (ExpressionInputId=D78C51BB492BE74BDBB58094B992B551,Input=(OutputIndex=-1,InputName="ChannelG"))
+    FunctionInputs(6) = (ExpressionInputId=0B49C539433F6E58DD9182A1B566D7E9,Input=(OutputIndex=-1,InputName="ChannelB"))
+    FunctionOutputs(0) = (ExpressionOutputId=909E8BAC492A4EB2270C42A022F87A6F,Output=(OutputName="Slope"))
+    FunctionOutputs(1) = (ExpressionOutputId=DF42E33C42CC0B6C883311833115ED08,Output=(OutputName="Normal"))
+    FunctionOutputs(2) = (ExpressionOutputId=66309ABA4AF24D46DB00D29BD7D0A303,Output=(OutputName="Blur"))
+    Outputs(0) = (OutputName="Slope")
+    Outputs(1) = (OutputName="Normal")
+    Outputs(2) = (OutputName="Blur")
+    FunctionInputs(0) <- MaterialExpressionTextureObjectParameter_10
+    FunctionInputs(2) <- MaterialExpressionDivide_0
+    FunctionInputs(3) <- MaterialExpressionAdd_0
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.MakeFloat4'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_1
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_3
+    FunctionInputs(2) <- MaterialExpressionMaterialFunctionCall_4
+    FunctionInputs(3) <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 512.000000
+    ParameterName = "Resolution"
+    ExpressionGUID = 903C3CD8444025D70578349234F5D4CA
+[MaterialExpressionTextureCoordinate_1] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureObjectParameter_0] MaterialExpressionTextureObjectParameter
+    ParameterName = "Frame1"
+    ExpressionGUID = FF3ABEFB4E3EE683ABF19DBEB4DAF8A7
+    bCollapsed = True
+[MaterialExpressionTextureObjectParameter_10] MaterialExpressionTextureObjectParameter
+    ParameterName = "Frame4"
+    ExpressionGUID = A7AD97B145F34D94E23ADC8D333A6FEA
+    bCollapsed = True
+[MaterialExpressionTextureObjectParameter_6] MaterialExpressionTextureObjectParameter
+    ParameterName = "Frame2"
+    ExpressionGUID = ED8BF0D6445D6EF97263159729FA3C8F
+    bCollapsed = True
+[MaterialExpressionTextureObjectParameter_9] MaterialExpressionTextureObjectParameter
+    ParameterName = "Frame3"
+    ExpressionGUID = 34FBFA0B4F86CC3C46F726999C207CCF
+    bCollapsed = True
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

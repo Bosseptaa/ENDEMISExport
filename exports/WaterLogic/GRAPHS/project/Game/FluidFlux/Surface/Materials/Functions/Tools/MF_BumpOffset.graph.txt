@@ -1,0 +1,84 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Tools/MF_BumpOffset
+# класс: MaterialFunction; происхождение: проект; узлов: 14; связей: 23; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:27
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_BumpOffset] MaterialFunction
+    StateId = 1C9EC89F488220F9FDB66281121F2EF4
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_BumpOffsetEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_BumpOffsetEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionTransform_6
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_7
+    ExpressionCollection <- MaterialExpressionComponentMask_7
+    ExpressionCollection <- MaterialExpressionMultiply_14
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionAdd_8
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+[MaterialExpressionAdd_8] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_BumpOffset'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionCameraVectorWS_7] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_BumpOffset'"
+[MaterialExpressionComponentMask_7] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_BumpOffset'"
+    Input <- MaterialExpressionTransform_6
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Height"
+    Id = 688A30634BDADAA50EA10A848F3159C8
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_BumpOffset'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "BumpOffsetScale"
+    Id = 820DAFF24A7D982DD015548628B42646
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_BumpOffset'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "BumpOffsetShift"
+    Id = 5ACA24354F7644D48B611AA52ABF8C4A
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_BumpOffset'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "BumpVector"
+    Id = C30B30E240D22C9B01998EBF14747FC0
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_BumpOffset'"
+    bCollapsed = True
+    Preview <- MaterialExpressionComponentMask_7
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Offset"
+    bLastPreviewed = True
+    Id = 4334CC744B61A50F5404F08162DCA0E6
+    Function = "/Script/Engine.MaterialFunction'MF_BumpOffset'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_14
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 0.080000
+    Function = "/Script/Engine.MaterialFunction'MF_BumpOffset'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMultiply_14] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_BumpOffset'"
+    A <- MaterialExpressionFunctionInput_3
+    B <- MaterialExpressionAdd_8
+[MaterialExpressionTransform_6] MaterialExpressionTransform
+    TransformSourceType = TRANSFORMSOURCE_World
+    TransformType = TRANSFORM_Tangent
+    Function = "/Script/Engine.MaterialFunction'MF_BumpOffset'"
+    Input <- MaterialExpressionCameraVectorWS_7
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

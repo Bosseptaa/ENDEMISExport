@@ -1,0 +1,123 @@
+﻿# /Game/FluidFlux/Demo/Environment/Teleport/BP_Teleport
+# класс: Blueprint; происхождение: проект; узлов: 24; связей: 33; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_Teleport] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_Teleport_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Demo/Environment/Teleport/BP_Teleport.BP_Teleport:UserConstructionScript",SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Demo/Environment/Teleport/BP_Teleport.BP_Teleport:EventGraph",SavedViewOffset=(X=206.042999,Y=523.389893),SavedZoomAmount=1.000000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_Teleport_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = FF6D53FF466D656CD41510B8FD113571
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 9A26EF4A49A526BEA29486B14C842906
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = E28789254BDA29E6977DA0A24DA179D1
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_Event_1
+    Nodes(2) <- K2Node_Event_2
+    Nodes(3) <- K2Node_ComponentBoundEvent_0
+    Nodes(4) <- K2Node_DynamicCast_0
+    Nodes(5) <- K2Node_CallFunction_0
+    Nodes(6) <- K2Node_VariableGet_1
+[K2Node_Event_0] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    EnabledState = Disabled
+    bCommentBubblePinned = True
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[K2Node_Event_1] K2Node_Event (событие: ReceiveActorBeginOverlap @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    EnabledState = Disabled
+    bCommentBubblePinned = True
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[K2Node_Event_2] K2Node_Event (событие: ReceiveTick @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    EnabledState = Disabled
+    bCommentBubblePinned = True
+    NodeComment = "This node is disabled and will not be called.\nDrag off pins to build functionality."
+[K2Node_ComponentBoundEvent_0@EventGraph] K2Node_ComponentBoundEvent
+[K2Node_DynamicCast_0@EventGraph] K2Node_DynamicCast
+[K2Node_CallFunction_0@EventGraph] K2Node_CallFunction
+[K2Node_VariableGet_1@EventGraph] K2Node_VariableGet
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ExecuteUbergraph_BP_Teleport] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = F0249E474BC3F4F6FDD0DE92CC95AECD
+    Nodes(0) <- K2Node_VariableGet_1
+    Nodes(1) <- K2Node_CallFunction_0
+    Nodes(2) <- K2Node_DynamicCast_0
+    Nodes(3) <- K2Node_ComponentBoundEvent_0
+    Nodes(4) <- K2Node_FunctionEntry_0
+[K2Node_ComponentBoundEvent_0@ExecuteUbergraph_BP_Teleport] K2Node_ComponentBoundEvent (событие: ComponentBeginOverlapSignature__DelegateSignature @ /Script/CoreUObject.Package)
+    DelegatePropertyName = "OnComponentBeginOverlap"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/Engine.PrimitiveComponent'"
+    ComponentPropertyName = "Box"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__BP_TGeleport_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature"
+    DelegatePropertyName = "OnComponentBeginOverlap"
+    DelegateOwnerClass = "/Script/CoreUObject.Class'/Script/Engine.PrimitiveComponent'"
+    ComponentPropertyName = "Box"
+    bInternalEvent = True
+    CustomFunctionName = "BndEvt__BP_TGeleport_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature"
+[K2Node_DynamicCast_0@ExecuteUbergraph_BP_Teleport] K2Node_DynamicCast
+    TargetType = "/Script/CoreUObject.Class'/Script/Engine.Character'"
+    PureState = Impure
+    TargetType = "/Script/CoreUObject.Class'/Script/Engine.Character'"
+    PureState = Impure
+[K2Node_CallFunction_0@ExecuteUbergraph_BP_Teleport] K2Node_CallFunction
+[K2Node_VariableGet_1@ExecuteUbergraph_BP_Teleport] K2Node_VariableGet (переменная: Dest Location)
+[K2Node_FunctionEntry_0@ExecuteUbergraph_BP_Teleport] K2Node_FunctionEntry
+[BndEvt__BP_TGeleport_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = B42E478D4FD561D4611006AA01D3531A
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BndEvt__BP_TGeleport_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@BndEvt__BP_TGeleport_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_Teleport)
+    bIsIntermediateNode = True
+    вход DestRotation = 0, 0, 0
+    вход DestRotation = 0, 0, 0
+    вход EntryPoint = 0
+[UserConstructionScript_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 9A26EF4A49A526BEA29486B14C842906
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED] K2Node_FunctionEntry (вызов: UserConstructionScript @ /Script/CoreUObject.Class)
+    CustomGeneratedFunctionName = "ExecuteUbergraph_BP_Teleport"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BndEvt__BP_TGeleport_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature"
+    bIsIntermediateNode = True
+
+## СВЯЗИ
+[K2Node_ComponentBoundEvent_0@ExecuteUbergraph_BP_Teleport].OtherActor -> [K2Node_DynamicCast_0@ExecuteUbergraph_BP_Teleport].Object
+[K2Node_ComponentBoundEvent_0@ExecuteUbergraph_BP_Teleport].then -> [K2Node_DynamicCast_0@ExecuteUbergraph_BP_Teleport].execute
+[K2Node_DynamicCast_0@ExecuteUbergraph_BP_Teleport].AsCharacter -> [K2Node_CallFunction_0@BndEvt__BP_TGeleport_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature].self
+[K2Node_DynamicCast_0@ExecuteUbergraph_BP_Teleport].then -> [K2Node_CallFunction_0@BndEvt__BP_TGeleport_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature].execute
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED].OtherActor -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_ComponentBoundEvent_OtherActor
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED].OtherBodyIndex -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_ComponentBoundEvent_OtherBodyIndex
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED].OtherComp -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_ComponentBoundEvent_OtherComp
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED].OverlappedComponent -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_ComponentBoundEvent_OverlappedComponent
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED].SweepResult -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_ComponentBoundEvent_SweepResult
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED].bFromSweep -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_ComponentBoundEvent_bFromSweep
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED].then -> [K2Node_SetVariableOnPersistentFrame_0].execute
+[K2Node_SetVariableOnPersistentFrame_0].then -> [K2Node_CallFunction_0@BndEvt__BP_TGeleport_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature].execute#2
+[K2Node_VariableGet_1@ExecuteUbergraph_BP_Teleport].Dest Location -> [K2Node_CallFunction_0@BndEvt__BP_TGeleport_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature].DestLocation

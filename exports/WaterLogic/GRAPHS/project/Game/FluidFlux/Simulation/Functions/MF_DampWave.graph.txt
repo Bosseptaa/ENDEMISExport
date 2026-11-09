@@ -1,0 +1,137 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_DampWave
+# класс: MaterialFunction; происхождение: проект; узлов: 23; связей: 44; HLSL: 2; причина: папка /Game/FluidFlux; имя/путь, тело:203, HLSL:2
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_DampWave] MaterialFunction
+    StateId = 3D57EDEF45E9336204DDB9BB7268A947
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_DampWaveEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_DampWaveEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionCustom_3
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionAbs_1
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+    Input <- MaterialExpressionFunctionInput_3
+[MaterialExpressionAbs_1] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+    Input <- MaterialExpressionFunctionInput_3
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: Damp
+    OutputType = CMOT_Float1
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+    Inputs(0) uC <- MaterialExpressionFunctionInput_0
+    Inputs(1) uL <- MaterialExpressionFunctionInput_1
+    Inputs(2) uR <- MaterialExpressionFunctionInput_2
+    Inputs(3) totalSlope <- MaterialExpressionFunctionInput_3
+    Inputs(4) edge <- MaterialExpressionScalarParameter_0
+    Inputs(5) scale <- MaterialExpressionScalarParameter_1
+    Inputs(6) scale2 <- MaterialExpressionScalarParameter_2
+    Code: HLSL, 21 строк (см. HLSL/)
+[MaterialExpressionCustom_3] MaterialExpressionCustom
+    описание: Damp
+    OutputType = CMOT_Float1
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+    Inputs(0) u <- MaterialExpressionFunctionInput_0
+    Inputs(1) vL <- MaterialExpressionFunctionInput_1
+    Inputs(2) vR <- MaterialExpressionFunctionInput_2
+    Code: HLSL, 6 строк (см. HLSL/)
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "v"
+    Id = 35B262DE4DC889D4EDEB379F330580A8
+    InputType = FunctionInput_Scalar
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "vL"
+    Id = 4D5719D848C467257883ABB600EB8177
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_1
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "vR"
+    Id = 056854FA4B1159206C5ABCA1C92A151B
+    InputType = FunctionInput_Scalar
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "slope"
+    Id = 41683709455B52CE1D13A2A48C0EADE9
+    InputType = FunctionInput_Scalar
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_3
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = 7AEAC2034F8AB4B68D418FBB58BFA28D
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_0
+[MaterialExpressionIf_0] MaterialExpressionIf
+    ConstB = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+    A <- MaterialExpressionAbs_0
+    B <- MaterialExpressionConstant_4
+    AGreaterThanB <- MaterialExpressionMultiply_0
+    ALessThanB <- MaterialExpressionConstant_5
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+    A <- MaterialExpressionAbs_1
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.150000
+    ParameterName = "Edge"
+    ExpressionGUID = D327DA044AE7CB705CDCCD948C88433D
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = -0.100000
+    ParameterName = "Scale"
+    ExpressionGUID = 6F184E5643AA10E174E7F381C9259209
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "Scale2"
+    ExpressionGUID = 9101F51C4BF3FF3FF6049592CACD4C7B
+    Function = "/Script/Engine.MaterialFunction'MF_DampWave'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

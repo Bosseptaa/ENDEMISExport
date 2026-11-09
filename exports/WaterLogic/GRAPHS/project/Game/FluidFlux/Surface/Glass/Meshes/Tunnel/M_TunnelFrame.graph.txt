@@ -1,0 +1,84 @@
+﻿# /Game/FluidFlux/Surface/Glass/Meshes/Tunnel/M_TunnelFrame
+# класс: Material; происхождение: проект; узлов: 15; связей: 24; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:31
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_TunnelFrame] Material
+    BlendMode = BLEND_Masked
+    MaterialDecalResponse = MDR_None
+    OpacityMaskClipValue = 0.500000
+    TwoSided = True
+    bUsedWithSplineMeshes = True
+    EditorX = -160
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 6722678B43032F61B2C71D8FA8B037EC
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq.Good64x64TilingNoiseHighFreq'"
+    LightingGuid = 58FD5B404DCD39406BBA5484667BE5CA
+    EditorOnlyData <- M_TunnelFrameEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_TunnelFrameEditorOnlyData] MaterialEditorOnlyData
+    BaseColor <- MaterialExpressionConstant3Vector_1
+    Metallic <- MaterialExpressionConstant_4
+    Specular <- MaterialExpressionConstant_2
+    Roughness <- MaterialExpressionConstant_3
+    OpacityMask <- MaterialExpressionShadowReplace_0
+    WorldPositionOffset <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionShadowReplace_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionConstant_5
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.500000
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 5.000000
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = 0.600000
+[MaterialExpressionConstant_5] MaterialExpressionConstant
+    R = 0.050000
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=0.030000,G=0.030000,B=0.040000,A=0.000000)
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.DitherTemporalAA'"
+    FunctionInputs(1) = (ExpressionInputId=E8A932AF4299B0D6C16EDB8B1E912796,Input=(OutputIndex=-1,InputName="Random"))
+    FunctionOutputs(0) = (ExpressionOutputId=9BC32B084665F3D2D59A90AA45CA8A9F,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionConstant_1
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/DistanceField/Functions/MF_CheckerDither.MF_CheckerDither'"
+    FunctionOutputs(0) = (ExpressionOutputId=49EC16034751E26AFD14CCB498A4013B,Output=(OutputName="TwoSided"))
+    FunctionOutputs(1) = (ExpressionOutputId=3D2C165F4A3443B7055E5D8978A589E0,Output=(OutputName="BackSide"))
+    FunctionOutputs(2) = (ExpressionOutputId=4D512265436E6E5E52875EA7837A6029,Output=(OutputName="FrontSide"))
+    Outputs(0) = (OutputName="TwoSided")
+    Outputs(1) = (OutputName="BackSide")
+    Outputs(2) = (OutputName="FrontSide")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_1
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxPhantom.MF_FluxPhantom'"
+    FunctionInputs(0) = (ExpressionInputId=C0539CA24323537369B8729D42344871,Input=(OutputIndex=-1,InputName="IsPhantom"))
+    FunctionInputs(1) = (ExpressionInputId=5510FBC7464B9923A9C0CCAB247C52B7,Input=(InputName="IsDistanceField"))
+    FunctionInputs(2) = (ExpressionInputId=6E44A5544354F5A85BE5D99028941E2B,Input=(InputName="WorldPositionOffset"))
+    FunctionOutputs(0) = (ExpressionOutputId=952F33E84669F008FED6A69447C48B78,Output=(OutputName="VisibleInWorldOnly"))
+    FunctionOutputs(1) = (ExpressionOutputId=F7C65AF84365C80134A16B8BCAA6DCDD,Output=(OutputName="VisibleInCaptureOnly"))
+    FunctionOutputs(2) = (ExpressionOutputId=90AD37CA48E557769A7A6DB4F898F298,Output=(OutputName="IsRenderingCapture"))
+    Outputs(0) = (OutputName="VisibleInWorldOnly")
+    Outputs(1) = (OutputName="VisibleInCaptureOnly")
+    Outputs(2) = (OutputName="IsRenderingCapture")
+[MaterialExpressionShadowReplace_0] MaterialExpressionShadowReplace
+    Default <- MaterialExpressionConstant_0
+    Shadow <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

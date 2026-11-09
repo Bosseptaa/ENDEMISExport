@@ -1,0 +1,169 @@
+﻿# /Game/FluidFlux/Demo/Environment/Palm/M_PalmTree
+# класс: Material; происхождение: проект; узлов: 28; связей: 58; HLSL: 0; причина: папка /Game/FluidFlux; тело:5
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_PalmTree] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Subsurface
+    ShadingModels = (ShadingModelField=4)
+    OpacityMaskClipValue = 0.350000
+    bEnableResponsiveAA = True
+    TwoSided = True
+    bUsedWithNiagaraMeshParticles = True
+    bUsedWithStaticLighting = True
+    bUsedWithSplineMeshes = True
+    bUsedWithInstancedStaticMeshes = True
+    EditorX = 1136
+    EditorY = -688
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = D4212E1E44C516FC19D1C680E76CDF9D
+    ReferencedTextureGuids(0) = 6D0994CA443624C901BA17A4EB0C6E16
+    ReferencedTextureGuids(1) = 55D18E5B40A0CA114AF4219AB0618A02
+    ReferencedTextureGuids(2) = 422B8B2A412AC8E6638B76BCF3FC6F4D
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Palm/T_PalmTree_D.T_PalmTree_D'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Palm/T_PalmTree_N.T_PalmTree_N'"
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Rocks/T_CliffRock_03_N.T_CliffRock_03_N'"
+    LightingGuid = 59605D24459B4FBCAE066CA7FEFC2A90
+    EditorOnlyData <- M_PalmTreeEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_3
+[M_PalmTreeEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="Base")
+    BaseColor <- MaterialExpressionTextureSample_6
+    Metallic <- MaterialExpressionConstant_6
+    Specular <- MaterialExpressionScalarParameter_0
+    Roughness <- MaterialExpressionLinearInterpolate_0
+    Normal <- MaterialExpressionMaterialFunctionCall_2
+    Opacity <- MaterialExpressionLinearInterpolate_19
+    OpacityMask <- MaterialExpressionReroute_2
+    WorldPositionOffset <- MaterialExpressionStaticSwitchParameter_0
+    SubsurfaceColor <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionTextureSample_6
+    ExpressionCollection <- MaterialExpressionConstant_6
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_19
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionTextureSample_9
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_18
+    ExpressionCollection <- MaterialExpressionMultiply_36
+    ExpressionCollection <- MaterialExpressionVectorParameter_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_9
+    ExpressionCollection <- MaterialExpressionWorldPosition_3
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_10
+    ExpressionCollection <- MaterialExpressionCollectionParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionReroute_5
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    A <- MaterialExpressionMaterialFunctionCall_10
+    B <- MaterialExpressionWorldPosition_3
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    A <- MaterialExpressionMaterialFunctionCall_10
+    B <- MaterialExpressionMaterialFunctionCall_9
+[MaterialExpressionCollectionParameter_0] MaterialExpressionCollectionParameter
+    Collection = "/Script/Engine.MaterialParameterCollection'/Game/FluidFlux/Demo/Environment/Palm/MPC_Weather.MPC_Weather'"
+    ParameterName = "WetSurface"
+    ParameterId = B076112145BDA27BD042DAA4C3F2E969
+    bCollapsed = True
+[MaterialExpressionConstant_6] MaterialExpressionConstant
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    bCollapsed = True
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    ConstA = 1.000000
+    ConstB = 0.300000
+    A <- MaterialExpressionLinearInterpolate_18
+    Alpha <- MaterialExpressionCollectionParameter_0
+[MaterialExpressionLinearInterpolate_18] MaterialExpressionLinearInterpolate
+    ConstA = 0.300000
+    ConstB = 0.700000
+    Alpha <- MaterialExpressionTextureSample_6
+[MaterialExpressionLinearInterpolate_19] MaterialExpressionLinearInterpolate
+    ConstA = 1.000000
+    B <- MaterialExpressionVectorParameter_4
+    Alpha <- MaterialExpressionReroute_5
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Palm/Functions/MF_InfinityPivot_TC2_TC3_VC.MF_InfinityPivot_TC2_TC3_VC'"
+    FunctionOutputs(0) = (ExpressionOutputId=A5AC8CB9457CA79C64FE9DBC803F2DBD,Output=(OutputName="Postion"))
+    FunctionOutputs(1) = (ExpressionOutputId=2B1E434649D9C3018B571A9E1814BB71,Output=(OutputName="Direction"))
+    FunctionOutputs(2) = (ExpressionOutputId=5F79C54246380446AB9A31BE9C29389E,Output=(OutputName="Normalized"))
+    FunctionOutputs(3) = (ExpressionOutputId=6DC1634243AA9C2CF8A0F788E55AF4F8,Output=(OutputName="Length"))
+    FunctionOutputs(4) = (ExpressionOutputId=69D07DD341107F0673F7808C32278E34,Output=(OutputName="Distance"))
+    FunctionOutputs(5) = (ExpressionOutputId=588845854D206410F6642ABB8790D0E4,Output=(OutputName="Mask"))
+    FunctionOutputs(6) = (ExpressionOutputId=A2D0765E4259DFF9029489864AF256AC,Output=(OutputName="Random"))
+    Outputs(0) = (OutputName="Postion")
+    Outputs(1) = (OutputName="Direction")
+    Outputs(2) = (OutputName="Normalized")
+    Outputs(3) = (OutputName="Length")
+    Outputs(4) = (OutputName="Distance")
+    Outputs(5) = (OutputName="Mask")
+    Outputs(6) = (OutputName="Random")
+[MaterialExpressionMaterialFunctionCall_10] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Palm/Functions/MF_WindTreeBranch.MF_WindTreeBranch'"
+    FunctionOutputs(0) = (ExpressionOutputId=59638F2B44E0C8CF4DBEDC95F888B8C2,Output=(OutputName="WorldOffset"))
+    Outputs(0) = (OutputName="WorldOffset")
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.BlendAngleCorrectedNormals'"
+    FunctionOutputs(0) = (ExpressionOutputId=E2F3EA0E41E2637BBAA2A4A0FEF38E6A,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionTextureSample_9
+    FunctionInputs(1) <- MaterialExpressionTextureSample_0
+[MaterialExpressionMaterialFunctionCall_9] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Palm/Functions/MF_WindTreeTrunk.MF_WindTreeTrunk'"
+    FunctionInputs(0) = (ExpressionInputId=66FA1D904135A8FA823266B651A1A724,Input=(OutputIndex=-1,InputName="Falloff"))
+    FunctionInputs(1) = (ExpressionInputId=CE7775644A877FEAB45664B3492200F1,Input=(OutputIndex=-1,InputName="PivotLocation"))
+    FunctionOutputs(0) = (ExpressionOutputId=59638F2B44E0C8CF4DBEDC95F888B8C2,Output=(OutputName="WorldOffset"))
+    Outputs(0) = (OutputName="WorldOffset")
+    FunctionInputs(2) <- MaterialExpressionAdd_2
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 1.600000
+    A <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    A <- MaterialExpressionReroute_5
+    B <- MaterialExpressionMultiply_36
+[MaterialExpressionMultiply_36] MaterialExpressionMultiply
+    A <- MaterialExpressionTextureSample_6
+    B <- MaterialExpressionVectorParameter_4
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Input <- MaterialExpressionTextureSample_6
+[MaterialExpressionReroute_5] MaterialExpressionReroute
+    Input <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.070000
+    ParameterName = "Specular"
+    ExpressionGUID = 6EEA0C8849CEA3D43C91B9B071EA1FA0
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UseVertexAnimation"
+    ExpressionGUID = 0EF19C144FA181E6EB6CEEB30D849448
+    A <- MaterialExpressionAdd_4
+    B <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Landscape/Rocks/T_CliffRock_03_N.T_CliffRock_03_N'"
+    SamplerType = SAMPLERTYPE_Normal
+    Coordinates <- MaterialExpressionMultiply_0
+[MaterialExpressionTextureSample_6] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Palm/T_PalmTree_D.T_PalmTree_D'"
+[MaterialExpressionTextureSample_9] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Palm/T_PalmTree_N.T_PalmTree_N'"
+    SamplerType = SAMPLERTYPE_Normal
+[MaterialExpressionVectorParameter_4] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+    ParameterName = "SubsurfaceColor"
+    ExpressionGUID = B3A9BDDC42753D57375C10933CA1B8FF
+    Group = "Base"
+[MaterialExpressionWorldPosition_3] MaterialExpressionWorldPosition
+[SceneThumbnailInfoWithPrimitive_3] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

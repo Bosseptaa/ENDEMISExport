@@ -1,0 +1,235 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Tools/MF_NormalMap
+# класс: MaterialFunction; происхождение: проект; узлов: 31; связей: 74; HLSL: 1; причина: папка /Game/FluidFlux; имя/путь, тело:64, HLSL:1
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_NormalMap] MaterialFunction
+    StateId = 98E872C346924E7E34B9AE9C2C6D53A7
+    CombinedInputTypes = 530
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_3
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_6
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_NormalMapEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_NormalMapEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionTextureObject_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionCustom_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_6
+    ExpressionCollection <- MaterialExpressionStaticSwitch_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionStaticSwitch_1
+    ExpressionCollection <- MaterialExpressionStaticSwitch_2
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionFunctionInput_7
+    ExpressionCollection <- MaterialExpressionStaticBool_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_8
+    ExpressionCollection <- MaterialExpressionStaticBool_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    R = 1.000000
+    G = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+[MaterialExpressionConstant2Vector_1] MaterialExpressionConstant2Vector
+    R = 100.000000
+    G = 100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+[MaterialExpressionCustom_1] MaterialExpressionCustom
+    описание: Edge
+    OutputType = CMOT_Float1
+    Inputs(0) Tex = (InputName="Tex")
+    Inputs(1) offset = (InputName="offset")
+    Inputs(2) uv = (InputName="uv")
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    Code: HLSL, 18 строк (см. HLSL/)
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstB = 512.000000
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    A <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "UV"
+    Id = 6CBB10CD47025150422955BDA0226A36
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Texture"
+    Id = 27B7283A425AF370515B04BE080E5A58
+    InputType = FunctionInput_Texture2D
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureObject_0
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Intensity"
+    Id = 904B76DD479EB786701E1CBDD3E2B3E3
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_1
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Offset"
+    Id = 58348498427370A62739FF911F5BF3E1
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    Preview <- MaterialExpressionDivide_0
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "ChannerR"
+    Id = AE24E64D4444CE45D0F6A79A824123D7
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    SortPriority = 22
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_1
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "UseLowQualitySampling"
+    Id = 2D70CFBD449FCDC1DCA4CEB3351ACF3F
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    SortPriority = 22
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionInput_7] MaterialExpressionFunctionInput
+    InputName = "ChannelG"
+    Id = E61E30D6405AA58CD5149AA5063F51E3
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    SortPriority = 24
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_3
+[MaterialExpressionFunctionInput_8] MaterialExpressionFunctionInput
+    InputName = "ChannelB"
+    Id = C8E1C00F472104963E4031B04327C079
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    SortPriority = 25
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_4
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Normal"
+    SortPriority = 4
+    bLastPreviewed = True
+    Id = 81B4D4824CFD06FACBCE9DB19BF2E230
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitch_1
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Blur"
+    SortPriority = 6
+    bLastPreviewed = True
+    Id = 09F7A8CE4821019FF9F6E2B0FC27C212
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitch_0
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "Slope"
+    SortPriority = 8
+    bLastPreviewed = True
+    Id = A666A5FF4B8EF04CB0EC16A99861F2CE
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitch_2
+[MaterialExpressionFunctionOutput_6] MaterialExpressionFunctionOutput
+    OutputName = "Height"
+    SortPriority = -3
+    bLastPreviewed = True
+    Id = 8844D5BA424A212E6BEEE289BE4BD630
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_SampleMask.MF_SampleMask'"
+    FunctionOutputs(0) = (ExpressionOutputId=9A9B04A947233ECDF219A199A4870E14,Output=(OutputName="Masked"))
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    Outputs(0) = (OutputName="Masked")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_1
+    FunctionInputs(1) <- MaterialExpressionFunctionInput_0
+    FunctionInputs(2) <- MaterialExpressionFunctionInput_4
+    FunctionInputs(3) <- MaterialExpressionFunctionInput_7
+    FunctionInputs(4) <- MaterialExpressionFunctionInput_8
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_NormalSobel3.MF_NormalSobel3'"
+    FunctionOutputs(0) = (ExpressionOutputId=909E8BAC492A4EB2270C42A022F87A6F,Output=(OutputName="Slope"))
+    FunctionOutputs(1) = (ExpressionOutputId=DF42E33C42CC0B6C883311833115ED08,Output=(OutputName="Normal"))
+    FunctionOutputs(2) = (ExpressionOutputId=66309ABA4AF24D46DB00D29BD7D0A303,Output=(OutputName="Blur"))
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    Outputs(0) = (OutputName="Slope")
+    Outputs(1) = (OutputName="Normal")
+    Outputs(2) = (OutputName="Blur")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_1
+    FunctionInputs(1) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(2) <- MaterialExpressionFunctionInput_3
+    FunctionInputs(3) <- MaterialExpressionFunctionInput_0
+    FunctionInputs(4) <- MaterialExpressionFunctionInput_4
+    FunctionInputs(5) <- MaterialExpressionFunctionInput_7
+    FunctionInputs(6) <- MaterialExpressionFunctionInput_8
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Tools/MF_NormalCross.MF_NormalCross'"
+    FunctionOutputs(0) = (ExpressionOutputId=AC2C2FF2451470D3E10DDEB19501BD94,Output=(OutputName="Slope"))
+    FunctionOutputs(1) = (ExpressionOutputId=169BA1244DA4A8BA5388EC95A59B9DA1,Output=(OutputName="Normal"))
+    FunctionOutputs(2) = (ExpressionOutputId=074936D4454EF15B0F7E1DA0CD885081,Output=(OutputName="Blur"))
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    Outputs(0) = (OutputName="Slope")
+    Outputs(1) = (OutputName="Normal")
+    Outputs(2) = (OutputName="Blur")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_1
+    FunctionInputs(1) <- MaterialExpressionFunctionInput_2
+    FunctionInputs(2) <- MaterialExpressionFunctionInput_3
+    FunctionInputs(3) <- MaterialExpressionFunctionInput_0
+    FunctionInputs(4) <- MaterialExpressionFunctionInput_4
+    FunctionInputs(5) <- MaterialExpressionFunctionInput_7
+    FunctionInputs(6) <- MaterialExpressionFunctionInput_8
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+[MaterialExpressionStaticBool_3] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+[MaterialExpressionStaticBool_4] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+[MaterialExpressionStaticSwitch_0] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    A <- MaterialExpressionMaterialFunctionCall_6
+    B <- MaterialExpressionMaterialFunctionCall_3
+    Value <- MaterialExpressionFunctionInput_5
+[MaterialExpressionStaticSwitch_1] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    A <- MaterialExpressionMaterialFunctionCall_6
+    B <- MaterialExpressionMaterialFunctionCall_3
+    Value <- MaterialExpressionFunctionInput_5
+[MaterialExpressionStaticSwitch_2] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    A <- MaterialExpressionMaterialFunctionCall_6
+    B <- MaterialExpressionMaterialFunctionCall_3
+    Value <- MaterialExpressionFunctionInput_5
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+[MaterialExpressionTextureObject_0] MaterialExpressionTextureObject
+    Function = "/Script/Engine.MaterialFunction'MF_NormalMap'"
+    bCollapsed = True
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

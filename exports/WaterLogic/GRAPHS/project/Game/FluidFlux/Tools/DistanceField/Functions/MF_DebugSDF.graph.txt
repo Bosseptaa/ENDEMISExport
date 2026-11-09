@@ -1,0 +1,161 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Functions/MF_DebugSDF
+# класс: MaterialFunction; происхождение: проект; узлов: 28; связей: 54; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_DebugSDF] MaterialFunction
+    StateId = 79C491D2427451EBF8453C9545C0E976
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_2
+    EditorOnlyData <- MF_DebugSDFEditorOnlyData
+[MF_DebugSDFEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionFrac_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_2
+    ExpressionCollection <- MaterialExpressionFrac_2
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionDivide_7
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionFunctionInput_6
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_1
+    ExpressionCollection <- MaterialExpressionMultiply_10
+    ExpressionCollection <- MaterialExpressionDivide_9
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionConstant_1
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    Input <- MaterialExpressionMultiply_10
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    A <- MaterialExpressionMultiply_6
+    B <- MaterialExpressionFrac_2
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    A <- MaterialExpressionFunctionInput_6
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 10.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.200000
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionDivide_7] MaterialExpressionDivide
+    A = (OutputIndex=3)
+    ConstB = 50.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+[MaterialExpressionDivide_9] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionFrac_0] MaterialExpressionFrac
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    Input <- MaterialExpressionDivide_0
+[MaterialExpressionFrac_2] MaterialExpressionFrac
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    Input <- MaterialExpressionDivide_7
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Distance"
+    Id = 5921576C4609D5AA4060E9BAAB9D6355
+    InputType = FunctionInput_Scalar
+    SortPriority = 10
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "StepSize"
+    Id = 35A63B964B4B0FA7CFEC81B3C396D43F
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Range"
+    Id = 2C40F1994CB2E9AD1B04208B1570DE80
+    InputType = FunctionInput_Scalar
+    SortPriority = 11
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Intensity"
+    Id = AC5899E448DD5892093FF8A38C4B6023
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_1
+[MaterialExpressionFunctionInput_6] MaterialExpressionFunctionInput
+    InputName = "NormalizedUV"
+    Id = B825959A4F5ECBA791C048AD3ADA5698
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    SortPriority = 12
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "DebugTexture"
+    bLastPreviewed = True
+    Id = F52B6C104EA30AD484491DA12B6D54F9
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    bCollapsed = True
+    A <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    ConstAlpha = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    A <- MaterialExpressionMultiply_1
+    B <- MaterialExpressionMaterialFunctionCall_2
+    Alpha <- MaterialExpressionFunctionInput_3
+[MaterialExpressionLinearInterpolate_2] MaterialExpressionLinearInterpolate
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/ArtTools/RenderToTexture/MaterialFunctions/CheckerPattern.CheckerPattern'"
+    FunctionOutputs(0) = (ExpressionOutputId=7183E0CD4C9C77E63748A3A80E7DB378,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionAdd_4
+    FunctionInputs(1) <- MaterialExpressionConstant_3
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    A <- MaterialExpressionOneMinus_0
+    B <- MaterialExpressionFrac_0
+[MaterialExpressionMultiply_10] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    A <- MaterialExpressionDivide_9
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    A <- MaterialExpressionLinearInterpolate_2
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    Input <- MaterialExpressionSaturate_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+    Input <- MaterialExpressionAbs_0
+[MaterialExpressionTextureCoordinate_1] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_DebugSDF'"
+
+## СВЯЗИ

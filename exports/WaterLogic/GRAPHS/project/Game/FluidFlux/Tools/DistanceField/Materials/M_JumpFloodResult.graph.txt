@@ -1,0 +1,114 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Materials/M_JumpFloodResult
+# класс: Material; происхождение: проект; узлов: 24; связей: 48; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_JumpFloodResult] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    EditorX = 240
+    EditorY = 29
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 660E33B6A5172CDA60E72C89CA4BC687
+    ReferencedTextureGuids(0) = EADB191549A29FA8E4C5C0B142E50780
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="DefaultDiffuse",TextureReference="/Engine/EngineMaterials/DefaultDiffuse.DefaultDiffuse")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineMaterials/DefaultDiffuse.DefaultDiffuse'"
+    ReferencedDefaultTextures(1) = None
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 065548C8497D817CCA8B188ED26DBB4A
+    EditorOnlyData <- M_JumpFloodResultEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    TextureObject <- MaterialExpressionTextureObjectParameter_1
+[MaterialExpressionTextureProperty_1] MaterialExpressionTextureProperty
+    TextureObject <- MaterialExpressionTextureObjectParameter_1
+[MaterialExpressionTextureObjectParameter_1] MaterialExpressionTextureObjectParameter
+    ParameterName = "SeedTexture"
+    ExpressionGUID = A3447E674B824F9C2686969A026C11AC
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineMaterials/DefaultDiffuse.DefaultDiffuse'"
+    bCollapsed = True
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    A <- MaterialExpressionAbs_1
+    B <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionSign_0] MaterialExpressionSign
+    Input <- MaterialExpressionComponentMask_1
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "Scale"
+    ExpressionGUID = 90DFDD65458869ADD69CA397D5153112
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 10.000000
+    A <- MaterialExpressionDistance_0
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    A <- MaterialExpressionSign_0
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionAppendVector_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionTextureProperty_1
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionTextureProperty_1
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionDistance_0] MaterialExpressionDistance
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionConstant_0
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    Input <- MaterialExpressionComponentMask_0
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionTextureSample_0
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    A <- MaterialExpressionConstant_1
+    B <- MaterialExpressionDivide_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.500000
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionAbs_1] MaterialExpressionAbs
+    Input <- MaterialExpressionDivide_1
+[M_JumpFloodResultEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionTextureObjectParameter_1
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionTextureProperty_1
+    ExpressionCollection <- MaterialExpressionDistance_0
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionSign_0
+    ExpressionCollection <- MaterialExpressionAbs_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+
+## СВЯЗИ

@@ -1,0 +1,188 @@
+﻿# /Game/FluidFlux/Surface/Underwater/Functions/MF_UnderwaterColorProfile
+# класс: MaterialFunction; происхождение: проект; узлов: 30; связей: 66; HLSL: 1; причина: папка /Game/FluidFlux; имя/путь, тело:340, HLSL:1
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_UnderwaterColorProfile] MaterialFunction
+    StateId = B16A2B3D45671E540346CDA45720FC05
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_3
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_10
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_11
+    EditorOnlyData <- MF_UnderwaterColorProfileEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_UnderwaterColorProfileEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_3
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_0
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_2
+    ExpressionCollection <- MaterialExpressionStaticSwitchParameter_0
+    ExpressionCollection <- MaterialExpressionComponentMask_9
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionReroute_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_10
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_11
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionCameraPositionWS_3] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+[MaterialExpressionCameraVectorWS_0] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    Input <- MaterialExpressionReroute_3
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    Input <- MaterialExpressionVertexInterpolator_0
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    Input <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionComponentMask_9] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    Input <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: SMin
+    OutputType = CMOT_Float1
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    bCollapsed = True
+    Inputs(0) a <- MaterialExpressionFunctionInput_0
+    Inputs(1) b <- MaterialExpressionScalarParameter_1
+    Inputs(2) k <- MaterialExpressionScalarParameter_1
+    Code: HLSL, 2 строк (см. HLSL/)
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    ConstA = 2500.000000
+    ConstB = 2500.000000
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    A <- MaterialExpressionCustom_0
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "SceneDepth"
+    Id = E9E4F3CF4EE1371B1BC935A7952C2ACC
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "GlassPosition"
+    Id = 553AC50049512D377C0DD88B958DA4BB
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    bCollapsed = True
+    Preview <- MaterialExpressionCameraPositionWS_3
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "GlassDirection"
+    Id = BC9004CF4792EC45CFE16697D1CE9BEF
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    bCollapsed = True
+    Preview <- MaterialExpressionCameraVectorWS_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Shoreline"
+    SortPriority = -1
+    bLastPreviewed = True
+    Id = D331EBD444C9B05F138460BEF8AC4EF1
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    bCollapsed = True
+    A <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Painter"
+    SortPriority = -2
+    bLastPreviewed = True
+    Id = 1430D40243BA849E2A1A7DAFB69CAB80
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitchParameter_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    A <- MaterialExpressionMaterialFunctionCall_10
+    B <- MaterialExpressionMaterialFunctionCall_11
+    Alpha <- MaterialExpressionMultiply_6
+[MaterialExpressionLinearInterpolate_2] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    A <- MaterialExpressionComponentMask_2
+    B <- MaterialExpressionComponentMask_9
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/ScenePainter/Functions/MF_SamplePainter.MF_SamplePainter'"
+    FunctionOutputs(0) = (ExpressionOutputId=4FA0C0004320F05905AE9C8E0E5CF57E,Output=(OutputName="Color"))
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    Outputs(0) = (OutputName="Color")
+    FunctionInputs(0) <- MaterialExpressionComponentMask_0
+[MaterialExpressionMaterialFunctionCall_10] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Underwater/Functions/MF_SampleShoreline.MF_SampleShoreline'"
+    FunctionOutputs(0) = (ExpressionOutputId=3E5DBFE14602DA6C64F28B917C829F6B,Output=(OutputName="Color"))
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    Outputs(0) = (OutputName="Color")
+    FunctionInputs(0) <- MaterialExpressionReroute_3
+[MaterialExpressionMaterialFunctionCall_11] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Underwater/Functions/MF_SampleShoreline.MF_SampleShoreline'"
+    FunctionOutputs(0) = (ExpressionOutputId=3E5DBFE14602DA6C64F28B917C829F6B,Output=(OutputName="Color"))
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    Outputs(0) = (OutputName="Color")
+    FunctionInputs(0) <- MaterialExpressionAdd_1
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Tools/ScenePainter/Functions/MF_SamplePainter.MF_SamplePainter'"
+    FunctionOutputs(0) = (ExpressionOutputId=4FA0C0004320F05905AE9C8E0E5CF57E,Output=(OutputName="Color"))
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    Outputs(0) = (OutputName="Color")
+    FunctionInputs(0) <- MaterialExpressionAdd_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 600.000000
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    A <- MaterialExpressionFunctionInput_2
+    B <- MaterialExpressionMultiply_8
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    A <- MaterialExpressionDivide_2
+    B <- MaterialExpressionDivide_2
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    A <- MaterialExpressionCustom_0
+[MaterialExpressionReroute_3] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 1000.000000
+    ParameterName = "ShorelineFogDistance"
+    ExpressionGUID = EEFCAA9A4539B869FA1BDDBDC1898BD0
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+[MaterialExpressionStaticSwitchParameter_0] MaterialExpressionStaticSwitchParameter
+    DefaultValue = True
+    ParameterName = "UsePainterTransition"
+    ExpressionGUID = B85A60414FA520EB302844AF6688E7D8
+    Group = "FluxPainter"
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    A <- MaterialExpressionLinearInterpolate_2
+    B <- MaterialExpressionComponentMask_1
+[MaterialExpressionVertexInterpolator_0] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_UnderwaterColorProfile'"
+    Input <- MaterialExpressionComponentMask_2
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

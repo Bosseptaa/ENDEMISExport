@@ -1,0 +1,126 @@
+﻿# /Game/FluidFlux/Interaction/Splash/Materials/M_SplashFlipbook
+# класс: Material; происхождение: проект; узлов: 29; связей: 59; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:293
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_SplashFlipbook] Material
+    BlendMode = BLEND_Translucent
+    OpacityMaskClipValue = 0.250000
+    TranslucencyPass = MTP_BeforeDOF
+    bUsedWithParticleSprites = True
+    bUsedWithNiagaraSprites = True
+    bUsedWithStaticLighting = True
+    bUsesDistortion = True
+    EditorX = 960
+    EditorY = -64
+    bCanMaskedBeAssumedOpaque = True
+    RefractionMethod = RM_PixelNormalOffset
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 686819DE44F372E94AB1E19CA6412A15
+    ReferencedTextureGuids(0) = 4CF6A7094443452ADAAEFBA2395D1433
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_Splash_N",TextureReference="/Game/1_Water/Textures/T_Splash_N.T_Splash_N")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_Splash_N.T_Splash_N'"
+    LightingGuid = 57C3060045A160561FAE03AB8DAA3059
+    EditorOnlyData <- M_SplashFlipbookEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_SplashFlipbookEditorOnlyData] MaterialEditorOnlyData
+    BaseColor <- MaterialExpressionAdd_3
+    Normal <- MaterialExpressionMultiply_0
+    Opacity <- MaterialExpressionMultiply_1
+    Refraction <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionTextureSample_5
+    ExpressionCollection <- MaterialExpressionPixelDepth_0
+    ExpressionCollection <- MaterialExpressionSceneDepth_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionParticleColor_1
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionPixelNormalWS_0
+    ExpressionCollection <- MaterialExpressionSkyAtmosphereLightDirection_0
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionPower_0
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionSubtract_2
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    ConstB = 0.100000
+    A <- MaterialExpressionDotProduct_0
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    A <- MaterialExpressionSaturate_1
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    A <- MaterialExpressionMultiply_8
+    B <- MaterialExpressionSaturate_0
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    A <- MaterialExpressionPixelNormalWS_0
+    B <- MaterialExpressionSkyAtmosphereLightDirection_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    ConstA = 1.020000
+    B <- MaterialExpressionConstant_1
+    Alpha <- MaterialExpressionMultiply_6
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionSubtract_2
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.500000
+    A <- MaterialExpressionMultiply_7
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    A <- MaterialExpressionSubtract_1
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 0.090000
+    A <- MaterialExpressionSubtract_0
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionMultiply_3
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    A <- MaterialExpressionTextureSample_5
+    B <- MaterialExpressionAdd_4
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    A <- MaterialExpressionParticleColor_1
+    B <- MaterialExpressionMultiply_6
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    ConstB = 0.500000
+    A <- MaterialExpressionSaturate_1
+[MaterialExpressionParticleColor_1] MaterialExpressionParticleColor
+[MaterialExpressionPixelDepth_0] MaterialExpressionPixelDepth
+[MaterialExpressionPixelNormalWS_0] MaterialExpressionPixelNormalWS
+[MaterialExpressionPower_0] MaterialExpressionPower
+    ConstExponent = 32.000000
+    Base <- MaterialExpressionAdd_2
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionMultiply_4
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Input <- MaterialExpressionPower_0
+[MaterialExpressionSceneDepth_0] MaterialExpressionSceneDepth
+[MaterialExpressionSkyAtmosphereLightDirection_0] MaterialExpressionSkyAtmosphereLightDirection
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    A <- MaterialExpressionSceneDepth_0
+    B <- MaterialExpressionPixelDepth_0
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    ConstB = 0.500000
+    A <- MaterialExpressionTextureSample_5
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    ConstB = 0.500000
+    A <- MaterialExpressionTextureSample_5
+[MaterialExpressionTextureSample_5] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_Splash_N.T_Splash_N'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    bCollapsed = True
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

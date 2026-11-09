@@ -1,0 +1,102 @@
+﻿# /Game/FluidFlux/Editor/Materials/M_SaveVelocityWaterFoam
+# класс: Material; происхождение: проект; узлов: 18; связей: 36; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:254
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_SaveVelocityWaterFoam] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    bAllowNegativeEmissiveColor = True
+    bUsedWithEditorCompositing = True
+    EditorX = -224
+    bUseTranslucencyVertexFog = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 24223B74A16AFEE17030A8B8EC32DD31
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="DefaultTexture",TextureReference="/Engine/EngineResources/DefaultTexture.DefaultTexture")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 96ABC6B94266795A6A063FB4B0CBFED2
+    EditorOnlyData <- M_SaveVelocityWaterFoamEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_SaveVelocityWaterFoamEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionAppendVector_0
+    OpacityMask <- MaterialExpressionTextureSampleParameter2D_1
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_1
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionDivide_3
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.500000
+    A <- MaterialExpressionDivide_1
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    A <- MaterialExpressionAdd_0
+    B <- MaterialExpressionIf_0
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionTextureSampleParameter2D_1
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    ConstB = 255.000000
+[MaterialExpressionDivide_3] MaterialExpressionDivide
+    A <- MaterialExpressionReroute_2
+    B <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionIf_0] MaterialExpressionIf
+    A <- MaterialExpressionReroute_2
+    B <- MaterialExpressionConstant_0
+    AGreaterThanB <- MaterialExpressionMax_0
+    AEqualsB <- MaterialExpressionConstant_1
+    ALessThanB <- MaterialExpressionConstant_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxStateData.MF_FluxStateData'"
+    FunctionOutputs(0) = (ExpressionOutputId=ACBEB42940621BD974CE71A539FB3368,Output=(OutputName="VelocityOffset"))
+    FunctionOutputs(1) = (ExpressionOutputId=B976BB864F4B250068A3FAA97E44C162,Output=(OutputName="VelocityScale"))
+    FunctionOutputs(2) = (ExpressionOutputId=D268A52B4D9A366ED0D0E6939B59C404,Output=(OutputName="VolumeScale"))
+    FunctionOutputs(3) = (ExpressionOutputId=C99CB4E1448FCAAEAAFCF49A1F0623A1,Output=(OutputName="IsStatic"))
+    Outputs(0) = (OutputName="VelocityOffset")
+    Outputs(1) = (OutputName="VelocityScale")
+    Outputs(2) = (OutputName="VolumeScale")
+    Outputs(3) = (OutputName="IsStatic")
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxStateData.MF_FluxStateData'"
+    FunctionOutputs(0) = (ExpressionOutputId=ACBEB42940621BD974CE71A539FB3368,Output=(OutputName="VelocityOffset"))
+    FunctionOutputs(1) = (ExpressionOutputId=B976BB864F4B250068A3FAA97E44C162,Output=(OutputName="VelocityScale"))
+    FunctionOutputs(2) = (ExpressionOutputId=D268A52B4D9A366ED0D0E6939B59C404,Output=(OutputName="VolumeScale"))
+    FunctionOutputs(3) = (ExpressionOutputId=C99CB4E1448FCAAEAAFCF49A1F0623A1,Output=(OutputName="IsStatic"))
+    Outputs(0) = (OutputName="VelocityOffset")
+    Outputs(1) = (OutputName="VelocityScale")
+    Outputs(2) = (OutputName="VolumeScale")
+    Outputs(3) = (OutputName="IsStatic")
+[MaterialExpressionMax_0] MaterialExpressionMax
+    A <- MaterialExpressionDivide_2
+    B <- MaterialExpressionReroute_0
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Input <- MaterialExpressionDivide_3
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Input <- MaterialExpressionTextureSampleParameter2D_1
+[MaterialExpressionTextureSampleParameter2D_1] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "VelocityHeightFoamMap"
+    ExpressionGUID = 0D6B0DF14E61E0158B0A74BBB2CA99D9
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

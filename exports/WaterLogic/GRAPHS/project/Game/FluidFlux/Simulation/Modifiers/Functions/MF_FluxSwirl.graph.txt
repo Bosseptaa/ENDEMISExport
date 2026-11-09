@@ -1,0 +1,170 @@
+﻿# /Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxSwirl
+# класс: MaterialFunction; происхождение: проект; узлов: 30; связей: 60; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:59
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxSwirl] MaterialFunction
+    StateId = 58C14EE444E0793DE7CE9CBB9C637935
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_FluxSwirlEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxSwirlEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionConstant2Vector_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionDistance_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionOneMinus_1
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionSaturate_2
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionAdd_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionMultiply_4
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    R = 3.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.250000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+[MaterialExpressionConstant2Vector_1] MaterialExpressionConstant2Vector
+    R = 0.800000
+    G = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+[MaterialExpressionConstant2Vector_2] MaterialExpressionConstant2Vector
+    R = 1.000000
+    G = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+[MaterialExpressionDistance_0] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstB = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    A <- MaterialExpressionDistance_0
+    B <- MaterialExpressionFunctionInput_3
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "UV"
+    Id = 515034204F1BE03623E4A7A47031D53A
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Center"
+    Id = C83017B747D088739B064C89BED43969
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_1
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Direction"
+    Id = E0B8A8DB4C8F8B021B7ACCB85C3D52A3
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_2
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Radius"
+    Id = 848C86EB423DFF9B0491009384E7C1EF
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_1
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "Intensity"
+    Id = B363320042C0CB3B09D8108DD074B8A1
+    InputType = FunctionInput_Scalar
+    PreviewValue = (X=3.000000,Y=0.000000,Z=0.000000,W=1.000000)
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_0
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "Suction"
+    Id = 1BA6B6AF4912D1E8EBCBED8F4B30BB11
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    bLastPreviewed = True
+    Id = A074B420496974FCF88419B3C644CE22
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionMultiply_2
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    A <- MaterialExpressionFunctionInput_5
+    B <- MaterialExpressionNormalize_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 3.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    A <- MaterialExpressionOneMinus_1
+    B <- MaterialExpressionFunctionInput_4
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    A <- MaterialExpressionAppendVector_0
+    B <- MaterialExpressionSaturate_2
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    VectorInput <- MaterialExpressionSubtract_0
+[MaterialExpressionOneMinus_1] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    Input <- MaterialExpressionSaturate_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    Input <- MaterialExpressionDivide_0
+[MaterialExpressionSaturate_2] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    Input <- MaterialExpressionMultiply_3
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSwirl'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

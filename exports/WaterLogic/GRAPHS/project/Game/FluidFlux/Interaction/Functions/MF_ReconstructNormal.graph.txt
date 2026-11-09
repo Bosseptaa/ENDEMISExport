@@ -1,0 +1,56 @@
+﻿# /Game/FluidFlux/Interaction/Functions/MF_ReconstructNormal
+# класс: MaterialFunction; происхождение: проект; узлов: 11; связей: 19; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_ReconstructNormal] MaterialFunction
+    StateId = C7B0787F40F6F9A4197BEBAC056FAB64
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_ReconstructNormalEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_ReconstructNormalEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionDotProduct_1
+    ExpressionCollection <- MaterialExpressionOneMinus_2
+    ExpressionCollection <- MaterialExpressionSquareRoot_2
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_ReconstructNormal'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionSquareRoot_2
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    Function = "/Script/Engine.MaterialFunction'MF_ReconstructNormal'"
+[MaterialExpressionDotProduct_1] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_ReconstructNormal'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "XY"
+    Id = FC872FB242A611F1359A959A43D4D18A
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_ReconstructNormal'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Normal"
+    bLastPreviewed = True
+    Id = DE4165A24A8720EC9CF08BAA8539F0AA
+    Function = "/Script/Engine.MaterialFunction'MF_ReconstructNormal'"
+    bCollapsed = True
+    A <- MaterialExpressionAppendVector_1
+[MaterialExpressionOneMinus_2] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_ReconstructNormal'"
+    Input <- MaterialExpressionDotProduct_1
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_ReconstructNormal'"
+    Input <- MaterialExpressionOneMinus_2
+[MaterialExpressionSquareRoot_2] MaterialExpressionSquareRoot
+    Function = "/Script/Engine.MaterialFunction'MF_ReconstructNormal'"
+    Input <- MaterialExpressionSaturate_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

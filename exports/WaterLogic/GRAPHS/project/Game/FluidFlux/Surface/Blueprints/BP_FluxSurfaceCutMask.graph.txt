@@ -1,0 +1,45 @@
+﻿# /Game/FluidFlux/Surface/Blueprints/BP_FluxSurfaceCutMask
+# класс: Blueprint; происхождение: проект; узлов: 8; связей: 11; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:60
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxSurfaceCutMask] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxSurfaceCutMask_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Surface/Blueprints/BP_FluxSurfaceCutMask.BP_FluxSurfaceCutMask:EventGraph",SavedViewOffset=(X=-636.981812,Y=-576.277161),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Surface/Blueprints/BP_FluxSurfaceCutMask.BP_FluxSurfaceCutMask:UserConstructionScript",SavedViewOffset=(X=117.018188,Y=-366.277161),SavedZoomAmount=1.000000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxSurfaceCutMask_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 6BCB4598415DCA5F9680809C715DDFFF
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 21AE8F3441815E81685E0FB1710383F9
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+    Nodes(2) <- K2Node_Message_0
+    Nodes(3) <- K2Node_CallFunction_1
+[K2Node_FunctionEntry_0] K2Node_FunctionEntry (вызов: UserConstructionScript @ /Script/CoreUObject.Class)
+[K2Node_CallFunction_0] K2Node_CallFunction (вызов: GetAllActorsWithInterface @ /Script/CoreUObject.Class)
+[K2Node_Message_0] K2Node_Message (вызов: ApplyMask @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_CallFunction_1] K2Node_CallFunction (вызов: K2_SetActorRotation)
+    вход NewRotation = 0, 0, 0
+    вход bTeleportPhysics = false
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 2A6C40804A65259B3E2081BFA677ABB3
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+
+## СВЯЗИ
+[K2Node_CallFunction_0].OutActors -> [K2Node_Message_0].self
+[K2Node_CallFunction_0].then -> [K2Node_Message_0].execute
+[K2Node_CallFunction_1].then -> [K2Node_CallFunction_0].execute
+[K2Node_FunctionEntry_0].then -> [K2Node_CallFunction_1].execute

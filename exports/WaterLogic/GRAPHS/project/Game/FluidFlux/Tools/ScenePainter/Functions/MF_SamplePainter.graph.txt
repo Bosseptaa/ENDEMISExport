@@ -1,0 +1,81 @@
+﻿# /Game/FluidFlux/Tools/ScenePainter/Functions/MF_SamplePainter
+# класс: MaterialFunction; происхождение: проект; узлов: 14; связей: 25; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SamplePainter] MaterialFunction
+    StateId = CFE7CADE41679A34F65CBD8837252D98
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_SamplePainterEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SamplePainterEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_SamplePainter'"
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SamplePainter'"
+    Input <- MaterialExpressionWorldPosition_0
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_SamplePainter'"
+    Input <- MaterialExpressionVectorParameter_0
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_SamplePainter'"
+    B <- MaterialExpressionAppendVector_1
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = 0A9928A24E614BD3BCA09298DC5CBD1C
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_SamplePainter'"
+    bCollapsed = True
+    Preview <- MaterialExpressionComponentMask_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Color"
+    bLastPreviewed = True
+    Id = 4FA0C0004320F05905AE9C8E0E5CF57E
+    Function = "/Script/Engine.MaterialFunction'MF_SamplePainter'"
+    bCollapsed = True
+    A <- MaterialExpressionTextureSampleParameter2D_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SamplePainter'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionDivide_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SamplePainter'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionComponentMask_1
+[MaterialExpressionTextureSampleParameter2D_0] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "PainterTexture"
+    ExpressionGUID = 560A6FF14560EA340BDCC39C9ABCB56F
+    Group = "FluxPainter"
+    Texture = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+    SamplerType = SAMPLERTYPE_LinearColor
+    Function = "/Script/Engine.MaterialFunction'MF_SamplePainter'"
+    Coordinates <- MaterialExpressionMultiply_0
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=1.000000,A=1.000000)
+    ParameterName = "WorldToPainterUV"
+    ExpressionGUID = 329B18504EC7339490E0F380351F92B7
+    Group = "FluxPainter"
+    Function = "/Script/Engine.MaterialFunction'MF_SamplePainter'"
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_SamplePainter'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

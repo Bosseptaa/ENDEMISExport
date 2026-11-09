@@ -1,0 +1,46 @@
+﻿# /Game/FluidFlux/Simulation/Materials/M_ShallowIntegrateHeight
+# класс: Material; происхождение: проект; узлов: 4; связей: 5; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:37
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_ShallowIntegrateHeight] Material
+    MaterialDomain = MD_PostProcess
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    bAllowNegativeEmissiveColor = True
+    TranslucencyPass = MTP_BeforeDOF
+    bTangentSpaceNormal = False
+    bUseLightmapDirectionality = False
+    EditorX = -208
+    EditorY = 640
+    bCanMaskedBeAssumedOpaque = True
+    bCastRayTracedShadows = False
+    bUseTranslucencyVertexFog = False
+    BlendableOutputAlpha = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 1C87CCE44AFF36AD7F8060972F228590
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ParameterOverviewExpansion = (("-12Global", True),("-12Global FluxData", True))
+    LightingGuid = 9C80C4C4466429E059AF8288E1B0938B
+    EditorOnlyData <- M_ShallowIntegrateHeightEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_ShallowIntegrateHeightEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionMaterialFunctionCall_2
+    Opacity <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_ShallowIntegrateHeight.MF_ShallowIntegrateHeight'"
+    FunctionOutputs(0) = (ExpressionOutputId=31F107AF45E7C8309D68ECB7B45D8477,Output=(OutputName="VelocityHeight"))
+    FunctionOutputs(1) = (ExpressionOutputId=422A62754CB1E5A39819BBBB03EFCBE6,Output=(OutputName="Foam"))
+    Outputs(0) = (OutputName="VelocityHeight")
+    Outputs(1) = (OutputName="Foam")
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

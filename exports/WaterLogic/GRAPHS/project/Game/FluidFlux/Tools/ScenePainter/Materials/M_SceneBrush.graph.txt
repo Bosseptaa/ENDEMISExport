@@ -1,0 +1,74 @@
+﻿# /Game/FluidFlux/Tools/ScenePainter/Materials/M_SceneBrush
+# класс: Material; происхождение: проект; узлов: 9; связей: 15; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_SceneBrush] Material
+    BlendMode = BLEND_AlphaComposite
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    NumCustomizedUVs = 2
+    bTangentSpaceNormal = False
+    bUseLightmapDirectionality = False
+    EditorX = -48
+    EditorY = -1
+    bUseMaterialAttributes = True
+    bCastRayTracedShadows = False
+    bUseTranslucencyVertexFog = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 0229054BA90DF089F8F559BE82775B9A
+    ParameterOverviewExpansion = (("-12Global", True),("-12Global FluxData", True))
+    LightingGuid = B6CF7A3546CE260AB41AFAA80F90DD5F
+    EditorOnlyData <- M_SceneBrushEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_SceneBrushEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    MaterialAttributes <- MaterialExpressionMaterialFunctionCall_13
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_13
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_12
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionConstant_4
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = 0.100000
+[MaterialExpressionMaterialFunctionCall_12] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxModifierShape.MF_FluxModifierShape'"
+    FunctionInputs(0) = (ExpressionInputId=E98AEFAD4C35D46387774D8765E1BEEF,Input=(InputName="Radius"))
+    FunctionInputs(1) = (ExpressionInputId=4C97F9284D4B3696A2E08E8B10AB868E,Input=(OutputIndex=-1,InputName="Hardness"))
+    FunctionInputs(2) = (ExpressionInputId=ED8CD36F4A64933ED29CA98AC4C6B878,Input=(InputName="LocalSpacePosition"))
+    FunctionOutputs(0) = (ExpressionOutputId=F529BCCC47030905858248A567EEFD56,Output=(OutputName="Weight"))
+    Outputs(0) = (OutputName="Weight")
+[MaterialExpressionMaterialFunctionCall_13] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxModifierTransform.MF_FluxModifierTransform'"
+    FunctionInputs(2) = (ExpressionInputId=60146FEC4E29DAB8E4F404877935BD6F,Input=(OutputIndex=-1,InputName="Location"))
+    FunctionInputs(3) = (ExpressionInputId=CF87349744DA18184019258D381CFF3D,Input=(OutputIndex=-1,InputName="Direction"))
+    FunctionInputs(4) = (ExpressionInputId=4D9F9B3C47BC507331968D8241DD1159,Input=(InputName="Scale"))
+    FunctionInputs(5) = (ExpressionInputId=56CCE0AD4975E666CFA75A95C3C5B6F5,Input=(InputName="WorldScale"))
+    FunctionInputs(6) = (ExpressionInputId=968CDB5C4576CCD7C92D79967A038553,Input=(OutputIndex=-1,InputName="WorldLocation"))
+    FunctionInputs(7) = (ExpressionInputId=B98E2FFD40F426210CD63A9071FF5FA4,Input=(InputName="WorldResolution"))
+    FunctionOutputs(0) = (ExpressionOutputId=0109E4184F47F5FE7C7052B2EE3E82AE,Output=(OutputName="Layer"))
+    FunctionOutputs(1) = (ExpressionOutputId=FD9FF1F74EB7DCB8E4198EBD59F06F31,Output=(OutputName="Transform"))
+    FunctionOutputs(2) = (ExpressionOutputId=CE6D991E487107D6FA5E00B6EAAB4FC8,Output=(OutputName="UV0_LocalUV"))
+    FunctionOutputs(3) = (ExpressionOutputId=A37375704EC08614946776B7A7798F4D,Output=(OutputName="UV1_WorldUV"))
+    Outputs(0) = (OutputName="Layer")
+    Outputs(1) = (OutputName="Transform")
+    Outputs(2) = (OutputName="UV0_LocalUV")
+    Outputs(3) = (OutputName="UV1_WorldUV")
+    FunctionInputs(0) <- MaterialExpressionMultiply_0
+    FunctionInputs(1) <- MaterialExpressionMultiply_3
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 8.000000
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+    ParameterName = "BrushColor"
+    ExpressionGUID = 9919863642B5CCF31E67A1A01BD61B3F
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

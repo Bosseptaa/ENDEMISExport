@@ -1,0 +1,113 @@
+﻿# /Game/FluidFlux/Simulation/Materials/M_InvisibleMesh
+# класс: Material; происхождение: проект; узлов: 20; связей: 33; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:45
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_InvisibleMesh] Material
+    BlendMode = BLEND_Masked
+    bUsedWithStaticLighting = True
+    EditorX = -176
+    EditorY = 104
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = CA3ABCA3ACF7F0FD1ED9E886DFB8C57A
+    ReferencedTextureGuids(0) = 307757E1458E615C7D97A39E32219707
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=0.500000,UVChannelIndex=0,TextureName="Good64x64TilingNoiseHighFreq",TextureReference="/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq.Good64x64TilingNoiseHighFreq")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq.Good64x64TilingNoiseHighFreq'"
+    ParameterOverviewExpansion = (("-12Global", True))
+    LightingGuid = 0B19F2994C5C743032DDA1B546C98153
+    EditorOnlyData <- M_InvisibleMeshEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_InvisibleMeshEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    BaseColor <- MaterialExpressionMultiply_1
+    OpacityMask <- MaterialExpressionOneMinus_0
+    WorldPositionOffset <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionComment_0
+    ExpressionCollection <- MaterialExpressionComment_1
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 1184
+    SizeY = 480
+    Text = "Some example material implementation"
+[MaterialExpressionComment_1] MaterialExpressionComment
+    SizeX = 448
+    SizeY = 224
+    Text = "Pin your WPO here. The mesh that uses this material will render only in main pass."
+    CommentColor = (R=0.000000,G=0.504167,B=0.327459,A=1.000000)
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Input <- MaterialExpressionMultiply_3
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.500000,B=1.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=0.500000,G=1.000000,B=1.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionConstant3Vector_1
+    B <- MaterialExpressionConstant3Vector_0
+    Alpha <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxPhantom.MF_FluxPhantom'"
+    FunctionInputs(0) = (ExpressionInputId=C0539CA24323537369B8729D42344871,Input=(OutputIndex=-1,InputName="IsPhantom"))
+    FunctionInputs(1) = (ExpressionInputId=5510FBC7464B9923A9C0CCAB247C52B7,Input=(OutputIndex=-1,InputName="IsDistanceField"))
+    FunctionInputs(2) = (ExpressionInputId=6E44A5544354F5A85BE5D99028941E2B,Input=(InputName="WorldPositionOffset"))
+    FunctionOutputs(0) = (ExpressionOutputId=952F33E84669F008FED6A69447C48B78,Output=(OutputName="VisibleInWorldOnly"))
+    FunctionOutputs(1) = (ExpressionOutputId=F7C65AF84365C80134A16B8BCAA6DCDD,Output=(OutputName="VisibleInCaptureOnly"))
+    FunctionOutputs(2) = (ExpressionOutputId=90AD37CA48E557769A7A6DB4F898F298,Output=(OutputName="IsRenderingCapture"))
+    Outputs(0) = (OutputName="VisibleInWorldOnly")
+    Outputs(1) = (OutputName="VisibleInCaptureOnly")
+    Outputs(2) = (OutputName="IsRenderingCapture")
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.DitherTemporalAA'"
+    FunctionInputs(1) = (ExpressionInputId=E8A932AF4299B0D6C16EDB8B1E912796,Input=(OutputIndex=-1,InputName="Random"))
+    FunctionOutputs(0) = (ExpressionOutputId=9BC32B084665F3D2D59A90AA45CA8A9F,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxPixelDepthOffset.MF_FluxPixelDepthOffset'"
+    FunctionOutputs(0) = (ExpressionOutputId=F7C65AF84365C80134A16B8BCAA6DCDD,Output=(OutputName="Filtered"))
+    Outputs(0) = (OutputName="Filtered")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/ArtTools/RenderToTexture/MaterialFunctions/CheckerPattern.CheckerPattern'"
+    FunctionInputs(1) = (ExpressionInputId=6DDA1BD541E6AB14DFB4E78F850A8945,Input=(OutputIndex=-1,InputName="Tiling"))
+    FunctionOutputs(0) = (ExpressionOutputId=7183E0CD4C9C77E63748A3A80E7DB378,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionComponentMask_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 0.010000
+    A <- MaterialExpressionWorldPosition_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.100000
+    A <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = 20.000000
+    A <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.700000
+    ParameterName = "DitherBlend"
+    ExpressionGUID = 978BA8194A2357C07B9490B0027DD0ED
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,42 @@
+﻿// Источник: /Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFHeightmapSample (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_5 ключ: Code
+// Входы: Tex, TextureSize, UV, Front, Up, Right, Position, WorldPosition, Size, SampleDepth
+// Выход: CMOT_Float1
+// Описание: DisatnceToSurface
+
+int MaxRadius = 32;
+float2 texelsize = 0.5f / TextureSize;	
+float minDist = 10000.0; 
+float maxDist = -10000.0; 
+for(int i = -MaxRadius; i < MaxRadius; i++)
+{
+    for(int j = -MaxRadius; j < MaxRadius; j++)
+    {
+		float2 NewUV = UV + texelsize * float2((float)i, float(j));	
+		float depth = Tex.SampleLevel(TexSampler, NewUV, 0).r;
+		
+		float2 ProjectionUV = (NewUV - 0.5) * Size.xy;
+		float3 SurfacePosition = 
+			Position + 
+			depth * Front + 
+			ProjectionUV.x * Right + 
+			ProjectionUV.y * Up;
+				
+	    float proj = dot(Front, SurfacePosition - WorldPosition);
+		if (SampleDepth > 0.0)
+		{	
+			if (proj > 0.0)
+			   SurfacePosition -= proj * Front;
+		} else
+		{
+			if (proj < 0.0)
+			   SurfacePosition -= proj * Front;		
+		}
+		
+		float distance = length(WorldPosition - SurfacePosition);
+ 		minDist = min(minDist, distance);
+    }
+}
+
+return minDist * sign(SampleDepth);
+

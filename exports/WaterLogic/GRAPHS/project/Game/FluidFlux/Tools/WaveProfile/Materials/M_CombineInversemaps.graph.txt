@@ -1,0 +1,44 @@
+﻿# /Game/FluidFlux/Tools/WaveProfile/Materials/M_CombineInversemaps
+# класс: Material; происхождение: проект; узлов: 6; связей: 9; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:12
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_CombineInversemaps] Material
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    EditorX = -96
+    EditorY = 22
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 6C866A49A61E89D67E1280BB286FF21D
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="DefaultTexture",TextureReference="/Engine/EngineResources/DefaultTexture.DefaultTexture")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    LightingGuid = 840EE3134BA35867BDDA64B5360DD165
+    EditorOnlyData <- M_CombineInversemapsEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_CombineInversemapsEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_0
+    ExpressionCollection <- MaterialExpressionTextureSampleParameter2D_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionTextureSampleParameter2D_0
+    FunctionInputs(1) <- MaterialExpressionTextureSampleParameter2D_0
+    FunctionInputs(2) <- MaterialExpressionTextureSampleParameter2D_1
+[MaterialExpressionTextureSampleParameter2D_0] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "InvMap_10"
+    ExpressionGUID = 5719FB064A4B08B6C57CE68237FC7F20
+[MaterialExpressionTextureSampleParameter2D_1] MaterialExpressionTextureSampleParameter2D
+    ParameterName = "InvMap_05"
+    ExpressionGUID = D37FD977403DB418D0B910998019DF17
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

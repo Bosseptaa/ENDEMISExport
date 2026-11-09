@@ -1,0 +1,609 @@
+﻿# /Game/FluidFlux/Surface/Glass/BP_FluxGlassActor
+# класс: Blueprint; происхождение: проект; узлов: 151; связей: 274; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:499
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxGlassActor] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    HideCategories(0) = "LOD"
+    HideCategories(1) = "Input"
+    HideCategories(2) = "Collision"
+    HideCategories(3) = "Cooking"
+    HideCategories(4) = "Replication"
+    HideCategories(5) = "Rendering"
+    HideCategories(6) = "Actor"
+    HideCategories(7) = "Level Instance"
+    HideCategories(8) = "Networking"
+    HideCategories(9) = "Physics"
+    HideCategories(10) = "HLOD"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxGlassActor_C:SimpleConstructionScript_0'"
+    InheritableComponentHandler = "/Script/Engine.InheritableComponentHandler'BP_FluxGlassActor_C:InheritableComponentHandler'"
+    NewVariables(2) = (VarName="CastShadow",VarGuid=F540078D4B10CAD5FDEA59A115FE67ED,VarType=(PinCategory="bool"),FriendlyName="Cast Shadow",Category=INVTEXT("Glass"),PropertyFlags=5)
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    CategorySorting(3) = "Geometry"
+    CategorySorting(4) = "Glass"
+    CategorySorting(5) = "Spline"
+    CategorySorting(6) = "Replication"
+    CategorySorting(7) = "Rendering"
+    CategorySorting(8) = "Actor"
+    CategorySorting(9) = "Collision"
+    CategorySorting(10) = "HLOD"
+    CategorySorting(11) = "Transformation"
+    CategorySorting(12) = "Game"
+    CategorySorting(13) = "Input"
+    ImplementedInterfaces(0) = (Interface="/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Surface/Blueprints/BPI_FluxSurfaceMeshActor.BPI_FluxSurfaceMeshActor_C'")
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Surface/Glass/BP_FluxGlassActor.BP_FluxGlassActor:UserConstructionScript",SavedViewOffset=(X=403.888855,Y=-370.073242),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Surface/Glass/BP_FluxGlassActor.BP_FluxGlassActor:CreateMaterials",SavedViewOffset=(X=-301.093048,Y=-154.261826),SavedZoomAmount=0.675000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Surface/Glass/BP_FluxGlassActor.BP_FluxGlassActor:ApplyGlassSettingsByTag",SavedViewOffset=(X=-761.257080,Y=1289.818726),SavedZoomAmount=0.675000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Surface/Glass/BP_FluxGlassActor.BP_FluxGlassActor:RefreshSurfaceData",SavedViewOffset=(X=-249.695663,Y=-374.632812),SavedZoomAmount=0.750000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Surface/Glass/BP_FluxGlassActor.BP_FluxGlassActor:GetWorldSurface",SavedViewOffset=(X=-311.355347,Y=-619.556641),SavedZoomAmount=0.375000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Surface/Glass/BP_FluxGlassActor.BP_FluxGlassActor:EventGraph",SavedViewOffset=(X=-278.839844,Y=-447.559113),SavedZoomAmount=0.750000)
+    LastEditedDocuments(6) = (EditedObjectPath="/Game/FluidFlux/Surface/Glass/BP_FluxGlassActor.BP_FluxGlassActor:GlassMeshSettings",SavedViewOffset=(X=503.049744,Y=766.468201),SavedZoomAmount=0.675000)
+    LastEditedDocuments(7) = (EditedObjectPath="/Game/FluidFlux/Surface/Glass/BP_FluxGlassActor.BP_FluxGlassActor:ConstructMeshes",SavedViewOffset=(X=-791.462219,Y=558.142334),SavedZoomAmount=0.875000)
+    ComponentTemplateNameIndex = (("SplineMeshComponent", 2))
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxGlassActor_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = E22544F844A0BC55225518A43FB95CBD
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- RefreshSurfaceData
+    FunctionGraphs(2) <- GlassMeshSettings
+    FunctionGraphs(3) <- CreateMaterials
+    FunctionGraphs(4) <- ApplyGlassSettingsByTag
+    FunctionGraphs(5) <- ConstructMeshes
+    FunctionGraphs(6) <- GenerateDistanceFields
+    FunctionGraphs(7) <- GetWorldSurface
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 4DA4D1854F1A3957F974638858C37F04
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_43
+    Nodes(2) <- K2Node_CallFunction_44
+    Nodes(3) <- K2Node_CallFunction_0
+    Nodes(4) <- K2Node_CallFunction_3
+    Nodes(5) <- K2Node_CallFunction_4
+    Nodes(6) <- K2Node_CallFunction_1
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_CallFunction_43@UserConstructionScript] K2Node_CallFunction
+[K2Node_CallFunction_44] K2Node_CallFunction (вызов: ConstructMeshes)
+[K2Node_CallFunction_0@UserConstructionScript] K2Node_CallFunction
+[K2Node_CallFunction_3@UserConstructionScript] K2Node_CallFunction
+[K2Node_CallFunction_4@UserConstructionScript] K2Node_CallFunction
+[K2Node_CallFunction_1@UserConstructionScript] K2Node_CallFunction
+[RefreshSurfaceData] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 096512974A3DCC31171848859CC2DA6C
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_2
+    Nodes(2) <- K2Node_CallFunction_3
+    Nodes(3) <- K2Node_MacroInstance_0
+    Nodes(4) <- K2Node_VariableGet_1
+    Nodes(5) <- K2Node_CallFunction_0
+    Nodes(6) <- K2Node_CallFunction_4
+    Nodes(7) <- K2Node_IfThenElse_0
+    Nodes(8) <- K2Node_VariableSet_0
+    Nodes(9) <- K2Node_VariableGet_3
+    Nodes(10) <- K2Node_VariableGet_2
+[K2Node_FunctionEntry_0@RefreshSurfaceData] K2Node_FunctionEntry
+[K2Node_CallFunction_2@RefreshSurfaceData] K2Node_CallFunction
+[K2Node_CallFunction_3@RefreshSurfaceData] K2Node_CallFunction
+[K2Node_MacroInstance_0] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.Actor'",ContainerType=Array)
+[K2Node_VariableGet_1@RefreshSurfaceData] K2Node_VariableGet
+[K2Node_CallFunction_0@RefreshSurfaceData] K2Node_CallFunction
+[K2Node_CallFunction_4@RefreshSurfaceData] K2Node_CallFunction
+[K2Node_IfThenElse_0@RefreshSurfaceData] K2Node_IfThenElse
+[K2Node_VariableSet_0@RefreshSurfaceData] K2Node_VariableSet
+[K2Node_VariableGet_3@RefreshSurfaceData] K2Node_VariableGet
+[K2Node_VariableGet_2@RefreshSurfaceData] K2Node_VariableGet
+[CreateMaterials] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D02FF17349395C5331732D87ADF1AF1C
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_3
+    Nodes(2) <- K2Node_VariableSet_2
+    Nodes(3) <- K2Node_VariableGet_3
+    Nodes(4) <- K2Node_VariableGet_7
+    Nodes(5) <- K2Node_CallMaterialParameterCollectionFunction_1
+    Nodes(6) <- K2Node_VariableGet_2
+    Nodes(7) <- K2Node_CallMaterialParameterCollectionFunction_2
+    Nodes(8) <- K2Node_VariableGet_4
+    Nodes(9) <- K2Node_ExecutionSequence_0
+    Nodes(10) <- K2Node_MakeArray_0
+    Nodes(11) <- K2Node_VariableGet_8
+    Nodes(12) <- K2Node_VariableGet_9
+    Nodes(13) <- K2Node_VariableSet_0
+    Nodes(14) <- K2Node_VariableGet_1
+    Nodes(15) <- K2Node_CallArrayFunction_0
+    Nodes(16) <- K2Node_Knot_0
+    Nodes(17) <- K2Node_CallArrayFunction_3
+    Nodes(18) <- K2Node_VariableGet_0
+    Nodes(19) <- K2Node_CallMaterialParameterCollectionFunction_0
+    Nodes(20) <- K2Node_VariableSet_4
+    Nodes(21) <- K2Node_VariableGet_6
+    Nodes(22) <- K2Node_VariableGet_10
+[K2Node_FunctionEntry_0@CreateMaterials] K2Node_FunctionEntry
+[K2Node_VariableSet_3] K2Node_VariableSet (переменная: ScatteringInstance)
+[K2Node_VariableSet_2] K2Node_VariableSet (переменная: AbsorptionInstance)
+[K2Node_VariableGet_3@CreateMaterials] K2Node_VariableGet
+[K2Node_VariableGet_7@CreateMaterials] K2Node_VariableGet
+[K2Node_CallMaterialParameterCollectionFunction_1] K2Node_CallMaterialParameterCollectionFunction (вызов: CreateDynamicMaterialInstance @ /Script/CoreUObject.Class)
+    вход OptionalName = None
+    вход CreationFlags = None
+[K2Node_VariableGet_2@CreateMaterials] K2Node_VariableGet
+[K2Node_CallMaterialParameterCollectionFunction_2] K2Node_CallMaterialParameterCollectionFunction (вызов: CreateDynamicMaterialInstance @ /Script/CoreUObject.Class)
+    вход OptionalName = None
+    вход CreationFlags = None
+[K2Node_VariableGet_4@CreateMaterials] K2Node_VariableGet
+[K2Node_ExecutionSequence_0] K2Node_ExecutionSequence
+[K2Node_MakeArray_0] K2Node_MakeArray
+    NumInputs = 3
+[K2Node_VariableGet_8@CreateMaterials] K2Node_VariableGet
+[K2Node_VariableGet_9@CreateMaterials] K2Node_VariableGet
+[K2Node_VariableSet_0@CreateMaterials] K2Node_VariableSet (переменная: SurfaceInstances)
+[K2Node_VariableGet_1@CreateMaterials] K2Node_VariableGet
+[K2Node_CallArrayFunction_0@CreateMaterials] K2Node_CallArrayFunction
+[K2Node_Knot_0] K2Node_Knot
+[K2Node_CallArrayFunction_3] K2Node_CallArrayFunction (вызов: Array_RemoveItem @ /Script/CoreUObject.Class)
+[K2Node_VariableGet_0@CreateMaterials] K2Node_VariableGet
+[K2Node_CallMaterialParameterCollectionFunction_0] K2Node_CallMaterialParameterCollectionFunction (вызов: CreateDynamicMaterialInstance @ /Script/CoreUObject.Class)
+    вход OptionalName = None
+    вход CreationFlags = None
+[K2Node_VariableSet_4] K2Node_VariableSet (переменная: InsideInstance)
+[K2Node_VariableGet_6@CreateMaterials] K2Node_VariableGet
+[K2Node_VariableGet_10@CreateMaterials] K2Node_VariableGet
+[ApplyGlassSettingsByTag] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 6BBD85B043BA46164CA294AF473076EA
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_Self_2
+    Nodes(2) <- K2Node_CallFunction_30
+    Nodes(3) <- K2Node_VariableGet_47
+    Nodes(4) <- K2Node_VariableGet_48
+    Nodes(5) <- K2Node_CallFunction_31
+    Nodes(6) <- K2Node_VariableGet_49
+    Nodes(7) <- K2Node_VariableGet_50
+    Nodes(8) <- K2Node_Self_3
+    Nodes(9) <- K2Node_CallFunction_36
+    Nodes(10) <- K2Node_VariableGet_33
+    Nodes(11) <- K2Node_CallFunction_16
+    Nodes(12) <- K2Node_VariableGet_1
+    Nodes(13) <- K2Node_PromotableOperator_0
+    Nodes(14) <- K2Node_CallFunction_0
+    Nodes(15) <- K2Node_Self_0
+    Nodes(16) <- K2Node_CallFunction_1
+    Nodes(17) <- K2Node_Self_1
+    Nodes(18) <- K2Node_CallFunction_22
+    Nodes(19) <- K2Node_VariableGet_28
+    Nodes(20) <- K2Node_CallFunction_9
+    Nodes(21) <- K2Node_ExecutionSequence_3
+    Nodes(22) <- K2Node_VariableGet_3
+    Nodes(23) <- K2Node_VariableGet_7
+    Nodes(24) <- K2Node_CallFunction_3
+    Nodes(25) <- K2Node_VariableGet_2
+    Nodes(26) <- K2Node_VariableGet_4
+    Nodes(27) <- K2Node_CallFunction_2
+    Nodes(28) <- K2Node_VariableGet_5
+    Nodes(29) <- K2Node_MacroInstance_3
+    Nodes(30) <- K2Node_MacroInstance_4
+    Nodes(31) <- K2Node_MacroInstance_7
+    Nodes(32) <- K2Node_MacroInstance_2
+    Nodes(33) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@ApplyGlassSettingsByTag] K2Node_FunctionEntry
+[K2Node_Self_2] K2Node_Self
+[K2Node_CallFunction_30] K2Node_CallFunction (вызов: GetComponentsByTag)
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+    вход Tag = GlassVolume
+[K2Node_VariableGet_47] K2Node_VariableGet (переменная: AbsorptionInstance)
+[K2Node_VariableGet_48] K2Node_VariableGet (переменная: ScatteringInstance)
+[K2Node_CallFunction_31] K2Node_CallFunction (вызов: GlassMeshSettings)
+    вход CastShadow = false
+[K2Node_VariableGet_49] K2Node_VariableGet (переменная: EnableMeshCollision)
+[K2Node_VariableGet_50] K2Node_VariableGet (переменная: TranslucencySortPriority)
+[K2Node_Self_3] K2Node_Self
+[K2Node_CallFunction_36] K2Node_CallFunction (вызов: GetComponentsByTag)
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+    вход Tag = GlassOutside
+[K2Node_VariableGet_33] K2Node_VariableGet (переменная: GlassOutsideMaterial)
+[K2Node_CallFunction_16@ApplyGlassSettingsByTag] K2Node_CallFunction
+[K2Node_VariableGet_1@ApplyGlassSettingsByTag] K2Node_VariableGet
+[K2Node_PromotableOperator_0@ApplyGlassSettingsByTag] K2Node_PromotableOperator
+[K2Node_CallFunction_0@ApplyGlassSettingsByTag] K2Node_CallFunction
+[K2Node_Self_0@ApplyGlassSettingsByTag] K2Node_Self
+[K2Node_CallFunction_1@ApplyGlassSettingsByTag] K2Node_CallFunction
+[K2Node_Self_1@ApplyGlassSettingsByTag] K2Node_Self
+[K2Node_CallFunction_22] K2Node_CallFunction (вызов: GetComponentsByTag)
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+    вход Tag = GlassPhantom
+[K2Node_VariableGet_28] K2Node_VariableGet (переменная: SimulationPhantomMaterial)
+[K2Node_CallFunction_9@ApplyGlassSettingsByTag] K2Node_CallFunction
+[K2Node_ExecutionSequence_3] K2Node_ExecutionSequence
+[K2Node_VariableGet_3@ApplyGlassSettingsByTag] K2Node_VariableGet
+[K2Node_VariableGet_7@ApplyGlassSettingsByTag] K2Node_VariableGet
+[K2Node_CallFunction_3@ApplyGlassSettingsByTag] K2Node_CallFunction
+[K2Node_VariableGet_2@ApplyGlassSettingsByTag] K2Node_VariableGet
+[K2Node_VariableGet_4@ApplyGlassSettingsByTag] K2Node_VariableGet (переменная: InverseGeometry)
+[K2Node_CallFunction_2@ApplyGlassSettingsByTag] K2Node_CallFunction
+[K2Node_VariableGet_5@ApplyGlassSettingsByTag] K2Node_VariableGet
+[K2Node_MacroInstance_3] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.MeshComponent'",ContainerType=Array)
+[K2Node_MacroInstance_4] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.MeshComponent'",ContainerType=Array)
+[K2Node_MacroInstance_7] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.MeshComponent'",ContainerType=Array)
+[K2Node_MacroInstance_2] K2Node_MacroInstance
+    ResolvedWildcardType = (PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.MeshComponent'",ContainerType=Array)
+[K2Node_VariableGet_0@ApplyGlassSettingsByTag] K2Node_VariableGet
+[ConstructMeshes] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 50A6D98D4FEDA1BD43FC1E9DE914E456
+    Nodes(0) <- K2Node_FunctionEntry_0
+[K2Node_FunctionEntry_0@ConstructMeshes] K2Node_FunctionEntry
+[GenerateDistanceFields] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 3A4F973446A0314451D677A527A3A79D
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_33
+    Nodes(2) <- K2Node_Message_0
+    Nodes(3) <- K2Node_Self_0
+    Nodes(4) <- K2Node_Self_1
+    Nodes(5) <- K2Node_CallFunction_1
+    Nodes(6) <- K2Node_IfThenElse_0
+[K2Node_FunctionEntry_0@GenerateDistanceFields] K2Node_FunctionEntry
+[K2Node_CallFunction_33] K2Node_CallFunction (вызов: GetAllActorsWithInterface @ /Script/CoreUObject.Class)
+[K2Node_Message_0@GenerateDistanceFields] K2Node_Message
+[K2Node_Self_0@GenerateDistanceFields] K2Node_Self
+[K2Node_Self_1@GenerateDistanceFields] K2Node_Self
+[K2Node_CallFunction_1@GenerateDistanceFields] K2Node_CallFunction
+[K2Node_IfThenElse_0@GenerateDistanceFields] K2Node_IfThenElse
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = F6F0F615496185587F768BB0638C71F9
+    Nodes(0) <- K2Node_Message_0
+    Nodes(1) <- EdGraphNode_Comment_0
+    Nodes(2) <- K2Node_MacroInstance_1
+    Nodes(3) <- K2Node_Event_1
+    Nodes(4) <- K2Node_VariableGet_6
+    Nodes(5) <- K2Node_Event_2
+    Nodes(6) <- K2Node_CallFunction_43
+    Nodes(7) <- K2Node_CallFunction_0
+    Nodes(8) <- K2Node_CallFunction_2
+    Nodes(9) <- K2Node_CallFunction_4
+    Nodes(10) <- K2Node_CallFunction_1
+[K2Node_Message_0@EventGraph] K2Node_Message (вызов: ApplySurfaceMaterialData @ /Script/Engine.BlueprintGeneratedClass)
+    ErrorType = 1
+    вход Domains = true
+    вход Colors = true
+[EdGraphNode_Comment_0] EdGraphNode_Comment
+    CommentColor = (R=1.000000,G=0.209028,B=0.034913,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 864
+    NodeHeight = 320
+    bCommentBubblePinned = False
+    NodeComment = "Event executed by surface actor to apply surface data on this mesh and material."
+[K2Node_MacroInstance_1] K2Node_MacroInstance
+[K2Node_Event_1] K2Node_Event (событие: ApplySurfaceData @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_VariableGet_6@EventGraph] K2Node_VariableGet
+[K2Node_Event_2] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[K2Node_CallFunction_43@EventGraph] K2Node_CallFunction (вызов: ApplyGlassSettingsByTag)
+[K2Node_CallFunction_0@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_2@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_4@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_1@EventGraph] K2Node_CallFunction
+[GlassMeshSettings] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = B1D57816477B8D60E606ECBB502EA2AF
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+    Nodes(2) <- K2Node_CallFunction_3
+    Nodes(3) <- K2Node_CallFunction_1
+    Nodes(4) <- K2Node_CallFunction_16
+    Nodes(5) <- K2Node_IfThenElse_0
+    Nodes(6) <- K2Node_CallFunction_11
+    Nodes(7) <- K2Node_VariableGet_24
+    Nodes(8) <- K2Node_CallFunction_24
+    Nodes(9) <- K2Node_CallFunction_2
+    Nodes(10) <- K2Node_ExecutionSequence_1
+    Nodes(11) <- K2Node_VariableGet_2
+    Nodes(12) <- K2Node_VariableGet_8
+    Nodes(13) <- K2Node_VariableGet_5
+    Nodes(14) <- K2Node_VariableGet_6
+    Nodes(15) <- K2Node_VariableGet_7
+    Nodes(16) <- K2Node_VariableGet_0
+    Nodes(17) <- K2Node_VariableGet_10
+    Nodes(18) <- K2Node_DynamicCast_0
+    Nodes(19) <- K2Node_CallFunction_4
+    Nodes(20) <- K2Node_VariableGet_15
+    Nodes(21) <- K2Node_CallFunction_9
+    Nodes(22) <- K2Node_VariableGet_16
+    Nodes(23) <- K2Node_VariableGet_3
+    Nodes(24) <- K2Node_VariableGet_9
+    Nodes(25) <- K2Node_VariableGet_1
+    Nodes(26) <- K2Node_VariableGet_17
+[K2Node_FunctionEntry_0@GlassMeshSettings] K2Node_FunctionEntry
+[K2Node_CallFunction_0@GlassMeshSettings] K2Node_CallFunction
+[K2Node_CallFunction_3@GlassMeshSettings] K2Node_CallFunction
+[K2Node_CallFunction_1@GlassMeshSettings] K2Node_CallFunction (вызов: SetCollisionObjectType @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    вход ComponentClass = /Script/Engine.ActorComponent
+    вход Tag = GlassInside
+    вход Channel = ECC_WorldStatic
+[K2Node_CallFunction_16@GlassMeshSettings] K2Node_CallFunction (вызов: SetCollisionResponseToChannel @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    вход SortPriority = 0
+    вход EnableCollision = false
+    вход Channel = ECC_Camera
+    вход NewResponse = ECR_Block
+[K2Node_IfThenElse_0@GlassMeshSettings] K2Node_IfThenElse
+[K2Node_CallFunction_11] K2Node_CallFunction (вызов: SetCollisionEnabled @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    вход NewType = NoCollision
+[K2Node_VariableGet_24] K2Node_VariableGet (переменная: SortPriority)
+[K2Node_CallFunction_24] K2Node_CallFunction (вызов: SetMaterial @ /Script/CoreUObject.Class)
+    вход ElementIndex = 0
+[K2Node_CallFunction_2@GlassMeshSettings] K2Node_CallFunction (вызов: SetOverlayMaterial @ /Script/CoreUObject.Class)
+    ErrorType = 3
+    bDefaultsToPureFunc = True
+    ErrorType = 3
+    вход bSetMaterialSlot = false
+    вход SlotIndex = 0
+[K2Node_ExecutionSequence_1] K2Node_ExecutionSequence
+[K2Node_VariableGet_2@GlassMeshSettings] K2Node_VariableGet (переменная: Mesh)
+[K2Node_VariableGet_8@GlassMeshSettings] K2Node_VariableGet (переменная: Mesh)
+[K2Node_VariableGet_5@GlassMeshSettings] K2Node_VariableGet (переменная: Mesh)
+[K2Node_VariableGet_6@GlassMeshSettings] K2Node_VariableGet (переменная: Mesh)
+[K2Node_VariableGet_7@GlassMeshSettings] K2Node_VariableGet (переменная: Mesh)
+    CurrentVariation = ValidatedObject
+[K2Node_VariableGet_0@GlassMeshSettings] K2Node_VariableGet (переменная: Mesh)
+    CurrentVariation = ValidatedObject
+[K2Node_VariableGet_10@GlassMeshSettings] K2Node_VariableGet (переменная: Mesh)
+[K2Node_DynamicCast_0] K2Node_DynamicCast
+    TargetType = "/Script/CoreUObject.Class'/Script/Engine.StaticMeshComponent'"
+    PureState = Impure
+[K2Node_CallFunction_4@GlassMeshSettings] K2Node_CallFunction (вызов: SetReverseCulling @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_15] K2Node_VariableGet (переменная: ReverseCulling)
+[K2Node_CallFunction_9@GlassMeshSettings] K2Node_CallFunction (вызов: SetCastShadow @ /Script/CoreUObject.Class)
+    вход SortPriority = 0
+    вход EnableCollision = false
+    вход CastShadow = false
+[K2Node_VariableGet_16] K2Node_VariableGet (переменная: CastShadow)
+[K2Node_VariableGet_3@GlassMeshSettings] K2Node_VariableGet (переменная: BaseMaterial)
+    CurrentVariation = ValidatedObject
+[K2Node_VariableGet_9@GlassMeshSettings] K2Node_VariableGet (переменная: OverlayMaterial)
+[K2Node_VariableGet_1@GlassMeshSettings] K2Node_VariableGet (переменная: Mesh)
+    CurrentVariation = ValidatedObject
+[K2Node_VariableGet_17] K2Node_VariableGet (переменная: EnableCollision)
+[GetWorldSurface] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 699113CC4B9070476197588D1BB641E6
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_6
+    Nodes(2) <- K2Node_FunctionResult_1
+    Nodes(3) <- K2Node_CallFunction_3
+    Nodes(4) <- K2Node_IfThenElse_2
+    Nodes(5) <- K2Node_CallFunction_0
+    Nodes(6) <- K2Node_CallFunction_5
+    Nodes(7) <- K2Node_GetArrayItem_1
+    Nodes(8) <- K2Node_CallArrayFunction_0
+    Nodes(9) <- K2Node_PromotableOperator_0
+    Nodes(10) <- K2Node_IfThenElse_0
+    Nodes(11) <- K2Node_FunctionResult_2
+[K2Node_FunctionEntry_0@GetWorldSurface] K2Node_FunctionEntry
+[K2Node_CallFunction_6] K2Node_CallFunction (вызов: GetOwner)
+    bDefaultsToPureFunc = True
+[K2Node_FunctionResult_1] K2Node_FunctionResult (вызов: GetWorldSurface)
+    bIsEditable = True
+[K2Node_CallFunction_3@GetWorldSurface] K2Node_CallFunction (вызов: DoesImplementInterface @ /Script/CoreUObject.Class)
+    ErrorType = 3
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+[K2Node_IfThenElse_2] K2Node_IfThenElse
+[K2Node_CallFunction_0@GetWorldSurface] K2Node_CallFunction
+[K2Node_CallFunction_5] K2Node_CallFunction (вызов: GetAllActorsWithInterface @ /Script/CoreUObject.Class)
+[K2Node_GetArrayItem_1] K2Node_GetArrayItem
+    bReturnByRefDesired = False
+    вход Dimension 1 = 0
+[K2Node_CallArrayFunction_0@GetWorldSurface] K2Node_CallArrayFunction (вызов: Array_Length @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_0@GetWorldSurface] K2Node_PromotableOperator (вызов: Greater_IntInt @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    OperationName = "Greater"
+    bDefaultsToPureFunc = True
+    вход B = 1
+[K2Node_IfThenElse_0@GetWorldSurface] K2Node_IfThenElse
+[K2Node_FunctionResult_2] K2Node_FunctionResult (вызов: GetWorldSurface)
+    bIsEditable = True
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 41520216458D65C025E6EB96D34D4ED1
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction
+[ApplySurfaceData] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = CB23619042F6EF439D49A4B9340357A3
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ApplySurfaceData] K2Node_FunctionEntry (вызов: ApplySurfaceData @ /Script/Engine.BlueprintGeneratedClass)
+    MetaData = (Category=NSLOCTEXT("", "1B6C78AE49E482158E1C80B8854FE74F", "Glass"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "F1C016794FFF179B2FDECD8D4ABBF6B7", "Glass"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "DCF41F964219BFC7C6D31398513CC738", "Glass"))
+    LocalVariables(0) = (VarName="SplineIndex",VarGuid=0AAC8A6543B96B961D58EF8EA86FF613,VarType=(PinCategory="int"),FriendlyName="Spline Index",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("", "55367DEC452AAAFE0EAAFC9AB03ABED0", "Glass"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("KismetSchema", "Default", "Default"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "ReceiveBeginPlay"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ApplySurfaceData"
+    bIsIntermediateNode = True
+[K2Node_SetVariableOnPersistentFrame_0] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@ApplySurfaceData] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_FluxGlassActor)
+    ErrorType = 3
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    вход EnableCollision = false
+    вход CastShadow = false
+    вход NewType = QueryAndPhysics
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_CallArrayFunction_0@GetWorldSurface].ReturnValue -> [K2Node_PromotableOperator_0@GetWorldSurface].A#2
+[K2Node_CallFunction_0@ApplySurfaceData].then -> [K2Node_CallFunction_1@GlassMeshSettings].execute#2
+[K2Node_CallFunction_1@GlassMeshSettings].ReturnValue -> [K2Node_IfThenElse_0@GetWorldSurface].Condition#2
+[K2Node_CallFunction_1@GlassMeshSettings].SurfaceAbstract -> [K2Node_CallFunction_2@GlassMeshSettings].SurfaceActor#2
+[K2Node_CallFunction_1@GlassMeshSettings].then -> [K2Node_CallFunction_2@GlassMeshSettings].execute#2
+[K2Node_CallFunction_1@GlassMeshSettings].then#2 -> [K2Node_CallFunction_16@GlassMeshSettings].execute
+[K2Node_CallFunction_24].then -> [K2Node_CallFunction_2@GlassMeshSettings].execute#3
+[K2Node_CallFunction_2@GlassMeshSettings].ReturnValue -> [K2Node_CallFunction_31].ReverseCulling
+[K2Node_CallFunction_2@GlassMeshSettings].then -> [K2Node_CallFunction_43@EventGraph].execute
+[K2Node_CallFunction_2@GlassMeshSettings].then -> [K2Node_CallFunction_44].execute
+[K2Node_CallFunction_30].ReturnValue -> [K2Node_MacroInstance_3].Array
+[K2Node_CallFunction_33].OutActors -> [K2Node_Message_0@EventGraph].self
+[K2Node_CallFunction_33].then -> [K2Node_Message_0@EventGraph].execute
+[K2Node_CallFunction_3@GetWorldSurface].OutActors -> [K2Node_MacroInstance_0].Array
+[K2Node_CallFunction_3@GetWorldSurface].ReturnValue -> [K2Node_IfThenElse_2].Condition
+[K2Node_CallFunction_3@GetWorldSurface].then -> [K2Node_MacroInstance_0].Exec
+[K2Node_CallFunction_3@GetWorldSurface].then#2 -> [K2Node_CallFunction_24].execute
+[K2Node_CallFunction_43@EventGraph].then -> [K2Node_CallFunction_0@ApplySurfaceData].execute
+[K2Node_CallFunction_44].then -> [K2Node_CallFunction_43@EventGraph].execute
+[K2Node_CallFunction_4@GlassMeshSettings].ReturnValue -> [K2Node_IfThenElse_0@GetWorldSurface].Condition
+[K2Node_CallFunction_4@GlassMeshSettings].then -> [K2Node_CallFunction_1@GlassMeshSettings].execute
+[K2Node_CallFunction_4@GlassMeshSettings].then#2 -> [K2Node_CallFunction_9@GlassMeshSettings].execute
+[K2Node_CallFunction_5].OutActors -> [K2Node_CallArrayFunction_0@GetWorldSurface].TargetArray#2
+[K2Node_CallFunction_5].OutActors -> [K2Node_GetArrayItem_1].Array
+[K2Node_CallFunction_5].then -> [K2Node_IfThenElse_0@GetWorldSurface].execute#4
+[K2Node_CallFunction_6].ReturnValue -> [K2Node_CallFunction_3@GetWorldSurface].TestObject
+[K2Node_CallFunction_6].ReturnValue -> [K2Node_FunctionResult_1].SurfaceAbstract
+[K2Node_CallMaterialParameterCollectionFunction_1].ReturnValue -> [K2Node_VariableSet_2].AbsorptionInstance
+[K2Node_CallMaterialParameterCollectionFunction_1].ReturnValue -> [K2Node_VariableSet_3].ScatteringInstance
+[K2Node_CallMaterialParameterCollectionFunction_1].ReturnValue -> [K2Node_VariableSet_4].InsideInstance
+[K2Node_CallMaterialParameterCollectionFunction_1].then -> [K2Node_VariableSet_2].execute
+[K2Node_CallMaterialParameterCollectionFunction_1].then -> [K2Node_VariableSet_3].execute
+[K2Node_CallMaterialParameterCollectionFunction_1].then -> [K2Node_VariableSet_4].execute
+[K2Node_DynamicCast_0].AsStatic Mesh Component -> [K2Node_CallFunction_4@GlassMeshSettings].self
+[K2Node_DynamicCast_0].AsStatic Mesh Component -> [K2Node_CallFunction_9@GlassMeshSettings].self
+[K2Node_DynamicCast_0].then -> [K2Node_CallFunction_4@GlassMeshSettings].execute#2
+[K2Node_Event_1].SurfaceActor -> [K2Node_MacroInstance_1].InputObject
+[K2Node_Event_1].SurfaceActor -> [K2Node_Message_0@EventGraph].self#2
+[K2Node_Event_1].then -> [K2Node_MacroInstance_1].exec
+[K2Node_Event_2].then -> [K2Node_CallFunction_4@GlassMeshSettings].execute
+[K2Node_ExecutionSequence_0].then_0 -> [K2Node_Knot_0].InputPin
+[K2Node_ExecutionSequence_0].then_1 -> [K2Node_VariableGet_3@GlassMeshSettings].execute
+[K2Node_ExecutionSequence_0].then_2 -> [K2Node_VariableGet_7@GlassMeshSettings].execute
+[K2Node_ExecutionSequence_0].then_3 -> [K2Node_VariableGet_0@GlassMeshSettings].execute
+[K2Node_ExecutionSequence_0].then_4 -> [K2Node_VariableSet_0@CreateMaterials].execute#2
+[K2Node_ExecutionSequence_1].then_0 -> [K2Node_CallFunction_3@GetWorldSurface].execute#2
+[K2Node_ExecutionSequence_1].then_1 -> [K2Node_IfThenElse_0@GetWorldSurface].execute#3
+[K2Node_ExecutionSequence_1].then_2 -> [K2Node_DynamicCast_0].execute
+[K2Node_ExecutionSequence_3].then_0 -> [K2Node_MacroInstance_3].Exec
+[K2Node_ExecutionSequence_3].then_1 -> [K2Node_MacroInstance_3].Exec
+[K2Node_ExecutionSequence_3].then_2 -> [K2Node_MacroInstance_3].Exec
+[K2Node_ExecutionSequence_3].then_3 -> [K2Node_MacroInstance_3].Exec
+[K2Node_FunctionEntry_0@ApplySurfaceData].SurfaceActor -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_Event_SurfaceActor
+[K2Node_FunctionEntry_0@ApplySurfaceData].then -> [K2Node_CallFunction_4@GlassMeshSettings].execute
+[K2Node_FunctionEntry_0@ApplySurfaceData].then#2 -> [K2Node_VariableGet_1@GlassMeshSettings].execute
+[K2Node_FunctionEntry_0@ApplySurfaceData].then#3 -> [K2Node_ExecutionSequence_0].execute
+[K2Node_FunctionEntry_0@ApplySurfaceData].then#4 -> [K2Node_ExecutionSequence_3].execute
+[K2Node_FunctionEntry_0@ApplySurfaceData].then#5 -> [K2Node_IfThenElse_0@GetWorldSurface].execute#2
+[K2Node_FunctionEntry_0@ApplySurfaceData].then#6 -> [K2Node_ExecutionSequence_1].execute
+[K2Node_FunctionEntry_0@ApplySurfaceData].then#7 -> [K2Node_IfThenElse_2].execute
+[K2Node_FunctionEntry_0@ApplySurfaceData].then#8 -> [K2Node_CallFunction_0@ApplySurfaceData].execute#2
+[K2Node_FunctionEntry_0@ApplySurfaceData].then#9 -> [K2Node_SetVariableOnPersistentFrame_0].execute
+[K2Node_GetArrayItem_1].Output -> [K2Node_FunctionResult_1].SurfaceAbstract
+[K2Node_IfThenElse_0@GetWorldSurface].else -> [K2Node_VariableSet_0@CreateMaterials].execute
+[K2Node_IfThenElse_0@GetWorldSurface].else#2 -> [K2Node_CallFunction_11].execute
+[K2Node_IfThenElse_0@GetWorldSurface].then -> [K2Node_CallFunction_2@GlassMeshSettings].execute
+[K2Node_IfThenElse_0@GetWorldSurface].then#2 -> [K2Node_CallFunction_33].execute
+[K2Node_IfThenElse_0@GetWorldSurface].then#3 -> [K2Node_CallFunction_11].execute
+[K2Node_IfThenElse_0@GetWorldSurface].then#4 -> [K2Node_FunctionResult_1].execute
+[K2Node_IfThenElse_2].else -> [K2Node_CallFunction_5].execute
+[K2Node_IfThenElse_2].then -> [K2Node_FunctionResult_1].execute
+[K2Node_Knot_0].OutputPin -> [K2Node_CallArrayFunction_0@GetWorldSurface].execute
+[K2Node_MacroInstance_0].Array Element -> [K2Node_CallFunction_2@GlassMeshSettings].SurfaceActor
+[K2Node_MacroInstance_0].LoopBody -> [K2Node_CallFunction_2@GlassMeshSettings].execute
+[K2Node_MacroInstance_1].Is Valid -> [K2Node_Message_0@EventGraph].execute#2
+[K2Node_MacroInstance_3].Array Element -> [K2Node_CallFunction_31].Mesh
+[K2Node_MacroInstance_3].LoopBody -> [K2Node_CallFunction_31].execute
+[K2Node_MakeArray_0].Array -> [K2Node_VariableSet_0@CreateMaterials].SurfaceInstances
+[K2Node_PromotableOperator_0@GetWorldSurface].ReturnValue -> [K2Node_CallFunction_31].SortPriority
+[K2Node_PromotableOperator_0@GetWorldSurface].ReturnValue#2 -> [K2Node_IfThenElse_0@GetWorldSurface].Condition#4
+[K2Node_Self_0@GenerateDistanceFields].self -> [K2Node_Message_0@EventGraph].Source
+[K2Node_Self_1@GenerateDistanceFields].self -> [K2Node_CallFunction_1@GlassMeshSettings].TestObject
+[K2Node_Self_2].self -> [K2Node_CallFunction_30].self
+[K2Node_SetVariableOnPersistentFrame_0].then -> [K2Node_CallFunction_0@ApplySurfaceData].execute#3
+[K2Node_VariableGet_0@GlassMeshSettings].CastShadow -> [K2Node_CallFunction_16@GlassMeshSettings].CastShadow
+[K2Node_VariableGet_0@GlassMeshSettings].then -> [K2Node_CallMaterialParameterCollectionFunction_1].execute
+[K2Node_VariableGet_10@GlassMeshSettings].GlassInsideMaterial -> [K2Node_CallMaterialParameterCollectionFunction_1].Parent
+[K2Node_VariableGet_15].ReverseCulling -> [K2Node_CallFunction_4@GlassMeshSettings].ReverseCulling
+[K2Node_VariableGet_16].CastShadow -> [K2Node_CallFunction_9@GlassMeshSettings].NewCastShadow
+[K2Node_VariableGet_17].EnableCollision -> [K2Node_IfThenElse_0@GetWorldSurface].Condition#3
+[K2Node_VariableGet_1@GlassMeshSettings].Mesh -> [K2Node_CallFunction_11].self
+[K2Node_VariableGet_1@GlassMeshSettings].SurfaceInstances -> [K2Node_CallArrayFunction_0@GetWorldSurface].TargetArray
+[K2Node_VariableGet_1@GlassMeshSettings].else -> [K2Node_CallFunction_3@GetWorldSurface].execute
+[K2Node_VariableGet_1@GlassMeshSettings].then -> [K2Node_IfThenElse_0@GetWorldSurface].execute
+[K2Node_VariableGet_24].SortPriority -> [K2Node_CallFunction_3@GetWorldSurface].NewTranslucentSortPriority
+[K2Node_VariableGet_28].SimulationPhantomMaterial -> [K2Node_CallFunction_31].BaseMaterial
+[K2Node_VariableGet_2@GlassMeshSettings].AbsorptionMaterial -> [K2Node_CallMaterialParameterCollectionFunction_1].Parent
+[K2Node_VariableGet_2@GlassMeshSettings].Mesh -> [K2Node_CallFunction_11].self
+[K2Node_VariableGet_2@GlassMeshSettings].Mesh -> [K2Node_CallFunction_16@GlassMeshSettings].self
+[K2Node_VariableGet_2@GlassMeshSettings].Mesh -> [K2Node_CallFunction_1@GlassMeshSettings].self
+[K2Node_VariableGet_2@GlassMeshSettings].Mesh -> [K2Node_CallFunction_24].self
+[K2Node_VariableGet_2@GlassMeshSettings].Mesh -> [K2Node_CallFunction_2@GlassMeshSettings].self
+[K2Node_VariableGet_2@GlassMeshSettings].Mesh -> [K2Node_CallFunction_3@GetWorldSurface].self
+[K2Node_VariableGet_2@GlassMeshSettings].Mesh -> [K2Node_DynamicCast_0].Object
+[K2Node_VariableGet_2@GlassMeshSettings].Surface Actor -> [K2Node_CallFunction_2@GlassMeshSettings].SurfaceActor
+[K2Node_VariableGet_2@GlassMeshSettings].Surface Actor -> [K2Node_CallFunction_4@GlassMeshSettings].TestObject
+[K2Node_VariableGet_33].GlassOutsideMaterial -> [K2Node_CallFunction_31].BaseMaterial
+[K2Node_VariableGet_3@GlassMeshSettings].BaseMaterial -> [K2Node_CallFunction_24].Material
+[K2Node_VariableGet_3@GlassMeshSettings].else -> [K2Node_CallMaterialParameterCollectionFunction_1].execute
+[K2Node_VariableGet_47].AbsorptionInstance -> [K2Node_CallFunction_31].BaseMaterial
+[K2Node_VariableGet_48].ScatteringInstance -> [K2Node_CallFunction_31].OverlayMaterial
+[K2Node_VariableGet_49].EnableMeshCollision -> [K2Node_CallFunction_31].EnableCollision
+[K2Node_VariableGet_4@ApplyGlassSettingsByTag].InverseGeometry -> [K2Node_CallFunction_2@GlassMeshSettings].A
+[K2Node_VariableGet_4@ApplyGlassSettingsByTag].InverseGeometry -> [K2Node_CallFunction_31].ReverseCulling
+[K2Node_VariableGet_4@ApplyGlassSettingsByTag].ScatteringMaterial -> [K2Node_CallMaterialParameterCollectionFunction_1].Parent
+[K2Node_VariableGet_50].TranslucencySortPriority -> [K2Node_CallFunction_31].SortPriority
+[K2Node_VariableGet_50].TranslucencySortPriority -> [K2Node_PromotableOperator_0@GetWorldSurface].A
+[K2Node_VariableGet_5@GlassMeshSettings].InsideInstance -> [K2Node_CallFunction_31].BaseMaterial
+[K2Node_VariableGet_6@GlassMeshSettings].InsideInstance -> [K2Node_MakeArray_0].[2]
+[K2Node_VariableGet_6@GlassMeshSettings].SurfaceInstances -> [K2Node_Message_0@EventGraph].Materials
+[K2Node_VariableGet_7@GlassMeshSettings].else -> [K2Node_CallMaterialParameterCollectionFunction_1].execute
+[K2Node_VariableGet_8@GlassMeshSettings].AbsorptionInstance -> [K2Node_MakeArray_0].[0]
+[K2Node_VariableGet_9@GlassMeshSettings].OverlayMaterial -> [K2Node_CallFunction_2@GlassMeshSettings].NewOverlayMaterial
+[K2Node_VariableGet_9@GlassMeshSettings].ScatteringInstance -> [K2Node_MakeArray_0].[1]
+[K2Node_VariableSet_0@CreateMaterials].Output_Get -> [K2Node_CallArrayFunction_3].TargetArray
+[K2Node_VariableSet_0@CreateMaterials].then -> [K2Node_CallArrayFunction_3].execute

@@ -1,0 +1,177 @@
+﻿# /Game/FluidFlux/Demo/Environment/Duckweed/M_Duckweed
+# класс: Material; происхождение: проект; узлов: 40; связей: 82; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_Duckweed] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Subsurface
+    ShadingModels = (ShadingModelField=4)
+    OpacityMaskClipValue = 0.070000
+    TwoSided = True
+    bUsedWithNiagaraSprites = True
+    EditorX = 1088
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = C052ECD143E11BCA74A62785970CCB8B
+    ReferencedTextureGuids(0) = 2E067B15497458C7DAD871811B57981D
+    ReferencedTextureGuids(1) = 307757E1458E615C7D97A39E32219707
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Duckweed/T_Duckweed.T_Duckweed'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq.Good64x64TilingNoiseHighFreq'"
+    LightingGuid = DA0B815247DAE0DBD0209D86AA9E2B10
+    EditorOnlyData <- M_DuckweedEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=0.514028,B=0.369402,A=0.600000)
+    ParameterName = "Color"
+    ExpressionGUID = F8F7B4F74D930021C2A2F486E5DB6E02
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Duckweed/T_Duckweed.T_Duckweed'"
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    ConstB = 0.500000
+    A <- MaterialExpressionParticleRandom_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstA = -0.500000
+    ConstB = 0.500000
+    A <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionShadowReplace_1] MaterialExpressionShadowReplace
+    Default <- MaterialExpressionMultiply_4
+    Shadow <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionShadowReplace_0] MaterialExpressionShadowReplace
+    Default <- MaterialExpressionAppendVector_1
+    Shadow <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "Specular"
+    ExpressionGUID = A4368DCF482DC7D8CF7D76926FC84FDB
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.700000
+    ParameterName = "Roughness"
+    ExpressionGUID = 6EEB005F47C023A6A2D6839201833780
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Input <- MaterialExpressionTextureSample_0
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Input <- MaterialExpressionMultiply_2
+[MaterialExpressionParticleRandom_1] MaterialExpressionParticleRandom
+[MaterialExpressionParticleRandom_0] MaterialExpressionParticleRandom
+[MaterialExpressionParticleColor_0] MaterialExpressionParticleColor
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionParticleColor_0
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    VectorInput <- MaterialExpressionAppendVector_0
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    ConstB = 5.000000
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    A <- MaterialExpressionSubtract_1
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    A <- MaterialExpressionOneMinus_0
+    B <- MaterialExpressionOneMinus_0
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    ConstB = -1.000000
+    A <- MaterialExpressionMultiply_6
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    A <- MaterialExpressionReroute_1
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionTextureSample_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.100000
+    A <- MaterialExpressionTextureSample_0
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 0.100000
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.DitherTemporalAA'"
+    FunctionInputs(1) = (ExpressionInputId=E8A932AF4299B0D6C16EDB8B1E912796,Input=(OutputIndex=-1,InputName="Random"))
+    FunctionOutputs(0) = (ExpressionOutputId=9BC32B084665F3D2D59A90AA45CA8A9F,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionConstant_2
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.DitherTemporalAA'"
+    FunctionInputs(1) = (ExpressionInputId=E8A932AF4299B0D6C16EDB8B1E912796,Input=(OutputIndex=-1,InputName="Random"))
+    FunctionOutputs(0) = (ExpressionOutputId=9BC32B084665F3D2D59A90AA45CA8A9F,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionParticleColor_0
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    ConstA = 0.100000
+    ConstB = 0.000000
+    B <- MaterialExpressionMultiply_3
+    Alpha <- MaterialExpressionParticleRandom_1
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 1.000000
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.150000
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    R = 0.050000
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    A <- MaterialExpressionConstant2Vector_0
+    B <- MaterialExpressionAdd_2
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionAdd_1
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    A <- MaterialExpressionMultiply_5
+    B <- MaterialExpressionMultiply_7
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    ConstB = 0.100000
+    A <- MaterialExpressionMultiply_8
+[M_DuckweedEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    BaseColor <- MaterialExpressionReroute_0
+    Specular <- MaterialExpressionMultiply_1
+    Roughness <- MaterialExpressionScalarParameter_0
+    Normal <- MaterialExpressionNormalize_0
+    Opacity <- MaterialExpressionConstant_1
+    OpacityMask <- MaterialExpressionShadowReplace_1
+    WorldPositionOffset <- MaterialExpressionShadowReplace_0
+    SubsurfaceColor <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionShadowReplace_1
+    ExpressionCollection <- MaterialExpressionShadowReplace_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionParticleColor_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionParticleRandom_0
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionParticleRandom_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionMultiply_8
+
+## СВЯЗИ

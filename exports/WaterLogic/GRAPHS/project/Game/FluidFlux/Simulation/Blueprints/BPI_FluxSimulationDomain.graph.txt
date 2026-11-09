@@ -1,0 +1,39 @@
+﻿# /Game/FluidFlux/Simulation/Blueprints/BPI_FluxSimulationDomain
+# класс: Blueprint; происхождение: проект; узлов: 7; связей: 8; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:69
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BPI_FluxSimulationDomain] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/CoreUObject.Interface'"
+    BlueprintType = BPTYPE_Interface
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = ""
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BPI_FluxSimulationDomain_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 2F2CCBCE41E109AE619A769ED654898B
+    FunctionGraphs(0) <- ApplyMaterialParameters
+    FunctionGraphs(1) <- GetCurrentSimulationState
+[ApplyMaterialParameters] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 8C8EAB894AA69AAA57F2EF9B93B873F5
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@ApplyMaterialParameters] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@ApplyMaterialParameters] K2Node_FunctionResult
+[GetCurrentSimulationState] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 7FB49EE74B5AFDB253B98DB2B887A35F
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetCurrentSimulationState] K2Node_FunctionEntry (вызов: GetCurrentSimulationState)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+[K2Node_FunctionResult_0@GetCurrentSimulationState] K2Node_FunctionResult (вызов: GetCurrentSimulationState)
+    bIsEditable = True
+    bIsEditable = True
+
+## СВЯЗИ
+[K2Node_FunctionEntry_0@GetCurrentSimulationState].then -> [K2Node_FunctionResult_0@GetCurrentSimulationState].execute
+[K2Node_FunctionEntry_0@GetCurrentSimulationState].then#2 -> [K2Node_FunctionResult_0@GetCurrentSimulationState].execute#2

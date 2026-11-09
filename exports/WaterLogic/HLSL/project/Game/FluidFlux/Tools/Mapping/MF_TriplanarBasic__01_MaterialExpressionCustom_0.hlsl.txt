@@ -1,0 +1,26 @@
+﻿// Источник: /Game/FluidFlux/Tools/Mapping/MF_TriplanarBasic (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: Weights, XUV, YUV, ZUV
+// Выход: CMOT_Float2
+// Описание: нет
+
+if (Weights.x > Weights.y)
+{
+	if (Weights.z > Weights.x)
+	{
+		return ZUV;
+	} else
+	{
+	 	return XUV;
+	}
+} else
+{
+	if (Weights.z > Weights.y)
+	{
+		return ZUV;
+	} else
+	{
+	 	return YUV;
+	}
+
+}

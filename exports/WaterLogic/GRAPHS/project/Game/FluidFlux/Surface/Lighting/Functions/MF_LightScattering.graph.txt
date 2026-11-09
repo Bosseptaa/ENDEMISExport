@@ -1,0 +1,304 @@
+﻿# /Game/FluidFlux/Surface/Lighting/Functions/MF_LightScattering
+# класс: MaterialFunction; происхождение: проект; узлов: 47; связей: 93; HLSL: 2; причина: папка /Game/FluidFlux; имя/путь, тело:99, HLSL:2
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_LightScattering] MaterialFunction
+    StateId = E64E1D05488A60C2DF6D54B0EE9EE825
+    CombinedInputTypes = 31
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_24
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_9
+    EditorOnlyData <- MF_LightScatteringEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_LightScatteringEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionCustom_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_12
+    ExpressionCollection <- MaterialExpressionConstant3Vector_2
+    ExpressionCollection <- MaterialExpressionConstant3Vector_6
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionFunctionInput_6
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionConstant2Vector_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_24
+    ExpressionCollection <- MaterialExpressionTextureSample_1
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_13
+    ExpressionCollection <- MaterialExpressionScalarParameter_14
+    ExpressionCollection <- MaterialExpressionScalarParameter_15
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_1
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_0
+    ExpressionCollection <- MaterialExpressionMultiply_21
+    ExpressionCollection <- MaterialExpressionTransformPosition_1
+    ExpressionCollection <- MaterialExpressionTransform_3
+    ExpressionCollection <- MaterialExpressionNormalize_2
+    ExpressionCollection <- MaterialExpressionMultiply_24
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_9
+    ExpressionCollection <- MaterialExpressionMultiply_25
+    ExpressionCollection <- MaterialExpressionAdd_5
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionVertexInterpolator_0
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionRound_0
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_7
+    ExpressionCollection <- MaterialExpressionConstant3Vector_3
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    A <- MaterialExpressionFunctionInput_7
+    B <- MaterialExpressionMultiply_25
+[MaterialExpressionAdd_5] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    A <- MaterialExpressionTransformPosition_1
+    B <- MaterialExpressionConstant3Vector_1
+[MaterialExpressionCameraPositionWS_0] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionCameraVectorWS_1] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionConstant2Vector_3] MaterialExpressionConstant2Vector
+    R = 64.000000
+    G = 64.000000
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=50.000000,G=0.000000,B=0.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionConstant3Vector_2] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=0.000000,B=0.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    bCollapsed = True
+[MaterialExpressionConstant3Vector_3] MaterialExpressionConstant3Vector
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionConstant3Vector_6] MaterialExpressionConstant3Vector
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    bCollapsed = True
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: CheapDither
+    OutputType = CMOT_Float1
+    Inputs = 
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    bCollapsed = True
+    Code: HLSL, 2 строк (см. HLSL/)
+[MaterialExpressionCustom_1] MaterialExpressionCustom
+    описание: DirectionalLightScattering
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    Inputs(0) tmin <- MaterialExpressionFunctionInput_0
+    Inputs(1) tmax <- MaterialExpressionFunctionInput_1
+    Inputs(2) raysteps <- MaterialExpressionScalarParameter_12
+    Inputs(3) dir <- MaterialExpressionFunctionInput_2
+    Inputs(4) origin <- MaterialExpressionFunctionInput_3
+    Inputs(5) lightnormal <- MaterialExpressionFunctionInput_4
+    Inputs(6) lightpos <- MaterialExpressionFunctionInput_6
+    Inputs(7) density <- MaterialExpressionScalarParameter_0
+    Inputs(8) scatteringfactor <- MaterialExpressionScalarParameter_13
+    Inputs(9) extincting <- MaterialExpressionScalarParameter_14
+    Inputs(10) directLight <- MaterialExpressionScalarParameter_15
+    Inputs(11) indirectLight <- MaterialExpressionScalarParameter_1
+    Inputs(12) gp <- MaterialExpressionScalarParameter_2
+    Inputs(13) tex_in <- MaterialExpressionFunctionInput_5
+    Inputs(14) dither <- MaterialExpressionCustom_0
+    Inputs(15) lightSize <- MaterialExpressionMultiply_7
+    Code: HLSL, 69 строк (см. HLSL/)
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    ConstB = 100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    A <- MaterialExpressionSubtract_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "near"
+    Id = A84C5C7D4A7604628570C287EBB05E72
+    InputType = FunctionInput_Scalar
+    SortPriority = -4
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "far"
+    Id = E77306C748A19C6477DA5CAEB4AD4CF3
+    InputType = FunctionInput_Scalar
+    SortPriority = -3
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "CameraDirection"
+    Id = 83FB60204197BF0E322E50A8AD9819FB
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    bCollapsed = True
+    Preview <- MaterialExpressionNormalize_2
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "CameraOrigin"
+    Id = 1E1088FB4DAB4149AFD91E8B3058198A
+    bUsePreviewValueAsDefault = True
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    bCollapsed = True
+    Preview <- MaterialExpressionVertexInterpolator_0
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "LightDirection"
+    Id = FE1FB16049D67FDB7E5C1AA092B8B94E
+    bUsePreviewValueAsDefault = True
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant3Vector_2
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "Texture"
+    Id = F0A101374575A4108B615A9B6C20BAF5
+    InputType = FunctionInput_Texture2D
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionFunctionInput_6] MaterialExpressionFunctionInput
+    InputName = "LightOrigin"
+    Id = 0506C5F4490E8B613FC19AA6A9A93C2F
+    bUsePreviewValueAsDefault = True
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant3Vector_6
+[MaterialExpressionFunctionInput_7] MaterialExpressionFunctionInput
+    InputName = "Refraction"
+    Id = 2397BA934B39DF955623C18946C7A732
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    Preview <- MaterialExpressionConstant3Vector_3
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Scattering"
+    bLastPreviewed = True
+    Id = 871AE81243A7B3F618B850910C56AB78
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    bCollapsed = True
+    A <- MaterialExpressionCustom_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/WorldPositionOffset/V2/ObjectScale.ObjectScale'"
+    FunctionOutputs(0) = (ExpressionOutputId=BCB69D5945309E791CA6D5BAAEEB4640,Output=(OutputName="Scale XYZ"))
+    FunctionOutputs(1) = (ExpressionOutputId=E43D3D8744587DD99D067083827BBE09,Output=(OutputName="Scale X"))
+    FunctionOutputs(2) = (ExpressionOutputId=4E14A1064E83C8C589B19D9E7E1DFBA8,Output=(OutputName="Scale Y"))
+    FunctionOutputs(3) = (ExpressionOutputId=F299C8E84CE25E9B3767439611116C65,Output=(OutputName="Scale Z"))
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    Outputs(0) = (OutputName="Scale XYZ")
+    Outputs(1) = (OutputName="Scale X")
+    Outputs(2) = (OutputName="Scale Y")
+    Outputs(3) = (OutputName="Scale Z")
+[MaterialExpressionMaterialFunctionCall_24] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.ScreenAlignedPixelToPixelUVs'"
+    FunctionOutputs(0) = (ExpressionOutputId=0B62F82A4407238F0BA4FE86805D8B50,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionConstant2Vector_3
+[MaterialExpressionMaterialFunctionCall_9] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/WorldPositionOffset/V2/ObjectScale.ObjectScale'"
+    FunctionOutputs(0) = (ExpressionOutputId=BCB69D5945309E791CA6D5BAAEEB4640,Output=(OutputName="Scale XYZ"))
+    FunctionOutputs(1) = (ExpressionOutputId=E43D3D8744587DD99D067083827BBE09,Output=(OutputName="Scale X"))
+    FunctionOutputs(2) = (ExpressionOutputId=4E14A1064E83C8C589B19D9E7E1DFBA8,Output=(OutputName="Scale Y"))
+    FunctionOutputs(3) = (ExpressionOutputId=F299C8E84CE25E9B3767439611116C65,Output=(OutputName="Scale Z"))
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    Outputs(0) = (OutputName="Scale XYZ")
+    Outputs(1) = (OutputName="Scale X")
+    Outputs(2) = (OutputName="Scale Y")
+    Outputs(3) = (OutputName="Scale Z")
+[MaterialExpressionMin_0] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    A <- MaterialExpressionRound_0
+    B <- MaterialExpressionScalarParameter_12
+[MaterialExpressionMultiply_21] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    A <- MaterialExpressionTransform_3
+[MaterialExpressionMultiply_24] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    A <- MaterialExpressionAdd_5
+    B <- MaterialExpressionMaterialFunctionCall_9
+[MaterialExpressionMultiply_25] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    A <- MaterialExpressionMultiply_21
+    B <- MaterialExpressionMaterialFunctionCall_9
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    ConstB = 100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionNormalize_2] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    VectorInput <- MaterialExpressionAdd_0
+[MaterialExpressionRound_0] MaterialExpressionRound
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    Input <- MaterialExpressionDivide_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "FogDensity"
+    ExpressionGUID = 5929FF3C403EDBF46B53E4873D4D89E1
+    Group = "Light"
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.015000
+    ParameterName = "LightIndirect"
+    ExpressionGUID = 0493A88F4CD9CC2A9881DA9745D0AD14
+    Group = "Light"
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionScalarParameter_12] MaterialExpressionScalarParameter
+    DefaultValue = 5.000000
+    ParameterName = "Steps"
+    ExpressionGUID = 14D65FDD4A5DB94F4BBC61B48600361B
+    Group = "Light"
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionScalarParameter_13] MaterialExpressionScalarParameter
+    DefaultValue = 0.010000
+    ParameterName = "FogScattering"
+    ExpressionGUID = 7529FD724A70E98758DF9DAC73C1DC5C
+    Group = "Light"
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionScalarParameter_14] MaterialExpressionScalarParameter
+    DefaultValue = 0.000100
+    ParameterName = "FogExtincting"
+    ExpressionGUID = 4AB5C2F44C0D74B8140C25AB6FE48893
+    Group = "Light"
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionScalarParameter_15] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "LightDirect"
+    ExpressionGUID = C00ED5DF45C805DC7D58439A3F1E0C44
+    Group = "Light"
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 0.650000
+    ParameterName = "LightPhase"
+    ExpressionGUID = AC56C9E04B052F492476BB9356242FBF
+    Group = "Light"
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionTextureSample_1] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq.Good64x64TilingNoiseHighFreq'"
+    SamplerType = SAMPLERTYPE_LinearGrayscale
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    Coordinates <- MaterialExpressionMaterialFunctionCall_24
+[MaterialExpressionTransform_3] MaterialExpressionTransform
+    TransformSourceType = TRANSFORMSOURCE_World
+    TransformType = TRANSFORM_Local
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    Input <- MaterialExpressionCameraVectorWS_1
+[MaterialExpressionTransformPosition_1] MaterialExpressionTransformPosition
+    TransformSourceType = TRANSFORMPOSSOURCE_World
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    Input <- MaterialExpressionCameraPositionWS_0
+[MaterialExpressionVertexInterpolator_0] MaterialExpressionVertexInterpolator
+    Function = "/Script/Engine.MaterialFunction'MF_LightScattering'"
+    Input <- MaterialExpressionMultiply_24
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

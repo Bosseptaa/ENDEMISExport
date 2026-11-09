@@ -1,0 +1,180 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Detail/MF_DistantLayer
+# класс: MaterialFunction; происхождение: проект; узлов: 32; связей: 60; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:73
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_DistantLayer] MaterialFunction
+    StateId = 1C1B84E94BEFB19E0DA5648B69878FB4
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_DistantLayerEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_DistantLayerEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionDistance_1
+    ExpressionCollection <- MaterialExpressionDivide_13
+    ExpressionCollection <- MaterialExpressionSubtract_9
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionIf_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionShaderStageSwitch_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_23
+    ExpressionCollection <- MaterialExpressionVectorParameter_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_10
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionMultiply_4
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    Input <- MaterialExpressionMultiply_1
+[MaterialExpressionCameraPositionWS_0] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+[MaterialExpressionDistance_1] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    A <- MaterialExpressionFunctionInput_2
+    B <- MaterialExpressionCameraPositionWS_0
+[MaterialExpressionDivide_13] MaterialExpressionDivide
+    ConstB = 25000.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    A <- MaterialExpressionConstant_3
+    B <- MaterialExpressionScalarParameter_10
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WaveLength"
+    Id = 4BA1C7C541F8E8956BB91E9136273C48
+    InputType = FunctionInput_Scalar
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "WaveHeight"
+    Id = E700AD8A4D39E409A81FDF958D24F275
+    InputType = FunctionInput_Scalar
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Position"
+    Id = 282508CF432C17E5E49DA9813C2CD0CC
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    bCollapsed = True
+    Preview <- MaterialExpressionWorldPosition_0
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "WaveVelocity"
+    Id = 7A85C3B64054984B16E29E83F18A6EF7
+    InputType = FunctionInput_Vector2
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "WaveLength"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = 5A64182A4CC1A1971184D0AA6F1C9898
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Height"
+    SortPriority = 3
+    bLastPreviewed = True
+    Id = 98D3B9EB490091EFFED335B09EB86131
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "Velocity"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = 008E3D104DCAC21292181199BC0C8F9E
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_3
+[MaterialExpressionIf_0] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    A <- MaterialExpressionSubtract_9
+    B <- MaterialExpressionConstant_2
+    AGreaterThanB <- MaterialExpressionFunctionInput_0
+    ALessThanB <- MaterialExpressionVectorParameter_1
+[MaterialExpressionIf_1] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    A <- MaterialExpressionSubtract_9
+    B <- MaterialExpressionConstant_4
+    AGreaterThanB <- MaterialExpressionFunctionInput_1
+    ALessThanB <- MaterialExpressionShaderStageSwitch_0
+[MaterialExpressionMin_0] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    A <- MaterialExpressionAbs_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstA = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    A <- MaterialExpressionMin_0
+    B <- MaterialExpressionIf_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    A <- MaterialExpressionSubtract_9
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    A <- MaterialExpressionSaturate_0
+    B <- MaterialExpressionFunctionInput_3
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    A <- MaterialExpressionDistance_1
+    B <- MaterialExpressionDivide_13
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    Input <- MaterialExpressionSubtract_9
+[MaterialExpressionScalarParameter_10] MaterialExpressionScalarParameter
+    DefaultValue = 25000.000000
+    ParameterName = "DetailWaveRange"
+    ExpressionGUID = D4A8BB1C4F9D2BCF5C8CD7A2DCF4B197
+    Group = "DetailWave"
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+[MaterialExpressionScalarParameter_23] MaterialExpressionScalarParameter
+    DefaultValue = 300.000000
+    ParameterName = "WaveTextureHeight"
+    ExpressionGUID = 387022494290CFC3DCBA509286A24552
+    Group = "FluxWaveTexture"
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+[MaterialExpressionShaderStageSwitch_0] MaterialExpressionShaderStageSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    PixelShader <- MaterialExpressionScalarParameter_23
+    VertexShader <- MaterialExpressionConstant_1
+[MaterialExpressionSubtract_9] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+    B <- MaterialExpressionMultiply_4
+[MaterialExpressionVectorParameter_1] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=0.000125,A=0.000125)
+    ParameterName = "WaveTextureOffsetScale"
+    ExpressionGUID = 66DF4D1B4CE03E6E784FD2AE600853F8
+    Group = "FluxWaveTexture"
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_DistantLayer'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

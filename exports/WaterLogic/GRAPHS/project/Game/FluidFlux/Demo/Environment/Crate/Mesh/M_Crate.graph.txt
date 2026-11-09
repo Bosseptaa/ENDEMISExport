@@ -1,0 +1,71 @@
+﻿# /Game/FluidFlux/Demo/Environment/Crate/Mesh/M_Crate
+# класс: Material; происхождение: проект; узлов: 13; связей: 25; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_Crate] Material
+    bUsedWithStaticLighting = True
+    EditorX = 256
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 31AF70B54AC1A6FC54B665AF8BAEBEE7
+    ReferencedTextureGuids(0) = CC7EA69D48966910FD7ABDAEDCCF1AFF
+    ReferencedTextureGuids(1) = 4E0FF06745B1449843504E84F0266EC2
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_WoodPlank",TextureReference="/Game/FluidFlux/Demo/Environment/Crate/Mesh/T_WoodPlank.T_WoodPlank")
+    TextureStreamingData(1) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_WoodPlank_N",TextureReference="/Game/FluidFlux/Demo/Environment/Crate/Mesh/T_WoodPlank_N.T_WoodPlank_N")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Crate/Mesh/T_WoodPlank_N.T_WoodPlank_N'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Crate/Mesh/T_WoodPlank.T_WoodPlank'"
+    LightingGuid = F93E359F403D6C251C87F9A63EFDA8FB
+    EditorOnlyData <- M_CrateEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_CrateEditorOnlyData] MaterialEditorOnlyData
+    EmissiveColor = (OutputIndex=4,Mask=1,MaskA=1)
+    BaseColor <- MaterialExpressionMultiply_0
+    Specular <- MaterialExpressionMultiply_1
+    Roughness <- MaterialExpressionAdd_0
+    Normal <- MaterialExpressionTextureSample_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionTextureSample_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionVertexColor_0
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_2
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    A <- MaterialExpressionLinearInterpolate_2
+    B <- MaterialExpressionLinearInterpolate_1
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.500000,G=0.500000,B=0.500000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    ConstA = 0.800000
+    ConstB = 0.150000
+    A <- MaterialExpressionConstant3Vector_0
+    Alpha <- MaterialExpressionVertexColor_0
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    ConstA = 0.300000
+    ConstB = 0.100000
+    Alpha <- MaterialExpressionVertexColor_0
+[MaterialExpressionLinearInterpolate_2] MaterialExpressionLinearInterpolate
+    ConstA = 0.300000
+    ConstB = 0.100000
+    Alpha <- MaterialExpressionTextureSample_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionLinearInterpolate_0
+    B <- MaterialExpressionTextureSample_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.500000
+    A <- MaterialExpressionTextureSample_0
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Crate/Mesh/T_WoodPlank.T_WoodPlank'"
+[MaterialExpressionTextureSample_1] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Crate/Mesh/T_WoodPlank_N.T_WoodPlank_N'"
+    SamplerType = SAMPLERTYPE_Normal
+[MaterialExpressionVertexColor_0] MaterialExpressionVertexColor
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

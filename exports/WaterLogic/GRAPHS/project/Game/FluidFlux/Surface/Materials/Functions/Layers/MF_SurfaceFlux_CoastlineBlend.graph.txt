@@ -1,0 +1,91 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceFlux_CoastlineBlend
+# класс: MaterialFunction; происхождение: проект; узлов: 14; связей: 25; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:124
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SurfaceFlux_CoastlineBlend] MaterialFunction
+    StateId = 027EA50142A2C3A372266F875AE3DCEA
+    CombinedInputTypes = 2048
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_7
+    EditorOnlyData <- MF_SurfaceFlux_CoastlineBlendEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SurfaceFlux_CoastlineBlendEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionSaturate_9
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionAdd_13
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionScalarParameter_5
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_7
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionMax_0
+[MaterialExpressionAdd_13] MaterialExpressionAdd
+    ConstB = -1100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_CoastlineBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_7
+    B <- MaterialExpressionScalarParameter_4
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    Preview = (OutputIndex=3)
+    InputName = "Coastline"
+    Id = E7A4060444204E550E70188F4843610A
+    InputType = FunctionInput_MaterialAttributes
+    bUsePreviewValueAsDefault = True
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_CoastlineBlend'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Blend"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = 287B80A240C3135023690EBC8873A76B
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_CoastlineBlend'"
+    bCollapsed = True
+    A <- MaterialExpressionMax_0
+[MaterialExpressionMaterialFunctionCall_7] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineDataGet.MF_CoastlineDataGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=907637C844D6BC8298C5ACADA0E3B2C3,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=23481DEA4452179C8D2797B33CE20435,Output=(OutputName="Direction"))
+    FunctionOutputs(2) = (ExpressionOutputId=A84715A749104AD14C38248BBFD455E2,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=6346C58A410496BE2C7A25BD8D50DEAA,Output=(OutputName="Mask"))
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_CoastlineBlend'"
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Direction")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMax_0] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_CoastlineBlend'"
+    A <- MaterialExpressionSaturate_9
+    B <- MaterialExpressionReroute_0
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    ConstB = 0.000900
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_CoastlineBlend'"
+    A <- MaterialExpressionAdd_13
+    B <- MaterialExpressionScalarParameter_5
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_CoastlineBlend'"
+    Input <- MaterialExpressionReroute_1
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_CoastlineBlend'"
+    Input <- MaterialExpressionMaterialFunctionCall_7
+[MaterialExpressionSaturate_9] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_CoastlineBlend'"
+    Input <- MaterialExpressionMultiply_4
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    DefaultValue = -900.000000
+    ParameterName = "ShoreWaveWidth"
+    ExpressionGUID = 6C32013D46C797F1A0D9D8846A1FB77C
+    Group = "Coastline"
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_CoastlineBlend'"
+[MaterialExpressionScalarParameter_5] MaterialExpressionScalarParameter
+    DefaultValue = 0.000150
+    ParameterName = "ShoreWaveScale"
+    ExpressionGUID = 9311C2DE4756874DF03B278F0A8D574C
+    Group = "Coastline"
+    Function = "/Script/Engine.MaterialFunction'MF_SurfaceFlux_CoastlineBlend'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

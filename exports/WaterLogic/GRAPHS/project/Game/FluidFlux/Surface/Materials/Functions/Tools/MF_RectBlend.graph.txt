@@ -1,0 +1,135 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Tools/MF_RectBlend
+# класс: MaterialFunction; происхождение: проект; узлов: 23; связей: 47; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:45
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_RectBlend] MaterialFunction
+    StateId = E36F125740B8C7D025744EAEC7ED786D
+    CombinedInputTypes = 10
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_RectBlendEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_RectBlendEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionConstant4Vector_0
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionOneMinus_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionComponentMask_4
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionMin_3
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    Input <- MaterialExpressionSubtract_0
+[MaterialExpressionComponentMask_4] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    Input <- MaterialExpressionFunctionInput_2
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    B = True
+    A = True
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    Input <- MaterialExpressionFunctionInput_2
+[MaterialExpressionConstant4Vector_0] MaterialExpressionConstant4Vector
+    Constant = (R=10.000000,G=10.000000,B=10.000000,A=10.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "UV"
+    Id = 9031F43A441999DB1F64998848810A9C
+    InputType = FunctionInput_Vector2
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Hardness"
+    Id = 21F47E0E4A7E66FF7EB133BF5AE8E9B4
+    InputType = FunctionInput_Vector4
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant4Vector_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Blend"
+    bLastPreviewed = True
+    Id = F5B663E34FCB2F6305CA6295342536C2
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    bCollapsed = True
+    A <- MaterialExpressionSaturate_1
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Inside"
+    bLastPreviewed = True
+    Id = 6F6243284996842313F22AA478138A2A
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    bCollapsed = True
+    A <- MaterialExpressionSubtract_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionAbs_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionMin_3
+[MaterialExpressionMax_0] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMin_0] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMin_3] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    A <- MaterialExpressionMultiply_7
+    B <- MaterialExpressionMultiply_8
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionComponentMask_4
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    A <- MaterialExpressionOneMinus_3
+    B <- MaterialExpressionComponentMask_5
+[MaterialExpressionOneMinus_3] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    Input <- MaterialExpressionMin_0
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    A <- MaterialExpressionFunctionInput_0
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+    A <- MaterialExpressionMax_0
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_RectBlend'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

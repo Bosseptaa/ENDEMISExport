@@ -1,0 +1,10 @@
+﻿// Источник: /Game/FluidFlux/Tools/Mapping/MF_BiplanarTopUV (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: frame, pixel
+// Выход: CMOT_Float1
+// Описание: нет
+
+int f = trunc(frame)%64;
+int2 iP = trunc(pixel);
+pixel = float2(iP) + 5.588238f * float(f);
+return  frac(52.9829189f * frac(0.06711056f*pixel.x + 0.00583715f*pixel.y));

@@ -1,0 +1,26 @@
+﻿// Источник: /Game/FluidFlux/Editor/Materials/M_LoadVelocityToReadBuffer (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: VolumeScale, size, coords, samples, tex_in
+// Выход: CMOT_Float1
+// Описание: Visibility
+
+int blur_samples = int(samples);
+float height = 0.0f;
+
+for (int i = -blur_samples; i < blur_samples; i ++)
+{
+	for (int j = -blur_samples; j < blur_samples; j ++)
+	{	
+		float2 uv = coords + float2(i,j) * size;
+		
+		if (min(uv.x,uv.y) >= 0.0 && max(uv.x,uv.y) <= 1.0)
+		{
+			float4 sample = Texture2DSample(tex_in, tex_inSampler, uv);	
+			float2 velocity = float2(0.0,0.0);
+			float volume = sample.z * VolumeScale;
+	 
+			height = max(height, max(volume, length(velocity) - 0.01f));
+		}		
+	}
+}
+return height;

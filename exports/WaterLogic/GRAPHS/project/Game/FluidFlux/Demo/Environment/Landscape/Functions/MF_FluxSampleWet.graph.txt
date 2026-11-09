@@ -1,0 +1,80 @@
+﻿# /Game/FluidFlux/Demo/Environment/Landscape/Functions/MF_FluxSampleWet
+# класс: MaterialFunction; происхождение: проект; узлов: 15; связей: 26; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxSampleWet] MaterialFunction
+    StateId = 7DF7AEAD40744B82E418F289F00E148A
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FluxSampleWetEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxSampleWetEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_2
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionCollectionParameter_0
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionSaturate_2
+    ExpressionCollection <- MaterialExpressionAdd_2
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+    A <- MaterialExpressionCollectionParameter_0
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionCollectionParameter_0] MaterialExpressionCollectionParameter
+    Collection = "/Script/Engine.MaterialParameterCollection'/Game/FluidFlux/Surface/Materials/MPC_FluidFlux.MPC_FluidFlux'"
+    ParameterName = "CoastlineHeight"
+    ParameterId = 2D2D4C09442C1B0E178BB5BD96E708D7
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+    bCollapsed = True
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+    Input <- MaterialExpressionWorldPosition_2
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Wet"
+    bLastPreviewed = True
+    Id = C94B09D342C20D1C2C78A2AAFAEC9B98
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+    A <- MaterialExpressionSaturate_2
+    B <- MaterialExpressionSaturate_2
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    ConstB = 0.009000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+    A <- MaterialExpressionSubtract_2
+    B <- MaterialExpressionDivide_0
+[MaterialExpressionSaturate_2] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+    Input <- MaterialExpressionMultiply_6
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 190.000000
+    ParameterName = "WetOffset"
+    ExpressionGUID = 0ABC502C40B5459EB26D71AA111CC044
+    Group = "Wet"
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 90.000000
+    ParameterName = "WetBlend"
+    ExpressionGUID = 027575DF426F27432D9686A5DE644346
+    Group = "Wet"
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+    A <- MaterialExpressionComponentMask_2
+    B <- MaterialExpressionAdd_2
+[MaterialExpressionWorldPosition_2] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_FluxSampleWet'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

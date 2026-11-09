@@ -1,0 +1,179 @@
+﻿# /Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxModifierMode
+# класс: MaterialFunction; происхождение: проект; узлов: 29; связей: 59; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:62
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxModifierMode] MaterialFunction
+    StateId = 703CC6104D6F7C2163E1CF911EFB713D
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_FluxModifierModeEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxModifierModeEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionVectorParameter_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_2
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionMin_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionComment_0
+    ExpressionCollection <- MaterialExpressionComment_1
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    A <- MaterialExpressionVectorParameter_2
+    B <- MaterialExpressionReroute_0
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    A <- MaterialExpressionVectorParameter_2
+    B <- MaterialExpressionScalarParameter_4
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 576
+    SizeY = 352
+    Text = "Blend mode"
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+[MaterialExpressionComment_1] MaterialExpressionComment
+    SizeX = 1200
+    SizeY = 416
+    Text = "Adjust"
+    CommentColor = (R=0.000000,G=0.059710,B=0.062500,A=1.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Weight"
+    Id = 9156F7384701C0EB7185D2BC1A4AD1A8
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "WorldUV"
+    Id = 0044DE2E47948EC757A679BA8103A13C
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_2
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Color"
+    bLastPreviewed = True
+    Id = 1C4081CF4A34890C6497FF915408AA1B
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Alpha"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = DF08C12D41B87192DF5B058311DE5225
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_3
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionMax_0
+    Alpha <- MaterialExpressionSaturate_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3'"
+    FunctionOutputs(0) = (ExpressionOutputId=0DD6F9954C067C3E5DDBBBA0D6910DD2,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionVectorParameter_2
+    FunctionInputs(1) <- MaterialExpressionVectorParameter_2
+    FunctionInputs(2) <- MaterialExpressionLinearInterpolate_0
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionInputs(2) = (ExpressionInputId=AEF4F886411D3426BD953487D66B2E9C,Input=(InputName="Offset"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMax_0] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    A <- MaterialExpressionSubtract_3
+[MaterialExpressionMin_1] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    A <- MaterialExpressionAdd_0
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -100.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionSaturate_0
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    Input <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    Input <- MaterialExpressionVectorParameter_0
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    Input <- MaterialExpressionSubtract_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    ParameterName = "ZOffset"
+    ExpressionGUID = A9971E494BBB9C90937DA48C2DC8C7BA
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    ParameterName = "ZOffset"
+    ExpressionGUID = DD4D8E86470F106C37C508B097A49340
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    A <- MaterialExpressionVectorParameter_0
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    A <- MaterialExpressionMin_1
+    B <- MaterialExpressionReroute_0
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+    A <- MaterialExpressionAdd_1
+    B <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionTextureCoordinate_2] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=1.000000,A=1.000000)
+    ParameterName = "VelocityFlux"
+    ExpressionGUID = EF2C09E447D2BD8CA7012183F232B8B5
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+[MaterialExpressionVectorParameter_2] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.000000,G=0.000000,B=1.000000,A=1.000000)
+    ParameterName = "VelocityFlux"
+    ExpressionGUID = 7722A6F945771F781D6C2FA9BAF1E159
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierMode'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

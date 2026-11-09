@@ -1,0 +1,118 @@
+Begin Object Class=/Script/Engine.MaterialFunction Name="MF_ViewCamera" ExportPath="/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera'"
+   Begin Object Class=/Script/Engine.MaterialFunctionEditorOnlyData Name="MF_ViewCameraEditorOnlyData" ExportPath="/Script/Engine.MaterialFunctionEditorOnlyData'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MF_ViewCameraEditorOnlyData'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCustom Name="MaterialExpressionCustom_0" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionCustom_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCustom Name="MaterialExpressionCustom_11" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionCustom_11'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCustom Name="MaterialExpressionCustom_4" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionCustom_4'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCustom Name="MaterialExpressionCustom_5" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionCustom_5'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionOutput Name="MaterialExpressionFunctionOutput_13" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionFunctionOutput_13'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionOutput Name="MaterialExpressionFunctionOutput_3" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionFunctionOutput_3'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionOutput Name="MaterialExpressionFunctionOutput_4" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionFunctionOutput_4'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionOutput Name="MaterialExpressionFunctionOutput_5" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionFunctionOutput_5'"
+   End Object
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0" ExportPath="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:SceneThumbnailInfoWithPrimitive_0'"
+   End Object
+   Begin Object Name="MF_ViewCameraEditorOnlyData" ExportPath="/Script/Engine.MaterialFunctionEditorOnlyData'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MF_ViewCameraEditorOnlyData'"
+      ExpressionCollection=(Expressions=("/Script/Engine.MaterialExpressionCustom'MF_ViewCamera:MaterialExpressionCustom_0'","/Script/Engine.MaterialExpressionFunctionOutput'MF_ViewCamera:MaterialExpressionFunctionOutput_3'","/Script/Engine.MaterialExpressionCustom'MF_ViewCamera:MaterialExpressionCustom_4'","/Script/Engine.MaterialExpressionFunctionOutput'MF_ViewCamera:MaterialExpressionFunctionOutput_4'","/Script/Engine.MaterialExpressionCustom'MF_ViewCamera:MaterialExpressionCustom_11'","/Script/Engine.MaterialExpressionFunctionOutput'MF_ViewCamera:MaterialExpressionFunctionOutput_13'","/Script/Engine.MaterialExpressionCustom'MF_ViewCamera:MaterialExpressionCustom_5'","/Script/Engine.MaterialExpressionFunctionOutput'MF_ViewCamera:MaterialExpressionFunctionOutput_5'"))
+   End Object
+   Begin Object Name="MaterialExpressionCustom_0" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionCustom_0'"
+      Code="return (ResolvedView.ViewToClip._m33 < 1.0f);"
+      OutputType=CMOT_Float1
+      Description="IsPerspective"
+      Inputs=
+      MaterialExpressionEditorX=-176
+      MaterialExpressionGuid=1D88DF4140979EDD3C293F905BC61821
+      Function="/Script/Engine.MaterialFunction'MF_ViewCamera'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionCustom_11" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionCustom_11'"
+      Code="return (ResolvedView.ViewToClip._m33 >= 1.0f);"
+      OutputType=CMOT_Float1
+      Description="IsOrthographic"
+      Inputs=
+      MaterialExpressionEditorX=-176
+      MaterialExpressionEditorY=64
+      MaterialExpressionGuid=1D88DF4140979EDD3C293F905BC61821
+      Function="/Script/Engine.MaterialFunction'MF_ViewCamera'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionCustom_4" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionCustom_4'"
+      Code="ResolvedView.BufferSizeAndInvSize"
+      OutputType=CMOT_Float4
+      Description="BufferSizeAndInvSize"
+      Inputs=
+      MaterialExpressionEditorX=-224
+      MaterialExpressionEditorY=128
+      MaterialExpressionGuid=1D88DF4140979EDD3C293F905BC61821
+      Function="/Script/Engine.MaterialFunction'MF_ViewCamera'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionCustom_5" ExportPath="/Script/Engine.MaterialExpressionCustom'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionCustom_5'"
+      Code="return (ResolvedView.ViewToTranslatedWorld._m22 < 1.0f);"
+      OutputType=CMOT_Float1
+      Description="IsNotLookingUp"
+      Inputs=
+      MaterialExpressionEditorX=-192
+      MaterialExpressionEditorY=192
+      MaterialExpressionGuid=1D88DF4140979EDD3C293F905BC61821
+      Function="/Script/Engine.MaterialFunction'MF_ViewCamera'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionOutput_13" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionFunctionOutput_13'"
+      OutputName="IsOrthographic"
+      SortPriority=3
+      A=(Expression="/Script/Engine.MaterialExpressionCustom'MF_ViewCamera:MaterialExpressionCustom_11'")
+      bLastPreviewed=True
+      Id=0E549557458338C202643DABCF98CF1B
+      MaterialExpressionEditorY=64
+      MaterialExpressionGuid=820A562641969B9414551CA9CCC98886
+      Function="/Script/Engine.MaterialFunction'MF_ViewCamera'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionOutput_3" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionFunctionOutput_3'"
+      OutputName="IsPerspective"
+      SortPriority=3
+      A=(Expression="/Script/Engine.MaterialExpressionCustom'MF_ViewCamera:MaterialExpressionCustom_0'")
+      bLastPreviewed=True
+      Id=C576FEC54F1A8C7E8B6360A0C44E67C4
+      MaterialExpressionGuid=820A562641969B9414551CA9CCC98886
+      Function="/Script/Engine.MaterialFunction'MF_ViewCamera'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionOutput_4" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionFunctionOutput_4'"
+      OutputName="BufferSizeAndInvSize"
+      SortPriority=4
+      A=(Expression="/Script/Engine.MaterialExpressionCustom'MF_ViewCamera:MaterialExpressionCustom_4'")
+      bLastPreviewed=True
+      Id=B708D152404459EF25025D9AF649751A
+      MaterialExpressionEditorY=128
+      MaterialExpressionGuid=820A562641969B9414551CA9CCC98886
+      Function="/Script/Engine.MaterialFunction'MF_ViewCamera'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionFunctionOutput_5" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:MaterialExpressionFunctionOutput_5'"
+      OutputName="IsLookingUp"
+      SortPriority=4
+      A=(Expression="/Script/Engine.MaterialExpressionCustom'MF_ViewCamera:MaterialExpressionCustom_5'")
+      bLastPreviewed=True
+      Id=B823D653411270F69C8BA2B3C0E3EB17
+      MaterialExpressionEditorY=192
+      MaterialExpressionGuid=820A562641969B9414551CA9CCC98886
+      Function="/Script/Engine.MaterialFunction'MF_ViewCamera'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0" ExportPath="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'/Game/FluidFlux/Simulation/Functions/MF_ViewCamera.MF_ViewCamera:SceneThumbnailInfoWithPrimitive_0'"
+   End Object
+   bExposeToLibrary=True
+   EditorOnlyData="/Script/Engine.MaterialFunctionEditorOnlyData'MF_ViewCameraEditorOnlyData'"
+   StateId=B4B3EA2F41D68B31512E7984824B84C4
+   CombinedOutputTypes=15
+   ThumbnailInfo="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'SceneThumbnailInfoWithPrimitive_0'"
+End Object

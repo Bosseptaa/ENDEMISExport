@@ -1,0 +1,189 @@
+﻿# /Game/FluidFlux/Simulation/Modifiers/Materials/M_FluxModifierForce
+# класс: Material; происхождение: проект; узлов: 26; связей: 49; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:64
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_FluxModifierForce] Material
+    MaterialDomain = MD_UI
+    BlendMode = BLEND_Additive
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    bAllowNegativeEmissiveColor = True
+    NumCustomizedUVs = 2
+    EditorX = 2992
+    EditorY = 176
+    bCanMaskedBeAssumedOpaque = True
+    bUseTranslucencyVertexFog = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 54DCE630ACD871061CE0DA88E8C6D35F
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ParameterOverviewExpansion = (("-12Global", True),("-12Global FluxData", True))
+    LightingGuid = 25216F3D4FC4D4E6E74FF197525C9435
+    EditorOnlyData <- M_FluxModifierForceEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_FluxModifierForceEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="None")
+    ParameterGroupData(1) = (GroupName="None")
+    ParameterGroupData(2) = (GroupName="None")
+    ParameterGroupData(3) = (GroupName="None")
+    EmissiveColor <- MaterialExpressionAppendVector_2
+    Opacity <- MaterialExpressionMaterialFunctionCall_0
+    WorldPositionOffset <- MaterialExpressionMaterialFunctionCall_13
+    CustomizedUVs(0) <- MaterialExpressionMaterialFunctionCall_13
+    CustomizedUVs(1) <- MaterialExpressionMaterialFunctionCall_13
+    ExpressionCollection <- MaterialExpressionAppendVector_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_13
+    ExpressionCollection <- MaterialExpressionConstant_13
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_18
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_1
+    ExpressionCollection <- MaterialExpressionConstant2Vector_3
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_10
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_12
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionAppendVector_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionComment_0
+    ExpressionCollection <- MaterialExpressionComment_1
+    ExpressionCollection <- MaterialExpressionComment_2
+    ExpressionCollection <- MaterialExpressionComment_3
+[MaterialExpressionAppendVector_1] MaterialExpressionAppendVector
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionComponentMask_1
+[MaterialExpressionAppendVector_2] MaterialExpressionAppendVector
+    A <- MaterialExpressionAppendVector_1
+    B <- MaterialExpressionConstant_13
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 944
+    SizeY = 448
+    Text = "Transform modifier in canvas space.\r\nUV0 contains modifier space location.\r\nUV1 contains simulation space texture coordinates."
+    CommentColor = (R=0.145292,G=0.283333,B=0.272046,A=1.000000)
+[MaterialExpressionComment_1] MaterialExpressionComment
+    SizeX = 880
+    SizeY = 272
+    Text = "Calculate velocity on left ant bottom border of the cell. The MF_FluxForceVelocity is the function that should be customized by your modififer."
+    CommentColor = (R=1.000000,G=0.480236,B=0.161534,A=1.000000)
+[MaterialExpressionComment_2] MaterialExpressionComment
+    SizeX = 944
+    SizeY = 464
+    Text = "Calculate modifier weight based on distance from fluid surface."
+    CommentColor = (R=0.303992,G=0.101544,B=0.470833,A=1.000000)
+[MaterialExpressionComment_3] MaterialExpressionComment
+    SizeX = 560
+    SizeY = 384
+    Text = "This modififer is additive adding or removing the velocity. You can create custom modifiers the same way. Generate velocity by functions and addd itt to curent state of scene."
+    CommentColor = (R=0.020779,G=0.188723,B=0.816667,A=1.000000)
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    Input <- MaterialExpressionMaterialFunctionCall_10
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    G = True
+    Input <- MaterialExpressionMaterialFunctionCall_12
+[MaterialExpressionConstant_13] MaterialExpressionConstant
+[MaterialExpressionConstant2Vector_3] MaterialExpressionConstant2Vector
+    R = 1.000000
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxFalloffZ.MF_FluxFalloffZ'"
+    FunctionOutputs(0) = (ExpressionOutputId=E50DF5FA4C20ED8BCAF52B9D221622C7,Output=(OutputName="Weighht"))
+    Outputs(0) = (OutputName="Weighht")
+    FunctionInputs(0) <- MaterialExpressionScalarParameter_0
+    FunctionInputs(1) <- MaterialExpressionVectorParameter_0
+    FunctionInputs(2) <- MaterialExpressionSubtract_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxVelocitySeparation.MF_FluxVelocitySeparation'"
+    FunctionOutputs(0) = (ExpressionOutputId=84EEC7E54D858270193896AC448A21F5,Output=(OutputName="LeftPosition"))
+    FunctionOutputs(1) = (ExpressionOutputId=2B010CFA44DA83FA541E80A439C1104C,Output=(OutputName="BottomPosition"))
+    Outputs(0) = (OutputName="LeftPosition")
+    Outputs(1) = (OutputName="BottomPosition")
+[MaterialExpressionMaterialFunctionCall_10] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxForceVelocity.MF_FluxForceVelocity'"
+    FunctionOutputs(0) = (ExpressionOutputId=E50DF5FA4C20ED8BCAF52B9D221622C7,Output=(OutputName="Velocity"))
+    Outputs(0) = (OutputName="Velocity")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionMaterialFunctionCall_12] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxForceVelocity.MF_FluxForceVelocity'"
+    FunctionOutputs(0) = (ExpressionOutputId=E50DF5FA4C20ED8BCAF52B9D221622C7,Output=(OutputName="Velocity"))
+    Outputs(0) = (OutputName="Velocity")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionMaterialFunctionCall_13] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxModifierTransform.MF_FluxModifierTransform'"
+    FunctionInputs(0) = (ExpressionInputId=A82667AF4FC9C66B5A148782968D8ED2,Input=(OutputIndex=-1,InputName="Color"))
+    FunctionInputs(1) = (ExpressionInputId=C8017D6847720097063331B6A9823C4D,Input=(OutputIndex=-1,InputName="Alpha"))
+    FunctionInputs(5) = (ExpressionInputId=56CCE0AD4975E666CFA75A95C3C5B6F5,Input=(OutputIndex=-1,InputName="WorldScale"))
+    FunctionInputs(6) = (ExpressionInputId=968CDB5C4576CCD7C92D79967A038553,Input=(OutputIndex=-1,InputName="WorldLocation"))
+    FunctionInputs(7) = (ExpressionInputId=B98E2FFD40F426210CD63A9071FF5FA4,Input=(OutputIndex=4,InputName="WorldResolution"))
+    FunctionOutputs(0) = (ExpressionOutputId=0109E4184F47F5FE7C7052B2EE3E82AE,Output=(OutputName="Layer"))
+    FunctionOutputs(1) = (ExpressionOutputId=FD9FF1F74EB7DCB8E4198EBD59F06F31,Output=(OutputName="Transform"))
+    FunctionOutputs(2) = (ExpressionOutputId=CE6D991E487107D6FA5E00B6EAAB4FC8,Output=(OutputName="UV0_LocalUV"))
+    FunctionOutputs(3) = (ExpressionOutputId=A37375704EC08614946776B7A7798F4D,Output=(OutputName="UV1_WorldUV"))
+    Outputs(0) = (OutputName="Layer")
+    Outputs(1) = (OutputName="Transform")
+    Outputs(2) = (OutputName="UV0_LocalUV")
+    Outputs(3) = (OutputName="UV1_WorldUV")
+    FunctionInputs(2) <- MaterialExpressionVectorParameter_1
+    FunctionInputs(3) <- MaterialExpressionConstant2Vector_3
+    FunctionInputs(4) <- MaterialExpressionMultiply_2
+[MaterialExpressionMaterialFunctionCall_18] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSample.MF_FluxSample'"
+    FunctionInputs(1) = (ExpressionInputId=3FBF1A6D4BE07AFDC4411CB2F352D18C,Input=(OutputIndex=-1,InputName="CleanVelocity"))
+    FunctionInputs(2) = (ExpressionInputId=AEF4F886411D3426BD953487D66B2E9C,Input=(InputName="Offset"))
+    FunctionOutputs(0) = (ExpressionOutputId=D90F58DB4F4451A34AC160B8B26F86D5,Output=(OutputName="Velocity"))
+    FunctionOutputs(1) = (ExpressionOutputId=81742777482038B54F48C8AED4E57FA5,Output=(OutputName="GroundHeight"))
+    FunctionOutputs(2) = (ExpressionOutputId=601FB7714E76B6ADDBEC8F8E9C6215E2,Output=(OutputName="GroundHeightLocal"))
+    FunctionOutputs(3) = (ExpressionOutputId=0AB48EAD4057339630303A9FDED7A5B8,Output=(OutputName="Volume"))
+    FunctionOutputs(4) = (ExpressionOutputId=EF7C8A954CC43B70E33FE6B8BA055503,Output=(OutputName="Foam"))
+    FunctionOutputs(5) = (ExpressionOutputId=EBEA69B244DC0997BDF955A760294541,Output=(OutputName="SurfaceHeight"))
+    Outputs(0) = (OutputName="Velocity")
+    Outputs(1) = (OutputName="GroundHeight")
+    Outputs(2) = (OutputName="GroundHeightLocal")
+    Outputs(3) = (OutputName="Volume")
+    Outputs(4) = (OutputName="Foam")
+    Outputs(5) = (OutputName="SurfaceHeight")
+    FunctionInputs(0) <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 123.000000
+    A <- MaterialExpressionVectorParameter_1
+    B <- MaterialExpressionScalarParameter_1
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 90.000000
+    ParameterName = "HalfHeight"
+    ExpressionGUID = 2D7527804BB55882591C98AACAAFCACE
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 4.000000
+    ParameterName = "RadiusCustomScale"
+    ExpressionGUID = D3963A4C41812AE5A75A89902AD27FD8
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionMaterialFunctionCall_18
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    CoordinateIndex = 1
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.500000,G=0.500000,B=1.000000,A=0.200000)
+    ParameterName = "LocationRadius"
+    ExpressionGUID = 7D1382A7447B087E8DE0C2BA6582DFAF
+    Outputs(0) = (OutputName="")
+    Outputs(1) = (OutputName="Location.X")
+    Outputs(2) = (OutputName="Location.Y")
+    Outputs(3) = (OutputName="Location.Z")
+    Outputs(4) = (OutputName="Radius")
+[MaterialExpressionVectorParameter_1] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.500000,G=0.500000,B=1.000000,A=0.200000)
+    ParameterName = "LocationRadius"
+    ExpressionGUID = C0B6F88D4B8D2CEA49B38CADFF5ECAC4
+    Outputs(0) = (OutputName="")
+    Outputs(1) = (OutputName="Location.X")
+    Outputs(2) = (OutputName="Location.Y")
+    Outputs(3) = (OutputName="Location.Z")
+    Outputs(4) = (OutputName="Radius")
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,107 @@
+﻿# /Game/FluidFlux/Surface/Templates/Debug/Materials/M_FluxSurfaceOverWireframe
+# класс: Material; происхождение: проект; узлов: 16; связей: 28; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:172
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_FluxSurfaceOverWireframe] Material
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    TranslucencyLightingMode = TLM_SurfacePerPixelLighting
+    bTangentSpaceNormal = False
+    bUsedWithNiagaraMeshParticles = True
+    bAutomaticallySetUsageInEditor = False
+    bUseLightmapDirectionality = False
+    Wireframe = True
+    EditorX = -896
+    EditorY = 938
+    bUseMaterialAttributes = True
+    bCastRayTracedShadows = False
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 72C6F1FEA8DF4E48AF5D09824D5BD803
+    ReferencedTextureGuids(0) = 61EF94AD4078B928B171198909D4D7B6
+    ReferencedTextureGuids(1) = 00000000000000000000000000000000
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DefaultBlack.T_DefaultBlack'"
+    ReferencedDefaultTextures(3) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_SmoothNoise.T_SmoothNoise'"
+    ReferencedDefaultTextures(4) = "/Script/Engine.TextureRenderTarget2D'/Game/1_Water/Textures/RT_DefaultWhite16.RT_DefaultWhite16'"
+    ReferencedDefaultTextures(5) = "/Script/Engine.VolumeTexture'/Engine/EngineResources/DefaultVolumeTexture.DefaultVolumeTexture'"
+    ReferencedDefaultTextures(6) = "/Script/Engine.Texture2D'/Game/1_Water/Textures/T_DetailWaveTexture_00.T_DetailWaveTexture_00'"
+    LightingGuid = AF4975054D277225B259E9A2AFE52B8E
+    EditorOnlyData <- M_FluxSurfaceOverWireframeEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_FluxSurfaceOverWireframeEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="FluxData")
+    MaterialAttributes <- MaterialExpressionSetMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionSetMaterialAttributes_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_13
+    ExpressionCollection <- MaterialExpressionParticleColor_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_16
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionFrac_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 0.500000
+    A <- MaterialExpressionFrac_0
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionFrac_0] MaterialExpressionFrac
+    Input <- MaterialExpressionMultiply_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineDataGet.MF_CoastlineDataGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=907637C844D6BC8298C5ACADA0E3B2C3,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=23481DEA4452179C8D2797B33CE20435,Output=(OutputName="Direction"))
+    FunctionOutputs(2) = (ExpressionOutputId=A84715A749104AD14C38248BBFD455E2,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=6346C58A410496BE2C7A25BD8D50DEAA,Output=(OutputName="Mask"))
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Direction")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_16
+[MaterialExpressionMaterialFunctionCall_13] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Materials/Functions/Layers/MF_SurfaceLayer.MF_SurfaceLayer'"
+    FunctionOutputs(0) = (ExpressionOutputId=70DAAC0E467C1ABC47946E9BE9A267E5,Output=(OutputName="SurfaceLayerPS"))
+    FunctionOutputs(1) = (ExpressionOutputId=21BBA6E44440F6E315E02EB3FDA747C8,Output=(OutputName="SurfaceLayerVS"))
+    FunctionOutputs(2) = (ExpressionOutputId=F9C1FC904C37431670E98794F711645C,Output=(OutputName="Painter"))
+    FunctionOutputs(3) = (ExpressionOutputId=D61499B94C36FFF82193F08CF21F8E64,Output=(OutputName="Shoreline"))
+    Outputs(0) = (OutputName="SurfaceLayerPS")
+    Outputs(1) = (OutputName="SurfaceLayerVS")
+    Outputs(2) = (OutputName="Painter")
+    Outputs(3) = (OutputName="Shoreline")
+[MaterialExpressionMaterialFunctionCall_16] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineSample.MF_CoastlineSample'"
+    FunctionInputs(1) = (ExpressionInputId=973F69F04A567D6C876F98B15939EE63,Input=(InputName="WorldPosition"))
+    FunctionOutputs(0) = (ExpressionOutputId=94959DB3460B356F9AE744B5728E38DA,Output=(OutputName="Coastline"))
+    Outputs(0) = (OutputName="Coastline")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    A <- MaterialExpressionParticleColor_0
+    B <- MaterialExpressionSaturate_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 2.000000
+    A <- MaterialExpressionDivide_0
+[MaterialExpressionParticleColor_0] MaterialExpressionParticleColor
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 10640.000000
+    ParameterName = "FluxWorldCoastlineDecode"
+    ExpressionGUID = 37B78B2648B1D398B018F881F00CB55E
+    Group = "FluxData"
+[MaterialExpressionSetMaterialAttributes_0] MaterialExpressionSetMaterialAttributes
+    AttributeSetTypes(0) = B769B54DD08D4440ABC21BA6CD27D0E2
+    Inputs(0) <- MaterialExpressionMaterialFunctionCall_13
+    Inputs(1) Emissive Color <- MaterialExpressionMultiply_0
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

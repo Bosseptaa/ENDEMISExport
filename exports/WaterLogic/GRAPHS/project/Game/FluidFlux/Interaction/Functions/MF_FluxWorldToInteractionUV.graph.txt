@@ -1,0 +1,87 @@
+﻿# /Game/FluidFlux/Interaction/Functions/MF_FluxWorldToInteractionUV
+# класс: MaterialFunction; происхождение: проект; узлов: 13; связей: 23; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxWorldToInteractionUV] MaterialFunction
+    StateId = F32980334EE9765ECDBEC7B62DA3AF7C
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_1
+    EditorOnlyData <- MF_FluxWorldToInteractionUVEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxWorldToInteractionUVEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_2
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToInteractionUV'"
+    Input <- MaterialExpressionWorldPosition_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = A80FE39447F5474F2FD56F95C32EF3F9
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToInteractionUV'"
+    bCollapsed = True
+    Preview <- MaterialExpressionComponentMask_2
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "WorldSize"
+    Id = C7A03B8B41B6F713EDEB19A3472B710E
+    InputType = FunctionInput_Scalar
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToInteractionUV'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "UVPosition"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = DF521043496F99477DD91C8D1F56A5CE
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToInteractionUV'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_1
+[MaterialExpressionFunctionOutput_2] MaterialExpressionFunctionOutput
+    OutputName = "UVSize"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = CE79070244DBB9C259609F8D98467733
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToInteractionUV'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Interaction/Functions/MF_FluxInteractionUV.MF_FluxInteractionUV'"
+    FunctionOutputs(0) = (ExpressionOutputId=AB54F8A04BF80648975AFEAEF6AA4B89,Output=(OutputName="Location"))
+    FunctionOutputs(1) = (ExpressionOutputId=2C0B2E5B4629BDA966535896A63901D6,Output=(OutputName="WorldPixelSize"))
+    FunctionOutputs(2) = (ExpressionOutputId=E7854F864B404DDBFDE83C8D5C660588,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=01CE52E94FBF6E2837B3F68FC72B03E6,Output=(OutputName="ScaleInv"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToInteractionUV'"
+    Outputs(0) = (OutputName="Location")
+    Outputs(1) = (OutputName="WorldPixelSize")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="ScaleInv")
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToInteractionUV'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToInteractionUV'"
+    A <- MaterialExpressionSubtract_0
+    B <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToInteractionUV'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_FluxWorldToInteractionUV'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,61 @@
+﻿# /Game/1_Water/Audio/SC_WaterSplash
+# класс: SoundCue; происхождение: проект; узлов: 11; связей: 26; HLSL: 0; причина: ссылка из water scope; имя/путь, тело:189
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[SC_WaterSplash] SoundCue
+    VolumeMultiplier = 0.200000
+    PitchMultiplier = 0.900000
+    AttenuationOverrides = (AttenuationShapeExtents=(X=500.000000,Y=0.000000,Z=0.000000),FalloffDistance=2000.000000)
+    bOverrideConcurrency = True
+    ConcurrencyOverrides = (MaxCount=3)
+    Duration = 1.025375
+    MaxDistance = 1500.000000
+    AttenuationSettings = "/Script/Engine.SoundAttenuation'/Game/1_Water/Audio/SA_SplashTouch.SA_SplashTouch'"
+    FirstNode <- SoundNodeRandom_1
+    AllNodes(0) <- SoundNodeWavePlayer_18
+    AllNodes(1) <- SoundNodeWavePlayer_19
+    AllNodes(2) <- SoundNodeWavePlayer_20
+    AllNodes(3) <- SoundNodeRandom_1
+    SoundCueGraph <- SoundCueGraph_10
+[SoundCueGraph_10] SoundCueGraph
+    Schema = "/Script/CoreUObject.Class'/Script/AudioEditor.SoundCueGraphSchema'"
+    bAllowDeletion = False
+    GraphGuid = D842954342344D7C3F1FF7A4D3820641
+    Nodes(0) <- SoundCueGraphNode_Root_10
+    Nodes(1) <- SoundCueGraphNode_27
+    Nodes(2) <- SoundCueGraphNode_28
+    Nodes(3) <- SoundCueGraphNode_29
+    Nodes(4) <- SoundCueGraphNode_30
+[SoundCueGraphNode_27] SoundCueGraphNode
+    SoundNode <- SoundNodeWavePlayer_18
+[SoundCueGraphNode_28] SoundCueGraphNode
+    SoundNode <- SoundNodeWavePlayer_19
+[SoundCueGraphNode_29] SoundCueGraphNode
+    SoundNode <- SoundNodeWavePlayer_20
+[SoundCueGraphNode_30] SoundCueGraphNode
+    SoundNode <- SoundNodeRandom_1
+[SoundCueGraphNode_Root_10] SoundCueGraphNode_Root
+[SoundNodeRandom_1] SoundNodeRandom
+    Weights(0) = 1.000000
+    Weights(1) = 1.000000
+    Weights(2) = 1.000000
+    ChildNodes(0) <- SoundNodeWavePlayer_18
+    ChildNodes(1) <- SoundNodeWavePlayer_19
+    ChildNodes(2) <- SoundNodeWavePlayer_20
+    GraphNode <- SoundCueGraphNode_30
+[SoundNodeWavePlayer_18] SoundNodeWavePlayer
+    SoundWaveAssetPtr = "/Game/1_Water/Audio/SW_WaterSplashTouch01.SW_WaterSplashTouch01"
+    GraphNode <- SoundCueGraphNode_27
+[SoundNodeWavePlayer_19] SoundNodeWavePlayer
+    SoundWaveAssetPtr = "/Game/1_Water/Audio/SW_WaterSplashTouch02.SW_WaterSplashTouch02"
+    GraphNode <- SoundCueGraphNode_28
+[SoundNodeWavePlayer_20] SoundNodeWavePlayer
+    SoundWaveAssetPtr = "/Game/1_Water/Audio/SW_WaterSplashTouch03.SW_WaterSplashTouch03"
+    GraphNode <- SoundCueGraphNode_29
+
+## СВЯЗИ
+[SoundCueGraphNode_27].Output -> [SoundCueGraphNode_30].Input
+[SoundCueGraphNode_28].Output -> [SoundCueGraphNode_30].Input2
+[SoundCueGraphNode_29].Output -> [SoundCueGraphNode_30].Input3
+[SoundCueGraphNode_30].Output -> [SoundCueGraphNode_Root_10].?

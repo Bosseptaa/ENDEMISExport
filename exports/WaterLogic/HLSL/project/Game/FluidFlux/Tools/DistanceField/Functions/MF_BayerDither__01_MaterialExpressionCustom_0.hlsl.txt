@@ -1,0 +1,25 @@
+﻿// Источник: /Game/FluidFlux/Tools/DistanceField/Functions/MF_BayerDither (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: position, Transparency
+// Выход: CMOT_Float1
+// Описание: Dither 4
+
+float DITHER_THRESHOLDS[16] =
+{
+1.0 / 17.0,  9.0 / 17.0,  3.0 / 17.0, 11.0 / 17.0,
+13.0 / 17.0,  5.0 / 17.0, 15.0 / 17.0,  7.0 / 17.0,
+4.0 / 17.0, 12.0 / 17.0,  2.0 / 17.0, 10.0 / 17.0,
+16.0 / 17.0,  8.0 / 17.0, 14.0 / 17.0,  6.0 / 17.0
+};
+
+
+uint index = uint(position.x) % 4 + uint(position.y) % 4 * 4;
+
+
+if (Transparency - DITHER_THRESHOLDS[index] <= 0)
+{
+return 0.0;
+} else
+{
+return 1.0;
+}

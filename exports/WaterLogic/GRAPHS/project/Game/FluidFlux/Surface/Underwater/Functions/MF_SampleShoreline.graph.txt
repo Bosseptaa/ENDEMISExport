@@ -1,0 +1,143 @@
+﻿# /Game/FluidFlux/Surface/Underwater/Functions/MF_SampleShoreline
+# класс: MaterialFunction; происхождение: проект; узлов: 24; связей: 48; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:261
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SampleShoreline] MaterialFunction
+    StateId = 22AA0D3D49FD728D53D2768D9A3DBD0D
+    CombinedInputTypes = 4
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_5
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_6
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_8
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_4
+    EditorOnlyData <- MF_SampleShorelineEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SampleShorelineEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionSaturate_5
+    ExpressionCollection <- MaterialExpressionOneMinus_5
+    ExpressionCollection <- MaterialExpressionMultiply_13
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_6
+    ExpressionCollection <- MaterialExpressionComponentMask_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_5
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_8
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_4
+    ExpressionCollection <- MaterialExpressionReroute_2
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+    ExpressionCollection <- MaterialExpressionReroute_5
+    ExpressionCollection <- MaterialExpressionReroute_6
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    ConstB = 150.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    A <- MaterialExpressionSubtract_0
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    Input <- MaterialExpressionReroute_5
+[MaterialExpressionComponentMask_6] MaterialExpressionComponentMask
+    R = True
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    Input <- MaterialExpressionMaterialFunctionCall_5
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Position"
+    Id = 1BDAF68648AA0E7F52EFD58A9DD25E86
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Color"
+    bLastPreviewed = True
+    Id = 3E5DBFE14602DA6C64F28B917C829F6B
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_13
+[MaterialExpressionMaterialFunctionCall_4] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_SampleCoastlineHeight.MF_SampleCoastlineHeight'"
+    FunctionOutputs(0) = (ExpressionOutputId=B63C54EC49ECC68671A4A2B91FBF5F8C,Output=(OutputName="GroundWorldZ"))
+    FunctionOutputs(1) = (ExpressionOutputId=21F093CD4CE9FDABE88C418BBE0F1968,Output=(OutputName="GroudRelativeZ"))
+    FunctionOutputs(2) = (ExpressionOutputId=8A2DEC954D4BF57AF823499B5353328B,Output=(OutputName="ReferencePlaneZ"))
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    Outputs(0) = (OutputName="GroundWorldZ")
+    Outputs(1) = (OutputName="GroudRelativeZ")
+    Outputs(2) = (OutputName="ReferencePlaneZ")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_0
+    FunctionInputs(1) <- MaterialExpressionReroute_2
+[MaterialExpressionMaterialFunctionCall_5] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineColor.MF_CoastlineColor'"
+    FunctionOutputs(0) = (ExpressionOutputId=9298F82F407DF68723440DA8782326BD,Output=(OutputName="Shoreline"))
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    Outputs(0) = (OutputName="Shoreline")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_4
+    FunctionInputs(1) <- MaterialExpressionMaterialFunctionCall_8
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineSample.MF_CoastlineSample'"
+    FunctionOutputs(0) = (ExpressionOutputId=94959DB3460B356F9AE744B5728E38DA,Output=(OutputName="Coastline"))
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    Outputs(0) = (OutputName="Coastline")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_1
+    FunctionInputs(1) <- MaterialExpressionReroute_2
+[MaterialExpressionMaterialFunctionCall_8] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineDataGet.MF_CoastlineDataGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=907637C844D6BC8298C5ACADA0E3B2C3,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=23481DEA4452179C8D2797B33CE20435,Output=(OutputName="Direction"))
+    FunctionOutputs(2) = (ExpressionOutputId=A84715A749104AD14C38248BBFD455E2,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=6346C58A410496BE2C7A25BD8D50DEAA,Output=(OutputName="Mask"))
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Direction")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionMaterialFunctionCall_6
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    ConstB = -0.001000
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    A <- MaterialExpressionAdd_0
+    B <- MaterialExpressionScalarParameter_3
+[MaterialExpressionMultiply_13] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    A <- MaterialExpressionSaturate_5
+    B <- MaterialExpressionComponentMask_6
+[MaterialExpressionOneMinus_5] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    Input <- MaterialExpressionMultiply_12
+[MaterialExpressionReroute_2] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    Input <- MaterialExpressionReroute_5
+[MaterialExpressionReroute_5] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionReroute_6] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+[MaterialExpressionSaturate_5] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    Input <- MaterialExpressionOneMinus_5
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = -0.001000
+    ParameterName = "ShorelineFogHeight"
+    ExpressionGUID = 2B0EBC3D4F3CA062032ECCB70BE9F94E
+    Group = "Volume"
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+[MaterialExpressionScalarParameter_6] MaterialExpressionScalarParameter
+    ParameterName = "FluxWorldGroundHeight"
+    ExpressionGUID = 99AEA504457C6D9A664A8FA3C82AF296
+    Group = "FluxData"
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SampleShoreline'"
+    A <- MaterialExpressionComponentMask_5
+    B <- MaterialExpressionScalarParameter_6
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

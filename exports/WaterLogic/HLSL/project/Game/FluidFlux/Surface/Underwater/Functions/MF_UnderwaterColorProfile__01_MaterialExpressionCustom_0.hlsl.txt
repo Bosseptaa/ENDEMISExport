@@ -1,0 +1,8 @@
+﻿// Источник: /Game/FluidFlux/Surface/Underwater/Functions/MF_UnderwaterColorProfile (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: a, b, k
+// Выход: CMOT_Float1
+// Описание: SMin
+
+    float h = clamp(0.5f + 0.5f*(a-b)/k, 0.0f, 1.0f);
+    return lerp(a, b, h) - k*h*(1.0f-h);

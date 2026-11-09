@@ -1,0 +1,121 @@
+﻿# /Game/FluidFlux/Coastline/Functions/MF_SlopeNormal
+# класс: MaterialFunction; происхождение: проект; узлов: 17; связей: 34; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SlopeNormal] MaterialFunction
+    StateId = 0ABE79F94CFA2BDA5F84C7833D5F0A57
+    CombinedInputTypes = 2063
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_0
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_SlopeNormalEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SlopeNormalEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionAppendVector_5
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    A <- MaterialExpressionMultiply_1
+    B <- MaterialExpressionFunctionInput_3
+[MaterialExpressionAppendVector_5] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    A <- MaterialExpressionMultiply_1
+    B <- MaterialExpressionSubtract_3
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Prediction"
+    Id = 8F0AADF741DE340B5E9430B8AC013C7D
+    InputType = FunctionInput_Scalar
+    SortPriority = 3
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = 15A51AEB49D38E1DBD648588CC3030E1
+    InputType = FunctionInput_Vector2
+    SortPriority = -1
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    bCollapsed = True
+    Preview <- MaterialExpressionWorldPosition_2
+[MaterialExpressionFunctionInput_4] MaterialExpressionFunctionInput
+    InputName = "Coastline"
+    Id = 03539D844960C6DDDD32E4A3D7170771
+    InputType = FunctionInput_MaterialAttributes
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Normal"
+    bLastPreviewed = True
+    Id = E23E8EE94B1EA93DDC6C819D30C62C46
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    A <- MaterialExpressionNormalize_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "RelativeZ"
+    bLastPreviewed = True
+    Id = F13FB5DB4FB506E373609181C91104D3
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    bCollapsed = True
+    A <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_CoastlineDataGet.MF_CoastlineDataGet'"
+    FunctionOutputs(0) = (ExpressionOutputId=907637C844D6BC8298C5ACADA0E3B2C3,Output=(OutputName="Distance"))
+    FunctionOutputs(1) = (ExpressionOutputId=23481DEA4452179C8D2797B33CE20435,Output=(OutputName="Direction"))
+    FunctionOutputs(2) = (ExpressionOutputId=A84715A749104AD14C38248BBFD455E2,Output=(OutputName="Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=6346C58A410496BE2C7A25BD8D50DEAA,Output=(OutputName="Mask"))
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    Outputs(0) = (OutputName="Distance")
+    Outputs(1) = (OutputName="Direction")
+    Outputs(2) = (OutputName="Scale")
+    Outputs(3) = (OutputName="Mask")
+    FunctionInputs(0) <- MaterialExpressionFunctionInput_4
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_SampleCoastlineHeight.MF_SampleCoastlineHeight'"
+    FunctionInputs(0) = (ExpressionInputId=2BD8F82D41F8DF3C6DA222886710DFCE,Input=(InputName="PreciseHeightmap"))
+    FunctionOutputs(0) = (ExpressionOutputId=B63C54EC49ECC68671A4A2B91FBF5F8C,Output=(OutputName="GroundWorldZ"))
+    FunctionOutputs(1) = (ExpressionOutputId=21F093CD4CE9FDABE88C418BBE0F1968,Output=(OutputName="GroudRelativeZ"))
+    FunctionOutputs(2) = (ExpressionOutputId=8A2DEC954D4BF57AF823499B5353328B,Output=(OutputName="ReferencePlaneZ"))
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    Outputs(0) = (OutputName="GroundWorldZ")
+    Outputs(1) = (OutputName="GroudRelativeZ")
+    Outputs(2) = (OutputName="ReferencePlaneZ")
+    FunctionInputs(1) <- MaterialExpressionFunctionInput_3
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Coastline/Functions/MF_SampleCoastlineHeight.MF_SampleCoastlineHeight'"
+    FunctionInputs(0) = (ExpressionInputId=2BD8F82D41F8DF3C6DA222886710DFCE,Input=(InputName="PreciseHeightmap"))
+    FunctionOutputs(0) = (ExpressionOutputId=B63C54EC49ECC68671A4A2B91FBF5F8C,Output=(OutputName="GroundWorldZ"))
+    FunctionOutputs(1) = (ExpressionOutputId=21F093CD4CE9FDABE88C418BBE0F1968,Output=(OutputName="GroudRelativeZ"))
+    FunctionOutputs(2) = (ExpressionOutputId=8A2DEC954D4BF57AF823499B5353328B,Output=(OutputName="ReferencePlaneZ"))
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    Outputs(0) = (OutputName="GroundWorldZ")
+    Outputs(1) = (OutputName="GroudRelativeZ")
+    Outputs(2) = (OutputName="ReferencePlaneZ")
+    FunctionInputs(1) <- MaterialExpressionAdd_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    VectorInput <- MaterialExpressionAppendVector_5
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+    A <- MaterialExpressionMaterialFunctionCall_3
+    B <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionWorldPosition_2] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_SlopeNormal'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

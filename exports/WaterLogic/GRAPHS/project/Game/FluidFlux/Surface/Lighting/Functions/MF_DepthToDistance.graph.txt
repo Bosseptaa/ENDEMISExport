@@ -1,0 +1,86 @@
+﻿# /Game/FluidFlux/Surface/Lighting/Functions/MF_DepthToDistance
+# класс: MaterialFunction; происхождение: проект; узлов: 16; связей: 27; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:162
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_DepthToDistance] MaterialFunction
+    описание: COnverts depth value to distance from camera
+    bExposeToLibrary = True
+    StateId = 5F0C3D7F4BAAF99E6A0FEF829E4D1A57
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_DepthToDistanceEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_DepthToDistanceEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_7
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_5
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionPixelDepth_0
+    ExpressionCollection <- MaterialExpressionDistance_3
+    ExpressionCollection <- MaterialExpressionMultiply_33
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionDivide_0
+    ExpressionCollection <- MaterialExpressionPixelDepth_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+[MaterialExpressionCameraPositionWS_5] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+[MaterialExpressionDistance_3] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+    A <- MaterialExpressionWorldPosition_7
+    B <- MaterialExpressionCameraPositionWS_5
+[MaterialExpressionDivide_0] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+    A <- MaterialExpressionPixelDepth_1
+    B <- MaterialExpressionDistance_3
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+    A <- MaterialExpressionDistance_3
+    B <- MaterialExpressionPixelDepth_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Depth"
+    Id = AFC7B3FD446CDE818F4E60AF4EC12599
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Distance"
+    Id = C1D52A374F40B595ED64CBBD0B34D977
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Distance"
+    bLastPreviewed = True
+    Id = 555764D44F982ADDA6DD7CB5988CFE82
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_33
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Depth"
+    bLastPreviewed = True
+    Id = EDA377424B713D65053713BFE4C1507E
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionDivide_0
+[MaterialExpressionMultiply_33] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionDivide_2
+[MaterialExpressionPixelDepth_0] MaterialExpressionPixelDepth
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+[MaterialExpressionPixelDepth_1] MaterialExpressionPixelDepth
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+[MaterialExpressionWorldPosition_7] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_DepthToDistance'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

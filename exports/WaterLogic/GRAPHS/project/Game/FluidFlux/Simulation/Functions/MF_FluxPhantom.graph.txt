@@ -1,0 +1,143 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_FluxPhantom
+# класс: MaterialFunction; происхождение: проект; узлов: 23; связей: 41; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:48
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxPhantom] MaterialFunction
+    описание: Phantom mesh visibility switch
+    bExposeToLibrary = True
+    LibraryCategoriesText(0) = NSLOCTEXT("", "E166F1D04B8CF9286688C69C34CEC34E", "ImaginaryBlend")
+    StateId = 8BF2C8A54A23F39104AF6BB00C6FBBAF
+    CombinedInputTypes = 516
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FluxPhantomEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxPhantomEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionCollectionParameter_0
+    ExpressionCollection <- MaterialExpressionMax_0
+    ExpressionCollection <- MaterialExpressionCollectionParameter_1
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionStaticSwitch_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionStaticBool_1
+    ExpressionCollection <- MaterialExpressionCollectionParameter_2
+    ExpressionCollection <- MaterialExpressionStaticSwitch_1
+    ExpressionCollection <- MaterialExpressionComment_0
+[MaterialExpressionCollectionParameter_0] MaterialExpressionCollectionParameter
+    Collection = "/Script/Engine.MaterialParameterCollection'/Game/FluidFlux/Surface/Materials/MPC_FluidFlux.MPC_FluidFlux'"
+    ParameterName = "ShowPhantoms"
+    ParameterId = 7519FF9F4831C2CD442DB996F13757D6
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    bCollapsed = True
+[MaterialExpressionCollectionParameter_1] MaterialExpressionCollectionParameter
+    Collection = "/Script/Engine.MaterialParameterCollection'/Game/FluidFlux/Surface/Materials/MPC_FluidFlux.MPC_FluidFlux'"
+    ParameterName = "CaptureHeightmap"
+    ParameterId = E19E2E88483095035043F2B308D3A3A8
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    bCollapsed = True
+[MaterialExpressionCollectionParameter_2] MaterialExpressionCollectionParameter
+    Collection = "/Script/Engine.MaterialParameterCollection'/Game/FluidFlux/Surface/Materials/MPC_FluidFlux.MPC_FluidFlux'"
+    ParameterName = "CaptureDistanceField"
+    ParameterId = F9440AE84F8063338E9020BCFEBE9A30
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    bCollapsed = True
+[MaterialExpressionComment_0] MaterialExpressionComment
+    SizeX = 400
+    SizeY = 304
+    Text = "0,0,0 const will not work because UE will optimize and remove this operation"
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=0.000001,G=0.000001,B=0.000001,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    bCollapsed = True
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionMax_0
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionOneMinus_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPositionOffset"
+    Id = 6E44A5544354F5A85BE5D99028941E2B
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "IsPhantom"
+    Id = C0539CA24323537369B8729D42344871
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_0
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "IsDistanceField"
+    Id = 5510FBC7464B9923A9C0CCAB247C52B7
+    InputType = FunctionInput_StaticBool
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    bCollapsed = True
+    Preview <- MaterialExpressionStaticBool_1
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "VisibleInCaptureOnly"
+    bLastPreviewed = True
+    Id = F7C65AF84365C80134A16B8BCAA6DCDD
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    bCollapsed = True
+    A <- MaterialExpressionDivide_1
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "VisibleInWorldOnly"
+    bLastPreviewed = True
+    Id = 952F33E84669F008FED6A69447C48B78
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    bCollapsed = True
+    A <- MaterialExpressionDivide_2
+[MaterialExpressionFunctionOutput_3] MaterialExpressionFunctionOutput
+    OutputName = "IsRenderingCapture"
+    SortPriority = 12
+    bLastPreviewed = True
+    Id = 90AD37CA48E557769A7A6DB4F898F298
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    bCollapsed = True
+    A <- MaterialExpressionStaticSwitch_1
+[MaterialExpressionMax_0] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    A <- MaterialExpressionStaticSwitch_0
+    B <- MaterialExpressionStaticSwitch_1
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    Input <- MaterialExpressionStaticSwitch_1
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+[MaterialExpressionStaticBool_1] MaterialExpressionStaticBool
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+[MaterialExpressionStaticSwitch_0] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    A <- MaterialExpressionCollectionParameter_0
+    B <- MaterialExpressionConstant_0
+    Value <- MaterialExpressionFunctionInput_1
+[MaterialExpressionStaticSwitch_1] MaterialExpressionStaticSwitch
+    Function = "/Script/Engine.MaterialFunction'MF_FluxPhantom'"
+    A <- MaterialExpressionCollectionParameter_2
+    B <- MaterialExpressionCollectionParameter_1
+    Value <- MaterialExpressionFunctionInput_2
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

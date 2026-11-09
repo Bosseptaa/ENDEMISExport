@@ -1,0 +1,134 @@
+﻿# /Game/FluidFlux/Surface/Underwater/Functions/MF_FluidIluminance
+# класс: MaterialFunction; происхождение: проект; узлов: 27; связей: 47; HLSL: 1; причина: папка /Game/FluidFlux; имя/путь, тело:106, HLSL:1
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluidIluminance] MaterialFunction
+    StateId = AB983D9D49D41B1BB33BA6BEFB0C654A
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FluidIluminanceEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluidIluminanceEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSkyAtmosphereLightIlluminance_0
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_1
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionAtmosphericLightColor_0
+    ExpressionCollection <- MaterialExpressionAtmosphericLightVector_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionSaturate_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionSkyAtmosphereDistantLightScatteredLuminance_1
+    ExpressionCollection <- MaterialExpressionDotProduct_2
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionAdd_2
+    ExpressionCollection <- MaterialExpressionMax_2
+    ExpressionCollection <- MaterialExpressionSaturate_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+[MaterialExpressionAdd_2] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    A <- MaterialExpressionMax_2
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionAtmosphericLightColor_0] MaterialExpressionAtmosphericLightColor
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+[MaterialExpressionAtmosphericLightVector_0] MaterialExpressionAtmosphericLightVector
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+[MaterialExpressionCameraPositionWS_0] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    Input <- MaterialExpressionCameraPositionWS_0
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    Input <- MaterialExpressionAtmosphericLightVector_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 10.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: AtmosphereLightColor
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    bCollapsed = True
+    Inputs(0) LightIndex <- MaterialExpressionConstant_0
+    Code: HLSL, 1 строк (см. HLSL/)
+[MaterialExpressionDotProduct_2] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    A <- MaterialExpressionSkyAtmosphereDistantLightScatteredLuminance_1
+    B <- MaterialExpressionConstant_2
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Color"
+    bLastPreviewed = True
+    Id = 864ABD994F3E0952DE1E97850BD4DC08
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "DistantLight"
+    bLastPreviewed = True
+    Id = B22BC0DE43E6DA82FDDCBE9A49CC268D
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    bCollapsed = True
+    A <- MaterialExpressionSaturate_2
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    A <- MaterialExpressionSkyAtmosphereLightIlluminance_0
+    B <- MaterialExpressionVectorParameter_1
+    Alpha <- MaterialExpressionVectorParameter_1
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    B = (Mask=1,MaskR=1,MaskG=1,MaskB=1)
+    ConstA = 0.200000
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    Alpha <- MaterialExpressionComponentMask_1
+[MaterialExpressionMax_2] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    A <- MaterialExpressionDotProduct_2
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    A <- MaterialExpressionSaturate_0
+    B <- MaterialExpressionAtmosphericLightColor_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    A <- MaterialExpressionMultiply_0
+[MaterialExpressionSaturate_0] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    Input <- MaterialExpressionComponentMask_1
+[MaterialExpressionSaturate_2] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    Input <- MaterialExpressionAdd_2
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 1000.000000
+    ParameterName = "IluminanceOffset"
+    ExpressionGUID = 7FFFF51843701BAD6B40B3B7E3E772EF
+    Group = "Iluminance"
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+[MaterialExpressionSkyAtmosphereDistantLightScatteredLuminance_1] MaterialExpressionSkyAtmosphereDistantLightScatteredLuminance
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+[MaterialExpressionSkyAtmosphereLightIlluminance_0] MaterialExpressionSkyAtmosphereLightIlluminance
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+    WorldPosition <- MaterialExpressionAppendVector_0
+[MaterialExpressionVectorParameter_1] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=1.000000,B=1.000000,A=0.050000)
+    ParameterName = "IluminanceColor"
+    ExpressionGUID = A45C3B1C48EC176A9148EB90E9CD24DC
+    Group = "Iluminance"
+    Function = "/Script/Engine.MaterialFunction'MF_FluidIluminance'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

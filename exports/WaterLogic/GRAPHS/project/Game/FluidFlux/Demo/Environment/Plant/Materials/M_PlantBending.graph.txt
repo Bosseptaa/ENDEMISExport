@@ -1,0 +1,202 @@
+﻿# /Game/FluidFlux/Demo/Environment/Plant/Materials/M_PlantBending
+# класс: Material; происхождение: проект; узлов: 37; связей: 75; HLSL: 0; причина: папка /Game/FluidFlux; тело:5
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_PlantBending] Material
+    ShadingModel = MSM_Subsurface
+    ShadingModels = (ShadingModelField=4)
+    TwoSided = True
+    bTangentSpaceNormal = False
+    bUsedWithNiagaraMeshParticles = True
+    EditorX = 1728
+    EditorY = 256
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = CB702EA6AA40EB234FEBC3BD1911A870
+    ReferencedTextureGuids(0) = CABE275B479C60A2FC9616AA2708BB6E
+    ReferencedTextureGuids(1) = 14170DCC432AC1C6C98584A747007798
+    ReferencedTextureGuids(2) = 307757E1458E615C7D97A39E32219707
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=0.500000,UVChannelIndex=0,TextureName="Good64x64TilingNoiseHighFreq",TextureReference="/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq.Good64x64TilingNoiseHighFreq")
+    TextureStreamingData(1) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_PlantLeaf_D",TextureReference="/Game/FluidFlux/Demo/Environment/Plant/Meshes/T_PlantLeaf_D.T_PlantLeaf_D")
+    TextureStreamingData(2) = (SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_PlantLeaf_N",TextureReference="/Game/FluidFlux/Demo/Environment/Plant/Meshes/T_PlantLeaf_N.T_PlantLeaf_N")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq.Good64x64TilingNoiseHighFreq'"
+    ReferencedDefaultTextures(1) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Plant/Meshes/T_PlantLeaf_D.T_PlantLeaf_D'"
+    ReferencedDefaultTextures(2) = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Plant/Meshes/T_PlantLeaf_N.T_PlantLeaf_N'"
+    LightingGuid = 89F468954D88D2FB69A20EBAF3E465BA
+    EditorOnlyData <- M_PlantBendingEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_PlantBendingEditorOnlyData] MaterialEditorOnlyData
+    ParameterGroupData(0) = (GroupName="Plant")
+    ParameterGroupData(1) = (GroupName="Plant")
+    ParameterGroupData(2) = (GroupName="Plant")
+    ParameterGroupData(3) = (GroupName="Plant")
+    ParameterGroupData(4) = (GroupName="Plant")
+    ParameterGroupData(5) = (GroupName="Plant")
+    ParameterGroupData(6) = (GroupName="Plant")
+    ParameterGroupData(7) = (GroupName="Plant")
+    ParameterGroupData(8) = (GroupName="Plant")
+    BaseColor <- MaterialExpressionMultiply_4
+    Metallic <- MaterialExpressionConstant_0
+    Specular <- MaterialExpressionScalarParameter_2
+    Roughness <- MaterialExpressionScalarParameter_3
+    Normal <- MaterialExpressionLinearInterpolate_0
+    Opacity <- MaterialExpressionVectorParameter_4
+    WorldPositionOffset <- MaterialExpressionMaterialFunctionCall_2
+    SubsurfaceColor <- MaterialExpressionMultiply_36
+    PixelDepthOffset <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_3
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_4
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMultiply_36
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionVertexNormalWS_0
+    ExpressionCollection <- MaterialExpressionVectorParameter_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_1
+    ExpressionCollection <- MaterialExpressionOneMinus_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionParticleRandom_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_4
+    ExpressionCollection <- MaterialExpressionScalarParameter_5
+    ExpressionCollection <- MaterialExpressionTwoSidedSign_0
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionTextureSample_0
+    ExpressionCollection <- MaterialExpressionMultiply_5
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionTextureSample_1
+    ExpressionCollection <- MaterialExpressionTransform_0
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_2
+    ExpressionCollection <- MaterialExpressionVectorParameter_0
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    A <- MaterialExpressionVectorParameter_0
+    B <- MaterialExpressionVectorParameter_0
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=0.000000,G=0.000000,B=1.000000,A=0.000000)
+    bCollapsed = True
+[MaterialExpressionLinearInterpolate_0] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionTransform_0
+    B <- MaterialExpressionConstant3Vector_1
+    Alpha <- MaterialExpressionScalarParameter_5
+[MaterialExpressionLinearInterpolate_1] MaterialExpressionLinearInterpolate
+    A <- MaterialExpressionMaterialFunctionCall_2
+    Alpha <- MaterialExpressionOneMinus_1
+[MaterialExpressionLinearInterpolate_2] MaterialExpressionLinearInterpolate
+    ConstA = 0.300000
+    Alpha <- MaterialExpressionSaturate_1
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.DitherTemporalAA'"
+    FunctionInputs(0) = (ExpressionInputId=982BCAE7401F814CDC0AE2955DEE46F3,Input=(OutputIndex=-1,InputName="Alpha Threshold"))
+    FunctionOutputs(0) = (ExpressionOutputId=9BC32B084665F3D2D59A90AA45CA8A9F,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(1) <- MaterialExpressionParticleRandom_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Plant/Materials/MF_PlantBending.MF_PlantBending'"
+    FunctionOutputs(0) = (ExpressionOutputId=43FCA00846C92E4D65698DBCA90DC9F6,Output=(OutputName="AmbientScale"))
+    FunctionOutputs(1) = (ExpressionOutputId=F531A8814F7F9F4CB8C79A90C4AE2F2A,Output=(OutputName="WorldPositionOffset"))
+    Outputs(0) = (OutputName="AmbientScale")
+    Outputs(1) = (OutputName="WorldPositionOffset")
+    FunctionInputs(0) <- MaterialExpressionScalarParameter_4
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    ConstB = 15.000000
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    A <- MaterialExpressionOneMinus_0
+    B <- MaterialExpressionMultiply_1
+[MaterialExpressionMultiply_36] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_7
+    B <- MaterialExpressionVectorParameter_4
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    A <- MaterialExpressionLinearInterpolate_2
+    B <- MaterialExpressionMultiply_7
+[MaterialExpressionMultiply_5] MaterialExpressionMultiply
+    ConstA = 1.000000
+    A <- MaterialExpressionTextureSample_0
+    B <- MaterialExpressionVectorParameter_3
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    A <- MaterialExpressionTextureCoordinate_0
+    B <- MaterialExpressionAppendVector_0
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    A <- MaterialExpressionMultiply_5
+    B <- MaterialExpressionLinearInterpolate_1
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionMaterialFunctionCall_2
+[MaterialExpressionOneMinus_1] MaterialExpressionOneMinus
+    Input <- MaterialExpressionScalarParameter_1
+[MaterialExpressionParticleRandom_0] MaterialExpressionParticleRandom
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Input <- MaterialExpressionTwoSidedSign_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 10.000000
+    ParameterName = "GroundBlend"
+    ExpressionGUID = 9BFC971D4B5211E16756048DCA7DE6BA
+    Group = "Plant"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.800000
+    ParameterName = "AmbientOcclusion"
+    ExpressionGUID = DB8A269E4E957434CC78A58C84FDD536
+    Group = "Plant"
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "Specular"
+    ExpressionGUID = 1A75784B495CF84D1CACEB8BD8FA46E3
+    Group = "Plant"
+[MaterialExpressionScalarParameter_3] MaterialExpressionScalarParameter
+    DefaultValue = 0.400000
+    ParameterName = "Roughness"
+    ExpressionGUID = 25C38B494A83C7D697D948BCE9B295EB
+    Group = "Plant"
+[MaterialExpressionScalarParameter_4] MaterialExpressionScalarParameter
+    DefaultValue = 100.000000
+    ParameterName = "PlantHeight"
+    ExpressionGUID = 7AFB91F2407C8B82F007B1809EF9E0E9
+    Group = "Plant"
+[MaterialExpressionScalarParameter_5] MaterialExpressionScalarParameter
+    DefaultValue = 0.400000
+    ParameterName = "PlantUpNormal"
+    ExpressionGUID = 9D5C17614142706DFDAB05A5E39F9A4C
+    Group = "Plant"
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[MaterialExpressionTextureSample_0] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Plant/Meshes/T_PlantLeaf_D.T_PlantLeaf_D'"
+    Coordinates <- MaterialExpressionMultiply_6
+[MaterialExpressionTextureSample_1] MaterialExpressionTextureSample
+    Texture = "/Script/Engine.Texture2D'/Game/FluidFlux/Demo/Environment/Plant/Meshes/T_PlantLeaf_N.T_PlantLeaf_N'"
+    SamplerType = SAMPLERTYPE_Normal
+    Coordinates <- MaterialExpressionMultiply_6
+[MaterialExpressionTransform_0] MaterialExpressionTransform
+    Input <- MaterialExpressionTextureSample_1
+[MaterialExpressionTwoSidedSign_0] MaterialExpressionTwoSidedSign
+[MaterialExpressionVectorParameter_0] MaterialExpressionVectorParameter
+    DefaultValue = (R=1.000000,G=1.000000,B=0.000000,A=0.000000)
+    ParameterName = "UVScale"
+    ExpressionGUID = C50C7A784522B27FBAB1A2AF87A56F87
+    Group = "Plant"
+[MaterialExpressionVectorParameter_3] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.200000,G=0.200000,B=0.200000,A=1.000000)
+    ParameterName = "DiffuseColor"
+    ExpressionGUID = 4B23E8124AE6CCF051163A864BC3FF19
+    Group = "Plant"
+[MaterialExpressionVectorParameter_4] MaterialExpressionVectorParameter
+    DefaultValue = (R=0.459462,G=0.500000,B=0.274998,A=0.100000)
+    ParameterName = "SubsurfaceColor"
+    ExpressionGUID = F38ADA314EAE16FB0F275D8E70D0B51B
+    Group = "Plant"
+[MaterialExpressionVertexNormalWS_0] MaterialExpressionVertexNormalWS
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

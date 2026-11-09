@@ -1,0 +1,598 @@
+﻿# /Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState
+# класс: Blueprint; происхождение: проект; узлов: 145; связей: 275; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:376
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[PDA_FluxCoastlineState] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.PrimaryDataAsset'"
+    BlueprintSystemVersion = 2
+    CategorySorting(0) = "Area"
+    CategorySorting(1) = "Baked"
+    CategorySorting(2) = "Setters"
+    CategorySorting(3) = "Getters"
+    CategorySorting(4) = "Apply"
+    CategorySorting(5) = "Event Graph"
+    CategorySorting(6) = ""
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:GetWorldToTextureUV",SavedViewOffset=(X=-568.816467,Y=190.139984),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:SetTextures",SavedViewOffset=(X=-198.200195,Y=-322.836121),SavedZoomAmount=1.000000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:GetPixelSize",SavedViewOffset=(X=-838.081787,Y=50.884735),SavedZoomAmount=0.750000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:EventGraph",SavedViewOffset=(X=-289.807678,Y=-289.104279),SavedZoomAmount=1.000000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:GetSurfaceHeight",SavedViewOffset=(X=-318.544189,Y=-360.831543),SavedZoomAmount=1.000000)
+    LastEditedDocuments(5) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:ApplyMaterialData",SavedViewOffset=(X=577.339233,Y=-659.120544),SavedZoomAmount=0.750000)
+    LastEditedDocuments(6) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:GetExternalReferences",SavedViewOffset=(X=-253.896729,Y=-276.816406),SavedZoomAmount=1.000000)
+    LastEditedDocuments(7) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:ApplyNiagaraData",SavedViewOffset=(X=-749.726685,Y=-205.134445),SavedZoomAmount=0.750000)
+    LastEditedDocuments(8) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:CopyPropertiesToObject",SavedViewOffset=(X=64.971558,Y=-315.950623),SavedZoomAmount=1.000000)
+    LastEditedDocuments(9) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:SetDomain",SavedViewOffset=(X=-659.722656,Y=-175.245804),SavedZoomAmount=0.750000)
+    LastEditedDocuments(10) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:GetWorldTransform",SavedViewOffset=(X=-829.982605,Y=-92.538582),SavedZoomAmount=0.875000)
+    LastEditedDocuments(11) = (EditedObjectPath="/Game/FluidFlux/Simulation/Blueprints/PDA_FluxCoastlineState.PDA_FluxCoastlineState:GetTextureSize",SavedViewOffset=(X=-171.938202,Y=-391.834259),SavedZoomAmount=0.750000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'PDA_FluxCoastlineState_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 07AA716E4BCAA3E6CFDDF290A9E1B50D
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- SetDomain
+    FunctionGraphs(1) <- SetTextures
+    FunctionGraphs(2) <- ApplyNiagaraData
+    FunctionGraphs(3) <- GetTextureSize
+    FunctionGraphs(4) <- GetWorldToTextureUV
+    FunctionGraphs(5) <- GetPixelSize
+    FunctionGraphs(6) <- GetWorldTransform
+    FunctionGraphs(7) <- ApplyMaterialData
+    FunctionGraphs(8) <- GetSurfaceHeight
+    ImplementedInterfaces(0) <- GetExternalReferences
+    ImplementedInterfaces(0) <- CopyPropertiesToObject
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[GetSurfaceHeight] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = ADDADCF64BA30C323BA9C3802F1B0819
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_0
+    Nodes(2) <- K2Node_VariableGet_1
+    Nodes(3) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(4) <- K2Node_FunctionResult_0
+[K2Node_FunctionEntry_0@GetSurfaceHeight] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetSurfaceHeight] K2Node_FunctionResult
+[K2Node_VariableGet_0@GetSurfaceHeight] K2Node_VariableGet
+[K2Node_VariableGet_1@GetSurfaceHeight] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_0@GetSurfaceHeight] K2Node_CommutativeAssociativeBinaryOperator
+[GetExternalReferences] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = AB9BFB054A49BF0A4B0D0D9A206EA4AE
+    InterfaceGuid = DB5612C74FD2055E36F3CBAA8B14F5D4
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_VariableGet_4
+    Nodes(3) <- K2Node_VariableSet_0
+    Nodes(4) <- K2Node_CallArrayFunction_0
+    Nodes(5) <- K2Node_MakeArray_0
+    Nodes(6) <- K2Node_VariableGet_2
+    Nodes(7) <- K2Node_VariableGet_3
+    Nodes(8) <- K2Node_VariableGet_1
+[K2Node_FunctionResult_0@GetExternalReferences] K2Node_FunctionResult
+[K2Node_FunctionEntry_0@GetExternalReferences] K2Node_FunctionEntry
+[K2Node_VariableGet_4@GetExternalReferences] K2Node_VariableGet
+[K2Node_VariableSet_0@GetExternalReferences] K2Node_VariableSet
+[K2Node_CallArrayFunction_0] K2Node_CallArrayFunction (вызов: Array_RemoveItem @ /Script/CoreUObject.Class)
+[K2Node_MakeArray_0] K2Node_MakeArray
+    NumInputs = 2
+[K2Node_VariableGet_2@GetExternalReferences] K2Node_VariableGet
+[K2Node_VariableGet_3@GetExternalReferences] K2Node_VariableGet
+[K2Node_VariableGet_1@GetExternalReferences] K2Node_VariableGet
+[CopyPropertiesToObject] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 54393A2942B57B97C1AC4A896F49CE0B
+    InterfaceGuid = 62EAD92F4394A85E4083FDB0A6EA2C85
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_1
+    Nodes(2) <- K2Node_DynamicCast_0
+    Nodes(3) <- K2Node_CallFunction_0
+    Nodes(4) <- K2Node_FunctionResult_0
+    Nodes(5) <- K2Node_VariableGet_0
+    Nodes(6) <- K2Node_VariableGet_1
+    Nodes(7) <- K2Node_VariableGet_2
+    Nodes(8) <- K2Node_VariableGet_3
+    Nodes(9) <- K2Node_VariableSet_1
+    Nodes(10) <- K2Node_VariableGet_5
+    Nodes(11) <- K2Node_VariableGet_7
+[K2Node_FunctionResult_1@CopyPropertiesToObject] K2Node_FunctionResult
+[K2Node_FunctionEntry_0@CopyPropertiesToObject] K2Node_FunctionEntry
+[K2Node_DynamicCast_0] K2Node_DynamicCast
+    TargetType = "/Script/Engine.BlueprintGeneratedClass'PDA_FluxCoastlineState_C'"
+    PureState = Impure
+[K2Node_CallFunction_0@CopyPropertiesToObject] K2Node_CallFunction
+[K2Node_FunctionResult_0@CopyPropertiesToObject] K2Node_FunctionResult
+[K2Node_VariableGet_0@CopyPropertiesToObject] K2Node_VariableGet
+[K2Node_VariableGet_1@CopyPropertiesToObject] K2Node_VariableGet
+[K2Node_VariableGet_2@CopyPropertiesToObject] K2Node_VariableGet
+[K2Node_VariableGet_3@CopyPropertiesToObject] K2Node_VariableGet
+[K2Node_VariableSet_1@CopyPropertiesToObject] K2Node_VariableSet
+[K2Node_VariableGet_5@CopyPropertiesToObject] K2Node_VariableGet
+[K2Node_VariableGet_7] K2Node_VariableGet (переменная: CoastWidth)
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 834E1C994B4B324B64F2E88B8F6E516B
+    Nodes(0) <- K2Node_Event_0
+    Nodes(1) <- K2Node_VariableSet_0
+    Nodes(2) <- K2Node_VariableSet_1
+[K2Node_Event_0] K2Node_Event (событие: ClearExternalReferences @ /Script/Engine.BlueprintGeneratedClass)
+    bOverrideFunction = True
+[K2Node_VariableSet_0@EventGraph] K2Node_VariableSet
+[K2Node_VariableSet_1@EventGraph] K2Node_VariableSet
+[SetDomain] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = E3F9DEC74BE82D6EDEE095B55B997343
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_3
+    Nodes(2) <- K2Node_VariableSet_4
+    Nodes(3) <- K2Node_VariableSet_6
+    Nodes(4) <- K2Node_VariableSet_0
+    Nodes(5) <- K2Node_VariableSet_1
+    Nodes(6) <- K2Node_VariableSet_2
+[K2Node_FunctionEntry_0@SetDomain] K2Node_FunctionEntry
+[K2Node_VariableSet_3] K2Node_VariableSet (переменная: AreaLocation)
+[K2Node_VariableSet_4] K2Node_VariableSet (переменная: AreaSize)
+[K2Node_VariableSet_6] K2Node_VariableSet (переменная: WorldResolution)
+[K2Node_VariableSet_0@SetDomain] K2Node_VariableSet
+[K2Node_VariableSet_1@SetDomain] K2Node_VariableSet (переменная: CaptureOffset)
+[K2Node_VariableSet_2@SetDomain] K2Node_VariableSet
+[SetTextures] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 3FD042CC44438F9A7EDBF1A90435F48D
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableSet_2
+    Nodes(2) <- K2Node_VariableSet_0
+[K2Node_FunctionEntry_0@SetTextures] K2Node_FunctionEntry
+[K2Node_VariableSet_2@SetTextures] K2Node_VariableSet (переменная: WorldGroundMap)
+[K2Node_VariableSet_0@SetTextures] K2Node_VariableSet (переменная: WorldCoastlineMap)
+    ErrorType = 1
+[ApplyNiagaraData] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = B4AF4AB34C6C2C6AF1ACAFB5E7FABA8D
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_4
+    Nodes(2) <- K2Node_CallFunction_2
+    Nodes(3) <- K2Node_CallFunction_8
+    Nodes(4) <- K2Node_VariableGet_19
+    Nodes(5) <- K2Node_VariableGet_17
+    Nodes(6) <- K2Node_VariableGet_6
+    Nodes(7) <- K2Node_VariableGet_10
+    Nodes(8) <- K2Node_VariableGet_4
+    Nodes(9) <- K2Node_VariableGet_14
+    Nodes(10) <- K2Node_CallFunction_1
+    Nodes(11) <- K2Node_VariableGet_8
+    Nodes(12) <- K2Node_VariableGet_15
+    Nodes(13) <- K2Node_VariableGet_12
+    Nodes(14) <- K2Node_CallFunction_7
+    Nodes(15) <- K2Node_VariableGet_9
+    Nodes(16) <- K2Node_CallFunction_10
+    Nodes(17) <- K2Node_VariableGet_13
+    Nodes(18) <- K2Node_CallFunction_3
+    Nodes(19) <- K2Node_IfThenElse_0
+    Nodes(20) <- K2Node_VariableGet_5
+    Nodes(21) <- K2Node_VariableGet_2
+    Nodes(22) <- K2Node_CallFunction_6
+    Nodes(23) <- K2Node_VariableGet_0
+    Nodes(24) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ApplyNiagaraData] K2Node_FunctionEntry
+[K2Node_CallFunction_4@ApplyNiagaraData] K2Node_CallFunction
+[K2Node_CallFunction_2@ApplyNiagaraData] K2Node_CallFunction
+[K2Node_CallFunction_8@ApplyNiagaraData] K2Node_CallFunction
+[K2Node_VariableGet_19] K2Node_VariableGet (переменная: NiagaraSystem)
+[K2Node_VariableGet_17] K2Node_VariableGet (переменная: AreaLocation)
+[K2Node_VariableGet_6] K2Node_VariableGet (переменная: AreaSize)
+[K2Node_VariableGet_10] K2Node_VariableGet (переменная: NiagaraSystem)
+[K2Node_VariableGet_4@ApplyNiagaraData] K2Node_VariableGet
+[K2Node_VariableGet_14] K2Node_VariableGet (переменная: WorldCoastlineMap)
+[K2Node_CallFunction_1@ApplyNiagaraData] K2Node_CallFunction
+[K2Node_VariableGet_8@ApplyNiagaraData] K2Node_VariableGet
+[K2Node_VariableGet_15] K2Node_VariableGet (переменная: WorldPixelSize)
+[K2Node_VariableGet_12] K2Node_VariableGet (переменная: NiagaraSystem)
+[K2Node_CallFunction_7@ApplyNiagaraData] K2Node_CallFunction
+[K2Node_VariableGet_9] K2Node_VariableGet (переменная: WorldGroundMap)
+[K2Node_CallFunction_10] K2Node_CallFunction (вызов: SetFloatParameter @ /Script/CoreUObject.Class)
+    вход ParameterName = FluxWorldSurfaceHeight
+[K2Node_VariableGet_13] K2Node_VariableGet (переменная: NiagaraSystem)
+[K2Node_CallFunction_3@ApplyNiagaraData] K2Node_CallFunction
+[K2Node_IfThenElse_0] K2Node_IfThenElse
+[K2Node_VariableGet_5@ApplyNiagaraData] K2Node_VariableGet
+[K2Node_VariableGet_2@ApplyNiagaraData] K2Node_VariableGet
+[K2Node_CallFunction_6@ApplyNiagaraData] K2Node_CallFunction
+[K2Node_VariableGet_0@ApplyNiagaraData] K2Node_VariableGet
+[K2Node_CallFunction_0@ApplyNiagaraData] K2Node_CallFunction
+[GetTextureSize] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 4C7D7C844EA1F4B1B2D3FD8EE0EFB994
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_4
+    Nodes(2) <- K2Node_VariableGet_5
+    Nodes(3) <- K2Node_DynamicCast_1
+    Nodes(4) <- K2Node_DynamicCast_2
+    Nodes(5) <- K2Node_CallFunction_0
+    Nodes(6) <- K2Node_CallFunction_1
+    Nodes(7) <- K2Node_FunctionResult_4
+    Nodes(8) <- K2Node_FunctionResult_3
+    Nodes(9) <- K2Node_MakeStruct_7
+    Nodes(10) <- K2Node_MakeStruct_6
+    Nodes(11) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@GetTextureSize] K2Node_FunctionEntry
+[K2Node_VariableGet_4@GetTextureSize] K2Node_VariableGet
+[K2Node_VariableGet_5@GetTextureSize] K2Node_VariableGet
+[K2Node_DynamicCast_1] K2Node_DynamicCast
+    TargetType = "/Script/CoreUObject.Class'/Script/Engine.Texture2D'"
+    PureState = Impure
+    ErrorType = 1
+[K2Node_DynamicCast_2] K2Node_DynamicCast
+    TargetType = "/Script/CoreUObject.Class'/Script/Engine.TextureRenderTarget2D'"
+    PureState = Impure
+    ErrorType = 1
+[K2Node_CallFunction_0@GetTextureSize] K2Node_CallFunction
+[K2Node_CallFunction_1@GetTextureSize] K2Node_CallFunction (вызов: Blueprint_GetSizeY @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход OverrideName = FluxWorldHeightMap
+[K2Node_FunctionResult_4] K2Node_FunctionResult (вызов: GetTextureSize)
+    bIsEditable = True
+[K2Node_FunctionResult_3] K2Node_FunctionResult (вызов: GetTextureSize)
+    bIsEditable = True
+[K2Node_MakeStruct_7] K2Node_MakeStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="X",PropertyFriendlyName="X",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Y",PropertyFriendlyName="Y",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.IntPoint'"
+[K2Node_MakeStruct_6] K2Node_MakeStruct
+    bMadeAfterOverridePinRemoval = True
+    ShowPinForProperties(0) = (PropertyName="X",PropertyFriendlyName="X",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(1) = (PropertyName="Y",PropertyFriendlyName="Y",CategoryName="IntPoint",bShowPin=True,bCanToggleVisibility=True)
+    StructType = "/Script/CoreUObject.ScriptStruct'/Script/CoreUObject.IntPoint'"
+[K2Node_VariableGet_0@GetTextureSize] K2Node_VariableGet
+[GetWorldToTextureUV] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 1913A2444299EF356F7E14AD42A263A6
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_6
+    Nodes(2) <- K2Node_CallFunction_7
+    Nodes(3) <- K2Node_CallFunction_8
+    Nodes(4) <- K2Node_FunctionResult_1
+    Nodes(5) <- K2Node_VariableGet_1
+    Nodes(6) <- K2Node_VariableGet_4
+    Nodes(7) <- K2Node_VariableGet_5
+[K2Node_FunctionEntry_0@GetWorldToTextureUV] K2Node_FunctionEntry
+[K2Node_CallFunction_6@GetWorldToTextureUV] K2Node_CallFunction
+[K2Node_CallFunction_7@GetWorldToTextureUV] K2Node_CallFunction
+[K2Node_CallFunction_8@GetWorldToTextureUV] K2Node_CallFunction
+[K2Node_FunctionResult_1@GetWorldToTextureUV] K2Node_FunctionResult
+[K2Node_VariableGet_1@GetWorldToTextureUV] K2Node_VariableGet
+[K2Node_VariableGet_4@GetWorldToTextureUV] K2Node_VariableGet (переменная: AreaSize)
+    ErrorType = 1
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_5@GetWorldToTextureUV] K2Node_VariableGet (переменная: AreaSize)
+    SelfContextInfo = NotSelfContext
+[GetPixelSize] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 23285E1C4526B46486A16EA3AFD6FA86
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_6
+    Nodes(2) <- K2Node_FunctionResult_1
+    Nodes(3) <- K2Node_CallFunction_3
+    Nodes(4) <- K2Node_VariableGet_11
+    Nodes(5) <- K2Node_CallFunction_7
+    Nodes(6) <- K2Node_CallFunction_8
+[K2Node_FunctionEntry_0@GetPixelSize] K2Node_FunctionEntry
+[K2Node_CallFunction_6@GetPixelSize] K2Node_CallFunction
+[K2Node_FunctionResult_1@GetPixelSize] K2Node_FunctionResult (вызов: GetPixelSize)
+    bIsEditable = True
+    bIsEditable = True
+    вход Done = true
+[K2Node_CallFunction_3@GetPixelSize] K2Node_CallFunction
+[K2Node_VariableGet_11] K2Node_VariableGet (переменная: WorldResolution)
+    ErrorType = 1
+[K2Node_CallFunction_7@GetPixelSize] K2Node_CallFunction
+[K2Node_CallFunction_8@GetPixelSize] K2Node_CallFunction (вызов: BreakVector2D @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход ParameterName = FluxWorldAreaSize
+    вход B = 0.500000
+[GetWorldTransform] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A7C34908431A88985643E1A33F57EA0E
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_FunctionResult_0
+    Nodes(2) <- K2Node_CallFunction_4
+    Nodes(3) <- K2Node_VariableGet_1
+    Nodes(4) <- K2Node_VariableGet_3
+    Nodes(5) <- K2Node_PromotableOperator_0
+    Nodes(6) <- K2Node_CallFunction_2
+    Nodes(7) <- K2Node_PromotableOperator_1
+    Nodes(8) <- K2Node_PromotableOperator_2
+    Nodes(9) <- K2Node_VariableGet_2
+[K2Node_FunctionEntry_0@GetWorldTransform] K2Node_FunctionEntry
+[K2Node_FunctionResult_0@GetWorldTransform] K2Node_FunctionResult (вызов: GetWorldTransform)
+    bIsEditable = True
+    bIsEditable = True
+    вход SurfaceHeight = 0.0
+    вход Done = false
+[K2Node_CallFunction_4@GetWorldTransform] K2Node_CallFunction
+[K2Node_VariableGet_1@GetWorldTransform] K2Node_VariableGet
+[K2Node_VariableGet_3@GetWorldTransform] K2Node_VariableGet (переменная: AreaSize)
+[K2Node_PromotableOperator_0] K2Node_PromotableOperator (вызов: Subtract_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_2@GetWorldTransform] K2Node_CallFunction
+[K2Node_PromotableOperator_1] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 0.500000
+[K2Node_PromotableOperator_2] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 0.010000,0.010000,0.010000
+[K2Node_VariableGet_2@GetWorldTransform] K2Node_VariableGet
+[ApplyMaterialData] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = C0480B554D49AA6F5DDDB183DB2BC4F9
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_16
+    Nodes(2) <- K2Node_CallFunction_18
+    Nodes(3) <- K2Node_CallFunction_27
+    Nodes(4) <- K2Node_CallFunction_7
+    Nodes(5) <- K2Node_ExecutionSequence_0
+    Nodes(6) <- K2Node_VariableGet_26
+    Nodes(7) <- K2Node_VariableGet_32
+    Nodes(8) <- K2Node_VariableGet_33
+    Nodes(9) <- K2Node_CallFunction_3
+    Nodes(10) <- K2Node_VariableGet_0
+    Nodes(11) <- K2Node_CallFunction_42
+    Nodes(12) <- K2Node_CallFunction_5
+    Nodes(13) <- K2Node_CallFunction_4
+    Nodes(14) <- K2Node_CallFunction_2
+    Nodes(15) <- K2Node_VariableGet_20
+    Nodes(16) <- K2Node_VariableGet_44
+    Nodes(17) <- K2Node_CallFunction_43
+    Nodes(18) <- K2Node_VariableGet_22
+    Nodes(19) <- K2Node_VariableGet_24
+    Nodes(20) <- K2Node_VariableGet_28
+    Nodes(21) <- K2Node_VariableGet_25
+    Nodes(22) <- K2Node_VariableGet_8
+    Nodes(23) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(24) <- K2Node_VariableGet_1
+    Nodes(25) <- K2Node_VariableGet_2
+    Nodes(26) <- K2Node_CallFunction_6
+[K2Node_FunctionEntry_0@ApplyMaterialData] K2Node_FunctionEntry
+[K2Node_CallFunction_16] K2Node_CallFunction (вызов: SetVectorParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = FluxWorldAreaLocation
+[K2Node_CallFunction_18] K2Node_CallFunction (вызов: Conv_VectorToLinearColor @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_27] K2Node_CallFunction (вызов: SetVectorParameterValue @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    вход ParameterName = FluxWorldGroundPixelSize
+[K2Node_CallFunction_7@ApplyMaterialData] K2Node_CallFunction (вызов: GetPixelSize)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    вход ParameterName = FluxWorldPixelSize
+[K2Node_ExecutionSequence_0] K2Node_ExecutionSequence
+[K2Node_VariableGet_26] K2Node_VariableGet (переменная: AreaLocation)
+[K2Node_VariableGet_32] K2Node_VariableGet (переменная: MaterialInstances)
+[K2Node_VariableGet_33] K2Node_VariableGet (переменная: MaterialInstances)
+[K2Node_CallFunction_3@ApplyMaterialData] K2Node_CallFunction (вызов: SetTextureParameterValue @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход A = (X=1.000000,Y=1.000000)
+    вход ParameterName = FluxWorldGroundMap
+[K2Node_VariableGet_0@ApplyMaterialData] K2Node_VariableGet (переменная: WorldGroundMap)
+[K2Node_CallFunction_42] K2Node_CallFunction (вызов: SetVectorParameterValue @ /Script/CoreUObject.Class)
+    вход ParameterName = FluxLevelToWorldGroundUV
+[K2Node_CallFunction_5] K2Node_CallFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    ErrorType = 1
+    вход ParameterName = FluxWorldGroundHeight
+[K2Node_CallFunction_4@ApplyMaterialData] K2Node_CallFunction (вызов: SetTextureParameterValue @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход OverrideName = FluxWorldCoastMap
+    вход Location = 0, 0, 0
+    вход Rotation = 0, 0, 0
+    вход ParameterName = FluxWorldCoastlineMap
+[K2Node_CallFunction_2@ApplyMaterialData] K2Node_CallFunction (вызов: SetScalarParameterValue @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+    вход ParameterName = FluxWorldAreaLocation
+    вход ParameterName = FluxWorldCoastlineDecode
+[K2Node_VariableGet_20] K2Node_VariableGet (переменная: MaterialInstances)
+[K2Node_VariableGet_44] K2Node_VariableGet (переменная: MaterialInstances)
+[K2Node_CallFunction_43] K2Node_CallFunction (вызов: GetWorldToTextureUV)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_22] K2Node_VariableGet (переменная: AreaLocation)
+[K2Node_VariableGet_24] K2Node_VariableGet (переменная: MaterialInstances)
+[K2Node_VariableGet_28] K2Node_VariableGet (переменная: MaterialInstances)
+[K2Node_VariableGet_25] K2Node_VariableGet (переменная: WorldCoastlineMap)
+[K2Node_VariableGet_8@ApplyMaterialData] K2Node_VariableGet (переменная: MaterialInstances)
+[K2Node_CommutativeAssociativeBinaryOperator_0@ApplyMaterialData] K2Node_CommutativeAssociativeBinaryOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_1@ApplyMaterialData] K2Node_VariableGet (переменная: CaptureOffset)
+    ErrorType = 1
+[K2Node_VariableGet_2@ApplyMaterialData] K2Node_VariableGet (переменная: CoastWidth)
+[K2Node_CallFunction_6@ApplyMaterialData] K2Node_CallFunction (вызов: Multiply_IntFloat @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход A = 2
+    вход A = 2
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ClearExternalReferences] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 244584AE4568806F1535BA8CCBBCB417
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ClearExternalReferences] K2Node_FunctionEntry (вызов: ClearExternalReferences @ /Script/Engine.BlueprintGeneratedClass)
+    MetaData = (Category=NSLOCTEXT("", "0E27A57D4A142449FBC85FB91DE480E8", "Getters"))
+    ExtraFlags = 1543634944
+    bIsEditable = True
+    ErrorType = 1
+    MetaData = (Category=INVTEXT("Setters"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "2384709F4350CAFC24E90C8C24708967", "Set simulation textures"),Category=NSLOCTEXT("", "8F095DDE4CE4D8F5C13834B45208DF59", "Setters"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "93C4E8E14AE9CBD1A9BFB3895A07EE54", "Set simulation data in niagara asset"),Category=NSLOCTEXT("", "ED3B34634C432FDA07E4DA9AAF8827AD", "Apply"))
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "1A2D337C46E3744B52F38D8447FE98BB", "Get simulation texture resolution"),Category=NSLOCTEXT("", "6FDC9AA24B0CE3A998148693B6BD8BF8", "Getters"))
+    ExtraFlags = 1543634944
+    bIsEditable = True
+    ExtraFlags = 1543634944
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "DC91E5E64E8EA40FB6210DA823CF8AB8", "Get imulation pixel size in world"),Category=NSLOCTEXT("", "442E791D46BAF5DF052E86849BA9C043", "Getters"))
+    ExtraFlags = 1543634944
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "44148E624261F695C2045088D17B7BFE", "Get simulation volume transform in world space"),Category=NSLOCTEXT("", "D1A1296242D2726D1E352F98A00DAE58", "Getters"))
+    ExtraFlags = 469893120
+    bIsEditable = True
+    MetaData = (ToolTip=NSLOCTEXT("", "A9D30E0147039D8CFC361F8E8E9B9477", "Set baked state material prameters"),Category=NSLOCTEXT("", "742810054C5F48475749E4B8F96F5B7C", "Apply"))
+    ExtraFlags = 1275199488
+    bIsEditable = True
+    CustomGeneratedFunctionName = "ClearExternalReferences"
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@ClearExternalReferences] K2Node_CallFunction (вызов: ExecuteUbergraph_PDA_FluxCoastlineState)
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    вход ParameterName = FluxWorldCoastlineDecode
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_CallArrayFunction_0].then -> [K2Node_FunctionResult_0@GetWorldTransform].execute#2
+[K2Node_CallFunction_0@ClearExternalReferences].ReturnValue -> [K2Node_MakeStruct_7].X
+[K2Node_CallFunction_0@ClearExternalReferences].then -> [K2Node_FunctionResult_1@GetPixelSize].execute
+[K2Node_CallFunction_10].then -> [K2Node_CallFunction_10].execute
+[K2Node_CallFunction_16].then -> [K2Node_CallFunction_27].execute
+[K2Node_CallFunction_18].ReturnValue -> [K2Node_CallFunction_16].Value
+[K2Node_CallFunction_1@GetTextureSize].ReturnValue -> [K2Node_MakeStruct_7].Y
+[K2Node_CallFunction_1@GetTextureSize].then -> [K2Node_CallFunction_8@GetPixelSize].execute
+[K2Node_CallFunction_1@GetTextureSize].then -> [K2Node_IfThenElse_0].execute
+[K2Node_CallFunction_27].then -> [K2Node_CallFunction_2@ApplyMaterialData].execute
+[K2Node_CallFunction_2@ApplyMaterialData].Z -> [K2Node_PromotableOperator_1].A
+[K2Node_CallFunction_3@ApplyMaterialData].ReturnValue_X -> [K2Node_CallFunction_6@ApplyMaterialData].R
+[K2Node_CallFunction_3@ApplyMaterialData].ReturnValue_Y -> [K2Node_CallFunction_6@ApplyMaterialData].G
+[K2Node_CallFunction_3@ApplyMaterialData].SurfaceHeight -> [K2Node_CallFunction_10].Param
+[K2Node_CallFunction_3@ApplyMaterialData].then -> [K2Node_CallFunction_42].execute
+[K2Node_CallFunction_42].then -> [K2Node_CallFunction_5].execute
+[K2Node_CallFunction_43].WorldToTextureUV -> [K2Node_CallFunction_42].Value
+[K2Node_CallFunction_4@ApplyMaterialData].ReturnValue -> [K2Node_FunctionResult_0@GetWorldTransform].NewParam
+[K2Node_CallFunction_5].then -> [K2Node_CallFunction_3@ApplyMaterialData].execute
+[K2Node_CallFunction_6@ApplyMaterialData].ReturnValue -> [K2Node_CallFunction_10].Param
+[K2Node_CallFunction_6@ApplyMaterialData].ReturnValue -> [K2Node_CallFunction_2@ApplyMaterialData].Value
+[K2Node_CallFunction_6@ApplyMaterialData].ReturnValue#2 -> [K2Node_FunctionResult_1@GetPixelSize].WorldToTextureUV
+[K2Node_CallFunction_7@ApplyMaterialData].ReturnValue#2 -> [K2Node_CallFunction_3@ApplyMaterialData].B
+[K2Node_CallFunction_7@ApplyMaterialData].ReturnValue#2 -> [K2Node_CallFunction_8@GetPixelSize].InVec
+[K2Node_CallFunction_7@ApplyMaterialData].ReturnValue_X -> [K2Node_CallFunction_6@ApplyMaterialData].R
+[K2Node_CallFunction_7@ApplyMaterialData].ReturnValue_Y -> [K2Node_CallFunction_6@ApplyMaterialData].G
+[K2Node_CallFunction_7@ApplyMaterialData].WorldToSimulationUV -> [K2Node_CallFunction_27].Value
+[K2Node_CallFunction_8@GetPixelSize].ReturnValue -> [K2Node_CallFunction_7@ApplyMaterialData].B
+[K2Node_CallFunction_8@GetPixelSize].X -> [K2Node_CallFunction_6@ApplyMaterialData].B#2
+[K2Node_CallFunction_8@GetPixelSize].Y -> [K2Node_CallFunction_6@ApplyMaterialData].A#2
+[K2Node_CallFunction_8@GetPixelSize].then -> [K2Node_CallFunction_10].execute
+[K2Node_CallFunction_8@GetPixelSize].then -> [K2Node_CallFunction_8@GetPixelSize].execute
+[K2Node_CommutativeAssociativeBinaryOperator_0@ApplyMaterialData].ReturnValue -> [K2Node_FunctionResult_0@GetWorldTransform].SurfaceHeight
+[K2Node_CommutativeAssociativeBinaryOperator_0@ApplyMaterialData].ReturnValue#2 -> [K2Node_CallFunction_5].Value
+[K2Node_DynamicCast_0].AsPDA Flux Coastline State -> [K2Node_VariableSet_1@SetDomain].TargetObject
+[K2Node_DynamicCast_0].CastFailed -> [K2Node_FunctionResult_1@GetPixelSize].execute
+[K2Node_DynamicCast_0].then -> [K2Node_VariableSet_1@SetDomain].execute
+[K2Node_DynamicCast_1].AsTexture 2D -> [K2Node_CallFunction_0@ClearExternalReferences].self#2
+[K2Node_DynamicCast_1].AsTexture 2D -> [K2Node_CallFunction_1@GetTextureSize].self
+[K2Node_DynamicCast_1].then -> [K2Node_FunctionResult_4].execute
+[K2Node_DynamicCast_2].AsTexture Render Target 2D -> [K2Node_VariableGet_4@GetWorldToTextureUV].self
+[K2Node_DynamicCast_2].AsTexture Render Target 2D -> [K2Node_VariableGet_5@GetWorldToTextureUV].self
+[K2Node_DynamicCast_2].CastFailed -> [K2Node_DynamicCast_1].execute
+[K2Node_DynamicCast_2].then -> [K2Node_FunctionResult_4].execute
+[K2Node_Event_0].then -> [K2Node_VariableSet_0@SetTextures].execute#2
+[K2Node_ExecutionSequence_0].then_0 -> [K2Node_CallFunction_3@ApplyMaterialData].execute
+[K2Node_ExecutionSequence_0].then_1 -> [K2Node_CallFunction_16].execute
+[K2Node_FunctionEntry_0@ClearExternalReferences].CaptureOffset -> [K2Node_VariableSet_1@SetDomain].CaptureOffset
+[K2Node_FunctionEntry_0@ClearExternalReferences].Destination -> [K2Node_DynamicCast_0].Object
+[K2Node_FunctionEntry_0@ClearExternalReferences].Location -> [K2Node_VariableSet_3].AreaLocation
+[K2Node_FunctionEntry_0@ClearExternalReferences].PixelSize -> [K2Node_VariableSet_0@SetTextures].WorldPixelSize
+[K2Node_FunctionEntry_0@ClearExternalReferences].Resolution -> [K2Node_VariableSet_6].WorldResolution
+[K2Node_FunctionEntry_0@ClearExternalReferences].Size -> [K2Node_VariableSet_4].AreaSize
+[K2Node_FunctionEntry_0@ClearExternalReferences].Width -> [K2Node_VariableSet_2@SetTextures].CoastWidth
+[K2Node_FunctionEntry_0@ClearExternalReferences].WorldCoastline -> [K2Node_VariableSet_0@SetTextures].WorldCoastlineMap
+[K2Node_FunctionEntry_0@ClearExternalReferences].WorldGround -> [K2Node_VariableSet_2@SetTextures].WorldGroundMap
+[K2Node_FunctionEntry_0@ClearExternalReferences].then -> [K2Node_FunctionResult_0@GetWorldTransform].execute
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#10 -> [K2Node_ExecutionSequence_0].execute
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#11 -> [K2Node_CallFunction_0@ClearExternalReferences].execute#2
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#2 -> [K2Node_VariableSet_0@SetTextures].execute
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#3 -> [K2Node_DynamicCast_0].execute
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#4 -> [K2Node_VariableSet_3].execute
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#5 -> [K2Node_VariableSet_0@SetTextures].execute#4
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#6 -> [K2Node_CallFunction_1@GetTextureSize].execute
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#7 -> [K2Node_DynamicCast_2].execute
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#8 -> [K2Node_FunctionResult_1@GetPixelSize].execute#2
+[K2Node_FunctionEntry_0@ClearExternalReferences].then#9 -> [K2Node_FunctionResult_0@GetWorldTransform].execute#3
+[K2Node_IfThenElse_0].else -> [K2Node_CallFunction_8@GetPixelSize].execute
+[K2Node_IfThenElse_0].then -> [K2Node_CallFunction_1@GetTextureSize].execute
+[K2Node_MakeArray_0].Array -> [K2Node_VariableSet_0@SetTextures].Temp
+[K2Node_MakeStruct_7].IntPoint -> [K2Node_FunctionResult_3].Resolution
+[K2Node_MakeStruct_7].IntPoint -> [K2Node_FunctionResult_4].Resolution
+[K2Node_PromotableOperator_0].ReturnValue -> [K2Node_CallFunction_4@ApplyMaterialData].Location_Z
+[K2Node_PromotableOperator_1].ReturnValue -> [K2Node_PromotableOperator_0].B
+[K2Node_PromotableOperator_2].ReturnValue -> [K2Node_CallFunction_4@ApplyMaterialData].Scale
+[K2Node_VariableGet_0@ApplyMaterialData].AreaLocation -> [K2Node_CallFunction_0@ClearExternalReferences].Location
+[K2Node_VariableGet_0@ApplyMaterialData].CaptureOffset -> [K2Node_CommutativeAssociativeBinaryOperator_0@ApplyMaterialData].B
+[K2Node_VariableGet_0@ApplyMaterialData].WorldGroundMap -> [K2Node_DynamicCast_1].Object
+[K2Node_VariableGet_0@ApplyMaterialData].WorldGroundMap -> [K2Node_DynamicCast_2].Object
+[K2Node_VariableGet_0@ApplyMaterialData].WorldGroundMap#2 -> [K2Node_CallFunction_3@ApplyMaterialData].Value
+[K2Node_VariableGet_10].NiagaraSystem -> [K2Node_CallFunction_10].self
+[K2Node_VariableGet_10].NiagaraSystem -> [K2Node_CallFunction_8@GetPixelSize].self
+[K2Node_VariableGet_11].WorldResolution -> [K2Node_CallFunction_7@ApplyMaterialData].InIntPoint
+[K2Node_VariableGet_14].WorldCoastlineMap -> [K2Node_CallFunction_1@GetTextureSize].Texture
+[K2Node_VariableGet_15].WorldPixelSize -> [K2Node_CallFunction_10].Param
+[K2Node_VariableGet_17].AreaLocation -> [K2Node_CallFunction_8@GetPixelSize].Param
+[K2Node_VariableGet_19].NiagaraSystem -> [K2Node_CallFunction_1@GetTextureSize].NiagaraSystem
+[K2Node_VariableGet_1@ApplyMaterialData].AreaLocation#2 -> [K2Node_CallFunction_7@ApplyMaterialData].A
+[K2Node_VariableGet_1@ApplyMaterialData].AreaLocation_X#2 -> [K2Node_CallFunction_4@ApplyMaterialData].Location_X
+[K2Node_VariableGet_1@ApplyMaterialData].AreaLocation_Y#2 -> [K2Node_CallFunction_4@ApplyMaterialData].Location_Y
+[K2Node_VariableGet_1@ApplyMaterialData].AreaLocation_Z -> [K2Node_CommutativeAssociativeBinaryOperator_0@ApplyMaterialData].A
+[K2Node_VariableGet_1@ApplyMaterialData].AreaLocation_Z#2 -> [K2Node_PromotableOperator_0].A
+[K2Node_VariableGet_1@ApplyMaterialData].AreaSize -> [K2Node_CallFunction_0@ClearExternalReferences].Size
+[K2Node_VariableGet_1@ApplyMaterialData].CaptureOffset -> [K2Node_CommutativeAssociativeBinaryOperator_0@ApplyMaterialData].B#2
+[K2Node_VariableGet_22].AreaLocation_Z -> [K2Node_CommutativeAssociativeBinaryOperator_0@ApplyMaterialData].A#2
+[K2Node_VariableGet_25].WorldCoastlineMap -> [K2Node_CallFunction_3@ApplyMaterialData].Value
+[K2Node_VariableGet_26].AreaLocation -> [K2Node_CallFunction_18].InVec
+[K2Node_VariableGet_2@ApplyMaterialData].CoastWidth -> [K2Node_CallFunction_6@ApplyMaterialData].B
+[K2Node_VariableGet_2@ApplyMaterialData].WorldGroundMap -> [K2Node_MakeArray_0].[0]
+[K2Node_VariableGet_2@ApplyMaterialData].WorldResolution -> [K2Node_CallFunction_0@ClearExternalReferences].Resolution
+[K2Node_VariableGet_32].MaterialInstances -> [K2Node_CallFunction_16].self
+[K2Node_VariableGet_32].MaterialInstances -> [K2Node_CallFunction_27].self
+[K2Node_VariableGet_32].MaterialInstances -> [K2Node_CallFunction_2@ApplyMaterialData].self
+[K2Node_VariableGet_32].MaterialInstances -> [K2Node_CallFunction_3@ApplyMaterialData].self
+[K2Node_VariableGet_32].MaterialInstances -> [K2Node_CallFunction_42].self
+[K2Node_VariableGet_32].MaterialInstances -> [K2Node_CallFunction_5].self
+[K2Node_VariableGet_3@GetWorldTransform].AreaSize -> [K2Node_CallFunction_2@ApplyMaterialData].InVec
+[K2Node_VariableGet_3@GetWorldTransform].AreaSize -> [K2Node_PromotableOperator_2].A
+[K2Node_VariableGet_3@GetWorldTransform].WorldCoastlineMap -> [K2Node_MakeArray_0].[1]
+[K2Node_VariableGet_3@GetWorldTransform].WorldPixelSize -> [K2Node_CallFunction_0@ClearExternalReferences].PixelSize
+[K2Node_VariableGet_4@GetWorldToTextureUV].AreaSize -> [K2Node_CallFunction_8@GetPixelSize].A
+[K2Node_VariableGet_4@GetWorldToTextureUV].SizeX -> [K2Node_MakeStruct_7].X
+[K2Node_VariableGet_4@GetWorldToTextureUV].Temp -> [K2Node_CallArrayFunction_0].TargetArray
+[K2Node_VariableGet_4@GetWorldToTextureUV].Temp -> [K2Node_FunctionResult_0@GetWorldTransform].Objects
+[K2Node_VariableGet_5@GetWorldToTextureUV].AreaSize_X -> [K2Node_CallFunction_6@ApplyMaterialData].B#2
+[K2Node_VariableGet_5@GetWorldToTextureUV].AreaSize_Y -> [K2Node_CallFunction_6@ApplyMaterialData].A#2
+[K2Node_VariableGet_5@GetWorldToTextureUV].CaptureOffset -> [K2Node_CallFunction_0@ClearExternalReferences].CaptureOffset
+[K2Node_VariableGet_5@GetWorldToTextureUV].SizeY -> [K2Node_MakeStruct_7].Y
+[K2Node_VariableGet_5@GetWorldToTextureUV].UseGround -> [K2Node_IfThenElse_0].Condition
+[K2Node_VariableGet_6].AreaSize -> [K2Node_CallFunction_8@GetPixelSize].Param
+[K2Node_VariableGet_7].CoastWidth -> [K2Node_CallFunction_0@ClearExternalReferences].Width
+[K2Node_VariableGet_9].WorldGroundMap -> [K2Node_CallFunction_1@GetTextureSize].Texture
+[K2Node_VariableSet_0@SetTextures].then -> [K2Node_CallArrayFunction_0].execute
+[K2Node_VariableSet_0@SetTextures].then#2 -> [K2Node_VariableSet_1@SetDomain].execute#2
+[K2Node_VariableSet_0@SetTextures].then#3 -> [K2Node_VariableSet_1@SetDomain].execute#3
+[K2Node_VariableSet_0@SetTextures].then#4 -> [K2Node_VariableSet_2@SetTextures].execute#2
+[K2Node_VariableSet_1@SetDomain].Output_Get -> [K2Node_CallFunction_0@ClearExternalReferences].self
+[K2Node_VariableSet_1@SetDomain].then -> [K2Node_CallFunction_0@ClearExternalReferences].execute
+[K2Node_VariableSet_1@SetDomain].then#2 -> [K2Node_VariableSet_2@SetTextures].execute
+[K2Node_VariableSet_3].then -> [K2Node_VariableSet_4].execute
+[K2Node_VariableSet_4].then -> [K2Node_VariableSet_6].execute
+[K2Node_VariableSet_6].then -> [K2Node_VariableSet_0@SetTextures].execute#3

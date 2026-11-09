@@ -1,0 +1,107 @@
+Begin Object Class=/Script/Engine.Material Name="M_LoadHeightmap" ExportPath="/Script/Engine.Material'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap'"
+   Begin Object Class=/Script/Engine.MaterialEditorOnlyData Name="M_LoadHeightmapEditorOnlyData" ExportPath="/Script/Engine.MaterialEditorOnlyData'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:M_LoadHeightmapEditorOnlyData'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionAdd Name="MaterialExpressionAdd_0" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionAdd_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMaterialFunctionCall Name="MaterialExpressionMaterialFunctionCall_0" ExportPath="/Script/Engine.MaterialExpressionMaterialFunctionCall'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionMaterialFunctionCall_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMaterialFunctionCall Name="MaterialExpressionMaterialFunctionCall_2" ExportPath="/Script/Engine.MaterialExpressionMaterialFunctionCall'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionMaterialFunctionCall_2'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_1" ExportPath="/Script/Engine.MaterialExpressionScalarParameter'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionScalarParameter_1'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureCoordinate Name="MaterialExpressionTextureCoordinate_2" ExportPath="/Script/Engine.MaterialExpressionTextureCoordinate'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionTextureCoordinate_2'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureObjectParameter Name="MaterialExpressionTextureObjectParameter_0" ExportPath="/Script/Engine.MaterialExpressionTextureObjectParameter'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionTextureObjectParameter_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_0" ExportPath="/Script/Engine.MaterialExpressionTextureSample'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionTextureSample_0'"
+   End Object
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0" ExportPath="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:SceneThumbnailInfoWithPrimitive_0'"
+   End Object
+   Begin Object Name="M_LoadHeightmapEditorOnlyData" ExportPath="/Script/Engine.MaterialEditorOnlyData'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:M_LoadHeightmapEditorOnlyData'"
+      EmissiveColor=(Expression="/Script/Engine.MaterialExpressionAdd'M_LoadHeightmap:MaterialExpressionAdd_0'")
+      CustomizedUVs(0)=(Expression="/Script/Engine.MaterialExpressionMaterialFunctionCall'M_LoadHeightmap:MaterialExpressionMaterialFunctionCall_2'")
+      ExpressionCollection=(Expressions=("/Script/Engine.MaterialExpressionMaterialFunctionCall'M_LoadHeightmap:MaterialExpressionMaterialFunctionCall_2'","/Script/Engine.MaterialExpressionTextureSample'M_LoadHeightmap:MaterialExpressionTextureSample_0'","/Script/Engine.MaterialExpressionTextureObjectParameter'M_LoadHeightmap:MaterialExpressionTextureObjectParameter_0'","/Script/Engine.MaterialExpressionScalarParameter'M_LoadHeightmap:MaterialExpressionScalarParameter_1'","/Script/Engine.MaterialExpressionTextureCoordinate'M_LoadHeightmap:MaterialExpressionTextureCoordinate_2'","/Script/Engine.MaterialExpressionMaterialFunctionCall'M_LoadHeightmap:MaterialExpressionMaterialFunctionCall_0'","/Script/Engine.MaterialExpressionAdd'M_LoadHeightmap:MaterialExpressionAdd_0'"))
+      ParameterGroupData(0)=(GroupName="None")
+      ParameterGroupData(1)=(GroupName="None")
+   End Object
+   Begin Object Name="MaterialExpressionAdd_0" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionAdd_0'"
+      A=(Expression="/Script/Engine.MaterialExpressionTextureSample'M_LoadHeightmap:MaterialExpressionTextureSample_0'",OutputIndex=1,Mask=1,MaskR=1)
+      B=(Expression="/Script/Engine.MaterialExpressionScalarParameter'M_LoadHeightmap:MaterialExpressionScalarParameter_1'")
+      MaterialExpressionEditorX=176
+      MaterialExpressionEditorY=-21
+      MaterialExpressionGuid=FECFDD2C428F58693C8C7C8A4035C574
+      Material="/Script/Engine.Material'M_LoadHeightmap'"
+   End Object
+   Begin Object Name="MaterialExpressionMaterialFunctionCall_0" ExportPath="/Script/Engine.MaterialExpressionMaterialFunctionCall'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionMaterialFunctionCall_0'"
+      MaterialFunction="/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxSimulationUVToWorld.MF_FluxSimulationUVToWorld'"
+      FunctionInputs(0)=(ExpressionInputId=B22AEC234E25421B5182089384020370,Input=(Expression="/Script/Engine.MaterialExpressionTextureCoordinate'M_LoadHeightmap:MaterialExpressionTextureCoordinate_2'",InputName="UV"))
+      FunctionOutputs(0)=(ExpressionOutputId=95D094FA430297A593B0A089DBD5B4E3,Output=(OutputName="WorldPosition"))
+      MaterialExpressionEditorX=-240
+      MaterialExpressionEditorY=320
+      MaterialExpressionGuid=EDFD1F9C4743C688600E3EB4DD67DC06
+      Material="/Script/Engine.Material'M_LoadHeightmap'"
+      Outputs(0)=(OutputName="WorldPosition")
+   End Object
+   Begin Object Name="MaterialExpressionMaterialFunctionCall_2" ExportPath="/Script/Engine.MaterialExpressionMaterialFunctionCall'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionMaterialFunctionCall_2'"
+      MaterialFunction="/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_FluxWorldToStateUV.MF_FluxWorldToStateUV'"
+      FunctionInputs(0)=(ExpressionInputId=A80FE39447F5474F2FD56F95C32EF3F9,Input=(Expression="/Script/Engine.MaterialExpressionMaterialFunctionCall'M_LoadHeightmap:MaterialExpressionMaterialFunctionCall_0'",InputName="WorldPosition"))
+      FunctionOutputs(0)=(ExpressionOutputId=DF521043496F99477DD91C8D1F56A5CE,Output=(OutputName="UV"))
+      FunctionOutputs(1)=(ExpressionOutputId=551C49EC423E491AAA708DBF1F9B7304,Output=(OutputName="Offset"))
+      MaterialExpressionEditorX=32
+      MaterialExpressionEditorY=320
+      MaterialExpressionGuid=165780674E14C1D3AB5724BF7F77D618
+      Material="/Script/Engine.Material'M_LoadHeightmap'"
+      Outputs(0)=(OutputName="UV")
+      Outputs(1)=(OutputName="Offset")
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_1" ExportPath="/Script/Engine.MaterialExpressionScalarParameter'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionScalarParameter_1'"
+      ParameterName="StateWetHeightOffset"
+      ExpressionGUID=429C79374778B76AD9BF599F9AC27080
+      MaterialExpressionEditorX=-48
+      MaterialExpressionEditorY=43
+      MaterialExpressionGuid=217201294ED80970CD72F1A74CA15BFA
+      Material="/Script/Engine.Material'M_LoadHeightmap'"
+   End Object
+   Begin Object Name="MaterialExpressionTextureCoordinate_2" ExportPath="/Script/Engine.MaterialExpressionTextureCoordinate'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionTextureCoordinate_2'"
+      MaterialExpressionEditorX=-400
+      MaterialExpressionEditorY=318
+      MaterialExpressionGuid=BC0DEB86447777A548FCA0BB845A47C9
+      Material="/Script/Engine.Material'M_LoadHeightmap'"
+   End Object
+   Begin Object Name="MaterialExpressionTextureObjectParameter_0" ExportPath="/Script/Engine.MaterialExpressionTextureObjectParameter'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionTextureObjectParameter_0'"
+      ParameterName="HeightWetMap"
+      ExpressionGUID=EAC5665F4C604BDB5DB401B90382802A
+      MaterialExpressionEditorX=-432
+      MaterialExpressionEditorY=-37
+      MaterialExpressionGuid=A4F9AD304588A1037D11489BAA5ED890
+      Material="/Script/Engine.Material'M_LoadHeightmap'"
+      bCollapsed=True
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_0" ExportPath="/Script/Engine.MaterialExpressionTextureSample'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:MaterialExpressionTextureSample_0'"
+      TextureObject=(Expression="/Script/Engine.MaterialExpressionTextureObjectParameter'M_LoadHeightmap:MaterialExpressionTextureObjectParameter_0'")
+      MaterialExpressionEditorX=-272
+      MaterialExpressionEditorY=-48
+      MaterialExpressionGuid=D7345CA8420E2587F45E03A395E6B829
+      Material="/Script/Engine.Material'M_LoadHeightmap'"
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0" ExportPath="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'/Game/FluidFlux/Editor/Materials/M_LoadHeightmap.M_LoadHeightmap:SceneThumbnailInfoWithPrimitive_0'"
+   End Object
+   ShadingModel=MSM_Unlit
+   ShadingModels=(ShadingModelField=1)
+   bAllowNegativeEmissiveColor=True
+   NumCustomizedUVs=1
+   EditorX=288
+   EditorY=-152
+   bCanMaskedBeAssumedOpaque=True
+   PixelDepthOffsetMode=PDOM_Legacy
+   StateId=C9711160ADF8A5CB7E1AE8966A84C087
+   ReferencedTextureGuids(0)=00000000000000000000000000000000
+   EditorOnlyData="/Script/Engine.MaterialEditorOnlyData'M_LoadHeightmapEditorOnlyData'"
+   TextureStreamingDataVersion=1
+   TextureStreamingData(0)=(SamplingScale=1.000000,UVChannelIndex=0,TextureName="DefaultTexture",TextureReference="/Engine/EngineResources/DefaultTexture.DefaultTexture")
+   ReferencedDefaultTextures(0)=None
+   ReferencedDefaultTextures(1)="/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+   ThumbnailInfo="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'SceneThumbnailInfoWithPrimitive_0'"
+   ParameterOverviewExpansion=(("-12Global", True))
+   LightingGuid=2481350F4E4815C1FCC30491433AE219
+End Object

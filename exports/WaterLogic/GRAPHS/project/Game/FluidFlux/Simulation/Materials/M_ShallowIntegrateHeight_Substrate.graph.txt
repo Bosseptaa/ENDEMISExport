@@ -1,0 +1,47 @@
+﻿# /Game/FluidFlux/Simulation/Materials/M_ShallowIntegrateHeight_Substrate
+# класс: Material; происхождение: проект; узлов: 5; связей: 7; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:46
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_ShallowIntegrateHeight_Substrate] Material
+    BlendMode = BLEND_AlphaComposite
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    bAllowNegativeEmissiveColor = True
+    TranslucencyPass = MTP_BeforeDOF
+    bTangentSpaceNormal = False
+    bUseLightmapDirectionality = False
+    EditorX = -208
+    EditorY = 640
+    bCanMaskedBeAssumedOpaque = True
+    bCastRayTracedShadows = False
+    bUseTranslucencyVertexFog = False
+    BlendableOutputAlpha = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 480D946547C358137ABBA08925D32948
+    ReferencedTextureGuids(0) = 00000000000000000000000000000000
+    TextureStreamingDataVersion = 1
+    TextureStreamingData(0) = (SamplingScale=0.812500,UVChannelIndex=0,TextureName="DefaultTexture",TextureReference="/Engine/EngineResources/DefaultTexture.DefaultTexture")
+    ReferencedDefaultTextures(0) = "/Script/Engine.Texture2D'/Engine/EngineResources/DefaultTexture.DefaultTexture'"
+    ReferencedDefaultTextures(1) = None
+    ParameterOverviewExpansion = (("-12Global", True),("-12Global FluxData", True))
+    LightingGuid = B515C26E445FDAC5390173BEFF00BB70
+    EditorOnlyData <- M_ShallowIntegrateHeight_SubstrateEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_ShallowIntegrateHeight_SubstrateEditorOnlyData] MaterialEditorOnlyData
+    EmissiveColor <- MaterialExpressionMaterialFunctionCall_2
+    Opacity <- MaterialExpressionOneMinus_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionOneMinus_0
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Simulation/Functions/MF_ShallowIntegrateHeight.MF_ShallowIntegrateHeight'"
+    FunctionOutputs(0) = (ExpressionOutputId=31F107AF45E7C8309D68ECB7B45D8477,Output=(OutputName="VelocityHeight"))
+    FunctionOutputs(1) = (ExpressionOutputId=422A62754CB1E5A39819BBBB03EFCBE6,Output=(OutputName="Foam"))
+    Outputs(0) = (OutputName="VelocityHeight")
+    Outputs(1) = (OutputName="Foam")
+[MaterialExpressionOneMinus_0] MaterialExpressionOneMinus
+    Input <- MaterialExpressionMaterialFunctionCall_2
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

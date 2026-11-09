@@ -1,0 +1,225 @@
+﻿# /Game/FluidFlux/Tools/Heightmap/Blueprints/BP_FluxHeightMap
+# класс: Blueprint; происхождение: проект; узлов: 64; связей: 80; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxHeightMap] Blueprint
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.Actor'"
+    BlueprintDisplayName = "FluxHeightMapComponent"
+    HideCategories(0) = "Input"
+    HideCategories(1) = "Rendering"
+    HideCategories(2) = "HLOD"
+    HideCategories(3) = "Replication"
+    HideCategories(4) = "LOD"
+    HideCategories(5) = "Collision"
+    HideCategories(6) = "Actor"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxHeightMap_C:SimpleConstructionScript_0'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Event Graph"
+    CategorySorting(3) = "Initialization"
+    CategorySorting(4) = "Ground"
+    CategorySorting(5) = "Components"
+    CategorySorting(6) = "Capture"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Tools/Heightmap/Blueprints/BP_FluxHeightMap.BP_FluxHeightMap:UserConstructionScript",SavedViewOffset=(X=56.451305,Y=0.190687),SavedZoomAmount=1.000000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Tools/Heightmap/Blueprints/BP_FluxHeightMap.BP_FluxHeightMap:CaptureGroundHeightmap",SavedViewOffset=(X=-298.315918,Y=-533.188354),SavedZoomAmount=0.675000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Tools/Heightmap/Blueprints/BP_FluxHeightMap.BP_FluxHeightMap:EventGraph",SavedViewOffset=(X=-1581.675171,Y=-1884.386108),SavedZoomAmount=0.500000)
+    LastEditedDocuments(3) = (EditedObjectPath="/Game/FluidFlux/Tools/Heightmap/Blueprints/BP_FluxHeightMap.BP_FluxHeightMap:InitCapture",SavedViewOffset=(X=112.870926,Y=-457.462311),SavedZoomAmount=0.750000)
+    LastEditedDocuments(4) = (EditedObjectPath="/Game/FluidFlux/Tools/Heightmap/Blueprints/BP_FluxHeightMap.BP_FluxHeightMap:EventGraph",SavedViewOffset=(X=-1065.075928,Y=-1589.612793),SavedZoomAmount=1.000000)
+    ComponentTemplateNameIndex = (("NiagaraComponent", 1),("AudioCaptureComponent", 1),("ChildActorComponent", 3),("BoxComponent", 1))
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxHeightMap_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 7033560344824FF532E88E92BF7449F7
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- InitCapture
+    FunctionGraphs(2) <- CaptureGroundHeightmap
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[InitCapture] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D9910C374B46F168128AD1A19E34CE57
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_12
+    Nodes(2) <- K2Node_VariableGet_23
+    Nodes(3) <- K2Node_CallFunction_5
+    Nodes(4) <- K2Node_VariableGet_6
+    Nodes(5) <- K2Node_VariableGet_7
+    Nodes(6) <- K2Node_CallFunction_0
+    Nodes(7) <- K2Node_VariableGet_13
+    Nodes(8) <- K2Node_VariableGet_15
+    Nodes(9) <- K2Node_VariableGet_8
+    Nodes(10) <- K2Node_VariableGet_9
+    Nodes(11) <- K2Node_VariableGet_10
+    Nodes(12) <- K2Node_VariableGet_11
+    Nodes(13) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(14) <- K2Node_VariableGet_1
+    Nodes(15) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@InitCapture] K2Node_FunctionEntry
+[K2Node_VariableGet_12@InitCapture] K2Node_VariableGet
+[K2Node_VariableGet_23@InitCapture] K2Node_VariableGet
+[K2Node_CallFunction_5@InitCapture] K2Node_CallFunction
+[K2Node_VariableGet_6@InitCapture] K2Node_VariableGet
+[K2Node_VariableGet_7@InitCapture] K2Node_VariableGet
+[K2Node_CallFunction_0@InitCapture] K2Node_CallFunction
+[K2Node_VariableGet_13@InitCapture] K2Node_VariableGet
+[K2Node_VariableGet_15@InitCapture] K2Node_VariableGet
+[K2Node_VariableGet_8@InitCapture] K2Node_VariableGet
+[K2Node_VariableGet_9@InitCapture] K2Node_VariableGet
+[K2Node_VariableGet_10@InitCapture] K2Node_VariableGet
+[K2Node_VariableGet_11@InitCapture] K2Node_VariableGet
+[K2Node_CommutativeAssociativeBinaryOperator_2@InitCapture] K2Node_CommutativeAssociativeBinaryOperator
+[K2Node_VariableGet_1@InitCapture] K2Node_VariableGet
+[K2Node_VariableGet_0@InitCapture] K2Node_VariableGet
+[CaptureGroundHeightmap] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A009BD7D414460FB3E3C8C8F73A83816
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@CaptureGroundHeightmap] K2Node_FunctionEntry
+[K2Node_VariableGet_0@CaptureGroundHeightmap] K2Node_VariableGet
+[K2Node_CallFunction_0@CaptureGroundHeightmap] K2Node_CallFunction
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 4D51C1F34D86A2CD87F8019B055F2E0C
+    Nodes(0) <- K2Node_Event_1
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_Event_1@EventGraph] K2Node_Event
+[K2Node_CallFunction_7@EventGraph] K2Node_CallFunction
+[K2Node_CallFunction_0@EventGraph] K2Node_CallFunction
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 7C7BE73C44B436BCA604429BCD33E26E
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_CallFunction_7@UserConstructionScript] K2Node_CallFunction
+[K2Node_CallFunction_0@UserConstructionScript] K2Node_CallFunction
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[ExecuteUbergraph_BP_FluxHeightMap] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 7983C25C4281DD13237F43B66D8D7E6A
+    Nodes(0) <- K2Node_CallFunction_0
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_Event_1
+    Nodes(3) <- K2Node_FunctionEntry_0
+[K2Node_Event_1@ExecuteUbergraph_BP_FluxHeightMap] K2Node_Event (событие: ReceiveBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    bOverrideFunction = True
+[K2Node_CallFunction_7@ExecuteUbergraph_BP_FluxHeightMap] K2Node_CallFunction
+[K2Node_CallFunction_0@ExecuteUbergraph_BP_FluxHeightMap] K2Node_CallFunction
+[K2Node_FunctionEntry_0@ExecuteUbergraph_BP_FluxHeightMap] K2Node_FunctionEntry
+[ReceiveBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 4FE20D7D4DA46699019E7988175C74B9
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@ReceiveBeginPlay] K2Node_FunctionEntry
+[K2Node_CallFunction_0@ReceiveBeginPlay] K2Node_CallFunction
+[UserConstructionScript_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 7C7BE73C44B436BCA604429BCD33E26E
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_7
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@UserConstructionScript_MERGED] K2Node_FunctionEntry
+[K2Node_CallFunction_7@UserConstructionScript_MERGED] K2Node_CallFunction (вызов: InitCapture)
+[K2Node_CallFunction_0@UserConstructionScript_MERGED] K2Node_CallFunction
+[InitCapture_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = D9910C374B46F168128AD1A19E34CE57
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_12
+    Nodes(2) <- K2Node_VariableGet_23
+    Nodes(3) <- K2Node_CallFunction_5
+    Nodes(4) <- K2Node_VariableGet_6
+    Nodes(5) <- K2Node_VariableGet_7
+    Nodes(6) <- K2Node_CallFunction_0
+    Nodes(7) <- K2Node_VariableGet_13
+    Nodes(8) <- K2Node_VariableGet_15
+    Nodes(9) <- K2Node_VariableGet_8
+    Nodes(10) <- K2Node_VariableGet_9
+    Nodes(11) <- K2Node_VariableGet_10
+    Nodes(12) <- K2Node_VariableGet_11
+    Nodes(13) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(14) <- K2Node_VariableGet_1
+    Nodes(15) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0@InitCapture_MERGED] K2Node_FunctionEntry
+[K2Node_VariableGet_12@InitCapture_MERGED] K2Node_VariableGet (переменная: Debug)
+[K2Node_VariableGet_23@InitCapture_MERGED] K2Node_VariableGet (переменная: FluxHeightMapComponent)
+[K2Node_CallFunction_5@InitCapture_MERGED] K2Node_CallFunction (вызов: InitlializeDebug @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_VariableGet_6@InitCapture_MERGED] K2Node_VariableGet (переменная: CaptureDebugInEditor)
+[K2Node_VariableGet_7@InitCapture_MERGED] K2Node_VariableGet (переменная: CaptureDebugInGame)
+[K2Node_CallFunction_0@InitCapture_MERGED] K2Node_CallFunction
+[K2Node_VariableGet_13@InitCapture_MERGED] K2Node_VariableGet (переменная: FluxHeightMapComponent)
+[K2Node_VariableGet_15@InitCapture_MERGED] K2Node_VariableGet (переменная: CaptureWorldHeight)
+[K2Node_VariableGet_8@InitCapture_MERGED] K2Node_VariableGet (переменная: CaptureWorldPixelSize)
+[K2Node_VariableGet_9@InitCapture_MERGED] K2Node_VariableGet (переменная: CaptureWorldLimitTileSize(M))
+[K2Node_VariableGet_10@InitCapture_MERGED] K2Node_VariableGet (переменная: DomainTexture)
+[K2Node_VariableGet_11@InitCapture_MERGED] K2Node_VariableGet (переменная: SceneVisibility)
+[K2Node_CommutativeAssociativeBinaryOperator_2@InitCapture_MERGED] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_IntInt @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход B = 100
+    вход B = 100
+[K2Node_VariableGet_1@InitCapture_MERGED] K2Node_VariableGet (переменная: Volume)
+[K2Node_VariableGet_0@InitCapture_MERGED] K2Node_VariableGet
+[CaptureGroundHeightmap_MERGED] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = A009BD7D414460FB3E3C8C8F73A83816
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@CaptureGroundHeightmap_MERGED] K2Node_FunctionEntry (вызов: CaptureGroundHeightmap)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("UObjectCategory", "Capture", "Capture"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "ExecuteUbergraph_BP_FluxHeightMap"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "ReceiveBeginPlay"
+    bIsIntermediateNode = True
+    ExtraFlags = 201457664
+    bIsEditable = True
+    MetaData = (Category=NSLOCTEXT("UObjectCategory", "Capture", "Capture"),bCallInEditor=True)
+    ExtraFlags = 201457664
+    bIsEditable = True
+[K2Node_VariableGet_0@CaptureGroundHeightmap_MERGED] K2Node_VariableGet (переменная: FluxHeightMapComponent)
+[K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED] K2Node_CallFunction (вызов: GenerateGroundMap @ /Script/Engine.BlueprintGeneratedClass)
+    bIsIntermediateNode = True
+    вход CaptureOffset = 0.0
+    вход RefereshVisibleActors = false
+    вход EntryPoint = 0
+    вход CaptureOffset = 0.0
+    вход RefereshVisibleActors = false
+
+## СВЯЗИ
+[K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].then -> [K2Node_CallFunction_5@InitCapture_MERGED].execute
+[K2Node_CallFunction_7@UserConstructionScript_MERGED].then -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].execute#3
+[K2Node_CallFunction_7@UserConstructionScript_MERGED].then -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].execute#4
+[K2Node_CommutativeAssociativeBinaryOperator_2@InitCapture_MERGED].ReturnValue -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].CaptureLimitTileSize
+[K2Node_Event_1@ExecuteUbergraph_BP_FluxHeightMap].then -> [K2Node_CallFunction_7@UserConstructionScript_MERGED].execute
+[K2Node_FunctionEntry_0@CaptureGroundHeightmap_MERGED].then -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].execute
+[K2Node_FunctionEntry_0@CaptureGroundHeightmap_MERGED].then#2 -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].execute#2
+[K2Node_FunctionEntry_0@CaptureGroundHeightmap_MERGED].then#3 -> [K2Node_CallFunction_7@UserConstructionScript_MERGED].execute
+[K2Node_FunctionEntry_0@CaptureGroundHeightmap_MERGED].then#4 -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].execute#5
+[K2Node_VariableGet_0@CaptureGroundHeightmap_MERGED].CaptureComponent -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].CaptureComponent
+[K2Node_VariableGet_0@CaptureGroundHeightmap_MERGED].FluxHeightMapComponent -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].self#2
+[K2Node_VariableGet_10@InitCapture_MERGED].DomainTexture -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].DomainTexture
+[K2Node_VariableGet_11@InitCapture_MERGED].SceneVisibility -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].GeometryVisibility
+[K2Node_VariableGet_12@InitCapture_MERGED].Debug -> [K2Node_CallFunction_5@InitCapture_MERGED].DebugMesh
+[K2Node_VariableGet_13@InitCapture_MERGED].FluxHeightMapComponent -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].self
+[K2Node_VariableGet_15@InitCapture_MERGED].CaptureWorldHeight -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].AreaWorldHeight
+[K2Node_VariableGet_1@InitCapture_MERGED].Volume -> [K2Node_CallFunction_5@InitCapture_MERGED].Volume
+[K2Node_VariableGet_23@InitCapture_MERGED].FluxHeightMapComponent -> [K2Node_CallFunction_5@InitCapture_MERGED].self
+[K2Node_VariableGet_6@InitCapture_MERGED].CaptureDebugInEditor -> [K2Node_CallFunction_5@InitCapture_MERGED].DebugInEditor
+[K2Node_VariableGet_7@InitCapture_MERGED].CaptureDebugInGame -> [K2Node_CallFunction_5@InitCapture_MERGED].DebugInGame
+[K2Node_VariableGet_8@InitCapture_MERGED].CaptureWorldPixelSize -> [K2Node_CallFunction_0@CaptureGroundHeightmap_MERGED].AreaWorldPixelSize
+[K2Node_VariableGet_9@InitCapture_MERGED].CaptureWorldLimitTileSize(M) -> [K2Node_CommutativeAssociativeBinaryOperator_2@InitCapture_MERGED].A

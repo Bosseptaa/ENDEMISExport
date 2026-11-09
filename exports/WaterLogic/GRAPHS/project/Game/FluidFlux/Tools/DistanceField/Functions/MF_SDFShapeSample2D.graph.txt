@@ -1,0 +1,170 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Functions/MF_SDFShapeSample2D
+# класс: MaterialFunction; происхождение: проект; узлов: 30; связей: 56; HLSL: 1; причина: папка /Game/FluidFlux; HLSL:1
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_SDFShapeSample2D] MaterialFunction
+    StateId = 5F2A451F4306937AD25F96999D1A84EF
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_SDFShapeSample2DEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_SDFShapeSample2DEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_2
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionCustom_0
+    ExpressionCollection <- MaterialExpressionSaturate_1
+    ExpressionCollection <- MaterialExpressionFrac_0
+    ExpressionCollection <- MaterialExpressionIf_1
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionConstant3Vector_1
+    ExpressionCollection <- MaterialExpressionMultiply_1
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionSubtract_3
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionSaturate_2
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionConstant_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_0
+    ExpressionCollection <- MaterialExpressionConstant2Vector_1
+[MaterialExpressionConstant_1] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+[MaterialExpressionConstant_2] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+[MaterialExpressionConstant2Vector_0] MaterialExpressionConstant2Vector
+    R = 0.500000
+    G = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+[MaterialExpressionConstant2Vector_1] MaterialExpressionConstant2Vector
+    R = 0.500000
+    G = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=0.500000,B=0.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    bCollapsed = True
+[MaterialExpressionConstant3Vector_1] MaterialExpressionConstant3Vector
+    Constant = (R=1.000000,G=1.000000,B=1.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    bCollapsed = True
+[MaterialExpressionCustom_0] MaterialExpressionCustom
+    описание: RoundBox
+    OutputType = CMOT_Float1
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    Inputs(0) p <- MaterialExpressionSubtract_3
+    Inputs(1) b <- MaterialExpressionFunctionInput_2
+    Inputs(2) r <- MaterialExpressionFunctionInput_3
+    Code: HLSL, 2 строк (см. HLSL/)
+[MaterialExpressionFrac_0] MaterialExpressionFrac
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    Input <- MaterialExpressionMultiply_2
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = 9C12B647437D5726FB196484920412AF
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Location"
+    Id = CA75386645D3C03046DDD087B0C68C90
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_0
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Bounds"
+    Id = 7A6891574704F545522644863DB5CA11
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant2Vector_1
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Radius"
+    Id = 70BC4D3545BFE9A42F5F4C8CA86DD600
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant_4
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Distance"
+    bLastPreviewed = True
+    Id = 16CBED1E4C62167323F701B5020B4839
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_3
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Mask"
+    SortPriority = 1
+    bLastPreviewed = True
+    Id = E68AD63D4E0C38B5819D4787D0A9FE13
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    bCollapsed = True
+    A <- MaterialExpressionIf_0
+[MaterialExpressionIf_0] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionMultiply_0
+    AGreaterThanB <- MaterialExpressionConstant_2
+    ALessThanB <- MaterialExpressionConstant_1
+[MaterialExpressionIf_1] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    A <- MaterialExpressionReroute_0
+    AGreaterThanB <- MaterialExpressionConstant3Vector_0
+    ALessThanB <- MaterialExpressionConstant3Vector_1
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    A <- MaterialExpressionScalarParameter_0
+[MaterialExpressionMultiply_1] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    A <- MaterialExpressionIf_1
+    B <- MaterialExpressionFrac_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 12.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    A <- MaterialExpressionReroute_0
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    A <- MaterialExpressionCustom_0
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    Input <- MaterialExpressionFunctionOutput_0
+[MaterialExpressionSaturate_1] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    Input <- MaterialExpressionMultiply_1
+[MaterialExpressionSaturate_2] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    Input <- MaterialExpressionFunctionOutput_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 200.000000
+    ParameterName = "DistanceRange"
+    ExpressionGUID = AE13A7204EFE68D5687EE6B58DC6FD42
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+[MaterialExpressionSubtract_3] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+    A <- MaterialExpressionFunctionInput_1
+    B <- MaterialExpressionFunctionInput_0
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_SDFShapeSample2D'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,28 @@
+﻿// Источник: /Game/FluidFlux/Surface/Lighting/Functions/MF_IntersectionCone (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_0 ключ: Code
+// Входы: origin, dir, lightnormal, lightpos, k
+// Выход: CMOT_Float1
+// Описание: нет
+
+    float A=dot(origin-lightpos,lightnormal);
+    float B=dot(dir,lightnormal);
+    float C=dot(origin-lightpos,origin-lightpos);
+    float D=dot(dir,dir);
+    float E=dot(origin-lightpos,dir);
+
+    float a=B*B-k*k*D;
+    float b=2.*(A*B-k*k*E);
+    float c=A*A-k*k*C;
+    float t1,t2;
+    
+    float delta=b*b-4.*a*c;
+    if(delta<0.) return 0.0;
+    float temp1=-b/(2.*a);
+    float temp2=sqrt(delta)/(2.*a);
+
+    t1=temp1-temp2;
+    t2=temp1+temp2;
+
+    tmin=min(t1,t2);
+    tmax=max(t1,t2);
+    return 1.0;

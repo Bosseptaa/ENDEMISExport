@@ -1,0 +1,574 @@
+﻿# /Game/FluidFlux/Demo/Environment/Boat/BP_FluxBoatPawn
+# класс: Blueprint; происхождение: проект; узлов: 122; связей: 235; HLSL: 0; причина: папка /Game/FluidFlux; тело:106
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxBoatPawn] Blueprint
+    ParentClass = "/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Environment/Buoyancy/BP_FluxBuoyancyVehiclePawn.BP_FluxBuoyancyVehiclePawn_C'"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxBoatPawn_C:SimpleConstructionScript_0'"
+    InheritableComponentHandler = "/Script/Engine.InheritableComponentHandler'BP_FluxBoatPawn_C:InheritableComponentHandler'"
+    CategorySorting(0) = ""
+    CategorySorting(1) = "Event Graph"
+    CategorySorting(2) = "Movement"
+    CategorySorting(3) = "Update"
+    ImportedNamespaces = ("ImaginaryBlend")
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Demo/Environment/Boat/BP_FluxBoatPawn.BP_FluxBoatPawn:ApplyJump",SavedViewOffset=(X=-903.496887,Y=-543.411377),SavedZoomAmount=0.500000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Demo/Environment/Boat/BP_FluxBoatPawn.BP_FluxBoatPawn:UpdateSteering",SavedViewOffset=(X=-2822.474609,Y=-458.882904),SavedZoomAmount=0.500000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Demo/Environment/Boat/BP_FluxBoatPawn.BP_FluxBoatPawn:EventGraph",SavedViewOffset=(X=-4809.797363,Y=-8338.702148),SavedZoomAmount=0.750000)
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxBoatPawn_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 9EBCEFEC401669CCA73B34B7FF6A97EA
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    FunctionGraphs(1) <- UpdateSteering
+    FunctionGraphs(2) <- ApplyJump
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[UpdateSteering] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = B915114D4F9E7FC6A5ADA48B1E4A7CBA
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_VariableGet_2
+    Nodes(2) <- K2Node_PromotableOperator_0
+    Nodes(3) <- K2Node_VariableGet_5
+    Nodes(4) <- EdGraphNode_Comment_4
+    Nodes(5) <- K2Node_CallFunction_4
+    Nodes(6) <- K2Node_CallFunction_12
+    Nodes(7) <- K2Node_PromotableOperator_11
+    Nodes(8) <- K2Node_PromotableOperator_13
+    Nodes(9) <- K2Node_PromotableOperator_14
+    Nodes(10) <- K2Node_VariableSet_3
+    Nodes(11) <- K2Node_VariableGet_15
+    Nodes(12) <- K2Node_VariableGet_14
+    Nodes(13) <- K2Node_VariableGet_16
+    Nodes(14) <- K2Node_VariableGet_17
+    Nodes(15) <- K2Node_IfThenElse_0
+    Nodes(16) <- K2Node_VariableGet_0
+    Nodes(17) <- K2Node_CallFunction_17
+    Nodes(18) <- K2Node_CallFunction_18
+    Nodes(19) <- K2Node_CallFunction_19
+    Nodes(20) <- K2Node_CallFunction_20
+    Nodes(21) <- K2Node_PromotableOperator_15
+    Nodes(22) <- K2Node_CallFunction_22
+    Nodes(23) <- K2Node_CallFunction_24
+    Nodes(24) <- K2Node_CallFunction_25
+    Nodes(25) <- K2Node_PromotableOperator_16
+    Nodes(26) <- K2Node_CallFunction_75
+    Nodes(27) <- K2Node_CallFunction_26
+    Nodes(28) <- K2Node_PromotableOperator_19
+    Nodes(29) <- K2Node_CallFunction_29
+    Nodes(30) <- K2Node_VariableGet_3
+    Nodes(31) <- K2Node_PromotableOperator_3
+    Nodes(32) <- K2Node_VariableGet_7
+    Nodes(33) <- K2Node_CallFunction_7
+    Nodes(34) <- K2Node_CallFunction_5
+    Nodes(35) <- K2Node_CallFunction_3
+    Nodes(36) <- K2Node_CallFunction_8
+    Nodes(37) <- K2Node_VariableGet_6
+    Nodes(38) <- K2Node_VariableSet_2
+    Nodes(39) <- K2Node_VariableGet_18
+    Nodes(40) <- EdGraphNode_Comment_0
+    Nodes(41) <- K2Node_VariableGet_19
+    Nodes(42) <- K2Node_PromotableOperator_4
+    Nodes(43) <- K2Node_IfThenElse_1
+    Nodes(44) <- K2Node_CallFunction_37
+    Nodes(45) <- K2Node_CallFunction_38
+    Nodes(46) <- K2Node_VariableGet_29
+    Nodes(47) <- K2Node_VariableSet_4
+    Nodes(48) <- K2Node_VariableGet_24
+    Nodes(49) <- K2Node_VariableGet_25
+    Nodes(50) <- K2Node_VariableGet_23
+    Nodes(51) <- K2Node_VariableGet_27
+    Nodes(52) <- K2Node_PromotableOperator_10
+    Nodes(53) <- K2Node_VariableGet_26
+    Nodes(54) <- K2Node_CallFunction_32
+    Nodes(55) <- K2Node_VariableGet_28
+    Nodes(56) <- K2Node_CallFunction_34
+    Nodes(57) <- K2Node_PromotableOperator_12
+    Nodes(58) <- EdGraphNode_Comment_1
+    Nodes(59) <- K2Node_IfThenElse_2
+    Nodes(60) <- K2Node_CallFunction_27
+    Nodes(61) <- K2Node_VariableGet_4
+    Nodes(62) <- K2Node_VariableGet_1
+[K2Node_FunctionEntry_0@UpdateSteering] K2Node_FunctionEntry
+[K2Node_VariableGet_2] K2Node_VariableGet (переменная: Mesh)
+[K2Node_PromotableOperator_0@UpdateSteering] K2Node_PromotableOperator
+[K2Node_VariableGet_5] K2Node_VariableGet (переменная: MotorForwardForce)
+[EdGraphNode_Comment_4@UpdateSteering] EdGraphNode_Comment
+[K2Node_CallFunction_4] K2Node_CallFunction (вызов: AddForceAtLocation @ /Script/CoreUObject.Class)
+    вход BoneName = None
+[K2Node_CallFunction_12] K2Node_CallFunction (вызов: DrawDebugArrow @ /Script/CoreUObject.Class)
+    EnabledState = DevelopmentOnly
+    вход ArrowSize = 100.000000
+    вход LineColor = (R=0.000000,G=1.000000,B=0.561563,A=1.000000)
+    вход Duration = 0.000000
+    вход Thickness = 3.000000
+    вход DepthPriority = World
+[K2Node_PromotableOperator_11] K2Node_PromotableOperator (вызов: Subtract_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Subtract"
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_13] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 0.000100
+[K2Node_PromotableOperator_14] K2Node_PromotableOperator (вызов: Add_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+    вход B = 0.000000,0.000000,50.000000
+[K2Node_VariableSet_3] K2Node_VariableSet (переменная: Thrust)
+    ErrorType = 1
+[K2Node_VariableGet_15] K2Node_VariableGet (переменная: Thrust)
+    ErrorType = 1
+[K2Node_VariableGet_14] K2Node_VariableGet (переменная: Thrust)
+    ErrorType = 1
+[K2Node_VariableGet_16] K2Node_VariableGet (переменная: BP_FluxBuoyancyComponent)
+[K2Node_VariableGet_17] K2Node_VariableGet (переменная: DrawDebug @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_IfThenElse_0@UpdateSteering] K2Node_IfThenElse
+[K2Node_VariableGet_0@UpdateSteering] K2Node_VariableGet
+[K2Node_CallFunction_17@UpdateSteering] K2Node_CallFunction
+[K2Node_CallFunction_18@UpdateSteering] K2Node_CallFunction
+[K2Node_CallFunction_19] K2Node_CallFunction (вызов: MakeVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Y = 0.0
+    вход Z = 0.0
+[K2Node_CallFunction_20@UpdateSteering] K2Node_CallFunction
+[K2Node_PromotableOperator_15] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_22@UpdateSteering] K2Node_CallFunction
+[K2Node_CallFunction_24@UpdateSteering] K2Node_CallFunction
+[K2Node_CallFunction_25] K2Node_CallFunction (вызов: VSize @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_16] K2Node_PromotableOperator (вызов: Divide_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Divide"
+    bDefaultsToPureFunc = True
+    вход B = 100.000000
+[K2Node_CallFunction_75] K2Node_CallFunction (вызов: Conv_DoubleToString @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_26] K2Node_CallFunction (вызов: FClamp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Min = -1.000000
+    вход Max = 1.0
+[K2Node_PromotableOperator_19] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 100.000000
+[K2Node_CallFunction_29] K2Node_CallFunction (вызов: DrawDebugString @ /Script/CoreUObject.Class)
+    EnabledState = DevelopmentOnly
+    вход TestBaseActor = None
+    вход TextColor = (R=1.000000,G=0.000000,B=0.719796,A=1.000000)
+    вход Duration = 0.000000
+[K2Node_VariableGet_3@UpdateSteering] K2Node_VariableGet
+[K2Node_PromotableOperator_3] K2Node_PromotableOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = -1.000000
+[K2Node_VariableGet_7] K2Node_VariableGet (переменная: BP_FluxDataComponent)
+[K2Node_CallFunction_7] K2Node_CallFunction (вызов: GetReadbackIndexedPosition @ /Script/Engine.BlueprintGeneratedClass)
+    вход Index = 3
+[K2Node_CallFunction_5@UpdateSteering] K2Node_CallFunction
+[K2Node_CallFunction_3] K2Node_CallFunction (вызов: GetReadbackIndexedPosition @ /Script/Engine.BlueprintGeneratedClass)
+    ErrorType = 1
+    вход Index = 1
+[K2Node_CallFunction_8@UpdateSteering] K2Node_CallFunction
+[K2Node_VariableGet_6@UpdateSteering] K2Node_VariableGet
+[K2Node_VariableSet_2] K2Node_VariableSet (переменная: WaterCloseToMotor)
+    ErrorType = 1
+[K2Node_VariableGet_18] K2Node_VariableGet (переменная: WaterCloseToMotor)
+    ErrorType = 1
+[EdGraphNode_Comment_0@UpdateSteering] EdGraphNode_Comment
+[K2Node_VariableGet_19] K2Node_VariableGet (переменная: WaterCloseToMotor)
+    ErrorType = 1
+[K2Node_PromotableOperator_4@UpdateSteering] K2Node_PromotableOperator
+[K2Node_IfThenElse_1] K2Node_IfThenElse
+[K2Node_CallFunction_37] K2Node_CallFunction (вызов: TransformLocation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_38] K2Node_CallFunction (вызов: GetTransform)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_29] K2Node_VariableGet (переменная: MotorLocation)
+[K2Node_VariableSet_4] K2Node_VariableSet (переменная: WorldMotorLocation)
+    ErrorType = 1
+[K2Node_VariableGet_24] K2Node_VariableGet (переменная: WorldMotorLocation)
+    ErrorType = 1
+[K2Node_VariableGet_25] K2Node_VariableGet (переменная: WorldMotorLocation)
+    ErrorType = 1
+[K2Node_VariableGet_23] K2Node_VariableGet (переменная: WorldMotorLocation)
+    ErrorType = 1
+[K2Node_VariableGet_27] K2Node_VariableGet (переменная: MotorDepthDetection)
+[K2Node_PromotableOperator_10] K2Node_PromotableOperator (вызов: Add_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Add"
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_26] K2Node_VariableGet (переменная: MotorDepthDetection)
+[K2Node_CallFunction_32] K2Node_CallFunction (вызов: Abs @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_28] K2Node_VariableGet (переменная: Mesh)
+[K2Node_CallFunction_34] K2Node_CallFunction (вызов: GetUpVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_12] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B_X = 0.0
+    вход B_Y = 0.0
+[EdGraphNode_Comment_1@UpdateSteering] EdGraphNode_Comment
+[K2Node_IfThenElse_2] K2Node_IfThenElse
+[K2Node_CallFunction_27] K2Node_CallFunction (вызов: NotEqualExactly_Vector2DVector2D @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_4] K2Node_VariableGet (переменная: Input)
+[K2Node_VariableGet_1] K2Node_VariableGet (переменная: Input)
+[ApplyJump] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 12C4129941A86229A87058A128EDBC17
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_16
+    Nodes(2) <- K2Node_VariableGet_9
+    Nodes(3) <- K2Node_VariableGet_10
+    Nodes(4) <- K2Node_CallFunction_17
+    Nodes(5) <- K2Node_PromotableOperator_4
+    Nodes(6) <- K2Node_VariableGet_11
+    Nodes(7) <- K2Node_CallFunction_18
+    Nodes(8) <- K2Node_IfThenElse_0
+    Nodes(9) <- K2Node_VariableGet_13
+    Nodes(10) <- K2Node_PromotableOperator_0
+    Nodes(11) <- K2Node_VariableGet_3
+    Nodes(12) <- K2Node_CallFunction_1
+    Nodes(13) <- K2Node_CallFunction_20
+    Nodes(14) <- K2Node_VariableGet_12
+    Nodes(15) <- K2Node_CallFunction_21
+    Nodes(16) <- K2Node_VariableGet_6
+    Nodes(17) <- K2Node_CallFunction_22
+    Nodes(18) <- K2Node_CallFunction_24
+    Nodes(19) <- K2Node_VariableGet_0
+    Nodes(20) <- K2Node_CallFunction_2
+    Nodes(21) <- K2Node_PromotableOperator_6
+[K2Node_FunctionEntry_0@ApplyJump] K2Node_FunctionEntry
+[K2Node_CallFunction_16] K2Node_CallFunction (вызов: AddImpulse @ /Script/CoreUObject.Class)
+    вход Impulse = 0.000000,0.000000,550.000000
+    вход BoneName = None
+    вход bVelChange = true
+[K2Node_VariableGet_9] K2Node_VariableGet (переменная: Mesh)
+[K2Node_VariableGet_10] K2Node_VariableGet (переменная: Mesh)
+[K2Node_CallFunction_17@ApplyJump] K2Node_CallFunction (вызов: AddAngularImpulseInRadians @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход BoneName = None
+    вход bVelChange = true
+[K2Node_PromotableOperator_4@ApplyJump] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Greater"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 4.000000
+[K2Node_VariableGet_11] K2Node_VariableGet (переменная: Mesh)
+[K2Node_CallFunction_18@ApplyJump] K2Node_CallFunction (вызов: GetForwardVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+[K2Node_IfThenElse_0@ApplyJump] K2Node_IfThenElse
+[K2Node_VariableGet_13] K2Node_VariableGet (переменная: Mesh)
+[K2Node_PromotableOperator_0@ApplyJump] K2Node_PromotableOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    OperationName = "Multiply"
+    bDefaultsToPureFunc = True
+    вход B = 5.500000
+[K2Node_VariableGet_3@ApplyJump] K2Node_VariableGet (переменная: Mesh)
+[K2Node_CallFunction_1] K2Node_CallFunction (вызов: GetForwardVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_20@ApplyJump] K2Node_CallFunction (вызов: SetPhysicsAngularVelocityInRadians @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход bAddToCurrent = false
+    вход BoneName = None
+[K2Node_VariableGet_12] K2Node_VariableGet (переменная: Mesh)
+[K2Node_CallFunction_21] K2Node_CallFunction (вызов: SetPhysicsLinearVelocity @ /Script/CoreUObject.Class)
+    вход bAddToCurrent = false
+    вход BoneName = None
+[K2Node_VariableGet_6@ApplyJump] K2Node_VariableGet (переменная: Mesh)
+[K2Node_CallFunction_22@ApplyJump] K2Node_CallFunction (вызов: GetPhysicsLinearVelocity @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Roll = 0.0
+    вход Pitch = 0.0
+    вход BoneName = None
+[K2Node_CallFunction_24@ApplyJump] K2Node_CallFunction
+[K2Node_VariableGet_0@ApplyJump] K2Node_VariableGet (переменная: Mesh)
+[K2Node_CallFunction_2] K2Node_CallFunction (вызов: GetUpVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_PromotableOperator_6] K2Node_PromotableOperator (вызов: Less_DoubleDouble @ /Script/CoreUObject.Class)
+    OperationName = "Less"
+    bDefaultsToPureFunc = True
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 210E93AC4D9D0A80D902BB9743B0FEEF
+    Nodes(0) <- K2Node_EnhancedInputAction_1
+    Nodes(1) <- EdGraphNode_Comment_6
+    Nodes(2) <- K2Node_EnhancedInputAction_2
+    Nodes(3) <- EdGraphNode_Comment_0
+    Nodes(4) <- K2Node_EnhancedInputAction_0
+    Nodes(5) <- K2Node_CallFunction_24
+    Nodes(6) <- K2Node_Self_3
+    Nodes(7) <- K2Node_EnhancedInputAction_4
+    Nodes(8) <- EdGraphNode_Comment_4
+    Nodes(9) <- K2Node_CallFunction_6
+    Nodes(10) <- EdGraphNode_Comment_1
+    Nodes(11) <- K2Node_CallFunction_5
+    Nodes(12) <- K2Node_CallFunction_8
+[K2Node_EnhancedInputAction_1] K2Node_EnhancedInputAction
+    InputAction = "/Script/EnhancedInput.InputAction'/Game/FluidFlux/Demo/Input/Actions/IA_Move.IA_Move'"
+    AdvancedPinDisplay = Hidden
+[EdGraphNode_Comment_6] EdGraphNode_Comment
+    CommentColor = (R=0.021875,G=0.021875,B=0.021875,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 736
+    NodeHeight = 304
+    bCommentBubblePinned = False
+    NodeComment = "Store movement input to consume in tick"
+[K2Node_EnhancedInputAction_2] K2Node_EnhancedInputAction
+    InputAction = "/Script/EnhancedInput.InputAction'/Game/FluidFlux/Demo/Input/Actions/IA_Jump.IA_Jump'"
+    AdvancedPinDisplay = Hidden
+[EdGraphNode_Comment_0@EventGraph] EdGraphNode_Comment
+    CommentColor = (R=0.059375,G=0.059375,B=0.059375,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1872
+    NodeHeight = 688
+    bCommentBubblePinned = False
+    NodeComment = "Debug"
+    CommentColor = (R=0.034375,G=0.034375,B=0.034375,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 736
+    NodeHeight = 272
+    bCommentBubblePinned = False
+    NodeComment = "Flip boat"
+[K2Node_EnhancedInputAction_0] K2Node_EnhancedInputAction
+    InputAction = "/Script/EnhancedInput.InputAction'/Game/FluidFlux/Demo/Input/Actions/IA_Use.IA_Use'"
+    AdvancedPinDisplay = Hidden
+[K2Node_CallFunction_24@EventGraph] K2Node_CallFunction (вызов: InputUseVehicle)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Z = 700.000000
+[K2Node_Self_3] K2Node_Self
+[K2Node_EnhancedInputAction_4] K2Node_EnhancedInputAction
+    InputAction = "/Script/EnhancedInput.InputAction'/Game/FluidFlux/Demo/Input/Actions/IA_Look.IA_Look'"
+    AdvancedPinDisplay = Hidden
+    ErrorType = 1
+[EdGraphNode_Comment_4@EventGraph] EdGraphNode_Comment
+    CommentColor = (R=0.442001,G=0.496738,B=1.000000,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 1872
+    NodeHeight = 672
+    bCommentBubblePinned = False
+    NodeComment = "Forward engine thrist based on input. In more advanced implementation it should be apliend directly on position of the motor in water."
+    CommentColor = (R=0.021875,G=0.021875,B=0.021875,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 736
+    NodeHeight = 304
+    bCommentBubblePinned = False
+    NodeComment = "Camera rotation input"
+[K2Node_CallFunction_6] K2Node_CallFunction (вызов: InputCameraRotation)
+[EdGraphNode_Comment_1@EventGraph] EdGraphNode_Comment
+    CommentColor = (R=1.000000,G=0.842839,B=0.348847,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 2096
+    NodeHeight = 672
+    bCommentBubblePinned = False
+    NodeComment = "Testing if motor is in water"
+    CommentColor = (R=0.021875,G=0.021875,B=0.021875,A=1.000000)
+    bCommentBubbleVisible_InDetailsPanel = False
+    NodeWidth = 736
+    NodeHeight = 304
+    bCommentBubblePinned = False
+    NodeComment = "Use interaction"
+[K2Node_CallFunction_5@EventGraph] K2Node_CallFunction (вызов: InputMove)
+    EnabledState = DevelopmentOnly
+    ErrorType = 3
+    вход Segments = 12
+    вход LineColor = (R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+    вход Duration = 0.000000
+    вход Thickness = 0.000000
+    вход DepthPriority = World
+[K2Node_CallFunction_8@EventGraph] K2Node_CallFunction (вызов: InputJump)
+    bDefaultsToPureFunc = True
+    вход Alpha = 0.500000
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 55C1272345F1274266E85DACF64F69C4
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallParentFunction_0
+[K2Node_FunctionEntry_0@UserConstructionScript] K2Node_FunctionEntry
+[K2Node_CallParentFunction_0] K2Node_CallParentFunction (вызов: UserConstructionScript @ /Script/Engine.BlueprintGeneratedClass)
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[InpActEvt_IA_Move_K2Node_EnhancedInputActionEvent_0] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 145D592147984641CA92EABC48862278
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_IA_Move_K2Node_EnhancedInputActionEvent_0] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Move_K2Node_EnhancedInputActionEvent_0] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_IA_Move_K2Node_EnhancedInputActionEvent_0] K2Node_CallFunction
+[InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_1] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = B633F8AE488C9D5E32D2378FFE0F063A
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_1] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_1] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_1] K2Node_CallFunction
+[InpActEvt_IA_Use_K2Node_EnhancedInputActionEvent_2] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 9EF1196747A6214A8344E3806B082DEB
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_IA_Use_K2Node_EnhancedInputActionEvent_2] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Use_K2Node_EnhancedInputActionEvent_2] K2Node_SetVariableOnPersistentFrame
+[K2Node_CallFunction_0@InpActEvt_IA_Use_K2Node_EnhancedInputActionEvent_2] K2Node_CallFunction
+[InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 0C66644B4ADF6BD8C5A25BB537A9C50B
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3] K2Node_FunctionEntry (вызов: EnhancedInputActionHandlerDynamicSignature__DelegateSignature @ /Script/CoreUObject.Package)
+    CustomGeneratedFunctionName = "InpActEvt_IA_Move_K2Node_EnhancedInputActionEvent_0"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_1"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_IA_Use_K2Node_EnhancedInputActionEvent_2"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3"
+    bIsIntermediateNode = True
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3] K2Node_CallFunction (вызов: ExecuteUbergraph_BP_FluxBoatPawn)
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[K2Node_CallFunction_12].then -> [K2Node_CallFunction_29].execute
+[K2Node_CallFunction_16].then -> [K2Node_CallFunction_17@ApplyJump].execute
+[K2Node_CallFunction_17@ApplyJump].ReturnValue -> [K2Node_CallFunction_20@ApplyJump].A
+[K2Node_CallFunction_18@ApplyJump].ReturnValue -> [K2Node_VariableSet_3].Thrust
+[K2Node_CallFunction_18@ApplyJump].ReturnValue#2 -> [K2Node_PromotableOperator_4@ApplyJump].A#2
+[K2Node_CallFunction_19].ReturnValue -> [K2Node_CallFunction_18@ApplyJump].A
+[K2Node_CallFunction_2].ReturnValue_Z -> [K2Node_PromotableOperator_6].A
+[K2Node_CallFunction_20@ApplyJump].ReturnValue -> [K2Node_CallFunction_18@ApplyJump].B
+[K2Node_CallFunction_21].then -> [K2Node_CallFunction_20@ApplyJump].execute
+[K2Node_CallFunction_22@ApplyJump].ReturnValue -> [K2Node_CallFunction_20@ApplyJump].B
+[K2Node_CallFunction_22@ApplyJump].ReturnValue_X -> [K2Node_CallFunction_24@EventGraph].X
+[K2Node_CallFunction_22@ApplyJump].ReturnValue_Y -> [K2Node_CallFunction_24@EventGraph].Y
+[K2Node_CallFunction_22@ApplyJump].then -> [K2Node_CallFunction_21].execute
+[K2Node_CallFunction_24@EventGraph].ReturnValue -> [K2Node_CallFunction_25].A
+[K2Node_CallFunction_24@EventGraph].ReturnValue#2 -> [K2Node_CallFunction_21].NewVel
+[K2Node_CallFunction_25].ReturnValue -> [K2Node_PromotableOperator_16].A
+[K2Node_CallFunction_26].ReturnValue -> [K2Node_PromotableOperator_19].A
+[K2Node_CallFunction_27].ReturnValue -> [K2Node_IfThenElse_2].Condition
+[K2Node_CallFunction_29].then -> [K2Node_CallFunction_5@EventGraph].execute
+[K2Node_CallFunction_32].ReturnValue -> [K2Node_CallFunction_5@EventGraph].Radius
+[K2Node_CallFunction_34].ReturnValue -> [K2Node_PromotableOperator_12].A
+[K2Node_CallFunction_37].ReturnValue -> [K2Node_VariableSet_4].WorldMotorLocation
+[K2Node_CallFunction_38].ReturnValue -> [K2Node_CallFunction_37].T
+[K2Node_CallFunction_4].then -> [K2Node_IfThenElse_0@ApplyJump].execute
+[K2Node_CallFunction_7].Location -> [K2Node_CallFunction_8@EventGraph].A
+[K2Node_CallFunction_7].Location -> [K2Node_CallFunction_8@EventGraph].B
+[K2Node_CallFunction_7].then -> [K2Node_CallFunction_7].execute
+[K2Node_CallFunction_7].then -> [K2Node_VariableSet_2].execute
+[K2Node_CallFunction_75].ReturnValue -> [K2Node_CallFunction_29].Text
+[K2Node_CallFunction_8@EventGraph].ReturnValue -> [K2Node_VariableSet_2].WaterCloseToMotor
+[K2Node_EnhancedInputAction_0].Triggered -> [K2Node_CallFunction_24@EventGraph].execute
+[K2Node_EnhancedInputAction_1].ActionValue_X -> [K2Node_CallFunction_5@EventGraph].Forward
+[K2Node_EnhancedInputAction_1].ActionValue_Y -> [K2Node_CallFunction_5@EventGraph].Side
+[K2Node_EnhancedInputAction_1].Triggered -> [K2Node_CallFunction_5@EventGraph].execute#2
+[K2Node_EnhancedInputAction_2].Started -> [K2Node_CallFunction_8@EventGraph].execute
+[K2Node_EnhancedInputAction_4].ActionValue_X -> [K2Node_CallFunction_6].Yaw
+[K2Node_EnhancedInputAction_4].ActionValue_Y -> [K2Node_CallFunction_6].Pitch
+[K2Node_EnhancedInputAction_4].Triggered -> [K2Node_CallFunction_6].execute
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].ActionValue -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_ActionValue
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].ActionValue#2 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_ActionValue_1
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].ActionValue#3 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_ActionValue_2
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].ActionValue#4 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_ActionValue_3
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].ElapsedTime -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_ElapsedTime
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].ElapsedTime#2 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_ElapsedTime_1
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].ElapsedTime#3 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_ElapsedTime_2
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].ElapsedTime#4 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_ElapsedTime_3
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].Input -> [K2Node_CallFunction_27].A
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].SourceAction -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_SourceAction
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].SourceAction#2 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_SourceAction_1
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].SourceAction#3 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_SourceAction_2
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].SourceAction#4 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_SourceAction_3
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].TriggeredTime -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_TriggeredTime
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].TriggeredTime#2 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_TriggeredTime_1
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].TriggeredTime#3 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_TriggeredTime_2
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].TriggeredTime#4 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].K2Node_EnhancedInputActionEvent_TriggeredTime_3
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].then -> [K2Node_IfThenElse_2].execute
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].then#2 -> [K2Node_IfThenElse_0@ApplyJump].execute#2
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].then#3 -> [K2Node_CallParentFunction_0].execute
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].then#4 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].execute
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].then#5 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].execute#2
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].then#6 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].execute#3
+[K2Node_FunctionEntry_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].then#7 -> [K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].execute#4
+[K2Node_IfThenElse_0@ApplyJump].else -> [K2Node_CallFunction_22@ApplyJump].execute
+[K2Node_IfThenElse_0@ApplyJump].then -> [K2Node_CallFunction_12].execute
+[K2Node_IfThenElse_0@ApplyJump].then#2 -> [K2Node_CallFunction_16].execute
+[K2Node_IfThenElse_1].then -> [K2Node_VariableSet_3].execute
+[K2Node_IfThenElse_2].then -> [K2Node_VariableSet_4].execute
+[K2Node_PromotableOperator_0@ApplyJump].ReturnValue -> [K2Node_CallFunction_19].X
+[K2Node_PromotableOperator_10].ReturnValue -> [K2Node_PromotableOperator_4@ApplyJump].B
+[K2Node_PromotableOperator_11].ReturnValue -> [K2Node_CallFunction_12].LineEnd
+[K2Node_PromotableOperator_12].ReturnValue_Z -> [K2Node_PromotableOperator_10].B
+[K2Node_PromotableOperator_13].ReturnValue -> [K2Node_PromotableOperator_11].B
+[K2Node_PromotableOperator_14].ReturnValue -> [K2Node_CallFunction_12].LineStart
+[K2Node_PromotableOperator_14].ReturnValue -> [K2Node_CallFunction_29].TextLocation
+[K2Node_PromotableOperator_14].ReturnValue -> [K2Node_PromotableOperator_11].A
+[K2Node_PromotableOperator_15].ReturnValue -> [K2Node_CallFunction_22@ApplyJump].Yaw
+[K2Node_PromotableOperator_16].ReturnValue -> [K2Node_CallFunction_75].InDouble
+[K2Node_PromotableOperator_19].ReturnValue -> [K2Node_PromotableOperator_0@ApplyJump].A
+[K2Node_PromotableOperator_3].ReturnValue -> [K2Node_PromotableOperator_15].B
+[K2Node_PromotableOperator_4@ApplyJump].ReturnValue -> [K2Node_IfThenElse_1].Condition
+[K2Node_PromotableOperator_4@ApplyJump].ReturnValue#2 -> [K2Node_CallFunction_17@ApplyJump].Impulse
+[K2Node_PromotableOperator_4@ApplyJump].ReturnValue#2 -> [K2Node_CallFunction_20@ApplyJump].NewAngVel
+[K2Node_PromotableOperator_6].ReturnValue -> [K2Node_IfThenElse_0@ApplyJump].Condition#2
+[K2Node_Self_3].self -> [K2Node_CallFunction_24@EventGraph].Target
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].then -> [K2Node_CallFunction_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].execute
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].then#2 -> [K2Node_CallFunction_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].execute#2
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].then#3 -> [K2Node_CallFunction_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].execute#3
+[K2Node_SetVariableOnPersistentFrame_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].then#4 -> [K2Node_CallFunction_0@InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_3].execute#4
+[K2Node_VariableGet_12].Mesh -> [K2Node_CallFunction_20@ApplyJump].self
+[K2Node_VariableGet_15].Thrust -> [K2Node_CallFunction_4].Force
+[K2Node_VariableGet_15].Thrust -> [K2Node_PromotableOperator_13].A
+[K2Node_VariableGet_16].BP_FluxBuoyancyComponent -> [K2Node_VariableGet_17].self
+[K2Node_VariableGet_17].DrawDebug -> [K2Node_IfThenElse_0@ApplyJump].Condition
+[K2Node_VariableGet_18].WaterCloseToMotor -> [K2Node_CallFunction_5@EventGraph].Center
+[K2Node_VariableGet_19].WaterCloseToMotor_Z -> [K2Node_PromotableOperator_4@ApplyJump].A
+[K2Node_VariableGet_2].Mesh -> [K2Node_CallFunction_17@ApplyJump].self
+[K2Node_VariableGet_2].Mesh -> [K2Node_CallFunction_4].self
+[K2Node_VariableGet_23].WorldMotorLocation_Z -> [K2Node_PromotableOperator_10].A
+[K2Node_VariableGet_24].WorldMotorLocation -> [K2Node_CallFunction_4].Location
+[K2Node_VariableGet_24].WorldMotorLocation -> [K2Node_PromotableOperator_14].A
+[K2Node_VariableGet_27].MotorDepthDetection -> [K2Node_CallFunction_32].A
+[K2Node_VariableGet_27].MotorDepthDetection -> [K2Node_PromotableOperator_12].B_Z
+[K2Node_VariableGet_28].Mesh -> [K2Node_CallFunction_34].self
+[K2Node_VariableGet_29].MotorLocation -> [K2Node_CallFunction_37].Location
+[K2Node_VariableGet_3@ApplyJump].MotorRotationLimit -> [K2Node_PromotableOperator_3].A
+[K2Node_VariableGet_4].Input_X -> [K2Node_PromotableOperator_15].A
+[K2Node_VariableGet_4].Input_Y -> [K2Node_CallFunction_26].Value
+[K2Node_VariableGet_5].MotorForwardForce -> [K2Node_PromotableOperator_0@ApplyJump].B
+[K2Node_VariableGet_7].BP_FluxDataComponent -> [K2Node_CallFunction_7].self
+[K2Node_VariableGet_9].Mesh -> [K2Node_CallFunction_16].self
+[K2Node_VariableGet_9].Mesh -> [K2Node_CallFunction_17@ApplyJump].self#2
+[K2Node_VariableGet_9].Mesh -> [K2Node_CallFunction_18@ApplyJump].self
+[K2Node_VariableGet_9].Mesh -> [K2Node_CallFunction_2].self
+[K2Node_VariableGet_9].Mesh -> [K2Node_CallFunction_21].self
+[K2Node_VariableGet_9].Mesh -> [K2Node_CallFunction_22@ApplyJump].self
+[K2Node_VariableSet_2].then -> [K2Node_IfThenElse_1].execute
+[K2Node_VariableSet_3].then -> [K2Node_CallFunction_4].execute
+[K2Node_VariableSet_4].then -> [K2Node_CallFunction_7].execute

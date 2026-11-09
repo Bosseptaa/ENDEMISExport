@@ -1,0 +1,235 @@
+﻿# /Game/FluidFlux/Demo/Environment/Palm/Functions/MF_WindTreeTrunk
+# класс: MaterialFunction; происхождение: проект; узлов: 34; связей: 70; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_WindTreeTrunk] MaterialFunction
+    описание: Calculate tree trunk wind effect
+    LibraryCategoriesText(0) = NSLOCTEXT("", "7ABF584D4D8FF209BA02D9B497151956", "ImaginaryBlend")
+    StateId = 14A62D104D17DAC21D10D6888BAA1A7C
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_7
+    DependentFunctionExpressionCandidates(1) <- MaterialExpressionMaterialFunctionCall_1
+    DependentFunctionExpressionCandidates(2) <- MaterialExpressionMaterialFunctionCall_2
+    DependentFunctionExpressionCandidates(3) <- MaterialExpressionMaterialFunctionCall_3
+    DependentFunctionExpressionCandidates(4) <- MaterialExpressionMaterialFunctionCall_0
+    EditorOnlyData <- MF_WindTreeTrunkEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_WindTreeTrunkEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionRotateAboutAxis_0
+    ExpressionCollection <- MaterialExpressionTime_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_1
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_1
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionScalarParameter_7
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_7
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionComponentMask_5
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionDivide_2
+    ExpressionCollection <- MaterialExpressionSine_2
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_1
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_2
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_5
+    ExpressionCollection <- MaterialExpressionAdd_3
+    ExpressionCollection <- MaterialExpressionMultiply_6
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    A <- MaterialExpressionMaterialFunctionCall_2
+    B <- MaterialExpressionMultiply_6
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionScalarParameter_7
+[MaterialExpressionAdd_3] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    A <- MaterialExpressionMaterialFunctionCall_0
+    B <- MaterialExpressionMultiply_12
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    A <- MaterialExpressionScalarParameter_0
+    B <- MaterialExpressionScalarParameter_5
+[MaterialExpressionComponentMask_5] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    Input <- MaterialExpressionSubtract_1
+[MaterialExpressionDivide_2] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    A <- MaterialExpressionScalarParameter_1
+    B <- MaterialExpressionScalarParameter_2
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "WorldPosition"
+    Id = F2281DD94E4526EC5B9C2FAD6CD40564
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    bCollapsed = True
+    Preview <- MaterialExpressionWorldPosition_1
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Falloff"
+    Id = 66FA1D904135A8FA823266B651A1A724
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMultiply_0
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "PivotLocation"
+    Id = CE7775644A877FEAB45664B3492200F1
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    bCollapsed = True
+    Preview <- MaterialExpressionMaterialFunctionCall_7
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "WorldOffset"
+    bLastPreviewed = True
+    Id = 59638F2B44E0C8CF4DBEDC95F888B8C2
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    bCollapsed = True
+    A <- MaterialExpressionRotateAboutAxis_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionSine_2
+[MaterialExpressionMaterialFunctionCall_1] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Palm/Functions/MF_InfinityWind.MF_InfinityWind'"
+    FunctionOutputs(0) = (ExpressionOutputId=0E6C8D874D1AFC239D3585ACD37B4EB8,Output=(OutputName="WindDirection"))
+    FunctionOutputs(1) = (ExpressionOutputId=9389FF944F91B1A0B863A787D8B9E398,Output=(OutputName="WindIntensity"))
+    FunctionOutputs(2) = (ExpressionOutputId=BB447837437F9D7DCBA136A46A7E070E,Output=(OutputName="WindForce"))
+    FunctionOutputs(3) = (ExpressionOutputId=CAC6480749AAE69702D8F9B019ACF3E8,Output=(OutputName="WindOffset"))
+    FunctionOutputs(4) = (ExpressionOutputId=E10007584D5683EC85A92EBF2BE2341D,Output=(OutputName="Transform X"))
+    FunctionOutputs(5) = (ExpressionOutputId=1E6075644FBF0FA583886181F6AA462D,Output=(OutputName="Transform Y"))
+    FunctionOutputs(6) = (ExpressionOutputId=13A67FE74236DEEA69C3968EF66270FE,Output=(OutputName="Transform Z"))
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    Outputs(0) = (OutputName="WindDirection")
+    Outputs(1) = (OutputName="WindIntensity")
+    Outputs(2) = (OutputName="WindForce")
+    Outputs(3) = (OutputName="WindOffset")
+    Outputs(4) = (OutputName="Transform X")
+    Outputs(5) = (OutputName="Transform Y")
+    Outputs(6) = (OutputName="Transform Z")
+[MaterialExpressionMaterialFunctionCall_2] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Palm/Functions/MF_InfinityRandom.MF_InfinityRandom'"
+    FunctionOutputs(0) = (ExpressionOutputId=81F9A20A4F58AED74E04229416B6E450,Output=(OutputName="ObjectRandom"))
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    Outputs(0) = (OutputName="ObjectRandom")
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Demo/Environment/Palm/Functions/MF_InfinityWind.MF_InfinityWind'"
+    FunctionOutputs(0) = (ExpressionOutputId=0E6C8D874D1AFC239D3585ACD37B4EB8,Output=(OutputName="WindDirection"))
+    FunctionOutputs(1) = (ExpressionOutputId=9389FF944F91B1A0B863A787D8B9E398,Output=(OutputName="WindIntensity"))
+    FunctionOutputs(2) = (ExpressionOutputId=BB447837437F9D7DCBA136A46A7E070E,Output=(OutputName="WindForce"))
+    FunctionOutputs(3) = (ExpressionOutputId=CAC6480749AAE69702D8F9B019ACF3E8,Output=(OutputName="WindOffset"))
+    FunctionOutputs(4) = (ExpressionOutputId=E10007584D5683EC85A92EBF2BE2341D,Output=(OutputName="Transform X"))
+    FunctionOutputs(5) = (ExpressionOutputId=1E6075644FBF0FA583886181F6AA462D,Output=(OutputName="Transform Y"))
+    FunctionOutputs(6) = (ExpressionOutputId=13A67FE74236DEEA69C3968EF66270FE,Output=(OutputName="Transform Z"))
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    Outputs(0) = (OutputName="WindDirection")
+    Outputs(1) = (OutputName="WindIntensity")
+    Outputs(2) = (OutputName="WindForce")
+    Outputs(3) = (OutputName="WindOffset")
+    Outputs(4) = (OutputName="Transform X")
+    Outputs(5) = (OutputName="Transform Y")
+    Outputs(6) = (OutputName="Transform Z")
+[MaterialExpressionMaterialFunctionCall_7] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/ObjectLocalToWorldData.ObjectLocalToWorldData'"
+    FunctionInputs(0) = (ExpressionInputId=F89CB30243D8A807FD260BA7C4A44137,Input=(OutputIndex=-1,InputName="Local Vector"))
+    FunctionOutputs(0) = (ExpressionOutputId=426771C94EEFBE42C96947919B1D1237,Output=(OutputName="Object Pivot Location"))
+    FunctionOutputs(1) = (ExpressionOutputId=E90A60ED480AD7CFC93CA88839319653,Output=(OutputName="Object Scale XYZ"))
+    FunctionOutputs(2) = (ExpressionOutputId=55472C7A4F4E2DDAEFD852AB1EC39362,Output=(OutputName="Object Scale"))
+    FunctionOutputs(3) = (ExpressionOutputId=2F5E4BB840994F9743405C92B1AE3A79,Output=(OutputName="World Vector"))
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    Outputs(0) = (OutputName="Object Pivot Location")
+    Outputs(1) = (OutputName="Object Scale XYZ")
+    Outputs(2) = (OutputName="Object Scale")
+    Outputs(3) = (OutputName="World Vector")
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = 0.100000
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    A <- MaterialExpressionComponentMask_5
+    B <- MaterialExpressionDivide_2
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    A <- MaterialExpressionAdd_1
+    B <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    A <- MaterialExpressionAdd_3
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionMultiply_6] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    A <- MaterialExpressionTime_0
+    B <- MaterialExpressionAppendVector_0
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    A <- MaterialExpressionMaterialFunctionCall_1
+[MaterialExpressionRotateAboutAxis_0] MaterialExpressionRotateAboutAxis
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    NormalizedRotationAxis <- MaterialExpressionMultiply_7
+    RotationAngle <- MaterialExpressionMultiply_2
+    PivotPoint <- MaterialExpressionFunctionInput_2
+    Position <- MaterialExpressionFunctionInput_0
+[MaterialExpressionScalarParameter_0] MaterialExpressionScalarParameter
+    DefaultValue = 0.250000
+    ParameterName = "TrunkSwaySpeed"
+    ExpressionGUID = 8024668F4C859FC1990F4C9100262B07
+    Group = "Trunk"
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+[MaterialExpressionScalarParameter_1] MaterialExpressionScalarParameter
+    DefaultValue = 0.010000
+    ParameterName = "TrunkSwayAmount"
+    ExpressionGUID = 1589464A473AF6C4197832A4588C4B41
+    Group = "Trunk"
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 2048.000000
+    ParameterName = "TrunkStiffness"
+    ExpressionGUID = 79EB5B2540A79BF263C36DBE1B994994
+    Group = "Trunk"
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+[MaterialExpressionScalarParameter_5] MaterialExpressionScalarParameter
+    DefaultValue = 0.750000
+    ParameterName = "TrunkSwaySpeedWind"
+    ExpressionGUID = 50D5132C44EE739F3FBE6DB6FECA6DC0
+    Group = "Trunk"
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+[MaterialExpressionScalarParameter_7] MaterialExpressionScalarParameter
+    DefaultValue = 5.000000
+    ParameterName = "TrunkSwayForce"
+    ExpressionGUID = 9A82F1F04466DFD19A18DB9B9DF92F67
+    Group = "Trunk"
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+[MaterialExpressionSine_2] MaterialExpressionSine
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+    A <- MaterialExpressionWorldPosition_0
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionTime_0] MaterialExpressionTime
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+[MaterialExpressionWorldPosition_1] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_WindTreeTrunk'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

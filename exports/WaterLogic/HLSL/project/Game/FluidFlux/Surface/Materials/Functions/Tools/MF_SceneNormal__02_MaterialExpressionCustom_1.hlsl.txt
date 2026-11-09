@@ -1,0 +1,8 @@
+﻿// Источник: /Game/FluidFlux/Surface/Materials/Functions/Tools/MF_SceneNormal (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_1 ключ: Code
+// Входы: ScreenPos, NearPlane
+// Выход: CMOT_Float4
+// Описание: ScreenPos to ViewPos
+
+ float2 viewpos = (ScreenPos.xy - View.ScreenPositionScaleBias.wz) / View.ScreenPositionScaleBias.xy * NearPlane; 
+ return float4( viewpos, NearPlane, 1 ) ;

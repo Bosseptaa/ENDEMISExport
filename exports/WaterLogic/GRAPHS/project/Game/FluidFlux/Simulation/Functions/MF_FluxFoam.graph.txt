@@ -1,0 +1,216 @@
+﻿# /Game/FluidFlux/Simulation/Functions/MF_FluxFoam
+# класс: MaterialFunction; происхождение: проект; узлов: 40; связей: 76; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:368
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxFoam] MaterialFunction
+    StateId = 580CE3C149FBB81AF5356F947D538F7F
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FluxFoamEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxFoamEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionAdd_6
+    ExpressionCollection <- MaterialExpressionMax_5
+    ExpressionCollection <- MaterialExpressionMultiply_12
+    ExpressionCollection <- MaterialExpressionScalarParameter_11
+    ExpressionCollection <- MaterialExpressionMultiply_13
+    ExpressionCollection <- MaterialExpressionSaturate_4
+    ExpressionCollection <- MaterialExpressionSaturate_5
+    ExpressionCollection <- MaterialExpressionScalarParameter_14
+    ExpressionCollection <- MaterialExpressionScalarParameter_15
+    ExpressionCollection <- MaterialExpressionMultiply_14
+    ExpressionCollection <- MaterialExpressionDotProduct_2
+    ExpressionCollection <- MaterialExpressionConstant4Vector_2
+    ExpressionCollection <- MaterialExpressionMultiply_16
+    ExpressionCollection <- MaterialExpressionScalarParameter_17
+    ExpressionCollection <- MaterialExpressionAdd_8
+    ExpressionCollection <- MaterialExpressionSubtract_6
+    ExpressionCollection <- MaterialExpressionScalarParameter_18
+    ExpressionCollection <- MaterialExpressionSubtract_7
+    ExpressionCollection <- MaterialExpressionSaturate_6
+    ExpressionCollection <- MaterialExpressionOneMinus_1
+    ExpressionCollection <- MaterialExpressionMultiply_17
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionMultiply_18
+    ExpressionCollection <- MaterialExpressionScalarParameter_19
+    ExpressionCollection <- MaterialExpressionMax_7
+    ExpressionCollection <- MaterialExpressionReroute_3
+    ExpressionCollection <- MaterialExpressionMultiply_19
+    ExpressionCollection <- MaterialExpressionMultiply_11
+    ExpressionCollection <- MaterialExpressionScalarParameter_13
+    ExpressionCollection <- MaterialExpressionMax_2
+    ExpressionCollection <- MaterialExpressionSubtract_5
+    ExpressionCollection <- MaterialExpressionAdd_4
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionComment_1
+[MaterialExpressionAdd_4] MaterialExpressionAdd
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionMax_5
+[MaterialExpressionAdd_6] MaterialExpressionAdd
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionSaturate_5
+    B <- MaterialExpressionMultiply_12
+[MaterialExpressionAdd_8] MaterialExpressionAdd
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionMultiply_13
+    B <- MaterialExpressionMultiply_17
+[MaterialExpressionComment_1] MaterialExpressionComment
+    SizeX = 2352
+    SizeY = 960
+    Text = "Foam"
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+[MaterialExpressionConstant4Vector_2] MaterialExpressionConstant4Vector
+    Constant = (R=0.500000,G=0.500000,B=0.500000,A=0.500000)
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    bCollapsed = True
+[MaterialExpressionDotProduct_2] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionFunctionInput_2
+    B <- MaterialExpressionConstant4Vector_2
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Depth"
+    Id = 00CE9B6445E27F60460A059ED5F63F85
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Foam"
+    Id = A0E852A4420F5EEBB3B189B7822D6D59
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Velocity"
+    Id = CBC1A1AD4CA3777226743A8DB42EEAA9
+    InputType = FunctionInput_Vector4
+    SortPriority = 12
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    InputName = "Flux"
+    Id = 114A50B54B826914F21D518CA1A8A1F2
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Foam"
+    bLastPreviewed = True
+    Id = BCE0A96542303F816ECCB28DBD55F449
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    bCollapsed = True
+    A <- MaterialExpressionSaturate_4
+[MaterialExpressionMax_2] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionSubtract_5
+[MaterialExpressionMax_5] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionMultiply_14
+[MaterialExpressionMax_7] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionMultiply_18
+    B <- MaterialExpressionAdd_6
+[MaterialExpressionMultiply_11] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionScalarParameter_13
+    B <- MaterialExpressionFunctionInput_3
+[MaterialExpressionMultiply_12] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionSubtract_6
+    B <- MaterialExpressionScalarParameter_11
+[MaterialExpressionMultiply_13] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionSaturate_5
+    B <- MaterialExpressionMultiply_16
+[MaterialExpressionMultiply_14] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionDotProduct_2
+    B <- MaterialExpressionScalarParameter_15
+[MaterialExpressionMultiply_16] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionDotProduct_2
+    B <- MaterialExpressionScalarParameter_17
+[MaterialExpressionMultiply_17] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionAdd_4
+    B <- MaterialExpressionSaturate_6
+[MaterialExpressionMultiply_18] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionMultiply_19
+    B <- MaterialExpressionReroute_3
+[MaterialExpressionMultiply_19] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionScalarParameter_19
+[MaterialExpressionOneMinus_1] MaterialExpressionOneMinus
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    Input <- MaterialExpressionSubtract_7
+[MaterialExpressionReroute_3] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    Input <- MaterialExpressionDotProduct_2
+[MaterialExpressionSaturate_4] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    Input <- MaterialExpressionMax_7
+[MaterialExpressionSaturate_5] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionSaturate_6] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    Input <- MaterialExpressionOneMinus_1
+[MaterialExpressionScalarParameter_11] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "DeltaTime"
+    ExpressionGUID = 6F5FEACD4BE5F960C8E887B5A0533D55
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+[MaterialExpressionScalarParameter_13] MaterialExpressionScalarParameter
+    DefaultValue = -0.010000
+    ParameterName = "FoamHeightScale"
+    ExpressionGUID = 271C2A754888F77AFE43739F7A46C7EE
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+[MaterialExpressionScalarParameter_14] MaterialExpressionScalarParameter
+    DefaultValue = 0.001000
+    ParameterName = "FoamFadeSpeed"
+    ExpressionGUID = E95B989D436E4DDA57B094B1D8809886
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+[MaterialExpressionScalarParameter_15] MaterialExpressionScalarParameter
+    DefaultValue = 0.100000
+    ParameterName = "FoamShallowGenerate"
+    ExpressionGUID = B436FA794AF9E618FBBA39ACB1365121
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+[MaterialExpressionScalarParameter_17] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "AdvectFoam"
+    ExpressionGUID = 0D6F86F74301971E9D37DA9BD6C8C225
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+[MaterialExpressionScalarParameter_18] MaterialExpressionScalarParameter
+    DefaultValue = 400.000000
+    ParameterName = "FoamShallowDepth"
+    ExpressionGUID = 2C992B474EBB6492D5F56389B1F0A2BE
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+[MaterialExpressionScalarParameter_19] MaterialExpressionScalarParameter
+    ParameterName = "FoamWaveGenerate"
+    ExpressionGUID = CDB108AD41D4A4EBDC1D64A418DED0B9
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+[MaterialExpressionSubtract_5] MaterialExpressionSubtract
+    ConstB = 3.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionMultiply_11
+[MaterialExpressionSubtract_6] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionAdd_8
+    B <- MaterialExpressionScalarParameter_14
+[MaterialExpressionSubtract_7] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxFoam'"
+    A <- MaterialExpressionFunctionInput_0
+    B <- MaterialExpressionScalarParameter_18
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

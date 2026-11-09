@@ -1,0 +1,68 @@
+﻿# /Game/FluidFlux/Simulation/Modifiers/BP_FluxModifierWaveActor
+# класс: Blueprint; происхождение: проект; узлов: 9; связей: 13; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:73
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[BP_FluxModifierWaveActor] Blueprint
+    ParentClass = "/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Simulation/Modifiers/BP_FluxModifierContainerActor.BP_FluxModifierContainerActor_C'"
+    HideCategories(0) = "Actor"
+    HideCategories(1) = "Input"
+    HideCategories(2) = "Collision"
+    HideCategories(3) = "LOD"
+    HideCategories(4) = "Cooking"
+    HideCategories(5) = "Replication"
+    HideCategories(6) = "Rendering"
+    BlueprintSystemVersion = 2
+    SimpleConstructionScript = "/Script/Engine.SimpleConstructionScript'BP_FluxModifierWaveActor_C:SimpleConstructionScript_0'"
+    ComponentTemplates(0) = "/Script/Engine.BoxComponent'BP_FluxModifierWaveActor_C:NODE_AddBoxComponent-0'"
+    InheritableComponentHandler = "/Script/Engine.InheritableComponentHandler'BP_FluxModifierWaveActor_C:InheritableComponentHandler'"
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Flux"
+    CategorySorting(3) = "Event Graph"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Simulation/Modifiers/BP_FluxModifierWaveActor.BP_FluxModifierWaveActor:EventGraph",SavedViewOffset=(X=-3222.442383,Y=-1614.038574),SavedZoomAmount=0.250000)
+    ComponentTemplateNameIndex = (("BoxComponent", 1))
+    GeneratedClass = "/Script/Engine.BlueprintGeneratedClass'BP_FluxModifierWaveActor_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = C36D3558431F661EE0B68EAC63668FCC
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- UserConstructionScript
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = AC897CEA43EA2D52CAB9C5BDC520757F
+[UserConstructionScript] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 527540E24EA6E4AC0ADD46B14E611F2A
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallParentFunction_0
+    Nodes(2) <- K2Node_AddComponent_0
+    Nodes(3) <- K2Node_CallFunction_4
+    Nodes(4) <- K2Node_VariableGet_0
+[K2Node_FunctionEntry_0] K2Node_FunctionEntry (вызов: UserConstructionScript @ /Script/CoreUObject.Class)
+[K2Node_CallParentFunction_0] K2Node_CallParentFunction (вызов: UserConstructionScript @ /Script/Engine.BlueprintGeneratedClass)
+[K2Node_AddComponent_0] K2Node_AddComponent (вызов: AddComponent)
+    TemplateType = "/Script/CoreUObject.Class'/Script/Engine.BoxComponent'"
+    вход TemplateName = NODE_AddBoxComponent-0
+    вход bManualAttachment = true
+    вход RelativeTransform_Location = 0, 0, 0
+    вход RelativeTransform_Rotation = 0, 0, 0
+    вход RelativeTransform_Scale = 1.000000,1.000000,1.000000
+    вход bDeferredFinish = false
+[K2Node_CallFunction_4] K2Node_CallFunction (вызов: K2_AttachToComponent @ /Script/CoreUObject.Class)
+    вход SocketName = None
+    вход LocationRule = SnapToTarget
+    вход RotationRule = SnapToTarget
+    вход ScaleRule = SnapToTarget
+    вход bWeldSimulatedBodies = TRUE
+[K2Node_VariableGet_0] K2Node_VariableGet (переменная: BP_FluxModifierWaveComponent)
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+
+## СВЯЗИ
+[K2Node_AddComponent_0].ReturnValue -> [K2Node_CallFunction_4].self
+[K2Node_AddComponent_0].then -> [K2Node_CallFunction_4].execute
+[K2Node_CallParentFunction_0].then -> [K2Node_AddComponent_0].execute
+[K2Node_FunctionEntry_0].then -> [K2Node_CallParentFunction_0].execute
+[K2Node_VariableGet_0].BP_FluxModifierWaveComponent -> [K2Node_CallFunction_4].Parent

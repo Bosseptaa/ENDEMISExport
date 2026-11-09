@@ -1,0 +1,76 @@
+﻿// Источник: /Game/FluidFlux/Surface/Lighting/Functions/MF_LightScattering (MaterialExpressionCustom, происхождение: проект)
+// Объект: MaterialExpressionCustom_1 ключ: Code
+// Входы: tmin, tmax, raysteps, dir, origin, lightnormal, lightpos, density, scatteringfactor, extincting, directLight, indirectLight, gp, tex_in, dither, lightSize
+// Выход: не указан
+// Описание: DirectionalLightScattering
+
+struct Functions
+{
+float henyey_greenstein_phase_func(float mu, float g)
+{
+	#define PI 3.14159265359
+	return
+						(1. - g*g)
+	/ //---------------------------------------------
+		((4. * PI) * pow(1. + g*g - 2.*g*mu, 1.5));
+}
+
+float getsuncolor(float3 origin, float3 dir, float3 lightpos,float3 lightnormal)
+{
+	/*
+    float t;
+    float2 intersect = raycast(origin, dir, t);
+    if(intersect.x > -500.0) 
+        return 0.0;*/
+ 
+    float scale = 1.0;
+  
+    if (-dot(dir, lightnormal) < 0.96)
+        scale = clamp((-dot(dir, lightnormal) - 0.9) * 30.0, 0.0, 1.0);
+  
+   //   return exp(-length(lightpos - origin) * density * extincting);
+  //  return scale * 0.01/pow(length(lightpos - origin), 2.0);//  * max(-dot(dir, lightnormal) * 5.0-3.5, 0.0);
+	
+	float distance = length(lightpos - origin);
+	float distanceFade = saturate(1.0 - distance  /4000.0); 
+	
+	 return   distanceFade * (1000.0 / max(distance-250.0, 250.0));
+	
+}
+
+};
+
+Functions f;
+float RayStepSize = (tmax - tmin) / float(raysteps);
+float CurrentDepth = tmin + dither * RayStepSize;
+float stepdensity = density * RayStepSize;
+
+float Transmittance = 1.;
+float3 Illumination = float3(0.0 ,0.0, 0.0);
+
+for(int i=0; i < raysteps; i++)
+{	
+	float3 samplePosition = origin + dir * CurrentDepth;
+	CurrentDepth += RayStepSize;
+	
+	float3 SampleToLightDirection = normalize(lightpos - samplePosition);
+
+	float phase = f.henyey_greenstein_phase_func( dot(SampleToLightDirection, dir) , gp);
+	
+	
+	float3 sampleLocal = samplePosition / lightSize;
+	float3 tex = Texture2DSample(tex_in, tex_inSampler, sampleLocal.yz / (sampleLocal.x) -0.5);
+ 
+	float attenuation = (1.0 - sampleLocal.x);
+	float LightShadow = tex.x * attenuation * attenuation;
+ 
+	
+	//float LightShadow = samplerColor.r; //f.getsuncolor(samplePosition, SampleToLightDirection, lightpos, lightnormal);
+	float InOutScattering = (indirectLight + directLight * phase) * LightShadow * scatteringfactor;
+
+	Transmittance *= exp(-stepdensity * extincting);
+	Illumination += stepdensity * Transmittance * InOutScattering;	
+}
+
+return Illumination * Transmittance;
+

@@ -1,0 +1,223 @@
+﻿# /Game/FluidFlux/Surface/Lighting/Functions/MF_IntersectionEllipsoid
+# класс: MaterialFunction; происхождение: проект; узлов: 40; связей: 86; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:91
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_IntersectionEllipsoid] MaterialFunction
+    описание: Calculates ray-ellipsoid intersection
+    bExposeToLibrary = True
+    StateId = 992CFCEE4333BC7062B42EB7BCABB283
+    CombinedInputTypes = 4
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_6
+    EditorOnlyData <- MF_IntersectionEllipsoidEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_IntersectionEllipsoidEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_5
+    ExpressionCollection <- MaterialExpressionFunctionInput_8
+    ExpressionCollection <- MaterialExpressionCameraPositionWS_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionSquareRoot_0
+    ExpressionCollection <- MaterialExpressionSubtract_6
+    ExpressionCollection <- MaterialExpressionSubtract_0
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionFunctionOutput_4
+    ExpressionCollection <- MaterialExpressionDivide_1
+    ExpressionCollection <- MaterialExpressionDivide_3
+    ExpressionCollection <- MaterialExpressionDotProduct_0
+    ExpressionCollection <- MaterialExpressionDotProduct_2
+    ExpressionCollection <- MaterialExpressionDotProduct_3
+    ExpressionCollection <- MaterialExpressionMultiply_3
+    ExpressionCollection <- MaterialExpressionSubtract_4
+    ExpressionCollection <- MaterialExpressionMultiply_4
+    ExpressionCollection <- MaterialExpressionSubtract_5
+    ExpressionCollection <- MaterialExpressionConstant3Vector_0
+    ExpressionCollection <- MaterialExpressionActorPositionWS_0
+    ExpressionCollection <- MaterialExpressionSubtract_10
+    ExpressionCollection <- MaterialExpressionMultiply_9
+    ExpressionCollection <- MaterialExpressionSubtract_13
+    ExpressionCollection <- MaterialExpressionPixelDepth_0
+    ExpressionCollection <- MaterialExpressionDotProduct_6
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_6
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_0
+    ExpressionCollection <- MaterialExpressionMultiply_8
+    ExpressionCollection <- MaterialExpressionDivide_7
+    ExpressionCollection <- MaterialExpressionMultiply_15
+    ExpressionCollection <- MaterialExpressionCameraVectorWS_2
+    ExpressionCollection <- MaterialExpressionMultiply_7
+    ExpressionCollection <- MaterialExpressionDivide_8
+    ExpressionCollection <- MaterialExpressionDivide_9
+    ExpressionCollection <- MaterialExpressionMultiply_18
+[MaterialExpressionActorPositionWS_0] MaterialExpressionActorPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+[MaterialExpressionCameraPositionWS_0] MaterialExpressionCameraPositionWS
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+[MaterialExpressionCameraVectorWS_0] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+[MaterialExpressionCameraVectorWS_2] MaterialExpressionCameraVectorWS
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+[MaterialExpressionConstant3Vector_0] MaterialExpressionConstant3Vector
+    Constant = (R=50.000000,G=50.000000,B=50.000000,A=0.000000)
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    bCollapsed = True
+[MaterialExpressionDivide_1] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    Desc = "rcn"
+    A <- MaterialExpressionFunctionInput_2
+    B <- MaterialExpressionFunctionInput_8
+[MaterialExpressionDivide_3] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    Desc = "rdn"
+    A <- MaterialExpressionFunctionInput_5
+    B <- MaterialExpressionFunctionInput_8
+[MaterialExpressionDivide_7] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionPixelDepth_0
+    B <- MaterialExpressionMultiply_8
+[MaterialExpressionDivide_8] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionDotProduct_2
+    B <- MaterialExpressionDotProduct_0
+[MaterialExpressionDivide_9] MaterialExpressionDivide
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionSquareRoot_0
+    B <- MaterialExpressionDotProduct_0
+[MaterialExpressionDotProduct_0] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    Desc = "a"
+    A <- MaterialExpressionDivide_3
+    B <- MaterialExpressionDivide_3
+[MaterialExpressionDotProduct_2] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    Desc = "b"
+    A <- MaterialExpressionDivide_1
+    B <- MaterialExpressionDivide_3
+[MaterialExpressionDotProduct_3] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    Desc = "c"
+    A <- MaterialExpressionDivide_1
+    B <- MaterialExpressionDivide_1
+[MaterialExpressionDotProduct_6] MaterialExpressionDotProduct
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionCameraVectorWS_0
+    B <- MaterialExpressionMaterialFunctionCall_6
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Ray Origin"
+    Id = 79CFE2BC4E2EE2C3B49C65811CDA7F2A
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    Desc = "ro"
+    bCollapsed = True
+    Preview <- MaterialExpressionSubtract_10
+[MaterialExpressionFunctionInput_5] MaterialExpressionFunctionInput
+    InputName = "Ray Direction"
+    Id = 7DBA97F142A9B1E8BDC01298C369DDF6
+    bUsePreviewValueAsDefault = True
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    Desc = "rd"
+    bCollapsed = True
+    Preview <- MaterialExpressionMultiply_7
+[MaterialExpressionFunctionInput_8] MaterialExpressionFunctionInput
+    InputName = "Radius"
+    Id = B638E86E4B6B3F6D5F54849BD8640F96
+    bUsePreviewValueAsDefault = True
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    bCollapsed = True
+    Preview <- MaterialExpressionConstant3Vector_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Near"
+    bLastPreviewed = True
+    Id = F7B5FDE340A48E6C45A50A95BA6282F5
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    bCollapsed = True
+    A <- MaterialExpressionSubtract_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Far"
+    SortPriority = 2
+    bLastPreviewed = True
+    Id = 034E260947574ACF0D6427BC7F58A7D9
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    bCollapsed = True
+    A <- MaterialExpressionSubtract_6
+[MaterialExpressionFunctionOutput_4] MaterialExpressionFunctionOutput
+    OutputName = "Depth"
+    SortPriority = 4
+    bLastPreviewed = True
+    Id = ADF6C8B94693B108AA6AB0BA993F422A
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    bCollapsed = True
+    A <- MaterialExpressionMultiply_15
+[MaterialExpressionMaterialFunctionCall_6] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/CameraDirectionVector.CameraDirectionVector'"
+    FunctionOutputs(0) = (ExpressionOutputId=B8DC55274CB0C18F86B060A5EED9FCD3,Output=(OutputName="Result"))
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    Outputs(0) = (OutputName="Result")
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionDivide_9
+[MaterialExpressionMultiply_15] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionDivide_9
+[MaterialExpressionMultiply_18] MaterialExpressionMultiply
+    ConstB = 0.010000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionSubtract_13
+[MaterialExpressionMultiply_3] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionDotProduct_2
+    B <- MaterialExpressionDotProduct_2
+[MaterialExpressionMultiply_4] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionSubtract_5
+    B <- MaterialExpressionDotProduct_0
+[MaterialExpressionMultiply_7] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionCameraVectorWS_2
+[MaterialExpressionMultiply_8] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionDotProduct_6
+[MaterialExpressionMultiply_9] MaterialExpressionMultiply
+    ConstB = 0.010000
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionFunctionOutput_4
+[MaterialExpressionPixelDepth_0] MaterialExpressionPixelDepth
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+[MaterialExpressionSquareRoot_0] MaterialExpressionSquareRoot
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    Desc = "h"
+    Input <- MaterialExpressionSubtract_4
+[MaterialExpressionSubtract_0] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionMultiply_0
+    B <- MaterialExpressionDivide_8
+[MaterialExpressionSubtract_10] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionCameraPositionWS_0
+    B <- MaterialExpressionActorPositionWS_0
+[MaterialExpressionSubtract_13] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionFunctionOutput_1
+    B <- MaterialExpressionDivide_7
+[MaterialExpressionSubtract_4] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    Desc = "h"
+    A <- MaterialExpressionMultiply_3
+    B <- MaterialExpressionMultiply_4
+[MaterialExpressionSubtract_5] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionDotProduct_3
+[MaterialExpressionSubtract_6] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_IntersectionEllipsoid'"
+    A <- MaterialExpressionDivide_9
+    B <- MaterialExpressionDivide_8
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

@@ -1,0 +1,912 @@
+﻿# /Game/FluidFlux/Demo/Mannequin/Animations/ABP_ThirdPerson
+# класс: AnimBlueprint; происхождение: проект; узлов: 220; связей: 372; HLSL: 0; причина: папка /Game/FluidFlux; тело:38
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[ABP_ThirdPerson] AnimBlueprint
+    TargetSkeleton = "/Script/Engine.Skeleton'/Game/FluidFlux/Demo/Mannequin/Mesh/S_Mannequin.S_Mannequin'"
+    ParentClass = "/Script/CoreUObject.Class'/Script/Engine.AnimInstance'"
+    BlueprintSystemVersion = 2
+    NewVariables(9) = (VarName="IsDriver",VarGuid=DD8D17C741BE8C07AA39CDBB3035C22F,VarType=(PinCategory="bool"),FriendlyName="Is Driver",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=65541)
+    CategorySorting(0) = "Default"
+    CategorySorting(1) = ""
+    CategorySorting(2) = "Anim Graph"
+    CategorySorting(3) = "Event Graph"
+    CategorySorting(4) = "Wind"
+    LastEditedDocuments(0) = (EditedObjectPath="/Game/FluidFlux/Demo/Mannequin/Animations/ABP_ThirdPerson.ABP_ThirdPerson:EventGraph",SavedViewOffset=(X=-1956.412598,Y=-1819.064575),SavedZoomAmount=0.250000)
+    LastEditedDocuments(1) = (EditedObjectPath="/Game/FluidFlux/Demo/Mannequin/Animations/ABP_ThirdPerson.ABP_ThirdPerson:AnimGraph",SavedViewOffset=(X=2226.951172,Y=384.495026),SavedZoomAmount=1.000000)
+    LastEditedDocuments(2) = (EditedObjectPath="/Game/FluidFlux/Demo/Mannequin/Animations/ABP_ThirdPerson.ABP_ThirdPerson:UpdateCharacter",SavedViewOffset=(X=1910.308350,Y=90.652161),SavedZoomAmount=1.000000)
+    GeneratedClass = "/Script/Engine.AnimBlueprintGeneratedClass'ABP_ThirdPerson_C'"
+    bLegacyNeedToPurgeSkelRefs = False
+    BlueprintGuid = 99B6ABD64E82BF3E3AF31F8632A7EC07
+    UbergraphPages(0) <- EventGraph
+    FunctionGraphs(0) <- AnimGraph
+    FunctionGraphs(1) <- UpdateCharacter
+    Extensions(0) <- AnimBlueprintExtension_Base_0
+    Extensions(1) <- AnimBlueprintExtension_Attributes_0
+    Extensions(2) <- AnimBlueprintExtension_PropertyAccess_0
+    Extensions(3) <- AnimBlueprintExtension_StateMachine_0
+    Extensions(4) <- AnimBlueprintExtension_CachedPose_0
+    ThumbnailInfo <- SceneThumbnailInfo_0
+[AnimGraph] AnimationGraph
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationGraphSchema'"
+    bAllowDeletion = False
+    GraphGuid = C4C6FFDA457B0C3659DA12B572A06807
+    Nodes(0) <- AnimGraphNode_Root_5
+    Nodes(1) <- AnimGraphNode_StateMachine_1
+    Nodes(2) <- AnimGraphNode_LayeredBoneBlend_0
+    Nodes(3) <- AnimGraphNode_SaveCachedPose_0
+    Nodes(4) <- AnimGraphNode_UseCachedPose_0
+    Nodes(5) <- EdGraphNode_Comment_6
+    Nodes(6) <- AnimGraphNode_SequencePlayer_0
+    Nodes(7) <- AnimGraphNode_TwoWayBlend_0
+    Nodes(8) <- AnimGraphNode_UseCachedPose_1
+    Nodes(9) <- AnimGraphNode_ModifyBone_1
+    Nodes(10) <- AnimGraphNode_ComponentToLocalSpace_0
+    Nodes(11) <- AnimGraphNode_LocalToComponentSpace_0
+    Nodes(12) <- AnimGraphNode_ModifyBone_2
+    Nodes(13) <- AnimGraphNode_ModifyBone_3
+    Nodes(14) <- AnimGraphNode_ModifyBone_0
+    Nodes(15) <- K2Node_VariableGet_3
+    Nodes(16) <- K2Node_VariableGet_5
+    Nodes(17) <- K2Node_VariableGet_2
+    Nodes(18) <- K2Node_CallFunction_6
+    Nodes(19) <- K2Node_CommutativeAssociativeBinaryOperator_5
+    Nodes(20) <- AnimGraphNode_BlendListByBool_1
+    Nodes(21) <- K2Node_VariableGet_1
+    Nodes(22) <- AnimGraphNode_UseCachedPose_3
+    Nodes(23) <- K2Node_VariableGet_0
+    Nodes(24) <- AnimGraphNode_BlendListByBool_2
+    Nodes(25) <- AnimGraphNode_SequencePlayer_1
+    Nodes(26) <- AnimGraphNode_Slot_0
+    Nodes(27) <- K2Node_VariableGet_8
+    Nodes(28) <- K2Node_VariableGet_7
+    Nodes(29) <- K2Node_VariableGet_4
+    Nodes(30) <- K2Node_CallFunction_0
+    Nodes(31) <- K2Node_VariableGet_9
+    Nodes(32) <- K2Node_VariableGet_6
+    Nodes(33) <- AnimGraphNode_BlendListByBool_3
+    Nodes(34) <- AnimGraphNode_SequencePlayer_3
+    SubGraphs(0) <- Movement
+[AnimGraphNode_StateMachine_1] AnimGraphNode_StateMachine
+    ErrorType = 3
+    EditorStateMachineGraph <- Movement
+    Binding <- AnimGraphNodeBinding_Base_0
+[Movement] AnimationStateMachineGraph
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationStateMachineSchema'"
+    GraphGuid = 63E8B8894E297556D89DD18E8C27038A
+    EntryNode <- AnimStateEntryNode_0
+    OwnerAnimGraphNode <- AnimGraphNode_StateMachine_1
+    Nodes(0) <- AnimStateEntryNode_0
+    Nodes(1) <- AnimStateNode_1
+    Nodes(2) <- AnimStateNode_4
+    Nodes(3) <- AnimStateNode_6
+    Nodes(4) <- AnimStateNode_8
+    Nodes(5) <- AnimStateTransitionNode_4
+    Nodes(6) <- AnimStateTransitionNode_6
+    Nodes(7) <- AnimStateTransitionNode_8
+    Nodes(8) <- AnimStateNode_0
+    Nodes(9) <- AnimStateTransitionNode_0
+    Nodes(10) <- AnimStateTransitionNode_1
+    Nodes(11) <- AnimStateTransitionNode_3
+    Nodes(12) <- AnimStateTransitionNode_2
+    Nodes(13) <- AnimStateTransitionNode_5
+    SubGraphs(0) <- Idle/Run
+    SubGraphs(1) <- JumpStart
+    SubGraphs(2) <- JumpLoop
+    SubGraphs(3) <- JumpEnd
+    SubGraphs(4) <- Transition
+    SubGraphs(5) <- Transition
+    SubGraphs(6) <- Transition
+    SubGraphs(7) <- Swimming
+    SubGraphs(8) <- Transition
+    SubGraphs(9) <- Transition
+    SubGraphs(10) <- Transition
+    SubGraphs(11) <- Transition
+    SubGraphs(12) <- Transition
+[AnimStateTransitionNode_4] AnimStateTransitionNode
+    ErrorType = 3
+    BoundGraph <- Transition
+[Transition@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_4] AnimationTransitionGraph
+[AnimGraphNode_TransitionResult_26] AnimGraphNode_TransitionResult
+    ShowPinForProperties(0) = (PropertyName="bCanEnterTransition",PropertyFriendlyName="Can Enter Transition",CategoryName="Result",bShowPin=True,bCanToggleVisibility=True)
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_4.Transition.AnimGraphNode_TransitionResult_26] AnimGraphNodeBinding_Base
+[K2Node_CallFunction_7960] K2Node_CallFunction (вызов: Less_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 0.1
+[K2Node_TransitionRuleGetter_44] K2Node_TransitionRuleGetter
+    GetterType = AnimationAsset_GetTimeFromEndFraction
+    AssociatedAnimAssetPlayerNode <- AnimGraphNode_SequencePlayer_34
+[AnimStateTransitionNode_6] AnimStateTransitionNode
+    ErrorType = 3
+    BoundGraph <- Transition
+[Transition@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_6] AnimationTransitionGraph
+[AnimGraphNode_TransitionResult_37] AnimGraphNode_TransitionResult
+    ShowPinForProperties(0) = (PropertyName="bCanEnterTransition",PropertyFriendlyName="Can Enter Transition",CategoryName="Result",bShowPin=True,bCanToggleVisibility=True)
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_6.Transition.AnimGraphNode_TransitionResult_37] AnimGraphNodeBinding_Base
+[K2Node_CallFunction_8428] K2Node_CallFunction (вызов: Less_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 0.1
+[K2Node_TransitionRuleGetter_53] K2Node_TransitionRuleGetter
+    GetterType = AnimationAsset_GetTimeFromEndFraction
+    AssociatedAnimAssetPlayerNode <- AnimGraphNode_SequencePlayer_46
+[AnimStateTransitionNode_8] AnimStateTransitionNode
+    ErrorType = 3
+    BoundGraph <- Transition
+[Transition@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_8] AnimationTransitionGraph
+[AnimGraphNode_TransitionResult_48] AnimGraphNode_TransitionResult
+    ShowPinForProperties(0) = (PropertyName="bCanEnterTransition",PropertyFriendlyName="Can Enter Transition",CategoryName="Result",bShowPin=True,bCanToggleVisibility=True)
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_8.Transition.AnimGraphNode_TransitionResult_48] AnimGraphNodeBinding_Base
+[K2Node_CallFunction_8008] K2Node_CallFunction (вызов: Not_PreBool @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_122] K2Node_VariableGet (переменная: IsInAir)
+[AnimStateTransitionNode_2] AnimStateTransitionNode
+    CrossfadeDuration = 0.400000
+    BoundGraph <- Transition
+[Transition@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_2] AnimationTransitionGraph
+[AnimGraphNode_TransitionResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_2.Transition] AnimGraphNode_TransitionResult
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_2.Transition.AnimGraphNode_TransitionResult_0] AnimGraphNodeBinding_Base
+[K2Node_VariableGet_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_2.Transition] K2Node_VariableGet
+[K2Node_CallFunction_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_2.Transition] K2Node_CallFunction
+[AnimStateTransitionNode_3] AnimStateTransitionNode
+    BoundGraph <- Transition
+[Transition@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_3] AnimationTransitionGraph
+[AnimGraphNode_TransitionResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_3.Transition] AnimGraphNode_TransitionResult
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_3.Transition.AnimGraphNode_TransitionResult_0] AnimGraphNodeBinding_Base
+[K2Node_VariableGet_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_3.Transition] K2Node_VariableGet
+[AnimStateTransitionNode_0] AnimStateTransitionNode
+    CrossfadeDuration = 0.400000
+    BoundGraph <- Transition
+[Transition@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_0] AnimationTransitionGraph
+[AnimGraphNode_TransitionResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_0.Transition] AnimGraphNode_TransitionResult
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_0.Transition.AnimGraphNode_TransitionResult_0] AnimGraphNodeBinding_Base
+[K2Node_VariableGet_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_0.Transition] K2Node_VariableGet
+[AnimStateNode_0] AnimStateNode
+    BoundGraph <- Swimming
+[Swimming] AnimationStateGraph
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationStateGraphSchema'"
+    GraphGuid = 2262912748F0208606BE8A9C91204D86
+    MyResultNode <- AnimGraphNode_StateResult_0
+    Nodes(0) <- AnimGraphNode_StateResult_0
+    Nodes(1) <- AnimGraphNode_BlendSpacePlayer_0
+    Nodes(2) <- K2Node_VariableGet_0
+[AnimGraphNode_StateResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_0.Swimming] AnimGraphNode_StateResult
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_0.Swimming.AnimGraphNode_StateResult_0] AnimGraphNodeBinding_Base
+[AnimGraphNode_BlendSpacePlayer_0] AnimGraphNode_BlendSpacePlayer
+    Node = (BlendSpace="/Script/Engine.BlendSpace1D'/Game/FluidFlux/Demo/Mannequin/Animations/BS_Swimming.BS_Swimming'")
+    Binding <- AnimGraphNodeBinding_Base_0
+    вход Y = 0.000000
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_0.Swimming.AnimGraphNode_BlendSpacePlayer_0] AnimGraphNodeBinding_Base
+[K2Node_VariableGet_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_0.Swimming] K2Node_VariableGet
+[AnimStateTransitionNode_1] AnimStateTransitionNode
+    BoundGraph <- Transition
+[Transition@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_1] AnimationTransitionGraph
+[AnimGraphNode_TransitionResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_1.Transition] AnimGraphNode_TransitionResult
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_1.Transition.AnimGraphNode_TransitionResult_0] AnimGraphNodeBinding_Base
+[K2Node_VariableGet_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_1.Transition] K2Node_VariableGet
+[AnimStateTransitionNode_5] AnimStateTransitionNode
+    BoundGraph <- Transition
+[Transition@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_5] AnimationTransitionGraph
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationTransitionSchema'"
+    GraphGuid = 3D0E3D944E25E681835AEDA093E7AF55
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationTransitionSchema'"
+    GraphGuid = 1A2AED35407AC52964869384085E7085
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationTransitionSchema'"
+    GraphGuid = BA7000C641E79686081E72B4A8A7326E
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationTransitionSchema'"
+    GraphGuid = 590A248B4D46BDF4298AFE9D23DEDB26
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationTransitionSchema'"
+    GraphGuid = FF756A04489068A6356C3D82151518AD
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationTransitionSchema'"
+    GraphGuid = 82B28BBA431C9286E94EB4AEFA6EC025
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationTransitionSchema'"
+    GraphGuid = B5B1872B4284A8070A866EBD80B855C9
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationTransitionSchema'"
+    GraphGuid = 8C4D26294DDAA50CBEC4B68DA3D75F62
+    MyResultNode <- AnimGraphNode_TransitionResult_26
+    Nodes(0) <- AnimGraphNode_TransitionResult_26
+    Nodes(1) <- K2Node_CallFunction_7960
+    Nodes(2) <- K2Node_TransitionRuleGetter_44
+    MyResultNode <- AnimGraphNode_TransitionResult_37
+    Nodes(0) <- AnimGraphNode_TransitionResult_37
+    Nodes(1) <- K2Node_CallFunction_8428
+    Nodes(2) <- K2Node_TransitionRuleGetter_53
+    MyResultNode <- AnimGraphNode_TransitionResult_48
+    Nodes(0) <- AnimGraphNode_TransitionResult_48
+    Nodes(1) <- K2Node_CallFunction_8008
+    Nodes(2) <- K2Node_VariableGet_122
+    MyResultNode <- AnimGraphNode_TransitionResult_0
+    Nodes(0) <- AnimGraphNode_TransitionResult_0
+    Nodes(1) <- K2Node_VariableGet_0
+    Nodes(2) <- K2Node_CallFunction_0
+    MyResultNode <- AnimGraphNode_TransitionResult_0
+    Nodes(0) <- AnimGraphNode_TransitionResult_0
+    Nodes(1) <- K2Node_VariableGet_0
+    MyResultNode <- AnimGraphNode_TransitionResult_0
+    Nodes(0) <- AnimGraphNode_TransitionResult_0
+    Nodes(1) <- K2Node_VariableGet_0
+    MyResultNode <- AnimGraphNode_TransitionResult_0
+    Nodes(0) <- AnimGraphNode_TransitionResult_0
+    Nodes(1) <- K2Node_VariableGet_0
+    MyResultNode <- AnimGraphNode_TransitionResult_0
+    Nodes(0) <- AnimGraphNode_TransitionResult_0
+    Nodes(1) <- K2Node_VariableGet_0
+[AnimGraphNode_TransitionResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_5.Transition] AnimGraphNode_TransitionResult
+    ShowPinForProperties(0) = (PropertyName="bCanEnterTransition",PropertyFriendlyName="Can Enter Transition",CategoryName="Result",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(0) = (PropertyName="bCanEnterTransition",PropertyFriendlyName="Can Enter Transition",CategoryName="Result",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(0) = (PropertyName="bCanEnterTransition",PropertyFriendlyName="Can Enter Transition",CategoryName="Result",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(0) = (PropertyName="bCanEnterTransition",PropertyFriendlyName="Can Enter Transition",CategoryName="Result",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(0) = (PropertyName="bCanEnterTransition",PropertyFriendlyName="Can Enter Transition",CategoryName="Result",bShowPin=True,bCanToggleVisibility=True)
+    Binding <- AnimGraphNodeBinding_Base_0
+    Binding <- AnimGraphNodeBinding_Base_0
+    Binding <- AnimGraphNodeBinding_Base_0
+    Binding <- AnimGraphNodeBinding_Base_0
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_5.Transition.AnimGraphNode_TransitionResult_0] AnimGraphNodeBinding_Base
+[K2Node_VariableGet_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_5.Transition] K2Node_VariableGet
+[AnimStateNode_1] AnimStateNode
+    BoundGraph <- Idle/Run
+[Idle/Run] AnimationStateGraph
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationStateGraphSchema'"
+    GraphGuid = EC8A4796477428E832DE129AF5462313
+    MyResultNode <- AnimGraphNode_StateResult_0
+    Nodes(0) <- AnimGraphNode_StateResult_0
+    Nodes(1) <- AnimGraphNode_BlendSpacePlayer_9
+    Nodes(2) <- K2Node_VariableGet_75
+[AnimGraphNode_StateResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_1.Idle/Run] AnimGraphNode_StateResult
+    ShowPinForProperties(0) = (PropertyName="Result",PropertyFriendlyName="Result",CategoryName="Links",bShowPin=True)
+    ErrorType = 4
+    ShowPinForProperties(0) = (PropertyName="Result",PropertyFriendlyName="Result",CategoryName="Links",bShowPin=True)
+    ErrorType = 4
+    Binding <- AnimGraphNodeBinding_Base_0
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_1.Idle/Run.AnimGraphNode_StateResult_0] AnimGraphNodeBinding_Base
+[AnimGraphNode_BlendSpacePlayer_9] AnimGraphNode_BlendSpacePlayer
+    Node = (BlendSpace="/Script/Engine.BlendSpace1D'/Game/FluidFlux/Demo/Mannequin/Animations/BS_ThirdPerson_IdleRun.BS_ThirdPerson_IdleRun'")
+    Binding <- AnimGraphNodeBinding_Base_0
+    вход Y = 0.000000
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_1.Idle/Run.AnimGraphNode_BlendSpacePlayer_9] AnimGraphNodeBinding_Base
+[K2Node_VariableGet_75] K2Node_VariableGet (переменная: Speed)
+[AnimStateNode_4] AnimStateNode
+    BoundGraph <- JumpStart
+[JumpStart] AnimationStateGraph
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationStateGraphSchema'"
+    GraphGuid = FC6AC83E4D377F87058B2098ECBBCDCD
+    MyResultNode <- AnimGraphNode_StateResult_9
+    Nodes(0) <- AnimGraphNode_StateResult_9
+    Nodes(1) <- AnimGraphNode_SequencePlayer_34
+[AnimGraphNode_StateResult_9] AnimGraphNode_StateResult
+    ShowPinForProperties(0) = (PropertyName="Result",PropertyFriendlyName="Result",CategoryName="Links",bShowPin=True)
+    ErrorType = 4
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_4.JumpStart.AnimGraphNode_StateResult_9] AnimGraphNodeBinding_Base
+[AnimGraphNode_SequencePlayer_34] AnimGraphNode_SequencePlayer
+    Node = (Sequence="/Script/Engine.AnimSequence'/Game/FluidFlux/Demo/Mannequin/Animations/ThirdPersonJump_Start.ThirdPersonJump_Start'",bLoopAnimation=False)
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_4.JumpStart.AnimGraphNode_SequencePlayer_34] AnimGraphNodeBinding_Base
+[AnimStateNode_6] AnimStateNode
+    BoundGraph <- JumpLoop
+[JumpLoop] AnimationStateGraph
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationStateGraphSchema'"
+    GraphGuid = 3BF16FDA4DB3DAEF36A3A6BDD0FF02B0
+    MyResultNode <- AnimGraphNode_StateResult_16
+    Nodes(0) <- AnimGraphNode_StateResult_16
+    Nodes(1) <- AnimGraphNode_SequencePlayer_40
+[AnimGraphNode_StateResult_16] AnimGraphNode_StateResult
+    ShowPinForProperties(0) = (PropertyName="Result",PropertyFriendlyName="Result",CategoryName="Links",bShowPin=True)
+    ErrorType = 4
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_6.JumpLoop.AnimGraphNode_StateResult_16] AnimGraphNodeBinding_Base
+[AnimGraphNode_SequencePlayer_40] AnimGraphNode_SequencePlayer
+    Node = (Sequence="/Script/Engine.AnimSequence'/Game/FluidFlux/Demo/Mannequin/Animations/ThirdPersonJump_Loop.ThirdPersonJump_Loop'",PlayRate=0.750000)
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_6.JumpLoop.AnimGraphNode_SequencePlayer_40] AnimGraphNodeBinding_Base
+[AnimStateNode_8] AnimStateNode
+    BoundGraph <- JumpEnd
+[JumpEnd] AnimationStateGraph
+    Schema = "/Script/CoreUObject.Class'/Script/AnimGraph.AnimationStateGraphSchema'"
+    GraphGuid = 0489E072423BC082B4571EAA5AF31ADE
+    MyResultNode <- AnimGraphNode_StateResult_26
+    Nodes(0) <- AnimGraphNode_StateResult_26
+    Nodes(1) <- AnimGraphNode_SequencePlayer_46
+[AnimGraphNode_StateResult_26] AnimGraphNode_StateResult
+    ShowPinForProperties(0) = (PropertyName="Result",PropertyFriendlyName="Result",CategoryName="Links",bShowPin=True)
+    ErrorType = 4
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_8.JumpEnd.AnimGraphNode_StateResult_26] AnimGraphNodeBinding_Base
+[AnimGraphNode_SequencePlayer_46] AnimGraphNode_SequencePlayer
+    Node = (Sequence="/Script/Engine.AnimSequence'/Game/FluidFlux/Demo/Mannequin/Animations/ThirdPerson_Jump.ThirdPerson_Jump'",bLoopAnimation=False)
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_8.JumpEnd.AnimGraphNode_SequencePlayer_46] AnimGraphNodeBinding_Base
+[AnimStateEntryNode_0] AnimStateEntryNode
+    ErrorType = 3
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_StateMachine_1] AnimGraphNodeBinding_Base
+[AnimGraphNode_Root_5] AnimGraphNode_Root
+    Node = (LayerGroup="")
+    ShowPinForProperties(0) = (PropertyName="Result",PropertyFriendlyName="Result",CategoryName="Links",bShowPin=True)
+    ErrorType = 4
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_Root_5] AnimGraphNodeBinding_Base
+[AnimGraphNode_LayeredBoneBlend_0] AnimGraphNode_LayeredBoneBlend
+    Node = (LayerSetup=((BranchFilters=((BoneName="spine_02")))))
+    ShowPinForProperties(0) = (PropertyName="BasePose",PropertyFriendlyName="Base Pose",PropertyTooltip=NSLOCTEXT("UObjectToolTips", "AnimNode_LayeredBoneBlend:BasePose", "The source pose"),CategoryName="Links",bShowPin=True)
+    ErrorType = 4
+    Binding <- AnimGraphNodeBinding_Base_0
+    вход BlendWeights_0 = 1.000000
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_LayeredBoneBlend_0] AnimGraphNodeBinding_Base
+[AnimGraphNode_SaveCachedPose_0] AnimGraphNode_SaveCachedPose
+    CacheName = "MovementCached"
+    ShowPinForProperties(0) = (PropertyName="Pose",PropertyFriendlyName="Pose",CategoryName="Links",bShowPin=True)
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_SaveCachedPose_0] AnimGraphNodeBinding_Base
+[AnimGraphNode_UseCachedPose_0] AnimGraphNode_UseCachedPose
+    NameOfCache = "MovementCached"
+    SaveCachedPoseNode <- AnimGraphNode_SaveCachedPose_0
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_UseCachedPose_0] AnimGraphNodeBinding_Base
+[EdGraphNode_Comment_6] EdGraphNode_Comment
+    NodeWidth = 392
+    NodeHeight = 186
+    NodeComment = "Cached movement state"
+[AnimGraphNode_SequencePlayer_0] AnimGraphNode_SequencePlayer
+    Node = (Sequence="/Script/Engine.AnimSequence'/Game/FluidFlux/Demo/Mannequin/Animations/ThirdPersonForce_F.ThirdPersonForce_F'")
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_SequencePlayer_0] AnimGraphNodeBinding_Base
+[AnimGraphNode_TwoWayBlend_0] AnimGraphNode_TwoWayBlend
+    BlendNode = (AlphaBoolBlend=(BlendOption=Linear))
+    ShowPinForProperties(0) = (PropertyName="A",PropertyFriendlyName="A",CategoryName="Links",bShowPin=True)
+    ShowPinForProperties(1) = (PropertyName="B",PropertyFriendlyName="B",CategoryName="Links",bShowPin=True)
+    ShowPinForProperties(7) = (PropertyName="AlphaScaleBias",PropertyFriendlyName="Alpha Scale Bias",CategoryName="Settings")
+    ShowPinForProperties(8) = (PropertyName="AlphaBoolBlend",PropertyFriendlyName="Blend Settings",CategoryName="Settings")
+    ShowPinForProperties(10) = (PropertyName="AlphaScaleBiasClamp",PropertyFriendlyName="Alpha Scale Bias Clamp",CategoryName="Settings")
+    Binding <- AnimGraphNodeBinding_Base_0
+    вход bAlphaBoolEnabled = True
+    вход AlphaCurveName = None
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_TwoWayBlend_0] AnimGraphNodeBinding_Base
+[AnimGraphNode_UseCachedPose_1] AnimGraphNode_UseCachedPose
+    NameOfCache = "MovementCached"
+    SaveCachedPoseNode <- AnimGraphNode_SaveCachedPose_0
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_UseCachedPose_1] AnimGraphNodeBinding_Base
+[AnimGraphNode_ModifyBone_1] AnimGraphNode_ModifyBone
+    Node = (BoneToModify=(BoneName="spine_02"),Rotation=(Pitch=0.000000,Yaw=45.000000,Roll=0.000000),RotationMode=BMM_Additive,LODThreshold=0,AlphaBoolBlend=(BlendOption=Linear))
+    ShowPinForProperties(2) = (PropertyName="AlphaInputType",PropertyFriendlyName="Alpha Input Type",CategoryName="Alpha")
+    ShowPinForProperties(3) = (PropertyName="bAlphaBoolEnabled",PropertyFriendlyName="bEnabled",CategoryName="Alpha",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(5) = (PropertyName="AlphaScaleBias",PropertyFriendlyName="Alpha Scale Bias",CategoryName="Alpha")
+    ShowPinForProperties(6) = (PropertyName="AlphaBoolBlend",PropertyFriendlyName="Blend Settings",CategoryName="Alpha")
+    ShowPinForProperties(7) = (PropertyName="AlphaCurveName",PropertyFriendlyName="Alpha Curve Name",CategoryName="Alpha",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(8) = (PropertyName="AlphaScaleBiasClamp",PropertyFriendlyName="Alpha Scale Bias Clamp",CategoryName="Alpha")
+    ShowPinForProperties(18) = (PropertyName="ScaleSpace",PropertyFriendlyName="Scale Space",PropertyTooltip=NSLOCTEXT("UObjectToolTips", "AnimNode_ModifyBone:ScaleSpace", "Reference frame to apply Scale in."),CategoryName="Scale")
+    ErrorType = 3
+    Binding <- AnimGraphNodeBinding_Base_0
+    вход bAlphaBoolEnabled = True
+    вход Alpha = 1.000000
+    вход AlphaCurveName = None
+    вход Translation = 0.000000,0.000000,0.000000
+    вход Rotation = 0.000000,45.000000,0.000000
+    вход Rotation_Roll = 0.0
+    вход Rotation_Pitch = 0.0
+    вход Scale = 1.000000,1.000000,1.000000
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_ModifyBone_1] AnimGraphNodeBinding_Base
+[AnimGraphNode_ComponentToLocalSpace_0] AnimGraphNode_ComponentToLocalSpace
+    ShowPinForProperties(0) = (PropertyName="ComponentPose",PropertyFriendlyName="Component Pose",CategoryName="Links",bShowPin=True)
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_ComponentToLocalSpace_0] AnimGraphNodeBinding_Base
+[AnimGraphNode_LocalToComponentSpace_0] AnimGraphNode_LocalToComponentSpace
+    ShowPinForProperties(0) = (PropertyName="LocalPose",PropertyFriendlyName="Local Pose",CategoryName="Links",bShowPin=True)
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_LocalToComponentSpace_0] AnimGraphNodeBinding_Base
+[AnimGraphNode_ModifyBone_2] AnimGraphNode_ModifyBone
+    Node = (BoneToModify=(BoneName="spine_03"),Rotation=(Pitch=0.000000,Yaw=45.000000,Roll=0.000000),RotationMode=BMM_Additive,LODThreshold=0,AlphaBoolBlend=(BlendOption=Linear))
+    ShowPinForProperties(2) = (PropertyName="AlphaInputType",PropertyFriendlyName="Alpha Input Type",CategoryName="Alpha")
+    ShowPinForProperties(3) = (PropertyName="bAlphaBoolEnabled",PropertyFriendlyName="bEnabled",CategoryName="Alpha",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(5) = (PropertyName="AlphaScaleBias",PropertyFriendlyName="Alpha Scale Bias",CategoryName="Alpha")
+    ShowPinForProperties(6) = (PropertyName="AlphaBoolBlend",PropertyFriendlyName="Blend Settings",CategoryName="Alpha")
+    ShowPinForProperties(7) = (PropertyName="AlphaCurveName",PropertyFriendlyName="Alpha Curve Name",CategoryName="Alpha",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(8) = (PropertyName="AlphaScaleBiasClamp",PropertyFriendlyName="Alpha Scale Bias Clamp",CategoryName="Alpha")
+    ShowPinForProperties(18) = (PropertyName="ScaleSpace",PropertyFriendlyName="Scale Space",PropertyTooltip=NSLOCTEXT("UObjectToolTips", "AnimNode_ModifyBone:ScaleSpace", "Reference frame to apply Scale in."),CategoryName="Scale")
+    ErrorType = 3
+    Binding <- AnimGraphNodeBinding_Base_0
+    вход bAlphaBoolEnabled = True
+    вход Alpha = 1.000000
+    вход AlphaCurveName = None
+    вход Translation = 0.000000,0.000000,0.000000
+    вход Rotation = 0.000000,45.000000,0.000000
+    вход Rotation_Roll = 0.0
+    вход Rotation_Pitch = 0.0
+    вход Scale = 1.000000,1.000000,1.000000
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_ModifyBone_2] AnimGraphNodeBinding_Base
+[AnimGraphNode_ModifyBone_3] AnimGraphNode_ModifyBone
+    Node = (BoneToModify=(BoneName="head"),Rotation=(Pitch=0.000000,Yaw=45.000000,Roll=0.000000),RotationMode=BMM_Additive,LODThreshold=0,AlphaBoolBlend=(BlendOption=Linear))
+    ShowPinForProperties(2) = (PropertyName="AlphaInputType",PropertyFriendlyName="Alpha Input Type",CategoryName="Alpha")
+    ShowPinForProperties(3) = (PropertyName="bAlphaBoolEnabled",PropertyFriendlyName="bEnabled",CategoryName="Alpha",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(5) = (PropertyName="AlphaScaleBias",PropertyFriendlyName="Alpha Scale Bias",CategoryName="Alpha")
+    ShowPinForProperties(6) = (PropertyName="AlphaBoolBlend",PropertyFriendlyName="Blend Settings",CategoryName="Alpha")
+    ShowPinForProperties(7) = (PropertyName="AlphaCurveName",PropertyFriendlyName="Alpha Curve Name",CategoryName="Alpha",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(8) = (PropertyName="AlphaScaleBiasClamp",PropertyFriendlyName="Alpha Scale Bias Clamp",CategoryName="Alpha")
+    ShowPinForProperties(18) = (PropertyName="ScaleSpace",PropertyFriendlyName="Scale Space",PropertyTooltip=NSLOCTEXT("UObjectToolTips", "AnimNode_ModifyBone:ScaleSpace", "Reference frame to apply Scale in."),CategoryName="Scale")
+    ErrorType = 3
+    Binding <- AnimGraphNodeBinding_Base_0
+    вход bAlphaBoolEnabled = True
+    вход Alpha = 1.000000
+    вход AlphaCurveName = None
+    вход Rotation = 0.000000,45.000000,0.000000
+    вход Rotation_Pitch = 0.0
+    вход Scale = 1.000000,1.000000,1.000000
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_ModifyBone_3] AnimGraphNodeBinding_Base
+[AnimGraphNode_ModifyBone_0] AnimGraphNode_ModifyBone
+    Node = (BoneToModify=(BoneName="neck_01"),Rotation=(Pitch=0.000000,Yaw=45.000000,Roll=0.000000),RotationMode=BMM_Additive,LODThreshold=0,AlphaBoolBlend=(BlendOption=Linear))
+    ShowPinForProperties(2) = (PropertyName="AlphaInputType",PropertyFriendlyName="Alpha Input Type",CategoryName="Alpha")
+    ShowPinForProperties(3) = (PropertyName="bAlphaBoolEnabled",PropertyFriendlyName="bEnabled",CategoryName="Alpha",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(5) = (PropertyName="AlphaScaleBias",PropertyFriendlyName="Alpha Scale Bias",CategoryName="Alpha")
+    ShowPinForProperties(6) = (PropertyName="AlphaBoolBlend",PropertyFriendlyName="Blend Settings",CategoryName="Alpha")
+    ShowPinForProperties(7) = (PropertyName="AlphaCurveName",PropertyFriendlyName="Alpha Curve Name",CategoryName="Alpha",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(8) = (PropertyName="AlphaScaleBiasClamp",PropertyFriendlyName="Alpha Scale Bias Clamp",CategoryName="Alpha")
+    ShowPinForProperties(18) = (PropertyName="ScaleSpace",PropertyFriendlyName="Scale Space",PropertyTooltip=NSLOCTEXT("UObjectToolTips", "AnimNode_ModifyBone:ScaleSpace", "Reference frame to apply Scale in."),CategoryName="Scale")
+    ErrorType = 3
+    Binding <- AnimGraphNodeBinding_Base_0
+    вход bAlphaBoolEnabled = True
+    вход Alpha = 1.000000
+    вход AlphaCurveName = None
+    вход Translation = 0.000000,0.000000,0.000000
+    вход Rotation = 0.000000,45.000000,0.000000
+    вход Rotation_Pitch = 0.0
+    вход Scale = 1.000000,1.000000,1.000000
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_ModifyBone_0] AnimGraphNodeBinding_Base
+[K2Node_VariableGet_3@AnimGraph] K2Node_VariableGet
+[K2Node_VariableGet_5@AnimGraph] K2Node_VariableGet
+[K2Node_VariableGet_2@AnimGraph] K2Node_VariableGet
+[K2Node_CallFunction_6@AnimGraph] K2Node_CallFunction
+[K2Node_CommutativeAssociativeBinaryOperator_5] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 0.500000
+[AnimGraphNode_BlendListByBool_1] AnimGraphNode_BlendListByBool
+    Node = (BlendType=Cubic)
+    ShowPinForProperties(0) = (PropertyName="BlendPose",PropertyFriendlyName="Blend Pose",CategoryName="Links",bShowPin=True)
+    ShowPinForProperties(1) = (PropertyName="BlendTime",PropertyFriendlyName="Blend Time",CategoryName="Config",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="TransitionType",PropertyFriendlyName="Transition Type",CategoryName="Config")
+    ShowPinForProperties(3) = (PropertyName="BlendType",PropertyFriendlyName="Blend Type",CategoryName="BlendType")
+    ShowPinForProperties(4) = (PropertyName="ChildUpateMode",PropertyFriendlyName="Child Upate Mode",CategoryName="Option")
+    ShowPinForProperties(5) = (PropertyName="CustomBlendCurve",PropertyFriendlyName="Custom Blend Curve",CategoryName="BlendType")
+    ShowPinForProperties(6) = (PropertyName="BlendProfile",PropertyFriendlyName="Blend Profile",CategoryName="BlendType")
+    Binding <- AnimGraphNodeBinding_Base_0
+    вход BlendTime_0 = 0.400000
+    вход BlendTime_1 = 0.400000
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_BlendListByBool_1] AnimGraphNodeBinding_Base
+[K2Node_VariableGet_1@AnimGraph] K2Node_VariableGet
+[AnimGraphNode_UseCachedPose_3] AnimGraphNode_UseCachedPose
+    NameOfCache = "MovementCached"
+    SaveCachedPoseNode <- AnimGraphNode_SaveCachedPose_0
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_UseCachedPose_3] AnimGraphNodeBinding_Base
+[K2Node_VariableGet_0@AnimGraph] K2Node_VariableGet
+[AnimGraphNode_BlendListByBool_2] AnimGraphNode_BlendListByBool
+    Node = (BlendType=Cubic)
+    ShowPinForProperties(0) = (PropertyName="BlendPose",PropertyFriendlyName="Blend Pose",CategoryName="Links",bShowPin=True)
+    ShowPinForProperties(1) = (PropertyName="BlendTime",PropertyFriendlyName="Blend Time",CategoryName="Config",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="TransitionType",PropertyFriendlyName="Transition Type",CategoryName="Config")
+    ShowPinForProperties(3) = (PropertyName="BlendType",PropertyFriendlyName="Blend Type",CategoryName="BlendType")
+    ShowPinForProperties(4) = (PropertyName="ChildUpateMode",PropertyFriendlyName="Child Upate Mode",CategoryName="Option")
+    ShowPinForProperties(5) = (PropertyName="CustomBlendCurve",PropertyFriendlyName="Custom Blend Curve",CategoryName="BlendType")
+    ShowPinForProperties(6) = (PropertyName="BlendProfile",PropertyFriendlyName="Blend Profile",CategoryName="BlendType")
+    ErrorType = 4
+    Binding <- AnimGraphNodeBinding_Base_0
+    вход BlendTime_0 = 1.000000
+    вход BlendTime_1 = 0.400000
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_BlendListByBool_2] AnimGraphNodeBinding_Base
+[AnimGraphNode_SequencePlayer_1] AnimGraphNode_SequencePlayer
+    Node = (Sequence="/Script/Engine.AnimSequence'/Game/FluidFlux/Demo/Mannequin/Animations/ThirdPersonIdle.ThirdPersonIdle'")
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_SequencePlayer_1] AnimGraphNodeBinding_Base
+[AnimGraphNode_Slot_0] AnimGraphNode_Slot
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_Slot_0] AnimGraphNodeBinding_Base
+[K2Node_VariableGet_8@AnimGraph] K2Node_VariableGet
+[K2Node_VariableGet_7@AnimGraph] K2Node_VariableGet
+[K2Node_VariableGet_4@AnimGraph] K2Node_VariableGet
+[K2Node_CallFunction_0@AnimGraph] K2Node_CallFunction
+[K2Node_VariableGet_9@AnimGraph] K2Node_VariableGet
+[K2Node_VariableGet_6@AnimGraph] K2Node_VariableGet
+[AnimGraphNode_BlendListByBool_3] AnimGraphNode_BlendListByBool
+    Node = (BlendType=Cubic)
+    ShowPinForProperties(0) = (PropertyName="BlendPose",PropertyFriendlyName="Blend Pose",CategoryName="Links",bShowPin=True)
+    ShowPinForProperties(1) = (PropertyName="BlendTime",PropertyFriendlyName="Blend Time",CategoryName="Config",bShowPin=True,bCanToggleVisibility=True)
+    ShowPinForProperties(2) = (PropertyName="TransitionType",PropertyFriendlyName="Transition Type",CategoryName="Config")
+    ShowPinForProperties(3) = (PropertyName="BlendType",PropertyFriendlyName="Blend Type",CategoryName="BlendType")
+    ShowPinForProperties(4) = (PropertyName="ChildUpateMode",PropertyFriendlyName="Child Upate Mode",CategoryName="Option")
+    ShowPinForProperties(5) = (PropertyName="CustomBlendCurve",PropertyFriendlyName="Custom Blend Curve",CategoryName="BlendType")
+    ShowPinForProperties(6) = (PropertyName="BlendProfile",PropertyFriendlyName="Blend Profile",CategoryName="BlendType")
+    ErrorType = 4
+    Binding <- AnimGraphNodeBinding_Base_0
+    вход BlendTime_0 = 0.500000
+    вход BlendTime_1 = 0.400000
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_BlendListByBool_3] AnimGraphNodeBinding_Base
+[AnimGraphNode_SequencePlayer_3] AnimGraphNode_SequencePlayer
+    Node = (Sequence="/Script/Engine.AnimSequence'/Game/FluidFlux/Demo/Mannequin/Animations/ThirdPersonBoat.ThirdPersonBoat'",bLoopAnimation=False)
+    Binding <- AnimGraphNodeBinding_Base_0
+[AnimGraphNodeBinding_Base_0@AnimGraph.AnimGraphNode_SequencePlayer_3] AnimGraphNodeBinding_Base
+[UpdateCharacter] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 55F34E584BC55A06D6FABF94BA69BC40
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_Comment_25
+    Nodes(2) <- K2Node_CallFunction_11990
+    Nodes(3) <- K2Node_CallFunction_846
+    Nodes(4) <- K2Node_VariableSet_24
+    Nodes(5) <- K2Node_VariableSet_64
+    Nodes(6) <- K2Node_CallFunction_0
+    Nodes(7) <- K2Node_CallFunction_2731
+    Nodes(8) <- EdGraphNode_Comment_19
+    Nodes(9) <- K2Node_ExecutionSequence_1
+    Nodes(10) <- K2Node_Knot_2
+    Nodes(11) <- K2Node_VariableGet_2
+    Nodes(12) <- K2Node_VariableGet_14
+    Nodes(13) <- K2Node_Knot_0
+    Nodes(14) <- K2Node_VariableGet_0
+    Nodes(15) <- K2Node_VariableSet_0
+    Nodes(16) <- K2Node_VariableGet_10
+    Nodes(17) <- K2Node_VariableGet_1
+    Nodes(18) <- K2Node_VariableSet_5
+    Nodes(19) <- K2Node_CommutativeAssociativeBinaryOperator_0
+    Nodes(20) <- K2Node_CallFunction_3
+    Nodes(21) <- K2Node_VariableGet_11
+    Nodes(22) <- K2Node_VariableGet_12
+    Nodes(23) <- K2Node_VariableSet_2
+    Nodes(24) <- K2Node_CallFunction_5
+    Nodes(25) <- K2Node_CallFunction_7
+    Nodes(26) <- K2Node_CommutativeAssociativeBinaryOperator_1
+    Nodes(27) <- K2Node_CallFunction_11
+    Nodes(28) <- EdGraphNode_Comment_0
+    Nodes(29) <- K2Node_Knot_1
+    Nodes(30) <- K2Node_CallFunction_13
+    Nodes(31) <- K2Node_CallFunction_14
+    Nodes(32) <- K2Node_VariableGet_6
+    Nodes(33) <- K2Node_VariableGet_5
+    Nodes(34) <- K2Node_CommutativeAssociativeBinaryOperator_2
+    Nodes(35) <- K2Node_VariableSet_3
+    Nodes(36) <- K2Node_VariableGet_7
+    Nodes(37) <- K2Node_VariableGet_8
+    Nodes(38) <- K2Node_CallFunction_2
+    Nodes(39) <- K2Node_CallFunction_4
+    Nodes(40) <- K2Node_IfThenElse_0
+    Nodes(41) <- K2Node_ExecutionSequence_0
+    Nodes(42) <- K2Node_VariableSet_4
+    Nodes(43) <- K2Node_CallFunction_6
+    Nodes(44) <- EdGraphNode_Comment_1
+    Nodes(45) <- K2Node_VariableSet_1
+    Nodes(46) <- K2Node_VariableGet_4
+    Nodes(47) <- K2Node_VariableGet_3
+    Nodes(48) <- K2Node_VariableGet_9
+    Nodes(49) <- K2Node_CallFunction_8
+[K2Node_FunctionEntry_0@UpdateCharacter] K2Node_FunctionEntry
+[K2Node_Comment_25] EdGraphNode_Comment
+    NodeWidth = 1248
+    NodeHeight = 208
+    NodeComment = "Setting \'Speed\' (use in 1D blend space)"
+    ErrorType = 1
+[K2Node_CallFunction_11990] K2Node_CallFunction (вызов: GetVelocity @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    ErrorType = 1
+[K2Node_CallFunction_846] K2Node_CallFunction (вызов: VSize @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableSet_24] K2Node_VariableSet (переменная: Speed)
+[K2Node_VariableSet_64] K2Node_VariableSet (переменная: IsInAir)
+[K2Node_CallFunction_0@UpdateCharacter] K2Node_CallFunction
+[K2Node_CallFunction_2731] K2Node_CallFunction (вызов: IsFalling @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[EdGraphNode_Comment_19] EdGraphNode_Comment
+    NodeWidth = 960
+    NodeHeight = 224
+    NodeComment = "Set \'IsInAir\' (used in state machine)"
+[K2Node_ExecutionSequence_1] K2Node_ExecutionSequence
+[K2Node_Knot_2] K2Node_Knot
+[K2Node_VariableGet_2@UpdateCharacter] K2Node_VariableGet (переменная: DemoCharacter)
+[K2Node_VariableGet_14] K2Node_VariableGet (переменная: DemoCharacter)
+[K2Node_Knot_0] K2Node_Knot
+[K2Node_VariableGet_0@UpdateCharacter] K2Node_VariableGet (переменная: DemoCharacter)
+    ErrorType = 1
+[K2Node_VariableSet_0] K2Node_VariableSet (переменная: IsRagdoll)
+[K2Node_VariableGet_10] K2Node_VariableGet (переменная: IsRagdoll @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_1@UpdateCharacter] K2Node_VariableGet (переменная: DemoCharacter)
+[K2Node_VariableSet_5] K2Node_VariableSet (переменная: IsSwimming)
+[K2Node_CommutativeAssociativeBinaryOperator_0] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_VectorVector @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 1.000000,1.000000, 0
+[K2Node_CallFunction_3] K2Node_CallFunction (вызов: GetComponentByClass @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход ComponentClass = /Script/Engine.ActorComponent
+[K2Node_VariableGet_11] K2Node_VariableGet (переменная: SwimmingState @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_12] K2Node_VariableGet (переменная: DemoCharacter)
+[K2Node_VariableSet_2] K2Node_VariableSet (переменная: TurnRotation)
+[K2Node_CallFunction_5] K2Node_CallFunction (вызов: GetControlRotation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_7] K2Node_CallFunction (вызов: K2_GetActorRotation @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CommutativeAssociativeBinaryOperator_1] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 0.200000
+[K2Node_CallFunction_11] K2Node_CallFunction (вызов: NormalizedDeltaRotator @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[EdGraphNode_Comment_0] EdGraphNode_Comment
+    NodeWidth = 1248
+    NodeHeight = 288
+    NodeComment = "Comment"
+[K2Node_Knot_1] K2Node_Knot
+[K2Node_CallFunction_13] K2Node_CallFunction (вызов: FClamp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход Min = -25.000000
+    вход Max = 25.000000
+[K2Node_CallFunction_14] K2Node_CallFunction (вызов: Lerp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_VariableGet_6@UpdateCharacter] K2Node_VariableGet (переменная: TurnRotation)
+[K2Node_VariableGet_5@UpdateCharacter] K2Node_VariableGet (переменная: DeltaTime)
+[K2Node_CommutativeAssociativeBinaryOperator_2] K2Node_CommutativeAssociativeBinaryOperator (вызов: Multiply_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 10.000000
+[K2Node_VariableSet_3] K2Node_VariableSet (переменная: DiffAngle)
+[K2Node_VariableGet_7@UpdateCharacter] K2Node_VariableGet (переменная: DiffAngle)
+[K2Node_VariableGet_8@UpdateCharacter] K2Node_VariableGet
+[K2Node_CallFunction_2] K2Node_CallFunction (вызов: Abs @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[K2Node_CallFunction_4] K2Node_CallFunction (вызов: Less_DoubleDouble @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    вход B = 120.000000
+[K2Node_IfThenElse_0] K2Node_IfThenElse
+[K2Node_ExecutionSequence_0] K2Node_ExecutionSequence
+[K2Node_VariableSet_4] K2Node_VariableSet (переменная: DiffAngle)
+    вход DiffAngle = 0.0
+[K2Node_CallFunction_6@UpdateCharacter] K2Node_CallFunction (вызов: FClamp @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    вход Min = 0.0
+    вход Max = 1.0
+[EdGraphNode_Comment_1] EdGraphNode_Comment
+    NodeWidth = 1203
+    NodeHeight = 424
+    NodeComment = "Smooth turning to direction of camera"
+[K2Node_VariableSet_1] K2Node_VariableSet (переменная: IsDriver)
+[K2Node_VariableGet_4@UpdateCharacter] K2Node_VariableGet (переменная: DemoCharacter)
+[K2Node_VariableGet_3@UpdateCharacter] K2Node_VariableGet (переменная: BP_FluxDriver @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_VariableGet_9@UpdateCharacter] K2Node_VariableGet (переменная: Vehicle @ /Script/Engine.BlueprintGeneratedClass)
+    SelfContextInfo = NotSelfContext
+[K2Node_CallFunction_8] K2Node_CallFunction (вызов: IsValid @ /Script/CoreUObject.Class)
+    bDefaultsToPureFunc = True
+[EventGraph] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    bAllowDeletion = False
+    GraphGuid = 93B8BE604FDF11EE76BE22B5766D4F10
+    Nodes(0) <- K2Node_Comment_22
+    Nodes(1) <- K2Node_Event_14
+    Nodes(2) <- K2Node_MacroInstance_40
+    Nodes(3) <- K2Node_Event_2
+    Nodes(4) <- K2Node_CallFunction_11813
+    Nodes(5) <- K2Node_VariableSet_50
+    Nodes(6) <- EdGraphNode_Comment_3
+    Nodes(7) <- K2Node_VariableGet_8
+    Nodes(8) <- K2Node_DynamicCast_0
+    Nodes(9) <- K2Node_CallFunction_15
+[K2Node_Comment_22] EdGraphNode_Comment
+    NodeWidth = 736
+    NodeHeight = 400
+    NodeComment = "See if PawnOwner is valid (will not be in Persona)"
+    ErrorType = 1
+[K2Node_Event_14] K2Node_Event (событие: BlueprintUpdateAnimation @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+    ErrorType = 1
+[K2Node_MacroInstance_40] K2Node_MacroInstance
+[K2Node_Event_2] K2Node_Event (событие: BlueprintBeginPlay @ /Script/CoreUObject.Class)
+    bOverrideFunction = True
+[K2Node_CallFunction_11813] K2Node_CallFunction (вызов: TryGetPawnOwner)
+    bDefaultsToPureFunc = True
+[K2Node_VariableSet_50] K2Node_VariableSet (переменная: DemoCharacter)
+    ErrorType = 1
+[EdGraphNode_Comment_3] EdGraphNode_Comment
+    NodeWidth = 892
+    NodeHeight = 239
+    NodeComment = "Init character"
+[K2Node_VariableGet_8@EventGraph] K2Node_VariableGet (переменная: DemoCharacter)
+[K2Node_DynamicCast_0] K2Node_DynamicCast
+    TargetType = "/Script/Engine.BlueprintGeneratedClass'/Game/FluidFlux/Demo/Blueprints/BP_DemoCharacter.BP_DemoCharacter_C'"
+    PureState = Impure
+[K2Node_CallFunction_15] K2Node_CallFunction (вызов: UpdateCharacter)
+[AnimBlueprintExtension_Base_0] AnimBlueprintExtension_Base
+[AnimBlueprintExtension_Attributes_0] AnimBlueprintExtension_Attributes
+[AnimBlueprintExtension_PropertyAccess_0] AnimBlueprintExtension_PropertyAccess
+[AnimBlueprintExtension_StateMachine_0] AnimBlueprintExtension_StateMachine
+[AnimBlueprintExtension_CachedPose_0] AnimBlueprintExtension_CachedPose
+[SceneThumbnailInfo_0] SceneThumbnailInfo
+[BlueprintBeginPlay] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 68E8EDA84ECA229B2F0A55ABBFE0AACE
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BlueprintBeginPlay] K2Node_FunctionEntry
+[K2Node_CallFunction_0@BlueprintBeginPlay] K2Node_CallFunction
+[BlueprintUpdateAnimation] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = BC5DF27E4CE7C3A675286AAF8CB9AEA4
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_SetVariableOnPersistentFrame_0
+    Nodes(2) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@BlueprintUpdateAnimation] K2Node_FunctionEntry
+[K2Node_SetVariableOnPersistentFrame_0] K2Node_SetVariableOnPersistentFrame
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@BlueprintUpdateAnimation] K2Node_CallFunction
+[EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = DAEADE9A4F06FD86AB3411B4269CE09F
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E] K2Node_FunctionEntry
+[K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E] K2Node_CallFunction
+[EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 426BAF3B48441F849F2C50A5492F6EE0
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF] K2Node_FunctionEntry
+[K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF] K2Node_CallFunction
+[EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E] EdGraph
+    Schema = "/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+    GraphGuid = 812299B44D56FBE2E48554A0BE1DB780
+    Nodes(0) <- K2Node_FunctionEntry_0
+    Nodes(1) <- K2Node_CallFunction_0
+[K2Node_FunctionEntry_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E] K2Node_FunctionEntry (вызов: BlueprintUpdateAnimation @ /Script/CoreUObject.Class)
+    ExtraFlags = 201457664
+    bIsEditable = True
+    CustomGeneratedFunctionName = "BlueprintBeginPlay"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "BlueprintUpdateAnimation"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF"
+    bIsIntermediateNode = True
+    CustomGeneratedFunctionName = "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E"
+    bIsIntermediateNode = True
+[K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E] K2Node_CallFunction (вызов: ExecuteUbergraph_ABP_ThirdPerson)
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bDefaultsToPureFunc = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    bIsIntermediateNode = True
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+    вход EntryPoint = 0
+
+## СВЯЗИ
+[AnimGraphNode_BlendListByBool_1].Pose -> [AnimGraphNode_BlendListByBool_1].BlendPose_1
+[AnimGraphNode_BlendListByBool_1].Pose -> [AnimGraphNode_LocalToComponentSpace_0].LocalPose
+[AnimGraphNode_BlendListByBool_1].Pose -> [AnimGraphNode_Slot_0].Source
+[AnimGraphNode_BlendSpacePlayer_0].Pose -> [AnimGraphNode_StateResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_1.Idle/Run].Result
+[AnimGraphNode_BlendSpacePlayer_9].Pose -> [AnimGraphNode_StateResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateNode_1.Idle/Run].Result#2
+[AnimGraphNode_ComponentToLocalSpace_0].Pose -> [AnimGraphNode_BlendListByBool_1].BlendPose_1
+[AnimGraphNode_LayeredBoneBlend_0].Pose -> [AnimGraphNode_TwoWayBlend_0].A
+[AnimGraphNode_LocalToComponentSpace_0].ComponentPose -> [AnimGraphNode_ModifyBone_1].ComponentPose
+[AnimGraphNode_ModifyBone_1].Pose -> [AnimGraphNode_ComponentToLocalSpace_0].ComponentPose
+[AnimGraphNode_ModifyBone_1].Pose -> [AnimGraphNode_ModifyBone_1].ComponentPose
+[AnimGraphNode_SequencePlayer_0].Pose -> [AnimGraphNode_LayeredBoneBlend_0].BlendPoses_0
+[AnimGraphNode_SequencePlayer_1].Pose -> [AnimGraphNode_BlendListByBool_1].BlendPose_0
+[AnimGraphNode_SequencePlayer_3].Pose -> [AnimGraphNode_BlendListByBool_1].BlendPose_0
+[AnimGraphNode_SequencePlayer_34].Pose -> [AnimGraphNode_StateResult_9].Result
+[AnimGraphNode_SequencePlayer_40].Pose -> [AnimGraphNode_StateResult_16].Result
+[AnimGraphNode_SequencePlayer_46].Pose -> [AnimGraphNode_StateResult_26].Result
+[AnimGraphNode_Slot_0].Pose -> [AnimGraphNode_Root_5].Result
+[AnimGraphNode_StateMachine_1].Pose -> [AnimGraphNode_SaveCachedPose_0].Pose
+[AnimGraphNode_TwoWayBlend_0].Pose -> [AnimGraphNode_BlendListByBool_1].BlendPose_0
+[AnimGraphNode_UseCachedPose_0].Pose -> [AnimGraphNode_BlendListByBool_1].BlendPose_1
+[AnimGraphNode_UseCachedPose_0].Pose -> [AnimGraphNode_LayeredBoneBlend_0].BasePose
+[AnimGraphNode_UseCachedPose_0].Pose -> [AnimGraphNode_TwoWayBlend_0].B
+[AnimStateEntryNode_0].Entry -> [AnimStateNode_1].In
+[AnimStateNode_0].Out -> [AnimStateTransitionNode_2].In
+[AnimStateNode_1].Out -> [AnimStateTransitionNode_0].In
+[AnimStateNode_1].Out -> [AnimStateTransitionNode_5].In
+[AnimStateNode_4].Out -> [AnimStateTransitionNode_1].In
+[AnimStateNode_4].Out -> [AnimStateTransitionNode_4].In
+[AnimStateNode_6].Out -> [AnimStateTransitionNode_3].In
+[AnimStateNode_6].Out -> [AnimStateTransitionNode_8].In
+[AnimStateNode_8].Out -> [AnimStateTransitionNode_6].In
+[AnimStateTransitionNode_0].Out -> [AnimStateNode_0].In
+[AnimStateTransitionNode_1].Out -> [AnimStateNode_0].In
+[AnimStateTransitionNode_2].Out -> [AnimStateNode_1].In
+[AnimStateTransitionNode_3].Out -> [AnimStateNode_0].In
+[AnimStateTransitionNode_4].Out -> [AnimStateNode_6].In
+[AnimStateTransitionNode_5].Out -> [AnimStateNode_4].In
+[AnimStateTransitionNode_6].Out -> [AnimStateNode_1].In
+[AnimStateTransitionNode_8].Out -> [AnimStateNode_8].In
+[K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].ReturnValue -> [AnimGraphNode_TransitionResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_5.Transition].bCanEnterTransition
+[K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].ReturnValue#2 -> [AnimGraphNode_ModifyBone_1].Translation
+[K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].ReturnValue#3 -> [K2Node_CallFunction_2731].self
+[K2Node_CallFunction_11].ReturnValue_Yaw -> [K2Node_VariableSet_3].DiffAngle
+[K2Node_CallFunction_11813].ReturnValue -> [K2Node_DynamicCast_0].Object
+[K2Node_CallFunction_11990].ReturnValue -> [K2Node_CommutativeAssociativeBinaryOperator_0].A
+[K2Node_CallFunction_13].ReturnValue -> [K2Node_CallFunction_14].B
+[K2Node_CallFunction_14].ReturnValue -> [K2Node_VariableSet_2].TurnRotation
+[K2Node_CallFunction_2].ReturnValue -> [K2Node_CallFunction_4].A
+[K2Node_CallFunction_2731].ReturnValue -> [K2Node_VariableSet_64].IsInAir
+[K2Node_CallFunction_3].ReturnValue -> [K2Node_VariableGet_11].self
+[K2Node_CallFunction_4].ReturnValue -> [K2Node_IfThenElse_0].Condition
+[K2Node_CallFunction_5].ReturnValue -> [K2Node_CallFunction_11].A
+[K2Node_CallFunction_6@UpdateCharacter].ReturnValue -> [AnimGraphNode_ModifyBone_1].Rotation_Roll
+[K2Node_CallFunction_6@UpdateCharacter].ReturnValue#2 -> [K2Node_CallFunction_14].Alpha
+[K2Node_CallFunction_7].ReturnValue -> [K2Node_CallFunction_11].B
+[K2Node_CallFunction_7960].ReturnValue -> [AnimGraphNode_TransitionResult_26].bCanEnterTransition
+[K2Node_CallFunction_8].ReturnValue -> [K2Node_VariableSet_1].IsDriver
+[K2Node_CallFunction_8008].ReturnValue -> [AnimGraphNode_TransitionResult_48].bCanEnterTransition
+[K2Node_CallFunction_8428].ReturnValue -> [AnimGraphNode_TransitionResult_37].bCanEnterTransition
+[K2Node_CallFunction_846].ReturnValue -> [K2Node_VariableSet_24].Speed
+[K2Node_CommutativeAssociativeBinaryOperator_0].ReturnValue -> [K2Node_CallFunction_846].A
+[K2Node_CommutativeAssociativeBinaryOperator_1].ReturnValue -> [K2Node_CallFunction_13].Value
+[K2Node_CommutativeAssociativeBinaryOperator_2].ReturnValue -> [K2Node_CallFunction_6@UpdateCharacter].Value
+[K2Node_CommutativeAssociativeBinaryOperator_5].ReturnValue -> [K2Node_CallFunction_6@UpdateCharacter].A
+[K2Node_DynamicCast_0].AsBP Demo Character -> [K2Node_VariableSet_50].DemoCharacter
+[K2Node_DynamicCast_0].then -> [K2Node_VariableSet_50].execute
+[K2Node_Event_14].DeltaTimeX -> [K2Node_CallFunction_15].DeltaTime
+[K2Node_Event_14].then -> [K2Node_MacroInstance_40].exec
+[K2Node_Event_2].then -> [K2Node_DynamicCast_0].execute
+[K2Node_ExecutionSequence_0].then_0 -> [K2Node_IfThenElse_0].execute
+[K2Node_ExecutionSequence_0].then_1 -> [K2Node_VariableSet_2].execute
+[K2Node_ExecutionSequence_1].then_0 -> [K2Node_Knot_0].InputPin
+[K2Node_ExecutionSequence_1].then_1 -> [K2Node_Knot_2].InputPin
+[K2Node_ExecutionSequence_1].then_2 -> [K2Node_Knot_1].InputPin
+[K2Node_FunctionEntry_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].DeltaTimeX -> [K2Node_SetVariableOnPersistentFrame_0].K2Node_Event_DeltaTimeX
+[K2Node_FunctionEntry_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].then -> [K2Node_ExecutionSequence_1].execute
+[K2Node_FunctionEntry_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].then#2 -> [K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].execute
+[K2Node_FunctionEntry_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].then#3 -> [K2Node_SetVariableOnPersistentFrame_0].execute
+[K2Node_FunctionEntry_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].then#4 -> [K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].execute#3
+[K2Node_FunctionEntry_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].then#5 -> [K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].execute#4
+[K2Node_FunctionEntry_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].then#6 -> [K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].execute#5
+[K2Node_IfThenElse_0].else -> [K2Node_VariableSet_4].execute
+[K2Node_Knot_0].OutputPin -> [K2Node_VariableSet_64].execute
+[K2Node_Knot_1].OutputPin -> [K2Node_VariableSet_3].execute
+[K2Node_Knot_2].OutputPin -> [K2Node_VariableSet_24].execute
+[K2Node_MacroInstance_40].Is Valid -> [K2Node_CallFunction_15].execute
+[K2Node_SetVariableOnPersistentFrame_0].then -> [K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].execute#2
+[K2Node_TransitionRuleGetter_44].Output -> [K2Node_CallFunction_7960].A
+[K2Node_TransitionRuleGetter_53].Output -> [K2Node_CallFunction_8428].A
+[K2Node_VariableGet_0@UpdateCharacter].DemoCharacter -> [K2Node_VariableGet_10].self
+[K2Node_VariableGet_0@UpdateCharacter].IsInAir -> [AnimGraphNode_TransitionResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_5.Transition].bCanEnterTransition#5
+[K2Node_VariableGet_0@UpdateCharacter].IsRagdoll -> [AnimGraphNode_BlendListByBool_1].bActiveValue
+[K2Node_VariableGet_0@UpdateCharacter].IsSwimming -> [AnimGraphNode_TransitionResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_5.Transition].bCanEnterTransition#3
+[K2Node_VariableGet_0@UpdateCharacter].IsSwimming -> [AnimGraphNode_TransitionResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_5.Transition].bCanEnterTransition#4
+[K2Node_VariableGet_0@UpdateCharacter].IsSwimming -> [K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].A
+[K2Node_VariableGet_0@UpdateCharacter].IsSwimming#2 -> [AnimGraphNode_TransitionResult_0@AnimGraph.AnimGraphNode_StateMachine_1.Movement.AnimStateTransitionNode_5.Transition].bCanEnterTransition#2
+[K2Node_VariableGet_0@UpdateCharacter].Speed -> [AnimGraphNode_BlendSpacePlayer_0].X
+[K2Node_VariableGet_10].IsRagdoll -> [K2Node_VariableSet_0].IsRagdoll
+[K2Node_VariableGet_11].SwimmingState -> [K2Node_VariableSet_5].IsSwimming
+[K2Node_VariableGet_12].DemoCharacter -> [K2Node_CallFunction_5].self
+[K2Node_VariableGet_12].DemoCharacter -> [K2Node_CallFunction_7].self
+[K2Node_VariableGet_12].DemoCharacter -> [K2Node_VariableGet_3@UpdateCharacter].self
+[K2Node_VariableGet_122].IsInAir -> [K2Node_CallFunction_8008].A
+[K2Node_VariableGet_1@UpdateCharacter].IsWindPose -> [AnimGraphNode_BlendListByBool_1].bActiveValue
+[K2Node_VariableGet_2@UpdateCharacter].DemoCharacter -> [K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].self
+[K2Node_VariableGet_2@UpdateCharacter].DemoCharacter -> [K2Node_CallFunction_11990].self
+[K2Node_VariableGet_2@UpdateCharacter].DemoCharacter -> [K2Node_CallFunction_3].self
+[K2Node_VariableGet_2@UpdateCharacter].TurnRotation -> [AnimGraphNode_ModifyBone_1].Rotation_Yaw
+[K2Node_VariableGet_2@UpdateCharacter].TurnRotation -> [K2Node_CallFunction_0@EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ThirdPerson_AnimGraphNode_ModifyBone_F7238D7048049365EDD88DBE4DD1918E].InDouble
+[K2Node_VariableGet_2@UpdateCharacter].TurnRotation -> [K2Node_CommutativeAssociativeBinaryOperator_5].A
+[K2Node_VariableGet_3@UpdateCharacter].BP_FluxDriver -> [K2Node_VariableGet_9@UpdateCharacter].self
+[K2Node_VariableGet_3@UpdateCharacter].WindHide -> [AnimGraphNode_TwoWayBlend_0].Alpha
+[K2Node_VariableGet_5@UpdateCharacter].DeltaTime -> [K2Node_CommutativeAssociativeBinaryOperator_2].A
+[K2Node_VariableGet_6@UpdateCharacter].IsDriver -> [AnimGraphNode_BlendListByBool_1].bActiveValue
+[K2Node_VariableGet_6@UpdateCharacter].TurnRotation -> [K2Node_CallFunction_14].A
+[K2Node_VariableGet_75].Speed -> [AnimGraphNode_BlendSpacePlayer_9].X
+[K2Node_VariableGet_7@UpdateCharacter].DiffAngle -> [K2Node_CommutativeAssociativeBinaryOperator_1].A
+[K2Node_VariableGet_8@EventGraph].DemoCharacter -> [K2Node_MacroInstance_40].InputObject
+[K2Node_VariableGet_8@EventGraph].DiffAngle -> [K2Node_CallFunction_2].A
+[K2Node_VariableGet_9@UpdateCharacter].Vehicle -> [K2Node_CallFunction_8].Object
+[K2Node_VariableSet_0].then -> [K2Node_VariableSet_1].execute
+[K2Node_VariableSet_3].then -> [K2Node_ExecutionSequence_0].execute
+[K2Node_VariableSet_5].then -> [K2Node_VariableSet_0].execute
+[K2Node_VariableSet_64].then -> [K2Node_VariableSet_5].execute

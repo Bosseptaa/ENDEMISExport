@@ -1,0 +1,34 @@
+﻿# /Game/FluidFlux/Demo/Environment/PostProcess/M_NoFogVolumePostprocess
+# класс: Material; происхождение: проект; узлов: 6; связей: 8; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_NoFogVolumePostprocess] Material
+    MaterialDomain = MD_PostProcess
+    EditorX = 224
+    EditorY = 43
+    bCanMaskedBeAssumedOpaque = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    StateId = 54484E1E4550307CA6B7A59CED1E0948
+    ParameterOverviewExpansion = (("-12Global Sharpen", True))
+    LightingGuid = 30274F1D4842E49190E671823B247093
+    EditorOnlyData <- M_NoFogVolumePostprocessEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_NoFogVolumePostprocessEditorOnlyData] MaterialEditorOnlyData
+    EmissiveColor <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionStaticBool_0
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Surface/Underwater/Functions/MF_Sharpen.MF_Sharpen'"
+    FunctionInputs(2) = (ExpressionInputId=BBB76D534D854B8F88FCC5AD0D185DCB,Input=(InputName="Custom"))
+    FunctionOutputs(0) = (ExpressionOutputId=4C3D3211400C977905725BB9AD81B62A,Output=(OutputName="Result"))
+    Outputs(0) = (OutputName="Result")
+    FunctionInputs(0) <- MaterialExpressionStaticBool_0
+    FunctionInputs(1) <- MaterialExpressionTextureCoordinate_0
+[MaterialExpressionStaticBool_0] MaterialExpressionStaticBool
+    Value = True
+[MaterialExpressionTextureCoordinate_0] MaterialExpressionTextureCoordinate
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

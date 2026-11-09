@@ -1,0 +1,56 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Tools/MF_FWidth
+# класс: MaterialFunction; происхождение: проект; узлов: 11; связей: 19; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:21
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FWidth] MaterialFunction
+    StateId = E44B249C497C6BEDF2DB43B462A62DB3
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FWidthEditorOnlyData
+[MF_FWidthEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionDDX_0
+    ExpressionCollection <- MaterialExpressionDDY_0
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionAbs_1
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionLength_0
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_FWidth'"
+    Input <- MaterialExpressionDDX_0
+[MaterialExpressionAbs_1] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_FWidth'"
+    Input <- MaterialExpressionDDY_0
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FWidth'"
+    A <- MaterialExpressionAbs_0
+    B <- MaterialExpressionAbs_1
+[MaterialExpressionDDX_0] MaterialExpressionDDX
+    Function = "/Script/Engine.MaterialFunction'MF_FWidth'"
+    Value <- MaterialExpressionWorldPosition_0
+[MaterialExpressionDDY_0] MaterialExpressionDDY
+    Function = "/Script/Engine.MaterialFunction'MF_FWidth'"
+    Value <- MaterialExpressionWorldPosition_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Length"
+    bLastPreviewed = True
+    Id = 1BB3307D4B7041DCF4F808B569C0AD3D
+    Function = "/Script/Engine.MaterialFunction'MF_FWidth'"
+    bCollapsed = True
+    A <- MaterialExpressionLength_0
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    OutputName = "Vector"
+    bLastPreviewed = True
+    Id = 68590C654F08E36506309B9E224FB575
+    Function = "/Script/Engine.MaterialFunction'MF_FWidth'"
+    bCollapsed = True
+    A <- MaterialExpressionAdd_0
+[MaterialExpressionLength_0] MaterialExpressionLength
+    Function = "/Script/Engine.MaterialFunction'MF_FWidth'"
+    Input <- MaterialExpressionAdd_0
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_FWidth'"
+
+## СВЯЗИ

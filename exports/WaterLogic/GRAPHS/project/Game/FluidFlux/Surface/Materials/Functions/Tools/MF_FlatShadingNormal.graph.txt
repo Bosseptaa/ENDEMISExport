@@ -1,0 +1,50 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Tools/MF_FlatShadingNormal
+# класс: MaterialFunction; происхождение: проект; узлов: 10; связей: 16; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:19
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FlatShadingNormal] MaterialFunction
+    StateId = 2EE38A9A4F144BAEAFA6B198624B3DB8
+    CombinedInputTypes = 4
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_FlatShadingNormalEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FlatShadingNormalEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionNormalize_0
+    ExpressionCollection <- MaterialExpressionDDY_0
+    ExpressionCollection <- MaterialExpressionDDX_0
+    ExpressionCollection <- MaterialExpressionWorldPosition_0
+    ExpressionCollection <- MaterialExpressionCrossProduct_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+[MaterialExpressionCrossProduct_0] MaterialExpressionCrossProduct
+    Function = "/Script/Engine.MaterialFunction'MF_FlatShadingNormal'"
+    A <- MaterialExpressionDDX_0
+    B <- MaterialExpressionDDY_0
+[MaterialExpressionDDX_0] MaterialExpressionDDX
+    Function = "/Script/Engine.MaterialFunction'MF_FlatShadingNormal'"
+    Value <- MaterialExpressionFunctionInput_0
+[MaterialExpressionDDY_0] MaterialExpressionDDY
+    Function = "/Script/Engine.MaterialFunction'MF_FlatShadingNormal'"
+    Value <- MaterialExpressionFunctionInput_0
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    Id = 16153D63494C3983E2AB58B72A599955
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FlatShadingNormal'"
+    bCollapsed = True
+    Preview <- MaterialExpressionWorldPosition_0
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Normal"
+    bLastPreviewed = True
+    Id = 9E84770848DBF25140DEC78521BD3653
+    Function = "/Script/Engine.MaterialFunction'MF_FlatShadingNormal'"
+    bCollapsed = True
+    A <- MaterialExpressionNormalize_0
+[MaterialExpressionNormalize_0] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_FlatShadingNormal'"
+    VectorInput <- MaterialExpressionCrossProduct_0
+[MaterialExpressionWorldPosition_0] MaterialExpressionWorldPosition
+    Function = "/Script/Engine.MaterialFunction'MF_FlatShadingNormal'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

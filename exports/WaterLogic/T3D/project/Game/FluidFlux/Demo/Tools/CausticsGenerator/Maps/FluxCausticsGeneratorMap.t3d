@@ -1,0 +1,1223 @@
+Begin Map Name=/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap
+   Begin Level NAME=PersistentLevel
+      Begin Actor Class=/Script/Engine.DirectionalLight Name=DirectionalLight_1 Archetype="/Script/Engine.DirectionalLight'/Script/Engine.Default__DirectionalLight'" ExportPath="/Script/Engine.DirectionalLight'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.DirectionalLight_1'"
+         Begin Object Class=/Script/Engine.DirectionalLightComponent Name="LightComponent0" Archetype="/Script/Engine.DirectionalLightComponent'/Script/Engine.Default__DirectionalLight:LightComponent0'" ExportPath="/Script/Engine.DirectionalLightComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.DirectionalLight_1.LightComponent0'"
+         End Object
+         Begin Object Class=/Script/Engine.ArrowComponent Name="ArrowComponent0" Archetype="/Script/Engine.ArrowComponent'/Script/Engine.Default__DirectionalLight:ArrowComponent0'" ExportPath="/Script/Engine.ArrowComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.DirectionalLight_1.ArrowComponent0'"
+         End Object
+         Begin Object Name="LightComponent0" ExportPath="/Script/Engine.DirectionalLightComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.DirectionalLight_1.LightComponent0'"
+            DynamicShadowDistanceMovableLight=20000.000000
+            DynamicShadowCascades=3
+            DistanceFieldShadowDistance=30000.000000
+            bCastCloudShadows=True
+            CloudShadowExtent=100.000000
+            bUseRayTracedDistanceFieldShadows=False
+            Intensity=1.000000
+            RelativeLocation=(X=-300.000000,Y=-300.000000,Z=100.000000)
+            RelativeRotation=(Pitch=-47.684002,Yaw=110.503815,Roll=66.620415)
+            Mobility=Movable
+         End Object
+         Begin Object Name="ArrowComponent0" ExportPath="/Script/Engine.ArrowComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.DirectionalLight_1.ArrowComponent0'"
+            ArrowColor=(B=255,G=255,R=255,A=255)
+            AttachParent="LightComponent0"
+         End Object
+         ArrowComponent="ArrowComponent0"
+         DirectionalLightComponent="LightComponent0"
+         LightComponent="LightComponent0"
+         RootComponent="LightComponent0"
+         ActorLabel="DirectionalLight"
+      End Actor
+      Begin Actor Class=/Script/Engine.PlayerStart Name=PlayerStart_2 Archetype="/Script/Engine.PlayerStart'/Script/Engine.Default__PlayerStart'" ExportPath="/Script/Engine.PlayerStart'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PlayerStart_2'"
+         Begin Object Class=/Script/Engine.CapsuleComponent Name="CollisionCapsule" Archetype="/Script/Engine.CapsuleComponent'/Script/Engine.Default__PlayerStart:CollisionCapsule'" ExportPath="/Script/Engine.CapsuleComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PlayerStart_2.CollisionCapsule'"
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype="/Script/Engine.BillboardComponent'/Script/Engine.Default__PlayerStart:Sprite'" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PlayerStart_2.Sprite'"
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite2" Archetype="/Script/Engine.BillboardComponent'/Script/Engine.Default__PlayerStart:Sprite2'" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PlayerStart_2.Sprite2'"
+         End Object
+         Begin Object Class=/Script/Engine.ArrowComponent Name="Arrow" Archetype="/Script/Engine.ArrowComponent'/Script/Engine.Default__PlayerStart:Arrow'" ExportPath="/Script/Engine.ArrowComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PlayerStart_2.Arrow'"
+         End Object
+         Begin Object Name="CollisionCapsule" ExportPath="/Script/Engine.CapsuleComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PlayerStart_2.CollisionCapsule'"
+            AreaClass="/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+            bUseSystemDefaultObstacleAreaClass=False
+            AreaClassOverride="/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+            RelativeLocation=(X=-29.000000,Y=176.000000,Z=232.000000)
+            RelativeRotation=(Pitch=0.000000,Yaw=640.000488,Roll=0.000000)
+         End Object
+         Begin Object Name="Sprite" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PlayerStart_2.Sprite'"
+            AttachParent="CollisionCapsule"
+         End Object
+         Begin Object Name="Sprite2" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PlayerStart_2.Sprite2'"
+            AttachParent="CollisionCapsule"
+         End Object
+         Begin Object Name="Arrow" ExportPath="/Script/Engine.ArrowComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PlayerStart_2.Arrow'"
+            AttachParent="CollisionCapsule"
+         End Object
+         ArrowComponent="Arrow"
+         CapsuleComponent="CollisionCapsule"
+         GoodSprite="Sprite"
+         BadSprite="Sprite2"
+         RootComponent="CollisionCapsule"
+         ActorLabel="PlayerStart"
+      End Actor
+      Begin Actor Class=/Script/Engine.SkyAtmosphere Name=SkyAtmosphere_1 Archetype="/Script/Engine.SkyAtmosphere'/Script/Engine.Default__SkyAtmosphere'" ExportPath="/Script/Engine.SkyAtmosphere'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyAtmosphere_1'"
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype="/Script/Engine.BillboardComponent'/Script/Engine.Default__SkyAtmosphere:Sprite'" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyAtmosphere_1.Sprite'"
+         End Object
+         Begin Object Class=/Script/Engine.SkyAtmosphereComponent Name="SkyAtmosphereComponent" Archetype="/Script/Engine.SkyAtmosphereComponent'/Script/Engine.Default__SkyAtmosphere:SkyAtmosphereComponent'" ExportPath="/Script/Engine.SkyAtmosphereComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyAtmosphere_1.SkyAtmosphereComponent'"
+         End Object
+         Begin Object Class=/Script/Engine.ArrowComponent Name="ArrowComponent" Archetype="/Script/Engine.ArrowComponent'/Script/Engine.Default__SkyAtmosphere:ArrowComponent'" ExportPath="/Script/Engine.ArrowComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyAtmosphere_1.ArrowComponent'"
+         End Object
+         Begin Object Name="Sprite" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyAtmosphere_1.Sprite'"
+            AttachParent="SkyAtmosphereComponent"
+         End Object
+         Begin Object Name="SkyAtmosphereComponent" ExportPath="/Script/Engine.SkyAtmosphereComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyAtmosphere_1.SkyAtmosphereComponent'"
+            TraceSampleCountScale=4.000000
+            RayleighScattering=(R=0.175287,G=0.409607,B=1.000000,A=30.211479)
+            MieScatteringScale=0.030000
+            OtherAbsorption=(R=0.345561,G=1.000000,B=0.045189,A=531.632080)
+            bStaticLightingBuiltGUID=8BEA656D4BC51E38B4579497BEAD1A21
+            RelativeLocation=(X=-300.000000,Y=-300.000000,Z=298.000000)
+         End Object
+         Begin Object Name="ArrowComponent" ExportPath="/Script/Engine.ArrowComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyAtmosphere_1.ArrowComponent'"
+            AttachParent="SkyAtmosphereComponent"
+         End Object
+         SkyAtmosphereComponent="SkyAtmosphereComponent"
+         ArrowComponent="ArrowComponent"
+         SpriteComponent="Sprite"
+         RootComponent="SkyAtmosphereComponent"
+         ActorLabel="SkyAtmosphere"
+      End Actor
+      Begin Actor Class=/Game/FluidFlux/Demo/Tools/CausticsGenerator/BP_FluxTextureGenerator.BP_FluxTextureGenerator_C Name=BP_CausticsGenerator2 Archetype="/Game/FluidFlux/Demo/Tools/CausticsGenerator/BP_FluxTextureGenerator.BP_FluxTextureGenerator_C'/Game/FluidFlux/Demo/Tools/CausticsGenerator/BP_FluxTextureGenerator.Default__BP_FluxTextureGenerator_C'" ExportPath="/Game/FluidFlux/Demo/Tools/CausticsGenerator/BP_FluxTextureGenerator.BP_FluxTextureGenerator_C'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2'"
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_0" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_0'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_0.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_1" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_1'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_1.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_10" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_10'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_10.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_11" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_11'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_11.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_12" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_12'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_12.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_13" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_13'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_13.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_14" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_14'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_14.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_15" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_15'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_15.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_2" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_2'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_2.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_3" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_3'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_3.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_4" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_4'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_4.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_5" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_5'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_5.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_6" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_6'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_6.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_7" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_7'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_7.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_8" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_8'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_8.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_9" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_9'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_9.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.SceneComponent Name="DefaultSceneRoot" Archetype="/Script/Engine.SceneComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/BP_FluxTextureGenerator.BP_FluxTextureGenerator_C:DefaultSceneRoot_GEN_VARIABLE'" ExportPath="/Script/Engine.SceneComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.DefaultSceneRoot'"
+         End Object
+         Begin Object Class=/Script/Engine.SceneCaptureComponent2D Name="Capture" Archetype="/Script/Engine.SceneCaptureComponent2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/BP_FluxTextureGenerator.BP_FluxTextureGenerator_C:Capture_GEN_VARIABLE'" ExportPath="/Script/Engine.SceneCaptureComponent2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Capture'"
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="Mesh" Archetype="/Script/Engine.StaticMeshComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/BP_FluxTextureGenerator.BP_FluxTextureGenerator_C:Mesh_GEN_VARIABLE'" ExportPath="/Script/Engine.StaticMeshComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Mesh'"
+            Begin Object Class=/Script/Engine.MaterialInstanceDynamic Name="MID_M_CausticsGenerator_0" ExportPath="/Script/Engine.MaterialInstanceDynamic'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Mesh.MID_M_CausticsGenerator_0'"
+               Begin Object Class=/Script/Engine.MaterialInstanceEditorOnlyData Name="MID_M_CausticsGenerator_0EditorOnlyData" ExportPath="/Script/Engine.MaterialInstanceEditorOnlyData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Mesh.MID_M_CausticsGenerator_0.MID_M_CausticsGenerator_0EditorOnlyData'"
+               End Object
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="Frame" Archetype="/Script/Engine.StaticMeshComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/BP_FluxTextureGenerator.BP_FluxTextureGenerator_C:Frame_GEN_VARIABLE'" ExportPath="/Script/Engine.StaticMeshComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Frame'"
+            Begin Object Class=/Script/Engine.MaterialInstanceDynamic Name="MID_M_CausticsProcessFrame_0" ExportPath="/Script/Engine.MaterialInstanceDynamic'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Frame.MID_M_CausticsProcessFrame_0'"
+               Begin Object Class=/Script/Engine.MaterialInstanceEditorOnlyData Name="MID_M_CausticsProcessFrame_0EditorOnlyData" ExportPath="/Script/Engine.MaterialInstanceEditorOnlyData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Frame.MID_M_CausticsProcessFrame_0.MID_M_CausticsProcessFrame_0EditorOnlyData'"
+               End Object
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="Animation" Archetype="/Script/Engine.StaticMeshComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/BP_FluxTextureGenerator.BP_FluxTextureGenerator_C:Animation_GEN_VARIABLE'" ExportPath="/Script/Engine.StaticMeshComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Animation'"
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_16" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_16'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_16.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_17" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_17'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_17.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_18" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_18'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_18.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_19" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_19'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_19.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_20" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_20'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_20.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_21" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_21'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_21.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_22" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_22'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_22.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_23" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_23'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_23.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_24" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_24'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_24.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_25" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_25'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_25.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_26" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_26'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_26.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_27" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_27'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_27.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_28" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_28'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_28.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_29" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_29'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_29.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_30" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_30'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_30.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.TextureRenderTarget2D Name="TextureRenderTarget2D_31" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_31'"
+            Begin Object Class=/Script/Engine.AssetImportData Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_31.AssetImportData'"
+            End Object
+         End Object
+         Begin Object Name="TextureRenderTarget2D_0" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_0'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_0.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_1" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_1'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_1.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_10" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_10'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_10.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_11" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_11'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_11.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_12" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_12'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_12.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_13" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_13'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_13.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_14" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_14'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_14.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_15" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_15'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_15.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_2" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_2'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_2.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_3" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_3'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_3.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_4" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_4'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_4.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_5" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_5'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_5.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_6" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_6'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_6.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_7" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_7'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_7.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_8" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_8'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_8.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_9" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_9'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_9.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            Source=(BlockDataOffsets=(0))
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.13"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="DefaultSceneRoot" ExportPath="/Script/Engine.SceneComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.DefaultSceneRoot'"
+            RelativeLocation=(X=-70.000000,Y=50.000000,Z=220.000000)
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="Capture" ExportPath="/Script/Engine.SceneCaptureComponent2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Capture'"
+            OrthoWidth=512.000000
+            TextureTarget=None
+            CompositeMode=SCCM_Composite
+            ShowOnlyActors(0)="/Game/FluidFlux/Demo/Tools/CausticsGenerator/BP_FluxTextureGenerator.BP_FluxTextureGenerator_C'BP_CausticsGenerator2'"
+            AttachParent="DefaultSceneRoot"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="Mesh" ExportPath="/Script/Engine.StaticMeshComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Mesh'"
+            Begin Object Name="MID_M_CausticsGenerator_0" ExportPath="/Script/Engine.MaterialInstanceDynamic'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Mesh.MID_M_CausticsGenerator_0'"
+               Begin Object Name="MID_M_CausticsGenerator_0EditorOnlyData" ExportPath="/Script/Engine.MaterialInstanceEditorOnlyData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Mesh.MID_M_CausticsGenerator_0.MID_M_CausticsGenerator_0EditorOnlyData'"
+               End Object
+               Parent="/Script/Engine.Material'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Materials/M_CausticsGenerator.M_CausticsGenerator'"
+               EditorOnlyData="/Script/Engine.MaterialInstanceEditorOnlyData'MID_M_CausticsGenerator_0EditorOnlyData'"
+               LightingGuid=59A977DE42B0FCFDC23C88AED7DD9981
+            End Object
+            bEvaluateWorldPositionOffsetInRayTracing=True
+            OverrideMaterials(0)="/Script/Engine.MaterialInstanceDynamic'MID_M_CausticsGenerator_0'"
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="Capture"
+            RelativeLocation=(X=99.999870,Y=0.000000,Z=0.000000)
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="Frame" ExportPath="/Script/Engine.StaticMeshComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Frame'"
+            Begin Object Name="MID_M_CausticsProcessFrame_0" ExportPath="/Script/Engine.MaterialInstanceDynamic'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Frame.MID_M_CausticsProcessFrame_0'"
+               Begin Object Name="MID_M_CausticsProcessFrame_0EditorOnlyData" ExportPath="/Script/Engine.MaterialInstanceEditorOnlyData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Frame.MID_M_CausticsProcessFrame_0.MID_M_CausticsProcessFrame_0EditorOnlyData'"
+               End Object
+               Parent="/Script/Engine.Material'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Materials/M_CausticsProcessFrame.M_CausticsProcessFrame'"
+               EditorOnlyData="/Script/Engine.MaterialInstanceEditorOnlyData'MID_M_CausticsProcessFrame_0EditorOnlyData'"
+               LightingGuid=19172A934C529F3C244E3AA166821344
+            End Object
+            bEvaluateWorldPositionOffsetInRayTracing=True
+            OverrideMaterials(0)="/Script/Engine.MaterialInstanceDynamic'MID_M_CausticsProcessFrame_0'"
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="Capture"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="Animation" ExportPath="/Script/Engine.StaticMeshComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.Animation'"
+            bEvaluateWorldPositionOffsetInRayTracing=True
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="Capture"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="TextureRenderTarget2D_16" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_16'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_16.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_17" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_17'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_17.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_18" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_18'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_18.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_19" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_19'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_19.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_20" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_20'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_20.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_21" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_21'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_21.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_22" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_22'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_22.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_23" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_23'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_23.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_24" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_24'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_24.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_25" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_25'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_25.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_26" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_26'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_26.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_27" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_27'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_27.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_28" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_28'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_28.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_29" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_29'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_29.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_30" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_30'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_30.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Begin Object Name="TextureRenderTarget2D_31" ExportPath="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_31'"
+            Begin Object Name="AssetImportData" ExportPath="/Script/Engine.AssetImportData'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BP_CausticsGenerator2.TextureRenderTarget2D_31.AssetImportData'"
+            End Object
+            SizeX=512
+            SizeY=512
+            RenderTargetFormat=RTF_R16f
+            AssetImportData="/Script/Engine.AssetImportData'AssetImportData'"
+            OodleTextureSdkVersion="2.9.16"
+            CustomProperties TextureSourceData PayloadSize=0 
+         End Object
+         Animation="Animation"
+         Frame="Frame"
+         Mesh="Mesh"
+         Capture="Capture"
+         DefaultSceneRoot="DefaultSceneRoot"
+         FramesCount=16
+         GeneratorInstance="/Script/Engine.MaterialInstanceDynamic'Mesh.MID_M_CausticsGenerator_0'"
+         ProcessFrameInstance="/Script/Engine.MaterialInstanceDynamic'Frame.MID_M_CausticsProcessFrame_0'"
+         Time=-0.500000
+         Offset=0.062500
+         Resolution=512
+         DivisionsX=4
+         DivisionsY=4
+         Frames(0)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_16'"
+         Frames(1)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_17'"
+         Frames(2)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_18'"
+         Frames(3)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_19'"
+         Frames(4)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_20'"
+         Frames(5)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_21'"
+         Frames(6)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_22'"
+         Frames(7)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_23'"
+         Frames(8)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_24'"
+         Frames(9)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_25'"
+         Frames(10)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_26'"
+         Frames(11)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_27'"
+         Frames(12)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_28'"
+         Frames(13)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_29'"
+         Frames(14)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_30'"
+         Frames(15)="/Script/Engine.TextureRenderTarget2D'TextureRenderTarget2D_31'"
+         TargetFlipbook="/Script/Engine.TextureRenderTarget2D'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Textures/RT_CausticsMap.RT_CausticsMap'"
+         RootComponent="DefaultSceneRoot"
+         ActorLabel="BP_CausticsGenerator2"
+         FolderPath="Simulation"
+         BlueprintCreatedComponents(0)="DefaultSceneRoot"
+         BlueprintCreatedComponents(1)="Capture"
+         BlueprintCreatedComponents(2)="Mesh"
+         BlueprintCreatedComponents(3)="Frame"
+         BlueprintCreatedComponents(4)="Animation"
+      End Actor
+      Begin Actor Class=/Script/Engine.ExponentialHeightFog Name=ExponentialHeightFog_1 Archetype="/Script/Engine.ExponentialHeightFog'/Script/Engine.Default__ExponentialHeightFog'" ExportPath="/Script/Engine.ExponentialHeightFog'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.ExponentialHeightFog_1'"
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype="/Script/Engine.BillboardComponent'/Script/Engine.Default__ExponentialHeightFog:Sprite'" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.ExponentialHeightFog_1.Sprite'"
+         End Object
+         Begin Object Class=/Script/Engine.ExponentialHeightFogComponent Name="HeightFogComponent0" Archetype="/Script/Engine.ExponentialHeightFogComponent'/Script/Engine.Default__ExponentialHeightFog:HeightFogComponent0'" ExportPath="/Script/Engine.ExponentialHeightFogComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.ExponentialHeightFog_1.HeightFogComponent0'"
+         End Object
+         Begin Object Name="Sprite" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.ExponentialHeightFog_1.Sprite'"
+            AttachParent="HeightFogComponent0"
+         End Object
+         Begin Object Name="HeightFogComponent0" ExportPath="/Script/Engine.ExponentialHeightFogComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.ExponentialHeightFog_1.HeightFogComponent0'"
+            FogDensity=0.000500
+            FogHeightFalloff=0.500000
+            FogInscatteringLuminance=(R=0.043743,G=0.076063,B=0.125000,A=1.000000)
+            DirectionalInscatteringLuminance=(R=0.250000,G=0.250000,B=0.125000,A=1.000000)
+            StartDistance=10000.000000
+            RelativeLocation=(X=8120.000000,Y=25390.000000,Z=5840.000000)
+         End Object
+         Component="HeightFogComponent0"
+         SpriteComponent="Sprite"
+         RootComponent="HeightFogComponent0"
+         ActorLabel="ExponentialHeightFog"
+      End Actor
+      Begin Actor Class=/Script/Engine.SkyLight Name=SkyLight_1 Archetype="/Script/Engine.SkyLight'/Script/Engine.Default__SkyLight'" ExportPath="/Script/Engine.SkyLight'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyLight_1'"
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype="/Script/Engine.BillboardComponent'/Script/Engine.Default__SkyLight:Sprite'" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyLight_1.Sprite'"
+         End Object
+         Begin Object Class=/Script/Engine.SkyLightComponent Name="SkyLightComponent0" Archetype="/Script/Engine.SkyLightComponent'/Script/Engine.Default__SkyLight:SkyLightComponent0'" ExportPath="/Script/Engine.SkyLightComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyLight_1.SkyLightComponent0'"
+         End Object
+         Begin Object Name="Sprite" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyLight_1.Sprite'"
+            AttachParent="SkyLightComponent0"
+         End Object
+         Begin Object Name="SkyLightComponent0" ExportPath="/Script/Engine.SkyLightComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SkyLight_1.SkyLightComponent0'"
+            bRealTimeCapture=True
+            bLowerHemisphereIsBlack=False
+            bCloudAmbientOcclusion=True
+            CloudAmbientOcclusionExtent=100.000000
+            CastRaytracedShadow=Disabled
+            RelativeLocation=(X=-300.000000,Y=-300.000000,Z=200.000000)
+            Mobility=Movable
+         End Object
+         LightComponent="SkyLightComponent0"
+         SpriteComponent="Sprite"
+         RootComponent="SkyLightComponent0"
+         ActorLabel="SkyLight"
+      End Actor
+      Begin Actor Class=/Script/Engine.SphereReflectionCapture Name=SphereReflectionCapture_1 Archetype="/Script/Engine.SphereReflectionCapture'/Script/Engine.Default__SphereReflectionCapture'" ExportPath="/Script/Engine.SphereReflectionCapture'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SphereReflectionCapture_1'"
+         Begin Object Class=/Script/Engine.SphereReflectionCaptureComponent Name="NewReflectionComponent" Archetype="/Script/Engine.SphereReflectionCaptureComponent'/Script/Engine.Default__SphereReflectionCapture:NewReflectionComponent'" ExportPath="/Script/Engine.SphereReflectionCaptureComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent'"
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype="/Script/Engine.BillboardComponent'/Script/Engine.Default__SphereReflectionCapture:Sprite'" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SphereReflectionCapture_1.Sprite'"
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="CaptureOffset" Archetype="/Script/Engine.BillboardComponent'/Script/Engine.Default__SphereReflectionCapture:CaptureOffset'" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SphereReflectionCapture_1.CaptureOffset'"
+         End Object
+         Begin Object Class=/Script/Engine.DrawSphereComponent Name="DrawRadius0" Archetype="/Script/Engine.DrawSphereComponent'/Script/Engine.Default__SphereReflectionCapture:DrawRadius0'" ExportPath="/Script/Engine.DrawSphereComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SphereReflectionCapture_1.DrawRadius0'"
+         End Object
+         Begin Object Class=/Script/Engine.DrawSphereComponent Name="DrawRadius1" Archetype="/Script/Engine.DrawSphereComponent'/Script/Engine.Default__SphereReflectionCapture:DrawRadius1'" ExportPath="/Script/Engine.DrawSphereComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SphereReflectionCapture_1.DrawRadius1'"
+         End Object
+         Begin Object Name="NewReflectionComponent" ExportPath="/Script/Engine.SphereReflectionCaptureComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent'"
+            InfluenceRadius=6121.706543
+            PreviewInfluenceRadius="DrawRadius0"
+            CaptureOffsetComponent="CaptureOffset"
+            MapBuildDataId=FE5A9E4C40C2E700ED93FA8862F70C48
+            RelativeLocation=(X=526.564453,Y=-4608.841797,Z=1962.825684)
+         End Object
+         Begin Object Name="Sprite" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SphereReflectionCapture_1.Sprite'"
+            AttachParent="NewReflectionComponent"
+         End Object
+         Begin Object Name="CaptureOffset" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SphereReflectionCapture_1.CaptureOffset'"
+            AttachParent="NewReflectionComponent"
+            bVisible=False
+         End Object
+         Begin Object Name="DrawRadius0" ExportPath="/Script/Engine.DrawSphereComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SphereReflectionCapture_1.DrawRadius0'"
+            SphereRadius=6121.706543
+            AreaClass="/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+            bUseSystemDefaultObstacleAreaClass=False
+            AreaClassOverride="/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="NewReflectionComponent"
+         End Object
+         Begin Object Name="DrawRadius1" ExportPath="/Script/Engine.DrawSphereComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.SphereReflectionCapture_1.DrawRadius1'"
+            AreaClass="/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+            bUseSystemDefaultObstacleAreaClass=False
+            AreaClassOverride="/Script/CoreUObject.Class'/Script/NavigationSystem.NavArea_Obstacle'"
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="NewReflectionComponent"
+         End Object
+         DrawCaptureRadius="DrawRadius1"
+         CaptureComponent="NewReflectionComponent"
+         SpriteComponent="Sprite"
+         CaptureOffsetComponent="CaptureOffset"
+         RootComponent="NewReflectionComponent"
+         ActorLabel="SphereReflectionCapture"
+      End Actor
+      Begin Actor Class=/Script/Engine.TextRenderActor Name=TextRenderActor_0 Archetype="/Script/Engine.TextRenderActor'/Script/Engine.Default__TextRenderActor'" ExportPath="/Script/Engine.TextRenderActor'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.TextRenderActor_0'"
+         Begin Object Class=/Script/Engine.TextRenderComponent Name="NewTextRenderComponent" Archetype="/Script/Engine.TextRenderComponent'/Script/Engine.Default__TextRenderActor:NewTextRenderComponent'" ExportPath="/Script/Engine.TextRenderComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.TextRenderActor_0.NewTextRenderComponent'"
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype="/Script/Engine.BillboardComponent'/Script/Engine.Default__TextRenderActor:Sprite'" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.TextRenderActor_0.Sprite'"
+         End Object
+         Begin Object Name="NewTextRenderComponent" ExportPath="/Script/Engine.TextRenderComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.TextRenderActor_0.NewTextRenderComponent'"
+            Text=NSLOCTEXT("[B882C98E471EFD50F951C8B7DECA1433]", "DBD70E624FB2DE803E3DE1B84E1CF0FC", "ASSETFREAKS.COM")
+            WorldSize=200.000000
+            RelativeLocation=(X=-610.000000,Y=-370.000000,Z=110.000000)
+            RelativeRotation=(Pitch=0.000000,Yaw=89.999999,Roll=0.000000)
+         End Object
+         Begin Object Name="Sprite" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.TextRenderActor_0.Sprite'"
+            AttachParent="NewTextRenderComponent"
+         End Object
+         TextRender="NewTextRenderComponent"
+         SpriteComponent="Sprite"
+         RootComponent="NewTextRenderComponent"
+         ActorLabel="TextRenderActor6"
+      End Actor
+      Begin Actor Class=/Script/Engine.TextRenderActor Name=TextRenderActor_1 Archetype="/Script/Engine.TextRenderActor'/Script/Engine.Default__TextRenderActor'" ExportPath="/Script/Engine.TextRenderActor'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.TextRenderActor_1'"
+         Begin Object Class=/Script/Engine.TextRenderComponent Name="NewTextRenderComponent" Archetype="/Script/Engine.TextRenderComponent'/Script/Engine.Default__TextRenderActor:NewTextRenderComponent'" ExportPath="/Script/Engine.TextRenderComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.TextRenderActor_1.NewTextRenderComponent'"
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype="/Script/Engine.BillboardComponent'/Script/Engine.Default__TextRenderActor:Sprite'" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.TextRenderActor_1.Sprite'"
+         End Object
+         Begin Object Name="NewTextRenderComponent" ExportPath="/Script/Engine.TextRenderComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.TextRenderActor_1.NewTextRenderComponent'"
+            Text=NSLOCTEXT("[B882C98E471EFD50F951C8B7DECA1433]", "AE68586341281A6EC798BE80E9E440D5", "Select caustics generator actor and press Generate.\r\nGenerated Target Flipbook can be convertted to texture 3D\r\n and used as caustics animation")
+            VerticalAlignment=EVRTA_TextTop
+            WorldSize=40.000000
+            RelativeLocation=(X=-450.000000,Y=-490.000000,Z=440.000000)
+            RelativeRotation=(Pitch=0.000000,Yaw=90.000114,Roll=0.000000)
+         End Object
+         Begin Object Name="Sprite" ExportPath="/Script/Engine.BillboardComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.TextRenderActor_1.Sprite'"
+            AttachParent="NewTextRenderComponent"
+         End Object
+         TextRender="NewTextRenderComponent"
+         SpriteComponent="Sprite"
+         RootComponent="NewTextRenderComponent"
+         ActorLabel="TextRenderActor"
+      End Actor
+      Begin Actor Class=/Script/Engine.PostProcessVolume Name=PostProcessVolume_1 Archetype="/Script/Engine.PostProcessVolume'/Script/Engine.Default__PostProcessVolume'" ExportPath="/Script/Engine.PostProcessVolume'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PostProcessVolume_1'"
+         Begin Object Class=/Script/Engine.BrushComponent Name="BrushComponent0" Archetype="/Script/Engine.BrushComponent'/Script/Engine.Default__PostProcessVolume:BrushComponent0'" ExportPath="/Script/Engine.BrushComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PostProcessVolume_1.BrushComponent0'"
+            Begin Object Class=/Script/Engine.BodySetup Name="BodySetup_0" ExportPath="/Script/Engine.BodySetup'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PostProcessVolume_1.BrushComponent0.BodySetup_0'"
+            End Object
+         End Object
+         Begin Brush Name=Model_0
+         End Brush
+         Begin Object Class=/Script/UnrealEd.CubeBuilder Name="CubeBuilder_1" ExportPath="/Script/UnrealEd.CubeBuilder'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PostProcessVolume_1.CubeBuilder_1'"
+         End Object
+         Begin Object Name="BrushComponent0" ExportPath="/Script/Engine.BrushComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PostProcessVolume_1.BrushComponent0'"
+            Begin Object Name="BodySetup_0" ExportPath="/Script/Engine.BodySetup'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PostProcessVolume_1.BrushComponent0.BodySetup_0'"
+               AggGeom=(ConvexElems=((VertexData=((X=-100.000000,Y=100.000000,Z=-100.000000),(X=-100.000000,Y=100.000000,Z=100.000000),(X=-100.000000,Y=-100.000000,Z=100.000000),(X=-100.000000,Y=-100.000000,Z=-100.000000),(X=100.000000,Y=100.000000,Z=-100.000000),(X=100.000000,Y=100.000000,Z=100.000000),(X=100.000000,Y=-100.000000,Z=-100.000000),(X=100.000000,Y=-100.000000,Z=100.000000)),IndexData=(0,1,2,0,2,3,4,5,1,4,1,0,6,7,5,6,5,4,3,2,7,3,7,6,5,7,2,5,2,1,6,4,0,6,0,3),ElemBox=(Min=(X=-100.000000,Y=-100.000000,Z=-100.000000),Max=(X=100.000000,Y=100.000000,Z=100.000000),IsValid=True))))
+               bGenerateMirroredCollision=False
+               CollisionTraceFlag=CTF_UseSimpleAsComplex
+            End Object
+            Brush="/Script/Engine.Model'Model_0'"
+            BrushBodySetup="/Script/Engine.BodySetup'BodySetup_0'"
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            RelativeLocation=(X=-1730.000000,Y=-2380.000000,Z=-540.000000)
+            RelativeScale3D=(X=222.000000,Y=222.000000,Z=222.000000)
+         End Object
+         Begin Object Name="CubeBuilder_1" ExportPath="/Script/UnrealEd.CubeBuilder'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.PostProcessVolume_1.CubeBuilder_1'"
+         End Object
+         Settings=(bOverride_AutoExposureMinBrightness=True,bOverride_AutoExposureMaxBrightness=True,bOverride_MotionBlurAmount=True,bOverride_MotionBlurMax=True,AutoExposureMinBrightness=0.300000,AutoExposureMaxBrightness=0.700000,MotionBlurAmount=0.000000,MotionBlurMax=0.000000)
+         BrushType=Brush_Add
+         Begin Brush Name=Model_0
+            Begin PolyList
+               Begin Polygon
+                  Origin   -00100.000000,-00100.000000,-00100.000000
+                  Normal   -00001.000000,+00000.000000,+00000.000000
+                  TextureU +00000.000000,+00001.000000,+00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   -00100.000000,-00100.000000,-00100.000000
+                  Vertex   -00100.000000,-00100.000000,+00100.000000
+                  Vertex   -00100.000000,+00100.000000,+00100.000000
+                  Vertex   -00100.000000,+00100.000000,-00100.000000
+               End Polygon
+               Begin Polygon
+                  Origin   -00100.000000,+00100.000000,-00100.000000
+                  Normal   +00000.000000,+00001.000000,+00000.000000
+                  TextureU +00001.000000,-00000.000000,+00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   -00100.000000,+00100.000000,-00100.000000
+                  Vertex   -00100.000000,+00100.000000,+00100.000000
+                  Vertex   +00100.000000,+00100.000000,+00100.000000
+                  Vertex   +00100.000000,+00100.000000,-00100.000000
+               End Polygon
+               Begin Polygon
+                  Origin   +00100.000000,+00100.000000,-00100.000000
+                  Normal   +00001.000000,+00000.000000,+00000.000000
+                  TextureU +00000.000000,-00001.000000,+00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   +00100.000000,+00100.000000,-00100.000000
+                  Vertex   +00100.000000,+00100.000000,+00100.000000
+                  Vertex   +00100.000000,-00100.000000,+00100.000000
+                  Vertex   +00100.000000,-00100.000000,-00100.000000
+               End Polygon
+               Begin Polygon
+                  Origin   +00100.000000,-00100.000000,-00100.000000
+                  Normal   +00000.000000,-00001.000000,+00000.000000
+                  TextureU -00001.000000,-00000.000000,-00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   +00100.000000,-00100.000000,-00100.000000
+                  Vertex   +00100.000000,-00100.000000,+00100.000000
+                  Vertex   -00100.000000,-00100.000000,+00100.000000
+                  Vertex   -00100.000000,-00100.000000,-00100.000000
+               End Polygon
+               Begin Polygon
+                  Origin   -00100.000000,+00100.000000,+00100.000000
+                  Normal   +00000.000000,+00000.000000,+00001.000000
+                  TextureU +00001.000000,+00000.000000,+00000.000000
+                  TextureV +00000.000000,+00001.000000,+00000.000000
+                  Vertex   -00100.000000,+00100.000000,+00100.000000
+                  Vertex   -00100.000000,-00100.000000,+00100.000000
+                  Vertex   +00100.000000,-00100.000000,+00100.000000
+                  Vertex   +00100.000000,+00100.000000,+00100.000000
+               End Polygon
+               Begin Polygon
+                  Origin   -00100.000000,-00100.000000,-00100.000000
+                  Normal   +00000.000000,+00000.000000,-00001.000000
+                  TextureU +00001.000000,+00000.000000,+00000.000000
+                  TextureV +00000.000000,-00001.000000,+00000.000000
+                  Vertex   -00100.000000,-00100.000000,-00100.000000
+                  Vertex   -00100.000000,+00100.000000,-00100.000000
+                  Vertex   +00100.000000,+00100.000000,-00100.000000
+                  Vertex   +00100.000000,-00100.000000,-00100.000000
+               End Polygon
+            End PolyList
+         End Brush
+         Brush="/Script/Engine.Model'Model_0'"
+         BrushComponent="BrushComponent0"
+         BrushBuilder="/Script/UnrealEd.CubeBuilder'CubeBuilder_1'"
+         bHidden=False
+         RootComponent="BrushComponent0"
+         ActorLabel="PostProcessVolume"
+      End Actor
+      Begin Actor Class=/Script/Engine.Brush Name=BoxBrush Archetype="/Script/Engine.Brush'/Script/Engine.Default__Brush'" ExportPath="/Script/Engine.Brush'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BoxBrush'"
+         Begin Object Class=/Script/Engine.BrushComponent Name="BrushComponent0" Archetype="/Script/Engine.BrushComponent'/Script/Engine.Default__Brush:BrushComponent0'" ExportPath="/Script/Engine.BrushComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BoxBrush.BrushComponent0'"
+         End Object
+         Begin Brush Name=Model_0
+         End Brush
+         Begin Object Class=/Script/UnrealEd.CubeBuilder Name="CubeBuilder_0" ExportPath="/Script/UnrealEd.CubeBuilder'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BoxBrush.CubeBuilder_0'"
+         End Object
+         Begin Object Name="BrushComponent0" ExportPath="/Script/Engine.BrushComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BoxBrush.BrushComponent0'"
+            Brush="/Script/Engine.Model'Model_0'"
+         End Object
+         Begin Object Name="CubeBuilder_0" ExportPath="/Script/UnrealEd.CubeBuilder'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BoxBrush.CubeBuilder_0'"
+            X=1000.000000
+            Y=1000.000000
+            Vertices(0)=(X=-500.000000,Y=-500.000000,Z=-100.000000)
+            Vertices(1)=(X=-500.000000,Y=-500.000000,Z=100.000000)
+            Vertices(2)=(X=-500.000000,Y=500.000000,Z=-100.000000)
+            Vertices(3)=(X=-500.000000,Y=500.000000,Z=100.000000)
+            Vertices(4)=(X=500.000000,Y=-500.000000,Z=-100.000000)
+            Vertices(5)=(X=500.000000,Y=-500.000000,Z=100.000000)
+            Vertices(6)=(X=500.000000,Y=500.000000,Z=-100.000000)
+            Vertices(7)=(X=500.000000,Y=500.000000,Z=100.000000)
+            Polys(0)=(VertexIndices=(0,1,3,2),Direction=1)
+            Polys(1)=(VertexIndices=(2,3,7,6),Direction=1)
+            Polys(2)=(VertexIndices=(6,7,5,4),Direction=1)
+            Polys(3)=(VertexIndices=(4,5,1,0),Direction=1)
+            Polys(4)=(VertexIndices=(3,1,5,7),Direction=1)
+            Polys(5)=(VertexIndices=(0,2,6,4),Direction=1)
+            Layer="Cube"
+         End Object
+         BrushType=Brush_Add
+         bNotForClientOrServer=True
+         Begin Brush Name=Model_0
+            Begin PolyList
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   -00500.000000,-00500.000000,-00100.000000
+                  Normal   -00001.000000,+00000.000000,+00000.000000
+                  TextureU +00000.000000,+00001.000000,+00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   -00500.000000,-00500.000000,-00100.000000
+                  Vertex   -00500.000000,-00500.000000,+00100.000000
+                  Vertex   -00500.000000,+00500.000000,+00100.000000
+                  Vertex   -00500.000000,+00500.000000,-00100.000000
+               End Polygon
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   -00500.000000,+00500.000000,-00100.000000
+                  Normal   +00000.000000,+00001.000000,+00000.000000
+                  TextureU +00001.000000,-00000.000000,+00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   -00500.000000,+00500.000000,-00100.000000
+                  Vertex   -00500.000000,+00500.000000,+00100.000000
+                  Vertex   +00500.000000,+00500.000000,+00100.000000
+                  Vertex   +00500.000000,+00500.000000,-00100.000000
+               End Polygon
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   +00500.000000,+00500.000000,-00100.000000
+                  Normal   +00001.000000,+00000.000000,+00000.000000
+                  TextureU +00000.000000,-00001.000000,+00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   +00500.000000,+00500.000000,-00100.000000
+                  Vertex   +00500.000000,+00500.000000,+00100.000000
+                  Vertex   +00500.000000,-00500.000000,+00100.000000
+                  Vertex   +00500.000000,-00500.000000,-00100.000000
+               End Polygon
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   +00500.000000,-00500.000000,-00100.000000
+                  Normal   +00000.000000,-00001.000000,+00000.000000
+                  TextureU -00001.000000,-00000.000000,-00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   +00500.000000,-00500.000000,-00100.000000
+                  Vertex   +00500.000000,-00500.000000,+00100.000000
+                  Vertex   -00500.000000,-00500.000000,+00100.000000
+                  Vertex   -00500.000000,-00500.000000,-00100.000000
+               End Polygon
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   -00500.000000,+00500.000000,+00100.000000
+                  Normal   +00000.000000,+00000.000000,+00001.000000
+                  TextureU +00001.000000,+00000.000000,+00000.000000
+                  TextureV +00000.000000,+00001.000000,+00000.000000
+                  Vertex   -00500.000000,+00500.000000,+00100.000000
+                  Vertex   -00500.000000,-00500.000000,+00100.000000
+                  Vertex   +00500.000000,-00500.000000,+00100.000000
+                  Vertex   +00500.000000,+00500.000000,+00100.000000
+               End Polygon
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   -00500.000000,-00500.000000,-00100.000000
+                  Normal   +00000.000000,+00000.000000,-00001.000000
+                  TextureU +00001.000000,+00000.000000,+00000.000000
+                  TextureV +00000.000000,-00001.000000,+00000.000000
+                  Vertex   -00500.000000,-00500.000000,-00100.000000
+                  Vertex   -00500.000000,+00500.000000,-00100.000000
+                  Vertex   +00500.000000,+00500.000000,-00100.000000
+                  Vertex   +00500.000000,-00500.000000,-00100.000000
+               End Polygon
+            End PolyList
+         End Brush
+         Brush="/Script/Engine.Model'Model_0'"
+         BrushComponent="BrushComponent0"
+         BrushBuilder="/Script/UnrealEd.CubeBuilder'CubeBuilder_0'"
+         bHidden=False
+         SpawnCollisionHandlingMethod=AlwaysSpawn
+         RootComponent="BrushComponent0"
+         ActorLabel="Box Brush"
+         FolderPath="World"
+      End Actor
+      Begin Actor Class=/Script/Engine.Brush Name=BoxBrush2 Archetype="/Script/Engine.Brush'/Script/Engine.Default__Brush'" ExportPath="/Script/Engine.Brush'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BoxBrush2'"
+         Begin Object Class=/Script/Engine.BrushComponent Name="BrushComponent0" Archetype="/Script/Engine.BrushComponent'/Script/Engine.Default__Brush:BrushComponent0'" ExportPath="/Script/Engine.BrushComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BoxBrush2.BrushComponent0'"
+         End Object
+         Begin Brush Name=Model_0
+         End Brush
+         Begin Object Class=/Script/UnrealEd.CubeBuilder Name="CubeBuilder_0" ExportPath="/Script/UnrealEd.CubeBuilder'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BoxBrush2.CubeBuilder_0'"
+         End Object
+         Begin Object Name="BrushComponent0" ExportPath="/Script/Engine.BrushComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BoxBrush2.BrushComponent0'"
+            Brush="/Script/Engine.Model'Model_0'"
+            RelativeLocation=(X=0.000000,Y=-1000.000000,Z=0.000000)
+         End Object
+         Begin Object Name="CubeBuilder_0" ExportPath="/Script/UnrealEd.CubeBuilder'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.BoxBrush2.CubeBuilder_0'"
+            X=1000.000000
+            Y=1000.000000
+            Z=1000.000000
+            Vertices(0)=(X=-500.000000,Y=-500.000000,Z=-500.000000)
+            Vertices(1)=(X=-500.000000,Y=-500.000000,Z=500.000000)
+            Vertices(2)=(X=-500.000000,Y=500.000000,Z=-500.000000)
+            Vertices(3)=(X=-500.000000,Y=500.000000,Z=500.000000)
+            Vertices(4)=(X=500.000000,Y=-500.000000,Z=-500.000000)
+            Vertices(5)=(X=500.000000,Y=-500.000000,Z=500.000000)
+            Vertices(6)=(X=500.000000,Y=500.000000,Z=-500.000000)
+            Vertices(7)=(X=500.000000,Y=500.000000,Z=500.000000)
+            Polys(0)=(VertexIndices=(0,1,3,2),Direction=1)
+            Polys(1)=(VertexIndices=(2,3,7,6),Direction=1)
+            Polys(2)=(VertexIndices=(6,7,5,4),Direction=1)
+            Polys(3)=(VertexIndices=(4,5,1,0),Direction=1)
+            Polys(4)=(VertexIndices=(3,1,5,7),Direction=1)
+            Polys(5)=(VertexIndices=(0,2,6,4),Direction=1)
+            Layer="Cube"
+         End Object
+         BrushType=Brush_Add
+         bNotForClientOrServer=True
+         Begin Brush Name=Model_0
+            Begin PolyList
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   -00500.000000,-00500.000000,-00500.000000
+                  Normal   -00001.000000,+00000.000000,+00000.000000
+                  TextureU +00000.000000,+00001.000000,+00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   -00500.000000,-00500.000000,-00500.000000
+                  Vertex   -00500.000000,-00500.000000,+00500.000000
+                  Vertex   -00500.000000,+00500.000000,+00500.000000
+                  Vertex   -00500.000000,+00500.000000,-00500.000000
+               End Polygon
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   -00500.000000,+00500.000000,-00500.000000
+                  Normal   +00000.000000,+00001.000000,+00000.000000
+                  TextureU +00001.000000,-00000.000000,+00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   -00500.000000,+00500.000000,-00500.000000
+                  Vertex   -00500.000000,+00500.000000,+00500.000000
+                  Vertex   +00500.000000,+00500.000000,+00500.000000
+                  Vertex   +00500.000000,+00500.000000,-00500.000000
+               End Polygon
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   +00500.000000,+00500.000000,-00500.000000
+                  Normal   +00001.000000,+00000.000000,+00000.000000
+                  TextureU +00000.000000,-00001.000000,+00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   +00500.000000,+00500.000000,-00500.000000
+                  Vertex   +00500.000000,+00500.000000,+00500.000000
+                  Vertex   +00500.000000,-00500.000000,+00500.000000
+                  Vertex   +00500.000000,-00500.000000,-00500.000000
+               End Polygon
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   +00500.000000,-00500.000000,-00500.000000
+                  Normal   +00000.000000,-00001.000000,+00000.000000
+                  TextureU -00001.000000,-00000.000000,-00000.000000
+                  TextureV +00000.000000,+00000.000000,-00001.000000
+                  Vertex   +00500.000000,-00500.000000,-00500.000000
+                  Vertex   +00500.000000,-00500.000000,+00500.000000
+                  Vertex   -00500.000000,-00500.000000,+00500.000000
+                  Vertex   -00500.000000,-00500.000000,-00500.000000
+               End Polygon
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   -00500.000000,+00500.000000,+00500.000000
+                  Normal   +00000.000000,+00000.000000,+00001.000000
+                  TextureU +00001.000000,+00000.000000,+00000.000000
+                  TextureV +00000.000000,+00001.000000,+00000.000000
+                  Vertex   -00500.000000,+00500.000000,+00500.000000
+                  Vertex   -00500.000000,-00500.000000,+00500.000000
+                  Vertex   +00500.000000,-00500.000000,+00500.000000
+                  Vertex   +00500.000000,+00500.000000,+00500.000000
+               End Polygon
+               Begin Polygon Texture=/Game/FluidFlux/Demo/Tools/PrototypeTools/MI_PrototypeGround.MI_PrototypeGround
+                  Origin   -00500.000000,-00500.000000,-00500.000000
+                  Normal   +00000.000000,+00000.000000,-00001.000000
+                  TextureU +00001.000000,+00000.000000,+00000.000000
+                  TextureV +00000.000000,-00001.000000,+00000.000000
+                  Vertex   -00500.000000,-00500.000000,-00500.000000
+                  Vertex   -00500.000000,+00500.000000,-00500.000000
+                  Vertex   +00500.000000,+00500.000000,-00500.000000
+                  Vertex   +00500.000000,-00500.000000,-00500.000000
+               End Polygon
+            End PolyList
+         End Brush
+         Brush="/Script/Engine.Model'Model_0'"
+         BrushComponent="BrushComponent0"
+         BrushBuilder="/Script/UnrealEd.CubeBuilder'CubeBuilder_0'"
+         bHidden=False
+         SpawnCollisionHandlingMethod=AlwaysSpawn
+         RootComponent="BrushComponent0"
+         ActorLabel="Box Brush2"
+         FolderPath="World"
+      End Actor
+      Begin Actor Class=/Script/Engine.Brush Name=Brush_0 Archetype="/Script/Engine.Brush'/Script/Engine.Default__Brush'" ExportPath="/Script/Engine.Brush'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.Brush_0'"
+         Begin Object Class=/Script/Engine.BrushComponent Name="BrushComponent0" Archetype="/Script/Engine.BrushComponent'/Script/Engine.Default__Brush:BrushComponent0'" ExportPath="/Script/Engine.BrushComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.Brush_0.BrushComponent0'"
+         End Object
+         Begin Object Class=/Script/UnrealEd.TetrahedronBuilder Name="TetrahedronBuilder_0" ExportPath="/Script/UnrealEd.TetrahedronBuilder'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.Brush_0.TetrahedronBuilder_0'"
+         End Object
+         Begin Object Name="BrushComponent0" ExportPath="/Script/Engine.BrushComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.Brush_0.BrushComponent0'"
+            Brush="/Script/Engine.Model'Brush'"
+            bSelectable=False
+            RelativeLocation=(X=-290.000000,Y=-3130.000000,Z=460.000000)
+         End Object
+         Begin Object Name="TetrahedronBuilder_0" ExportPath="/Script/UnrealEd.TetrahedronBuilder'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.Brush_0.TetrahedronBuilder_0'"
+            Vertices(0)=(X=256.000000,Y=0.000000,Z=0.000000)
+            Vertices(1)=(X=-256.000000,Y=0.000000,Z=0.000000)
+            Vertices(2)=(X=0.000000,Y=256.000000,Z=0.000000)
+            Vertices(3)=(X=0.000000,Y=-256.000000,Z=0.000000)
+            Vertices(4)=(X=0.000000,Y=0.000000,Z=256.000000)
+            Vertices(5)=(X=0.000000,Y=0.000000,Z=-256.000000)
+            Vertices(6)=(X=-181.019333,Y=181.019333,Z=0.000000)
+            Vertices(7)=(X=-181.019333,Y=0.000000,Z=181.019333)
+            Vertices(8)=(X=0.000000,Y=181.019333,Z=181.019333)
+            Vertices(9)=(X=-181.019333,Y=-181.019333,Z=0.000000)
+            Vertices(10)=(X=0.000000,Y=-181.019333,Z=181.019333)
+            Vertices(11)=(X=-181.019333,Y=0.000000,Z=181.019333)
+            Vertices(12)=(X=181.019333,Y=-181.019333,Z=0.000000)
+            Vertices(13)=(X=181.019333,Y=0.000000,Z=181.019333)
+            Vertices(14)=(X=0.000000,Y=-181.019333,Z=181.019333)
+            Vertices(15)=(X=181.019333,Y=181.019333,Z=0.000000)
+            Vertices(16)=(X=0.000000,Y=181.019333,Z=181.019333)
+            Vertices(17)=(X=181.019333,Y=0.000000,Z=181.019333)
+            Vertices(18)=(X=-181.019333,Y=181.019333,Z=0.000000)
+            Vertices(19)=(X=0.000000,Y=181.019333,Z=-181.019333)
+            Vertices(20)=(X=-181.019333,Y=0.000000,Z=-181.019333)
+            Vertices(21)=(X=-181.019333,Y=-181.019333,Z=0.000000)
+            Vertices(22)=(X=-181.019333,Y=0.000000,Z=-181.019333)
+            Vertices(23)=(X=0.000000,Y=-181.019333,Z=-181.019333)
+            Vertices(24)=(X=181.019333,Y=-181.019333,Z=0.000000)
+            Vertices(25)=(X=0.000000,Y=-181.019333,Z=-181.019333)
+            Vertices(26)=(X=181.019333,Y=0.000000,Z=-181.019333)
+            Vertices(27)=(X=181.019333,Y=181.019333,Z=0.000000)
+            Vertices(28)=(X=181.019333,Y=0.000000,Z=-181.019333)
+            Vertices(29)=(X=0.000000,Y=181.019333,Z=-181.019333)
+            Polys(0)=(VertexIndices=(2,6,8),Direction=1)
+            Polys(1)=(VertexIndices=(1,7,6),Direction=1)
+            Polys(2)=(VertexIndices=(4,8,7),Direction=1)
+            Polys(3)=(VertexIndices=(6,7,8),Direction=1)
+            Polys(4)=(VertexIndices=(1,9,11),Direction=1)
+            Polys(5)=(VertexIndices=(3,10,9),Direction=1)
+            Polys(6)=(VertexIndices=(4,11,10),Direction=1)
+            Polys(7)=(VertexIndices=(9,10,11),Direction=1)
+            Polys(8)=(VertexIndices=(3,12,14),Direction=1)
+            Polys(9)=(VertexIndices=(0,13,12),Direction=1)
+            Polys(10)=(VertexIndices=(4,14,13),Direction=1)
+            Polys(11)=(VertexIndices=(12,13,14),Direction=1)
+            Polys(12)=(VertexIndices=(0,15,17),Direction=1)
+            Polys(13)=(VertexIndices=(2,16,15),Direction=1)
+            Polys(14)=(VertexIndices=(4,17,16),Direction=1)
+            Polys(15)=(VertexIndices=(15,16,17),Direction=1)
+            Polys(16)=(VertexIndices=(1,18,20),Direction=1)
+            Polys(17)=(VertexIndices=(2,19,18),Direction=1)
+            Polys(18)=(VertexIndices=(5,20,19),Direction=1)
+            Polys(19)=(VertexIndices=(18,19,20),Direction=1)
+            Polys(20)=(VertexIndices=(3,21,23),Direction=1)
+            Polys(21)=(VertexIndices=(1,22,21),Direction=1)
+            Polys(22)=(VertexIndices=(5,23,22),Direction=1)
+            Polys(23)=(VertexIndices=(21,22,23),Direction=1)
+            Polys(24)=(VertexIndices=(0,24,26),Direction=1)
+            Polys(25)=(VertexIndices=(3,25,24),Direction=1)
+            Polys(26)=(VertexIndices=(5,26,25),Direction=1)
+            Polys(27)=(VertexIndices=(24,25,26),Direction=1)
+            Polys(28)=(VertexIndices=(2,27,29),Direction=1)
+            Polys(29)=(VertexIndices=(0,28,27),Direction=1)
+            Polys(30)=(VertexIndices=(5,29,28),Direction=1)
+            Polys(31)=(VertexIndices=(27,28,29),Direction=1)
+            Layer="Tetrahedron"
+         End Object
+         bNotForClientOrServer=True
+         Brush="/Script/Engine.Model'Brush'"
+         BrushComponent="BrushComponent0"
+         BrushBuilder="/Script/UnrealEd.TetrahedronBuilder'TetrahedronBuilder_0'"
+         bHidden=False
+         bActorEnableCollision=False
+         SpawnCollisionHandlingMethod=AlwaysSpawn
+         RootComponent="BrushComponent0"
+         ActorLabel="Brush"
+      End Actor
+      Begin Actor Class=/Script/Engine.WorldSettings Name=WorldSettings Archetype="/Script/Engine.WorldSettings'/Script/Engine.Default__WorldSettings'" ExportPath="/Script/Engine.WorldSettings'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.WorldSettings'"
+         Begin Object Class=/Script/NavigationSystem.NavigationSystemModuleConfig Name="NavigationSystemModuleConfig_0" ExportPath="/Script/NavigationSystem.NavigationSystemModuleConfig'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.WorldSettings.NavigationSystemModuleConfig_0'"
+         End Object
+         Begin Object Name="NavigationSystemModuleConfig_0" ExportPath="/Script/NavigationSystem.NavigationSystemModuleConfig'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.WorldSettings.NavigationSystemModuleConfig_0'"
+            bAutoSpawnMissingNavData=True
+            NavigationSystemClass="/Script/NavigationSystem.NavigationSystemV1"
+         End Object
+         NavigationSystemConfig="/Script/NavigationSystem.NavigationSystemModuleConfig'NavigationSystemModuleConfig_0'"
+         BookmarkArray(0)=None
+         BookmarkArray(1)=None
+         BookmarkArray(2)=None
+         BookmarkArray(3)=None
+         BookmarkArray(4)=None
+         BookmarkArray(5)=None
+         BookmarkArray(6)=None
+         BookmarkArray(7)=None
+         BookmarkArray(8)=None
+         BookmarkArray(9)=None
+         ActorLabel="WorldSettings-1"
+      End Actor
+      Begin Actor Class=/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap_C Name=FluxCausticsGeneratorMap_C_1 Archetype="/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap_C'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.Default__FluxCausticsGeneratorMap_C'" ExportPath="/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap_C'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.FluxCausticsGeneratorMap_C_1'"
+         ActorLabel="FluxCausticsGeneratorMap1"
+      End Actor
+      Begin Actor Class=/Script/Engine.Actor Name=ChaosDebugDrawActor Archetype="/Script/Engine.Actor'/Script/Engine.Default__Actor'" ExportPath="/Script/Engine.Actor'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.ChaosDebugDrawActor'"
+         Begin Object Class=/Script/ChaosSolverEngine.ChaosDebugDrawComponent Name="ChaosDebugDrawComponent_0" ExportPath="/Script/ChaosSolverEngine.ChaosDebugDrawComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.ChaosDebugDrawActor.ChaosDebugDrawComponent_0'"
+         End Object
+         Begin Object Name="ChaosDebugDrawComponent_0" ExportPath="/Script/ChaosSolverEngine.ChaosDebugDrawComponent'/Game/FluidFlux/Demo/Tools/CausticsGenerator/Maps/FluxCausticsGeneratorMap.FluxCausticsGeneratorMap:PersistentLevel.ChaosDebugDrawActor.ChaosDebugDrawComponent_0'"
+            CreationMethod=Instance
+         End Object
+         bListedInSceneOutliner=False
+         InstanceComponents(0)="/Script/ChaosSolverEngine.ChaosDebugDrawComponent'ChaosDebugDrawComponent_0'"
+      End Actor
+   End Level
+Begin Surface
+End Surface
+End Map

@@ -1,0 +1,40 @@
+﻿# /Game/FluidFlux/Waves/Materials/M_TextureWaveGenerator
+# класс: Material; происхождение: проект; узлов: 4; связей: 5; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:44
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[M_TextureWaveGenerator] Material
+    MaterialDomain = MD_PostProcess
+    BlendMode = BLEND_Masked
+    ShadingModel = MSM_Unlit
+    ShadingModels = (ShadingModelField=1)
+    OpacityMaskClipValue = 0.000000
+    bAllowNegativeEmissiveColor = True
+    bTangentSpaceNormal = False
+    bUseLightmapDirectionality = False
+    EditorX = 112
+    EditorY = -192
+    bCanMaskedBeAssumedOpaque = True
+    bCastRayTracedShadows = False
+    BlendableOutputAlpha = True
+    PixelDepthOffsetMode = PDOM_Legacy
+    bIsBlendable = False
+    StateId = 8D9CDC4C46B3B2210B35FC8283B7E0F2
+    ReferencedTextureGuids(0) = 18D6C5BC40AF0351E5721EB385907638
+    ReferencedDefaultTextures(0) = "/Script/Engine.VolumeTexture'/Game/FluidFlux/Surface/Materials/Textures/VT_OceanWave.VT_OceanWave'"
+    LightingGuid = 0C4AFA16441E6CBFF112DAA20B376A54
+    EditorOnlyData <- M_TextureWaveGeneratorEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[M_TextureWaveGeneratorEditorOnlyData] MaterialEditorOnlyData
+    EmissiveColor <- MaterialExpressionMaterialFunctionCall_0
+    Opacity <- MaterialExpressionMaterialFunctionCall_0
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_0
+[MaterialExpressionMaterialFunctionCall_0] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Game/FluidFlux/Waves/Gerstner/MF_AnimatedWave.MF_AnimatedWave'"
+    FunctionOutputs(0) = (ExpressionOutputId=73E0ED794423EA6BC174ECB1770EB9E9,Output=(OutputName="NormalHeight"))
+    FunctionOutputs(1) = (ExpressionOutputId=A44C391544297E126602A4A06D44E94F,Output=(OutputName="Foam"))
+    Outputs(0) = (OutputName="NormalHeight")
+    Outputs(1) = (OutputName="Foam")
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

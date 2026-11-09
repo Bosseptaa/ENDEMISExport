@@ -1,0 +1,155 @@
+﻿# /Game/FluidFlux/Simulation/Modifiers/Functions/MF_FluxModifierShape
+# класс: MaterialFunction; происхождение: проект; узлов: 28; связей: 55; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:55
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_FluxModifierShape] MaterialFunction
+    StateId = 7D6CBE2E4090B333A7816D9577E00B84
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_3
+    EditorOnlyData <- MF_FluxModifierShapeEditorOnlyData
+    ThumbnailInfo <- SceneThumbnailInfoWithPrimitive_0
+[MF_FluxModifierShapeEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionMultiply_15
+    ExpressionCollection <- MaterialExpressionSubtract_7
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_5
+    ExpressionCollection <- MaterialExpressionAbs_0
+    ExpressionCollection <- MaterialExpressionScalarParameter_2
+    ExpressionCollection <- MaterialExpressionMax_2
+    ExpressionCollection <- MaterialExpressionDistance_1
+    ExpressionCollection <- MaterialExpressionConstant_3
+    ExpressionCollection <- MaterialExpressionSubtract_1
+    ExpressionCollection <- MaterialExpressionSubtract_2
+    ExpressionCollection <- MaterialExpressionAdd_1
+    ExpressionCollection <- MaterialExpressionMin_0
+    ExpressionCollection <- MaterialExpressionMax_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_3
+    ExpressionCollection <- MaterialExpressionSubtract_5
+    ExpressionCollection <- MaterialExpressionConstant_4
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionSaturate_3
+    ExpressionCollection <- MaterialExpressionScalarParameter_5
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionReroute_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+[MaterialExpressionAbs_0] MaterialExpressionAbs
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    Input <- MaterialExpressionComponentMask_1
+[MaterialExpressionAdd_1] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    A <- MaterialExpressionDistance_1
+    B <- MaterialExpressionMin_0
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    Input <- MaterialExpressionSubtract_7
+[MaterialExpressionConstant_3] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+[MaterialExpressionConstant_4] MaterialExpressionConstant
+    R = 1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+[MaterialExpressionDistance_1] MaterialExpressionDistance
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    A <- MaterialExpressionMax_2
+    B <- MaterialExpressionConstant_3
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "LocalSpacePosition"
+    Id = ED8CD36F4A64933ED29CA98AC4C6B878
+    InputType = FunctionInput_Vector2
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    bCollapsed = True
+    Preview <- MaterialExpressionTextureCoordinate_5
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Radius"
+    Id = E98AEFAD4C35D46387774D8765E1BEEF
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    bCollapsed = True
+    Preview <- MaterialExpressionScalarParameter_2
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "Hardness"
+    Id = 4C97F9284D4B3696A2E08E8B10AB868E
+    InputType = FunctionInput_Scalar
+    bUsePreviewValueAsDefault = True
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    bCollapsed = True
+    Preview <- MaterialExpressionScalarParameter_5
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Weight"
+    bLastPreviewed = True
+    Id = F529BCCC47030905858248A567EEFD56
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    bCollapsed = True
+    A <- MaterialExpressionSaturate_3
+[MaterialExpressionMaterialFunctionCall_3] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionSubtract_2
+[MaterialExpressionMax_2] MaterialExpressionMax
+    ConstB = 0.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    A <- MaterialExpressionSubtract_2
+[MaterialExpressionMax_3] MaterialExpressionMax
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    A <- MaterialExpressionMaterialFunctionCall_3
+    B <- MaterialExpressionMaterialFunctionCall_3
+[MaterialExpressionMin_0] MaterialExpressionMin
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    B <- MaterialExpressionMax_3
+[MaterialExpressionMultiply_15] MaterialExpressionMultiply
+    ConstB = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    A <- MaterialExpressionFunctionInput_0
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    ConstB = 100000.000000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    A <- MaterialExpressionSubtract_1
+    B <- MaterialExpressionFunctionInput_2
+[MaterialExpressionReroute_0] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    Input <- MaterialExpressionFunctionInput_1
+[MaterialExpressionSaturate_3] MaterialExpressionSaturate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    Input <- MaterialExpressionMultiply_2
+[MaterialExpressionScalarParameter_2] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "Radius"
+    ExpressionGUID = 76AC3D754CD5BE4D78B58D990632A6F8
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+[MaterialExpressionScalarParameter_5] MaterialExpressionScalarParameter
+    DefaultValue = 1.000000
+    ParameterName = "Hardness"
+    ExpressionGUID = 3376A596447A1FE6016BADB4B9C37FE7
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+[MaterialExpressionSubtract_1] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    A <- MaterialExpressionReroute_0
+    B <- MaterialExpressionAdd_1
+[MaterialExpressionSubtract_2] MaterialExpressionSubtract
+    ConstB = 0.700000
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    A <- MaterialExpressionAbs_0
+    B <- MaterialExpressionSubtract_5
+[MaterialExpressionSubtract_5] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    A <- MaterialExpressionConstant_4
+    B <- MaterialExpressionFunctionInput_1
+[MaterialExpressionSubtract_7] MaterialExpressionSubtract
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+    A <- MaterialExpressionMultiply_15
+[MaterialExpressionTextureCoordinate_5] MaterialExpressionTextureCoordinate
+    Function = "/Script/Engine.MaterialFunction'MF_FluxModifierShape'"
+[SceneThumbnailInfoWithPrimitive_0] SceneThumbnailInfoWithPrimitive
+
+## СВЯЗИ

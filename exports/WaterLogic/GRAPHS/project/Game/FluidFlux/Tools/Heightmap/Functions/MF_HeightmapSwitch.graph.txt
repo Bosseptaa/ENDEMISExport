@@ -1,0 +1,52 @@
+﻿# /Game/FluidFlux/Tools/Heightmap/Functions/MF_HeightmapSwitch
+# класс: MaterialFunction; происхождение: проект; узлов: 8; связей: 12; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_HeightmapSwitch] MaterialFunction
+    StateId = 79E33E4F44D6689C41364DB82918C774
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_HeightmapSwitchEditorOnlyData
+[MF_HeightmapSwitchEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionIf_0
+    ExpressionCollection <- MaterialExpressionConstant_0
+    ExpressionCollection <- MaterialExpressionCollectionParameter_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+[MaterialExpressionCollectionParameter_1] MaterialExpressionCollectionParameter
+    Collection = "/Script/Engine.MaterialParameterCollection'/Game/FluidFlux/Surface/Materials/MPC_FluidFlux.MPC_FluidFlux'"
+    ParameterName = "CaptureHeightmap"
+    ParameterId = E19E2E88483095035043F2B308D3A3A8
+    Function = "/Script/Engine.MaterialFunction'MF_HeightmapSwitch'"
+    bCollapsed = True
+[MaterialExpressionConstant_0] MaterialExpressionConstant
+    Function = "/Script/Engine.MaterialFunction'MF_HeightmapSwitch'"
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "Enabled"
+    Id = 6A3F9D04475B54389EF04EACBDB2C1EC
+    InputType = FunctionInput_Scalar
+    Function = "/Script/Engine.MaterialFunction'MF_HeightmapSwitch'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "Disabled"
+    Id = BA674E6448256B760A0016BBC2C6BA42
+    InputType = FunctionInput_Scalar
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_HeightmapSwitch'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Output"
+    bLastPreviewed = True
+    Id = 1589B3544B36C96B85A75083AB1008C3
+    Function = "/Script/Engine.MaterialFunction'MF_HeightmapSwitch'"
+    A <- MaterialExpressionIf_0
+[MaterialExpressionIf_0] MaterialExpressionIf
+    Function = "/Script/Engine.MaterialFunction'MF_HeightmapSwitch'"
+    A <- MaterialExpressionCollectionParameter_1
+    B <- MaterialExpressionConstant_0
+    AGreaterThanB <- MaterialExpressionFunctionInput_0
+    ALessThanB <- MaterialExpressionFunctionInput_1
+
+## СВЯЗИ

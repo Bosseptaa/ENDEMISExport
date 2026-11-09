@@ -1,0 +1,94 @@
+﻿# /Game/FluidFlux/Surface/Materials/Functions/Tools/MF_NormalOverlay
+# класс: MaterialFunction; происхождение: проект; узлов: 17; связей: 32; HLSL: 0; причина: папка /Game/FluidFlux; имя/путь, тело:33
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_NormalOverlay] MaterialFunction
+    StateId = 7FD167BD4AF328D4AC9A2ABFEE2A74EE
+    CombinedInputTypes = 15
+    CombinedOutputTypes = 15
+    EditorOnlyData <- MF_NormalOverlayEditorOnlyData
+[MF_NormalOverlayEditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_0
+    ExpressionCollection <- MaterialExpressionComponentMask_0
+    ExpressionCollection <- MaterialExpressionAdd_0
+    ExpressionCollection <- MaterialExpressionComponentMask_1
+    ExpressionCollection <- MaterialExpressionMultiply_0
+    ExpressionCollection <- MaterialExpressionNormalize_1
+    ExpressionCollection <- MaterialExpressionAppendVector_0
+    ExpressionCollection <- MaterialExpressionComponentMask_2
+    ExpressionCollection <- MaterialExpressionMultiply_2
+    ExpressionCollection <- MaterialExpressionReroute_1
+    ExpressionCollection <- MaterialExpressionReroute_4
+    ExpressionCollection <- MaterialExpressionReroute_6
+    ExpressionCollection <- MaterialExpressionFunctionInput_0
+    ExpressionCollection <- MaterialExpressionFunctionInput_1
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+[MaterialExpressionAdd_0] MaterialExpressionAdd
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    A <- MaterialExpressionComponentMask_0
+    B <- MaterialExpressionMultiply_0
+[MaterialExpressionAppendVector_0] MaterialExpressionAppendVector
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    A <- MaterialExpressionAdd_0
+    B <- MaterialExpressionReroute_1
+[MaterialExpressionComponentMask_0] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    Input <- MaterialExpressionReroute_4
+[MaterialExpressionComponentMask_1] MaterialExpressionComponentMask
+    R = True
+    G = True
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    Input <- MaterialExpressionReroute_6
+[MaterialExpressionComponentMask_2] MaterialExpressionComponentMask
+    B = True
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    Input <- MaterialExpressionReroute_4
+[MaterialExpressionFunctionInput_0] MaterialExpressionFunctionInput
+    InputName = "BaseNormal"
+    Id = BE35BB6E4F47F81BCC82D8B1B6551358
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_1] MaterialExpressionFunctionInput
+    InputName = "OverlayNormal"
+    Id = 628A62924AE0E80297780D90C6956CA2
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    bCollapsed = True
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "OverlayScale"
+    Id = 816BA0DA4D1E70449427DC88C4C25078
+    InputType = FunctionInput_Scalar
+    SortPriority = 2
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    bCollapsed = True
+[MaterialExpressionFunctionOutput_0] MaterialExpressionFunctionOutput
+    OutputName = "Normal"
+    bLastPreviewed = True
+    Id = EDBBC6B14C1C8218CF8FE1B72CD8098A
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    A <- MaterialExpressionNormalize_1
+[MaterialExpressionMultiply_0] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    A <- MaterialExpressionComponentMask_1
+    B <- MaterialExpressionMultiply_2
+[MaterialExpressionMultiply_2] MaterialExpressionMultiply
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    A <- MaterialExpressionFunctionInput_2
+    B <- MaterialExpressionComponentMask_2
+[MaterialExpressionNormalize_1] MaterialExpressionNormalize
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    VectorInput <- MaterialExpressionAppendVector_0
+[MaterialExpressionReroute_1] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    Input <- MaterialExpressionComponentMask_2
+[MaterialExpressionReroute_4] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    Input <- MaterialExpressionFunctionInput_0
+[MaterialExpressionReroute_6] MaterialExpressionReroute
+    Function = "/Script/Engine.MaterialFunction'MF_NormalOverlay'"
+    Input <- MaterialExpressionFunctionInput_1
+
+## СВЯЗИ

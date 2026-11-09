@@ -1,0 +1,115 @@
+﻿# /Game/FluidFlux/Tools/DistanceField/Functions/MF_CheckerPattern3
+# класс: MaterialFunction; происхождение: проект; узлов: 20; связей: 39; HLSL: 0; причина: папка /Game/FluidFlux
+# Узел: [имя] класс (вызов|переменная: имя @ владелец). Связь: [откуда].пин -> [куда].пин
+
+## УЗЛЫ
+[MF_CheckerPattern3] MaterialFunction
+    StateId = C2B7DEB0445FA8EFFB5F59855BC072E8
+    CombinedInputTypes = 2
+    CombinedOutputTypes = 15
+    DependentFunctionExpressionCandidates(0) <- MaterialExpressionMaterialFunctionCall_29
+    EditorOnlyData <- MF_CheckerPattern3EditorOnlyData
+[MF_CheckerPattern3EditorOnlyData] MaterialFunctionEditorOnlyData
+    ExpressionCollection <- MaterialExpressionFunctionOutput_1
+    ExpressionCollection <- MaterialExpressionTextureCoordinate_19
+    ExpressionCollection <- MaterialExpressionFunctionInput_2
+    ExpressionCollection <- MaterialExpressionFunctionInput_3
+    ExpressionCollection <- MaterialExpressionMaterialFunctionCall_29
+    ExpressionCollection <- MaterialExpressionFloor_8
+    ExpressionCollection <- MaterialExpressionAdd_8
+    ExpressionCollection <- MaterialExpressionFrac_6
+    ExpressionCollection <- MaterialExpressionAdd_5
+    ExpressionCollection <- MaterialExpressionFloor_5
+    ExpressionCollection <- MaterialExpressionMultiply_51
+    ExpressionCollection <- MaterialExpressionFloor_9
+    ExpressionCollection <- MaterialExpressionAdd_9
+    ExpressionCollection <- MaterialExpressionFrac_4
+    ExpressionCollection <- MaterialExpressionLinearInterpolate_8
+    ExpressionCollection <- MaterialExpressionFrac_7
+    ExpressionCollection <- MaterialExpressionMultiply_53
+    ExpressionCollection <- MaterialExpressionMultiply_54
+[MaterialExpressionAdd_5] MaterialExpressionAdd
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    A <- MaterialExpressionFrac_7
+[MaterialExpressionAdd_8] MaterialExpressionAdd
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    A <- MaterialExpressionFrac_6
+[MaterialExpressionAdd_9] MaterialExpressionAdd
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    A <- MaterialExpressionFrac_4
+[MaterialExpressionFloor_5] MaterialExpressionFloor
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    Input <- MaterialExpressionAdd_5
+[MaterialExpressionFloor_8] MaterialExpressionFloor
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    Input <- MaterialExpressionAdd_8
+[MaterialExpressionFloor_9] MaterialExpressionFloor
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    Desc = "Vertical Blend"
+    Input <- MaterialExpressionAdd_9
+[MaterialExpressionFrac_4] MaterialExpressionFrac
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    Input <- MaterialExpressionMaterialFunctionCall_29
+[MaterialExpressionFrac_6] MaterialExpressionFrac
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    Input <- MaterialExpressionMaterialFunctionCall_29
+[MaterialExpressionFrac_7] MaterialExpressionFrac
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    Input <- MaterialExpressionMultiply_51
+[MaterialExpressionFunctionInput_2] MaterialExpressionFunctionInput
+    InputName = "UVs"
+    Id = 4125B2CC4CBECAD5EF3045BBE61FA77E
+    InputType = FunctionInput_Vector2
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    Preview <- MaterialExpressionTextureCoordinate_19
+[MaterialExpressionFunctionInput_3] MaterialExpressionFunctionInput
+    описание: How many checker boxes per UV
+    InputName = "Tiling"
+    Id = 85871E8043CDB6E925F617B64AA66905
+    InputType = FunctionInput_Vector2
+    PreviewValue = (X=1.000000,Y=1.000000,Z=0.000000,W=1.000000)
+    bUsePreviewValueAsDefault = True
+    SortPriority = 1
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+[MaterialExpressionFunctionOutput_1] MaterialExpressionFunctionOutput
+    описание: Creates a checker pattern from the desired UVs
+    OutputName = "Result_1"
+    bLastPreviewed = True
+    Id = 721600BE4EFE8F92EE06CEB90786E95F
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    A <- MaterialExpressionLinearInterpolate_8
+[MaterialExpressionLinearInterpolate_8] MaterialExpressionLinearInterpolate
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    A <- MaterialExpressionFloor_5
+    B <- MaterialExpressionFloor_8
+    Alpha <- MaterialExpressionFloor_9
+[MaterialExpressionMaterialFunctionCall_29] MaterialExpressionMaterialFunctionCall
+    MaterialFunction = "/Script/Engine.MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.BreakOutFloat2Components'"
+    FunctionOutputs(0) = (ExpressionOutputId=6BC893C247FCFC567178CE944E213385,Output=(OutputName="R"))
+    FunctionOutputs(1) = (ExpressionOutputId=9720C81E449DF8E5514FCB8A80FD5FA3,Output=(OutputName="G"))
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    Outputs(0) = (OutputName="R")
+    Outputs(1) = (OutputName="G")
+    FunctionInputs(0) <- MaterialExpressionMultiply_53
+[MaterialExpressionMultiply_51] MaterialExpressionMultiply
+    ConstB = -1.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    A <- MaterialExpressionMaterialFunctionCall_29
+[MaterialExpressionMultiply_53] MaterialExpressionMultiply
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    A <- MaterialExpressionFunctionInput_2
+    B <- MaterialExpressionMultiply_54
+[MaterialExpressionMultiply_54] MaterialExpressionMultiply
+    ConstB = 0.500000
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+    A <- MaterialExpressionFunctionInput_3
+[MaterialExpressionTextureCoordinate_19] MaterialExpressionTextureCoordinate
+    UTiling = 2.000000
+    VTiling = 2.000000
+    Function = "/Script/Engine.MaterialFunction'MF_CheckerPattern3'"
+
+## СВЯЗИ
